@@ -132,3 +132,62 @@
 | `02_functional_spec.md`의 모든 `FEAT-001`부터 `FEAT-017`이 하위 설계 문서 또는 구현 계획에 등장하는지 확인 | PASS |
 | 임시 표기어와 결정되지 않은 값 표시 잔존 여부 확인 | PASS |
 | BE, Blog, Notes 관련 키워드가 MVP 제외 또는 외부 링크 정책으로만 사용되는지 수동 확인 | PASS |
+
+## 12. MVP 최종 검증 및 OCI 정적 배포 준비 결과
+
+2026-05-28에 MVP 구현 전체를 정적 export 산출물 기준으로 재검증했다.
+
+### 12.1 정적 검증
+
+| 점검 항목 | 결과 | 비고 |
+| --- | --- | --- |
+| `npm run lint` | PASS | PowerShell 실행 정책 때문에 검증은 `npm.cmd run lint`로 수행 |
+| `npm run build` | PASS | `output: "export"` 설정 후 정적 export 빌드 성공 |
+| `out/` 폴더 생성 | PASS | `index.html`, `resume/`, `projects/`, `robots.txt`, `sitemap.xml` 생성 확인 |
+
+### 12.2 기능 수동 점검
+
+정적 export 결과물인 `out/` 폴더를 로컬 정적 서버로 제공한 뒤 Chromium 기반 점검을 수행했다.
+
+| 점검 항목 | 결과 |
+| --- | --- |
+| 잠금화면이 첫 화면으로 표시됨 | PASS |
+| 버튼 클릭으로 데스크톱에 진입 | PASS |
+| Enter 키로 데스크톱에 진입 | PASS |
+| About Me, Projects, Skills, Resume, Contact 폴더 열림 | PASS |
+| 같은 폴더를 여러 번 열어도 중복 창이 생기지 않음 | PASS |
+| `/projects/portfolio-os/` 접근 가능 | PASS |
+| `/projects/frontend-collaboration/` 접근 가능 | PASS |
+| `/projects/problem-solving-archive/` 접근 가능 | PASS |
+| `/resume/` 접근 가능 | PASS |
+| 모바일 360px 폭에서 핵심 콘텐츠 접근 가능 | PASS |
+
+### 12.3 요구사항 구현 매핑
+
+| 범위 | 결과 | 비고 |
+| --- | --- | --- |
+| `REQ-001` ~ `REQ-020` 구현 여부 | PASS | 기존 요구사항-기능 매핑과 구현 산출물 기준으로 누락 없음 |
+| MVP 제외 정책 | PASS | Blog/Notes는 핵심 진입점 또는 내부 기능으로 추가하지 않음 |
+| FE 범위 | PASS | BE, API Route, 서버 저장 기능 추가 없음 |
+
+### 12.4 OCI 정적 배포 준비 상태
+
+| 점검 항목 | 결과 |
+| --- | --- |
+| `main`과 `origin/main` 동기화 상태 | PASS: `main...origin/main` 0/0 |
+| `next.config.ts`의 `output: "export"` | PASS |
+| `next.config.ts`의 `images: { unoptimized: true }` | PASS |
+| `next.config.ts`의 `trailingSlash: true` | PASS |
+| `/projects/[slug]`의 `generateStaticParams()` 제공 | PASS |
+| 동적 상세 라우트의 `dynamicParams = false` | PASS |
+| API Route, Middleware, SSR, ISR, 서버 액션 미사용 | PASS |
+| `robots.ts`, `sitemap.ts` 정적 export 호환 | PASS: `dynamic = "force-static"` 지정 |
+| 루트 `README.md` 배포 문서 | PASS |
+
+### 12.5 남은 리스크
+
+| 리스크 | 상태 |
+| --- | --- |
+| 실제 OCI 버킷, 도메인, CDN 경로 미확정 | README에 교체 가능한 값으로만 안내 |
+| 실제 이력서 PDF 파일 미등록 | UI에서 `PDF 준비 중` 상태로 표시하며, 파일 준비 후 같은 경로로 활성화 필요 |
+| 로컬 QA 산출물 재생성 가능성 | 앱 산출물이 아니므로 ESLint 검사 대상에서 제외 |

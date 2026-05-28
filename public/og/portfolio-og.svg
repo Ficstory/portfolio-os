@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio OS</title>
+  <desc id="desc">잠금화면과 데스크톱 UI로 탐색하는 프론트엔드 포트폴리오 공유 이미지</desc>
+  <rect width="1200" height="630" fill="#EEF2F7"/>
+  <rect x="58" y="54" width="1084" height="522" rx="28" fill="#FFFFFF" fill-opacity="0.72" stroke="#465266" stroke-opacity="0.18" stroke-width="2"/>
+  <path d="M58 182C188 122 303 107 421 138C569 177 660 142 793 101C924 61 1034 74 1142 134V576H58V182Z" fill="#DDE7F3"/>
+  <path d="M58 288C201 245 347 267 484 328C626 392 767 407 907 347C1006 305 1086 304 1142 327V576H58V288Z" fill="#F7E7E2"/>
+  <rect x="126" y="124" width="948" height="382" rx="22" fill="#FFFFFF" fill-opacity="0.78" stroke="#465266" stroke-opacity="0.16"/>
+  <rect x="166" y="214" width="166" height="166" rx="24" fill="#DCEBFF"/>
+  <rect x="200" y="255" width="98" height="28" rx="14" fill="#4F8FD9"/>
+  <rect x="200" y="304" width="62" height="28" rx="14" fill="#5DAE8B"/>
+  <rect x="172" y="420" width="154" height="12" rx="6" fill="#465266" fill-opacity="0.18"/>
+  <rect x="172" y="446" width="108" height="12" rx="6" fill="#465266" fill-opacity="0.12"/>
+  <text x="359" y="294" fill="#1F2937" font-family="Pretendard, Inter, Arial, sans-serif" font-size="72" font-weight="800">Portfolio OS</text>
+  <text x="363" y="356" fill="#4F8FD9" font-family="Pretendard, Inter, Arial, sans-serif" font-size="30" font-weight="700">프론트엔드 프로젝트와 이력을 데스크톱처럼 탐색합니다.</text>
+  <text x="363" y="410" fill="#667085" font-family="Pretendard, Inter, Arial, sans-serif" font-size="24" font-weight="500">Next.js · React · TypeScript · UI Architecture</text>
+  <rect x="363" y="445" width="144" height="16" rx="8" fill="#5DAE8B"/>
+  <rect x="525" y="445" width="86" height="16" rx="8" fill="#E98B74"/>
+  <rect x="629" y="445" width="214" height="16" rx="8" fill="#4F8FD9"/>
+</svg>

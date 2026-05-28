@@ -1,0 +1,88 @@
+import type { Skill } from "@/types/portfolio";
+
+export const skills: Skill[] = [
+  {
+    name: "React",
+    category: "frontend",
+    level: "comfortable",
+    description: "컴포넌트 단위로 화면을 나누고 상태와 UI 흐름을 연결하는 데 사용합니다.",
+    relatedProjects: ["portfolio-os", "frontend-collaboration"],
+  },
+  {
+    name: "Next.js",
+    category: "frontend",
+    level: "comfortable",
+    description: "정적 페이지, 라우팅, 빌드 기반 포트폴리오 구성을 위해 사용합니다.",
+    relatedProjects: ["portfolio-os", "problem-solving-archive"],
+  },
+  {
+    name: "TypeScript",
+    category: "frontend",
+    level: "strong",
+    description: "정적 데이터와 컴포넌트 계약을 명확히 표현하기 위해 사용합니다.",
+    relatedProjects: ["portfolio-os", "frontend-collaboration", "problem-solving-archive"],
+  },
+  {
+    name: "Zustand",
+    category: "state",
+    level: "used",
+    description: "창 활성화, 테마, 탐색 상태처럼 UI 중심 상태를 가볍게 관리하는 데 사용합니다.",
+    relatedProjects: ["portfolio-os"],
+  },
+  {
+    name: "Tailwind CSS",
+    category: "styling",
+    level: "comfortable",
+    description: "반응형 레이아웃과 일관된 UI 스타일을 빠르게 구성하는 데 사용합니다.",
+    relatedProjects: ["portfolio-os"],
+  },
+  {
+    name: "Responsive UI",
+    category: "styling",
+    level: "comfortable",
+    description: "데스크톱형 화면과 모바일 화면이 같은 콘텐츠를 읽기 쉽게 제공하도록 설계합니다.",
+    relatedProjects: ["portfolio-os", "frontend-collaboration"],
+  },
+  {
+    name: "ESLint",
+    category: "tooling",
+    level: "used",
+    description: "기본 코드 품질과 일관성을 확인하는 검증 도구로 사용합니다.",
+    relatedProjects: ["portfolio-os", "problem-solving-archive"],
+  },
+  {
+    name: "Git",
+    category: "tooling",
+    level: "comfortable",
+    description: "작업 단위별 변경 이력을 남기고 협업 흐름을 관리하는 데 사용합니다.",
+    relatedProjects: ["frontend-collaboration"],
+  },
+  {
+    name: "Figma",
+    category: "collaboration",
+    level: "used",
+    description: "화면 구조와 컴포넌트 의도를 확인하고 FE 구현 범위를 정리하는 데 사용합니다.",
+    relatedProjects: ["frontend-collaboration"],
+  },
+  {
+    name: "Markdown",
+    category: "collaboration",
+    level: "comfortable",
+    description: "요구사항, 트러블슈팅, 프로젝트 상세 콘텐츠를 읽기 쉬운 문서로 정리합니다.",
+    relatedProjects: ["frontend-collaboration", "problem-solving-archive"],
+  },
+  {
+    name: "AI Assisted Workflow",
+    category: "ai",
+    level: "used",
+    description: "초안 작성, 점검 목록 정리, 반복 검증 과정에서 보조 도구로 활용합니다.",
+    relatedProjects: ["portfolio-os", "problem-solving-archive"],
+  },
+  {
+    name: "Prompt Structuring",
+    category: "ai",
+    level: "used",
+    description: "작업 조건, 금지 사항, 검증 기준을 명확히 분리해 구현 품질을 안정화합니다.",
+    relatedProjects: ["frontend-collaboration", "problem-solving-archive"],
+  },
+];

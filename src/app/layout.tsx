@@ -1,9 +1,41 @@
 import type { Metadata } from "next";
+
+import { baseUrl, ogImage, siteDescription, siteName } from "@/lib/seo";
+
 import "./globals.css";
 
+const metadataTitle = `${siteName} | 프론트엔드 포트폴리오`;
+
 export const metadata: Metadata = {
-  title: "Portfolio OS",
-  description: "잠금화면과 데스크톱 UI로 탐색하는 프론트엔드 포트폴리오",
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: metadataTitle,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  applicationName: siteName,
+  openGraph: {
+    title: metadataTitle,
+    description: siteDescription,
+    url: baseUrl,
+    siteName,
+    locale: "ko_KR",
+    type: "website",
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Portfolio OS 공유 이미지",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: metadataTitle,
+    description: siteDescription,
+    images: [ogImage],
+  },
 };
 
 export default function RootLayout({
