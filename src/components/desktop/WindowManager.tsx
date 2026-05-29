@@ -2,6 +2,7 @@
 
 import { AppWindow } from "@/components/desktop/AppWindow";
 import { AboutWindow } from "@/components/folders/AboutWindow";
+import { ChatWindow } from "@/components/folders/ChatWindow";
 import { ContactWindow } from "@/components/folders/ContactWindow";
 import { ProjectsWindow } from "@/components/folders/ProjectsWindow";
 import { ResumeWindow } from "@/components/folders/ResumeWindow";
@@ -10,6 +11,7 @@ import {
   type DesktopWindow,
   useDesktopStore,
 } from "@/stores/desktopStore";
+import { AnimatePresence } from "motion/react";
 
 function PlaceholderContent({
   title,
@@ -34,6 +36,8 @@ function renderWindowContent(window: DesktopWindow) {
       return <ProjectsWindow />;
     case "skills":
       return <SkillsWindow />;
+    case "ai-chat":
+      return <ChatWindow />;
     case "resume":
       return <ResumeWindow />;
     case "contact":
@@ -55,6 +59,7 @@ function renderWindowContent(window: DesktopWindow) {
 export function WindowManager() {
   const windows = useDesktopStore((state) => state.windows);
   const activeWindowId = useDesktopStore((state) => state.activeWindowId);
+  const visibleWindows = windows.filter((window) => !window.isMinimized);
 
   if (windows.length === 0) {
     return null;
@@ -62,19 +67,22 @@ export function WindowManager() {
 
   return (
     <div aria-label="Open windows" className="pointer-events-none absolute inset-0">
-      {windows.map((window) => (
-        <AppWindow
-          id={window.id}
-          isActive={window.id === activeWindowId}
-          key={window.id}
-          position={window.position}
-          size={window.size}
-          title={window.title}
-          zIndex={window.zIndex}
-        >
-          {renderWindowContent(window)}
-        </AppWindow>
-      ))}
+      <AnimatePresence>
+        {visibleWindows.map((window) => (
+          <AppWindow
+            id={window.id}
+            isActive={window.id === activeWindowId}
+            isMaximized={window.isMaximized}
+            key={window.id}
+            position={window.position}
+            size={window.size}
+            title={window.title}
+            zIndex={window.zIndex}
+          >
+            {renderWindowContent(window)}
+          </AppWindow>
+        ))}
+      </AnimatePresence>
     </div>
   );
 }

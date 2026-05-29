@@ -12,8 +12,12 @@ export type DesktopWindow = {
   title: string;
   type: "folder" | "project" | "resume" | "contact";
   isOpen: boolean;
+  isMinimized: boolean;
+  isMaximized: boolean;
   position: WindowPosition;
   size: WindowSize;
+  restorePosition: WindowPosition | null;
+  restoreSize: WindowSize | null;
   zIndex: number;
 };
 
@@ -26,10 +30,21 @@ export type DesktopStore = {
   closeWindow: (id: WindowId) => void;
   focusWindow: (id: WindowId) => void;
   moveWindow: (id: WindowId, position: WindowPosition) => void;
+  toggleMinimize: (id: WindowId) => void;
+  restoreWindow: (id: WindowId) => void;
+  toggleMaximize: (id: WindowId) => void;
+  resizeWindow: (id: WindowId, size: WindowSize) => void;
 };
 
 const BASE_Z_INDEX = 100;
 const WINDOW_STAGGER = 28;
+const DESKTOP_EDGE_INSET = 16;
+const MENUBAR_HEIGHT = 32;
+const DOCK_RESERVED_HEIGHT = 112;
+const MIN_WINDOW_SIZE: WindowSize = {
+  width: 360,
+  height: 280,
+};
 const DEFAULT_WINDOW_POSITION: WindowPosition = {
   x: 96,
   y: 72,
@@ -101,13 +116,73 @@ function getDefaultWindowPosition(windowCount: number): WindowPosition {
 }
 
 function getTopWindow(windows: DesktopWindow[]) {
-  return windows.reduce<DesktopWindow | null>((topWindow, window) => {
-    if (!topWindow || window.zIndex > topWindow.zIndex) {
-      return window;
-    }
+  return windows
+    .filter((window) => !window.isMinimized)
+    .reduce<DesktopWindow | null>((topWindow, window) => {
+      if (!topWindow || window.zIndex > topWindow.zIndex) {
+        return window;
+      }
 
-    return topWindow;
-  }, null);
+      return topWindow;
+    }, null);
+}
+
+function getViewportSize(): WindowSize {
+  if (typeof window === "undefined") {
+    return {
+      width: 1280,
+      height: 800,
+    };
+  }
+
+  return {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  };
+}
+
+function getMaximizedWindowBounds() {
+  const viewport = getViewportSize();
+  const top = MENUBAR_HEIGHT + DESKTOP_EDGE_INSET;
+  const width = Math.max(
+    MIN_WINDOW_SIZE.width,
+    viewport.width - DESKTOP_EDGE_INSET * 2,
+  );
+  const height = Math.max(
+    MIN_WINDOW_SIZE.height,
+    viewport.height - top - DOCK_RESERVED_HEIGHT,
+  );
+
+  return {
+    position: {
+      x: DESKTOP_EDGE_INSET,
+      y: top,
+    },
+    size: {
+      width,
+      height,
+    },
+  };
+}
+
+function clampWindowSize(position: WindowPosition, size: WindowSize): WindowSize {
+  const viewport = getViewportSize();
+  const maxWidth = Math.max(
+    MIN_WINDOW_SIZE.width,
+    viewport.width - position.x - DESKTOP_EDGE_INSET,
+  );
+  const maxHeight = Math.max(
+    MIN_WINDOW_SIZE.height,
+    viewport.height - position.y - DESKTOP_EDGE_INSET,
+  );
+
+  return {
+    width: Math.min(maxWidth, Math.max(MIN_WINDOW_SIZE.width, Math.round(size.width))),
+    height: Math.min(
+      maxHeight,
+      Math.max(MIN_WINDOW_SIZE.height, Math.round(size.height)),
+    ),
+  };
 }
 
 export const useDesktopStore = create<DesktopStore>((set) => ({
@@ -130,11 +205,12 @@ export const useDesktopStore = create<DesktopStore>((set) => ({
           windows: state.windows.map((window) =>
             window.id === id
               ? {
-                  ...window,
-                  title: title ?? window.title,
-                  zIndex,
-                }
-              : window,
+                ...window,
+                title: title ?? window.title,
+                isMinimized: false,
+                zIndex,
+              }
+            : window,
           ),
         };
       }
@@ -146,10 +222,14 @@ export const useDesktopStore = create<DesktopStore>((set) => ({
           {
             id,
             isOpen: true,
+            isMinimized: false,
+            isMaximized: false,
             title: getDefaultWindowTitle(id, title),
             type: getWindowType(id),
             position: getDefaultWindowPosition(state.windows.length),
             size: getDefaultWindowSize(id),
+            restorePosition: null,
+            restoreSize: null,
             zIndex,
           },
         ],
@@ -180,6 +260,10 @@ export const useDesktopStore = create<DesktopStore>((set) => ({
         return {};
       }
 
+      if (existingWindow.isMinimized) {
+        return {};
+      }
+
       const zIndex = getNextZIndex(state.windows);
 
       return {
@@ -203,6 +287,130 @@ export const useDesktopStore = create<DesktopStore>((set) => ({
           ? {
               ...window,
               position,
+            }
+          : window,
+      ),
+    }));
+  },
+
+  toggleMinimize: (id) => {
+    set((state) => {
+      const existingWindow = state.windows.find((window) => window.id === id);
+
+      if (!existingWindow) {
+        return {};
+      }
+
+      const zIndex = getNextZIndex(state.windows);
+      const isRestoring = existingWindow.isMinimized;
+      const windows = state.windows.map((window) =>
+        window.id === id
+          ? {
+              ...window,
+              isMinimized: !window.isMinimized,
+              zIndex: isRestoring ? zIndex : window.zIndex,
+            }
+          : window,
+      );
+
+      return {
+        activeWindowId: isRestoring
+          ? id
+          : state.activeWindowId === id
+            ? getTopWindow(windows)?.id ?? null
+            : state.activeWindowId,
+        windows,
+      };
+    });
+  },
+
+  restoreWindow: (id) => {
+    set((state) => {
+      const existingWindow = state.windows.find((window) => window.id === id);
+
+      if (!existingWindow) {
+        return {};
+      }
+
+      const zIndex = getNextZIndex(state.windows);
+
+      return {
+        activeWindowId: id,
+        windows: state.windows.map((window) =>
+          window.id === id
+            ? {
+                ...window,
+                isMinimized: false,
+                zIndex,
+              }
+            : window,
+        ),
+      };
+    });
+  },
+
+  toggleMaximize: (id) => {
+    set((state) => {
+      const existingWindow = state.windows.find((window) => window.id === id);
+
+      if (!existingWindow) {
+        return {};
+      }
+
+      const zIndex = getNextZIndex(state.windows);
+
+      if (existingWindow.isMaximized) {
+        return {
+          activeWindowId: id,
+          windows: state.windows.map((window) =>
+            window.id === id
+              ? {
+                  ...window,
+                  isMaximized: false,
+                  isMinimized: false,
+                  position: window.restorePosition ?? window.position,
+                  size: window.restoreSize ?? window.size,
+                  restorePosition: null,
+                  restoreSize: null,
+                  zIndex,
+                }
+              : window,
+          ),
+        };
+      }
+
+      const maximizedBounds = getMaximizedWindowBounds();
+
+      return {
+        activeWindowId: id,
+        windows: state.windows.map((window) =>
+          window.id === id
+            ? {
+                ...window,
+                isMaximized: true,
+                isMinimized: false,
+                position: maximizedBounds.position,
+                size: maximizedBounds.size,
+                restorePosition: window.position,
+                restoreSize: window.size,
+                zIndex,
+              }
+            : window,
+        ),
+      };
+    });
+  },
+
+  resizeWindow: (id, size) => {
+    set((state) => ({
+      windows: state.windows.map((window) =>
+        window.id === id
+          ? {
+              ...window,
+              isMaximized: false,
+              size: clampWindowSize(window.position, size),
+              restorePosition: null,
+              restoreSize: null,
             }
           : window,
       ),

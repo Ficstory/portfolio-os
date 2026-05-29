@@ -32,6 +32,16 @@ export const folders = [
     },
   },
   {
+    id: "ai-chat",
+    title: "Portfolio AI",
+    description: "Local-model chat entry point prepared for portfolio Q&A.",
+    iconName: "Bot",
+    defaultWindowSize: {
+      width: 760,
+      height: 620,
+    },
+  },
+  {
     id: "resume",
     title: "Resume",
     description: "Resume summary and PDF download entry point.",

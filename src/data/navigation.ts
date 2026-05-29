@@ -23,6 +23,13 @@ export const navigationItems = [
     windowId: "skills",
   },
   {
+    id: "ai-chat",
+    label: "AI Chat",
+    title: "Portfolio AI",
+    iconName: "Bot",
+    windowId: "ai-chat",
+  },
+  {
     id: "resume",
     label: "Resume",
     title: "Resume",

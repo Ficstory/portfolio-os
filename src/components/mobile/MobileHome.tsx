@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Bot,
   Code2,
   FileText,
   Folder,
@@ -15,6 +16,7 @@ import { folders } from "@/data/folders";
 import { profile } from "@/data/profile";
 
 const iconMap: Record<string, LucideIcon> = {
+  Bot,
   Code2,
   FileText,
   FolderKanban,

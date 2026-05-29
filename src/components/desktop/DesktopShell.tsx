@@ -1,14 +1,29 @@
 "use client";
 
-import { DesktopIconGrid } from "@/components/desktop/DesktopIconGrid";
 import { Dock } from "@/components/desktop/Dock";
 import { MenuBar } from "@/components/desktop/MenuBar";
 import { WindowManager } from "@/components/desktop/WindowManager";
 import { MobileHome } from "@/components/mobile/MobileHome";
+import { cn } from "@/lib/cn";
 
-export function DesktopShell() {
+type DesktopShellProps = {
+  isVisible?: boolean;
+};
+
+const revealClass =
+  "transition-[opacity,transform] duration-[650ms] ease-[cubic-bezier(0.22,1,0.36,1)]";
+
+export function DesktopShell({ isVisible = true }: DesktopShellProps) {
   return (
-    <main className="wallpaper min-h-screen">
+    <section
+      aria-label="Portfolio desktop"
+      className={cn(
+        "relative z-10 min-h-screen text-slate-900 transition-[opacity,transform] duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] dark:text-slate-50",
+        isVisible
+          ? "pointer-events-auto translate-y-0 opacity-100"
+          : "pointer-events-none translate-y-3 opacity-0",
+      )}
+    >
       <div className="md:hidden" data-layout="mobile-shell">
         <MobileHome />
       </div>
@@ -19,20 +34,42 @@ export function DesktopShell() {
       >
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.28),rgba(255,255,255,0)_42%),linear-gradient(0deg,rgba(31,41,55,0.08),rgba(31,41,55,0))] dark:bg-[linear-gradient(120deg,rgba(255,255,255,0.08),rgba(255,255,255,0)_42%),linear-gradient(0deg,rgba(0,0,0,0.22),rgba(0,0,0,0))]" />
 
-        <div className="absolute inset-x-0 top-0 z-[1000]">
+        <div
+          className={cn(
+            "absolute inset-x-0 top-0 z-[1000]",
+            revealClass,
+            isVisible
+              ? "delay-[200ms] translate-y-0 opacity-100"
+              : "translate-y-3 opacity-0",
+          )}
+        >
           <MenuBar />
         </div>
 
-        <div className="absolute inset-x-6 bottom-28 top-14 z-10 overflow-hidden">
-          <DesktopIconGrid />
+        <div
+          className={cn(
+            "absolute inset-0",
+            revealClass,
+            isVisible
+              ? "delay-[450ms] translate-y-0 opacity-100"
+              : "translate-y-3 opacity-0",
+          )}
+        >
+          <WindowManager />
         </div>
 
-        <WindowManager />
-
-        <div className="absolute inset-x-0 bottom-5 z-[900] flex justify-center px-6">
+        <div
+          className={cn(
+            "absolute inset-x-0 bottom-5 z-[900] flex justify-center px-6",
+            revealClass,
+            isVisible
+              ? "delay-[350ms] translate-y-0 opacity-100"
+              : "translate-y-3 opacity-0",
+          )}
+        >
           <Dock />
         </div>
       </div>
-    </main>
+    </section>
   );
 }

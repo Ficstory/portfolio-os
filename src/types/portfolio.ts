@@ -1,4 +1,10 @@
-export type FolderId = "about" | "projects" | "skills" | "resume" | "contact";
+export type FolderId =
+  | "about"
+  | "projects"
+  | "skills"
+  | "ai-chat"
+  | "resume"
+  | "contact";
 
 export type WindowId = FolderId | `project-${string}`;
 

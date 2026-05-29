@@ -1,28 +1,20 @@
 "use client";
 
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import {
+  BatteryFull,
+  Bluetooth,
+  Moon,
+  Wifi,
+} from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 
-const headline =
-  "사용자 경험을 화면의 구조로 설계하고, 문제를 제품의 형태로 구현합니다.";
+import { SwipeUnlockControl } from "@/components/lock-screen/SwipeUnlockControl";
+import { cn } from "@/lib/cn";
 
-const quickLinks = [
-  {
-    label: "GitHub",
-    href: "https://github.com/",
-    ariaLabel: "GitHub 프로필 열기",
-  },
-  {
-    label: "Resume",
-    href: "/resume.pdf",
-    ariaLabel: "Resume PDF 열기",
-  },
-  {
-    label: "Email",
-    href: "mailto:hello@example.com",
-    ariaLabel: "Email 보내기",
-  },
-] as const;
+type LockScreenProps = {
+  isUnlocking: boolean;
+  onUnlock: () => void;
+};
 
 function useMinuteClock() {
   const [now, setNow] = useState(() => new Date());
@@ -51,47 +43,68 @@ function useMinuteClock() {
   return now;
 }
 
-export function LockScreen() {
-  const [unlocked, setUnlocked] = useState(false);
-  const now = useMinuteClock();
-  const shouldReduceMotion = useReducedMotion();
+function formatTime(now: Date) {
+  return new Intl.DateTimeFormat("ko-KR", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).format(now);
+}
 
-  const unlock = useCallback(() => {
-    setUnlocked(true);
-  }, []);
+function LockStatusBar({
+  isUnlocking,
+  now,
+}: {
+  isUnlocking: boolean;
+  now: Date;
+}) {
+  const statusTime = useMemo(() => formatTime(now), [now]);
 
-  useEffect(() => {
-    if (unlocked) {
-      return;
-    }
+  return (
+    <header
+      className={cn(
+        "absolute inset-x-0 top-0 z-20 flex h-12 items-center justify-between px-4 text-sm font-medium text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] transition-[opacity,transform] duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] sm:h-14 sm:px-6",
+        isUnlocking && "pointer-events-none -translate-y-4 opacity-0",
+      )}
+    >
+      <div className="flex min-w-0 items-center gap-2">
+        <Wifi aria-hidden="true" className="h-4 w-4 shrink-0" strokeWidth={2.2} />
+        <span className="truncate">Portfolio</span>
+      </div>
 
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Enter" && !event.altKey && !event.ctrlKey && !event.metaKey) {
-        unlock();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [unlock, unlocked]);
-
-  const formattedTime = useMemo(
-    () =>
-      new Intl.DateTimeFormat("ko-KR", {
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false,
-      }).format(now),
-    [now],
+      <div className="flex items-center gap-3 sm:gap-4">
+        <Moon
+          aria-label="Moon"
+          className="hidden h-4 w-4 sm:block"
+          strokeWidth={2.2}
+        />
+        <Bluetooth
+          aria-label="Bluetooth"
+          className="hidden h-4 w-4 sm:block"
+          strokeWidth={2.2}
+        />
+        <BatteryFull
+          aria-label="Battery"
+          className="h-4 w-4"
+          strokeWidth={2.2}
+        />
+        <time
+          className="tabular-nums"
+          dateTime={now.toISOString()}
+          suppressHydrationWarning
+        >
+          {statusTime}
+        </time>
+      </div>
+    </header>
   );
+}
 
+function LockClock({ now }: { now: Date }) {
+  const formattedTime = useMemo(() => formatTime(now), [now]);
   const formattedDate = useMemo(
     () =>
       new Intl.DateTimeFormat("ko-KR", {
-        year: "numeric",
         month: "long",
         day: "numeric",
         weekday: "long",
@@ -99,86 +112,116 @@ export function LockScreen() {
     [now],
   );
 
-  const lockExit = shouldReduceMotion
-    ? { opacity: 0 }
-    : { opacity: 0, scale: 0.98 };
-  const desktopInitial = shouldReduceMotion
-    ? { opacity: 0 }
-    : { opacity: 0, scale: 1.02 };
+  return (
+    <div className="flex flex-col items-center gap-3 sm:gap-4">
+      <time
+        className="text-[clamp(5rem,13vw,8.5rem)] font-thin leading-none tracking-normal text-white drop-shadow-[0_8px_36px_rgba(0,0,0,0.45)]"
+        dateTime={now.toISOString()}
+        suppressHydrationWarning
+      >
+        {formattedTime}
+      </time>
+      <p
+        className="text-sm font-medium text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.42)] sm:text-base"
+        suppressHydrationWarning
+      >
+        {formattedDate}
+      </p>
+    </div>
+  );
+}
+
+function LockIdentity() {
+  return (
+    <section
+      aria-label="Portfolio owner"
+      className="flex flex-col items-center gap-3 sm:gap-4"
+    >
+      <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/40 bg-white/20 text-2xl font-semibold text-white shadow-[0_18px_56px_rgba(30,8,80,0.36)] backdrop-blur-2xl sm:h-24 sm:w-24 sm:text-3xl">
+        JH
+      </div>
+      <div className="flex flex-col items-center gap-1">
+        <h1 className="text-2xl font-semibold leading-tight text-white drop-shadow-[0_3px_18px_rgba(0,0,0,0.5)] sm:text-3xl">
+          이재호
+        </h1>
+        <p className="text-sm font-medium text-white/80 sm:text-base">
+          Client Portfolio
+        </p>
+      </div>
+    </section>
+  );
+}
+
+export function LockScreen({ isUnlocking, onUnlock }: LockScreenProps) {
+  const now = useMinuteClock();
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (isUnlocking) {
+        return;
+      }
+
+      if (event.key === "Enter" && !event.altKey && !event.ctrlKey && !event.metaKey) {
+        onUnlock();
+      }
+    };
+
+    const handleWheel = (event: WheelEvent) => {
+      if (isUnlocking) {
+        return;
+      }
+
+      if (event.deltaY < 0) {
+        onUnlock();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("wheel", handleWheel, { passive: true });
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, [isUnlocking, onUnlock]);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[linear-gradient(135deg,#dde7f3_0%,#eef2f7_45%,#f7e7e2_100%)] text-slate-900 dark:bg-[linear-gradient(135deg,#172033_0%,#111827_48%,#31253a_100%)] dark:text-slate-50">
-      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.34),rgba(255,255,255,0)_42%),linear-gradient(0deg,rgba(31,41,55,0.08),rgba(31,41,55,0))] dark:bg-[linear-gradient(120deg,rgba(255,255,255,0.08),rgba(255,255,255,0)_42%),linear-gradient(0deg,rgba(0,0,0,0.22),rgba(0,0,0,0))]" />
-      <AnimatePresence mode="wait" initial={false}>
-        {!unlocked ? (
-          <motion.section
-            key="lock-screen"
-            aria-label="잠금화면 랜딩"
-            className="relative z-10 flex min-h-screen flex-col items-center justify-end px-5 py-8 text-center sm:px-8 sm:py-10"
-            animate={{ opacity: 1, scale: 1 }}
-            exit={lockExit}
-            initial={{ opacity: 1, scale: 1 }}
-            transition={{ duration: shouldReduceMotion ? 0.2 : 0.5, ease: "easeOut" }}
-          >
-            <div className="mb-16 flex w-full max-w-3xl flex-col items-center sm:mb-20">
-              <time
-                className="font-semibold leading-none tracking-normal text-[clamp(3.75rem,13vw,8rem)]"
-                dateTime={now.toISOString()}
-                suppressHydrationWarning
-              >
-                {formattedTime}
-              </time>
-              <p
-                className="mt-4 text-sm font-medium text-slate-700 sm:text-base dark:text-slate-200"
-                suppressHydrationWarning
-              >
-                {formattedDate}
-              </p>
-              <h1 className="mt-8 max-w-2xl text-pretty text-xl font-semibold leading-8 text-slate-950 sm:text-2xl sm:leading-9 dark:text-white">
-                {headline}
-              </h1>
-              <button
-                type="button"
-                className="mt-8 min-h-11 rounded-md border border-white/50 bg-white/78 px-6 py-3 text-sm font-bold text-slate-900 shadow-[0_18px_48px_rgba(15,23,42,0.2)] backdrop-blur-[18px] transition hover:bg-white focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#4f8fd9] dark:border-white/20 dark:bg-slate-900/68 dark:text-white dark:hover:bg-slate-900/88"
-                onClick={unlock}
-              >
-                포트폴리오 입장
-              </button>
-            </div>
-
-            <nav
-              aria-label="잠금화면 빠른 링크"
-              className="grid w-full max-w-sm grid-cols-3 overflow-hidden rounded-xl border border-white/46 bg-white/56 text-sm font-semibold text-slate-800 shadow-[0_18px_48px_rgba(15,23,42,0.16)] backdrop-blur-[18px] dark:border-white/16 dark:bg-slate-900/54 dark:text-slate-100"
-            >
-              {quickLinks.map((link) => (
-                <a
-                  key={link.label}
-                  aria-label={link.ariaLabel}
-                  className="flex min-h-11 items-center justify-center border-r border-white/50 px-3 transition last:border-r-0 hover:bg-white/60 focus-visible:relative focus-visible:z-10 focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-[-3px] focus-visible:outline-[#4f8fd9] dark:border-white/12 dark:hover:bg-white/10"
-                  href={link.href}
-                  rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-                  target={link.href.startsWith("http") ? "_blank" : undefined}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-          </motion.section>
-        ) : (
-          <motion.section
-            key="desktop-placeholder"
-            aria-label="데스크톱 임시 화면"
-            className="relative z-10 flex min-h-screen items-center justify-center px-6 text-center"
-            animate={{ opacity: 1, scale: 1 }}
-            initial={desktopInitial}
-            transition={{ duration: shouldReduceMotion ? 0.2 : 0.5, ease: "easeOut" }}
-          >
-            <h2 className="rounded-md border border-white/46 bg-white/68 px-6 py-4 text-lg font-bold text-slate-900 shadow-[0_18px_48px_rgba(15,23,42,0.16)] backdrop-blur-[18px] dark:border-white/16 dark:bg-slate-900/62 dark:text-white">
-              Desktop workspace 준비 중
-            </h2>
-          </motion.section>
+    <section
+      aria-label="Portfolio lock screen"
+      className={cn(
+        "absolute inset-0 z-20 overflow-hidden text-white",
+        isUnlocking && "pointer-events-none",
+      )}
+    >
+      <div
+        aria-hidden="true"
+        className={cn(
+          "absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/60 via-black/20 to-transparent transition-opacity duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
+          isUnlocking && "opacity-0",
         )}
-      </AnimatePresence>
-    </main>
+      />
+      <div
+        aria-hidden="true"
+        className={cn(
+          "absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-black/70 via-black/25 to-transparent transition-opacity duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
+          isUnlocking && "opacity-0",
+        )}
+      />
+
+      <LockStatusBar isUnlocking={isUnlocking} now={now} />
+
+      <div
+        className={cn(
+          "relative z-10 flex min-h-screen flex-col items-center justify-center px-5 pb-20 pt-16 text-center transition-[opacity,transform] duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] sm:px-8 sm:pb-24 sm:pt-20",
+          isUnlocking && "pointer-events-none -translate-y-4 opacity-0",
+        )}
+      >
+        <div className="flex w-full max-w-2xl flex-col items-center gap-5 sm:gap-7">
+          <LockClock now={now} />
+          <LockIdentity />
+          <SwipeUnlockControl disabled={isUnlocking} onUnlock={onUnlock} />
+        </div>
+      </div>
+    </section>
   );
 }

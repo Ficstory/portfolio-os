@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   ArrowUp,
+  Bot,
   BookOpenText,
   Code2,
   Download,
@@ -12,6 +13,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import { ChatWindow } from "@/components/folders/ChatWindow";
 import { resumeSummary } from "@/content/resume-summary";
 import { externalLinks } from "@/data/links";
 import { externalLinkSlots } from "@/data/navigation";
@@ -55,6 +57,12 @@ const sectionMeta: Record<FolderId, SectionMeta> = {
     eyebrow: "Experience",
     description: "기술을 사용 맥락별로 묶어 hover 없이 바로 확인합니다.",
     icon: Code2,
+  },
+  "ai-chat": {
+    title: "Portfolio AI",
+    eyebrow: "Local AI",
+    description: "로컬 모델 기반 포트폴리오 챗봇 진입점을 먼저 준비합니다.",
+    icon: Bot,
   },
   resume: {
     title: "Resume",
@@ -482,6 +490,8 @@ function renderContent(sectionId: FolderId) {
       return <ProjectsContent />;
     case "skills":
       return <SkillsContent />;
+    case "ai-chat":
+      return <ChatWindow />;
     case "resume":
       return <ResumeContent />;
     case "contact":

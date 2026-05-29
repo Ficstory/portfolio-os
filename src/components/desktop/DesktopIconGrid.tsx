@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Bot,
   Code2,
   FileText,
   Folder,
@@ -16,6 +17,7 @@ import { useDesktopStore } from "@/stores/desktopStore";
 import type { FolderId } from "@/types/portfolio";
 
 const iconMap: Record<string, LucideIcon> = {
+  Bot,
   Code2,
   FileText,
   FolderKanban,
