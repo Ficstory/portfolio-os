@@ -15,6 +15,10 @@
   --color-border: rgba(70, 82, 102, 0.18);
   --color-text: #1f2937;
   --color-text-muted: #667085;
+  --color-menu-bar-text: #0f172a;
+  --color-menu-bar-muted: rgba(51, 65, 85, 0.72);
+  --color-menu-bar-control-hover: rgba(255, 255, 255, 0.3);
+  --menu-bar-text-shadow: 0 1px 10px rgba(255, 255, 255, 0.42);
   --color-accent: #4f8fd9;
   --color-accent-soft: #dcebff;
   --color-coral: #e98b74;
@@ -37,6 +41,10 @@
   --color-border: rgba(255, 255, 255, 0.16);
   --color-text: #f8fafc;
   --color-text-muted: #b6c2d2;
+  --color-menu-bar-text: rgba(248, 250, 252, 0.96);
+  --color-menu-bar-muted: rgba(226, 232, 240, 0.72);
+  --color-menu-bar-control-hover: rgba(255, 255, 255, 0.12);
+  --menu-bar-text-shadow: 0 1px 12px rgba(0, 0, 0, 0.44);
   --color-accent: #8ab7ff;
   --color-accent-soft: rgba(138, 183, 255, 0.18);
   --color-coral: #f2a390;
@@ -56,6 +64,10 @@
   --color-border: rgba(70, 82, 102, 0.18);
   --color-text: #1f2937;
   --color-text-muted: #667085;
+  --color-menu-bar-text: #0f172a;
+  --color-menu-bar-muted: rgba(51, 65, 85, 0.72);
+  --color-menu-bar-control-hover: rgba(255, 255, 255, 0.3);
+  --menu-bar-text-shadow: 0 1px 10px rgba(255, 255, 255, 0.42);
   --color-accent: #4f8fd9;
   --color-accent-soft: #dcebff;
   --color-coral: #e98b74;
@@ -75,6 +87,10 @@
   --color-border: rgba(255, 255, 255, 0.16);
   --color-text: #fbf7ff;
   --color-text-muted: #dccde8;
+  --color-menu-bar-text: rgba(251, 247, 255, 0.97);
+  --color-menu-bar-muted: rgba(236, 222, 246, 0.76);
+  --color-menu-bar-control-hover: rgba(255, 255, 255, 0.12);
+  --menu-bar-text-shadow: 0 1px 14px rgba(0, 0, 0, 0.42);
   --color-accent: #f0a7ff;
   --color-accent-soft: rgba(240, 167, 255, 0.2);
   --color-coral: #f2a390;
@@ -94,6 +110,10 @@
   --color-border: rgba(255, 255, 255, 0.15);
   --color-text: #f8fafc;
   --color-text-muted: #c2c8dc;
+  --color-menu-bar-text: rgba(248, 250, 252, 0.97);
+  --color-menu-bar-muted: rgba(226, 232, 240, 0.74);
+  --color-menu-bar-control-hover: rgba(255, 255, 255, 0.12);
+  --menu-bar-text-shadow: 0 1px 14px rgba(0, 0, 0, 0.44);
   --color-accent: #a7b7ff;
   --color-accent-soft: rgba(167, 183, 255, 0.2);
   --color-coral: #f2a390;
@@ -113,6 +133,10 @@
   --color-border: rgba(255, 255, 255, 0.14);
   --color-text: #f8fafc;
   --color-text-muted: #aeb9ca;
+  --color-menu-bar-text: rgba(248, 250, 252, 0.96);
+  --color-menu-bar-muted: rgba(226, 232, 240, 0.72);
+  --color-menu-bar-control-hover: rgba(255, 255, 255, 0.12);
+  --menu-bar-text-shadow: 0 1px 12px rgba(0, 0, 0, 0.44);
   --color-accent: #8ab7ff;
   --color-accent-soft: rgba(138, 183, 255, 0.18);
   --color-coral: #f2a390;
@@ -169,6 +193,25 @@ body {
   background-clip: padding-box;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+}
+
+.menu-bar-surface {
+  background: transparent;
+  border: 0;
+  color: var(--color-menu-bar-text);
+  text-shadow: var(--menu-bar-text-shadow);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.menu-bar-muted,
+.menu-bar-action {
+  color: var(--color-menu-bar-muted);
+}
+
+.menu-bar-action:hover {
+  background: var(--color-menu-bar-control-hover);
+  color: var(--color-menu-bar-text);
 }
 
 .window-surface {

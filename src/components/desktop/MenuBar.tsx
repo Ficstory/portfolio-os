@@ -58,7 +58,7 @@ export function MenuBar() {
   );
 
   return (
-    <header className="glass-surface flex h-8 items-center justify-between gap-4 px-4 text-sm font-semibold text-slate-900 dark:text-slate-50">
+    <header className="menu-bar-surface flex h-8 items-center justify-between gap-4 px-4 text-sm font-semibold">
       <div className="flex min-w-0 items-center gap-4">
         <div className="flex shrink-0 items-center gap-2">
           <MonitorCog aria-hidden="true" size={16} strokeWidth={2.2} />
@@ -66,7 +66,7 @@ export function MenuBar() {
         </div>
         <span
           aria-label={`활성 창: ${activeWindowTitle}`}
-          className="hidden min-w-0 truncate text-xs font-medium text-muted sm:block"
+          className="menu-bar-muted hidden min-w-0 truncate text-xs font-medium sm:block"
         >
           {activeWindowTitle}
         </span>
@@ -78,7 +78,7 @@ export function MenuBar() {
         </time>
         <button
           aria-label="테마 토글 준비 중"
-          className="flex min-h-7 items-center gap-1 rounded-sm px-2 text-muted transition hover:bg-white/32 focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-[#4f8fd9] dark:hover:bg-white/10"
+          className="menu-bar-action flex min-h-7 items-center gap-1 rounded-sm px-2 transition focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-[#4f8fd9]"
           title="테마 토글 준비 중"
           type="button"
         >
