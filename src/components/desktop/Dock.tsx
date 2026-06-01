@@ -18,6 +18,7 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
+import Image from "next/image";
 import { type PointerEvent, useRef } from "react";
 
 import { links } from "@/data/links";
@@ -54,6 +55,11 @@ const iconMap: Record<string, LucideIcon> = {
   Mail,
   UserRound,
 };
+
+const dockControlClassName =
+  "relative grid shrink-0 place-items-center rounded-[14px] transition hover:-translate-y-1 focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#4f8fd9]";
+const dockFallbackClassName =
+  "border border-white/44 bg-white/62 text-slate-800 shadow-sm hover:bg-white/86 dark:border-white/14 dark:bg-slate-900/62 dark:text-slate-50 dark:hover:bg-slate-800/86";
 
 function isDockFolderId(id: FolderId): id is (typeof dockFolderIds)[number] {
   return dockFolderIds.includes(id as (typeof dockFolderIds)[number]);
@@ -116,6 +122,21 @@ function useDockItemMotion<TElement extends HTMLElement>(
   };
 }
 
+function DockIconImage({ src }: { src: string }) {
+  return (
+    <Image
+      alt=""
+      aria-hidden="true"
+      className="pointer-events-none size-full select-none object-contain drop-shadow-md"
+      draggable={false}
+      height={512}
+      sizes={`${MAX_DOCK_ICON_SIZE}px`}
+      src={src}
+      width={512}
+    />
+  );
+}
+
 function DockButton({
   item,
   isOpen,
@@ -133,13 +154,15 @@ function DockButton({
     mouseX,
     shouldReduceMotion,
   );
+  const hasImageIcon = Boolean(item.dockIconSrc);
 
   return (
     <motion.button
       aria-label={`${item.label} 열기`}
       className={cn(
-        "relative grid shrink-0 place-items-center rounded-md border border-white/44 bg-white/62 text-slate-800 shadow-sm transition hover:-translate-y-1 hover:bg-white/86 focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#4f8fd9] dark:border-white/14 dark:bg-slate-900/62 dark:text-slate-50 dark:hover:bg-slate-800/86",
-        isOpen && "bg-white/90 dark:bg-slate-800/94",
+        dockControlClassName,
+        hasImageIcon ? "bg-transparent" : dockFallbackClassName,
+        isOpen && !hasImageIcon && "bg-white/90 dark:bg-slate-800/94",
       )}
       onClick={() => onOpen(item)}
       ref={ref}
@@ -147,7 +170,11 @@ function DockButton({
       title={item.title}
       type="button"
     >
-      <Icon aria-hidden="true" size={23} strokeWidth={2.2} />
+      {item.dockIconSrc ? (
+        <DockIconImage src={item.dockIconSrc} />
+      ) : (
+        <Icon aria-hidden="true" size={23} strokeWidth={2.2} />
+      )}
       {isOpen ? (
         <span className="absolute -bottom-2 left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-[#5dae8b] shadow-[0_0_0_3px_rgba(93,174,139,0.18)]" />
       ) : null}
@@ -155,7 +182,13 @@ function DockButton({
   );
 }
 
-function DockExternalLink({ mouseX }: { mouseX: MotionValue<number> }) {
+function DockExternalLink({
+  dockIconSrc,
+  mouseX,
+}: {
+  dockIconSrc: string;
+  mouseX: MotionValue<number>;
+}) {
   const shouldReduceMotion = Boolean(useReducedMotion());
   const { ref, style } = useDockItemMotion<HTMLAnchorElement>(
     mouseX,
@@ -165,7 +198,7 @@ function DockExternalLink({ mouseX }: { mouseX: MotionValue<number> }) {
   return (
     <motion.a
       aria-label="GitHub 열기"
-      className="grid shrink-0 place-items-center rounded-md border border-white/44 bg-white/62 text-slate-800 shadow-sm transition hover:-translate-y-1 hover:bg-white/86 focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#4f8fd9] dark:border-white/14 dark:bg-slate-900/62 dark:text-slate-50 dark:hover:bg-slate-800/86"
+      className={dockControlClassName}
       href={links.github}
       ref={ref}
       rel="noreferrer"
@@ -173,7 +206,7 @@ function DockExternalLink({ mouseX }: { mouseX: MotionValue<number> }) {
       target="_blank"
       title="GitHub"
     >
-      <ExternalLink aria-hidden="true" size={23} strokeWidth={2.2} />
+      <DockIconImage src={dockIconSrc} />
     </motion.a>
   );
 }
@@ -227,7 +260,7 @@ export function Dock() {
         className="mx-1 h-10 w-px bg-slate-700/16 dark:bg-white/18"
       />
 
-      <DockExternalLink mouseX={mouseX} />
+      <DockExternalLink dockIconSrc="/icons/dock/git.webp" mouseX={mouseX} />
     </nav>
   );
 }

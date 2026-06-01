@@ -5,20 +5,30 @@ import { MenuBar } from "@/components/desktop/MenuBar";
 import { WindowManager } from "@/components/desktop/WindowManager";
 import { MobileHome } from "@/components/mobile/MobileHome";
 import { cn } from "@/lib/cn";
+import type { ResolvedTheme } from "@/lib/timeTheme";
+import { useDesktopStore } from "@/stores/desktopStore";
 
 type DesktopShellProps = {
   isVisible?: boolean;
+  resolvedTheme: ResolvedTheme;
 };
 
 const revealClass =
-  "transition-[opacity,transform] duration-[650ms] ease-[cubic-bezier(0.22,1,0.36,1)]";
+  "transition-[opacity,transform] duration-[300ms] ease-[cubic-bezier(0.22,1,0.36,1)]";
 
-export function DesktopShell({ isVisible = true }: DesktopShellProps) {
+export function DesktopShell({
+  isVisible = true,
+  resolvedTheme,
+}: DesktopShellProps) {
+  const hasMaximizedWindow = useDesktopStore((state) =>
+    state.windows.some((window) => window.isMaximized && !window.isMinimized),
+  );
+
   return (
     <section
       aria-label="Portfolio desktop"
       className={cn(
-        "relative z-10 min-h-screen text-slate-900 transition-[opacity,transform] duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] dark:text-slate-50",
+        "relative z-10 min-h-screen text-slate-900 transition-[opacity,transform] duration-[360ms] ease-[cubic-bezier(0.22,1,0.36,1)] dark:text-slate-50",
         isVisible
           ? "pointer-events-auto translate-y-0 opacity-100"
           : "pointer-events-none translate-y-3 opacity-0",
@@ -39,19 +49,20 @@ export function DesktopShell({ isVisible = true }: DesktopShellProps) {
             "absolute inset-x-0 top-0 z-[1000]",
             revealClass,
             isVisible
-              ? "delay-[200ms] translate-y-0 opacity-100"
+              ? "delay-[60ms] translate-y-0 opacity-100"
               : "translate-y-3 opacity-0",
           )}
         >
-          <MenuBar />
+          <MenuBar resolvedTheme={resolvedTheme} />
         </div>
 
         <div
           className={cn(
             "absolute inset-0",
+            hasMaximizedWindow ? "z-[1100]" : "z-[800]",
             revealClass,
             isVisible
-              ? "delay-[450ms] translate-y-0 opacity-100"
+              ? "delay-[90ms] translate-y-0 opacity-100"
               : "translate-y-3 opacity-0",
           )}
         >
@@ -63,7 +74,7 @@ export function DesktopShell({ isVisible = true }: DesktopShellProps) {
             "absolute inset-x-0 bottom-5 z-[900] flex justify-center px-6",
             revealClass,
             isVisible
-              ? "delay-[350ms] translate-y-0 opacity-100"
+              ? "delay-[120ms] translate-y-0 opacity-100"
               : "translate-y-3 opacity-0",
           )}
         >

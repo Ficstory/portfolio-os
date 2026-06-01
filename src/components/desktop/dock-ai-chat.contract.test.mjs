@@ -47,6 +47,19 @@ test("dock uses pointer-x magnification without losing open indicators and exter
   assert.match(dockSource, /focus-visible:outline/);
 });
 
+test("dock can render generated 3d icon assets before falling back to lucide icons", () => {
+  assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/about\.webp"/);
+  assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/projects\.webp"/);
+  assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/skills\.webp"/);
+  assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/ai-chat\.webp"/);
+  assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/resume\.webp"/);
+  assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/contact\.webp"/);
+  assert.match(dockSource, /item\.dockIconSrc \? \(/);
+  assert.match(dockSource, /<DockIconImage src=\{item\.dockIconSrc\}/);
+  assert.match(dockSource, /alt=""/);
+  assert.match(dockSource, /dockIconSrc="\/icons\/dock\/git\.webp"/);
+});
+
 test("ai chat opens as an internal portfolio window with a placeholder chat UI", () => {
   assert.ok(existsSync(chatWindowPath), "ChatWindow component should exist");
 

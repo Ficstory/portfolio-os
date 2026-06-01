@@ -1,4 +1,6 @@
 export type TimeOfDay = "dawn" | "day" | "evening" | "night";
+export type AppearanceMode = "auto" | "light" | "dark";
+export type ResolvedTheme = "light" | "dark";
 
 const WALLPAPER_BY_TIME_OF_DAY: Record<TimeOfDay, string> = {
   dawn: "/images/wallpapers/dawn.png",
@@ -27,8 +29,17 @@ export function getWallpaperForTimeOfDay(timeOfDay: TimeOfDay): string {
   return WALLPAPER_BY_TIME_OF_DAY[timeOfDay];
 }
 
-export function getThemeModeForTimeOfDay(
-  timeOfDay: TimeOfDay,
-): "light" | "dark" {
+export function getThemeModeForTimeOfDay(timeOfDay: TimeOfDay): ResolvedTheme {
   return timeOfDay === "day" ? "light" : "dark";
+}
+
+export function resolveAppearanceMode(
+  appearanceMode: AppearanceMode,
+  timeOfDay: TimeOfDay,
+): ResolvedTheme {
+  if (appearanceMode === "auto") {
+    return getThemeModeForTimeOfDay(timeOfDay);
+  }
+
+  return appearanceMode;
 }

@@ -35,6 +35,7 @@ const {
   getThemeModeForTimeOfDay,
   getTimeOfDay,
   getWallpaperForTimeOfDay,
+  resolveAppearanceMode,
 } = loadTimeThemeModule();
 
 test("maps boundary hours to the expected time of day", () => {
@@ -63,4 +64,11 @@ test("uses light theme only during the day", () => {
   assert.equal(getThemeModeForTimeOfDay("dawn"), "dark");
   assert.equal(getThemeModeForTimeOfDay("evening"), "dark");
   assert.equal(getThemeModeForTimeOfDay("night"), "dark");
+});
+
+test("resolves appearance mode independently from the time theme", () => {
+  assert.equal(resolveAppearanceMode("auto", "day"), "light");
+  assert.equal(resolveAppearanceMode("auto", "night"), "dark");
+  assert.equal(resolveAppearanceMode("light", "night"), "light");
+  assert.equal(resolveAppearanceMode("dark", "day"), "dark");
 });

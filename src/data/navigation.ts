@@ -6,6 +6,7 @@ export const navigationItems = [
     label: "About",
     title: "About Me",
     iconName: "UserRound",
+    dockIconSrc: "/icons/dock/about.webp",
     windowId: "about",
   },
   {
@@ -13,6 +14,7 @@ export const navigationItems = [
     label: "Projects",
     title: "Projects",
     iconName: "FolderKanban",
+    dockIconSrc: "/icons/dock/projects.webp",
     windowId: "projects",
   },
   {
@@ -20,6 +22,7 @@ export const navigationItems = [
     label: "Skills",
     title: "Skills",
     iconName: "Code2",
+    dockIconSrc: "/icons/dock/skills.webp",
     windowId: "skills",
   },
   {
@@ -27,6 +30,7 @@ export const navigationItems = [
     label: "AI Chat",
     title: "Portfolio AI",
     iconName: "Bot",
+    dockIconSrc: "/icons/dock/ai-chat.webp",
     windowId: "ai-chat",
   },
   {
@@ -34,6 +38,7 @@ export const navigationItems = [
     label: "Resume",
     title: "Resume",
     iconName: "FileText",
+    dockIconSrc: "/icons/dock/resume.webp",
     windowId: "resume",
   },
   {
@@ -41,6 +46,7 @@ export const navigationItems = [
     label: "Contact",
     title: "Contact",
     iconName: "Mail",
+    dockIconSrc: "/icons/dock/contact.webp",
     windowId: "contact",
   },
 ] as const satisfies readonly NavigationItem[];

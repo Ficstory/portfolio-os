@@ -23,12 +23,21 @@ export type WindowSize = {
   height: number;
 };
 
+export type WindowSizePreset = {
+  widthRatio: number;
+  heightRatio: number;
+  minWidth: number;
+  minHeight: number;
+  maxWidth: number;
+  maxHeight: number;
+};
+
 export type FolderItem = {
   id: FolderId;
   title: string;
   description: string;
   iconName: string;
-  defaultWindowSize: WindowSize;
+  defaultWindowSize: WindowSizePreset;
 };
 
 export type NavigationItem = {
@@ -36,6 +45,7 @@ export type NavigationItem = {
   label: string;
   title: string;
   iconName: string;
+  dockIconSrc?: string;
   windowId: WindowId;
 };
 

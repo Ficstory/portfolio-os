@@ -42,16 +42,15 @@ test("lock screen unlocks through enter, upward wheel, click, and upward pointer
 });
 
 test("home keeps the shared wallpaper while lock dim fades and desktop is revealed", () => {
-  assert.match(pageSource, /isUnlocked/);
+  assert.match(pageSource, /hasUnlocked/);
   assert.match(pageSource, /isUnlocking/);
-  assert.match(pageSource, /isBooting/);
-  assert.match(pageSource, /BOOT_SEQUENCE_MS/);
   assert.match(pageSource, /getTimeOfDay/);
   assert.match(pageSource, /getWallpaperForTimeOfDay/);
-  assert.match(pageSource, /getThemeModeForTimeOfDay/);
+  assert.match(pageSource, /resolveAppearanceMode/);
+  assert.match(pageSource, /useThemeStore/);
   assert.match(pageSource, /backgroundImage:\s*`url\(\$\{wallpaperUrl\}\)`/);
   assert.match(pageSource, /data-time-theme=\{timeOfDay\}/);
-  assert.match(pageSource, /data-theme=\{themeMode\}/);
+  assert.match(pageSource, /data-theme=\{resolvedTheme\}/);
   assert.match(pageSource, /opacity:\s*`var\(--wallpaper-dim-\$\{dimState\}\)`/);
   assert.doesNotMatch(pageSource, /bg-\[url\('\/images\/lock-wallpaper\.png'\)\]/);
   assert.doesNotMatch(pageSource, /opacity-\[0\.45\]/);
@@ -60,27 +59,49 @@ test("home keeps the shared wallpaper while lock dim fades and desktop is reveal
   assert.doesNotMatch(pageSource, /if \(hasUnlocked\)\s*\{\s*return <DesktopShell \/>/);
 });
 
-test("unlock flow shows a branded boot sequence before revealing the desktop", () => {
-  assert.match(pageSource, /PortfolioBootScreen/);
-  assert.match(pageSource, /aria-label="Portfolio boot sequence"/);
-  assert.match(pageSource, /JH/);
-  assert.match(pageSource, /Portfolio OS/);
-  assert.match(pageSource, /animate-pulse/);
-  assert.match(pageSource, /isDesktopVisible = isUnlocked/);
+test("unlock flow reveals the desktop without a boot or loading screen", () => {
+  const unlockDurationMatch = pageSource.match(
+    /const UNLOCK_ANIMATION_MS = (\d+);/,
+  );
+  assert.ok(unlockDurationMatch, "UNLOCK_ANIMATION_MS constant should exist");
+  const unlockDuration = Number(unlockDurationMatch[1]);
+
+  assert.ok(
+    unlockDuration >= 500 && unlockDuration <= 600,
+    `UNLOCK_ANIMATION_MS should be 500-600ms, received ${unlockDuration}ms`,
+  );
+  assert.doesNotMatch(pageSource, /PortfolioBootScreen/);
+  assert.doesNotMatch(pageSource, /BOOT_SEQUENCE_MS/);
+  assert.doesNotMatch(pageSource, /isBooting/);
+  assert.doesNotMatch(pageSource, /bootTimerRef/);
+  assert.doesNotMatch(pageSource, /aria-label="Portfolio boot sequence"/);
+  assert.doesNotMatch(pageSource, /Portfolio OS/);
+  assert.doesNotMatch(pageSource, /animate-pulse/);
+  assert.match(pageSource, /isDesktopVisible = hasUnlocked \|\| isUnlocking/);
+  assert.match(
+    pageSource,
+    /<DesktopShell isVisible=\{isDesktopVisible\} resolvedTheme=\{resolvedTheme\} \/>/,
+  );
+  assert.match(pageSource, /\{!hasUnlocked \? \(/);
+  assert.match(pageSource, /setIsUnlocking\(true\)/);
   assert.match(pageSource, /unlock\(\)/);
+  assert.match(pageSource, /setIsUnlocking\(false\)/);
+  assert.doesNotMatch(pageSource, /setIsUnlocked/);
 });
 
 test("unlock flow reveals the desktop without auto-opening the about window", () => {
-  assert.match(pageSource, /<DesktopShell isVisible=\{isDesktopVisible\} \/>/);
+  assert.match(
+    pageSource,
+    /<DesktopShell isVisible=\{isDesktopVisible\} resolvedTheme=\{resolvedTheme\} \/>/,
+  );
   assert.doesNotMatch(pageSource, /openWindow\("about"/);
   assert.doesNotMatch(pageSource, /windows\.some\(\(window\) => window\.id === "about"\)/);
 });
 
-test("desktop elements can fade in with staggered timing over the shared background", () => {
+test("desktop elements fade in quickly over the shared background", () => {
   assert.match(desktopShellSource, /isVisible/);
-  assert.match(desktopShellSource, /delay-\[200ms\]/);
-  assert.match(desktopShellSource, /delay-\[350ms\]/);
-  assert.match(desktopShellSource, /delay-\[450ms\]/);
+  assert.match(desktopShellSource, /delay-\[(?:\d+)ms\]/);
+  assert.doesNotMatch(desktopShellSource, /delay-\[(?:2[0-9]{2}|[3-9][0-9]{2}|[1-9][0-9]{3,})ms\]/);
   assert.match(desktopShellSource, /Dock/);
   assert.match(desktopShellSource, /WindowManager/);
   assert.doesNotMatch(desktopShellSource, /DesktopIconGrid/);

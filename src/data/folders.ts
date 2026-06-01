@@ -7,8 +7,12 @@ export const folders = [
     description: "Profile, strengths, current focus, and personal keywords.",
     iconName: "UserRound",
     defaultWindowSize: {
-      width: 760,
-      height: 560,
+      widthRatio: 0.58,
+      heightRatio: 0.68,
+      minWidth: 620,
+      minHeight: 480,
+      maxWidth: 760,
+      maxHeight: 560,
     },
   },
   {
@@ -17,8 +21,12 @@ export const folders = [
     description: "Three featured projects with implementation details.",
     iconName: "FolderKanban",
     defaultWindowSize: {
-      width: 920,
-      height: 640,
+      widthRatio: 0.78,
+      heightRatio: 0.78,
+      minWidth: 860,
+      minHeight: 540,
+      maxWidth: 1120,
+      maxHeight: 680,
     },
   },
   {
@@ -27,8 +35,12 @@ export const folders = [
     description: "Frontend skills grouped by practical usage context.",
     iconName: "Code2",
     defaultWindowSize: {
-      width: 820,
-      height: 600,
+      widthRatio: 0.64,
+      heightRatio: 0.72,
+      minWidth: 700,
+      minHeight: 500,
+      maxWidth: 820,
+      maxHeight: 600,
     },
   },
   {
@@ -37,8 +49,12 @@ export const folders = [
     description: "Local-model chat entry point prepared for portfolio Q&A.",
     iconName: "Bot",
     defaultWindowSize: {
-      width: 760,
-      height: 620,
+      widthRatio: 0.56,
+      heightRatio: 0.74,
+      minWidth: 640,
+      minHeight: 520,
+      maxWidth: 760,
+      maxHeight: 620,
     },
   },
   {
@@ -47,8 +63,12 @@ export const folders = [
     description: "Resume summary and PDF download entry point.",
     iconName: "FileText",
     defaultWindowSize: {
-      width: 780,
-      height: 620,
+      widthRatio: 0.58,
+      heightRatio: 0.74,
+      minWidth: 640,
+      minHeight: 520,
+      maxWidth: 780,
+      maxHeight: 620,
     },
   },
   {
@@ -57,8 +77,12 @@ export const folders = [
     description: "Contact channels and external profile entry points.",
     iconName: "Mail",
     defaultWindowSize: {
-      width: 680,
-      height: 480,
+      widthRatio: 0.5,
+      heightRatio: 0.58,
+      minWidth: 560,
+      minHeight: 420,
+      maxWidth: 680,
+      maxHeight: 480,
     },
   },
 ] as const satisfies readonly FolderItem[];
