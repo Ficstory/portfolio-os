@@ -10,6 +10,7 @@ import { useDesktopStore } from "@/stores/desktopStore";
 
 type DesktopShellProps = {
   isVisible?: boolean;
+  now: Date;
   resolvedTheme: ResolvedTheme;
 };
 
@@ -18,6 +19,7 @@ const revealClass =
 
 export function DesktopShell({
   isVisible = true,
+  now,
   resolvedTheme,
 }: DesktopShellProps) {
   const hasMaximizedWindow = useDesktopStore((state) =>
@@ -53,7 +55,7 @@ export function DesktopShell({
               : "translate-y-3 opacity-0",
           )}
         >
-          <MenuBar resolvedTheme={resolvedTheme} />
+          <MenuBar now={now} resolvedTheme={resolvedTheme} />
         </div>
 
         <div

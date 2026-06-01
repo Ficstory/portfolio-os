@@ -78,10 +78,10 @@ export default function Home() {
         style={{ opacity: `var(--wallpaper-dim-${dimState})` }}
       />
 
-      <DesktopShell isVisible={isDesktopVisible} resolvedTheme={resolvedTheme} />
+      <DesktopShell isVisible={isDesktopVisible} now={now} resolvedTheme={resolvedTheme} />
 
       {!hasUnlocked ? (
-        <LockScreen isUnlocking={isUnlocking} onUnlock={startUnlock} />
+        <LockScreen isUnlocking={isUnlocking} now={now} onUnlock={startUnlock} />
       ) : null}
     </main>
   );

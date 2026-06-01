@@ -23,7 +23,6 @@ import { navigationItems } from "@/data/navigation";
 import { projects } from "@/data/projects";
 import { skills } from "@/data/skills";
 import type { AppearanceMode, ResolvedTheme } from "@/lib/timeTheme";
-import { useMinuteClock } from "@/lib/useMinuteClock";
 import { useDesktopStore } from "@/stores/desktopStore";
 import { useThemeStore } from "@/stores/themeStore";
 import type { WindowId } from "@/types/portfolio";
@@ -94,6 +93,7 @@ const portfolioSearchResults: SearchResult[] = [
 ];
 
 type MenuBarProps = {
+  now: Date;
   resolvedTheme: ResolvedTheme;
 };
 
@@ -119,7 +119,10 @@ function getNextOptionIndex(currentIndex: number, offset: number) {
   );
 }
 
-export function MenuBar({ resolvedTheme }: MenuBarProps) {
+export function MenuBar({
+  now,
+  resolvedTheme,
+}: MenuBarProps) {
   const activeWindowId = useDesktopStore((state) => state.activeWindowId);
   const lock = useDesktopStore((state) => state.lock);
   const openWindow = useDesktopStore((state) => state.openWindow);
@@ -137,7 +140,6 @@ export function MenuBar({ resolvedTheme }: MenuBarProps) {
   const searchPaletteRef = useRef<HTMLDivElement>(null);
   const appearanceMenuId = useId();
   const searchPaletteId = useId();
-  const now = useMinuteClock();
   const AppearanceIcon = resolvedTheme === "light" ? Sun : Moon;
 
   const activeWindowTitle = useMemo(() => {

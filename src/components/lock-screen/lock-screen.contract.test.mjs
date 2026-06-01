@@ -59,6 +59,23 @@ test("home keeps the shared wallpaper while lock dim fades and desktop is reveal
   assert.doesNotMatch(pageSource, /if \(hasUnlocked\)\s*\{\s*return <DesktopShell \/>/);
 });
 
+test("home owns the clock and passes the current time through lock and desktop surfaces", () => {
+  assert.match(pageSource, /const now = useMinuteClock\(\);/);
+  assert.match(
+    pageSource,
+    /<DesktopShell isVisible=\{isDesktopVisible\} now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/,
+  );
+  assert.match(
+    pageSource,
+    /<LockScreen isUnlocking=\{isUnlocking\} now=\{now\} onUnlock=\{startUnlock\} \/>/,
+  );
+  assert.match(lockScreenSource, /now: Date;/);
+  assert.match(lockScreenSource, /export function LockScreen\(\{\s*isUnlocking,\s*now,\s*onUnlock,/);
+  assert.doesNotMatch(lockScreenSource, /function useMinuteClock\(\)/);
+  assert.match(desktopShellSource, /now: Date;/);
+  assert.match(desktopShellSource, /<MenuBar now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/);
+});
+
 test("unlock flow reveals the desktop without a boot or loading screen", () => {
   const unlockDurationMatch = pageSource.match(
     /const UNLOCK_ANIMATION_MS = (\d+);/,
@@ -80,7 +97,7 @@ test("unlock flow reveals the desktop without a boot or loading screen", () => {
   assert.match(pageSource, /isDesktopVisible = hasUnlocked \|\| isUnlocking/);
   assert.match(
     pageSource,
-    /<DesktopShell isVisible=\{isDesktopVisible\} resolvedTheme=\{resolvedTheme\} \/>/,
+    /<DesktopShell isVisible=\{isDesktopVisible\} now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/,
   );
   assert.match(pageSource, /\{!hasUnlocked \? \(/);
   assert.match(pageSource, /setIsUnlocking\(true\)/);
@@ -92,7 +109,7 @@ test("unlock flow reveals the desktop without a boot or loading screen", () => {
 test("unlock flow reveals the desktop without auto-opening the about window", () => {
   assert.match(
     pageSource,
-    /<DesktopShell isVisible=\{isDesktopVisible\} resolvedTheme=\{resolvedTheme\} \/>/,
+    /<DesktopShell isVisible=\{isDesktopVisible\} now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/,
   );
   assert.doesNotMatch(pageSource, /openWindow\("about"/);
   assert.doesNotMatch(pageSource, /windows\.some\(\(window\) => window\.id === "about"\)/);

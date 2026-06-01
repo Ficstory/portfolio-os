@@ -1,28 +1,40 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+function getMinuteStamp(now: Date) {
+  return Math.floor(now.getTime() / 60_000);
+}
 
 export function useMinuteClock() {
   const [now, setNow] = useState(() => new Date());
+  const minuteStampRef = useRef(getMinuteStamp(now));
 
   useEffect(() => {
-    const updateNow = () => setNow(new Date());
-    const msToNextMinute = 60_000 - (Date.now() % 60_000);
-    let intervalId: ReturnType<typeof setInterval> | undefined;
+    const syncNow = () => {
+      const nextNow = new Date();
+      const nextMinuteStamp = getMinuteStamp(nextNow);
+      const previousMinuteStamp = minuteStampRef.current;
 
-    updateNow();
+      if (nextMinuteStamp !== previousMinuteStamp) {
+        minuteStampRef.current = nextMinuteStamp;
+        setNow(nextNow);
+      }
+    };
 
-    const timeoutId = setTimeout(() => {
-      updateNow();
-      intervalId = setInterval(updateNow, 60_000);
-    }, msToNextMinute);
+    syncNow();
+
+    const intervalId = setInterval(syncNow, 1_000);
+
+    document.addEventListener("visibilitychange", syncNow);
+    window.addEventListener("focus", syncNow);
+    window.addEventListener("pageshow", syncNow);
 
     return () => {
-      clearTimeout(timeoutId);
-
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
+      clearInterval(intervalId);
+      document.removeEventListener("visibilitychange", syncNow);
+      window.removeEventListener("focus", syncNow);
+      window.removeEventListener("pageshow", syncNow);
     };
   }, []);
 

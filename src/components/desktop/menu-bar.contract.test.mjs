@@ -75,6 +75,12 @@ test("page refreshes the time theme from a minute clock", () => {
   );
 });
 
+test("menu bar receives the shared clock instead of starting its own timer", () => {
+  assert.match(menuBarSource, /now: Date;/);
+  assert.match(menuBarSource, /export function MenuBar\(\{\s*now,\s*resolvedTheme,/);
+  assert.doesNotMatch(menuBarSource, /useMinuteClock/);
+});
+
 test("appearance menu replaces the old immediate theme toggle", () => {
   assert.match(menuBarSource, /aria-haspopup="menu"/);
   assert.match(menuBarSource, /aria-expanded=\{isAppearanceMenuOpen\}/);

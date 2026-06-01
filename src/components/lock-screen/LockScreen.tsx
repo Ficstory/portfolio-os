@@ -6,42 +6,16 @@ import {
   Moon,
   Wifi,
 } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 
 import { SwipeUnlockControl } from "@/components/lock-screen/SwipeUnlockControl";
 import { cn } from "@/lib/cn";
 
 type LockScreenProps = {
   isUnlocking: boolean;
+  now: Date;
   onUnlock: () => void;
 };
-
-function useMinuteClock() {
-  const [now, setNow] = useState(() => new Date());
-
-  useEffect(() => {
-    const updateNow = () => setNow(new Date());
-    const msToNextMinute = 60_000 - (Date.now() % 60_000);
-    let intervalId: ReturnType<typeof setInterval> | undefined;
-
-    updateNow();
-
-    const timeoutId = setTimeout(() => {
-      updateNow();
-      intervalId = setInterval(updateNow, 60_000);
-    }, msToNextMinute);
-
-    return () => {
-      clearTimeout(timeoutId);
-
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-    };
-  }, []);
-
-  return now;
-}
 
 function formatTime(now: Date) {
   return new Intl.DateTimeFormat("ko-KR", {
@@ -152,9 +126,11 @@ function LockIdentity() {
   );
 }
 
-export function LockScreen({ isUnlocking, onUnlock }: LockScreenProps) {
-  const now = useMinuteClock();
-
+export function LockScreen({
+  isUnlocking,
+  now,
+  onUnlock,
+}: LockScreenProps) {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (isUnlocking) {
