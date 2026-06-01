@@ -4,7 +4,7 @@ import { baseUrl, ogImage, siteDescription, siteName } from "@/lib/seo";
 
 import "./globals.css";
 
-const metadataTitle = `${siteName} | 프론트엔드 포트폴리오`;
+const metadataTitle = `${siteName} | 공공·디지털 서비스 기획 포트폴리오`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

@@ -17,8 +17,8 @@ export const folders = [
   },
   {
     id: "projects",
-    title: "Projects",
-    description: "Three featured projects with implementation details.",
+    title: "Case Studies",
+    description: "문제 정의, 역할, 산출물, 기술 이해를 기준으로 정리한 대표 사례.",
     iconName: "FolderKanban",
     defaultWindowSize: {
       widthRatio: 0.78,
@@ -32,7 +32,7 @@ export const folders = [
   {
     id: "skills",
     title: "Skills",
-    description: "Frontend skills grouped by practical usage context.",
+    description: "직무 역량과 이를 뒷받침하는 프로젝트·경력 근거.",
     iconName: "Code2",
     defaultWindowSize: {
       widthRatio: 0.64,
@@ -46,7 +46,7 @@ export const folders = [
   {
     id: "ai-chat",
     title: "Portfolio AI",
-    description: "Local-model chat entry point prepared for portfolio Q&A.",
+    description: "포트폴리오 Q&A를 위한 보조 진입점.",
     iconName: "Bot",
     defaultWindowSize: {
       widthRatio: 0.56,

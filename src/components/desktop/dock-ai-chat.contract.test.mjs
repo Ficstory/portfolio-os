@@ -71,5 +71,5 @@ test("ai chat opens as an internal portfolio window with a placeholder chat UI",
   assert.match(chatWindowSource, /type="submit"/);
   assert.match(chatWindowSource, /currently preparing/);
   assert.match(chatWindowSource, /대표 프로젝트/);
-  assert.match(chatWindowSource, /프론트엔드 기술/);
+  assert.match(chatWindowSource, /직무 역량/);
 });

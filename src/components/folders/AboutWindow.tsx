@@ -1,6 +1,8 @@
-import { profile } from "@/data/profile";
+import { usePortfolioTrack } from "@/components/portfolio/PortfolioTrackProvider";
 
 export function AboutWindow() {
+  const { profile } = usePortfolioTrack();
+
   return (
     <div className="space-y-6">
       <section className="space-y-3">

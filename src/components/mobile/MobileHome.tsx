@@ -12,8 +12,8 @@ import {
 } from "lucide-react";
 
 import { MobileSection } from "@/components/mobile/MobileSection";
+import { usePortfolioTrack } from "@/components/portfolio/PortfolioTrackProvider";
 import { folders } from "@/data/folders";
-import { profile } from "@/data/profile";
 
 const iconMap: Record<string, LucideIcon> = {
   Bot,
@@ -25,12 +25,14 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 export function MobileHome() {
+  const { profile, track } = usePortfolioTrack();
+
   return (
     <section className="mobile-document min-h-screen px-4 py-5" id="mobile-home">
       <div className="mx-auto flex w-full max-w-2xl flex-col gap-6">
         <header className="rounded-lg border border-slate-200/80 bg-white/76 p-5 shadow-sm dark:border-white/12 dark:bg-slate-950/36">
           <p className="text-xs font-bold uppercase text-sky-700 dark:text-sky-200">
-            Portfolio OS
+            Portfolio OS · {track.label}
           </p>
           <h1 className="mt-3 text-2xl font-bold text-slate-950 dark:text-white">
             {profile.name}

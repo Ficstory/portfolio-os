@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const exampleQuestions = [
   "대표 프로젝트에서 맡은 역할은 무엇인가요?",
-  "주로 사용하는 프론트엔드 기술은 무엇인가요?",
+  "핵심 직무 역량은 무엇인가요?",
   "문제 해결 경험을 요약해줘.",
   "이 지원자의 강점을 알려줘.",
 ] as const;
@@ -33,7 +33,7 @@ export function ChatWindow() {
             Portfolio AI
           </h3>
           <p className="max-w-2xl text-sm leading-6 text-muted">
-            안녕하세요. 이 포트폴리오의 프로젝트, 기술 스택, 이력 정보를 바탕으로
+            안녕하세요. 이 포트폴리오의 프로젝트, 직무 역량, 이력 정보를 바탕으로
             답변할 준비를 하고 있어요. 현재는 로컬 모델 연결 전 상태입니다.
           </p>
         </div>

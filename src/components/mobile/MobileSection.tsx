@@ -14,11 +14,10 @@ import {
 } from "lucide-react";
 
 import { ChatWindow } from "@/components/folders/ChatWindow";
+import { usePortfolioTrack } from "@/components/portfolio/PortfolioTrackProvider";
 import { resumeSummary } from "@/content/resume-summary";
 import { externalLinks } from "@/data/links";
 import { externalLinkSlots } from "@/data/navigation";
-import { profile } from "@/data/profile";
-import { projects } from "@/data/projects";
 import { skills } from "@/data/skills";
 import type {
   ExternalLinkType,
@@ -47,15 +46,15 @@ const sectionMeta: Record<FolderId, SectionMeta> = {
     icon: UserRound,
   },
   projects: {
-    title: "Projects",
+    title: "Case Studies",
     eyebrow: "Featured Work",
-    description: "대표 프로젝트 3개의 문제, 역할, 구현, 결과를 문서형으로 정리합니다.",
+    description: "대표 사례의 문제, 역할, 산출물, 기술 이해를 문서형으로 정리합니다.",
     icon: FolderKanban,
   },
   skills: {
     title: "Skills",
     eyebrow: "Experience",
-    description: "기술을 사용 맥락별로 묶어 hover 없이 바로 확인합니다.",
+    description: "직무 역량과 이를 뒷받침하는 근거 경험을 확인합니다.",
     icon: Code2,
   },
   "ai-chat": {
@@ -79,21 +78,23 @@ const sectionMeta: Record<FolderId, SectionMeta> = {
 };
 
 const categoryOrder: SkillCategory[] = [
-  "frontend",
-  "state",
-  "styling",
-  "tooling",
-  "collaboration",
+  "problem-framing",
+  "requirements",
+  "stakeholder",
+  "data",
+  "technical",
+  "documentation",
   "ai",
 ];
 
 const categoryLabels: Record<SkillCategory, string> = {
   ai: "AI Workflow",
-  collaboration: "Collaboration",
-  frontend: "Frontend",
-  state: "State Management",
-  styling: "Styling",
-  tooling: "Tooling",
+  data: "Data-informed Planning",
+  documentation: "Product Documentation",
+  "problem-framing": "Problem Framing",
+  requirements: "Requirement Definition",
+  stakeholder: "Stakeholder Communication",
+  technical: "Technical Understanding",
 };
 
 const levelLabels = {
@@ -220,6 +221,8 @@ function ProjectLinksList({ project }: { project: Project }) {
 }
 
 function AboutContent() {
+  const { profile } = usePortfolioTrack();
+
   return (
     <div className="space-y-7">
       <section className="space-y-3">
@@ -252,9 +255,11 @@ function AboutContent() {
 }
 
 function ProjectsContent() {
+  const { projects } = usePortfolioTrack();
+
   return (
     <div className="space-y-5">
-      {projects.slice(0, 3).map((project, index) => (
+      {projects.map((project, index) => (
         <article
           className="space-y-5 rounded-lg border border-slate-200/80 bg-white/72 p-4 shadow-sm dark:border-white/12 dark:bg-slate-950/34"
           key={project.id}
@@ -284,23 +289,23 @@ function ProjectsContent() {
             <ChipList ariaLabel={`${project.title} 역할`} items={project.role} />
           </SectionBlock>
 
-          <SectionBlock title="기술 스택">
+          <SectionBlock title="기술 이해">
             <ChipList
-              ariaLabel={`${project.title} 기술 스택`}
+              ariaLabel={`${project.title} 기술 이해`}
               items={project.stack}
               tone="accent"
             />
           </SectionBlock>
 
-          <SectionBlock title="주요 구현">
+          <SectionBlock title="산출물과 기술 이해">
             <TextList items={project.implementationHighlights} />
           </SectionBlock>
 
-          <SectionBlock title="트러블슈팅">
+          <SectionBlock title="제약 조건과 주의점">
             <TextList items={project.troubleshooting} />
           </SectionBlock>
 
-          <SectionBlock title="성과와 배운 점">
+          <SectionBlock title="직무 관점의 의미와 증빙">
             <TextList items={project.result} />
           </SectionBlock>
 
@@ -363,6 +368,7 @@ function SkillsContent() {
 }
 
 function ResumeContent() {
+  const { projects } = usePortfolioTrack();
   const hasPdfPath = resumeSummary.pdfPath.trim().length > 0;
   const projectTitleById = new Map(
     projects.map((project) => [project.id, project.title]),

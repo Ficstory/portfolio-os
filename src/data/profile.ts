@@ -9,17 +9,26 @@ export type Profile = {
 };
 
 export const profile: Profile = {
-  name: "프론트엔드 개발자",
-  role: "Frontend Developer",
-  headline: "사용자 경험을 화면의 구조로 설계하고, 문제를 제품의 형태로 구현합니다.",
+  name: "이재호 / LEE JAEHO",
+  role: "공공·디지털 서비스 기획자",
+  headline:
+    "공공·사회 문제를 현장 데이터로 분석하고, 사용자 요구를 요구사항·화면·API 기준으로 옮깁니다.",
   introduction:
-    "정적 포트폴리오 MVP를 기준으로 프로젝트, 기술 경험, 이력 요약을 탐색 가능한 화면 구조로 정리합니다.",
+    "부산참여연대에서 조례·예산·의정 자료를 분석해 복잡한 공공문제를 의사결정 가능한 문서와 의제로 만들었습니다. 이후 SSAFY SW·AI 과정에서 Android·Web 프로젝트의 기획과 프론트엔드를 맡으며, 문제 정의가 요구사항·화면 흐름·API 연동·MVP 범위로 이어지는 과정을 직접 다뤘습니다.",
   strengths: [
-    "정보 구조를 먼저 정리하고 화면 흐름으로 연결합니다.",
-    "컴포넌트와 데이터를 분리해 유지보수 가능한 UI를 지향합니다.",
-    "문제 상황과 해결 과정을 기록해 다음 구현에 재사용합니다.",
+    "현장 자료와 설문 데이터를 기준화해 문제를 정의합니다.",
+    "PRD, 요구사항정의서, 화면명세서로 실행 기준을 정리합니다.",
+    "기획서를 쓰는 사람이 화면과 API도 만져본 경험으로 파트 간 해석 차이를 줄입니다.",
   ],
-  focusKeywords: ["React", "Next.js", "TypeScript", "UI Architecture", "Accessibility"],
+  focusKeywords: [
+    "Public Digital Service",
+    "Requirement Definition",
+    "Problem Framing",
+    "Product Documentation",
+    "Accessibility",
+    "Technical Understanding",
+    "AI-assisted Workflow",
+  ],
   currentFocus:
-    "MVP 화면에서 사용할 콘텐츠를 검증 가능한 정적 데이터로 정리하는 데 집중하고 있습니다.",
+    "공공·AI 디지털서비스 기획과 주니어 서비스기획 직무에 맞춰, 정책 문제를 서비스 요구사항과 사용자 흐름으로 번역하는 역량을 정리하고 있습니다.",
 };

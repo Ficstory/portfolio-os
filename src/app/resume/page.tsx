@@ -7,7 +7,7 @@ import { projects } from "@/data/projects";
 export const metadata: Metadata = {
   title: "이력서 요약 | Portfolio OS",
   description:
-    "프론트엔드 개발자의 한 줄 소개, 핵심 역량, 프로젝트 요약, 기술 요약, 교육 및 활동 요약을 확인할 수 있는 이력서 웹 요약 페이지입니다.",
+    "공공정책 분석과 SW·AI 프로젝트 경험을 연결한 서비스 기획 포트폴리오의 이력서 요약 페이지입니다.",
 };
 
 const resumePdf: { href: string; isReady: boolean } = {

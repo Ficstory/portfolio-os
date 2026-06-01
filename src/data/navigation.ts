@@ -11,8 +11,8 @@ export const navigationItems = [
   },
   {
     id: "projects",
-    label: "Projects",
-    title: "Projects",
+    label: "Case Studies",
+    title: "Case Studies",
     iconName: "FolderKanban",
     dockIconSrc: "/icons/dock/projects.webp",
     windowId: "projects",

@@ -53,7 +53,7 @@ export function ProjectMetaPanel({ project }: ProjectMetaPanelProps) {
             className="text-xs font-bold uppercase tracking-normal text-slate-500 dark:text-slate-300"
             id="project-meta-stack"
           >
-            기술 스택
+            기술 이해
           </h3>
           <ul className="mt-3 flex flex-wrap gap-2">
             {project.stack.map((tech) => (

@@ -2,20 +2,22 @@ import { skills } from "@/data/skills";
 import type { SkillCategory } from "@/types/portfolio";
 
 const categoryOrder: SkillCategory[] = [
-  "frontend",
-  "state",
-  "styling",
-  "tooling",
-  "collaboration",
+  "problem-framing",
+  "requirements",
+  "stakeholder",
+  "data",
+  "technical",
+  "documentation",
   "ai",
 ];
 
 const categoryLabels: Record<SkillCategory, string> = {
-  frontend: "Frontend",
-  state: "State Management",
-  styling: "Styling",
-  tooling: "Tooling",
-  collaboration: "Collaboration",
+  "problem-framing": "Problem Framing",
+  requirements: "Requirement Definition",
+  stakeholder: "Stakeholder Communication",
+  data: "Data-informed Planning",
+  technical: "Technical Understanding",
+  documentation: "Product Documentation",
   ai: "AI Workflow",
 };
 
@@ -39,10 +41,10 @@ export function SkillsWindow() {
           id="skills-window-heading"
           className="text-xl font-bold text-slate-950 dark:text-white"
         >
-          기술 경험
+          직무 역량
         </h3>
         <p className="text-sm leading-6 text-muted">
-          기술을 단순 나열하지 않고 실제 사용 맥락별로 묶었습니다.
+          개발 스택보다 문제 정의, 요구사항, 문서화, 기술 이해의 근거를 먼저 보여줍니다.
         </p>
       </div>
 

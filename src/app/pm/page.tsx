@@ -16,7 +16,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const UNLOCK_ANIMATION_MS = 550;
 
-export default function Home() {
+export default function PmHome() {
   const hasUnlocked = useDesktopStore((state) => state.hasUnlocked);
   const unlock = useDesktopStore((state) => state.unlock);
   const appearanceMode = useThemeStore((state) => state.appearanceMode);
@@ -59,9 +59,9 @@ export default function Home() {
   const dimState = isDesktopVisible ? "unlocked" : "locked";
 
   return (
-    <PortfolioTrackProvider trackId="default">
+    <PortfolioTrackProvider trackId="pm">
       <main
-        aria-label="Portfolio"
+        aria-label="PM Portfolio"
         className="relative min-h-screen overflow-hidden bg-slate-950 text-white"
         data-theme={resolvedTheme}
         data-time-theme={timeOfDay}

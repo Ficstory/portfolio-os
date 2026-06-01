@@ -20,8 +20,8 @@ import {
 
 import { cn } from "@/lib/cn";
 import { navigationItems } from "@/data/navigation";
-import { projects } from "@/data/projects";
 import { skills } from "@/data/skills";
+import { usePortfolioTrack } from "@/components/portfolio/PortfolioTrackProvider";
 import type { AppearanceMode, ResolvedTheme } from "@/lib/timeTheme";
 import { useDesktopStore } from "@/stores/desktopStore";
 import { useThemeStore } from "@/stores/themeStore";
@@ -48,49 +48,6 @@ type SearchResult = {
   windowTitle: string;
   searchText: string;
 };
-
-const portfolioSearchResults: SearchResult[] = [
-  ...navigationItems.map((item) => ({
-    id: `window-${item.id}`,
-    label: item.title,
-    category: "Window",
-    description: `Open ${item.label}`,
-    windowId: item.windowId,
-    windowTitle: item.title,
-    searchText: [item.label, item.title, item.id].join(" "),
-  })),
-  ...projects.map((project) => ({
-    id: `project-${project.slug}`,
-    label: project.title,
-    category: "Project",
-    description: project.stack.join(" / "),
-    windowId: `project-${project.slug}` as WindowId,
-    windowTitle: project.title,
-    searchText: [
-      project.title,
-      project.slug,
-      project.summary,
-      project.valueStatement,
-      project.stack.join(" "),
-      project.role.join(" "),
-    ].join(" "),
-  })),
-  ...skills.map((skill) => ({
-    id: `skill-${skill.name}`,
-    label: skill.name,
-    category: "Skill",
-    description: `${skill.category} / ${skill.level}`,
-    windowId: "skills" as const,
-    windowTitle: "Skills",
-    searchText: [
-      skill.name,
-      skill.category,
-      skill.level,
-      skill.description,
-      skill.relatedProjects.join(" "),
-    ].join(" "),
-  })),
-];
 
 type MenuBarProps = {
   now: Date;
@@ -123,6 +80,7 @@ export function MenuBar({
   now,
   resolvedTheme,
 }: MenuBarProps) {
+  const { projects } = usePortfolioTrack();
   const activeWindowId = useDesktopStore((state) => state.activeWindowId);
   const lock = useDesktopStore((state) => state.lock);
   const openWindow = useDesktopStore((state) => state.openWindow);
@@ -141,6 +99,51 @@ export function MenuBar({
   const appearanceMenuId = useId();
   const searchPaletteId = useId();
   const AppearanceIcon = resolvedTheme === "light" ? Sun : Moon;
+  const portfolioSearchResults: SearchResult[] = useMemo(
+    () => [
+      ...navigationItems.map((item) => ({
+        id: `window-${item.id}`,
+        label: item.title,
+        category: "Window",
+        description: `Open ${item.label}`,
+        windowId: item.windowId,
+        windowTitle: item.title,
+        searchText: [item.label, item.title, item.id].join(" "),
+      })),
+      ...projects.map((project) => ({
+        id: `project-${project.slug}`,
+        label: project.title,
+        category: "Project",
+        description: project.stack.join(" / "),
+        windowId: `project-${project.slug}` as WindowId,
+        windowTitle: project.title,
+        searchText: [
+          project.title,
+          project.slug,
+          project.summary,
+          project.valueStatement,
+          project.stack.join(" "),
+          project.role.join(" "),
+        ].join(" "),
+      })),
+      ...skills.map((skill) => ({
+        id: `skill-${skill.name}`,
+        label: skill.name,
+        category: "Skill",
+        description: `${skill.category} / ${skill.level}`,
+        windowId: "skills" as const,
+        windowTitle: "Skills",
+        searchText: [
+          skill.name,
+          skill.category,
+          skill.level,
+          skill.description,
+          skill.relatedProjects.join(" "),
+        ].join(" "),
+      })),
+    ],
+    [projects],
+  );
 
   const activeWindowTitle = useMemo(() => {
     if (!activeWindowId) {
@@ -177,7 +180,7 @@ export function MenuBar({
     return portfolioSearchResults
       .filter((result) => result.searchText.toLowerCase().includes(query))
       .slice(0, MAX_SEARCH_RESULTS);
-  }, [searchQuery]);
+  }, [portfolioSearchResults, searchQuery]);
 
   useEffect(() => {
     if (!isSearchOpen) {

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 
-import { projects } from "@/data/projects";
+import { usePortfolioTrack } from "@/components/portfolio/PortfolioTrackProvider";
 
 import { ProjectActivityLog } from "./projects/ProjectActivityLog";
 import { ProjectInspectorSidebar } from "./projects/ProjectInspectorSidebar";
@@ -13,11 +13,13 @@ import {
   type ProjectActivityLogId,
 } from "./projects/projectInspectorModel";
 
-const firstProject = projects[0];
-const firstLogId =
-  firstProject ? createProjectActivityLogs(firstProject)[0]?.id ?? "context" : "context";
-
 export function ProjectsWindow() {
+  const { projects } = usePortfolioTrack();
+  const firstProject = projects[0];
+  const firstLogId =
+    firstProject
+      ? createProjectActivityLogs(firstProject)[0]?.id ?? "context"
+      : "context";
   const [selectedProjectId, setSelectedProjectId] = useState(
     firstProject?.id ?? "",
   );

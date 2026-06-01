@@ -11,11 +11,12 @@ export type WindowId = FolderId | `project-${string}`;
 export type ThemeMode = "light" | "dark" | "system";
 
 export type SkillCategory =
-  | "frontend"
-  | "state"
-  | "styling"
-  | "tooling"
-  | "collaboration"
+  | "problem-framing"
+  | "requirements"
+  | "stakeholder"
+  | "data"
+  | "technical"
+  | "documentation"
   | "ai";
 
 export type WindowSize = {

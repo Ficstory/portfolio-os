@@ -78,7 +78,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           </ul>
         </ProjectSection>
 
-        <ProjectSection id="project-stack" title="기술 스택">
+        <ProjectSection id="project-stack" title="기술 이해">
           <ul className="flex flex-wrap gap-2">
             {project.stack.map((tech) => (
               <li
@@ -91,15 +91,15 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           </ul>
         </ProjectSection>
 
-        <ProjectSection id="project-implementation" title="주요 구현">
+        <ProjectSection id="project-implementation" title="산출물과 기술 이해">
           <TextList items={project.implementationHighlights} />
         </ProjectSection>
 
-        <ProjectSection id="project-troubleshooting" title="트러블슈팅">
+        <ProjectSection id="project-troubleshooting" title="제약 조건과 주의점">
           <TextList items={project.troubleshooting} />
         </ProjectSection>
 
-        <ProjectSection id="project-result" title="성과와 배운 점">
+        <ProjectSection id="project-result" title="직무 관점의 의미와 증빙">
           <TextList items={project.result} />
         </ProjectSection>
 

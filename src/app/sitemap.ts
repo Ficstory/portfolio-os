@@ -7,9 +7,10 @@ export const dynamic = "force-static";
 const routes = [
   "/",
   "/resume",
-  "/projects/portfolio-os",
-  "/projects/frontend-collaboration",
-  "/projects/problem-solving-archive",
+  "/projects/busan-eumgil",
+  "/projects/aekkim",
+  "/projects/play-pick",
+  "/projects/smile-game",
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

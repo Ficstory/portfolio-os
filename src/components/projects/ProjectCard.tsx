@@ -26,7 +26,7 @@ function ProjectCardContent({ project }: { project: Project }) {
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
           <p className="text-xs font-bold uppercase tracking-normal text-sky-700 dark:text-sky-200">
-            Featured Project
+            Case Study
           </p>
           <h3 className="mt-2 text-pretty text-xl font-bold text-slate-950 dark:text-white">
             {project.title}
@@ -56,7 +56,7 @@ function ProjectCardContent({ project }: { project: Project }) {
         ))}
       </div>
 
-      <ul aria-label="기술 스택" className="flex flex-wrap gap-2">
+      <ul aria-label="기술 이해" className="flex flex-wrap gap-2">
         {project.stack.map((tech) => (
           <li
             className="rounded-md bg-sky-50 px-2.5 py-1 text-xs font-bold text-sky-800 dark:bg-sky-300/12 dark:text-sky-100"

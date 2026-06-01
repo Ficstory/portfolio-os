@@ -1,14 +1,14 @@
 import { Download } from "lucide-react";
 
+import { usePortfolioTrack } from "@/components/portfolio/PortfolioTrackProvider";
 import { resumeSummary } from "@/content/resume-summary";
-import { projects } from "@/data/projects";
-
-const projectTitleById = new Map(
-  projects.map((project) => [project.id, project.title]),
-);
 
 export function ResumeWindow() {
+  const { projects } = usePortfolioTrack();
   const hasPdfPath = resumeSummary.pdfPath.trim().length > 0;
+  const projectTitleById = new Map(
+    projects.map((project) => [project.id, project.title]),
+  );
 
   return (
     <section className="space-y-5" aria-labelledby="resume-window-heading">
