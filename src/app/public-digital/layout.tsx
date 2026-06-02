@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { baseUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "이재호 | Junior PM / Service Planning Portfolio",
+  title: "이재호 | 공공·디지털 서비스기획 포트폴리오",
   description:
-    "요구사항, 화면 흐름, MVP 범위, 팀 협업 기준을 정리하는 주니어 PM/APM 포트폴리오.",
+    "공공 문제를 사용자 요구, 요구사항, 화면 흐름, 기능 기준으로 번역하는 공공·디지털 서비스기획 포트폴리오.",
   alternates: {
     canonical: new URL("/", baseUrl).toString(),
   },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PmLayout({
+export default function PublicDigitalLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

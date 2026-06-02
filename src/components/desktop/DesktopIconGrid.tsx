@@ -7,6 +7,7 @@ import {
   Folder,
   FolderKanban,
   Mail,
+  Route,
   UserRound,
   type LucideIcon,
 } from "lucide-react";
@@ -22,6 +23,7 @@ const iconMap: Record<string, LucideIcon> = {
   FileText,
   FolderKanban,
   Mail,
+  Route,
   UserRound,
 };
 

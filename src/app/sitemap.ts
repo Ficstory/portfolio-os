@@ -6,6 +6,10 @@ export const dynamic = "force-static";
 
 const routes = [
   "/",
+  "/public-digital",
+  "/pm",
+  "/policy",
+  "/assembly",
   "/resume",
   "/projects/busan-eumgil",
   "/projects/aekkim",

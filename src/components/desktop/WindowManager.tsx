@@ -7,6 +7,7 @@ import { ContactWindow } from "@/components/folders/ContactWindow";
 import { ProjectsWindow } from "@/components/folders/ProjectsWindow";
 import { ResumeWindow } from "@/components/folders/ResumeWindow";
 import { SkillsWindow } from "@/components/folders/SkillsWindow";
+import { TrackLinkPanel } from "@/components/tracks/TrackLinkPanel";
 import {
   type DesktopWindow,
   useDesktopStore,
@@ -32,6 +33,8 @@ function renderWindowContent(window: DesktopWindow) {
   switch (window.id) {
     case "about":
       return <AboutWindow />;
+    case "career-tracks":
+      return <TrackLinkPanel />;
     case "projects":
       return <ProjectsWindow />;
     case "skills":

@@ -21,7 +21,7 @@ const chatWindowPath = path.join(root, "src/components/folders/ChatWindow.tsx");
 test("dock exposes every internal portfolio menu in the expected order", () => {
   assert.match(
     dockSource,
-    /const dockFolderIds = \[\s*"about",\s*"projects",\s*"skills",\s*"ai-chat",\s*"resume",\s*"contact",\s*\] as const;/s,
+    /const dockFolderIds = \[\s*"about",\s*"career-tracks",\s*"projects",\s*"skills",\s*"ai-chat",\s*"resume",\s*"contact",\s*\] as const;/s,
   );
   assert.match(navigationSource, /id: "ai-chat"/);
   assert.match(navigationSource, /label: "AI Chat"/);

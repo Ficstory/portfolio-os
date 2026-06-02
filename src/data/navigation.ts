@@ -10,6 +10,13 @@ export const navigationItems = [
     windowId: "about",
   },
   {
+    id: "career-tracks",
+    label: "Tracks",
+    title: "Career Tracks",
+    iconName: "Route",
+    windowId: "career-tracks",
+  },
+  {
     id: "projects",
     label: "Case Studies",
     title: "Case Studies",

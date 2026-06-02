@@ -7,6 +7,7 @@ import {
   FileText,
   FolderKanban,
   Mail,
+  Route,
   UserRound,
   type LucideIcon,
 } from "lucide-react";
@@ -29,6 +30,7 @@ import type { FolderId, NavigationItem } from "@/types/portfolio";
 
 const dockFolderIds = [
   "about",
+  "career-tracks",
   "projects",
   "skills",
   "ai-chat",
@@ -53,6 +55,7 @@ const iconMap: Record<string, LucideIcon> = {
   FileText,
   FolderKanban,
   Mail,
+  Route,
   UserRound,
 };
 

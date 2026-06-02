@@ -20,9 +20,9 @@ export const resumeSummary: ResumeSummary = {
         "팀장/PM으로 요구사항정의서와 화면명세서 변경 이력을 관리하고 구독 관리 기능의 FE/API 연동 기준을 맞췄습니다.",
     },
     {
-      projectId: "play-pick",
+      projectId: "smile-game",
       summary:
-        "공연 콘텐츠 데이터를 사용자 취향과 연결하는 서비스 구조를 설계하고 Django/Vue 기반 배포 사이클을 경험했습니다.",
+        "컨설턴트 피드백 이후 48시간 내 설문을 설계·배포하고 168개 응답을 분석해 MVP 방향을 조정했습니다.",
     },
   ],
   techSummary: [

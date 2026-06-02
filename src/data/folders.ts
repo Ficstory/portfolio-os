@@ -16,6 +16,20 @@ export const folders = [
     },
   },
   {
+    id: "career-tracks",
+    title: "Career Tracks",
+    description: "지원 직무별로 정리한 포트폴리오 링크.",
+    iconName: "Route",
+    defaultWindowSize: {
+      widthRatio: 0.62,
+      heightRatio: 0.68,
+      minWidth: 680,
+      minHeight: 500,
+      maxWidth: 860,
+      maxHeight: 620,
+    },
+  },
+  {
     id: "projects",
     title: "Case Studies",
     description: "문제 정의, 역할, 산출물, 기술 이해를 기준으로 정리한 대표 사례.",

@@ -9,12 +9,14 @@ import {
   FileText,
   FolderKanban,
   Mail,
+  Route,
   UserRound,
   type LucideIcon,
 } from "lucide-react";
 
 import { ChatWindow } from "@/components/folders/ChatWindow";
 import { usePortfolioTrack } from "@/components/portfolio/PortfolioTrackProvider";
+import { TrackLinkPanel } from "@/components/tracks/TrackLinkPanel";
 import { resumeSummary } from "@/content/resume-summary";
 import { externalLinks } from "@/data/links";
 import { externalLinkSlots } from "@/data/navigation";
@@ -44,6 +46,12 @@ const sectionMeta: Record<FolderId, SectionMeta> = {
     eyebrow: "Profile",
     description: "소개, 강점, 현재 집중하는 키워드를 한 화면에서 읽습니다.",
     icon: UserRound,
+  },
+  "career-tracks": {
+    title: "Career Tracks",
+    eyebrow: "Direct Links",
+    description: "지원 직무별로 정리한 포트폴리오 링크를 확인합니다.",
+    icon: Route,
   },
   projects: {
     title: "Case Studies",
@@ -492,6 +500,8 @@ function renderContent(sectionId: FolderId) {
   switch (sectionId) {
     case "about":
       return <AboutContent />;
+    case "career-tracks":
+      return <TrackLinkPanel />;
     case "projects":
       return <ProjectsContent />;
     case "skills":
