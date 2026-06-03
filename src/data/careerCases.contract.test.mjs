@@ -85,6 +85,29 @@ test("uses conservative evidence labels instead of exposing internal file paths"
   }
 });
 
+test("connects each career case to public evidence links", () => {
+  const { careerCases } = loadCareerCasesModule();
+
+  for (const careerCase of careerCases) {
+    const linkedEvidence = careerCase.evidence.filter(
+      (evidence) => typeof evidence.href === "string",
+    );
+
+    assert.ok(
+      linkedEvidence.length > 0,
+      `${careerCase.id} is missing public evidence link`,
+    );
+
+    for (const evidence of linkedEvidence) {
+      assert.match(evidence.href, /^https:\/\//);
+      assert.doesNotMatch(evidence.href, /localhost|127\.0\.0\.1|docs\//);
+      assert.ok(evidence.publicLabel.length > 0);
+      assert.equal(typeof evidence.linkLabel, "string");
+      assert.ok(evidence.linkLabel.length > 0);
+    }
+  }
+});
+
 test("keeps risky metrics behind needs-check evidence", () => {
   const { careerCases } = loadCareerCasesModule();
   const metricPattern = /40건|435건|337건|85건|25회기|100명/;

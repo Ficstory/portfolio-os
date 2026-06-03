@@ -19,6 +19,8 @@ export type CareerCaseEvidence = {
   level: CareerCaseEvidenceLevel;
   publicLabel: string;
   sourceNote: string;
+  href?: string;
+  linkLabel?: string;
 };
 
 export type CareerCase = {
@@ -52,9 +54,11 @@ export const careerCases: CareerCase[] = [
     evidence: [
       {
         level: "strong",
-        publicLabel: "경력증명과 핵심 경력 타임라인",
+        publicLabel: "부산시의회 방청 공개 회의록",
         sourceNote:
-          "profile/이재호 기초자료/이재호_요약정리.md, 이재호_이력자소서직무계획_핵심정리.md, 문서화/02_핵심경력_타임라인.md 기준. 부산참여연대 2021.05~2025.02, 간사에서 팀장 역할.",
+          "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 제298회 임시회 회의록에 부산참여연대 이재호 방청 기록이 있으며, 내부 경력 타임라인은 부산참여연대 2021.05~2025.02 간사·팀장 역할 기준.",
+        href: "https://council.busan.go.kr/assem/user/assem/minute/printReview.busan?minuteSid=24493",
+        linkLabel: "회의록",
       },
       {
         level: "needs-check",
@@ -97,13 +101,17 @@ export const careerCases: CareerCase[] = [
         level: "strong",
         publicLabel: "본회의·상임위 모니터링 기록",
         sourceNote:
-          "profile/이재호 기초자료/문서화/02_핵심경력_타임라인.md 기준. 제300회 정례회 방청의견 제출 문서, 제309회 임시회 본회의·기재위 모니터링 문서에 이재호 표기.",
+          "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 부산시의회 공개 회의록과 내부 핵심경력 타임라인의 방청의견·회기 모니터링 문서에 이재호 표기.",
+        href: "https://council.busan.go.kr/assem/user/assem/minute/printReview.busan?minuteSid=24493",
+        linkLabel: "회의록",
       },
       {
         level: "medium",
         publicLabel: "회기 종료 논평과 의회모니터 운영 자료",
         sourceNote:
-          "profile/이재호 기초자료/문서화/02_핵심경력_타임라인.md 기준. 2021년 부산시의회 회기 모니터링·논평 업무 수행 기록과 의회모니터 운영 문서 존재.",
+          "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 부산시의회 제320회 임시회 평가 인터뷰와 2021년 부산시의회 회기 모니터링·논평 업무 수행 기록 존재.",
+        href: "https://v.daum.net/v/Zy0ZZZQ075?f=p",
+        linkLabel: "인터뷰",
       },
     ],
     relevance: {
@@ -138,9 +146,11 @@ export const careerCases: CareerCase[] = [
     evidence: [
       {
         level: "strong",
-        publicLabel: "행정사무감사 의제 합본과 대외 발표 문서",
+        publicLabel: "행정사무감사 시민의제 공개 보도",
         sourceNote:
-          "profile/이재호 기초자료/문서화/01_핵심자료_선별목록.md, 02_핵심경력_타임라인.md, 03_직무역량_근거맵.md 기준. 2021~2024 행감 의제 취합·발표·논평 관련 문서 존재.",
+          "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 2023 부산시의회 행정사무감사 시민사회 의제 제안 기사와 내부 행감 의제 취합·발표·논평 관련 문서 존재.",
+        href: "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002971444",
+        linkLabel: "언론 보도",
       },
       {
         level: "needs-check",
@@ -181,9 +191,11 @@ export const careerCases: CareerCase[] = [
     evidence: [
       {
         level: "strong",
-        publicLabel: "도시정책·사회이슈 분석 문서",
+        publicLabel: "부산시의회 회기 평가 인터뷰",
         sourceNote:
-          "profile/이재호 기초자료/문서화/01_핵심자료_선별목록.md, 03_직무역량_근거맵.md 기준. 한진중공업부지·한진CY부지 분석, 방사선 폐기물 건식 저장시설 이슈 분석 문서에 이재호 표기.",
+          "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 부산시의회 제320회 임시회 평가 인터뷰에서 조례 심의, 시정질의, 5분 발언, 지방보조금 사업 문제 관련 발언 확인.",
+        href: "https://v.daum.net/v/Zy0ZZZQ075?f=p",
+        linkLabel: "인터뷰",
       },
       {
         level: "medium",
@@ -224,15 +236,19 @@ export const careerCases: CareerCase[] = [
     evidence: [
       {
         level: "strong",
-        publicLabel: "공무국외출장 실태 분석 제출본",
+        publicLabel: "공무국외출장 토론회 발제 보도",
         sourceNote:
-          "profile/이재호 기초자료/문서화/01_핵심자료_선별목록.md, 03_직무역량_근거맵.md 기준. 2022년~2023년 부산시 16개 구군의회 공무국외출장 실태 분석 제출본과 발제문 초안 존재.",
+          "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 부산 기초의회 공무국외출장 토론회에서 이재호 부산참여연대 간사가 발제자로 확인되며, 내부 실태 분석 제출본과 발제문 초안 존재.",
+        href: "https://www.fnnews.com/news/202310171700556015",
+        linkLabel: "언론 보도",
       },
       {
         level: "medium",
-        publicLabel: "시민사회 컨퍼런스 발표자료",
+        publicLabel: "구군의회 출장 비용 분석 보도",
         sourceNote:
-          "profile/이재호 기초자료/문서화/01_핵심자료_선별목록.md, 03_직무역량_근거맵.md 기준. 시민사회컨퍼런스 발표자료에 이재호 표기.",
+          "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 부산 구군의회 공무국외출장 비용과 외유성 문제를 다룬 보도에 부산참여연대 분석 자료가 소개됨.",
+        href: "https://www.fnnews.com/news/202310171842514306",
+        linkLabel: "언론 보도",
       },
     ],
     relevance: {
@@ -269,13 +285,17 @@ export const careerCases: CareerCase[] = [
         level: "strong",
         publicLabel: "보도자료·논평·발제문 작성 자료",
         sourceNote:
-          "profile/이재호 기초자료/문서화/01_핵심자료_선별목록.md, 02_핵심경력_타임라인.md, 03_직무역량_근거맵.md 기준. 제9대 전반기 의정 브리핑 초안, 행정사무감사 기자회견문, 공무국외출장 발제문 초안, 정책 비평 문안 존재.",
+          "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 행정사무감사 시민사회 의제 제안 기사와 내부 제9대 전반기 의정 브리핑 초안, 기자회견문, 발제문 초안, 정책 비평 문안 존재.",
+        href: "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002971444",
+        linkLabel: "언론 보도",
       },
       {
         level: "medium",
         publicLabel: "기자회견 진행과 대외 커뮤니케이션 자료",
         sourceNote:
-          "profile/이재호 기초자료/문서화/02_핵심경력_타임라인.md, 03_직무역량_근거맵.md 기준. 2024년 기자회견 사회 문서와 시민사회컨퍼런스 발표자료 존재.",
+          "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 부산시의회 제320회 임시회 평가 인터뷰와 내부 2024년 기자회견 사회 문서, 시민사회컨퍼런스 발표자료 존재.",
+        href: "https://v.daum.net/v/Zy0ZZZQ075?f=p",
+        linkLabel: "인터뷰",
       },
     ],
     relevance: {

@@ -12,6 +12,17 @@ export type TrackCtaLink = {
   href: string;
 };
 
+type TrackSectionCopy = {
+  eyebrow: string;
+  title: string;
+  summary: string;
+};
+
+type TrackCaseSectionCopy = {
+  primary: TrackSectionCopy;
+  secondary: TrackSectionCopy;
+};
+
 export type TrackLandingModel = ReturnType<typeof getTrackLandingModel>;
 
 const trackProofCopy: Record<
@@ -20,6 +31,7 @@ const trackProofCopy: Record<
     proofFocus: string[];
     cautionNotes: string[];
     ctaLinks: TrackCtaLink[];
+    caseSections: TrackCaseSectionCopy;
   }
 > = {
   default: {
@@ -36,6 +48,20 @@ const trackProofCopy: Record<
       { label: "Resume", href: "/resume" },
       { label: "Contact", href: "mailto:dlwo4367@gmail.com" },
     ],
+    caseSections: {
+      primary: {
+        eyebrow: "Case Studies",
+        title: "대표 프로젝트",
+        summary:
+          "루트 포트폴리오는 특정 지원 직무로 단정하지 않고, 프로젝트와 공공 경력 근거를 균형 있게 보여줍니다.",
+      },
+      secondary: {
+        eyebrow: "Public-sector Evidence",
+        title: "공공·의정 경력 근거",
+        summary:
+          "부산참여연대 경력은 공공 문제를 읽고 문서로 구조화한 기반 경험으로 분리합니다.",
+      },
+    },
   },
   publicDigital: {
     proofFocus: [
@@ -54,6 +80,20 @@ const trackProofCopy: Record<
       { label: "Resume", href: "/resume" },
       { label: "Contact", href: "mailto:dlwo4367@gmail.com" },
     ],
+    caseSections: {
+      primary: {
+        eyebrow: "Public Digital Case",
+        title: "공공디지털 대표 프로젝트",
+        summary:
+          "공공 문제를 사용자 조건, 접근성 흐름, 요구사항 기준으로 번역한 프로젝트를 먼저 보여줍니다.",
+      },
+      secondary: {
+        eyebrow: "Public-sector Context",
+        title: "공공 문제정의 경력 근거",
+        summary:
+          "부산참여연대 경력은 서비스 요구사항 이전의 공공자료 분석과 현장 문제정의 배경으로 연결합니다.",
+      },
+    },
   },
   pm: {
     proofFocus: [
@@ -72,6 +112,20 @@ const trackProofCopy: Record<
       { label: "Resume", href: "/resume" },
       { label: "Contact", href: "mailto:dlwo4367@gmail.com" },
     ],
+    caseSections: {
+      primary: {
+        eyebrow: "PM Case",
+        title: "PM 대표 프로젝트",
+        summary:
+          "요구사항정의, 화면명세, API 협업 기준과 MVP 범위 조율 경험을 먼저 보여줍니다.",
+      },
+      secondary: {
+        eyebrow: "Policy Context",
+        title: "문제정의 배경 근거",
+        summary:
+          "공공 경력은 제품 총괄 경험이 아니라 복잡한 자료를 실행 문서로 정리한 배경 근거로 분리합니다.",
+      },
+    },
   },
   policy: {
     proofFocus: [
@@ -90,6 +144,20 @@ const trackProofCopy: Record<
       { label: "Resume", href: "/resume" },
       { label: "Contact", href: "mailto:dlwo4367@gmail.com" },
     ],
+    caseSections: {
+      primary: {
+        eyebrow: "Career Evidence",
+        title: "정책지원관 경력 브리프",
+        summary:
+          "조례, 예산, 행정사무감사, 회기 모니터링 경험을 정책지원 문서 역량으로 보여줍니다.",
+      },
+      secondary: {
+        eyebrow: "Digital Literacy",
+        title: "보조 디지털 프로젝트",
+        summary:
+          "디지털 프로젝트는 정책지원관 트랙에서 SW 협업 이해와 공공서비스 감각을 보여주는 보조 근거입니다.",
+      },
+    },
   },
   assembly: {
     proofFocus: [
@@ -108,6 +176,20 @@ const trackProofCopy: Record<
       { label: "Resume", href: "/resume" },
       { label: "Contact", href: "mailto:dlwo4367@gmail.com" },
     ],
+    caseSections: {
+      primary: {
+        eyebrow: "Assembly Evidence",
+        title: "국회 보좌 실무형 경력 브리프",
+        summary:
+          "회의 모니터링, 이슈 조사, 질의 방향 정리, 메시지 작성 경험을 보좌 실무와 가까운 순서로 보여줍니다.",
+      },
+      secondary: {
+        eyebrow: "Digital Literacy",
+        title: "보조 디지털 프로젝트",
+        summary:
+          "디지털 프로젝트는 국회 트랙에서 IT·AI 이슈를 이해하고 협업 언어를 다룰 수 있다는 보조 근거입니다.",
+      },
+    },
   },
 };
 
@@ -116,6 +198,12 @@ export function getTrackLandingModel(trackId: PortfolioTrackId) {
   const orderedProjects = getTrackProjects(projects, track.id);
   const orderedCareerCases = getTrackCareerCases(careerCases, track.id);
   const primaryCaseKind = track.kind === "careerDocument" ? "career" : "project";
+  const primaryProjectCardKind =
+    track.id === "pm"
+      ? "pm"
+      : track.id === "publicDigital"
+        ? "publicDigital"
+        : "standard";
   const firstEvidenceId =
     primaryCaseKind === "career"
       ? orderedCareerCases[0]?.id
@@ -128,9 +216,11 @@ export function getTrackLandingModel(trackId: PortfolioTrackId) {
     orderedProjects,
     orderedCareerCases,
     primaryCaseKind,
+    primaryProjectCardKind,
     firstEvidenceId,
     proofFocus: copy.proofFocus,
     cautionNotes: copy.cautionNotes,
     ctaLinks: copy.ctaLinks,
+    caseSections: copy.caseSections,
   };
 }

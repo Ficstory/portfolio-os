@@ -11,6 +11,7 @@
 - [05_component_design.md](./05_component_design.md): 컴포넌트 설계서
 - [06_implementation_plan.md](./06_implementation_plan.md): FE 구현 계획
 - [07_consistency_test.md](./07_consistency_test.md): 문서 정합성 테스트 결과
+- [track-card-redesign/README.md](./track-card-redesign/README.md): 직무 트랙 카드 분리 구조와 검증 기록
 
 ## 현재 확정된 방향
 
