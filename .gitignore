@@ -25,6 +25,17 @@ Thumbs.db
 
 # local Codex/automation metadata
 .omx/
+.codex_tmp/
+
+# local transcription workspace
+.venv-transcribe/
+analysis/model-cache/
+analysis/sample_*
+analysis/audio_*
+tools/export_transcript_window.py
+tools/extract_audio_clip.py
+tools/print_transcript_window.py
+tools/transcribe_audio.py
 
 # local PPT planning notes
 ppt 작성/
