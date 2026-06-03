@@ -32,7 +32,6 @@ export type ProjectActivityLog = {
   path: string;
   summary: string;
   details: string[];
-  raw: Record<string, unknown>;
 };
 
 export type ProjectInspector = {
@@ -151,13 +150,6 @@ export function createProjectActivityLogs(project: Project): ProjectActivityLog[
       path: projectPath(project, "context"),
       summary: project.valueStatement,
       details: [project.summary, project.valueStatement, project.problem],
-      raw: {
-        title: project.title,
-        slug: project.slug,
-        summary: project.summary,
-        valueStatement: project.valueStatement,
-        problem: project.problem,
-      },
     },
     {
       id: "role",
@@ -167,11 +159,6 @@ export function createProjectActivityLogs(project: Project): ProjectActivityLog[
       path: projectPath(project, "role"),
       summary: firstLine(project.role, "No role entries documented."),
       details: project.role,
-      raw: {
-        title: project.title,
-        slug: project.slug,
-        role: project.role,
-      },
     },
     {
       id: "stack",
@@ -181,11 +168,6 @@ export function createProjectActivityLogs(project: Project): ProjectActivityLog[
       path: projectPath(project, "stack"),
       summary: project.stack.join(", "),
       details: project.stack,
-      raw: {
-        title: project.title,
-        slug: project.slug,
-        stack: project.stack,
-      },
     },
     {
       id: "implementation",
@@ -198,11 +180,6 @@ export function createProjectActivityLogs(project: Project): ProjectActivityLog[
         "No implementation highlights documented.",
       ),
       details: project.implementationHighlights,
-      raw: {
-        title: project.title,
-        slug: project.slug,
-        implementationHighlights: project.implementationHighlights,
-      },
     },
     {
       id: "troubleshooting",
@@ -215,11 +192,6 @@ export function createProjectActivityLogs(project: Project): ProjectActivityLog[
         "No troubleshooting entries documented.",
       ),
       details: project.troubleshooting,
-      raw: {
-        title: project.title,
-        slug: project.slug,
-        troubleshooting: project.troubleshooting,
-      },
     },
     {
       id: "result",
@@ -229,11 +201,6 @@ export function createProjectActivityLogs(project: Project): ProjectActivityLog[
       path: projectPath(project, "result"),
       summary: firstLine(project.result, "No result entries documented."),
       details: project.result,
-      raw: {
-        title: project.title,
-        slug: project.slug,
-        result: project.result,
-      },
     },
     {
       id: "links",
@@ -245,11 +212,6 @@ export function createProjectActivityLogs(project: Project): ProjectActivityLog[
         ? "External project links are documented."
         : "No external links are documented for this project.",
       details: hasLinks ? links : ["No external links documented yet."],
-      raw: {
-        title: project.title,
-        slug: project.slug,
-        links: project.links,
-      },
     },
   ];
 }
