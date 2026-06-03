@@ -11,15 +11,15 @@ export function TrackHero({ model }: TrackHeroProps) {
 
   return (
     <section className="border-b border-slate-200 bg-white">
-      <div className="mx-auto grid w-full max-w-6xl gap-8 px-5 py-10 md:grid-cols-[1.25fr_0.75fr] md:px-8 md:py-14">
+      <div className="mx-auto grid w-full max-w-[100vw] gap-8 px-5 py-10 md:max-w-6xl md:grid-cols-[1.25fr_0.75fr] md:px-8 md:py-14">
         <div className="min-w-0">
           <p className="text-xs font-bold uppercase tracking-normal text-sky-700">
             {track.label}
           </p>
-          <h1 className="mt-3 text-pretty text-3xl font-bold leading-tight text-slate-950 md:text-4xl">
+          <h1 className="mt-3 max-w-[calc(100dvw-2.5rem)] break-all text-2xl font-bold leading-tight text-slate-950 [overflow-wrap:anywhere] sm:max-w-full sm:break-words sm:text-3xl md:text-4xl">
             {profile.headline}
           </h1>
-          <p className="mt-5 max-w-3xl text-base leading-7 text-slate-700">
+          <p className="mt-5 max-w-[calc(100dvw-2.5rem)] break-all text-base leading-7 text-slate-700 [overflow-wrap:anywhere] sm:max-w-3xl sm:break-words">
             {profile.introduction}
           </p>
 
@@ -36,13 +36,13 @@ export function TrackHero({ model }: TrackHeroProps) {
           </div>
         </div>
 
-        <aside className="rounded-lg border border-slate-200 bg-slate-50 p-5">
+        <aside className="max-w-[calc(100dvw-2.5rem)] rounded-lg border border-slate-200 bg-slate-50 p-5 sm:max-w-none">
           <h2 className="text-sm font-bold text-slate-950">핵심 역량</h2>
           <ul className="mt-4 space-y-3">
             {profile.strengths.map((strength) => (
-              <li className="flex gap-3 text-sm leading-6 text-slate-700" key={strength}>
+              <li className="flex max-w-[calc(100dvw-5rem)] gap-3 text-sm leading-6 text-slate-700 sm:max-w-full" key={strength}>
                 <span aria-hidden="true" className="mt-2 size-2 rounded-full bg-[var(--color-green)]" />
-                <span>{strength}</span>
+                <span className="min-w-0 break-all [overflow-wrap:anywhere] sm:break-words">{strength}</span>
               </li>
             ))}
           </ul>

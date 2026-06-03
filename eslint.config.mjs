@@ -7,6 +7,7 @@ const eslintConfig = [
   {
     ignores: [
       ".next/**",
+      ".codex_tmp/**",
       "out/**",
       "build/**",
       "layout-check-output/**",

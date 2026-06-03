@@ -33,7 +33,7 @@ export function TrackCaseSection({ model }: TrackCaseSectionProps) {
   const primaryProjects = orderedProjects.slice(0, isCareerFirst ? 3 : 4);
 
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 py-10 md:px-8">
+    <div className="mx-auto flex w-full max-w-[100vw] flex-col gap-10 px-5 py-10 md:max-w-6xl md:px-8">
       {isCareerFirst ? (
         <>
           <section aria-labelledby="career-cases" id="career-cases">

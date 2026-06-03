@@ -7,7 +7,7 @@ type TrackProofPanelProps = {
 export function TrackProofPanel({ model }: TrackProofPanelProps) {
   return (
     <section className="border-t border-slate-200 bg-white">
-      <div className="mx-auto grid w-full max-w-6xl gap-6 px-5 py-10 md:grid-cols-2 md:px-8">
+      <div className="mx-auto grid w-full max-w-[100vw] gap-6 px-5 py-10 md:max-w-6xl md:grid-cols-2 md:px-8">
         <div>
           <p className="text-xs font-bold uppercase tracking-normal text-sky-700">
             Proof Focus
