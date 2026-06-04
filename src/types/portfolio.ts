@@ -3,7 +3,6 @@ export type FolderId =
   | "career-tracks"
   | "projects"
   | "skills"
-  | "ai-chat"
   | "resume"
   | "contact";
 
@@ -57,6 +56,14 @@ export type ProjectLinks = {
   article?: string;
 };
 
+export type ProjectEvidence = {
+  label: string;
+  category: string;
+  description: string;
+  availability: "public" | "internal";
+  href?: string;
+};
+
 export type Project = {
   id: string;
   slug: string;
@@ -69,6 +76,7 @@ export type Project = {
   implementationHighlights: string[];
   troubleshooting: string[];
   result: string[];
+  evidence: ProjectEvidence[];
   links: ProjectLinks;
   thumbnail: string;
   media: string[];

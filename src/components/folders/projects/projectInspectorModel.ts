@@ -61,7 +61,7 @@ export function createProjectRules(project: Project): ProjectRule[] {
   const links = formatLinks(project.links);
   const hasLinks = links.length > 0;
 
-  return [
+  const rules: ProjectRule[] = [
     {
       id: "role",
       label: "Role",
@@ -122,26 +122,29 @@ export function createProjectRules(project: Project): ProjectRule[] {
       description: "Outcome statements captured for the portfolio.",
       entries: project.result,
     },
-    {
+  ];
+
+  if (hasLinks) {
+    rules.push({
       id: "links",
       label: "Links",
       method: "GET",
       path: projectPath(project, "links"),
-      statusCode: hasLinks ? 302 : 204,
-      statusLabel: hasLinks ? "302 Linked" : "204 No links",
-      description: hasLinks
-        ? "External references attached to this project."
-        : "No external links are documented for this project.",
-      entries: hasLinks ? links : ["No external links documented yet."],
-    },
-  ];
+      statusCode: 302,
+      statusLabel: "302 Linked",
+      description: "External references attached to this project.",
+      entries: links,
+    });
+  }
+
+  return rules;
 }
 
 export function createProjectActivityLogs(project: Project): ProjectActivityLog[] {
   const links = formatLinks(project.links);
   const hasLinks = links.length > 0;
 
-  return [
+  const logs: ProjectActivityLog[] = [
     {
       id: "context",
       label: "Context",
@@ -202,18 +205,21 @@ export function createProjectActivityLogs(project: Project): ProjectActivityLog[
       summary: firstLine(project.result, "No result entries documented."),
       details: project.result,
     },
-    {
+  ];
+
+  if (hasLinks) {
+    logs.push({
       id: "links",
       label: "Links",
-      code: hasLinks ? 302 : 204,
+      code: 302,
       method: "GET",
       path: projectPath(project, "links"),
-      summary: hasLinks
-        ? "External project links are documented."
-        : "No external links are documented for this project.",
-      details: hasLinks ? links : ["No external links documented yet."],
-    },
-  ];
+      summary: "External project links are documented.",
+      details: links,
+    });
+  }
+
+  return logs;
 }
 
 export function createProjectInspector(project: Project): ProjectInspector {

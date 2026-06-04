@@ -1,0 +1,1406 @@
+[
+  {
+    "tag": "A",
+    "role": null,
+    "class": "absolute left-0 top-0 block -translate-x-full rounded bg-yellow-500 px-4 py-3 text-sm font-bold uppercase tracking-wides",
+    "text": "Skip to Content",
+    "rect": {
+      "x": -181,
+      "y": -3080,
+      "w": 181,
+      "h": 44
+    },
+    "color": "rgb(15, 23, 42)",
+    "background": "rgb(234, 179, 8) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "matrix(1, 0, 0, 1, -180.516, 0)",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "",
+    "text": "Brittany Chiang",
+    "rect": {
+      "x": 128,
+      "y": 90,
+      "w": 352,
+      "h": 59
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H2",
+    "role": null,
+    "class": "mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl",
+    "text": "Frontend Engineer",
+    "rect": {
+      "x": 128,
+      "y": 156,
+      "w": 561,
+      "h": 28
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "group flex items-center py-3",
+    "text": "About",
+    "rect": {
+      "x": 128,
+      "y": 312,
+      "w": 135,
+      "h": 40
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "group flex items-center py-3 ",
+    "text": "Experience",
+    "rect": {
+      "x": 128,
+      "y": 352,
+      "w": 135,
+      "h": 40
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "group flex items-center py-3 ",
+    "text": "Projects",
+    "rect": {
+      "x": 128,
+      "y": 392,
+      "w": 135,
+      "h": 40
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "block",
+    "text": "GitHub",
+    "rect": {
+      "x": 132,
+      "y": 780,
+      "w": 24,
+      "h": 24
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "block",
+    "text": "LinkedIn",
+    "rect": {
+      "x": 176,
+      "y": 780,
+      "w": 24,
+      "h": 24
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "block",
+    "text": "CodePen",
+    "rect": {
+      "x": 220,
+      "y": 780,
+      "w": 24,
+      "h": 24
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "block",
+    "text": "Instagram",
+    "rect": {
+      "x": 264,
+      "y": 780,
+      "w": 24,
+      "h": 24
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "block",
+    "text": "Goodreads",
+    "rect": {
+      "x": 308,
+      "y": 780,
+      "w": 24,
+      "h": 24
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H2",
+    "role": null,
+    "class": "text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only",
+    "text": "About",
+    "rect": {
+      "x": 704,
+      "y": -2986,
+      "w": 1,
+      "h": 1
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "font-medium text-slate-200",
+    "text": "Klaviyo",
+    "rect": {
+      "x": 1069,
+      "y": -2836,
+      "w": 56,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "font-medium text-slate-200",
+    "text": "Apple",
+    "rect": {
+      "x": 1148,
+      "y": -2690,
+      "w": 44,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "font-medium text-slate-200",
+    "text": "Starry Internet",
+    "rect": {
+      "x": 705,
+      "y": -2690,
+      "w": 544,
+      "h": 46
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "font-medium text-slate-200",
+    "text": "Upstatement",
+    "rect": {
+      "x": 808,
+      "y": -2664,
+      "w": 100,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "font-medium text-slate-200",
+    "text": "online video course",
+    "rect": {
+      "x": 705,
+      "y": -2638,
+      "w": 149,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H2",
+    "role": null,
+    "class": "text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only",
+    "text": "Experience",
+    "rect": {
+      "x": 704,
+      "y": -2353,
+      "w": 1,
+      "h": 1
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "font-medium leading-snug text-slate-200",
+    "text": "Senior Frontend Engineer, Accessibility · Klaviyo",
+    "rect": {
+      "x": 860,
+      "y": -2352,
+      "w": 452,
+      "h": 22
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "Senior Frontend Engineer, Accessibility · Klaviyo",
+    "rect": {
+      "x": 860,
+      "y": -2351,
+      "w": 388,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "font-medium leading-snug text-slate-200",
+    "text": "Lead Engineer · UpstatementSenior EngineerEngineer",
+    "rect": {
+      "x": 860,
+      "y": -2121,
+      "w": 452,
+      "h": 66
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "Lead Engineer · Upstatement",
+    "rect": {
+      "x": 860,
+      "y": -2120,
+      "w": 244,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "font-medium leading-snug text-slate-200",
+    "text": "UI Engineer Co-op · Apple",
+    "rect": {
+      "x": 860,
+      "y": -1768,
+      "w": 452,
+      "h": 22
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "UI Engineer Co-op · Apple",
+    "rect": {
+      "x": 860,
+      "y": -1767,
+      "w": 218,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "relative mt-2 inline-flex items-center text-sm font-medium text-slate-300",
+    "text": "MusicKit.js",
+    "rect": {
+      "x": 860,
+      "y": -1638,
+      "w": 89,
+      "h": 20
+    },
+    "color": "rgb(203, 213, 225)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "relative mt-2 inline-flex items-center text-sm font-medium text-slate-300",
+    "text": "9to5Mac",
+    "rect": {
+      "x": 966,
+      "y": -1638,
+      "w": 76,
+      "h": 20
+    },
+    "color": "rgb(203, 213, 225)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "relative mt-2 inline-flex items-center text-sm font-medium text-slate-300",
+    "text": "The Verge",
+    "rect": {
+      "x": 1058,
+      "y": -1638,
+      "w": 85,
+      "h": 20
+    },
+    "color": "rgb(203, 213, 225)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "font-medium leading-snug text-slate-200",
+    "text": "Developer · Scout Studio",
+    "rect": {
+      "x": 860,
+      "y": -1519,
+      "w": 452,
+      "h": 22
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "Developer · Scout Studio",
+    "rect": {
+      "x": 860,
+      "y": -1518,
+      "w": 209,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "font-medium leading-snug text-slate-200",
+    "text": "Software Engineer Co-op · Starry",
+    "rect": {
+      "x": 860,
+      "y": -1330,
+      "w": 452,
+      "h": 22
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "Software Engineer Co-op · Starry",
+    "rect": {
+      "x": 860,
+      "y": -1329,
+      "w": 275,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "relative mt-2 inline-flex items-center text-sm font-medium text-slate-300",
+    "text": "Android App",
+    "rect": {
+      "x": 860,
+      "y": -1242,
+      "w": 100,
+      "h": 20
+    },
+    "color": "rgb(203, 213, 225)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "relative mt-2 inline-flex items-center text-sm font-medium text-slate-300",
+    "text": "ScreenTime 2.0",
+    "rect": {
+      "x": 976,
+      "y": -1242,
+      "w": 121,
+      "h": 20
+    },
+    "color": "rgb(203, 213, 225)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "font-medium leading-snug text-slate-200",
+    "text": "Creative Technologist Co-op · MullenLowe U.S.",
+    "rect": {
+      "x": 860,
+      "y": -1123,
+      "w": 452,
+      "h": 22
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "Creative Technologist Co-op · MullenLowe U.S.",
+    "rect": {
+      "x": 860,
+      "y": -1122,
+      "w": 380,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200 font-semibold text-slate-200 group/link text-base",
+    "text": "View Full Résumé",
+    "rect": {
+      "x": 705,
+      "y": -931,
+      "w": 156,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H2",
+    "role": null,
+    "class": "text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only",
+    "text": "Projects",
+    "rect": {
+      "x": 704,
+      "y": -766,
+      "w": 1,
+      "h": 1
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "",
+    "text": "Build a Spotify Connected App",
+    "rect": {
+      "x": 860,
+      "y": -765,
+      "w": 452,
+      "h": 26
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "Build a Spotify Connected App",
+    "rect": {
+      "x": 860,
+      "y": -762,
+      "w": 255,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "",
+    "text": "Spotify Profile",
+    "rect": {
+      "x": 860,
+      "y": -616,
+      "w": 452,
+      "h": 26
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "Spotify Profile",
+    "rect": {
+      "x": 860,
+      "y": -613,
+      "w": 128,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "relative mt-2 inline-flex items-center text-sm font-medium text-slate-300",
+    "text": "713",
+    "rect": {
+      "x": 860,
+      "y": -490,
+      "w": 40,
+      "h": 20
+    },
+    "color": "rgb(203, 213, 225)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "",
+    "text": "Halcyon Theme",
+    "rect": {
+      "x": 860,
+      "y": -371,
+      "w": 452,
+      "h": 26
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "Halcyon Theme",
+    "rect": {
+      "x": 860,
+      "y": -368,
+      "w": 140,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "relative mt-2 inline-flex items-center text-sm font-medium text-slate-300",
+    "text": "100k+ Installs",
+    "rect": {
+      "x": 860,
+      "y": -287,
+      "w": 113,
+      "h": 20
+    },
+    "color": "rgb(203, 213, 225)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "",
+    "text": "brittanychiang.com (v4)",
+    "rect": {
+      "x": 860,
+      "y": -210,
+      "w": 452,
+      "h": 26
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "brittanychiang.com (v4)",
+    "rect": {
+      "x": 860,
+      "y": -207,
+      "w": 205,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "relative mt-2 inline-flex items-center text-sm font-medium text-slate-300",
+    "text": "8,240",
+    "rect": {
+      "x": 860,
+      "y": -147,
+      "w": 55,
+      "h": 20
+    },
+    "color": "rgb(203, 213, 225)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group",
+    "text": "View Full Project Archive",
+    "rect": {
+      "x": 705,
+      "y": -25,
+      "w": 212,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H2",
+    "role": null,
+    "class": "text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only",
+    "text": "Writing",
+    "rect": {
+      "x": 704,
+      "y": 140,
+      "w": 1,
+      "h": 1
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "-mt-1",
+    "text": "Welcome to the AI Parade",
+    "rect": {
+      "x": 860,
+      "y": 175,
+      "w": 452,
+      "h": 26
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "Welcome to the AI Parade",
+    "rect": {
+      "x": 860,
+      "y": 178,
+      "w": 219,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "-mt-1",
+    "text": "5 Common Accessibility Pitfalls and How to Avoid Them",
+    "rect": {
+      "x": 860,
+      "y": 302,
+      "w": 452,
+      "h": 26
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "5 Common Accessibility Pitfalls and How to Avoid Them",
+    "rect": {
+      "x": 860,
+      "y": 305,
+      "w": 447,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "-mt-1",
+    "text": "Integrating Algolia Search with WordPress Multisite",
+    "rect": {
+      "x": 860,
+      "y": 429,
+      "w": 452,
+      "h": 26
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "Integrating Algolia Search with WordPress Multisite",
+    "rect": {
+      "x": 860,
+      "y": 432,
+      "w": 415,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "-mt-1",
+    "text": "Building a Headless Mobile App CMS From Scratch",
+    "rect": {
+      "x": 860,
+      "y": 555,
+      "w": 452,
+      "h": 26
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "inline-flex items-baseline font-medium leading-tight text-slate-200  group/link text-base",
+    "text": "Building a Headless Mobile App CMS From Scratch",
+    "rect": {
+      "x": 860,
+      "y": 558,
+      "w": 411,
+      "h": 20
+    },
+    "color": "rgb(226, 232, 240)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "font-medium text-slate-400",
+    "text": "Figma",
+    "rect": {
+      "x": 840,
+      "y": 745,
+      "w": 41,
+      "h": 17
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "font-medium text-slate-400",
+    "text": "Visual Studio Code",
+    "rect": {
+      "x": 976,
+      "y": 745,
+      "w": 128,
+      "h": 17
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "font-medium text-slate-400",
+    "text": "Next.js",
+    "rect": {
+      "x": 847,
+      "y": 765,
+      "w": 46,
+      "h": 17
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "font-medium text-slate-400",
+    "text": "Tailwind CSS",
+    "rect": {
+      "x": 927,
+      "y": 765,
+      "w": 88,
+      "h": 17
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "font-medium text-slate-400",
+    "text": "Vercel",
+    "rect": {
+      "x": 705,
+      "y": 785,
+      "w": 42,
+      "h": 17
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "font-medium text-slate-400",
+    "text": "Inter",
+    "rect": {
+      "x": 884,
+      "y": 785,
+      "w": 31,
+      "h": 17
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "BUTTON",
+    "role": null,
+    "class": "hover:-text-teal-300 inline-flex items-center px-2 py-4 font-medium text-slate-400 hover:-translate-y-2",
+    "text": "Click to time travel",
+    "rect": {
+      "x": 1324,
+      "y": 781,
+      "w": 116,
+      "h": 118
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "DIV",
+    "role": null,
+    "class": "DialogOverlay portal fixed left-0 top-0 z-40 h-screen w-screen bg-slate-900/10 backdrop-blur transition",
+    "text": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) radial-gradient(circle at 50% 35%, rgb(51, 68, 85), rgba(0, 0, 0, 0.7)) repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "0.7s cubic-bezier(0, 0, 0.2, 1) fadeIn",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "DIV",
+    "role": null,
+    "class": "portal-inner",
+    "text": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 0
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "DIV",
+    "role": "dialog",
+    "class": "DialogContent fixed left-1/2 top-1/2 z-40 flex h-full w-full -translate-x-1/2 -translate-y-1/2 justify-center rounded sm",
+    "text": "Looking for a different site? Go back in time...v1v2v3v4A Portal to Tomorrow by @jasesmith",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "matrix(1, 0, 0, 1, -720, -450)",
+    "animation": "0.7s cubic-bezier(0, 0, 0.2, 1) fadeIn",
+    "transition": "all"
+  },
+  {
+    "tag": "H2",
+    "role": null,
+    "class": "mx-auto mb-12 max-w-xs text-center text-2xl font-semibold leading-tight tracking-tight text-slate-700 sm:text-3xl lg:max",
+    "text": "Looking for a different site? Go back in time...",
+    "rect": {
+      "x": 507,
+      "y": 290,
+      "w": 427,
+      "h": 56
+    },
+    "color": "rgb(51, 65, 85)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "group relative block transition-all",
+    "text": "v1",
+    "rect": {
+      "x": 513,
+      "y": 385,
+      "w": 203,
+      "h": 97
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "not-sr-only text-xl font-semibold text-white",
+    "text": "v1",
+    "rect": {
+      "x": 608,
+      "y": 417,
+      "w": 25,
+      "h": 26
+    },
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "group relative block transition-all",
+    "text": "v2",
+    "rect": {
+      "x": 724,
+      "y": 385,
+      "w": 203,
+      "h": 97
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "not-sr-only text-xl font-semibold text-white",
+    "text": "v2",
+    "rect": {
+      "x": 805,
+      "y": 417,
+      "w": 28,
+      "h": 26
+    },
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "group relative block transition-all",
+    "text": "v3",
+    "rect": {
+      "x": 482,
+      "y": 490,
+      "w": 233,
+      "h": 126
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "not-sr-only text-xl font-semibold text-white",
+    "text": "v3",
+    "rect": {
+      "x": 589,
+      "y": 532,
+      "w": 34,
+      "h": 34
+    },
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "group relative block transition-all",
+    "text": "v4",
+    "rect": {
+      "x": 725,
+      "y": 490,
+      "w": 233,
+      "h": 126
+    },
+    "color": "rgb(148, 163, 184)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "tag": "H3",
+    "role": null,
+    "class": "not-sr-only text-xl font-semibold text-white",
+    "text": "v4",
+    "rect": {
+      "x": 817,
+      "y": 532,
+      "w": 34,
+      "h": 34
+    },
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "all"
+  },
+  {
+    "tag": "A",
+    "role": null,
+    "class": "absolute inset-x-0 bottom-0 z-40 block p-8 text-center text-xs text-slate-500 underline hover:text-slate-200 focus-visib",
+    "text": "A Portal to Tomorrow by @jasesmith",
+    "rect": {
+      "x": 1201,
+      "y": 852,
+      "w": 240,
+      "h": 48
+    },
+    "color": "rgb(100, 116, 139)",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "opacity": "1",
+    "transform": "none",
+    "animation": "none",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  }
+]

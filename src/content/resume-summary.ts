@@ -35,5 +35,5 @@ export const resumeSummary: ResumeSummary = {
     "SSAFY SW·AI 과정 기반 프로젝트 수행, 총 1,725시간 기준 역량 정리.",
     "동아시아학 학사.",
   ],
-  pdfPath: "/resume/resume.pdf",
+  pdfPath: "",
 };

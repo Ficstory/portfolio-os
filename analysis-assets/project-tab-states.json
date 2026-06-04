@@ -1,0 +1,655 @@
+[
+  {
+    "actionName": "personal",
+    "screenshot": "C:\\Users\\SSAFY\\Desktop\\워크스페이스\\포트폴리오 사이트\\analysis-assets\\project-state-personal.png",
+    "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nMY PROJECT\n\n다양한 웹 애플리케이션을 제작하기 위해\nReact, Next.js, TypeScript, JavaScript, React Native로 만든 프로젝트입니다.\n\nPERSONAL\nTEAM\nWORK\nReact\nNext.js\nTypeScript\nHELLO, MONEY\n\n지출관리 및 시각화한 애플리케이션\n\nFAVORITE COUNTRIES\n\n좋아하는 국가 리스트 만들기 웹사이트\n\nPOKEDEX\n\n포켓몬에 대해 알려주는 포켓몬 도감\n\nPORTFOLIO\n\n리엑트와 타입스크립트로 만든 2024 포트폴리오\n\n푸터영역\nleeboa2003@naver.com\nhttps://github.com/leeboa2005\n🏠\nHome\n📂\nProject\n🎁\nAbout\n\n©2024 LeeBoa. All Rights Reserved.",
+    "checked": [
+      {
+        "idx": 0,
+        "checked": true,
+        "value": "on",
+        "name": "tab",
+        "id": "personal"
+      },
+      {
+        "idx": 1,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "team"
+      },
+      {
+        "idx": 2,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "work"
+      }
+    ],
+    "headings": [
+      "MY PROJECT",
+      "HELLO, MONEY",
+      "FAVORITE COUNTRIES",
+      "POKEDEX",
+      "PORTFOLIO"
+    ],
+    "links": [
+      {
+        "text": "HOME",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "PROJECT",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "ABOUT",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "ABOUT ME",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "velog.io/@leeboa2003",
+        "href": "https://velog.io/@leeboa2003/"
+      },
+      {
+        "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/personal/0101"
+      },
+      {
+        "text": "HELLO, MONEY",
+        "href": "https://www.leeboa.com/project/personal/0101"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/personal/0102"
+      },
+      {
+        "text": "FAVORITE COUNTRIES",
+        "href": "https://www.leeboa.com/project/personal/0102"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/personal/0103"
+      },
+      {
+        "text": "POKEDEX",
+        "href": "https://www.leeboa.com/project/personal/0103"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/personal/0104"
+      },
+      {
+        "text": "PORTFOLIO",
+        "href": "https://www.leeboa.com/project/personal/0104"
+      },
+      {
+        "text": "leeboa2003@naver.com",
+        "href": "mailto:leeboa2003@naver.com"
+      },
+      {
+        "text": "https://github.com/leeboa2005",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "🏠\nHome",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "📂\nProject",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "🎁\nAbout",
+        "href": "https://www.leeboa.com/about"
+      }
+    ],
+    "buttons": [
+      "React",
+      "Next.js",
+      "TypeScript"
+    ]
+  },
+  {
+    "actionName": "team",
+    "screenshot": "C:\\Users\\SSAFY\\Desktop\\워크스페이스\\포트폴리오 사이트\\analysis-assets\\project-state-team.png",
+    "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nMY PROJECT\n\n다양한 웹 애플리케이션을 제작하기 위해\nReact, Next.js, TypeScript, JavaScript, React Native로 만든 프로젝트입니다.\n\nPERSONAL\nTEAM\nWORK\nReact\nNext.js\nTypeScript\n@GATHER_HERE\n\nIT 직군 통합 플랫폼\n\nBIGBUN\n\n대전 빵집 추천 웹사이트\n\nITFIT\n\nIT 직종 테스트 플랫폼\n\n푸터영역\nleeboa2003@naver.com\nhttps://github.com/leeboa2005\n🏠\nHome\n📂\nProject\n🎁\nAbout\n\n©2024 LeeBoa. All Rights Reserved.",
+    "checked": [
+      {
+        "idx": 0,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "personal"
+      },
+      {
+        "idx": 1,
+        "checked": true,
+        "value": "on",
+        "name": "tab",
+        "id": "team"
+      },
+      {
+        "idx": 2,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "work"
+      }
+    ],
+    "headings": [
+      "MY PROJECT",
+      "@GATHER_HERE",
+      "BIGBUN",
+      "ITFIT"
+    ],
+    "links": [
+      {
+        "text": "HOME",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "PROJECT",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "ABOUT",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "ABOUT ME",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "velog.io/@leeboa2003",
+        "href": "https://velog.io/@leeboa2003/"
+      },
+      {
+        "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/team/0201"
+      },
+      {
+        "text": "@GATHER_HERE",
+        "href": "https://www.leeboa.com/project/team/0201"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/team/0202"
+      },
+      {
+        "text": "BIGBUN",
+        "href": "https://www.leeboa.com/project/team/0202"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/team/0203"
+      },
+      {
+        "text": "ITFIT",
+        "href": "https://www.leeboa.com/project/team/0203"
+      },
+      {
+        "text": "leeboa2003@naver.com",
+        "href": "mailto:leeboa2003@naver.com"
+      },
+      {
+        "text": "https://github.com/leeboa2005",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "🏠\nHome",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "📂\nProject",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "🎁\nAbout",
+        "href": "https://www.leeboa.com/about"
+      }
+    ],
+    "buttons": [
+      "React",
+      "Next.js",
+      "TypeScript"
+    ]
+  },
+  {
+    "actionName": "work",
+    "screenshot": "C:\\Users\\SSAFY\\Desktop\\워크스페이스\\포트폴리오 사이트\\analysis-assets\\project-state-work.png",
+    "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nMY PROJECT\n\n다양한 웹 애플리케이션을 제작하기 위해\nReact, Next.js, TypeScript, JavaScript, React Native로 만든 프로젝트입니다.\n\nPERSONAL\nTEAM\nWORK\nJavaScript\nReact Native\nAMIPHARM\n\n생명과학 회사 웹사이트 제작\n\nHANNAH\n\n한나패드 웹사이트 제작\n\nSUGARCOACH\n\n슈가코치 앱 일부 기능 제작\n\nSNAPCOMPANY\n\n마케터용 B2B 관리자 페이지의 대시보드, 위젯, 설정 화면 등 주요 기능 페이지 제작\n\n푸터영역\nleeboa2003@naver.com\nhttps://github.com/leeboa2005\n🏠\nHome\n📂\nProject\n🎁\nAbout\n\n©2024 LeeBoa. All Rights Reserved.",
+    "checked": [
+      {
+        "idx": 0,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "personal"
+      },
+      {
+        "idx": 1,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "team"
+      },
+      {
+        "idx": 2,
+        "checked": true,
+        "value": "on",
+        "name": "tab",
+        "id": "work"
+      }
+    ],
+    "headings": [
+      "MY PROJECT",
+      "AMIPHARM",
+      "HANNAH",
+      "SUGARCOACH",
+      "SNAPCOMPANY"
+    ],
+    "links": [
+      {
+        "text": "HOME",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "PROJECT",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "ABOUT",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "ABOUT ME",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "velog.io/@leeboa2003",
+        "href": "https://velog.io/@leeboa2003/"
+      },
+      {
+        "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/work/0301"
+      },
+      {
+        "text": "AMIPHARM",
+        "href": "https://www.leeboa.com/project/work/0301"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/work/0302"
+      },
+      {
+        "text": "HANNAH",
+        "href": "https://www.leeboa.com/project/work/0302"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/work/0303"
+      },
+      {
+        "text": "SUGARCOACH",
+        "href": "https://www.leeboa.com/project/work/0303"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/work/0304"
+      },
+      {
+        "text": "SNAPCOMPANY",
+        "href": "https://www.leeboa.com/project/work/0304"
+      },
+      {
+        "text": "leeboa2003@naver.com",
+        "href": "mailto:leeboa2003@naver.com"
+      },
+      {
+        "text": "https://github.com/leeboa2005",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "🏠\nHome",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "📂\nProject",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "🎁\nAbout",
+        "href": "https://www.leeboa.com/about"
+      }
+    ],
+    "buttons": [
+      "JavaScript",
+      "React Native"
+    ]
+  },
+  {
+    "actionName": "react-filter",
+    "screenshot": "C:\\Users\\SSAFY\\Desktop\\워크스페이스\\포트폴리오 사이트\\analysis-assets\\project-state-react-filter.png",
+    "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nMY PROJECT\n\n다양한 웹 애플리케이션을 제작하기 위해\nReact, Next.js, TypeScript, JavaScript, React Native로 만든 프로젝트입니다.\n\nPERSONAL\nTEAM\nWORK\nReact\nNext.js\nTypeScript\nHELLO, MONEY\n\n지출관리 및 시각화한 애플리케이션\n\nFAVORITE COUNTRIES\n\n좋아하는 국가 리스트 만들기 웹사이트\n\nPORTFOLIO\n\n리엑트와 타입스크립트로 만든 2024 포트폴리오\n\n푸터영역\nleeboa2003@naver.com\nhttps://github.com/leeboa2005\n🏠\nHome\n📂\nProject\n🎁\nAbout\n\n©2024 LeeBoa. All Rights Reserved.",
+    "checked": [
+      {
+        "idx": 0,
+        "checked": true,
+        "value": "on",
+        "name": "tab",
+        "id": "personal"
+      },
+      {
+        "idx": 1,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "team"
+      },
+      {
+        "idx": 2,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "work"
+      }
+    ],
+    "headings": [
+      "MY PROJECT",
+      "HELLO, MONEY",
+      "FAVORITE COUNTRIES",
+      "PORTFOLIO"
+    ],
+    "links": [
+      {
+        "text": "HOME",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "PROJECT",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "ABOUT",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "ABOUT ME",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "velog.io/@leeboa2003",
+        "href": "https://velog.io/@leeboa2003/"
+      },
+      {
+        "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/personal/0101"
+      },
+      {
+        "text": "HELLO, MONEY",
+        "href": "https://www.leeboa.com/project/personal/0101"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/personal/0102"
+      },
+      {
+        "text": "FAVORITE COUNTRIES",
+        "href": "https://www.leeboa.com/project/personal/0102"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/personal/0104"
+      },
+      {
+        "text": "PORTFOLIO",
+        "href": "https://www.leeboa.com/project/personal/0104"
+      },
+      {
+        "text": "leeboa2003@naver.com",
+        "href": "mailto:leeboa2003@naver.com"
+      },
+      {
+        "text": "https://github.com/leeboa2005",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "🏠\nHome",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "📂\nProject",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "🎁\nAbout",
+        "href": "https://www.leeboa.com/about"
+      }
+    ],
+    "buttons": [
+      "React",
+      "Next.js",
+      "TypeScript"
+    ]
+  },
+  {
+    "actionName": "next-filter",
+    "screenshot": "C:\\Users\\SSAFY\\Desktop\\워크스페이스\\포트폴리오 사이트\\analysis-assets\\project-state-next-filter.png",
+    "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nMY PROJECT\n\n다양한 웹 애플리케이션을 제작하기 위해\nReact, Next.js, TypeScript, JavaScript, React Native로 만든 프로젝트입니다.\n\nPERSONAL\nTEAM\nWORK\nReact\nNext.js\nTypeScript\nPOKEDEX\n\n포켓몬에 대해 알려주는 포켓몬 도감\n\n푸터영역\nleeboa2003@naver.com\nhttps://github.com/leeboa2005\n🏠\nHome\n📂\nProject\n🎁\nAbout\n\n©2024 LeeBoa. All Rights Reserved.",
+    "checked": [
+      {
+        "idx": 0,
+        "checked": true,
+        "value": "on",
+        "name": "tab",
+        "id": "personal"
+      },
+      {
+        "idx": 1,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "team"
+      },
+      {
+        "idx": 2,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "work"
+      }
+    ],
+    "headings": [
+      "MY PROJECT",
+      "POKEDEX"
+    ],
+    "links": [
+      {
+        "text": "HOME",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "PROJECT",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "ABOUT",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "ABOUT ME",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "velog.io/@leeboa2003",
+        "href": "https://velog.io/@leeboa2003/"
+      },
+      {
+        "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/personal/0103"
+      },
+      {
+        "text": "POKEDEX",
+        "href": "https://www.leeboa.com/project/personal/0103"
+      },
+      {
+        "text": "leeboa2003@naver.com",
+        "href": "mailto:leeboa2003@naver.com"
+      },
+      {
+        "text": "https://github.com/leeboa2005",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "🏠\nHome",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "📂\nProject",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "🎁\nAbout",
+        "href": "https://www.leeboa.com/about"
+      }
+    ],
+    "buttons": [
+      "React",
+      "Next.js",
+      "TypeScript"
+    ]
+  },
+  {
+    "actionName": "ts-filter",
+    "screenshot": "C:\\Users\\SSAFY\\Desktop\\워크스페이스\\포트폴리오 사이트\\analysis-assets\\project-state-ts-filter.png",
+    "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nMY PROJECT\n\n다양한 웹 애플리케이션을 제작하기 위해\nReact, Next.js, TypeScript, JavaScript, React Native로 만든 프로젝트입니다.\n\nPERSONAL\nTEAM\nWORK\nReact\nNext.js\nTypeScript\nFAVORITE COUNTRIES\n\n좋아하는 국가 리스트 만들기 웹사이트\n\nPOKEDEX\n\n포켓몬에 대해 알려주는 포켓몬 도감\n\nPORTFOLIO\n\n리엑트와 타입스크립트로 만든 2024 포트폴리오\n\n푸터영역\nleeboa2003@naver.com\nhttps://github.com/leeboa2005\n🏠\nHome\n📂\nProject\n🎁\nAbout\n\n©2024 LeeBoa. All Rights Reserved.",
+    "checked": [
+      {
+        "idx": 0,
+        "checked": true,
+        "value": "on",
+        "name": "tab",
+        "id": "personal"
+      },
+      {
+        "idx": 1,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "team"
+      },
+      {
+        "idx": 2,
+        "checked": false,
+        "value": "on",
+        "name": "tab",
+        "id": "work"
+      }
+    ],
+    "headings": [
+      "MY PROJECT",
+      "FAVORITE COUNTRIES",
+      "POKEDEX",
+      "PORTFOLIO"
+    ],
+    "links": [
+      {
+        "text": "HOME",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "PROJECT",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "ABOUT",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "ABOUT ME",
+        "href": "https://www.leeboa.com/about"
+      },
+      {
+        "text": "velog.io/@leeboa2003",
+        "href": "https://velog.io/@leeboa2003/"
+      },
+      {
+        "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/personal/0102"
+      },
+      {
+        "text": "FAVORITE COUNTRIES",
+        "href": "https://www.leeboa.com/project/personal/0102"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/personal/0103"
+      },
+      {
+        "text": "POKEDEX",
+        "href": "https://www.leeboa.com/project/personal/0103"
+      },
+      {
+        "text": "",
+        "href": "https://www.leeboa.com/project/personal/0104"
+      },
+      {
+        "text": "PORTFOLIO",
+        "href": "https://www.leeboa.com/project/personal/0104"
+      },
+      {
+        "text": "leeboa2003@naver.com",
+        "href": "mailto:leeboa2003@naver.com"
+      },
+      {
+        "text": "https://github.com/leeboa2005",
+        "href": "https://github.com/leeboa2005"
+      },
+      {
+        "text": "🏠\nHome",
+        "href": "https://www.leeboa.com/"
+      },
+      {
+        "text": "📂\nProject",
+        "href": "https://www.leeboa.com/project"
+      },
+      {
+        "text": "🎁\nAbout",
+        "href": "https://www.leeboa.com/about"
+      }
+    ],
+    "buttons": [
+      "React",
+      "Next.js",
+      "TypeScript"
+    ]
+  }
+]

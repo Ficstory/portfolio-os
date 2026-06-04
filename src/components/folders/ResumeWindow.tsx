@@ -34,16 +34,7 @@ export function ResumeWindow() {
             <Download aria-hidden="true" size={16} />
             이력서 PDF 다운로드
           </a>
-        ) : (
-          <button
-            className="inline-flex min-h-10 w-fit items-center justify-center gap-2 rounded-md border border-slate-200/80 bg-white/54 px-4 py-2 text-sm font-bold text-muted dark:border-white/12 dark:bg-white/8"
-            disabled
-            type="button"
-          >
-            <Download aria-hidden="true" size={16} />
-            PDF 준비 중
-          </button>
-        )}
+        ) : null}
       </div>
 
       <section className="space-y-3" aria-labelledby="resume-strengths-heading">

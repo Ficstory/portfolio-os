@@ -58,23 +58,9 @@ export const folders = [
     },
   },
   {
-    id: "ai-chat",
-    title: "Portfolio AI",
-    description: "포트폴리오 Q&A를 위한 보조 진입점.",
-    iconName: "Bot",
-    defaultWindowSize: {
-      widthRatio: 0.56,
-      heightRatio: 0.74,
-      minWidth: 640,
-      minHeight: 520,
-      maxWidth: 760,
-      maxHeight: 620,
-    },
-  },
-  {
     id: "resume",
     title: "Resume",
-    description: "Resume summary and PDF download entry point.",
+    description: "Resume summary and project evidence overview.",
     iconName: "FileText",
     defaultWindowSize: {
       widthRatio: 0.58,

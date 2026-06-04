@@ -33,14 +33,6 @@ export const navigationItems = [
     windowId: "skills",
   },
   {
-    id: "ai-chat",
-    label: "AI Chat",
-    title: "Portfolio AI",
-    iconName: "Bot",
-    dockIconSrc: "/icons/dock/ai-chat.webp",
-    windowId: "ai-chat",
-  },
-  {
     id: "resume",
     label: "Resume",
     title: "Resume",
@@ -63,11 +55,6 @@ export const externalLinkSlots = [
     type: "github",
     label: "GitHub",
     iconName: "Github",
-  },
-  {
-    type: "blog",
-    label: "Blog",
-    iconName: "BookOpenText",
   },
   {
     type: "email",

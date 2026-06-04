@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
@@ -16,18 +16,16 @@ const foldersSource = readSource("src/data/folders.ts");
 const portfolioTypesSource = readSource("src/types/portfolio.ts");
 const dockSource = readSource("src/components/desktop/Dock.tsx");
 const windowManagerSource = readSource("src/components/desktop/WindowManager.tsx");
-const chatWindowPath = path.join(root, "src/components/folders/ChatWindow.tsx");
 
-test("dock exposes every internal portfolio menu in the expected order", () => {
+test("dock exposes every ready internal portfolio menu in the expected order", () => {
   assert.match(
     dockSource,
-    /const dockFolderIds = \[\s*"about",\s*"career-tracks",\s*"projects",\s*"skills",\s*"ai-chat",\s*"resume",\s*"contact",\s*\] as const;/s,
+    /const dockFolderIds = \[\s*"about",\s*"career-tracks",\s*"projects",\s*"skills",\s*"resume",\s*"contact",\s*\] as const;/s,
   );
-  assert.match(navigationSource, /id: "ai-chat"/);
-  assert.match(navigationSource, /label: "AI Chat"/);
-  assert.match(navigationSource, /iconName: "Bot"/);
-  assert.match(foldersSource, /id: "ai-chat"/);
-  assert.match(portfolioTypesSource, /"ai-chat"/);
+  assert.doesNotMatch(navigationSource, /id: "ai-chat"/);
+  assert.doesNotMatch(navigationSource, /label: "AI Chat"/);
+  assert.doesNotMatch(foldersSource, /id: "ai-chat"/);
+  assert.doesNotMatch(portfolioTypesSource, /"ai-chat"/);
 });
 
 test("dock uses pointer-x magnification without losing open indicators and external link", () => {
@@ -51,7 +49,6 @@ test("dock can render generated 3d icon assets before falling back to lucide ico
   assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/about\.webp"/);
   assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/projects\.webp"/);
   assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/skills\.webp"/);
-  assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/ai-chat\.webp"/);
   assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/resume\.webp"/);
   assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/contact\.webp"/);
   assert.match(dockSource, /item\.dockIconSrc \? \(/);
@@ -60,16 +57,8 @@ test("dock can render generated 3d icon assets before falling back to lucide ico
   assert.match(dockSource, /dockIconSrc="\/icons\/dock\/git\.webp"/);
 });
 
-test("ai chat opens as an internal portfolio window with a placeholder chat UI", () => {
-  assert.ok(existsSync(chatWindowPath), "ChatWindow component should exist");
-
-  const chatWindowSource = readFileSync(chatWindowPath, "utf8");
-
-  assert.match(windowManagerSource, /import \{ ChatWindow \}/);
-  assert.match(windowManagerSource, /case "ai-chat":\s*return <ChatWindow \/>;/);
-  assert.match(chatWindowSource, /textarea/);
-  assert.match(chatWindowSource, /type="submit"/);
-  assert.match(chatWindowSource, /currently preparing/);
-  assert.match(chatWindowSource, /대표 프로젝트/);
-  assert.match(chatWindowSource, /직무 역량/);
+test("unfinished ai chat is not exposed as an internal portfolio window", () => {
+  assert.doesNotMatch(windowManagerSource, /import \{ ChatWindow \}/);
+  assert.doesNotMatch(windowManagerSource, /case "ai-chat"/);
+  assert.doesNotMatch(dockSource, /"ai-chat"/);
 });

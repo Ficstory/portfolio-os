@@ -33,7 +33,7 @@ test("root OS exposes Career Tracks as a first-class internal folder", () => {
 test("desktop and mobile surfaces can open the Career Tracks window", () => {
   assert.match(
     dockSource,
-    /const dockFolderIds = \[\s*"about",\s*"career-tracks",\s*"projects",\s*"skills",\s*"ai-chat",\s*"resume",\s*"contact",\s*\] as const;/s,
+    /const dockFolderIds = \[\s*"about",\s*"career-tracks",\s*"projects",\s*"skills",\s*"resume",\s*"contact",\s*\] as const;/s,
   );
   assert.match(dockSource, /Route/);
   assert.match(desktopIconGridSource, /Route/);

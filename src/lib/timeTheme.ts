@@ -3,10 +3,10 @@ export type AppearanceMode = "auto" | "light" | "dark";
 export type ResolvedTheme = "light" | "dark";
 
 const WALLPAPER_BY_TIME_OF_DAY: Record<TimeOfDay, string> = {
-  dawn: "/images/wallpapers/dawn.png",
-  day: "/images/wallpapers/day.png",
-  evening: "/images/wallpapers/evening.png",
-  night: "/images/wallpapers/night.png",
+  dawn: "/images/wallpapers/dawn.webp",
+  day: "/images/wallpapers/day.webp",
+  evening: "/images/wallpapers/evening.webp",
+  night: "/images/wallpapers/night.webp",
 };
 
 export function getTimeOfDay(hour: number): TimeOfDay {

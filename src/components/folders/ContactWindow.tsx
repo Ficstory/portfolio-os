@@ -31,7 +31,7 @@ export function ContactWindow() {
           Contact
         </h3>
         <p className="max-w-2xl text-sm leading-6 text-muted">
-          서버 저장형 연락처 폼 대신 외부 프로필과 이메일 링크만 제공합니다.
+          서버 저장형 연락처 폼 대신 GitHub와 이메일 링크를 제공합니다.
         </p>
       </div>
 
@@ -69,11 +69,7 @@ export function ContactWindow() {
                   열기
                   {isExternal ? <ExternalLink aria-hidden="true" size={15} /> : null}
                 </a>
-              ) : (
-                <span className="shrink-0 rounded-md border border-slate-200/80 px-3 py-2 text-sm font-bold text-muted dark:border-white/12">
-                  업데이트 예정
-                </span>
-              )}
+              ) : null}
             </article>
           );
         })}

@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Bot,
   Code2,
   ExternalLink,
   FileText,
@@ -33,7 +32,6 @@ const dockFolderIds = [
   "career-tracks",
   "projects",
   "skills",
-  "ai-chat",
   "resume",
   "contact",
 ] as const;
@@ -50,7 +48,6 @@ const DOCK_SPRING = {
 };
 
 const iconMap: Record<string, LucideIcon> = {
-  Bot,
   Code2,
   FileText,
   FolderKanban,

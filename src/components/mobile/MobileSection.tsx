@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {
   ArrowUp,
-  Bot,
   BookOpenText,
   Code2,
   Download,
@@ -14,7 +13,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import { ChatWindow } from "@/components/folders/ChatWindow";
 import { usePortfolioTrack } from "@/components/portfolio/PortfolioTrackProvider";
 import { TrackLinkPanel } from "@/components/tracks/TrackLinkPanel";
 import { resumeSummary } from "@/content/resume-summary";
@@ -65,22 +63,16 @@ const sectionMeta: Record<FolderId, SectionMeta> = {
     description: "직무 역량과 이를 뒷받침하는 근거 경험을 확인합니다.",
     icon: Code2,
   },
-  "ai-chat": {
-    title: "Portfolio AI",
-    eyebrow: "Local AI",
-    description: "로컬 모델 기반 포트폴리오 챗봇 진입점을 먼저 준비합니다.",
-    icon: Bot,
-  },
   resume: {
     title: "Resume",
     eyebrow: "Summary",
-    description: "핵심 역량, 프로젝트 요약, 기술 요약, PDF 다운로드를 제공합니다.",
+    description: "핵심 역량, 프로젝트 요약, 기술 요약을 제공합니다.",
     icon: FileText,
   },
   contact: {
     title: "Contact",
     eyebrow: "Links",
-    description: "서버 저장 없이 외부 프로필과 이메일 진입점을 제공합니다.",
+    description: "GitHub와 이메일 진입점을 제공합니다.",
     icon: Mail,
   },
 };
@@ -201,9 +193,7 @@ function ProjectLinksList({ project }: { project: Project }) {
     .filter(([, href]) => Boolean(href));
 
   if (linkItems.length === 0) {
-    return (
-      <p className="text-sm leading-6 text-muted">등록된 외부 링크가 없습니다.</p>
-    );
+    return null;
   }
 
   return (
@@ -397,16 +387,7 @@ function ResumeContent() {
             <Download aria-hidden="true" size={16} />
             이력서 PDF 다운로드
           </a>
-        ) : (
-          <button
-            className="inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-md border border-slate-200/80 bg-white/64 px-4 py-2 text-sm font-bold text-muted dark:border-white/12 dark:bg-white/8"
-            disabled
-            type="button"
-          >
-            <Download aria-hidden="true" size={16} />
-            PDF 준비 중
-          </button>
-        )}
+        ) : null}
       </section>
 
       <SectionBlock title="핵심 역량">
@@ -483,11 +464,7 @@ function ContactContent() {
                     <ExternalLink aria-hidden="true" size={15} />
                   ) : null}
                 </a>
-              ) : (
-                <span className="flex min-h-10 w-full items-center justify-center rounded-md border border-slate-200/80 px-4 py-2 text-sm font-bold text-muted dark:border-white/12">
-                  업데이트 예정
-                </span>
-              )}
+              ) : null}
             </div>
           </article>
         );
@@ -506,8 +483,6 @@ function renderContent(sectionId: FolderId) {
       return <ProjectsContent />;
     case "skills":
       return <SkillsContent />;
-    case "ai-chat":
-      return <ChatWindow />;
     case "resume":
       return <ResumeContent />;
     case "contact":

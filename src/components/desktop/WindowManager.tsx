@@ -2,7 +2,6 @@
 
 import { AppWindow } from "@/components/desktop/AppWindow";
 import { AboutWindow } from "@/components/folders/AboutWindow";
-import { ChatWindow } from "@/components/folders/ChatWindow";
 import { ContactWindow } from "@/components/folders/ContactWindow";
 import { ProjectsWindow } from "@/components/folders/ProjectsWindow";
 import { ResumeWindow } from "@/components/folders/ResumeWindow";
@@ -39,8 +38,6 @@ function renderWindowContent(window: DesktopWindow) {
       return <ProjectsWindow />;
     case "skills":
       return <SkillsWindow />;
-    case "ai-chat":
-      return <ChatWindow />;
     case "resume":
       return <ResumeWindow />;
     case "contact":

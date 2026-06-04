@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
@@ -17,10 +17,18 @@ const swipeUnlockControlSource = readFileSync(
 );
 const lockFeatureSource = `${lockScreenSource}\n${swipeUnlockControlSource}`;
 const pageSource = readFileSync(path.join(root, "src/app/page.tsx"), "utf8");
+const layoutSource = readFileSync(path.join(root, "src/app/layout.tsx"), "utf8");
 const desktopShellSource = readFileSync(
   path.join(root, "src/components/desktop/DesktopShell.tsx"),
   "utf8",
 );
+const portfolioDesktopShellPath = path.join(
+  root,
+  "src/components/portfolio/PortfolioDesktopShell.tsx",
+);
+const portfolioDesktopShellSource = existsSync(portfolioDesktopShellPath)
+  ? readFileSync(portfolioDesktopShellPath, "utf8")
+  : "";
 
 test("lock screen uses swipe unlock UI instead of the passcode panel", () => {
   assert.match(lockFeatureSource, /SWIPE UP TO UNLOCK PORTFOLIO/);
@@ -63,7 +71,7 @@ test("home owns the clock and passes the current time through lock and desktop s
   assert.match(pageSource, /const now = useMinuteClock\(\);/);
   assert.match(
     pageSource,
-    /<DesktopShell isVisible=\{isDesktopVisible\} now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/,
+    /<PortfolioDesktopShell isVisible=\{isDesktopVisible\} now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/,
   );
   assert.match(
     pageSource,
@@ -74,6 +82,47 @@ test("home owns the clock and passes the current time through lock and desktop s
   assert.doesNotMatch(lockScreenSource, /function useMinuteClock\(\)/);
   assert.match(desktopShellSource, /now: Date;/);
   assert.match(desktopShellSource, /<MenuBar now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/);
+  assert.match(portfolioDesktopShellSource, /<PortfolioTrackProvider trackId="default">/);
+  assert.match(
+    portfolioDesktopShellSource,
+    /<DesktopShell isVisible=\{isVisible\} now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/,
+  );
+});
+
+test("home defers the desktop shell until unlock to keep the initial lock screen light", () => {
+  assert.match(pageSource, /dynamic\(/);
+  assert.match(
+    pageSource,
+    /import\("@\/components\/portfolio\/PortfolioDesktopShell"\)/,
+  );
+  assert.match(pageSource, /ssr:\s*false/);
+  assert.doesNotMatch(
+    pageSource,
+    /import \{ DesktopShell \} from "@\/components\/desktop\/DesktopShell";/,
+  );
+  assert.doesNotMatch(
+    pageSource,
+    /import \{ PortfolioTrackProvider \} from "@\/components\/portfolio\/PortfolioTrackProvider";/,
+  );
+  assert.match(pageSource, /\{isDesktopVisible \? \(/);
+  assert.match(
+    pageSource,
+    /<PortfolioDesktopShell isVisible=\{isDesktopVisible\} now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/,
+  );
+});
+
+test("lock screen time and wallpaper are corrected before full hydration", () => {
+  assert.match(layoutSource, /syncInitialPortfolioClock/);
+  assert.match(layoutSource, /data-live-clock="time"/);
+  assert.match(layoutSource, /data-live-clock="date"/);
+  assert.match(layoutSource, /data-portfolio-root/);
+  assert.match(layoutSource, /data-wallpaper-layer/);
+  assert.match(layoutSource, /\/images\/wallpapers\/day\.webp/);
+  assert.doesNotMatch(layoutSource, /\/images\/wallpapers\/day\.png/);
+  assert.match(pageSource, /data-portfolio-root/);
+  assert.match(pageSource, /data-wallpaper-layer/);
+  assert.match(lockScreenSource, /data-live-clock="time"/);
+  assert.match(lockScreenSource, /data-live-clock="date"/);
 });
 
 test("unlock flow reveals the desktop without a boot or loading screen", () => {
@@ -97,7 +146,7 @@ test("unlock flow reveals the desktop without a boot or loading screen", () => {
   assert.match(pageSource, /isDesktopVisible = hasUnlocked \|\| isUnlocking/);
   assert.match(
     pageSource,
-    /<DesktopShell isVisible=\{isDesktopVisible\} now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/,
+    /<PortfolioDesktopShell isVisible=\{isDesktopVisible\} now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/,
   );
   assert.match(pageSource, /\{!hasUnlocked \? \(/);
   assert.match(pageSource, /setIsUnlocking\(true\)/);
@@ -109,7 +158,7 @@ test("unlock flow reveals the desktop without a boot or loading screen", () => {
 test("unlock flow reveals the desktop without auto-opening the about window", () => {
   assert.match(
     pageSource,
-    /<DesktopShell isVisible=\{isDesktopVisible\} now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/,
+    /<PortfolioDesktopShell isVisible=\{isDesktopVisible\} now=\{now\} resolvedTheme=\{resolvedTheme\} \/>/,
   );
   assert.doesNotMatch(pageSource, /openWindow\("about"/);
   assert.doesNotMatch(pageSource, /windows\.some\(\(window\) => window\.id === "about"\)/);

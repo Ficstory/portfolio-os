@@ -1,0 +1,1294 @@
+[
+  {
+    "name": "home-overview-desktop",
+    "screenshot": "C:\\Users\\SSAFY\\Desktop\\워크스페이스\\포트폴리오 사이트\\analysis-assets\\home-overview-desktop.png",
+    "scrollY": 1450,
+    "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nINTUITIVE UI\nUSER ENGAGEMENT\nPERFORMANCE\nIMPROVEMENT\nOVERVIEW\nProject 페이지에는 개인 및 팀 프로젝트와 직무에서 진행한 프로젝트의 결과가 담겨 있습니다. 이 과정에서 고민했던 점, 해결 방법, 관련 공부 기록, 그리고 구현한 기능들을 통해 저의 기술 스택과 문제 해결 능력을 깊이 있게 확인하실 수 있습니다. About 페이지에서는 제 경험과 가치관, 그리고 앞으로 프론트엔드 개발자로서 나아가고 싶은 방향을 간략히 소개하고 있습니다.\nProject\n\n프로젝트 소개, 해결 방법, 관련 공부 기록\n\nAbout\n\n나의 경험과 생각, 프론트엔드 개발자로서의 방향\n\n푸터영역\nleeboa2003@naver.com\nhttps://github.com/leeboa2005\n🏠\nHome\n📂\nProject\n🎁\nAbout\n\n©2024 LeeBoa. All Rights Reserved.",
+    "visible": [
+      {
+        "tag": "a",
+        "text": "HOME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "PROJECT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "ABOUT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "ABOUT ME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "p",
+        "text": "ABOUT ME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "27.2px",
+        "color": "rgb(244, 244, 248)"
+      },
+      {
+        "tag": "p",
+        "text": "CONTACT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "23px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "p",
+        "text": "leeboa2003@naver.com",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "velog.io/@leeboa2003",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "h2",
+        "text": "OVERVIEW",
+        "rect": {
+          "x": 86,
+          "y": 395,
+          "w": 648,
+          "h": 134
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "Project 페이지에는 개인 및 팀 프로젝트와 직무에서 진행한 프로젝트의 결과가 담겨 있습니다. 이 과정에서 고민했던 점, 해결 방법, 관련 공부 기록, 그리고 구현한 기능들을 통해 저의 기술 스택과 문제 해결 능력을 깊이 있게 확인하실 수 있습니다. About 페이지에서는 제 경험과 가치관, 그리고 앞으로 프론트엔드 개발자로서 나아가고 싶은 방향을 간략히 소개하고 있습니다.",
+        "rect": {
+          "x": 368,
+          "y": 641,
+          "w": 941,
+          "h": 116
+        },
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 10)",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "Project 프로젝트 소개, 해결 방법, 관련 공부 기록",
+        "rect": {
+          "x": 171,
+          "y": 963,
+          "w": 496,
+          "h": 303
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "h3",
+        "text": "Project",
+        "rect": {
+          "x": 171,
+          "y": 963,
+          "w": 164,
+          "h": 51
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "51.2px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "About 나의 경험과 생각, 프론트엔드 개발자로서의 방향",
+        "rect": {
+          "x": 773,
+          "y": 963,
+          "w": 496,
+          "h": 303
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "h3",
+        "text": "About",
+        "rect": {
+          "x": 773,
+          "y": 963,
+          "w": 139,
+          "h": 51
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "51.2px",
+        "color": "rgb(0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "name": "home-cards-desktop",
+    "screenshot": "C:\\Users\\SSAFY\\Desktop\\워크스페이스\\포트폴리오 사이트\\analysis-assets\\home-cards-desktop.png",
+    "scrollY": 1952,
+    "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nINTUITIVE UI\nUSER ENGAGEMENT\nPERFORMANCE\nIMPROVEMENT\nOVERVIEW\nProject 페이지에는 개인 및 팀 프로젝트와 직무에서 진행한 프로젝트의 결과가 담겨 있습니다. 이 과정에서 고민했던 점, 해결 방법, 관련 공부 기록, 그리고 구현한 기능들을 통해 저의 기술 스택과 문제 해결 능력을 깊이 있게 확인하실 수 있습니다. About 페이지에서는 제 경험과 가치관, 그리고 앞으로 프론트엔드 개발자로서 나아가고 싶은 방향을 간략히 소개하고 있습니다.\nProject\n\n프로젝트 소개, 해결 방법, 관련 공부 기록\n\nAbout\n\n나의 경험과 생각, 프론트엔드 개발자로서의 방향\n\n푸터영역\nleeboa2003@naver.com\nhttps://github.com/leeboa2005\n🏠\nHome\n📂\nProject\n🎁\nAbout\n\n©2024 LeeBoa. All Rights Reserved.",
+    "visible": [
+      {
+        "tag": "a",
+        "text": "HOME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "PROJECT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "ABOUT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "ABOUT ME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "p",
+        "text": "ABOUT ME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "27.2px",
+        "color": "rgb(244, 244, 248)"
+      },
+      {
+        "tag": "p",
+        "text": "CONTACT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "23px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "p",
+        "text": "leeboa2003@naver.com",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "velog.io/@leeboa2003",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "Project 페이지에는 개인 및 팀 프로젝트와 직무에서 진행한 프로젝트의 결과가 담겨 있습니다. 이 과정에서 고민했던 점, 해결 방법, 관련 공부 기록, 그리고 구현한 기능들을 통해 저의 기술 스택과 문제 해결 능력을 깊이 있게 확인하실 수 있습니다. About 페이지에서는 제 경험과 가치관, 그리고 앞으로 프론트엔드 개발자로서 나아가고 싶은 방향을 간략히 소개하고 있습니다.",
+        "rect": {
+          "x": 368,
+          "y": 139,
+          "w": 941,
+          "h": 116
+        },
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 10)",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "Project 프로젝트 소개, 해결 방법, 관련 공부 기록",
+        "rect": {
+          "x": 171,
+          "y": 461,
+          "w": 496,
+          "h": 303
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "h3",
+        "text": "Project",
+        "rect": {
+          "x": 171,
+          "y": 461,
+          "w": 164,
+          "h": 51
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "51.2px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "p",
+        "text": "프로젝트 소개, 해결 방법, 관련 공부 기록",
+        "rect": {
+          "x": 171,
+          "y": 708,
+          "w": 496,
+          "h": 57
+        },
+        "opacity": "0",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "About 나의 경험과 생각, 프론트엔드 개발자로서의 방향",
+        "rect": {
+          "x": 773,
+          "y": 461,
+          "w": 496,
+          "h": 303
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "h3",
+        "text": "About",
+        "rect": {
+          "x": 773,
+          "y": 461,
+          "w": 139,
+          "h": 51
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "51.2px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "p",
+        "text": "나의 경험과 생각, 프론트엔드 개발자로서의 방향",
+        "rect": {
+          "x": 773,
+          "y": 708,
+          "w": 496,
+          "h": 57
+        },
+        "opacity": "0",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "푸터영역",
+        "rect": {
+          "x": 15,
+          "y": 850,
+          "w": 1,
+          "h": 1
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "leeboa2003@naver.com",
+        "rect": {
+          "x": 100,
+          "y": 851,
+          "w": 230,
+          "h": 20
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "https://github.com/leeboa2005",
+        "rect": {
+          "x": 100,
+          "y": 879,
+          "w": 230,
+          "h": 20
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "🏠 Home",
+        "rect": {
+          "x": 1076,
+          "y": 851,
+          "w": 74,
+          "h": 23
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "🏠",
+        "rect": {
+          "x": 1076,
+          "y": 854,
+          "w": 22,
+          "h": 16
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "Home",
+        "rect": {
+          "x": 1106,
+          "y": 853,
+          "w": 44,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "Home",
+        "rect": {
+          "x": 1106,
+          "y": 853,
+          "w": 44,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "📂 Project",
+        "rect": {
+          "x": 1166,
+          "y": 851,
+          "w": 81,
+          "h": 23
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "📂",
+        "rect": {
+          "x": 1166,
+          "y": 854,
+          "w": 22,
+          "h": 16
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "Project",
+        "rect": {
+          "x": 1196,
+          "y": 853,
+          "w": 51,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "Project",
+        "rect": {
+          "x": 1196,
+          "y": 853,
+          "w": 51,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "🎁 About",
+        "rect": {
+          "x": 1263,
+          "y": 851,
+          "w": 77,
+          "h": 23
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "🎁",
+        "rect": {
+          "x": 1263,
+          "y": 854,
+          "w": 22,
+          "h": 16
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "About",
+        "rect": {
+          "x": 1293,
+          "y": 853,
+          "w": 47,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "About",
+        "rect": {
+          "x": 1293,
+          "y": 853,
+          "w": 47,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "p",
+        "text": "©2024 LeeBoa. All Rights Reserved.",
+        "rect": {
+          "x": 1099,
+          "y": 923,
+          "w": 241,
+          "h": 14
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "14.4px",
+        "color": "rgb(102, 102, 102)"
+      }
+    ]
+  },
+  {
+    "name": "about-skills-desktop",
+    "screenshot": "C:\\Users\\SSAFY\\Desktop\\워크스페이스\\포트폴리오 사이트\\analysis-assets\\about-skills-desktop.png",
+    "scrollY": 1200,
+    "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nS\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nAbout\n작은 시작, 큰 연결\n\n프론트엔드 개발자로서, 작은 디테일이 사용자 경험을 더욱 풍부하게 만들고 자연스러운 소통을 이끌어낸다고 믿습니다. 화면의 섬세한 요소와 직관적인 상호작용을 통해, 더 많은 사람들이 편리하고 즐겁게 사용할 수 있는 서비스를 만들기 위해 끊임없이 고민하고 있습니다.\n\n모든 개인은 자신만의 특별한 추억과 경험을 가지고 있습니다. 각자의 특별함이 모여 더 나은 세상을 만들어가는 것처럼, 저는 이러한 특별함을 기술로 연결하고 내일로 이어질 수 있는 서비스를 개발하고자 합니다.\n\n'사용자들이 어떤 서비스를 필요로 할까?', '어떤 경험이 특별하게 다가올까?'와 같은 질문들을 팀원들과 함께 고민하며, 더 나은 결과를 만들어내기 위해 노력합니다.\n\n사용자 피드백을 기반으로 기술을 개선하고, 테스트를 통해 부족한 부분을 보완하며, 점진적으로 발전하는 서비스를 만드는 것이 저의 목표입니다. 이렇게 사용자와 팀 모두가 만족할 수 있는 결과물을 함께 이루어가고 싶습니다.\n\n나의 기술들\n개발 기술\n1\nJavaScript\nTypeScript\nReact\nNext.js\nVue.js\n스타일링 및 마크업\n2\nHTML5\nCSS3\nTailwind CSS\nBootstrap\n형상 관리\n3\nGit\nSvn\n백엔드 서비스 및 배포\n4\nFirebase\nSupabase\nVercel\nConnect with Me\n\n푸터영역\nleeboa2003@naver.com\nhttps://github.com/leeboa2005\n🏠\nHome\n📂\nProject\n🎁\nAbout\n\n©2024 LeeBoa. All Rights Reserved.",
+    "visible": [
+      {
+        "tag": "a",
+        "text": "HOME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "PROJECT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "ABOUT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "ABOUT ME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "p",
+        "text": "ABOUT ME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "27.2px",
+        "color": "rgb(244, 244, 248)"
+      },
+      {
+        "tag": "p",
+        "text": "CONTACT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "23px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "p",
+        "text": "leeboa2003@naver.com",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "velog.io/@leeboa2003",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "p",
+        "text": "사용자 피드백을 기반으로 기술을 개선하고, 테스트를 통해 부족한 부분을 보완하며, 점진적으로 발전하는 서비스를 만드는 것이 저의 목표입니다. 이렇게 사용자와 팀 모두가 만족할 수 있는 결과물을 함께 이루어가고 싶습니다.",
+        "rect": {
+          "x": 86,
+          "y": -96,
+          "w": 1267,
+          "h": 58
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "h2",
+        "text": "나의 기술들",
+        "rect": {
+          "x": 86,
+          "y": 43,
+          "w": 1267,
+          "h": 16
+        },
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "h3",
+        "text": "개발 기술",
+        "rect": {
+          "x": 118,
+          "y": 156,
+          "w": 397,
+          "h": 48
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "40px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "h3",
+        "text": "스타일링 및 마크업",
+        "rect": {
+          "x": 710,
+          "y": 156,
+          "w": 397,
+          "h": 48
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "40px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "h3",
+        "text": "형상 관리",
+        "rect": {
+          "x": 1302,
+          "y": 156,
+          "w": 397,
+          "h": 48
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "40px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "h3",
+        "text": "백엔드 서비스 및 배포",
+        "rect": {
+          "x": 1894,
+          "y": 156,
+          "w": 397,
+          "h": 48
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "40px",
+        "color": "rgb(0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "name": "about-contact-desktop",
+    "screenshot": "C:\\Users\\SSAFY\\Desktop\\워크스페이스\\포트폴리오 사이트\\analysis-assets\\about-contact-desktop.png",
+    "scrollY": 2826,
+    "text": "S\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nS\ne\ne\no\nn\nG\ni\nt\nH\nu\nb\nAbout\n작은 시작, 큰 연결\n\n프론트엔드 개발자로서, 작은 디테일이 사용자 경험을 더욱 풍부하게 만들고 자연스러운 소통을 이끌어낸다고 믿습니다. 화면의 섬세한 요소와 직관적인 상호작용을 통해, 더 많은 사람들이 편리하고 즐겁게 사용할 수 있는 서비스를 만들기 위해 끊임없이 고민하고 있습니다.\n\n모든 개인은 자신만의 특별한 추억과 경험을 가지고 있습니다. 각자의 특별함이 모여 더 나은 세상을 만들어가는 것처럼, 저는 이러한 특별함을 기술로 연결하고 내일로 이어질 수 있는 서비스를 개발하고자 합니다.\n\n'사용자들이 어떤 서비스를 필요로 할까?', '어떤 경험이 특별하게 다가올까?'와 같은 질문들을 팀원들과 함께 고민하며, 더 나은 결과를 만들어내기 위해 노력합니다.\n\n사용자 피드백을 기반으로 기술을 개선하고, 테스트를 통해 부족한 부분을 보완하며, 점진적으로 발전하는 서비스를 만드는 것이 저의 목표입니다. 이렇게 사용자와 팀 모두가 만족할 수 있는 결과물을 함께 이루어가고 싶습니다.\n\n나의 기술들\n개발 기술\n1\nJavaScript\nTypeScript\nReact\nNext.js\nVue.js\n스타일링 및 마크업\n2\nHTML5\nCSS3\nTailwind CSS\nBootstrap\n형상 관리\n3\nGit\nSvn\n백엔드 서비스 및 배포\n4\nFirebase\nSupabase\nVercel\nConnect with Me\n\n푸터영역\nleeboa2003@naver.com\nhttps://github.com/leeboa2005\n🏠\nHome\n📂\nProject\n🎁\nAbout\n\n©2024 LeeBoa. All Rights Reserved.",
+    "visible": [
+      {
+        "tag": "a",
+        "text": "HOME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "PROJECT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "ABOUT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "134.4px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "ABOUT ME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "p",
+        "text": "ABOUT ME",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "27.2px",
+        "color": "rgb(244, 244, 248)"
+      },
+      {
+        "tag": "p",
+        "text": "CONTACT",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "23px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "p",
+        "text": "leeboa2003@naver.com",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(13, 15, 15)"
+      },
+      {
+        "tag": "a",
+        "text": "velog.io/@leeboa2003",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "Connect with Me",
+        "rect": {
+          "x": 86,
+          "y": 318,
+          "w": 1267,
+          "h": 336
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "\"Exo 2\", sans-serif",
+        "size": "64px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "푸터영역",
+        "rect": {
+          "x": 15,
+          "y": 781,
+          "w": 1,
+          "h": 1
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "20.8px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "leeboa2003@naver.com",
+        "rect": {
+          "x": 100,
+          "y": 782,
+          "w": 230,
+          "h": 20
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "https://github.com/leeboa2005",
+        "rect": {
+          "x": 100,
+          "y": 810,
+          "w": 230,
+          "h": 20
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "🏠 Home",
+        "rect": {
+          "x": 1076,
+          "y": 782,
+          "w": 74,
+          "h": 23
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "🏠",
+        "rect": {
+          "x": 1076,
+          "y": 785,
+          "w": 22,
+          "h": 16
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "Home",
+        "rect": {
+          "x": 1106,
+          "y": 784,
+          "w": 44,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "Home",
+        "rect": {
+          "x": 1106,
+          "y": 784,
+          "w": 44,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "📂 Project",
+        "rect": {
+          "x": 1166,
+          "y": 782,
+          "w": 81,
+          "h": 23
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "📂",
+        "rect": {
+          "x": 1166,
+          "y": 785,
+          "w": 22,
+          "h": 16
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "Project",
+        "rect": {
+          "x": 1196,
+          "y": 784,
+          "w": 51,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "Project",
+        "rect": {
+          "x": 1196,
+          "y": 784,
+          "w": 51,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "a",
+        "text": "🎁 About",
+        "rect": {
+          "x": 1263,
+          "y": 782,
+          "w": 77,
+          "h": 23
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "🎁",
+        "rect": {
+          "x": 1263,
+          "y": 785,
+          "w": 22,
+          "h": 16
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "About",
+        "rect": {
+          "x": 1293,
+          "y": 784,
+          "w": 47,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "span",
+        "text": "About",
+        "rect": {
+          "x": 1293,
+          "y": 784,
+          "w": 47,
+          "h": 19
+        },
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "font": "SUIT",
+        "size": "16px",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "tag": "p",
+        "text": "©2024 LeeBoa. All Rights Reserved.",
+        "rect": {
+          "x": 1099,
+          "y": 854,
+          "w": 241,
+          "h": 14
+        },
+        "opacity": "1",
+        "transform": "none",
+        "font": "SUIT",
+        "size": "14.4px",
+        "color": "rgb(102, 102, 102)"
+      }
+    ]
+  }
+]

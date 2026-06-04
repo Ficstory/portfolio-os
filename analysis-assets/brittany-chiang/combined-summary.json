@@ -1,0 +1,3504 @@
+[
+  {
+    "url": "https://brittanychiang.com/",
+    "title": "Brittany Chiang",
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "scrollY": 0,
+      "documentHeight": 3980
+    },
+    "metaDescription": "Brittany Chiang is a software engineer who builds accessible, inclusive products and digital experiences for the web.",
+    "bodyStyle": {
+      "tag": "BODY",
+      "text": "Skip to ContentBrittany ChiangFrontend EngineerI build accessible, pixel-perfect experiences for the web.AboutExperienceProjectsGitHubLinkedInCodePenInstagramGo",
+      "fontFamily": "\"Noto Sans KR\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "26px",
+      "color": "rgb(148, 163, 184)",
+      "backgroundColor": "rgb(15, 23, 42)",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "display": "block",
+      "position": "static",
+      "width": 1440,
+      "height": 3980,
+      "x": 0,
+      "y": 0,
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "padding": "0px 0px 0px 0px",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "transition": "all | 0s | ease",
+      "animation": "none | 0s | ease | 1"
+    },
+    "cssVars": {
+      "--tw-ring-offset-shadow": "0 0 #0000",
+      "--tw-contrast": "",
+      "--tw-backdrop-sepia": "",
+      "--tw-ring-shadow": "0 0 #0000",
+      "--y": "-50%",
+      "--tw-sepia": "",
+      "--tw-skew-x": "0",
+      "--tw-ordinal": "",
+      "--tw-backdrop-saturate": "",
+      "--tw-backdrop-blur": "",
+      "--tw-shadow": "0 0 #0000",
+      "--tw-translate-x": "0",
+      "--deg": "1",
+      "--tw-ring-offset-width": "0px",
+      "--tw-ring-inset": "",
+      "--tw-gradient-via-position": "",
+      "--tw-backdrop-invert": "",
+      "--tw-saturate": "",
+      "--tw-scroll-snap-strictness": "proximity",
+      "--tw-numeric-spacing": "",
+      "--tw-grayscale": "",
+      "--tw-scale-x": "1",
+      "--tw-border-spacing-x": "0",
+      "--tw-backdrop-hue-rotate": "",
+      "--tw-shadow-colored": "0 0 #0000",
+      "--tw-gradient-to-position": "",
+      "--tw-border-spacing-y": "0",
+      "--tw-brightness": "",
+      "--tw-numeric-fraction": "",
+      "--tw-backdrop-grayscale": "",
+      "--tw-hue-rotate": "",
+      "--tw-scale-y": "1",
+      "--tw-pan-y": "",
+      "--tw-backdrop-contrast": "",
+      "--tw-drop-shadow": "",
+      "--tw-skew-y": "0",
+      "--tw-ring-color": "rgba(59,130,246,.5)",
+      "--tw-backdrop-brightness": "",
+      "--tw-slashed-zero": "",
+      "--tw-blur": "",
+      "--tw-invert": "",
+      "--tw-pan-x": "",
+      "--tw-translate-y": "0",
+      "--tw-backdrop-opacity": "",
+      "--x": "-50%",
+      "--tw-gradient-from-position": "",
+      "--tw-numeric-figure": "",
+      "--tw-rotate": "0",
+      "--tw-pinch-zoom": "",
+      "--tw-ring-offset-color": "#fff"
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Brittany Chiang",
+        "id": "",
+        "fontSize": "48px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 128,
+          "y": 96,
+          "w": 561,
+          "h": 48
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Frontend Engineer",
+        "id": "",
+        "fontSize": "20px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 128,
+          "y": 156,
+          "w": 561,
+          "h": 28
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "About",
+        "id": "about",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 704,
+          "y": 94,
+          "w": 1,
+          "h": 1
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Experience",
+        "id": "experience",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 704,
+          "y": 727,
+          "w": 1,
+          "h": 1
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Senior Frontend Engineer, Accessibility · Klaviyo",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": 728,
+          "w": 452,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Lead Engineer · UpstatementSenior EngineerEngineer",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": 959,
+          "w": 452,
+          "h": 66
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "UI Engineer Co-op · Apple",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": 1312,
+          "w": 452,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Developer · Scout Studio",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": 1561,
+          "w": 452,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Software Engineer Co-op · Starry",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": 1750,
+          "w": 452,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Creative Technologist Co-op · MullenLowe U.S.",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": 1957,
+          "w": 452,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Projects",
+        "id": "projects",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 704,
+          "y": 2314,
+          "w": 1,
+          "h": 1
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Build a Spotify Connected App",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 2315,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Spotify Profile",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 2464,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Halcyon Theme",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 2709,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "brittanychiang.com (v4)",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 2870,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Writing",
+        "id": "writing",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 704,
+          "y": 3220,
+          "w": 1,
+          "h": 1
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Welcome to the AI Parade",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 3255,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "5 Common Accessibility Pitfalls and How to Avoid Them",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 3382,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Integrating Algolia Search with WordPress Multisite",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 3509,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Building a Headless Mobile App CMS From Scratch",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 3635,
+          "w": 452,
+          "h": 26
+        }
+      }
+    ],
+    "sections": [
+      {
+        "id": "about",
+        "heading": "About",
+        "rect": {
+          "x": 705,
+          "y": 95,
+          "w": 607,
+          "h": 490
+        },
+        "text": "AboutI’m a frontend engineer with an expertise in building accessible, pixel-perfect user interfaces. I take pride in crafting thoughtful, inclusive products and have a sharp eye for the little details that elevate user experience. I do my best work at the int"
+      },
+      {
+        "id": "experience",
+        "heading": "Experience",
+        "rect": {
+          "x": 705,
+          "y": 728,
+          "w": 607,
+          "h": 1444
+        },
+        "text": "Experience2024 — PresentSenior Frontend Engineer, Accessibility · KlaviyoBuild and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and produ"
+      },
+      {
+        "id": "projects",
+        "heading": "Projects",
+        "rect": {
+          "x": 705,
+          "y": 2315,
+          "w": 607,
+          "h": 763
+        },
+        "text": "ProjectsBuild a Spotify Connected AppVideo course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more.Spotify ProfileWeb app for vi"
+      },
+      {
+        "id": "writing",
+        "heading": "Writing",
+        "rect": {
+          "x": 705,
+          "y": 3221,
+          "w": 607,
+          "h": 459
+        },
+        "text": "Writing2026Welcome to the AI Parade20245 Common Accessibility Pitfalls and How to Avoid Them2020Integrating Algolia Search with WordPress Multisite2019Building a Headless Mobile App CMS From Scratch"
+      }
+    ],
+    "navState": [
+      {
+        "text": "About",
+        "href": "#about",
+        "color": "rgb(148, 163, 184)",
+        "opacity": "1",
+        "className": "group flex items-center py-3 active",
+        "ariaCurrent": null,
+        "rect": {
+          "x": 128,
+          "y": 312,
+          "w": 135,
+          "h": 40
+        }
+      },
+      {
+        "text": "Experience",
+        "href": "#experience",
+        "color": "rgb(148, 163, 184)",
+        "opacity": "1",
+        "className": "group flex items-center py-3 ",
+        "ariaCurrent": null,
+        "rect": {
+          "x": 128,
+          "y": 352,
+          "w": 135,
+          "h": 40
+        }
+      },
+      {
+        "text": "Projects",
+        "href": "#projects",
+        "color": "rgb(148, 163, 184)",
+        "opacity": "1",
+        "className": "group flex items-center py-3 ",
+        "ariaCurrent": null,
+        "rect": {
+          "x": 128,
+          "y": 392,
+          "w": 135,
+          "h": 40
+        }
+      }
+    ],
+    "animations": [
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute",
+        "text": "",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.3s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "absolute left-0 top-0 block -translate-x-full rounded bg-yellow-500 px-4 py-3 text-sm font-bold uppercase tracking-wides",
+        "text": "Skip to Content",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "",
+        "text": "Brittany Chiang",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "group flex items-center py-3 active",
+        "text": "About",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-",
+        "text": "",
+        "transition": "all 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "group flex items-center py-3 ",
+        "text": "Experience",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-",
+        "text": "",
+        "transition": "all 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "group flex items-center py-3 ",
+        "text": "Projects",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-",
+        "text": "",
+        "transition": "all 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "GitHub",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "LinkedIn",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "CodePen",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "Instagram",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "Goodreads",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Klaviyo",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Apple",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Starry Internet",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Upstatement",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "online video course",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-red-400 transition duration-75 group-hover/korok:-translate-y-px delay-[50ms]",
+        "text": "K",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.05s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-orange-400 transition duration-75 group-hover/korok:-translate-y-px delay-[75ms]",
+        "text": "o",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.075s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-yellow-400 transition duration-75 group-hover/korok:-translate-y-px delay-[100ms]",
+        "text": "r",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.1s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-lime-400 transition duration-75 group-hover/korok:-translate-y-px delay-[125ms]",
+        "text": "o",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.125s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-green-400 transition duration-75 group-hover/korok:-translate-y-px delay-[150ms]",
+        "text": "k",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-teal-400 transition duration-75 group-hover/korok:-translate-y-px delay-[175ms]",
+        "text": "",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.175s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      }
+    ],
+    "images": [
+      {
+        "alt": "Build a Spotify Connected App Newline course marketing card",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
+        "rect": {
+          "x": 705,
+          "y": 2319,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Spotify Profile app homepage",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fspotify-profile.png&w=640&q=75",
+        "rect": {
+          "x": 705,
+          "y": 2468,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Halcyon Theme homepage hero with screenshot of VS Code editor",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fhalcyon.png&w=640&q=75",
+        "rect": {
+          "x": 705,
+          "y": 2713,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "brittanychiang.com version 4 hero section",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fv4.png&w=640&q=75",
+        "rect": {
+          "x": 705,
+          "y": 2874,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Welcome to Black Parade by My Chemical Romance text with \"Black\" changed to \"AI\"",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fai-parade.png&w=640&q=75",
+        "rect": {
+          "x": 705,
+          "y": 3221,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Accessibility icon",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fa11y.png&w=640&q=75",
+        "rect": {
+          "x": 705,
+          "y": 3348,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Telescope",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Falgolia-search.jpeg&w=640&q=75",
+        "rect": {
+          "x": 705,
+          "y": 3474,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Headless horseman",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fheadless.jpeg&w=640&q=75",
+        "rect": {
+          "x": 705,
+          "y": 3601,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Spinning Tardis from Doctor Who",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Ftardis%2Frotate.gif&w=256&q=75",
+        "rect": {
+          "x": 1332,
+          "y": 3878,
+          "w": 100,
+          "h": 86
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      }
+    ],
+    "hoverSamples": [
+      {
+        "name": "project-link",
+        "selector": "#projects a",
+        "before": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(226, 232, 240)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+          "rect": {
+            "x": 860,
+            "y": 440,
+            "w": 255,
+            "h": 20
+          }
+        },
+        "after": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(94, 234, 212)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+          "rect": {
+            "x": 860,
+            "y": 440,
+            "w": 255,
+            "h": 20
+          }
+        }
+      },
+      {
+        "name": "experience-card",
+        "selector": "#experience li, #experience a",
+        "before": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(148, 163, 184)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all",
+          "rect": {
+            "x": 705,
+            "y": 358,
+            "w": 607,
+            "h": 183
+          }
+        },
+        "after": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(148, 163, 184)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all",
+          "rect": {
+            "x": 705,
+            "y": 358,
+            "w": 607,
+            "h": 183
+          }
+        }
+      }
+    ],
+    "scrollSamples": [
+      {
+        "selector": "#about",
+        "scrollY": 0,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 active",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 ",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 ",
+            "ariaCurrent": null
+          }
+        ]
+      },
+      {
+        "selector": "#experience",
+        "scrollY": 632,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 active",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 ",
+            "ariaCurrent": null
+          }
+        ]
+      },
+      {
+        "selector": "#projects",
+        "scrollY": 2199,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 active",
+            "ariaCurrent": null
+          }
+        ]
+      },
+      {
+        "selector": "#writing",
+        "scrollY": 2952,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://brittanychiang.com/#projects",
+    "title": "Brittany Chiang",
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "scrollY": 2219,
+      "documentHeight": 3980
+    },
+    "metaDescription": "Brittany Chiang is a software engineer who builds accessible, inclusive products and digital experiences for the web.",
+    "bodyStyle": {
+      "tag": "BODY",
+      "text": "Skip to ContentBrittany ChiangFrontend EngineerI build accessible, pixel-perfect experiences for the web.AboutExperienceProjectsGitHubLinkedInCodePenInstagramGo",
+      "fontFamily": "\"Noto Sans KR\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "26px",
+      "color": "rgb(148, 163, 184)",
+      "backgroundColor": "rgb(15, 23, 42)",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "display": "block",
+      "position": "static",
+      "width": 1440,
+      "height": 3980,
+      "x": 0,
+      "y": -2219,
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "padding": "0px 0px 0px 0px",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "transition": "all | 0s | ease",
+      "animation": "none | 0s | ease | 1"
+    },
+    "cssVars": {
+      "--tw-ring-offset-shadow": "0 0 #0000",
+      "--tw-contrast": "",
+      "--tw-backdrop-sepia": "",
+      "--tw-ring-shadow": "0 0 #0000",
+      "--y": "-50%",
+      "--tw-sepia": "",
+      "--tw-skew-x": "0",
+      "--tw-ordinal": "",
+      "--tw-backdrop-saturate": "",
+      "--tw-backdrop-blur": "",
+      "--tw-shadow": "0 0 #0000",
+      "--tw-translate-x": "0",
+      "--deg": "1",
+      "--tw-ring-offset-width": "0px",
+      "--tw-ring-inset": "",
+      "--tw-gradient-via-position": "",
+      "--tw-backdrop-invert": "",
+      "--tw-saturate": "",
+      "--tw-scroll-snap-strictness": "proximity",
+      "--tw-numeric-spacing": "",
+      "--tw-grayscale": "",
+      "--tw-scale-x": "1",
+      "--tw-border-spacing-x": "0",
+      "--tw-backdrop-hue-rotate": "",
+      "--tw-shadow-colored": "0 0 #0000",
+      "--tw-gradient-to-position": "",
+      "--tw-brightness": "",
+      "--tw-border-spacing-y": "0",
+      "--tw-numeric-fraction": "",
+      "--tw-backdrop-grayscale": "",
+      "--tw-hue-rotate": "",
+      "--tw-scale-y": "1",
+      "--tw-pan-y": "",
+      "--tw-backdrop-contrast": "",
+      "--tw-drop-shadow": "",
+      "--tw-skew-y": "0",
+      "--tw-ring-color": "rgba(59,130,246,.5)",
+      "--tw-backdrop-brightness": "",
+      "--tw-slashed-zero": "",
+      "--tw-blur": "",
+      "--tw-invert": "",
+      "--tw-pan-x": "",
+      "--tw-translate-y": "0",
+      "--x": "-50%",
+      "--tw-backdrop-opacity": "",
+      "--tw-gradient-from-position": "",
+      "--tw-numeric-figure": "",
+      "--tw-rotate": "0",
+      "--tw-pinch-zoom": "",
+      "--tw-ring-offset-color": "#fff"
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Brittany Chiang",
+        "id": "",
+        "fontSize": "48px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 128,
+          "y": 96,
+          "w": 561,
+          "h": 48
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Frontend Engineer",
+        "id": "",
+        "fontSize": "20px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 128,
+          "y": 156,
+          "w": 561,
+          "h": 28
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "About",
+        "id": "about",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 704,
+          "y": -2125,
+          "w": 1,
+          "h": 1
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Experience",
+        "id": "experience",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 704,
+          "y": -1492,
+          "w": 1,
+          "h": 1
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Senior Frontend Engineer, Accessibility · Klaviyo",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": -1491,
+          "w": 452,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Lead Engineer · UpstatementSenior EngineerEngineer",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": -1260,
+          "w": 452,
+          "h": 66
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "UI Engineer Co-op · Apple",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": -907,
+          "w": 452,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Developer · Scout Studio",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": -658,
+          "w": 452,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Software Engineer Co-op · Starry",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": -469,
+          "w": 452,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Creative Technologist Co-op · MullenLowe U.S.",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 860,
+          "y": -262,
+          "w": 452,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Projects",
+        "id": "projects",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 704,
+          "y": 95,
+          "w": 1,
+          "h": 1
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Build a Spotify Connected App",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 96,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Spotify Profile",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 245,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Halcyon Theme",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 490,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "brittanychiang.com (v4)",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 651,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Writing",
+        "id": "writing",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 704,
+          "y": 1001,
+          "w": 1,
+          "h": 1
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Welcome to the AI Parade",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 1036,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "5 Common Accessibility Pitfalls and How to Avoid Them",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 1163,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Integrating Algolia Search with WordPress Multisite",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 1290,
+          "w": 452,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Building a Headless Mobile App CMS From Scratch",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 860,
+          "y": 1416,
+          "w": 452,
+          "h": 26
+        }
+      }
+    ],
+    "sections": [
+      {
+        "id": "about",
+        "heading": "About",
+        "rect": {
+          "x": 705,
+          "y": -2124,
+          "w": 607,
+          "h": 490
+        },
+        "text": "AboutI’m a frontend engineer with an expertise in building accessible, pixel-perfect user interfaces. I take pride in crafting thoughtful, inclusive products and have a sharp eye for the little details that elevate user experience. I do my best work at the int"
+      },
+      {
+        "id": "experience",
+        "heading": "Experience",
+        "rect": {
+          "x": 705,
+          "y": -1491,
+          "w": 607,
+          "h": 1444
+        },
+        "text": "Experience2024 — PresentSenior Frontend Engineer, Accessibility · KlaviyoBuild and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and produ"
+      },
+      {
+        "id": "projects",
+        "heading": "Projects",
+        "rect": {
+          "x": 705,
+          "y": 96,
+          "w": 607,
+          "h": 763
+        },
+        "text": "ProjectsBuild a Spotify Connected AppVideo course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more.Spotify ProfileWeb app for vi"
+      },
+      {
+        "id": "writing",
+        "heading": "Writing",
+        "rect": {
+          "x": 705,
+          "y": 1002,
+          "w": 607,
+          "h": 459
+        },
+        "text": "Writing2026Welcome to the AI Parade20245 Common Accessibility Pitfalls and How to Avoid Them2020Integrating Algolia Search with WordPress Multisite2019Building a Headless Mobile App CMS From Scratch"
+      }
+    ],
+    "navState": [
+      {
+        "text": "About",
+        "href": "#about",
+        "color": "rgb(148, 163, 184)",
+        "opacity": "1",
+        "className": "group flex items-center py-3",
+        "ariaCurrent": null,
+        "rect": {
+          "x": 128,
+          "y": 312,
+          "w": 154,
+          "h": 40
+        }
+      },
+      {
+        "text": "Experience",
+        "href": "#experience",
+        "color": "rgb(148, 163, 184)",
+        "opacity": "1",
+        "className": "group flex items-center py-3",
+        "ariaCurrent": null,
+        "rect": {
+          "x": 128,
+          "y": 352,
+          "w": 154,
+          "h": 40
+        }
+      },
+      {
+        "text": "Projects",
+        "href": "#projects",
+        "color": "rgb(148, 163, 184)",
+        "opacity": "1",
+        "className": "group flex items-center py-3 active",
+        "ariaCurrent": null,
+        "rect": {
+          "x": 128,
+          "y": 392,
+          "w": 154,
+          "h": 40
+        }
+      }
+    ],
+    "animations": [
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute",
+        "text": "",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.3s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "absolute left-0 top-0 block -translate-x-full rounded bg-yellow-500 px-4 py-3 text-sm font-bold uppercase tracking-wides",
+        "text": "Skip to Content",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "",
+        "text": "Brittany Chiang",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "group flex items-center py-3",
+        "text": "About",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-",
+        "text": "",
+        "transition": "all 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "group flex items-center py-3",
+        "text": "Experience",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-",
+        "text": "",
+        "transition": "all 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "group flex items-center py-3 active",
+        "text": "Projects",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-",
+        "text": "",
+        "transition": "all 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "GitHub",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "LinkedIn",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "CodePen",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "Instagram",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "Goodreads",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Klaviyo",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Apple",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Starry Internet",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Upstatement",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "online video course",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-red-400 transition duration-75 group-hover/korok:-translate-y-px delay-[50ms]",
+        "text": "K",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.05s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-orange-400 transition duration-75 group-hover/korok:-translate-y-px delay-[75ms]",
+        "text": "o",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.075s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-yellow-400 transition duration-75 group-hover/korok:-translate-y-px delay-[100ms]",
+        "text": "r",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.1s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-lime-400 transition duration-75 group-hover/korok:-translate-y-px delay-[125ms]",
+        "text": "o",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.125s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-green-400 transition duration-75 group-hover/korok:-translate-y-px delay-[150ms]",
+        "text": "k",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-teal-400 transition duration-75 group-hover/korok:-translate-y-px delay-[175ms]",
+        "text": "",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.175s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      }
+    ],
+    "images": [
+      {
+        "alt": "Build a Spotify Connected App Newline course marketing card",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=256&q=75",
+        "rect": {
+          "x": 705,
+          "y": 100,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 256,
+        "naturalHeight": 144
+      },
+      {
+        "alt": "Spotify Profile app homepage",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fspotify-profile.png&w=256&q=75",
+        "rect": {
+          "x": 705,
+          "y": 249,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 256,
+        "naturalHeight": 160
+      },
+      {
+        "alt": "Halcyon Theme homepage hero with screenshot of VS Code editor",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fhalcyon.png&w=256&q=75",
+        "rect": {
+          "x": 705,
+          "y": 494,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 256,
+        "naturalHeight": 160
+      },
+      {
+        "alt": "brittanychiang.com version 4 hero section",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fv4.png&w=256&q=75",
+        "rect": {
+          "x": 705,
+          "y": 655,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 256,
+        "naturalHeight": 134
+      },
+      {
+        "alt": "Welcome to Black Parade by My Chemical Romance text with \"Black\" changed to \"AI\"",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fai-parade.png&w=256&q=75",
+        "rect": {
+          "x": 705,
+          "y": 1002,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 256,
+        "naturalHeight": 128
+      },
+      {
+        "alt": "Accessibility icon",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fa11y.png&w=256&q=75",
+        "rect": {
+          "x": 705,
+          "y": 1129,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 256,
+        "naturalHeight": 128
+      },
+      {
+        "alt": "Telescope",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Falgolia-search.jpeg&w=256&q=75",
+        "rect": {
+          "x": 705,
+          "y": 1255,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 256,
+        "naturalHeight": 170
+      },
+      {
+        "alt": "Headless horseman",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fheadless.jpeg&w=256&q=75",
+        "rect": {
+          "x": 705,
+          "y": 1382,
+          "w": 140,
+          "h": 79
+        },
+        "naturalWidth": 256,
+        "naturalHeight": 159
+      },
+      {
+        "alt": "Spinning Tardis from Doctor Who",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Ftardis%2Frotate.gif&w=128&q=75",
+        "rect": {
+          "x": 1332,
+          "y": 1658,
+          "w": 100,
+          "h": 86
+        },
+        "naturalWidth": 678,
+        "naturalHeight": 584
+      }
+    ],
+    "hoverSamples": [
+      {
+        "name": "project-link",
+        "selector": "#projects a",
+        "before": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(226, 232, 240)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+          "rect": {
+            "x": 860,
+            "y": 440,
+            "w": 255,
+            "h": 20
+          }
+        },
+        "after": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(94, 234, 212)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+          "rect": {
+            "x": 860,
+            "y": 440,
+            "w": 255,
+            "h": 20
+          }
+        }
+      },
+      {
+        "name": "experience-card",
+        "selector": "#experience li, #experience a",
+        "before": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(148, 163, 184)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all",
+          "rect": {
+            "x": 705,
+            "y": 358,
+            "w": 607,
+            "h": 183
+          }
+        },
+        "after": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(148, 163, 184)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all",
+          "rect": {
+            "x": 705,
+            "y": 358,
+            "w": 607,
+            "h": 183
+          }
+        }
+      }
+    ],
+    "scrollSamples": [
+      {
+        "selector": "#about",
+        "scrollY": 0,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 active",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          }
+        ]
+      },
+      {
+        "selector": "#experience",
+        "scrollY": 632,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 active",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          }
+        ]
+      },
+      {
+        "selector": "#projects",
+        "scrollY": 2199,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 active",
+            "ariaCurrent": null
+          }
+        ]
+      },
+      {
+        "selector": "#writing",
+        "scrollY": 2952,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3",
+            "ariaCurrent": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://brittanychiang.com/archive",
+    "title": "Archive | Brittany Chiang",
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "scrollY": 0,
+      "documentHeight": 3763
+    },
+    "metaDescription": "Brittany Chiang is a software engineer who builds accessible, inclusive products and digital experiences for the web.",
+    "bodyStyle": {
+      "tag": "BODY",
+      "text": "Skip to ContentBrittany ChiangAll ProjectsYearProjectMade atBuilt withLink2023Emerson CollectiveEmerson CollectiveUpstatementNext.jsTypeScriptSCSSContentful eme",
+      "fontFamily": "\"Noto Sans KR\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "26px",
+      "color": "rgb(148, 163, 184)",
+      "backgroundColor": "rgb(15, 23, 42)",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "display": "block",
+      "position": "static",
+      "width": 1440,
+      "height": 3763,
+      "x": 0,
+      "y": 0,
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "padding": "0px 0px 0px 0px",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "transition": "all | 0s | ease",
+      "animation": "none | 0s | ease | 1"
+    },
+    "cssVars": {
+      "--tw-ring-offset-shadow": "0 0 #0000",
+      "--tw-contrast": "",
+      "--tw-backdrop-sepia": "",
+      "--y": "-50%",
+      "--tw-ring-shadow": "0 0 #0000",
+      "--tw-sepia": "",
+      "--tw-skew-x": "0",
+      "--tw-ordinal": "",
+      "--tw-backdrop-saturate": "",
+      "--tw-backdrop-blur": "",
+      "--tw-shadow": "0 0 #0000",
+      "--tw-translate-x": "0",
+      "--tw-ring-inset": "",
+      "--tw-ring-offset-width": "0px",
+      "--deg": "1",
+      "--tw-gradient-via-position": "",
+      "--tw-backdrop-invert": "",
+      "--tw-saturate": "",
+      "--tw-scroll-snap-strictness": "proximity",
+      "--tw-numeric-spacing": "",
+      "--tw-grayscale": "",
+      "--tw-scale-x": "1",
+      "--tw-border-spacing-x": "0",
+      "--tw-backdrop-hue-rotate": "",
+      "--tw-shadow-colored": "0 0 #0000",
+      "--tw-gradient-to-position": "",
+      "--tw-brightness": "",
+      "--tw-border-spacing-y": "0",
+      "--tw-numeric-fraction": "",
+      "--tw-backdrop-grayscale": "",
+      "--tw-hue-rotate": "",
+      "--tw-scale-y": "1",
+      "--tw-pan-y": "",
+      "--tw-backdrop-contrast": "",
+      "--tw-drop-shadow": "",
+      "--tw-skew-y": "0",
+      "--tw-ring-color": "rgba(59,130,246,.5)",
+      "--tw-backdrop-brightness": "",
+      "--tw-slashed-zero": "",
+      "--tw-blur": "",
+      "--tw-invert": "",
+      "--tw-pan-x": "",
+      "--tw-translate-y": "0",
+      "--x": "-50%",
+      "--tw-backdrop-opacity": "",
+      "--tw-gradient-from-position": "",
+      "--tw-numeric-figure": "",
+      "--tw-rotate": "0",
+      "--tw-pinch-zoom": "",
+      "--tw-ring-offset-color": "#fff"
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "All Projects",
+        "id": "",
+        "fontSize": "48px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 128,
+          "y": 125,
+          "w": 1184,
+          "h": 48
+        }
+      }
+    ],
+    "sections": [],
+    "navState": [],
+    "animations": [
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute",
+        "text": "",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.3s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "absolute left-0 top-0 block -translate-x-full rounded bg-yellow-500 px-4 py-3 text-sm font-bold uppercase tracking-wides",
+        "text": "Skip to Content",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300",
+        "text": "Brittany Chiang",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Emerson Collective",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 text-sm text-slate-400 group/link text-sm",
+        "text": "emersoncollective.com",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Harvard Business School Next.js Site",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 text-sm text-slate-400 group/link text-sm",
+        "text": "hbs.edu",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Threadable",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 text-sm text-slate-400 group/link text-sm",
+        "text": "apps.apple.com",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Pratt",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 text-sm text-slate-400 group/link text-sm",
+        "text": "pratt.edu",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Everytown Gun Law Rankings",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 text-sm text-slate-400 group/link text-sm",
+        "text": "everytownresearch.org/rankings",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Koala Health",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      }
+    ],
+    "images": [],
+    "hoverSamples": [],
+    "scrollSamples": []
+  },
+  {
+    "url": "https://brittanychiang.com/",
+    "title": "Brittany Chiang",
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "scrollY": 0,
+      "documentHeight": 5460
+    },
+    "metaDescription": "Brittany Chiang is a software engineer who builds accessible, inclusive products and digital experiences for the web.",
+    "bodyStyle": {
+      "tag": "BODY",
+      "text": "Skip to ContentBrittany ChiangFrontend EngineerI build accessible, pixel-perfect experiences for the web.AboutExperienceProjectsGitHubLinkedInCodePenInstagramGo",
+      "fontFamily": "\"Noto Sans KR\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "26px",
+      "color": "rgb(148, 163, 184)",
+      "backgroundColor": "rgb(15, 23, 42)",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "display": "block",
+      "position": "static",
+      "width": 390,
+      "height": 5460,
+      "x": 0,
+      "y": 0,
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "padding": "0px 0px 0px 0px",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "transition": "all | 0s | ease",
+      "animation": "none | 0s | ease | 1"
+    },
+    "cssVars": {
+      "--tw-ring-offset-shadow": "0 0 #0000",
+      "--tw-contrast": "",
+      "--tw-backdrop-sepia": "",
+      "--y": "-50%",
+      "--tw-ring-shadow": "0 0 #0000",
+      "--tw-sepia": "",
+      "--tw-skew-x": "0",
+      "--tw-ordinal": "",
+      "--tw-backdrop-saturate": "",
+      "--tw-backdrop-blur": "",
+      "--tw-shadow": "0 0 #0000",
+      "--tw-translate-x": "0",
+      "--deg": "1",
+      "--tw-ring-inset": "",
+      "--tw-ring-offset-width": "0px",
+      "--tw-gradient-via-position": "",
+      "--tw-backdrop-invert": "",
+      "--tw-saturate": "",
+      "--tw-scroll-snap-strictness": "proximity",
+      "--tw-numeric-spacing": "",
+      "--tw-grayscale": "",
+      "--tw-border-spacing-x": "0",
+      "--tw-scale-x": "1",
+      "--tw-backdrop-hue-rotate": "",
+      "--tw-shadow-colored": "0 0 #0000",
+      "--tw-gradient-to-position": "",
+      "--tw-brightness": "",
+      "--tw-border-spacing-y": "0",
+      "--tw-numeric-fraction": "",
+      "--tw-backdrop-grayscale": "",
+      "--tw-hue-rotate": "",
+      "--tw-scale-y": "1",
+      "--tw-pan-y": "",
+      "--tw-backdrop-contrast": "",
+      "--tw-drop-shadow": "",
+      "--tw-skew-y": "0",
+      "--tw-ring-color": "rgba(59,130,246,.5)",
+      "--tw-backdrop-brightness": "",
+      "--tw-slashed-zero": "",
+      "--tw-blur": "",
+      "--tw-invert": "",
+      "--tw-pan-x": "",
+      "--tw-translate-y": "0",
+      "--tw-backdrop-opacity": "",
+      "--x": "-50%",
+      "--tw-gradient-from-position": "",
+      "--tw-numeric-figure": "",
+      "--tw-rotate": "0",
+      "--tw-pinch-zoom": "",
+      "--tw-ring-offset-color": "#fff"
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Brittany Chiang",
+        "id": "",
+        "fontSize": "36px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 48,
+          "w": 342,
+          "h": 40
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Frontend Engineer",
+        "id": "",
+        "fontSize": "18px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 100,
+          "w": 342,
+          "h": 28
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "About",
+        "id": "about",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 364,
+          "w": 342,
+          "h": 20
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Experience",
+        "id": "experience",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 1332,
+          "w": 342,
+          "h": 20
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Senior Frontend Engineer, Accessibility · Klaviyo",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 1416,
+          "w": 342,
+          "h": 41
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Lead Engineer · UpstatementSenior EngineerEngineer",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 1715,
+          "w": 342,
+          "h": 66
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "UI Engineer Co-op · Apple",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 2174,
+          "w": 342,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Developer · Scout Studio",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 2451,
+          "w": 342,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Software Engineer Co-op · Starry",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 2689,
+          "w": 342,
+          "h": 22
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Creative Technologist Co-op · MullenLowe U.S.",
+        "id": "experience",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 2945,
+          "w": 342,
+          "h": 41
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Projects",
+        "id": "projects",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 3284,
+          "w": 342,
+          "h": 20
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Build a Spotify Connected App",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 24,
+          "y": 3340,
+          "w": 342,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Spotify Profile",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 24,
+          "y": 3639,
+          "w": 342,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Halcyon Theme",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 24,
+          "y": 4054,
+          "w": 342,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "brittanychiang.com (v4)",
+        "id": "projects",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 24,
+          "y": 4344,
+          "w": 342,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H2",
+        "text": "Writing",
+        "id": "writing",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 4785,
+          "w": 342,
+          "h": 20
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Welcome to the AI Parade",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 114,
+          "y": 4857,
+          "w": 253,
+          "h": 26
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "5 Common Accessibility Pitfalls and How to Avoid Them",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 114,
+          "y": 4947,
+          "w": 253,
+          "h": 43
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Integrating Algolia Search with WordPress Multisite",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 114,
+          "y": 5054,
+          "w": 253,
+          "h": 43
+        }
+      },
+      {
+        "tag": "H3",
+        "text": "Building a Headless Mobile App CMS From Scratch",
+        "id": "writing",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(148, 163, 184)",
+        "rect": {
+          "x": 114,
+          "y": 5161,
+          "w": 253,
+          "h": 43
+        }
+      }
+    ],
+    "sections": [
+      {
+        "id": "about",
+        "heading": "About",
+        "rect": {
+          "x": 24,
+          "y": 344,
+          "w": 342,
+          "h": 904
+        },
+        "text": "AboutI’m a frontend engineer with an expertise in building accessible, pixel-perfect user interfaces. I take pride in crafting thoughtful, inclusive products and have a sharp eye for the little details that elevate user experience. I do my best work at the int"
+      },
+      {
+        "id": "experience",
+        "heading": "Experience",
+        "rect": {
+          "x": 24,
+          "y": 1312,
+          "w": 342,
+          "h": 1888
+        },
+        "text": "Experience2024 — PresentSenior Frontend Engineer, Accessibility · KlaviyoBuild and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and produ"
+      },
+      {
+        "id": "projects",
+        "heading": "Projects",
+        "rect": {
+          "x": 24,
+          "y": 3264,
+          "w": 342,
+          "h": 1437
+        },
+        "text": "ProjectsBuild a Spotify Connected AppVideo course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more.Spotify ProfileWeb app for vi"
+      },
+      {
+        "id": "writing",
+        "heading": "Writing",
+        "rect": {
+          "x": 24,
+          "y": 4765,
+          "w": 342,
+          "h": 439
+        },
+        "text": "Writing2026Welcome to the AI Parade20245 Common Accessibility Pitfalls and How to Avoid Them2020Integrating Algolia Search with WordPress Multisite2019Building a Headless Mobile App CMS From Scratch"
+      }
+    ],
+    "navState": [
+      {
+        "text": "About",
+        "href": "#about",
+        "color": "rgb(148, 163, 184)",
+        "opacity": "1",
+        "className": "group flex items-center py-3 active",
+        "ariaCurrent": null,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      {
+        "text": "Experience",
+        "href": "#experience",
+        "color": "rgb(148, 163, 184)",
+        "opacity": "1",
+        "className": "group flex items-center py-3 ",
+        "ariaCurrent": null,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      {
+        "text": "Projects",
+        "href": "#projects",
+        "color": "rgb(148, 163, 184)",
+        "opacity": "1",
+        "className": "group flex items-center py-3 ",
+        "ariaCurrent": null,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      }
+    ],
+    "animations": [
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute",
+        "text": "",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.3s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "absolute left-0 top-0 block -translate-x-full rounded bg-yellow-500 px-4 py-3 text-sm font-bold uppercase tracking-wides",
+        "text": "Skip to Content",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "",
+        "text": "Brittany Chiang",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "group flex items-center py-3 active",
+        "text": "About",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-",
+        "text": "",
+        "transition": "all 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "group flex items-center py-3 ",
+        "text": "Experience",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-",
+        "text": "",
+        "transition": "all 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "group flex items-center py-3 ",
+        "text": "Projects",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-",
+        "text": "",
+        "transition": "all 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "GitHub",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "LinkedIn",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "CodePen",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "Instagram",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "block",
+        "text": "Goodreads",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Klaviyo",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Apple",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Starry Internet",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "Upstatement",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "font-medium text-slate-200",
+        "text": "online video course",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-red-400 transition duration-75 group-hover/korok:-translate-y-px delay-[50ms]",
+        "text": "K",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.05s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-orange-400 transition duration-75 group-hover/korok:-translate-y-px delay-[75ms]",
+        "text": "o",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.075s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-yellow-400 transition duration-75 group-hover/korok:-translate-y-px delay-[100ms]",
+        "text": "r",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.1s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-lime-400 transition duration-75 group-hover/korok:-translate-y-px delay-[125ms]",
+        "text": "o",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.125s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-green-400 transition duration-75 group-hover/korok:-translate-y-px delay-[150ms]",
+        "text": "k",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "className": "group-hover/korok:text-teal-400 transition duration-75 group-hover/korok:-translate-y-px delay-[175ms]",
+        "text": "",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.075s 0.175s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      }
+    ],
+    "images": [
+      {
+        "alt": "Build a Spotify Connected App Newline course marketing card",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fcourse-card.png&w=640&q=75",
+        "rect": {
+          "x": 24,
+          "y": 3474,
+          "w": 200,
+          "h": 113
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Spotify Profile app homepage",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fspotify-profile.png&w=640&q=75",
+        "rect": {
+          "x": 24,
+          "y": 3890,
+          "w": 200,
+          "h": 113
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Halcyon Theme homepage hero with screenshot of VS Code editor",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fhalcyon.png&w=640&q=75",
+        "rect": {
+          "x": 24,
+          "y": 4179,
+          "w": 200,
+          "h": 113
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "brittanychiang.com version 4 hero section",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fv4.png&w=640&q=75",
+        "rect": {
+          "x": 24,
+          "y": 4511,
+          "w": 200,
+          "h": 113
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Welcome to Black Parade by My Chemical Romance text with \"Black\" changed to \"AI\"",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fai-parade.png&w=640&q=75",
+        "rect": {
+          "x": 24,
+          "y": 4841,
+          "w": 74,
+          "h": 41
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Accessibility icon",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fa11y.png&w=640&q=75",
+        "rect": {
+          "x": 24,
+          "y": 4931,
+          "w": 74,
+          "h": 41
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Telescope",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Falgolia-search.jpeg&w=640&q=75",
+        "rect": {
+          "x": 24,
+          "y": 5038,
+          "w": 74,
+          "h": 41
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Headless horseman",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Fwriting%2Fheadless.jpeg&w=640&q=75",
+        "rect": {
+          "x": 24,
+          "y": 5145,
+          "w": 74,
+          "h": 41
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      },
+      {
+        "alt": "Spinning Tardis from Doctor Who",
+        "src": "https://brittanychiang.com/_next/image?url=%2Fimages%2Ftardis%2Frotate.gif&w=256&q=75",
+        "rect": {
+          "x": 282,
+          "y": 5358,
+          "w": 100,
+          "h": 86
+        },
+        "naturalWidth": 0,
+        "naturalHeight": 0
+      }
+    ],
+    "hoverSamples": [
+      {
+        "name": "project-link",
+        "selector": "#projects a",
+        "before": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(226, 232, 240)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+          "rect": {
+            "x": 24,
+            "y": 412,
+            "w": 255,
+            "h": 20
+          }
+        },
+        "after": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(94, 234, 212)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+          "rect": {
+            "x": 24,
+            "y": 412,
+            "w": 255,
+            "h": 20
+          }
+        }
+      },
+      {
+        "name": "experience-card",
+        "selector": "#experience li, #experience a",
+        "before": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(148, 163, 184)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all",
+          "rect": {
+            "x": 24,
+            "y": 296,
+            "w": 342,
+            "h": 251
+          }
+        },
+        "after": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(148, 163, 184)",
+          "transform": "none",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all",
+          "rect": {
+            "x": 24,
+            "y": 296,
+            "w": 342,
+            "h": 251
+          }
+        }
+      }
+    ],
+    "scrollSamples": [
+      {
+        "selector": "#about",
+        "scrollY": 280,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 active",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 ",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 ",
+            "ariaCurrent": null
+          }
+        ]
+      },
+      {
+        "selector": "#experience",
+        "scrollY": 1802,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 active",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 ",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 ",
+            "ariaCurrent": null
+          }
+        ]
+      },
+      {
+        "selector": "#projects",
+        "scrollY": 3529,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 active",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 ",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 ",
+            "ariaCurrent": null
+          }
+        ]
+      },
+      {
+        "selector": "#writing",
+        "scrollY": 4531,
+        "nav": [
+          {
+            "text": "About",
+            "href": "#about",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 active",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Experience",
+            "href": "#experience",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 ",
+            "ariaCurrent": null
+          },
+          {
+            "text": "Projects",
+            "href": "#projects",
+            "color": "rgb(148, 163, 184)",
+            "opacity": "1",
+            "className": "group flex items-center py-3 ",
+            "ariaCurrent": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://brittanychiang.com/archive",
+    "title": "Archive | Brittany Chiang",
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "scrollY": 0,
+      "documentHeight": 2991
+    },
+    "metaDescription": "Brittany Chiang is a software engineer who builds accessible, inclusive products and digital experiences for the web.",
+    "bodyStyle": {
+      "tag": "BODY",
+      "text": "Skip to ContentBrittany ChiangAll ProjectsYearProjectMade atBuilt withLink2023Emerson CollectiveEmerson CollectiveUpstatementNext.jsTypeScriptSCSSContentful eme",
+      "fontFamily": "\"Noto Sans KR\"",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "26px",
+      "color": "rgb(148, 163, 184)",
+      "backgroundColor": "rgb(15, 23, 42)",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "display": "block",
+      "position": "static",
+      "width": 390,
+      "height": 2991,
+      "x": 0,
+      "y": 0,
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "padding": "0px 0px 0px 0px",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "transition": "all | 0s | ease",
+      "animation": "none | 0s | ease | 1"
+    },
+    "cssVars": {
+      "--tw-ring-offset-shadow": "0 0 #0000",
+      "--tw-contrast": "",
+      "--tw-backdrop-sepia": "",
+      "--y": "-50%",
+      "--tw-ring-shadow": "0 0 #0000",
+      "--tw-sepia": "",
+      "--tw-skew-x": "0",
+      "--tw-ordinal": "",
+      "--tw-backdrop-saturate": "",
+      "--tw-backdrop-blur": "",
+      "--tw-shadow": "0 0 #0000",
+      "--tw-translate-x": "0",
+      "--deg": "1",
+      "--tw-ring-inset": "",
+      "--tw-ring-offset-width": "0px",
+      "--tw-gradient-via-position": "",
+      "--tw-backdrop-invert": "",
+      "--tw-saturate": "",
+      "--tw-scroll-snap-strictness": "proximity",
+      "--tw-numeric-spacing": "",
+      "--tw-grayscale": "",
+      "--tw-border-spacing-x": "0",
+      "--tw-scale-x": "1",
+      "--tw-backdrop-hue-rotate": "",
+      "--tw-shadow-colored": "0 0 #0000",
+      "--tw-gradient-to-position": "",
+      "--tw-border-spacing-y": "0",
+      "--tw-brightness": "",
+      "--tw-numeric-fraction": "",
+      "--tw-backdrop-grayscale": "",
+      "--tw-hue-rotate": "",
+      "--tw-scale-y": "1",
+      "--tw-pan-y": "",
+      "--tw-backdrop-contrast": "",
+      "--tw-drop-shadow": "",
+      "--tw-skew-y": "0",
+      "--tw-ring-color": "rgba(59,130,246,.5)",
+      "--tw-backdrop-brightness": "",
+      "--tw-slashed-zero": "",
+      "--tw-blur": "",
+      "--tw-invert": "",
+      "--tw-pan-x": "",
+      "--tw-translate-y": "0",
+      "--x": "-50%",
+      "--tw-backdrop-opacity": "",
+      "--tw-gradient-from-position": "",
+      "--tw-numeric-figure": "",
+      "--tw-rotate": "0",
+      "--tw-pinch-zoom": "",
+      "--tw-ring-offset-color": "#fff"
+    },
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "All Projects",
+        "id": "",
+        "fontSize": "36px",
+        "fontWeight": "700",
+        "color": "rgb(226, 232, 240)",
+        "rect": {
+          "x": 24,
+          "y": 77,
+          "w": 342,
+          "h": 40
+        }
+      }
+    ],
+    "sections": [],
+    "navState": [],
+    "animations": [
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute",
+        "text": "",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.3s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "absolute left-0 top-0 block -translate-x-full rounded bg-yellow-500 px-4 py-3 text-sm font-bold uppercase tracking-wides",
+        "text": "Skip to Content",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300",
+        "text": "Brittany Chiang",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Emerson Collective",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 text-sm text-slate-400 group/link text-sm",
+        "text": "emersoncollective.com",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Harvard Business School Next.js Site",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 text-sm text-slate-400 group/link text-sm",
+        "text": "hbs.edu",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Threadable",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 text-sm text-slate-400 group/link text-sm",
+        "text": "apps.apple.com",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Pratt",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 text-sm text-slate-400 group/link text-sm",
+        "text": "pratt.edu",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Everytown Gun Law Rankings",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 text-sm text-slate-400 group/link text-sm",
+        "text": "everytownresearch.org/rankings",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "svg",
+        "id": "",
+        "className": "[object SVGAnimatedString]",
+        "text": "",
+        "transition": "transform 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base",
+        "text": "Koala Health",
+        "transition": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter 0.15s 0s cubic-bezier(0.4, 0, 0.2, 1)",
+        "animation": "none 0s 0s ease 1"
+      }
+    ],
+    "images": [],
+    "hoverSamples": [],
+    "scrollSamples": []
+  }
+]

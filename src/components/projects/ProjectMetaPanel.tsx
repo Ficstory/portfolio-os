@@ -25,6 +25,7 @@ function isExternalHref(href: string) {
 export function ProjectMetaPanel({ project }: ProjectMetaPanelProps) {
   const linkItems = (Object.entries(project.links) as [keyof ProjectLinks, string][])
     .filter(([, href]) => Boolean(href));
+  const hasMedia = project.media.length > 0;
 
   return (
     <aside
@@ -67,14 +68,14 @@ export function ProjectMetaPanel({ project }: ProjectMetaPanelProps) {
           </ul>
         </section>
 
-        <section aria-labelledby="project-meta-links">
-          <h3
-            className="text-xs font-bold uppercase tracking-normal text-slate-500 dark:text-slate-300"
-            id="project-meta-links"
-          >
-            링크
-          </h3>
-          {linkItems.length > 0 ? (
+        {linkItems.length > 0 ? (
+          <section aria-labelledby="project-meta-links">
+            <h3
+              className="text-xs font-bold uppercase tracking-normal text-slate-500 dark:text-slate-300"
+              id="project-meta-links"
+            >
+              링크
+            </h3>
             <div className="mt-3 flex flex-wrap gap-2">
               {linkItems.map(([type, href]) => {
                 const Icon = linkIcons[type];
@@ -94,21 +95,17 @@ export function ProjectMetaPanel({ project }: ProjectMetaPanelProps) {
                 );
               })}
             </div>
-          ) : (
-            <p className="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-300">
-              등록된 외부 링크가 없습니다.
-            </p>
-          )}
-        </section>
+          </section>
+        ) : null}
 
-        <section aria-labelledby="project-meta-media">
-          <h3
-            className="text-xs font-bold uppercase tracking-normal text-slate-500 dark:text-slate-300"
-            id="project-meta-media"
-          >
-            미디어
-          </h3>
-          {project.media.length > 0 ? (
+        {hasMedia ? (
+          <section aria-labelledby="project-meta-media">
+            <h3
+              className="text-xs font-bold uppercase tracking-normal text-slate-500 dark:text-slate-300"
+              id="project-meta-media"
+            >
+              미디어
+            </h3>
             <ul className="mt-3 space-y-2">
               {project.media.map((media) => (
                 <li
@@ -125,12 +122,8 @@ export function ProjectMetaPanel({ project }: ProjectMetaPanelProps) {
                 </li>
               ))}
             </ul>
-          ) : (
-            <p className="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-300">
-              등록된 미디어가 없습니다.
-            </p>
-          )}
-        </section>
+          </section>
+        ) : null}
       </div>
     </aside>
   );

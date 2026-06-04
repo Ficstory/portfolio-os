@@ -65,19 +65,18 @@ test("creates activity logs from portfolio project fields", () => {
       "201 POST /project/portfolio-os/implementation",
       "500 PATCH /project/portfolio-os/troubleshooting",
       "200 GET /project/portfolio-os/result",
-      "204 GET /project/portfolio-os/links",
     ],
   );
 });
 
-test("marks links as 204 when no project links are documented", () => {
+test("omits link logs and rules when no project links are documented", () => {
   const { createProjectActivityLogs, createProjectRules } =
     loadProjectInspectorModel();
   const logs = createProjectActivityLogs(baseProject);
   const rules = createProjectRules(baseProject);
 
-  assert.equal(logs.at(-1)?.code, 204);
-  assert.equal(rules.at(-1)?.statusLabel, "204 No links");
+  assert.equal(logs.some((log) => log.id === "links"), false);
+  assert.equal(rules.some((rule) => rule.id === "links"), false);
 });
 
 test("represents troubleshooting as a patch-style failure investigation", () => {

@@ -1,4 +1,5 @@
 import { ProjectMetaPanel } from "@/components/projects/ProjectMetaPanel";
+import { ExternalLink, FileCheck2 } from "lucide-react";
 import type { Project } from "@/types/portfolio";
 
 type ProjectDetailProps = {
@@ -28,6 +29,51 @@ function TextList({ items }: { items: string[] }) {
       {items.map((item) => (
         <li className="rounded-lg border border-slate-200 bg-white/64 p-4 text-sm leading-7 text-slate-700 dark:border-white/12 dark:bg-slate-950/30 dark:text-slate-200" key={item}>
           {item}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function EvidenceList({ items }: { items: Project["evidence"] }) {
+  return (
+    <ul className="grid gap-3 sm:grid-cols-2">
+      {items.map((item) => (
+        <li
+          className="rounded-lg border border-slate-200 bg-white/64 p-4 text-sm leading-7 text-slate-700 dark:border-white/12 dark:bg-slate-950/30 dark:text-slate-200"
+          key={item.label}
+        >
+          <div className="flex items-start justify-between gap-3">
+            <span className="rounded-md bg-slate-100 px-2 py-1 text-xs font-bold text-slate-700 dark:bg-white/10 dark:text-slate-200">
+              {item.category}
+            </span>
+            <span className="rounded-md bg-sky-50 px-2 py-1 text-xs font-bold text-sky-800 dark:bg-sky-300/12 dark:text-sky-100">
+              {item.availability === "public" ? "공개 자료" : "내부 산출물"}
+            </span>
+          </div>
+          <div className="mt-4 flex gap-3">
+            <FileCheck2
+              aria-hidden="true"
+              className="mt-1 size-4 shrink-0 text-sky-700 dark:text-sky-200"
+            />
+            <div className="min-w-0">
+              <h3 className="font-bold text-slate-950 dark:text-white">{item.label}</h3>
+              <p className="mt-2 text-slate-600 dark:text-slate-300">
+                {item.description}
+              </p>
+              {item.href ? (
+                <a
+                  className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-sky-700 underline-offset-4 hover:underline dark:text-sky-200"
+                  href={item.href}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  증빙 열기
+                  <ExternalLink aria-hidden="true" className="size-3.5" />
+                </a>
+              ) : null}
+            </div>
+          </div>
         </li>
       ))}
     </ul>
@@ -103,7 +149,11 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <TextList items={project.result} />
         </ProjectSection>
 
-        <ProjectSection id="project-links-media" title="링크와 미디어">
+        <ProjectSection id="project-evidence" title="증빙 자료">
+          <EvidenceList items={project.evidence} />
+        </ProjectSection>
+
+        <ProjectSection id="project-links-media" title="역할·기술 요약">
           <ProjectMetaPanel project={project} />
         </ProjectSection>
       </div>

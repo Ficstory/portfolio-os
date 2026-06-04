@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
 import test from "node:test";
@@ -50,13 +50,26 @@ test("maps boundary hours to the expected time of day", () => {
 });
 
 test("returns the wallpaper path for each time of day", () => {
-  assert.equal(getWallpaperForTimeOfDay("dawn"), "/images/wallpapers/dawn.png");
-  assert.equal(getWallpaperForTimeOfDay("day"), "/images/wallpapers/day.png");
+  assert.equal(getWallpaperForTimeOfDay("dawn"), "/images/wallpapers/dawn.webp");
+  assert.equal(getWallpaperForTimeOfDay("day"), "/images/wallpapers/day.webp");
   assert.equal(
     getWallpaperForTimeOfDay("evening"),
-    "/images/wallpapers/evening.png",
+    "/images/wallpapers/evening.webp",
   );
-  assert.equal(getWallpaperForTimeOfDay("night"), "/images/wallpapers/night.png");
+  assert.equal(getWallpaperForTimeOfDay("night"), "/images/wallpapers/night.webp");
+});
+
+test("serves optimized wallpaper files for the first viewport", () => {
+  for (const name of ["dawn", "day", "evening", "night"]) {
+    const pngPath = path.join(root, "public/images/wallpapers", `${name}.png`);
+    const webpPath = path.join(root, "public/images/wallpapers", `${name}.webp`);
+
+    assert.ok(existsSync(webpPath), `${name}.webp should exist`);
+    assert.ok(
+      statSync(webpPath).size < statSync(pngPath).size,
+      `${name}.webp should be smaller than ${name}.png`,
+    );
+  }
 });
 
 test("uses light theme only during the day", () => {

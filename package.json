@@ -28,5 +28,21 @@
     "eslint-config-next": "^16.2.6",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3"
-  }
+  },
+  "description": "잠금화면과 데스크톱 UI를 통해 About, Projects, Skills, Resume, Contact 콘텐츠를 탐색하는 FE 중심 정적 포트폴리오 사이트입니다. MVP는 백엔드 없이 Next.js 정적 export 결과물로 배포하는 것을 기준으로 합니다.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ficstory/portfolio-os.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ficstory/portfolio-os/issues"
+  },
+  "homepage": "https://github.com/Ficstory/portfolio-os#readme"
 }

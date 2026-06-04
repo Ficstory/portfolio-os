@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Bot,
   Code2,
   FileText,
   Folder,
@@ -17,7 +16,6 @@ import { usePortfolioTrack } from "@/components/portfolio/PortfolioTrackProvider
 import { folders } from "@/data/folders";
 
 const iconMap: Record<string, LucideIcon> = {
-  Bot,
   Code2,
   FileText,
   FolderKanban,

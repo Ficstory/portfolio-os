@@ -64,6 +64,7 @@ function LockStatusBar({
         />
         <time
           className="tabular-nums"
+          data-live-clock="time"
           dateTime={now.toISOString()}
           suppressHydrationWarning
         >
@@ -90,6 +91,7 @@ function LockClock({ now }: { now: Date }) {
     <div className="flex flex-col items-center gap-3 sm:gap-4">
       <time
         className="text-[clamp(5rem,13vw,8.5rem)] font-thin leading-none tracking-normal text-white drop-shadow-[0_8px_36px_rgba(0,0,0,0.45)]"
+        data-live-clock="time"
         dateTime={now.toISOString()}
         suppressHydrationWarning
       >
@@ -97,6 +99,7 @@ function LockClock({ now }: { now: Date }) {
       </time>
       <p
         className="text-sm font-medium text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.42)] sm:text-base"
+        data-live-clock="date"
         suppressHydrationWarning
       >
         {formattedDate}

@@ -91,7 +91,7 @@ function getPortfolioNote(log: ProjectActivityLogItem, project: Project) {
   if (log.id === "links") {
     return hasProjectLinks(project)
       ? "외부 링크가 등록되어 있어 평가자가 프로젝트 증빙으로 바로 확인할 수 있습니다."
-      : "아직 외부 링크가 등록되지 않았습니다. 배포 URL 대신 GitHub, 화면 캡처, 시연 자료 같은 확인 가능한 증빙을 연결할 수 있습니다.";
+      : "확인된 역할, 산출물, 결과 설명을 기준으로 사례를 읽습니다. 외부 증빙은 실제로 확인된 항목만 별도 노출합니다.";
   }
 
   return `${project.title}은 문제 배경, 담당 범위, 구현 기록, 결과를 한 화면에서 이어 볼 수 있도록 정리한 사례입니다.`;
@@ -102,7 +102,7 @@ function getEvidenceStatus(project: Project) {
     return "증빙 링크 있음";
   }
 
-  return "증빙 링크 미등록";
+  return "요약 증빙 중심";
 }
 
 export function ProjectActivityLog({
