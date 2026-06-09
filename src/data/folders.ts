@@ -8,11 +8,11 @@ export const folders = [
     iconName: "UserRound",
     defaultWindowSize: {
       widthRatio: 0.58,
-      heightRatio: 0.68,
+      heightRatio: 0.78,
       minWidth: 620,
-      minHeight: 480,
+      minHeight: 620,
       maxWidth: 760,
-      maxHeight: 560,
+      maxHeight: 700,
     },
   },
   {

@@ -44,7 +44,7 @@ export function DesktopShell({
         className="relative hidden min-h-screen overflow-hidden md:block"
         data-layout="desktop-shell"
       >
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.28),rgba(255,255,255,0)_42%),linear-gradient(0deg,rgba(31,41,55,0.08),rgba(31,41,55,0))] dark:bg-[linear-gradient(120deg,rgba(255,255,255,0.08),rgba(255,255,255,0)_42%),linear-gradient(0deg,rgba(0,0,0,0.22),rgba(0,0,0,0))]" />
+        <div className="desktop-wallpaper-overlay pointer-events-none absolute inset-0" />
 
         <div
           className={cn(

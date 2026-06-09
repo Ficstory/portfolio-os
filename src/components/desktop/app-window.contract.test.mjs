@@ -119,6 +119,17 @@ test("folder windows use viewport ratio presets with min and max clamps", () => 
   assert.match(foldersSource, /maxWidth: 1120/);
 });
 
+test("about window opens tall enough to avoid awkward first-view clipping", () => {
+  const aboutWindowPreset = foldersSource.slice(
+    foldersSource.indexOf('id: "about"'),
+    foldersSource.indexOf('id: "career-tracks"'),
+  );
+
+  assert.match(aboutWindowPreset, /heightRatio: 0\.78/);
+  assert.match(aboutWindowPreset, /minHeight: 620/);
+  assert.match(aboutWindowPreset, /maxHeight: 700/);
+});
+
 test("desktop shell raises the window layer above menu bar and dock while full screen", () => {
   assert.match(desktopShellSource, /useDesktopStore/);
   assert.match(desktopShellSource, /hasMaximizedWindow/);
@@ -126,6 +137,17 @@ test("desktop shell raises the window layer above menu bar and dock while full s
   assert.match(desktopShellSource, /hasMaximizedWindow \? "z-\[1100\]" : "z-\[800\]"/);
   assert.match(desktopShellSource, /z-\[1000\]/);
   assert.match(desktopShellSource, /z-\[900\]/);
+});
+
+test("desktop wallpaper overlay uses time-aware theme variables", () => {
+  assert.match(desktopShellSource, /desktop-wallpaper-overlay/);
+  assert.doesNotMatch(desktopShellSource, /rgba\(255,255,255,0\.28\)/);
+  assert.match(globalsSource, /--desktop-overlay-highlight/);
+  assert.match(globalsSource, /--desktop-overlay-depth/);
+  assert.match(
+    globalsSource,
+    /\[data-time-theme="night"\]\[data-theme="light"\][\s\S]*--desktop-overlay-highlight:\s*rgba\(255,\s*255,\s*255,\s*0\.06\);/,
+  );
 });
 
 test("app windows use motion, lifecycle controls, and pointer-captured bottom-right resizing", () => {

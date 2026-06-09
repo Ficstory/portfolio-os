@@ -14,6 +14,7 @@ export const navigationItems = [
     label: "Tracks",
     title: "Career Tracks",
     iconName: "Route",
+    dockIconSrc: "/icons/dock/career-tracks.webp",
     windowId: "career-tracks",
   },
   {

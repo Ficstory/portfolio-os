@@ -47,6 +47,7 @@ test("dock uses pointer-x magnification without losing open indicators and exter
 
 test("dock can render generated 3d icon assets before falling back to lucide icons", () => {
   assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/about\.webp"/);
+  assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/career-tracks\.webp"/);
   assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/projects\.webp"/);
   assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/skills\.webp"/);
   assert.match(navigationSource, /dockIconSrc: "\/icons\/dock\/resume\.webp"/);

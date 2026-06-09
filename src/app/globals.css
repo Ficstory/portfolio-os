@@ -24,6 +24,8 @@
   --color-coral: #e98b74;
   --color-green: #5dae8b;
   --shadow-window: 0 24px 80px rgba(15, 23, 42, 0.22);
+  --desktop-overlay-highlight: rgba(255, 255, 255, 0.28);
+  --desktop-overlay-depth: rgba(31, 41, 55, 0.08);
 
   --background: var(--color-bg);
   --foreground: var(--color-text);
@@ -51,6 +53,8 @@
   --color-coral: #f2a390;
   --color-green: #7dd7b0;
   --shadow-window: 0 26px 86px rgba(3, 7, 18, 0.36);
+  --desktop-overlay-highlight: rgba(255, 255, 255, 0.08);
+  --desktop-overlay-depth: rgba(0, 0, 0, 0.22);
 }
 
 [data-time-theme="day"] {
@@ -197,6 +201,8 @@
   --color-accent: #8461d9;
   --color-accent-soft: rgba(132, 97, 217, 0.18);
   --shadow-window: 0 30px 92px rgba(20, 12, 32, 0.38);
+  --desktop-overlay-highlight: rgba(255, 255, 255, 0.08);
+  --desktop-overlay-depth: rgba(0, 0, 0, 0.14);
 }
 
 [data-time-theme="evening"][data-theme="light"] {
@@ -213,6 +219,8 @@
   --color-accent: #4f73d9;
   --color-accent-soft: rgba(79, 115, 217, 0.17);
   --shadow-window: 0 30px 94px rgba(8, 12, 36, 0.4);
+  --desktop-overlay-highlight: rgba(255, 255, 255, 0.07);
+  --desktop-overlay-depth: rgba(0, 0, 0, 0.15);
 }
 
 [data-time-theme="night"][data-theme="light"] {
@@ -229,6 +237,8 @@
   --color-accent: #3e75c9;
   --color-accent-soft: rgba(62, 117, 201, 0.16);
   --shadow-window: 0 32px 98px rgba(2, 8, 23, 0.42);
+  --desktop-overlay-highlight: rgba(255, 255, 255, 0.06);
+  --desktop-overlay-depth: rgba(0, 0, 0, 0.16);
 }
 
 *,
@@ -290,6 +300,16 @@ body {
   text-shadow: var(--menu-bar-text-shadow);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
+}
+
+.desktop-wallpaper-overlay {
+  background:
+    linear-gradient(
+      120deg,
+      var(--desktop-overlay-highlight),
+      rgba(255, 255, 255, 0) 42%
+    ),
+    linear-gradient(0deg, var(--desktop-overlay-depth), rgba(0, 0, 0, 0));
 }
 
 .menu-bar-muted,
