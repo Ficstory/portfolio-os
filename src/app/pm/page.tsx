@@ -1,5 +1,5 @@
-import { TrackLandingPage } from "@/components/tracks/TrackLandingPage";
+import { PmEditorialHome } from "@/components/tracks/pm/editorial/PmEditorialHome";
 
 export default function PmPage() {
-  return <TrackLandingPage trackId="pm" />;
+  return <PmEditorialHome />;
 }

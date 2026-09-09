@@ -1,0 +1,148 @@
+원본 파일: SubscriptionConfirmViewModel.kt
+원본 저장소: 3. 특화pjt\S14P21E106\FE\app\src\main\java\com\ssafy\e106\feature\subscriptionconfirm\SubscriptionConfirmViewModel.kt
+확인일: 2026-09-09
+원본 SHA-256: 9c396e958b9926a84d082863aacd3a8e840b2d10b6d4756dce7a426b763ae58d
+아래는 해당 원본에서 발췌한 내용입니다.
+
+private fun load(forceRefresh: Boolean) {
+        if (hasLoaded && !forceRefresh) return
+
+        _uiState.update { state ->
+            state.copy(
+                isLoading = true,
+                error = null,
+                isCompletingLocalSessionOnly = false,
+            )
+        }
+
+        viewModelScope.launch {
+            val sessionResult = analysisHandoffRepository.peekAnalysisSessionResult()
+            if (sessionResult == null) {
+                _uiState.update { state ->
+                    state.copy(
+                        nickname = state.nickname.ifBlank { FALLBACK_NICKNAME },
+                        detectedSubscriptions = emptyList(),
+                        pendingReviewSummary = null,
+                        isLoading = false,
+                        error = MISSING_SESSION_RESULT_MESSAGE,
+                    )
+                }
+                return@launch
+            }
+
+            subscriptionRepository.seedPendingReviewsFromAnalysisSession(sessionResult)
+            val nickname = resolveNickname(_uiState.value.nickname)
+            val pendingReviewSummary = loadPendingReviewSummary()
+
+            hasLoaded = true
+            _uiState.update { state ->
+                state.copy(
+                    nickname = nickname,
+                    detectedSubscriptions = sessionResult.toDetectedSubscriptionItems(),
+                    pendingReviewSummary = pendingReviewSummary,
+                    isLoading = false,
+                    error = null,
+                )
+            }
+        }
+    }
+
+[중간 생략]
+
+private fun excludeDetectedSubscription(reviewId: Long) {
+        _uiState.update { state ->
+            state.copy(
+                detectedSubscriptions = state.detectedSubscriptions.map { item ->
+                    if (item.reviewId == reviewId) item.copy(excludedLocallyInSession = true) else item
+                },
+            )
+        }
+    }
+
+    private fun openPendingReview() {
+        viewModelScope.launch {
+            _uiEffect.emit(SubscriptionConfirmUiEffect.NavigateToManualMapping)
+        }
+    }
+
+[중간 생략]
+
+private fun confirmDetectedSubscriptions() {
+        if (_uiState.value.isCompletingLocalSessionOnly) return
+
+        _uiState.update { state -> state.copy(isCompletingLocalSessionOnly = true) }
+
+        viewModelScope.launch {
+            val targets = _uiState.value.visibleDetectedSubscriptions.distinctBy { item ->
+                item.bundleCode ?: item.serviceId ?: item.reviewId
+            }
+            for (item in targets) {
+                when (
+                    val result = subscriptionRepository.createSubscription(
+                        subscriptionType = item.subscriptionType,
+                        serviceId = item.serviceId,
+                        servicePlanId = item.servicePlanId,
+                        bundleCode = item.bundleCode,
+                        billingDay = item.billingDay,
+                    )
+                ) {
+                    is Result.Success -> Unit
+                    is Result.Error -> {
+                        _uiState.update { state -> state.copy(isCompletingLocalSessionOnly = false) }
+                        _uiEffect.emit(SubscriptionConfirmUiEffect.ShowToast(result.message))
+                        return@launch
+                    }
+
+                    Result.Loading -> Unit
+                }
+            }
+
+            analysisHandoffRepository.clearAnalysisSessionResult()
+            _uiEffect.emit(SubscriptionConfirmUiEffect.NavigateToDashboard)
+        }
+    }
+
+
+API 연결 원본: SubscriptionApi.kt
+
+package com.ssafy.e106.data.api
+
+import com.ssafy.e106.core.model.ApiResponse
+import com.ssafy.e106.data.dto.subscription.SubscriptionCreateRequest
+import com.ssafy.e106.data.dto.subscription.SubscriptionCreateResponse
+import com.ssafy.e106.data.dto.subscription.SubscriptionDetailResponse
+import com.ssafy.e106.data.dto.subscription.SubscriptionListResponse
+import com.ssafy.e106.data.dto.subscription.SubscriptionUpdateRequest
+import com.ssafy.e106.data.dto.subscription.SubscriptionUpdateResponse
+import retrofit2.http.Body
+import retrofit2.http.DELETE
+import retrofit2.http.GET
+import retrofit2.http.PATCH
+import retrofit2.http.POST
+import retrofit2.http.Path
+
+interface SubscriptionApi {
+    @GET("/api/v1/subscriptions")
+    suspend fun getSubscriptions(): ApiResponse<SubscriptionListResponse>
+
+    @GET("/api/v1/subscriptions/{subscriptionId}")
+    suspend fun getSubscriptionDetail(
+        @Path("subscriptionId") subscriptionId: Long,
+    ): ApiResponse<SubscriptionDetailResponse>
+
+    @POST("/api/v1/subscriptions")
+    suspend fun createSubscription(
+        @Body request: SubscriptionCreateRequest,
+    ): ApiResponse<SubscriptionCreateResponse>
+
+    @PATCH("/api/v1/subscriptions/{subscriptionId}")
+    suspend fun updateSubscription(
+        @Path("subscriptionId") subscriptionId: Long,
+        @Body request: SubscriptionUpdateRequest,
+    ): ApiResponse<SubscriptionUpdateResponse>
+
+    @DELETE("/api/v1/subscriptions/{subscriptionId}")
+    suspend fun deleteSubscription(
+        @Path("subscriptionId") subscriptionId: Long,
+    ): ApiResponse<Unit>
+}

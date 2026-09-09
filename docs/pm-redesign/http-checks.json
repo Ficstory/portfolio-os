@@ -1,0 +1,28 @@
+{
+  "result": "pass",
+  "pages": 5,
+  "localLinkAndImageTargets": 30,
+  "fetchedPaths": [
+    "/",
+    "/assembly/",
+    "/pm/",
+    "/pm/aekkim-detail-original.png",
+    "/pm/aekkim-detail.webp",
+    "/pm/aekkim/",
+    "/pm/busan-eumgil/",
+    "/pm/busan-low-vision.webp",
+    "/pm/play-pick/",
+    "/pm/smile-game/",
+    "/pm/sources/aekkim-implementation.txt",
+    "/pm/sources/aekkim-qa.txt",
+    "/pm/sources/aekkim-requirements.txt",
+    "/pm/sources/aekkim-screens.txt",
+    "/pm/sources/busan-readme.txt",
+    "/pm/sources/smile-survey.txt",
+    "/policy/",
+    "/projects/aekkim/",
+    "/projects/play-pick/",
+    "/public-digital/",
+    "/resume/"
+  ]
+}

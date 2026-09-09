@@ -1,0 +1,111 @@
+{
+  "home": [
+    {
+      "aboutColumns": "316px",
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "width": 360
+    },
+    {
+      "aboutColumns": "346px",
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "aboutColumns": "169.208px 473.792px",
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "aboutColumns": "236.573px 662.427px",
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "width": 1024
+    },
+    {
+      "aboutColumns": "406.667px 813.333px",
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "width": 1440
+    }
+  ],
+  "aekkim": [
+    {
+      "bodyFont": "16px",
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "width": 360
+    },
+    {
+      "bodyFont": "16px",
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "bodyFont": "17px",
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "bodyFont": "17px",
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "width": 1024
+    },
+    {
+      "bodyFont": "17px",
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "width": 1440
+    }
+  ],
+  "supporting": [
+    {
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "path": "/pm/busan-eumgil/",
+      "width": 390
+    },
+    {
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "path": "/pm/smile-game/",
+      "width": 390
+    },
+    {
+      "brokenImages": 0,
+      "h1s": 1,
+      "overflow": false,
+      "path": "/pm/play-pick/",
+      "width": 390
+    }
+  ],
+  "interactions": {
+    "menuEnter": true,
+    "menuEscape": true,
+    "menuClosesOnNavigation": true,
+    "aboutAnchor": true,
+    "crossPageResultAnchor": true,
+    "accordionKeyboard": true,
+    "nextProject": true,
+    "browserBack": true,
+    "resume": true
+  },
+  "console": []
+}
