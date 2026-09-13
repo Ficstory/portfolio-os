@@ -8,6 +8,7 @@ const routes = [
   "/",
   "/public-digital",
   "/pm",
+  "/PM1/",
   "/policy",
   "/assembly",
   "/resume",
