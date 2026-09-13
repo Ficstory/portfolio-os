@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
 import test from "node:test";
@@ -85,7 +85,7 @@ test("uses conservative evidence labels instead of exposing internal file paths"
   }
 });
 
-test("connects each career case to public evidence links", () => {
+test("connects each career case only to published external sources", () => {
   const { careerCases } = loadCareerCasesModule();
 
   for (const careerCase of careerCases) {
@@ -99,11 +99,8 @@ test("connects each career case to public evidence links", () => {
     );
 
     for (const evidence of linkedEvidence) {
-      if (evidence.href.startsWith("/pm/sources/")) {
-        assert.ok(existsSync(path.join(root, "public", evidence.href)), `${evidence.href} must exist`);
-      } else {
-        assert.match(evidence.href, /^https:\/\//);
-      }
+      assert.match(evidence.href, /^https:\/\//);
+      assert.doesNotMatch(evidence.href, /^\/pm\/sources\//);
       assert.doesNotMatch(evidence.href, /localhost|127\.0\.0\.1|docs\//);
       assert.ok(evidence.publicLabel.length > 0);
       assert.equal(typeof evidence.linkLabel, "string");

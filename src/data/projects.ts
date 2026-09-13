@@ -35,23 +35,9 @@ export const projects: Project[] = [
     ],
     "evidence": [
       {
-        "label": "사용자 유형별 서비스 흐름",
-        "category": "서비스 범위",
-        "description": "보행약자와 저시력자의 온보딩·길안내 흐름을 설명한 팀 README 발췌입니다.",
-        "availability": "public",
-        "href": "/pm/sources/busan-readme.txt"
-      },
-      {
-        "label": "요구사항과 개인 구현 기록",
-        "category": "문서·코드",
-        "description": "요구사항 갱신, 글자 크기 설정, 승인 제보 표시의 명세와 기여 기록입니다.",
-        "availability": "public",
-        "href": "/pm/sources/busan-contribution.txt"
-      },
-      {
-        "label": "원본 온보딩 시연",
+        "label": "온보딩 시연",
         "category": "시연",
-        "description": "사용자 유형과 보행 조건, 화면 설정을 선택하는 앱 시연입니다.",
+        "description": "사용자 유형과 보행 조건, 화면 설정을 선택하는 원본 앱 시연입니다.",
         "availability": "public",
         "href": "/pm/previews/busan.mp4"
       }
@@ -86,8 +72,7 @@ export const projects: Project[] = [
       "온보딩·구독 관리·마이페이지 등 Android 화면과 API 연동을 작업했습니다. 구독 확인의 생성 요청·실패 처리는 김응서 팀원, 번들 처리는 박규빈 팀원이 보완했습니다."
     ],
     "troubleshooting": [
-      "후보 제외는 현재 분석 세션에서 처리하며, 남은 후보만 구독 생성 대상으로 사용합니다. 일부 요청만 성공한 뒤 재시도하는 경우는 추가 확인 항목입니다.",
-      "팀 QA에서 시스템 알림 권한과 앱 수신 토글의 혼선을 발견했습니다. 두 상태를 분리한 수정은 김응서 팀원의 기여입니다."
+      "후보 제외는 현재 분석 세션에서 처리하며, 남은 후보만 구독 생성 대상으로 사용합니다. 일부 요청만 성공한 뒤 재시도하는 경우는 추가 확인 항목입니다."
     ],
     "result": [
       "Android MVP를 제작해 프로젝트 우수상을 받았습니다(팀 수상). 개인 기여는 요구사항·화면명세 관리와 프론트엔드 구현·API 연동입니다.",
@@ -95,25 +80,11 @@ export const projects: Project[] = [
     ],
     "evidence": [
       {
-        "label": "요구사항정의서 v2.6·화면명세",
-        "category": "문서 산출물",
-        "description": "본인이 현행화한 지원 범위와 구독 확인·수동 매핑의 기준입니다.",
+        "label": "구독 관리 데모",
+        "category": "시연",
+        "description": "기존 앱을 예시 데이터로 실행해 결제 후보 확인 → 서비스 연결 → 구독 목록·상세 조회를 보여줍니다.",
         "availability": "public",
-        "href": "/pm/sources/aekkim-requirements.txt"
-      },
-      {
-        "label": "구독 확인 화면과 API",
-        "category": "구현 근거",
-        "description": "후보 제외, 등록 요청, 실패 안내와 대시보드 이동 코드입니다.",
-        "availability": "public",
-        "href": "/pm/sources/aekkim-implementation.txt"
-      },
-      {
-        "label": "MVP 테스트 개선사항",
-        "category": "팀 QA",
-        "description": "알림 권한·수신 토글, 금액 표현과 외부 해지 링크의 점검 기록입니다.",
-        "availability": "public",
-        "href": "/pm/sources/aekkim-qa.txt"
+        "href": "/pm/previews/aekkim.mp4"
       }
     ],
     "links": {},
@@ -155,18 +126,11 @@ export const projects: Project[] = [
     ],
     "evidence": [
       {
-        "label": "온보딩 명세와 역할 기록",
-        "category": "기능·기여",
-        "description": "2인 팀의 역할과 2025년 12월 온보딩 구현 커밋입니다.",
+        "label": "취향 선택과 첫 추천",
+        "category": "시연",
+        "description": "예시 계정과 보관된 공연 데이터로 취향 선택·저장부터 첫 추천까지 재현한 로컬 시연입니다.",
         "availability": "public",
-        "href": "/pm/sources/play-pick-onboarding.txt"
-      },
-      {
-        "label": "화면 상태·API·취향 저장",
-        "category": "구현 근거",
-        "description": "응답 값 변환, 저장·완료 요청 순서와 서버 취향 계산 코드입니다.",
-        "availability": "public",
-        "href": "/pm/sources/play-pick-implementation.txt"
+        "href": "/pm/previews/play-pick.mp4"
       }
     ],
     "links": {},
@@ -208,18 +172,11 @@ export const projects: Project[] = [
     ],
     "evidence": [
       {
-        "label": "168건 설문 분석",
-        "category": "사용 의향 조사",
-        "description": "조사 기간·표본 구성과 얼굴 노출 부담의 응답 수입니다.",
+        "label": "준비와 게임 시작",
+        "category": "시연",
+        "description": "친구 초대방의 준비 완료와 카운트다운, 게임 시작을 담은 편집 영상입니다.",
         "availability": "public",
-        "href": "/pm/sources/smile-survey.txt"
-      },
-      {
-        "label": "기획 변경과 초대방 구현",
-        "category": "회의·기여 기록",
-        "description": "친구 매칭 우선 결정, AI 판정 논의와 팀의 역할·구현 기록입니다.",
-        "availability": "public",
-        "href": "/pm/sources/smile-decisions.txt"
+        "href": "/pm/previews/smile.mp4"
       }
     ],
     "links": {},

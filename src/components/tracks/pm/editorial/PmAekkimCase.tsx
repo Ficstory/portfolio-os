@@ -20,7 +20,7 @@ export function PmAekkimCase() {
     </section>
     <figure><AekkimVisual compact /><figcaption>{project.caption} <SourceLink href="/pm/aekkim-detail-original.png">초기 구독 상세 목업</SourceLink></figcaption></figure>
     <div className={styles.caseLayout}>
-      <nav className={styles.caseNav} aria-label="AEKKIM 사례 목차"><a href="#context">구독 관리의 문제</a><a href="#decision">후보 확인 흐름</a><a href="#artifacts">요구사항과 화면명세</a><a href="#implementation">개인 구현</a><a href="#results">결과와 QA</a><a href="#sources">관련 자료</a></nav>
+      <nav className={styles.caseNav} aria-label="AEKKIM 사례 목차"><a href="#context">구독 관리의 문제</a><a href="#decision">후보 확인 흐름</a><a href="#artifacts">요구사항과 화면명세</a><a href="#implementation">개인 구현</a><a href="#results">결과</a></nav>
       <div className={styles.caseContent}>
         <section className={styles.caseSection} id="context">
           <p className={styles.sectionLabel}>구독 관리의 문제</p><h2>결제 내역만으로는<br />관리할 구독이 정해지지 않았습니다.</h2>
@@ -36,26 +36,17 @@ export function PmAekkimCase() {
         <section className={styles.caseSection} id="artifacts">
           <p className={styles.sectionLabel}>요구사항과 화면명세</p><h2>구현된 범위와<br />화면의 진입·이동 조건을 정리했습니다.</h2>
           <p>문서를 구현 상태에 맞춰 갱신했습니다. 요구사항정의서에는 지원 기능과 미구현 항목을, 화면명세서에는 각 화면의 목적과 이동 조건을 적었습니다. 최종 요구사항정의서 v2.6은 3월 29일 기준입니다.</p>
-          <details className={styles.evidenceDetails} open><summary>요구사항정의서: 지원하는 기능과 범위</summary><div><p>구독 후보 확인, 수동 추가·매핑, 대시보드의 빈 상태·오류 상태를 명시했습니다. 로그인 화면에 버튼이 있어도 실제 인증을 지원하지 않는 Naver 로그인은 미구현으로 구분했습니다.</p><SourceLink href="/pm/sources/aekkim-requirements.txt">요구사항정의서 v2.6 발췌</SourceLink></div></details>
-          <details className={styles.evidenceDetails}><summary>화면명세서: 후보 확인에서 등록까지</summary><div><p>구독 확인 화면(SCR-002-2), 대시보드, 수동 매핑 화면이 각각 어떤 정보를 보여주고 어디로 이동하는지 정리했습니다.</p><SourceLink href="/pm/sources/aekkim-screens.txt">화면명세서 발췌</SourceLink></div></details>
+          <details className={styles.evidenceDetails} open><summary>요구사항정의서: 지원하는 기능과 범위</summary><div><p>구독 후보 확인, 수동 추가·매핑, 대시보드의 빈 상태·오류 상태를 명시했습니다. 로그인 화면에 버튼이 있어도 실제 인증을 지원하지 않는 Naver 로그인은 미구현으로 구분했습니다.</p></div></details>
+          <details className={styles.evidenceDetails}><summary>화면명세서: 후보 확인에서 등록까지</summary><div><p>구독 확인 화면(SCR-002-2), 대시보드, 수동 매핑 화면이 각각 어떤 정보를 보여주고 어디로 이동하는지 정리했습니다.</p></div></details>
         </section>
         <section className={styles.caseSection} id="implementation">
           <p className={styles.sectionLabel}>개인 구현</p><h2>구독 확인 화면과<br />후보·건수 표시를 구현했습니다.</h2>
           <p>구독 확인 화면의 초기 구현, 분석 결과가 없을 때의 안내와 후보 제외 상태를 맡았습니다. 이후 중복 후보 노출과 확인이 필요한 결제 건수를 수정했습니다. 구독 생성 요청·실패 처리는 김응서 팀원이, 번들 처리는 박규빈 팀원이 보완했습니다. 아래는 이 작업들이 합쳐진 현재 화면의 동작입니다.</p>
           <ul className={styles.implementationList}><li><strong>분석 결과 없음</strong><span>오류 안내를 표시하고 다시 분석하도록 알립니다.</span></li><li><strong>후보 제외</strong><span>현재 분석 세션에서 제외 상태를 관리하고, 남은 후보를 생성 요청의 대상으로 삼습니다.</span></li><li><strong>등록 중·실패</strong><span>진행 중에는 중복 진입을 막습니다. 요청에 실패하면 화면을 유지하고 오류 메시지를 표시합니다.</span></li><li><strong>등록 완료</strong><span>대상 중복을 정리해 API를 호출하고, 모든 생성 요청을 마치면 분석 세션을 비운 뒤 대시보드로 이동합니다.</span></li></ul>
-          <SourceLink href="/pm/sources/aekkim-implementation.txt">구독 확인 코드 발췌</SourceLink>
         </section>
         <section className={styles.caseSection} id="results">
-          <p className={styles.sectionLabel}>결과와 QA</p><h2>구독 관리 MVP와<br />팀의 QA 기록을 남겼습니다.</h2>
+          <p className={styles.sectionLabel}>결과</p><h2>구독 관리 MVP를 만들고<br />팀으로 수상했습니다.</h2>
           <p>팀은 Android MVP를 제작해 프로젝트 우수상을 받았습니다. 제 기여는 요구사항·화면명세 관리, 구독 관리 화면 구현과 API 연동입니다. 구독 비용 절감액이나 실사용자 증가를 측정한 성과는 없습니다.</p>
-          <h3>알림 권한과 수신 설정은 팀의 QA에서 구분했습니다.</h3>
-          <p>시스템 알림을 허용했는데 앱의 수신 토글은 꺼져 있어 혼선이 있었습니다. 팀은 시스템 권한 상태를 별도 표시하고, 토글이 앱 내 수신 설정임을 안내하도록 수정했습니다. 이 수정과 QA 기록은 김응서 팀원의 작업입니다.</p>
-          <SourceLink href="/pm/sources/aekkim-qa.txt">알림·금액 표시 QA 기록</SourceLink>
-          <p>남은 확인 항목은 여러 구독 중 일부만 생성된 뒤 재시도하는 경우와 외부 해지 링크의 이동 결과입니다. </p>
-        </section>
-        <section className={styles.caseSection} id="sources">
-          <h2>관련 자료와 기여 기록</h2>
-          <ul className={styles.sourceList}><li><SourceLink href="/pm/sources/aekkim-requirements.txt">요구사항정의서 v2.6</SourceLink><span>3월 29일 문서 현행화: 본인 커밋 9c0fb29.</span></li><li><SourceLink href="/pm/sources/aekkim-screens.txt">화면명세서</SourceLink><span>구독 확인·수동 매핑의 화면 목적과 이동 조건.</span></li><li><SourceLink href="/pm/sources/aekkim-implementation.txt">구독 확인 ViewModel / API</SourceLink><span>초기 화면 구현 97ac7e3, 후보 중복 수정 6c3125a, 결제 건수 수정 883e333.</span></li><li><SourceLink href="/pm/sources/aekkim-qa.txt">MVP 테스트 개선사항</SourceLink><span>알림 권한·수신 설정 분리: 김응서 팀원 커밋 5bd6377.</span></li></ul>
         </section>
       </div>
     </div>

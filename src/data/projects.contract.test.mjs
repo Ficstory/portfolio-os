@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
 import test from "node:test";
@@ -40,16 +40,21 @@ test("Project model supports structured evidence items", () => {
   assert.match(source, /availability: "public" \| "internal"/);
 });
 
-test("portfolio projects expose enough evidence for detail pages", () => {
+test("portfolio projects expose an authentic public demo without raw source excerpts", () => {
   const { projects } = loadProjectsModule();
-  const primaryProjectIds = new Set(["busan-eumgil", "aekkim"]);
+  const expectedDemoByProject = new Map([
+    ["busan-eumgil", "/pm/previews/busan.mp4"],
+    ["aekkim", "/pm/previews/aekkim.mp4"],
+    ["play-pick", "/pm/previews/play-pick.mp4"],
+    ["smile-game", "/pm/previews/smile.mp4"],
+  ]);
 
   for (const project of projects) {
-    const minimumEvidence = primaryProjectIds.has(project.id) ? 3 : 2;
-
+    const expectedDemo = expectedDemoByProject.get(project.id);
+    assert.ok(project.evidence.length >= 1, `${project.id} should expose public evidence`);
     assert.ok(
-      project.evidence.length >= minimumEvidence,
-      `${project.id} should have at least ${minimumEvidence} evidence items`,
+      project.evidence.some((item) => item.href === expectedDemo),
+      `${project.id} should preserve its public demo`,
     );
 
     for (const item of project.evidence) {
@@ -64,6 +69,15 @@ test("portfolio projects expose enough evidence for detail pages", () => {
         `${item.label}\n${item.description}`,
         /준비 중|업데이트 예정|연결하는 것이 좋습니다|등록된/,
       );
+      if (item.href) {
+        assert.doesNotMatch(item.href, /^\/pm\/sources\//);
+        if (item.href.startsWith("/")) {
+          assert.ok(
+            existsSync(path.join(root, "public", item.href)),
+            `${item.href} must exist as a public asset`,
+          );
+        }
+      }
     }
   }
 });

@@ -18,14 +18,6 @@ export type PublicDigitalMethodPhase = {
   output: string;
 };
 
-export type PublicDigitalLibraryItem = {
-  title: string;
-  type: "brief" | "prd" | "flow" | "checklist" | "case-note";
-  summary: string;
-  visibility: "public" | "sanitized" | "internal";
-  href: string;
-};
-
 export const publicDigitalEvidenceItems = [
   "공공자료 분석",
   "PRD·요구사항정의서",
@@ -34,7 +26,6 @@ export const publicDigitalEvidenceItems = [
   "의정평가 보고서 작성",
   "Android/Web 구현 이해",
 ];
-
 export const publicDigitalOperatingSteps: PublicDigitalOperatingStep[] = [
   {
     "title": "공공자료 조사",
@@ -162,35 +153,4 @@ export const publicDigitalMethodPhases: PublicDigitalMethodPhase[] = [
       "피드백, 사용성 문제, 운영 지표를 바탕으로 다음 개선안을 만듭니다.",
     output: "개선 후보와 다음 실험",
   },
-];
-
-export const publicDigitalLibraryItems: PublicDigitalLibraryItem[] = [
-  {
-    "title": "부산이음길 사용자·요구사항·구현 기록",
-    "type": "prd",
-    "summary": "사용자 유형, 화면과 경로 데이터의 확인 범위, 개인 구현 기록을 발췌했습니다.",
-    "visibility": "public",
-    "href": "/pm/sources/busan-contribution.txt"
-  },
-  {
-    "title": "애낌 요구사항정의서",
-    "type": "prd",
-    "summary": "구독 후보 확인과 수동 추가, 화면 상태에 관한 요구사항입니다.",
-    "visibility": "public",
-    "href": "/pm/sources/aekkim-requirements.txt"
-  },
-  {
-    "title": "웃지마게임 기획 변경·역할 기록",
-    "type": "case-note",
-    "summary": "친구 매칭 우선 결정과 AI 판정 논의, 팀 내 역할을 정리했습니다.",
-    "visibility": "public",
-    "href": "/pm/sources/smile-decisions.txt"
-  },
-  {
-    "title": "부산참여연대 담당 업무 요약",
-    "type": "brief",
-    "summary": "경력증명서에서 재직 기간과 담당 업무를 확인해 요약했습니다.",
-    "visibility": "public",
-    "href": "/pm/sources/career-scope.txt"
-  }
 ];

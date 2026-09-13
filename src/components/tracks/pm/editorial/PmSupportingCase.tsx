@@ -19,10 +19,9 @@ const cases = {
       ] },
       { label: "협업과 구현 제약", title: "화면 표시와 경로 데이터의 책임을 구분했습니다.", paragraphs: [
         "앱에는 ‘안전한 길’과 최단 경로를 비교하는 화면이 있습니다. 제가 다룬 것은 화면·명세와 API 연동이며, 경로 계산과 공간 데이터 구축은 팀의 백엔드·AI 작업입니다. 5월 20일 요구사항명세서에도 경로 계산 품질과 운영 데이터 범위를 별도 확인 대상으로 남겼습니다.",
-        "사용자 유형별 흐름은 원본 온보딩 시연에서, 글자 크기 설정과 제보 표시는 구현 코드에서 확인할 수 있습니다. 실제 이동약자 대상 사용성 시험이나 현장 통행 검증 결과는 현재 제시할 자료가 없습니다.",
+        "공개한 영상은 사용자 유형과 보행 조건을 선택하는 온보딩 시연입니다. 현장 보행 검증은 포함하지 않습니다.",
       ] },
     ],
-    sources: [["/pm/sources/busan-readme.txt", "사용자 유형별 서비스 흐름"], ["/pm/sources/busan-contribution.txt", "요구사항·개인 구현 기록 발췌"]],
   },
   "smile-game": {
     facts: ["2026.01–02", "7인 팀 · PM·FE 담당"],
@@ -44,7 +43,6 @@ const cases = {
         "조사는 출시 전 사용 의향 조사입니다. 24~29세와 남성 응답 비중이 높으며, 수치는 보관된 분석 PDF를 기준으로 합니다. 출시 후 참여율·재대결률이나 모델 정확도의 사용자 검증 결과는 제시할 자료가 없습니다.",
       ] },
     ],
-    sources: [["/pm/sources/smile-survey.txt", "설문 분석 보고서 발췌"], ["/pm/sources/smile-decisions.txt", "기획 변경·역할·구현 기록 발췌"]],
   },
 } as const;
 
@@ -61,7 +59,6 @@ export function PmSupportingCase({ project }: { project: PmProject }) {
         {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         {project.slug === "smile-game" && index === 0 && <figure className={styles.surveyEvidence}><SurveyVisual /><figcaption>2026.01.13–14 설문, n=168. Q9의 응답 수로 비율을 계산했습니다.</figcaption></figure>}
       </section>)}
-      <section className={styles.caseSection}><h2>관련 자료</h2><ul className={styles.sourceList}>{content.sources.map(([href, label]) => <li key={href}><a className={styles.sourceLink} href={href} target="_blank" rel="noreferrer">{label}<ArrowUpRight size={16} aria-hidden="true" /></a></li>)}</ul></section>
     </div>
     <div className={styles.nextProject}><p>다음 프로젝트</p><Link href={"/pm/" + next.slug + "/"}>{next.name}<ArrowUpRight aria-hidden="true" /></Link></div>
   </main>;

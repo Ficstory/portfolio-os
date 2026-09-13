@@ -61,13 +61,6 @@ export const careerCases: CareerCase[] = [
     "evidence": [
       {
         "level": "strong",
-        "publicLabel": "경력증명서의 업무 범위 요약",
-        "sourceNote": "2026-02-24 발급 경력증명서 원본 이미지 확인. 개인정보를 제외한 업무·기간만 요약.",
-        "href": "/pm/sources/career-scope.txt",
-        "linkLabel": "업무 요약"
-      },
-      {
-        "level": "strong",
         "publicLabel": "부산시의회 방청 공개 회의록",
         "sourceNote": "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 제298회 임시회 회의록에 부산참여연대 이재호 방청 기록이 있으며, 내부 경력 타임라인은 부산참여연대 2021.05~2025.02 간사·팀장 역할 기준.",
         "href": "https://council.busan.go.kr/assem/user/assem/minute/printReview.busan?minuteSid=24493",
@@ -126,13 +119,6 @@ export const careerCases: CareerCase[] = [
         "sourceNote": "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 부산시의회 제320회 임시회 평가 인터뷰와 2021년 부산시의회 회기 모니터링·논평 업무 수행 기록 존재.",
         "href": "https://v.daum.net/v/Zy0ZZZQ075?f=p",
         "linkLabel": "인터뷰"
-      },
-      {
-        "level": "strong",
-        "publicLabel": "경력증명서의 업무 범위 요약",
-        "sourceNote": "2026-02-24 경력증명서의 담당 업무.",
-        "href": "/pm/sources/career-scope.txt",
-        "linkLabel": "업무 요약"
       }
     ],
     "relevance": {
@@ -174,13 +160,6 @@ export const careerCases: CareerCase[] = [
         "sourceNote": "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 2023 부산시의회 행정사무감사 시민사회 의제 제안 기사와 내부 행감 의제 취합·발표·논평 관련 문서 존재.",
         "href": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002971444",
         "linkLabel": "언론 보도"
-      },
-      {
-        "level": "strong",
-        "publicLabel": "경력증명서의 업무 범위 요약",
-        "sourceNote": "2026-02-24 경력증명서의 담당 업무.",
-        "href": "/pm/sources/career-scope.txt",
-        "linkLabel": "업무 요약"
       },
       {
         "level": "needs-check",
@@ -227,13 +206,6 @@ export const careerCases: CareerCase[] = [
         "sourceNote": "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 부산시의회 제320회 임시회 평가 인터뷰에서 조례 심의, 시정질의, 5분 발언, 지방보조금 사업 문제 관련 발언 확인.",
         "href": "https://v.daum.net/v/Zy0ZZZQ075?f=p",
         "linkLabel": "인터뷰"
-      },
-      {
-        "level": "strong",
-        "publicLabel": "경력증명서의 업무 범위 요약",
-        "sourceNote": "2026-02-24 경력증명서의 담당 업무.",
-        "href": "/pm/sources/career-scope.txt",
-        "linkLabel": "업무 요약"
       }
     ],
     "relevance": {
@@ -333,13 +305,6 @@ export const careerCases: CareerCase[] = [
         "sourceNote": "docs/2026-06-02_이재호_발자취_조사보고서.md 기준. 부산시의회 제320회 임시회 평가 인터뷰와 내부 2024년 기자회견 사회 문서, 시민사회컨퍼런스 발표자료 존재.",
         "href": "https://v.daum.net/v/Zy0ZZZQ075?f=p",
         "linkLabel": "인터뷰"
-      },
-      {
-        "level": "strong",
-        "publicLabel": "경력증명서의 업무 범위 요약",
-        "sourceNote": "2026-02-24 경력증명서의 담당 업무.",
-        "href": "/pm/sources/career-scope.txt",
-        "linkLabel": "업무 요약"
       }
     ],
     "relevance": {

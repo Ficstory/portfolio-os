@@ -69,7 +69,7 @@ function EvidenceList({ items }: { items: Project["evidence"] }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  증빙 열기
+                  시연 영상 보기
                   <ExternalLink aria-hidden="true" className="size-3.5" />
                 </a>
               ) : null}
@@ -153,7 +153,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <TextList items={project.result} />
         </ProjectSection>
 
-        <ProjectSection id="project-evidence" title="증빙 자료">
+        <ProjectSection id="project-evidence" title="시연 자료">
           <EvidenceList items={project.evidence} />
         </ProjectSection>
 

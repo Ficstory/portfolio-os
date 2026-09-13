@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { PublicDigitalEvidenceLibrary } from "@/components/tracks/PublicDigitalEvidenceLibrary";
 import { PublicDigitalEvidenceStrip } from "@/components/tracks/PublicDigitalEvidenceStrip";
 import { PublicDigitalFinalCta } from "@/components/tracks/PublicDigitalFinalCta";
 import { PublicDigitalOperatingModel } from "@/components/tracks/PublicDigitalOperatingModel";
@@ -53,7 +52,7 @@ export function TrackLandingPage({ trackId }: TrackLandingPageProps) {
         </>
       ) : null}
       <TrackCaseSection model={model} />
-      {isPublicDigital ? <><PublicDigitalOperatingModel /><PublicDigitalQuestionSection /><PublicDigitalEvidenceLibrary /></> : null}
+      {isPublicDigital ? <><PublicDigitalOperatingModel /><PublicDigitalQuestionSection /></> : null}
       {!isPublicDigital ? <TrackProofPanel model={model} /> : null}
       {isPublicDigital ? <PublicDigitalFinalCta /> : null}
     </main>

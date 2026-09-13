@@ -30,6 +30,9 @@ for (const route of routes) {
     .map((match) => new URL(match[1].replaceAll("&amp;", "&"), new URL(route, origin)));
   // Poster and src can occur on the same video element.
   for (const match of html.matchAll(/<video\s[^>]*poster="([^"]+)"/g)) urls.push(new URL(match[1],origin));
+  for (const url of urls) {
+    assert.ok(!url.pathname.startsWith("/pm/sources/"), route + ": unpublished source excerpt must not be exposed as a reader link");
+  }
   for (const url of urls) if (url.protocol.startsWith("http") && url.origin !== new URL(origin).origin) external.add(url.href);
   await Promise.all(urls.filter(url => url.origin === new URL(origin).origin).map(async (url) => {
     const target = await read(url.pathname);

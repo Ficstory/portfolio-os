@@ -13,10 +13,11 @@ function readSource(relativePath) {
 
 const projectDetailSource = readSource("src/components/projects/ProjectDetail.tsx");
 
-test("project detail pages render structured evidence separately from meta links", () => {
+test("project detail pages render public demos separately from meta links", () => {
   assert.match(projectDetailSource, /id="project-evidence"/);
-  assert.match(projectDetailSource, /title="증빙 자료"/);
+  assert.match(projectDetailSource, /title="시연 자료"/);
   assert.match(projectDetailSource, /project\.evidence/);
+  assert.match(projectDetailSource, /시연 영상 보기/);
   assert.match(projectDetailSource, /availability === "public"/);
   assert.match(projectDetailSource, /내부 산출물/);
 });
