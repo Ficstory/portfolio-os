@@ -1,0 +1,37 @@
+{
+  "source": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\2. 공통pjt\\캡처\\랜덤매칭1.mp4",
+  "source_sha256": "1d0bc67664a7725d46aed4a76fa1721de6d5a2895429bb0e8af779670b7e3ce4",
+  "cuts_seconds": [
+    {
+      "start": 11.5,
+      "end": 23.0,
+      "content": "Matched players, READY, countdown, first attack"
+    },
+    {
+      "start": 35.0,
+      "end": 41.5,
+      "content": "Opponent laughs, detection value, attack-success message"
+    },
+    {
+      "start": 51.5,
+      "end": 71.0,
+      "content": "Defense failure, next attack, final 2–1 victory/defeat"
+    }
+  ],
+  "duration_seconds": 37.5,
+  "poster_source_seconds": 37.6,
+  "transform": "crop=1120:630:80:70,scale=1280:720:flags=lanczos,setsar=1",
+  "fps": 24,
+  "audio": false,
+  "speed": 1,
+  "files": {
+    "smile.mp4": {
+      "bytes": 1299128,
+      "sha256": "152596b861da8c22de01b166b8c1ec13b2e8d8eec81a5eb6f2bd6fc37ac1c5b8"
+    },
+    "smile.webp": {
+      "bytes": 32856,
+      "sha256": "d7cefe39fc46cb13014ef1e3c7dc7b1734497526455960aa39d4f0bbe54c9d52"
+    }
+  }
+}

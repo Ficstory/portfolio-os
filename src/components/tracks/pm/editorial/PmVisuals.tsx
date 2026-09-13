@@ -43,8 +43,8 @@ export function ProjectVisual({ slug }: { slug: string }) {
     <PmVideoPreview name="Play Pick" file="play-pick" width={960} height={720} wide description="원본 온보딩 화면을 로컬에서 실행한 시연. 보고싶어요, 모르겠어요, 안볼래요를 선택하고 호불호 8개를 저장한 뒤 첫 추천을 확인합니다. 예시 계정과 보관된 공연 임베딩을 사용합니다." />
   </div>;
   if (slug === "smile-game") return <div className={styles.smileVisual}>
-    <div className={styles.smileStatement}><span className={styles.visualLabel}>웃지마게임</span><p>함께 준비하고,<br /><em>한 판 시작하기.</em></p><span>준비 완료 → 카운트다운 → 게임 시작</span></div>
-    <PmVideoPreview name="웃지마게임" file="smile" width={960} height={720} wide description="원본 초대배틀 녹화에서 핵심 화면을 확대하고 대기 구간을 줄인 편집본. 두 사용자가 준비를 마치고 3, 2, 1 카운트다운을 거쳐 게임을 시작합니다." />
+    <div className={styles.smileStatement}><span className={styles.visualLabel}>웃지마게임</span><p>웃음 감지부터,<br /><em>승패 결과까지.</em></p><span>준비 → 웃음 판정 → 경기 결과</span></div>
+    <PmVideoPreview name="웃지마게임" file="smile" width={1280} height={720} wide description="팀 서비스의 랜덤 매칭 원본 녹화에서 대기 구간을 줄인 편집본입니다. 준비부터 웃음 판정과 승패 결과까지 보여줍니다." />
   </div>;
   return null;
 }

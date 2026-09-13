@@ -172,9 +172,9 @@ export const projects: Project[] = [
     ],
     "evidence": [
       {
-        "label": "준비와 게임 시작",
+        "label": "웃음 판정과 승패 결과",
         "category": "시연",
-        "description": "친구 초대방의 준비 완료와 카운트다운, 게임 시작을 담은 편집 영상입니다.",
+        "description": "팀 서비스의 랜덤 매칭에서 준비, 웃음 판정, 승패 결과까지 담은 편집 영상입니다.",
         "availability": "public",
         "href": "/pm/previews/smile.mp4"
       }
