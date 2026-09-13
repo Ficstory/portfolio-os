@@ -69,7 +69,7 @@ export function createProjectRules(project: Project): ProjectRule[] {
       path: projectPath(project, "role"),
       statusCode: 200,
       statusLabel: "200 Documented",
-      description: "Ownership and responsibilities in this project.",
+      description: "직접 맡은 업무",
       entries: project.role,
     },
     {
@@ -79,7 +79,7 @@ export function createProjectRules(project: Project): ProjectRule[] {
       path: projectPath(project, "stack"),
       statusCode: 200,
       statusLabel: "200 Documented",
-      description: "Frontend tools and supporting workflow choices.",
+      description: "구현에 사용한 기술",
       entries: project.stack,
     },
     {
@@ -89,7 +89,7 @@ export function createProjectRules(project: Project): ProjectRule[] {
       path: projectPath(project, "context"),
       statusCode: 200,
       statusLabel: "200 Context",
-      description: "The project problem this work is framed around.",
+      description: "대상 사용자와 해결할 문제",
       entries: [project.problem],
     },
     {
@@ -99,7 +99,7 @@ export function createProjectRules(project: Project): ProjectRule[] {
       path: projectPath(project, "implementation"),
       statusCode: 201,
       statusLabel: "201 Created",
-      description: "Implemented decisions and reusable pieces.",
+      description: "작성한 문서와 구현한 기능",
       entries: project.implementationHighlights,
     },
     {
@@ -109,7 +109,7 @@ export function createProjectRules(project: Project): ProjectRule[] {
       path: projectPath(project, "troubleshooting"),
       statusCode: 500,
       statusLabel: "500 Investigated",
-      description: "Failure cases or ambiguity that shaped the work.",
+      description: "작업 중 다룬 제약과 수정 사항",
       entries: project.troubleshooting,
     },
     {
@@ -119,7 +119,7 @@ export function createProjectRules(project: Project): ProjectRule[] {
       path: projectPath(project, "result"),
       statusCode: 200,
       statusLabel: "200 Result",
-      description: "Outcome statements captured for the portfolio.",
+      description: "완성한 범위와 확인한 결과",
       entries: project.result,
     },
   ];
@@ -132,7 +132,7 @@ export function createProjectRules(project: Project): ProjectRule[] {
       path: projectPath(project, "links"),
       statusCode: 302,
       statusLabel: "302 Linked",
-      description: "External references attached to this project.",
+      description: "관련 자료와 시연",
       entries: links,
     });
   }

@@ -59,50 +59,12 @@ function getUniqueDetails(log: ProjectActivityLogItem) {
   );
 }
 
-function hasProjectLinks(project: Project) {
-  return Object.values(project.links).some(Boolean);
-}
-
 function formatShortList(entries: string[], fallback: string) {
   return entries.slice(0, 3).join(" / ") || fallback;
 }
 
-function getPortfolioNote(log: ProjectActivityLogItem, project: Project) {
-  if (log.id === "role") {
-    return `이 사례에서 맡은 범위는 ${formatShortList(project.role, "아직 정리되지 않았습니다")}. 역할 설명은 구현, 문서, 발표 등 실제 산출물과 연결됩니다.`;
-  }
-
-  if (log.id === "stack") {
-    return `주요 기술은 ${formatShortList(project.stack, "아직 정리되지 않았습니다")}. 기술 목록은 선택한 작업 항목의 구현 방식과 협업 흐름을 보조합니다.`;
-  }
-
-  if (log.id === "implementation") {
-    return `${project.implementationHighlights.length}개의 구현 하이라이트가 정리되어 있습니다. 기능명보다 의사결정과 산출물 중심으로 읽히게 구성했습니다.`;
-  }
-
-  if (log.id === "troubleshooting") {
-    return `${project.troubleshooting.length}개의 제약 사항과 검증 포인트가 분리되어 있습니다. 확인된 성과와 재검증이 필요한 부분을 구분합니다.`;
-  }
-
-  if (log.id === "result") {
-    return `${project.result.length}개의 결과 항목이 정리되어 있습니다. 현재 확인 가능한 산출물과 증빙 연결을 우선합니다.`;
-  }
-
-  if (log.id === "links") {
-    return hasProjectLinks(project)
-      ? "외부 링크가 등록되어 있어 평가자가 프로젝트 증빙으로 바로 확인할 수 있습니다."
-      : "확인된 역할, 산출물, 결과 설명을 기준으로 사례를 읽습니다. 외부 증빙은 실제로 확인된 항목만 별도 노출합니다.";
-  }
-
-  return `${project.title}은 문제 배경, 담당 범위, 구현 기록, 결과를 한 화면에서 이어 볼 수 있도록 정리한 사례입니다.`;
-}
-
 function getEvidenceStatus(project: Project) {
-  if (hasProjectLinks(project)) {
-    return "증빙 링크 있음";
-  }
-
-  return "요약 증빙 중심";
+  return `${project.evidence.filter((item) => item.href).length}개 자료 링크`;
 }
 
 export function ProjectActivityLog({
@@ -126,7 +88,7 @@ export function ProjectActivityLog({
           </span>
           <div className="min-w-0">
             <h3 className="truncate text-[13px] font-bold text-slate-950 dark:text-white">
-              Activity log
+              사례 목차
             </h3>
             <p className="truncate font-mono text-[11px] text-muted">
               /project/{project.slug}
@@ -291,10 +253,10 @@ export function ProjectActivityLog({
                   size={13}
                   strokeWidth={2.2}
                 />
-                Portfolio angle
+                관련 자료
               </div>
               <p className="mt-2 text-[12px] leading-5 text-slate-700 dark:text-slate-200">
-                {getPortfolioNote(selectedLog, project)}
+                <a className="font-semibold underline underline-offset-4" href={`/pm/${project.slug}/`}>시연과 상세 작업 보기 ↗</a>
               </p>
             </div>
           </div>

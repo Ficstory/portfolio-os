@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+import { PublicDigitalEvidenceLibrary } from "@/components/tracks/PublicDigitalEvidenceLibrary";
+import { PublicDigitalEvidenceStrip } from "@/components/tracks/PublicDigitalEvidenceStrip";
+import { PublicDigitalFinalCta } from "@/components/tracks/PublicDigitalFinalCta";
+import { PublicDigitalOperatingModel } from "@/components/tracks/PublicDigitalOperatingModel";
+import { PublicDigitalQuestionSection } from "@/components/tracks/PublicDigitalQuestionSection";
 import { TrackCaseSection } from "@/components/tracks/TrackCaseSection";
 import { TrackHero } from "@/components/tracks/TrackHero";
 import { getTrackLandingModel } from "@/components/tracks/trackLandingModel";
@@ -12,6 +17,7 @@ type TrackLandingPageProps = {
 
 export function TrackLandingPage({ trackId }: TrackLandingPageProps) {
   const model = getTrackLandingModel(trackId);
+  const isPublicDigital = model.track.id === "publicDigital";
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-slate-50 text-slate-950">
@@ -41,8 +47,15 @@ export function TrackLandingPage({ trackId }: TrackLandingPageProps) {
       </nav>
 
       <TrackHero model={model} />
+      {isPublicDigital ? (
+        <>
+          <PublicDigitalEvidenceStrip />
+        </>
+      ) : null}
       <TrackCaseSection model={model} />
-      <TrackProofPanel model={model} />
+      {isPublicDigital ? <><PublicDigitalOperatingModel /><PublicDigitalQuestionSection /><PublicDigitalEvidenceLibrary /></> : null}
+      {!isPublicDigital ? <TrackProofPanel model={model} /> : null}
+      {isPublicDigital ? <PublicDigitalFinalCta /> : null}
     </main>
   );
 }

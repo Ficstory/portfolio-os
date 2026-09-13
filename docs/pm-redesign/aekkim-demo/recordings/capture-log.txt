@@ -1,0 +1,21 @@
+--------- beginning of main
+09-10 19:09:08.706  4296  4325 I AEKKIM_DEMO: GET /api/v1/users/me
+09-10 19:09:08.938  4296  4325 I AEKKIM_DEMO: GET /api/v1/promotions/recommendations
+09-10 19:09:18.481  4296  4325 I AEKKIM_DEMO: GET /api/v1/promotions/201
+09-10 19:09:54.944  4998  5050 I AEKKIM_DEMO: GET /api/v1/users/me
+09-10 19:10:04.121  4998  5050 I AEKKIM_DEMO: PATCH /api/v1/users/me/notification-settings
+09-10 19:10:07.029  4998  5050 I AEKKIM_DEMO: PATCH /api/v1/users/me/notification-settings
+09-10 19:10:10.043  4998  5050 I AEKKIM_DEMO: PATCH /api/v1/users/me/optional-consent
+09-10 19:10:30.510  5418  5447 I AEKKIM_DEMO: GET /api/v1/users/me
+09-10 19:10:59.568  5418  5447 I AEKKIM_DEMO: POST /api/v1/subscriptions
+09-10 19:10:59.628  5418  5447 I AEKKIM_DEMO: POST /api/v1/subscriptions
+09-10 19:10:59.644  5418  5447 I AEKKIM_DEMO: POST /api/v1/subscriptions
+09-10 19:10:59.674  5418  5447 I AEKKIM_DEMO: POST /api/v1/subscriptions
+09-10 19:10:59.688  5418  5447 I AEKKIM_DEMO: POST /api/v1/subscriptions
+09-10 19:11:00.179  5418  5447 I AEKKIM_DEMO: GET /api/v1/subscriptions
+09-10 19:11:00.277  5418  5447 I AEKKIM_DEMO: GET /api/v1/promotions/recommendations
+09-10 19:11:00.282  5418  5756 I AEKKIM_DEMO: GET /api/v1/subscription-usages/report
+09-10 19:11:15.291  5906  5937 I AEKKIM_DEMO: GET /api/v1/users/me
+09-10 19:11:38.700  6027  6449 I AEKKIM_DEMO: GET /api/v1/users/me
+09-10 19:13:35.859  6565  6594 I AEKKIM_DEMO: GET /api/v1/users/me
+09-10 19:13:59.288  6664  7066 I AEKKIM_DEMO: GET /api/v1/users/me

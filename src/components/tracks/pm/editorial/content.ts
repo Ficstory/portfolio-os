@@ -2,56 +2,60 @@ export type PmProject = {
   slug: string;
   name: string;
   category: string;
+  award?: string;
   title: [string, string];
   summary: string;
   contribution: string;
   caption: string;
 };
 
+export const aekkimAward = "프로젝트 우수상";
+
 export const selectedProjects: PmProject[] = [
   {
     slug: "aekkim",
     name: "AEKKIM",
     category: "구독 관리 Android MVP",
-    title: ["함께 만들 기준부터", "맞췄습니다."],
-    summary: "요구사항과 화면명세, API 조건을 연결해 구독 관리의 실행 기준을 정리했습니다.",
-    contribution: "PM / 요구사항·화면명세 / FE 구현",
-    caption: "프로젝트 원본 구독 상세 목업과 요구사항 기반 흐름 재구성. 목업의 금액은 예시입니다.",
+    award: `${aekkimAward} · 팀 수상`,
+    title: ["구독 후보 확인을", "화면과 API로 구현했습니다."],
+    summary: "애낌은 결제 내역과 앱 사용 정보를 바탕으로 구독을 관리하는 Android 앱입니다. 요구사항·화면명세를 갱신하고, 후보 확인과 수동 등록 화면의 구현·API 연동을 맡았습니다.",
+    contribution: "PM / 요구사항·화면명세 관리 / Android 화면 구현",
+    caption: "결제 후보를 서비스에 연결한 뒤 구독 목록·월 합계·상세를 확인하는 흐름입니다. 기존 앱 UI에 예시 데이터를 넣은 오프라인 데모입니다.",
   },
   {
     slug: "busan-eumgil",
     name: "부산이음길",
     category: "이동약자를 위한 길안내",
-    title: ["가장 가까운 길보다,", "실제로 갈 수 있는 길을 정의했습니다."],
-    summary: "이동 조건과 정보 접근 방식을 나눠 접근성 시설, 경로 비교, 음성 안내를 사용자 흐름으로 연결했습니다.",
-    contribution: "서비스 기획 / 사용자 흐름 / FE 구현 참여",
-    caption: "원본 저장소의 저시력자 흐름 시연 썸네일. 실제 경로의 통행 가능성을 검증한 자료는 아닙니다.",
+    title: ["이동 조건별 길안내,", "화면과 명세를 맞췄습니다."],
+    summary: "부산의 보행약자·저시력자를 위한 길안내 앱입니다. 팀원으로 기획 문서를 갱신하고, 글자 크기 설정과 승인 제보의 지도 표시 등 Android 화면 작업을 맡았습니다.",
+    contribution: "기획 문서·요구사항 갱신 / Android 화면 구현",
+    caption: "사용자 유형과 보행 조건을 선택하고 화면 설정으로 이어지는 원본 온보딩 시연입니다.",
   },
   {
     slug: "smile-game",
     name: "웃지마게임",
     category: "사용자 리서치와 MVP 조정",
-    title: ["아이디어를 고집하는 대신,", "168명의 응답에서 방향을 찾았습니다."],
-    summary: "화상 게임의 재미와 얼굴 노출 부담을 따로 확인하고, 사용자 반응을 바탕으로 MVP 방향을 조정했습니다.",
-    contribution: "PM / 설문 설계 / 기능명세",
-    caption: "설문 분석 리포트 Q9의 응답 수를 재구성했습니다. 사용자의 부담을 묻는 조사이며 서비스 성과 지표가 아닙니다.",
+    title: ["얼굴 노출 부담을 확인하고,", "친구 초대를 우선했습니다."],
+    summary: "AI가 웃음을 감지하는 실시간 화상 대결 게임입니다. 설문 설계와 168건의 응답 분석, 기획·기능명세 작성을 맡고, 친구 초대방의 생성·입장·대기 화면을 구현했습니다.",
+    contribution: "PM / 설문·기능명세 / 친구 초대방 구현",
+    caption: "친구 초대방에서 두 사용자가 준비를 마치고 게임을 시작하는 장면입니다. 원본 녹화의 대기 구간을 줄인 편집본입니다.",
   },
   {
     slug: "play-pick",
     name: "Play Pick",
-    category: "공연 탐색 웹 프로젝트",
-    title: ["흩어진 공연 정보를", "탐색 가능한 구조로 연결했습니다."],
-    summary: "공연 데이터와 사용자 취향을 연결하고 Vue.js 화면과 Django REST API로 탐색 흐름을 구현한 보조 사례입니다.",
-    contribution: "기획·개발 / REST API 연동",
-    caption: "기존 프로젝트 기록 기반의 탐색 구조 요약. 실제 제품 화면은 추가 정리 중입니다.",
+    category: "2인 팀 · 공연 추천 웹 서비스",
+    title: ["첫 추천을 위한", "취향 수집을 구현했습니다."],
+    summary: "가입 직후 공연 취향을 묻는 추천 웹 서비스입니다. 2인 팀에서 화면 설계와 프론트엔드 구현, 온보딩의 응답 저장·완료 처리, 마이페이지 API 연동을 맡았습니다.",
+    contribution: "팀장 / 화면 설계·FE 구현 / 온보딩 API 연동",
+    caption: "공연에 대한 호불호 8개를 저장하고 첫 추천을 확인하는 로컬 데모입니다. 예시 계정과 보관된 공연 데이터를 사용합니다.",
   },
 ];
 
 export const workingPrinciples = [
-  { title: "문제와 기능 요청을 분리합니다.", text: "화상 게임의 흥미와 참여 부담을 따로 묻고, 만들고 싶은 기능에 앞서 사용 조건을 확인했습니다.", project: "웃지마게임", href: "/pm/smile-game/" },
-  { title: "MVP에서 검증할 범위를 정합니다.", text: "모든 이동 상황을 한 화면에 담기보다, 사용자 유형과 안내 방식에 따라 필요한 흐름을 나눴습니다.", project: "부산이음길", href: "/pm/busan-eumgil/" },
-  { title: "팀이 공유할 실행 기준을 만듭니다.", text: "구독 후보와 확정된 구독을 구분하고, 화면의 행동이 어떤 데이터 변경으로 이어지는지 맞췄습니다.", project: "AEKKIM", href: "/pm/aekkim/#decision" },
-  { title: "구현 결과를 보고 다시 판단합니다.", text: "알림 권한과 수신 설정의 의미가 섞인 문제를 QA 기록으로 남기고, 상태와 안내 문구를 분리했습니다.", project: "AEKKIM QA", href: "/pm/aekkim/#results" },
+  { title: "흥미와 사용 의향을 따로 묻습니다.", text: "웃지마게임 설문에서 재미에 대한 반응과 얼굴 공개 부담을 함께 조사했습니다. 분석 결과는 친구 초대방을 먼저 만드는 팀 결정의 근거가 됐습니다.", project: "웃지마게임", href: "/pm/smile-game/" },
+  { title: "화면과 명세의 차이를 확인합니다.", text: "부산이음길의 제보 상태와 사진 업로드 조건을 기획서·기능명세에 반영하고, 구현 완료와 추가 확인 항목을 요구사항명세서에 구분했습니다.", project: "부산이음길", href: "/pm/busan-eumgil/" },
+  { title: "화면의 상태와 표시 개수를 맞춥니다.", text: "애낌의 초기 구독 확인 화면과 후보 제외 상태를 구현했습니다. 이후 중복 후보 노출과 수동 확인 후 남은 결제 건수 표시를 수정했습니다.", project: "AEKKIM", href: "/pm/aekkim/#implementation" },
+  { title: "사용자의 응답이 데이터에 담기는 과정을 봅니다.", text: "Play Pick에서 ‘모르겠어요’를 비선호와 구분하고, 호불호 선택 수에 따라 완료 버튼과 취향 저장 요청을 처리했습니다.", project: "Play Pick", href: "/pm/play-pick/#implementation" },
 ];
 
 // Source: 260115_설문조사결과_분석.pdf, p.7, Q9. Counts, not rounded percentages.

@@ -42,7 +42,7 @@ const sectionMeta: Record<FolderId, SectionMeta> = {
   about: {
     title: "About Me",
     eyebrow: "Profile",
-    description: "소개, 강점, 현재 집중하는 키워드를 한 화면에서 읽습니다.",
+    description: "공공자료 분석 경력과 팀 프로젝트 경험을 소개합니다.",
     icon: UserRound,
   },
   "career-tracks": {
@@ -54,13 +54,13 @@ const sectionMeta: Record<FolderId, SectionMeta> = {
   projects: {
     title: "Case Studies",
     eyebrow: "Featured Work",
-    description: "대표 사례의 문제, 역할, 산출물, 기술 이해를 문서형으로 정리합니다.",
+    description: "네 개 팀 프로젝트에서 맡은 작업과 결과입니다.",
     icon: FolderKanban,
   },
   skills: {
     title: "Skills",
     eyebrow: "Experience",
-    description: "직무 역량과 이를 뒷받침하는 근거 경험을 확인합니다.",
+    description: "자료 조사, 문서 작성, 개발 협업에서 수행한 작업입니다.",
     icon: Code2,
   },
   resume: {
@@ -72,7 +72,7 @@ const sectionMeta: Record<FolderId, SectionMeta> = {
   contact: {
     title: "Contact",
     eyebrow: "Links",
-    description: "GitHub와 이메일 진입점을 제공합니다.",
+    description: "프로젝트와 채용 관련 문의는 이메일로 연락해 주세요.",
     icon: Mail,
   },
 };
@@ -287,7 +287,7 @@ function ProjectsContent() {
             <ChipList ariaLabel={`${project.title} 역할`} items={project.role} />
           </SectionBlock>
 
-          <SectionBlock title="기술 이해">
+          <SectionBlock title="사용 기술">
             <ChipList
               ariaLabel={`${project.title} 기술 이해`}
               items={project.stack}
@@ -295,15 +295,15 @@ function ProjectsContent() {
             />
           </SectionBlock>
 
-          <SectionBlock title="산출물과 기술 이해">
+          <SectionBlock title="직접 수행한 작업">
             <TextList items={project.implementationHighlights} />
           </SectionBlock>
 
-          <SectionBlock title="제약 조건과 주의점">
+          <SectionBlock title="작업 중 다룬 제약">
             <TextList items={project.troubleshooting} />
           </SectionBlock>
 
-          <SectionBlock title="직무 관점의 의미와 증빙">
+          <SectionBlock title="작업 결과">
             <TextList items={project.result} />
           </SectionBlock>
 

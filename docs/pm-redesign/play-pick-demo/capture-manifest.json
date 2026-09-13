@@ -1,0 +1,83 @@
+{
+  "captured_at": "2026-09-11",
+  "method": "Continuous screenshots of the running original Vue UI via CUA, encoded using capture timestamps. Original CSS card transitions retained; no synthesized transitions.",
+  "capture_dimensions": [
+    1600,
+    1200
+  ],
+  "captured_frames": 430,
+  "edited_duration_seconds": 30.588,
+  "cut_idle_gaps": [
+    {
+      "at": 20.475,
+      "removed_seconds": 6.044999999999997
+    },
+    {
+      "at": 32.074,
+      "removed_seconds": 6.256000000000003
+    }
+  ],
+  "events": [
+    {
+      "action": "보고싶어요",
+      "t": 1.619
+    },
+    {
+      "action": "모르겠어요",
+      "t": 3.705
+    },
+    {
+      "action": "안볼래요",
+      "t": 5.804
+    },
+    {
+      "action": "보고싶어요",
+      "t": 7.947
+    },
+    {
+      "action": "보고싶어요",
+      "t": 10.044
+    },
+    {
+      "action": "안볼래요",
+      "t": 12.158
+    },
+    {
+      "action": "보고싶어요",
+      "t": 14.287
+    },
+    {
+      "action": "안볼래요",
+      "t": 16.369
+    },
+    {
+      "action": "보고싶어요",
+      "t": 18.505
+    },
+    {
+      "action": "complete",
+      "t": 26.273
+    },
+    {
+      "action": "show-recommendations",
+      "t": 38.34
+    }
+  ],
+  "source_frontend_commit": "c5e2f13",
+  "backend": "Current local Django code, isolated demo SQLite database; no API response mocks.",
+  "data": "2026-09-09 public KOPIS snapshot; 3088 original stored embeddings; example account and scripted sample choices.",
+  "external_ai_calls": false,
+  "files": [
+    {
+      "name": "play-pick-onboarding.mp4",
+      "bytes": 2332998,
+      "sha256": "8f967ee5fbb1a9ff04ad984501583db3b6721df1c7f950e2c076a390d47b740b"
+    },
+    {
+      "name": "play-pick.mp4",
+      "bytes": 871433,
+      "sha256": "98031d0f6e086a02df34cca496cc2df401325feee8f406e6c517c62894344e61"
+    }
+  ],
+  "full_decode": "passed"
+}

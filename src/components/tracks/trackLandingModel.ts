@@ -53,45 +53,47 @@ const trackProofCopy: Record<
         eyebrow: "Case Studies",
         title: "대표 프로젝트",
         summary:
-          "루트 포트폴리오는 특정 지원 직무로 단정하지 않고, 프로젝트와 공공 경력 근거를 균형 있게 보여줍니다.",
+          "네 개 팀 프로젝트에서 맡은 조사, 문서 작성, 화면 구현을 소개합니다.",
       },
       secondary: {
         eyebrow: "Public-sector Evidence",
         title: "공공·의정 경력 근거",
         summary:
-          "부산참여연대 경력은 공공 문제를 읽고 문서로 구조화한 기반 경험으로 분리합니다.",
+          "부산참여연대에서 예산·결산 자료와 의회 활동을 조사하고 보고서와 발제 자료를 작성했습니다.",
       },
     },
   },
   publicDigital: {
     proofFocus: [
-      "부산이음길 PRD와 요구사항명세",
-      "부산참여연대 공공자료 분석 경력",
-      "AEKKIM 화면명세와 API 협업 기준",
-      "접근성·사용자 흐름·서비스 요구사항 정리",
+      "부산이음길 PRD·요구사항정의서",
+      "부산이음길 사용자별 화면과 글자 크기 설정",
+      "부산참여연대 공공자료 분석 경험",
+      "AEKKIM 요구사항·화면명세 변경 이력",
+      "의정평가 보고서·발제 자료 작성 경험",
     ],
     cautionNotes: [
-      "정책 성과처럼 과장하지 않고 공공 문제를 서비스 요구사항으로 번역한 과정만 설명합니다.",
-      "Play Pick은 배포 URL 검증 전까지 보조 사례로만 둡니다.",
-      "기술 스택보다 공공 맥락, 사용자 문제, 실행 기준을 먼저 보여줍니다.",
+      "정책 성과처럼 보이는 표현은 피하고, 실제 산출물과 기획 판단 중심으로 설명합니다.",
+      "운영기관처럼 보이는 표현은 쓰지 않고, 프로젝트 내 역할과 협업 범위를 명확히 합니다.",
+      "검증되지 않은 정량 성과는 반복 노출하지 않습니다.",
     ],
     ctaLinks: [
-      { label: "Case Studies", href: "#case-studies" },
-      { label: "Resume", href: "/resume" },
-      { label: "Contact", href: "mailto:dlwo4367@gmail.com" },
+      { label: "대표 사례 보기", href: "#case-studies" },
+      { label: "맡은 작업 보기", href: "#operating-model" },
+      { label: "이력서 보기", href: "/resume" },
+      { label: "연락하기", href: "mailto:dlwo4367@gmail.com" },
     ],
     caseSections: {
       primary: {
         eyebrow: "Public Digital Case",
         title: "공공디지털 대표 프로젝트",
         summary:
-          "공공 문제를 사용자 조건, 접근성 흐름, 요구사항 기준으로 번역한 프로젝트를 먼저 보여줍니다.",
+          "이동약자 길안내 앱을 비롯해, 사용자별 화면과 상태·API를 다룬 팀 프로젝트입니다.",
       },
       secondary: {
         eyebrow: "Public-sector Context",
-        title: "공공 문제정의 경력 근거",
+        title: "공공자료 조사·작성 경력",
         summary:
-          "부산참여연대 경력은 서비스 요구사항 이전의 공공자료 분석과 현장 문제정의 배경으로 연결합니다.",
+          "지방자치본부·재정감시센터에서 맡은 자료 조사와 보고서 작성 업무입니다.",
       },
     },
   },
@@ -117,13 +119,13 @@ const trackProofCopy: Record<
         eyebrow: "PM Case",
         title: "PM 대표 프로젝트",
         summary:
-          "요구사항정의, 화면명세, API 협업 기준과 MVP 범위 조율 경험을 먼저 보여줍니다.",
+          "구독 확인, 이동 조건별 길안내, 친구 초대 게임, 첫 공연 추천에서 맡은 작업입니다.",
       },
       secondary: {
         eyebrow: "Policy Context",
         title: "문제정의 배경 근거",
         summary:
-          "공공 경력은 제품 총괄 경험이 아니라 복잡한 자료를 실행 문서로 정리한 배경 근거로 분리합니다.",
+          "공공자료를 비교·분석하고 보고서와 발제 자료로 정리한 경력입니다.",
       },
     },
   },
@@ -147,15 +149,15 @@ const trackProofCopy: Record<
     caseSections: {
       primary: {
         eyebrow: "Career Evidence",
-        title: "정책지원관 경력 브리프",
+        title: "정책지원관 지원 · 주요 경력",
         summary:
-          "조례, 예산, 행정사무감사, 회기 모니터링 경험을 정책지원 문서 역량으로 보여줍니다.",
+          "부산참여연대에서 수행한 예산·결산 분석, 의정평가, 행정사무감사 시민의제 취합 업무입니다.",
       },
       secondary: {
         eyebrow: "Digital Literacy",
         title: "보조 디지털 프로젝트",
         summary:
-          "디지털 프로젝트는 정책지원관 트랙에서 SW 협업 이해와 공공서비스 감각을 보여주는 보조 근거입니다.",
+          "요구사항을 문서로 정리하고 화면과 API를 구현한 팀 프로젝트입니다.",
       },
     },
   },
@@ -179,15 +181,15 @@ const trackProofCopy: Record<
     caseSections: {
       primary: {
         eyebrow: "Assembly Evidence",
-        title: "국회 보좌 실무형 경력 브리프",
+        title: "국회 보좌직 지원 · 주요 경력",
         summary:
-          "회의 모니터링, 이슈 조사, 질의 방향 정리, 메시지 작성 경험을 보좌 실무와 가까운 순서로 보여줍니다.",
+          "지방의회 의정감시와 공공 이슈 조사, 보고서·발제·대외 설명 자료 작성 경험입니다.",
       },
       secondary: {
         eyebrow: "Digital Literacy",
         title: "보조 디지털 프로젝트",
         summary:
-          "디지털 프로젝트는 국회 트랙에서 IT·AI 이슈를 이해하고 협업 언어를 다룰 수 있다는 보조 근거입니다.",
+          "화상 게임과 추천 서비스에서 맡은 기획·구현을 통해 데이터와 AI 기능을 다룬 경험입니다.",
       },
     },
   },

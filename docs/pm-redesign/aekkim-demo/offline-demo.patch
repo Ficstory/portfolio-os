@@ -1,0 +1,173 @@
+--- a/app/build.gradle.kts
++++ b/app/build.gradle.kts
+@@ -7,7 +7,7 @@
+     alias(libs.plugins.kotlin.serialization)
+     alias(libs.plugins.hilt)
+     alias(libs.plugins.ksp)
+-    alias(libs.plugins.google.services)
++    // Offline demo: Google services configuration is not needed.
+ }
+ 
+ val localProperties = Properties().apply {
+@@ -74,6 +74,7 @@
+         targetSdk = 35
+         versionCode = 1
+         versionName = "1.0"
++        buildConfigField("boolean", "DEMO_MODE", "false")
+ 
+         // local.properties → BuildConfig
+         buildConfigField("String", "BASE_URL_DEV",  "\"$baseUrlEmulator\"")
+@@ -101,6 +102,13 @@
+             signingConfig = signingConfigs.getByName("sharedDebug")
+             buildConfigField("String", "BASE_URL", "\"$baseUrlDevice\"")
+         }
++        create("demo") {
++            initWith(getByName("debug"))
++            matchingFallbacks += listOf("debug")
++            applicationIdSuffix = ".demo"
++            versionNameSuffix = "-offline-demo"
++            buildConfigField("boolean", "DEMO_MODE", "true")
++        }
+         release {
+             buildConfigField("String", "BASE_URL", "\"$baseUrlProd\"")
+             isMinifyEnabled = true
+--- a/app/src/main/java/com/ssafy/e106/app/App.kt
++++ b/app/src/main/java/com/ssafy/e106/app/App.kt
+@@ -22,6 +22,7 @@
+ 
+     override fun onCreate() {
+         super.onCreate()
++        if (BuildConfig.DEMO_MODE) return // No auth, push, or analytics in the offline demo.
+         Log.d(APP_INIT_TAG, "App.onCreate started")
+         initializeKakaoSdk()
+         createNotificationChannels()
+--- a/app/src/main/java/com/ssafy/e106/app/MainActivity.kt
++++ b/app/src/main/java/com/ssafy/e106/app/MainActivity.kt
+@@ -58,6 +58,7 @@
+     }
+ 
+     private fun bootstrapSession(): Boolean {
++        if (com.ssafy.e106.BuildConfig.DEMO_MODE) return true
+         val accessToken = tokenRepository.getAccessTokenSync()
+         val refreshToken = tokenRepository.getRefreshTokenSync()
+ 
+--- a/app/src/main/java/com/ssafy/e106/di/NetworkModule.kt
++++ b/app/src/main/java/com/ssafy/e106/di/NetworkModule.kt
+@@ -42,6 +42,9 @@
+         authInterceptor: AuthInterceptor,
+         tokenAuthenticator: TokenAuthenticator
+     ): OkHttpClient {
++        if (BuildConfig.DEMO_MODE) {
++            return OkHttpClient.Builder().addInterceptor(com.ssafy.e106.demo.OfflineDemoApi()).build()
++        }
+         return OkHttpClient.Builder()
+             .addInterceptor(authInterceptor)
+             .authenticator(tokenAuthenticator)
+--- a/app/src/main/java/com/ssafy/e106/data/repository/SubscriptionRepository.kt
++++ b/app/src/main/java/com/ssafy/e106/data/repository/SubscriptionRepository.kt
+@@ -196,6 +196,13 @@
+     private val pendingReviews = mutableListOf<PendingReviewItem>()
+     private val _syncEvents = MutableSharedFlow<SubscriptionSyncEvent>(extraBufferCapacity = 4)
+     val syncEvents: SharedFlow<SubscriptionSyncEvent> = _syncEvents.asSharedFlow()
++    init {
++        if (com.ssafy.e106.BuildConfig.DEMO_MODE) {
++            pendingReviewCandidates.add(PendingReviewCandidate(9001, "콘텐츠 정기결제", 10900, "9월 15일", 15))
++            pendingReviews.add(PendingReviewItem(9001, "콘텐츠 정기결제", "웨이브", 10900, "9월 15일", 15))
++        }
++    }
++
+     suspend fun getDashboardData(): Result<DashboardSubscriptionsData> {
+         return try {
+             val response = subscriptionApi.getSubscriptions()
+--- /dev/null
++++ b/app/src/main/java/com/ssafy/e106/demo/OfflineDemoApi.kt
+@@ -0,0 +1,82 @@
++package com.ssafy.e106.demo
++
++import okhttp3.Interceptor
++import okhttp3.Response
++import okhttp3.Protocol
++import okhttp3.MediaType.Companion.toMediaType
++import okhttp3.ResponseBody.Companion.toResponseBody
++import okio.Buffer
++import org.json.JSONArray
++import org.json.JSONObject
++import android.util.Log
++import java.time.LocalDate
++
++/** In-process sample responses. This interceptor never sends a network request. */
++class OfflineDemoApi : Interceptor {
++    private fun obj(vararg values: Pair<String, Any?>) = JSONObject().apply { values.forEach { put(it.first, it.second ?: JSONObject.NULL) } }
++    private fun arr(values: Iterable<Any>) = JSONArray().apply { values.forEach { put(it) } }
++    private val services = listOf(
++        obj("serviceId" to 1,"code" to "NETFLIX","name" to "넷플릭스","category" to "OTT","price" to 13500,"plan" to "스탠다드"),
++        obj("serviceId" to 2,"code" to "SPOTIFY","name" to "스포티파이","category" to "MUSIC","price" to 11900,"plan" to "개인"),
++        obj("serviceId" to 3,"code" to "CHATGPT","name" to "ChatGPT","category" to "AI","price" to 29000,"plan" to "Plus"),
++        obj("serviceId" to 4,"code" to "WAVVE","name" to "웨이브","category" to "OTT","price" to 10900,"plan" to "스탠다드"),
++        obj("serviceId" to 5,"code" to "TVING","name" to "티빙","category" to "OTT","price" to 9500,"plan" to "베이직"),
++        obj("serviceId" to 6,"code" to "DISNEY_PLUS","name" to "디즈니플러스","category" to "OTT","price" to 9900,"plan" to "스탠다드")
++    )
++    private fun service(id: Long) = services.first { it.getLong("serviceId")==id }
++    private fun subscription(id:Long, sid:Long) = service(sid).let { s -> obj(
++        "subscriptionId" to id,"userId" to 1,"serviceId" to sid,"servicePlanId" to sid*100,
++        "subscriptionType" to "SINGLE","serviceName" to s.getString("name"),"planName" to s.getString("plan"),
++        "billingCycle" to "MONTHLY","monthlyPrice" to s.getInt("price"),
++        "nextBillingDate" to LocalDate.now().plusDays(4).toString(),"daysUntilBilling" to 4,
++        "createdAt" to "2026-09-11T09:00:00","recentUsage" to arr(listOf(
++            obj("cycleYm" to "2026-09","response" to "OFTEN","serviceId" to sid),
++            obj("cycleYm" to "2026-08","response" to "SOMETIMES","serviceId" to sid),
++            obj("cycleYm" to "2026-07","response" to "RARELY","serviceId" to sid)
++        ))
++    ) }
++    private val subscriptions = mutableListOf(subscription(101,1),subscription(102,2),subscription(103,3))
++    private fun create(request:JSONObject):JSONObject {
++        val sid=request.optLong("serviceId",4)
++        return subscription((104+subscriptions.size).toLong(),sid).also {
++            val date = request.optString("nextBillingDate").takeIf { value -> value.isNotBlank() && value != "null" }
++            if (date != null) {
++                it.put("nextBillingDate", date)
++                it.put("daysUntilBilling", java.time.temporal.ChronoUnit.DAYS.between(LocalDate.now(), LocalDate.parse(date)).toInt())
++            }
++            subscriptions.add(it)
++        }
++    }
++    @Synchronized override fun intercept(chain:Interceptor.Chain):Response {
++        val request=chain.request()
++        val path=request.url.encodedPath
++        val buffer=Buffer(); request.body?.writeTo(buffer)
++        val raw=buffer.readUtf8(); val body=if(raw.isBlank()) JSONObject() else JSONObject(raw)
++        Log.i("AEKKIM_DEMO", "${request.method} $path")
++        val data:Any? = when {
++            path=="/api/v1/subscriptions" && request.method=="GET" -> obj("monthlyTotalAmount" to subscriptions.sumOf { it.getInt("monthlyPrice") }, "subscriptions" to arr(subscriptions))
++            path=="/api/v1/subscriptions" && request.method=="POST" -> create(body)
++            path.matches(Regex("/api/v1/subscriptions/[0-9]+")) -> subscriptions.firstOrNull { it.getLong("subscriptionId")==path.substringAfterLast('/').toLong() }
++            path=="/api/v1/users/me" -> obj("userId" to 1,"displayName" to "재호","checkinAlertEnabled" to false,"promoAlertEnabled" to false)
++            path=="/api/v1/notifications" -> obj("notifications" to JSONArray())
++            path=="/api/v1/services" -> obj("category" to (request.url.queryParameter("category") ?: "OTT"), "services" to arr(services))
++            path.matches(Regex("/api/v1/services/[0-9]+/plans")) -> {
++                val sid=path.split('/')[4].toLong(); val s=service(sid)
++                obj("serviceId" to sid,"code" to s.getString("code"),"name" to s.getString("name"),"category" to s.getString("category"),"plans" to arr(listOf(obj("servicePlanId" to sid*100,"planName" to s.getString("plan"),"billingCycle" to "MONTHLY","monthlyPrice" to s.getInt("price")))))
++            }
++            path=="/api/v1/bundles" -> obj("bundles" to JSONArray())
++            path=="/api/v1/merchant-mappings/batch-confirm" -> {
++                val items=body.getJSONArray("items"); val created=(0 until items.length()).map { create(items.getJSONObject(it)) }
++                obj("results" to arr(created))
++            }
++            path.contains("promotions") -> obj("nickname" to "재호","categories" to JSONArray(),"content" to JSONArray(),"items" to JSONArray(),"totalElements" to 0,"totalPages" to 0,"last" to true,"page" to 0,"size" to 20)
++            path.contains("check-ins") || path.contains("checkins") -> obj("checkins" to JSONArray())
++            path=="/api/v1/subscription-usages/report" -> obj("summary" to obj("windowDays" to 30,"totalUsedMinutes" to 0,"activeSubscriptionCount" to subscriptions.size,"lowUsageSubscriptionCount" to 0), "items" to JSONArray())
++            path=="/api/v1/subscription-usages/daily" -> obj("days" to 30,"items" to JSONArray(),"dailyUsage" to JSONArray(),"totalUsageMinutes" to 0)
++            else -> null
++        }
++        val response=obj("success" to (data!=null),"data" to data,"message" to if(data==null) "데모에서 제공하지 않는 기능입니다." else null)
++        return Response.Builder().request(request).protocol(Protocol.HTTP_1_1).code(if(data==null) 501 else 200).message("Offline demo")
++            .body(response.toString().toResponseBody("application/json; charset=utf-8".toMediaType())).build()
++    }
++}
+--- /dev/null
++++ b/app/src/demo/AndroidManifest.xml
+@@ -0,0 +1,4 @@
++<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
++  <uses-permission android:name="android.permission.INTERNET" tools:node="remove" />
++  <application android:label="애낌 데모" tools:replace="android:label"  tools:node="merge" />
++</manifest>

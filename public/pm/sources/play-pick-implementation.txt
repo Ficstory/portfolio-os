@@ -1,0 +1,208 @@
+Play Pick — 원본 저장소 발췌
+확인일: 2026-09-11
+기준 커밋: c5e2f13339a9b17f95f69866342345dd5bf31bf9
+2026년 9월 미커밋 유지보수 변경과 구분한 저장 소스입니다.
+
+
+front/src/stores/onboardingStore.js (5~23행)
+5: export const useOnboardingStore = defineStore('onboarding', () => {
+6:   // State - Tinder-style single card navigation
+7:   const candidates = ref([])        // All available performances
+8:   const currentIndex = ref(0)       // Current card index
+9:   const likes = ref([])             // mt20ids that user liked (1.5)
+10:   const dislikes = ref([])          // mt20ids that user disliked (-1.0)
+11:   const skips = ref([])             // mt20ids that user skipped (0)
+12:   const loading = ref(false)
+13:   const error = ref(null)
+14:   const completed = ref(false)
+15:
+16:   // Computed
+17:   const currentCard = computed(() => candidates.value[currentIndex.value] || null)
+18:   const hasMore = computed(() => currentIndex.value < candidates.value.length - 1)
+19:   const likeCount = computed(() => likes.value.length)
+20:   const selectionCount = computed(() => likes.value.length + dislikes.value.length)
+21:   const canComplete = computed(() => selectionCount.value >= 8)
+22:   const progress = computed(() => Math.min((selectionCount.value / 8) * 100, 100))
+23:   const totalResponses = computed(() => likes.value.length + dislikes.value.length + skips.value.length)
+
+front/src/stores/onboardingStore.js (131~172행)
+131:   const submit = async () => {
+132:     if (selectionCount.value < 8) {
+133:       error.value = '최소 8개의 공연을 선택해주세요. (보고싶어요 또는 안볼래요)'
+134:       return false
+135:     }
+136:
+137:     loading.value = true
+138:     error.value = null
+139:
+140:     try {
+141:       // Convert to signals format expected by backend
+142:       const signalsArray = []
+143:
+144:       likes.value.forEach(mt20id => {
+145:         signalsArray.push({ performance_id: mt20id, signal: 1.5 })
+146:       })
+147:
+148:       dislikes.value.forEach(mt20id => {
+149:         signalsArray.push({ performance_id: mt20id, signal: -1.0 })
+150:       })
+151:
+152:       // Skips are not sent (neutral = 0, backend ignores)
+153:       // skips.value.forEach(mt20id => {
+154:       //   signalsArray.push({ performance_id: mt20id, signal: 0 })
+155:       // })
+156:
+157:       // Save signals
+158:       await onboardingAPI.saveSignals(signalsArray)
+159:
+160:       // Complete onboarding
+161:       await onboardingAPI.completeOnboarding()
+162:
+163:       completed.value = true
+164:       return true
+165:     } catch (err) {
+166:       console.error('Failed to submit onboarding:', err)
+167:       error.value = '온보딩 완료에 실패했습니다. 다시 시도해주세요.'
+168:       return false
+169:     } finally {
+170:       loading.value = false
+171:     }
+172:   }
+
+front/src/api/onboarding.js (1~60행)
+1: import apiClient from './axios'
+2:
+3: export default {
+4:   /**
+5:    * Get 16 performances for onboarding
+6:    * @param {string} strategy - 'balanced', 'popular', or 'recent'
+7:    * @param {Array|null} excludeIds - Array of mt20ids to exclude
+8:    * @returns {Promise}
+9:    */
+10:   getCandidates(strategy = 'balanced', excludeIds = null) {
+11:     const params = { strategy }
+12:
+13:     // Add exclude parameter if provided
+14:     if (excludeIds && excludeIds.length > 0) {
+15:       params.exclude = excludeIds.join(',')
+16:     }
+17:
+18:     return apiClient.get('/accounts/onboarding/candidates/', { params })
+19:   },
+20:
+21:   /**
+22:    * Save user reaction signals
+23:    * @param {Array} signals - [{"performance_id": "PF123", "signal": 1.5}, ...]
+24:    * @returns {Promise}
+25:    */
+26:   saveSignals(signals) {
+27:     return apiClient.post('/accounts/onboarding/signals/', {
+28:       signals
+29:     })
+30:   },
+31:
+32:   /**
+33:    * Complete onboarding process
+34:    * @returns {Promise}
+35:    */
+36:   completeOnboarding() {
+37:     return apiClient.post('/accounts/onboarding/complete/')
+38:   }
+39: }
+
+back/accounts/services/onboarding_service.py (108~188행)
+108:
+109:     return len(signals)
+110:
+111:
+112: def calculate_preference_vector(user):
+113:     """
+114:     Calculate user preference vector from signals
+115:
+116:     Algorithm:
+117:     1. Get all user signals
+118:     2. For each signal, get performance embedding vector
+119:     3. Weighted sum: sum(signal_weight * embedding_vector)
+120:     4. L2 normalize result
+121:
+122:     Returns:
+123:         1536-dim list of floats (normalized vector)
+124:     """
+125:     # Get user signals with embeddings
+126:     signals = UserPerformanceSignal.objects.filter(
+127:         user=user,
+128:         performance__embedding__isnull=False
+129:     ).select_related('performance__embedding')
+130:
+131:     if signals.count() == 0:
+132:         # No signals: return zero vector
+133:         return [0.0] * 1536
+134:
+135:     # Initialize accumulator
+136:     weighted_sum = np.zeros(1536, dtype=np.float32)
+137:
+138:     for signal_obj in signals:
+139:         embedding_vector = np.array(
+140:             signal_obj.performance.embedding.vector,
+141:             dtype=np.float32
+142:         )
+143:
+144:         weight = signal_obj.signal
+145:         weighted_sum += weight * embedding_vector
+146:
+147:     # L2 normalization
+148:     norm = np.linalg.norm(weighted_sum)
+149:     if norm > 0:
+150:         normalized = weighted_sum / norm
+151:     else:
+152:         normalized = weighted_sum  # All zeros
+153:
+154:     return normalized.tolist()
+155:
+156:
+157: def complete_onboarding(user):
+158:     """
+159:     Finalize onboarding process
+160:
+161:     Steps:
+162:     1. Calculate preference vector from signals
+163:     2. Create/update UserPreference
+164:     3. Mark user.has_onboarded = True
+165:     4. Set user.onboarded_at timestamp
+166:
+167:     Returns:
+168:         UserPreference instance
+169:     """
+170:     # Calculate vector
+171:     preference_vector = calculate_preference_vector(user)
+172:     signal_count = UserPerformanceSignal.objects.filter(user=user).count()
+173:
+174:     # Save preference
+175:     preference, created = UserPreference.objects.update_or_create(
+176:         user=user,
+177:         defaults={
+178:             'preference_vector': preference_vector,
+179:             'signal_count': signal_count
+180:         }
+181:     )
+182:
+183:     # Update user
+184:     user.has_onboarded = True
+185:     user.onboarded_at = timezone.now()
+186:     user.save(update_fields=['has_onboarded', 'onboarded_at'])
+187:
+188:     return preference
+
+back/recommendations/services/engine.py (17~26행)
+17:     # 가중치 설정 (총합 = 1.0)
+18:     WEIGHTS = {
+19:         'f1_click': 0.20,         # 클릭/관심 로그 기반 (감소)
+20:         'f2_preference': 0.15,    # 취향 매칭 (감소)
+21:         'f3_location': 0.10,      # 위치 근접성 (감소)
+22:         'f4_popularity': 0.15,    # 대중성
+23:         'f5_recency': 0.10,       # 최신성
+24:         'f6_collaborative': 0.10, # 협업 필터링 (감소)
+25:         'f7_embedding': 0.20      # 임베딩 유사도 (NEW)
+26:     }
+
+추천 엔진 가중치는 팀 구현의 맥락 설명용입니다. 검증된 추천 정확도나 개인의 단독 구현 성과를 의미하지 않습니다.

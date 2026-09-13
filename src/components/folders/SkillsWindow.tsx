@@ -44,7 +44,7 @@ export function SkillsWindow() {
           직무 역량
         </h3>
         <p className="text-sm leading-6 text-muted">
-          개발 스택보다 문제 정의, 요구사항, 문서화, 기술 이해의 근거를 먼저 보여줍니다.
+          자료 조사, 요구사항 작성, 개발 협업에서 직접 수행한 작업입니다.
         </p>
       </div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { selectedProjects } from "@/components/tracks/pm/editorial/content";
 import { PmAekkimCase } from "@/components/tracks/pm/editorial/PmAekkimCase";
+import { PmPlayPickCase } from "@/components/tracks/pm/editorial/PmPlayPickCase";
 import { PmSupportingCase } from "@/components/tracks/pm/editorial/PmSupportingCase";
 import { baseUrl } from "@/lib/seo";
 
@@ -19,5 +20,5 @@ export default async function PmProjectPage({ params }: Props) {
   const { slug } = await params;
   const project = selectedProjects.find((item) => item.slug === slug);
   if (!project) notFound();
-  return slug === "aekkim" ? <PmAekkimCase /> : <PmSupportingCase project={project} />;
+  return slug === "aekkim" ? <PmAekkimCase /> : slug === "play-pick" ? <PmPlayPickCase project={project} /> : <PmSupportingCase project={project} />;
 }

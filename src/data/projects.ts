@@ -2,216 +2,228 @@ import type { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
   {
-    id: "busan-eumgil",
-    slug: "busan-eumgil",
-    title: "부산이음길",
-    summary:
-      "부산 이동약자·저시력자의 이동 경험을 접근성 시설, 경로 비교, 음성 UX 중심으로 정리한 Android 길안내 앱입니다.",
-    valueStatement:
-      "공공 현장에서 다뤘던 접근성 문제를 PRD, 사용자 흐름, 화면군, 기능 구현 기준으로 옮긴 핵심 사례입니다.",
-    problem:
-      "이동약자와 저시력자는 같은 목적지라도 보행 안전, 접근성 시설, 안내 방식에 따라 실제 이동 가능성이 달라집니다. 단순 최단 경로보다 접근성 조건을 함께 판단할 수 있는 길안내 경험이 필요했습니다.",
-    role: [
-      "PM/기획",
-      "사용자 흐름 정리",
+    "id": "busan-eumgil",
+    "slug": "busan-eumgil",
+    "title": "부산이음길",
+    "summary": "부산의 보행약자·저시력자가 접근성 시설과 경로를 확인하는 Android 길안내 앱입니다.",
+    "valueStatement": "기획 문서 갱신과 글자 크기 설정, 승인 제보의 지도 표시를 맡았습니다.",
+    "problem": "휠체어 사용자는 경사·계단·단차를, 저시력자는 화면을 읽고 목적지를 입력하는 방식을 함께 고려해야 합니다. 팀은 지도 중심의 보행약자 화면과 큰 버튼·음성 중심의 저시력자 화면을 나눴습니다.",
+    "role": [
+      "기획 문서·요구사항 갱신",
       "Frontend 구현 참여",
-      "UX 통합",
-      "발표",
+      "글자 크기 설정",
+      "승인 제보 지도 표시"
     ],
-    stack: ["Kotlin", "Jetpack Compose", "Android", "TTS/STT", "Map API"],
-    implementationHighlights: [
-      "PRD, 기획서, 요구사항명세서를 기준으로 지도·검색·경로·길안내·마이페이지 흐름과 MVP 범위를 정리했습니다.",
-      "접근성 시설/제보 마커, 안전/최단 경로 비교, 저시력자 전용 화면군, TTS/STT 흐름을 사용자 조건별 기능으로 분리했습니다.",
-      "공공행정 실무에서 익힌 현장 문제 정의 방식을 소프트웨어 화면과 기능 기준으로 연결했습니다.",
+    "stack": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android",
+      "REST API"
     ],
-    troubleshooting: [
-      "지도, 접근성 데이터, 음성 안내, Android 화면 구현이 동시에 얽혀 있어 기능 우선순위와 화면군을 먼저 나눠야 했습니다.",
-      "공공성을 강조하되 검증되지 않은 정책 성과처럼 보이지 않도록, 실제 프로젝트 산출물과 구현 참여 범위 중심으로 표현해야 합니다.",
+    "implementationHighlights": [
+      "PRD·기능명세·화면명세에 제보 사진 업로드와 처리 상태 조건을 반영하고, 요구사항명세서에 구현 상태와 추가 확인 항목을 구분했습니다.",
+      "글자 크기 설정을 마이페이지에 연결하고, 선택 값을 저장해 앱에 적용했습니다. 글자를 키웠을 때 바로가기 영역이 대응하도록 수정했습니다.",
+      "승인 제보를 시설 마커와 별도 레이어로 표시하고, 지도에서 제보 내용을 여는 하단 패널을 연결했습니다."
     ],
-    result: [
-      "정책·현장 문제를 서비스 요구사항으로 번역하는 대표 사례입니다.",
-      "PRD, 요구사항명세서, 발표자료, 시연 흐름을 통해 문제 정의와 구현 참여 범위를 함께 설명할 수 있습니다.",
+    "troubleshooting": [
+      "지도에 표시할 시설과 승인 제보는 데이터 종류가 달라 마커와 상세 패널을 구분했습니다.",
+      "경로 계산과 공간 데이터 구축은 팀의 백엔드·AI 작업입니다. 제가 갱신한 요구사항명세서는 화면 구현과 경로 품질 확인을 별도 항목으로 다룹니다."
     ],
-    evidence: [
+    "result": [
+      "팀은 사용자 유형별 길안내 화면을 구현하고 시연 자료를 남겼습니다. 제 작업은 문서 갱신과 Android 화면·API 연동에서 확인할 수 있습니다.",
+      "실제 이동약자 대상 사용성 시험과 현장 통행 검증 결과는 현재 제시할 자료가 없습니다."
+    ],
+    "evidence": [
       {
-        label: "PRD·기획서·요구사항명세서",
-        category: "문서 산출물",
-        description:
-          "지도, 검색, 경로, 길안내, 마이페이지 흐름과 MVP 범위를 정리한 기획 문서 묶음입니다.",
-        availability: "internal",
+        "label": "사용자 유형별 서비스 흐름",
+        "category": "서비스 범위",
+        "description": "보행약자와 저시력자의 온보딩·길안내 흐름을 설명한 팀 README 발췌입니다.",
+        "availability": "public",
+        "href": "/pm/sources/busan-readme.txt"
       },
       {
-        label: "접근성 화면군과 경로 비교 흐름",
-        category: "화면 흐름",
-        description:
-          "접근성 시설/제보 마커, 안전/최단 경로 비교, 저시력자 화면군을 사용자 조건별 흐름으로 분리했습니다.",
-        availability: "internal",
+        "label": "요구사항과 개인 구현 기록",
+        "category": "문서·코드",
+        "description": "요구사항 갱신, 글자 크기 설정, 승인 제보 표시의 명세와 기여 기록입니다.",
+        "availability": "public",
+        "href": "/pm/sources/busan-contribution.txt"
       },
       {
-        label: "음성 UX와 Android 구현 참여 범위",
-        category: "구현 근거",
-        description:
-          "TTS/STT 안내 흐름과 Android 화면 구현 참여 범위를 공공 접근성 문제 해결 맥락으로 정리했습니다.",
-        availability: "internal",
-      },
+        "label": "원본 온보딩 시연",
+        "category": "시연",
+        "description": "사용자 유형과 보행 조건, 화면 설정을 선택하는 앱 시연입니다.",
+        "availability": "public",
+        "href": "/pm/previews/busan.mp4"
+      }
     ],
-    links: {},
-    thumbnail: "",
-    media: [],
+    "links": {},
+    "thumbnail": "",
+    "media": []
   },
   {
-    id: "aekkim",
-    slug: "aekkim",
-    title: "AEKKIM",
-    summary:
-      "OTT 구독 생성·수정·삭제, 알림, 마이페이지, 구독 분석 흐름을 다룬 Android MVP 프로젝트입니다.",
-    valueStatement:
-      "팀장/PM과 프론트엔드 구현을 함께 맡으며 요구사항, 화면명세, API 연동 기준을 맞춘 PM형 협업 사례입니다.",
-    problem:
-      "팀원이 중도 이탈한 상황에서 남은 팀이 같은 기준으로 기능 범위, 화면 흐름, API 연동 조건을 이해해야 했습니다. 기능 구현보다 파트 간 해석 차이를 줄이는 작업 기준이 중요했습니다.",
-    role: [
+    "id": "aekkim",
+    "slug": "aekkim",
+    "title": "AEKKIM",
+    "summary": "결제 내역과 앱 사용 정보를 바탕으로 구독을 점검·관리하는 Android 앱입니다.",
+    "valueStatement": "PM과 프론트엔드 구현을 맡아 요구사항·화면명세를 갱신하고, 구독 후보 확인과 등록 화면을 구현했습니다.",
+    "problem": "분석으로 찾은 결제가 모두 실제 관리할 구독은 아닙니다. 서비스가 식별된 후보, 직접 확인해야 할 결제, 등록이 끝난 구독에 따라 사용자의 행동과 저장 조건을 구분해야 했습니다.",
+    "role": [
+      "PM",
+      "요구사항·화면명세 관리",
+      "Frontend 구현",
+      "API 연동"
+    ],
+    "stack": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android",
+      "REST API",
+      "FCM"
+    ],
+    "implementationHighlights": [
+      "구독 후보 확인·수동 추가·매핑·대시보드의 요구사항과 화면명세를 갱신했습니다. 최종 요구사항정의서는 2026년 3월 29일 기준 v2.6입니다.",
+      "구독 확인 화면을 구현하고 후보 중복 표시와 확인할 결제 건수 계산을 수정했습니다.",
+      "온보딩·구독 관리·마이페이지 등 Android 화면과 API 연동을 작업했습니다. 구독 확인의 생성 요청·실패 처리는 김응서 팀원, 번들 처리는 박규빈 팀원이 보완했습니다."
+    ],
+    "troubleshooting": [
+      "후보 제외는 현재 분석 세션에서 처리하며, 남은 후보만 구독 생성 대상으로 사용합니다. 일부 요청만 성공한 뒤 재시도하는 경우는 추가 확인 항목입니다.",
+      "팀 QA에서 시스템 알림 권한과 앱 수신 토글의 혼선을 발견했습니다. 두 상태를 분리한 수정은 김응서 팀원의 기여입니다."
+    ],
+    "result": [
+      "Android MVP를 제작해 프로젝트 우수상을 받았습니다(팀 수상). 개인 기여는 요구사항·화면명세 관리와 프론트엔드 구현·API 연동입니다.",
+      "구독 비용 절감액과 실사용 성과는 측정하지 않았습니다. 상세의 오프라인 데모는 예시 데이터로 후보 확인·등록 화면을 보여줍니다."
+    ],
+    "evidence": [
+      {
+        "label": "요구사항정의서 v2.6·화면명세",
+        "category": "문서 산출물",
+        "description": "본인이 현행화한 지원 범위와 구독 확인·수동 매핑의 기준입니다.",
+        "availability": "public",
+        "href": "/pm/sources/aekkim-requirements.txt"
+      },
+      {
+        "label": "구독 확인 화면과 API",
+        "category": "구현 근거",
+        "description": "후보 제외, 등록 요청, 실패 안내와 대시보드 이동 코드입니다.",
+        "availability": "public",
+        "href": "/pm/sources/aekkim-implementation.txt"
+      },
+      {
+        "label": "MVP 테스트 개선사항",
+        "category": "팀 QA",
+        "description": "알림 권한·수신 토글, 금액 표현과 외부 해지 링크의 점검 기록입니다.",
+        "availability": "public",
+        "href": "/pm/sources/aekkim-qa.txt"
+      }
+    ],
+    "links": {},
+    "thumbnail": "",
+    "media": []
+  },
+  {
+    "id": "play-pick",
+    "slug": "play-pick",
+    "title": "Play Pick",
+    "summary": "공연 정보와 사용자 취향을 바탕으로 추천 목록을 보여주는 2인 팀의 웹 서비스입니다.",
+    "valueStatement": "화면 설계·프론트엔드 구현과 온보딩의 응답 저장·완료 처리, 마이페이지 API 연동을 맡았습니다.",
+    "problem": "가입 직후에는 조회나 찜 기록이 없어 첫 추천에 쓸 취향 정보가 필요했습니다. 공연 카드를 보고 호불호를 선택하는 온보딩을 구현했습니다.",
+    "role": [
       "팀장",
-      "PM",
-      "Frontend 메인 구현",
-      "요구사항/화면명세 관리",
-      "API 연동 조율",
+      "화면 설계·Frontend",
+      "온보딩 응답 저장",
+      "마이페이지 API 연동",
+      "발표·문서"
     ],
-    stack: ["Kotlin", "Jetpack Compose", "Android", "REST API", "FCM"],
-    implementationHighlights: [
-      "요구사항정의서와 화면명세서를 v1.4~v1.7 이상 업데이트하며 변경 기준을 문서로 남겼습니다.",
-      "FE 초기 세팅, 브랜치 전략, UsageStats 가이드, FE 테스트 계획, README를 정리했습니다.",
-      "온보딩, 로그인, 약관, 소셜 로그인, 구독 관리, 알림함, FCM, 마이페이지, 프로모션, 구독 분석 세션의 화면 흐름과 API 연동을 맡았습니다.",
+    "stack": [
+      "Vue.js",
+      "Pinia",
+      "Django",
+      "REST API"
     ],
-    troubleshooting: [
-      "팀 이탈 이후 역할과 일정이 흔들릴 수 있어 문서 기준, 브랜치 전략, 구현 범위를 먼저 안정화해야 했습니다.",
-      "API 작업은 백엔드 구현이 아니라 프론트엔드 연동과 명세 정합성 확인으로 정확히 표현해야 합니다.",
+    "implementationHighlights": [
+      "‘보고싶어요’·‘안볼래요’·‘모르겠어요’를 구분하고, 호불호 8개 이상이면 완료할 수 있도록 진행률과 버튼 상태를 구현했습니다.",
+      "공연 ID와 응답을 API로 저장한 뒤 온보딩을 완료하도록 처리했습니다. 중립 응답은 저장 요청과 완료 개수에서 제외했습니다.",
+      "온보딩 취향 저장, 관람함과 마이페이지·커뮤니티 화면을 작업했습니다. 임경수 팀원은 데이터 수집, 핵심 검색·추천 엔진과 배포 설정을 맡았습니다."
     ],
-    result: [
-      "주니어 서비스기획/APM 지원 시 요구사항·협업 역량을 보여주는 핵심 사례입니다.",
-      "요구사항정의서, 화면명세서 변경 이력, README, 테스트 계획으로 팀 운영과 구현 범위를 함께 설명할 수 있습니다.",
+    "troubleshooting": [
+      "호불호 저장이 실패하면 오류를 알리고 완료 처리를 진행하지 않도록 했습니다.",
+      "8개는 구현 당시의 완료 기준입니다. 선택 개수에 따른 입력 부담이나 추천 품질은 비교하지 않았습니다."
     ],
-    evidence: [
+    "result": [
+      "취향 선택·저장·첫 추천 조회를 로컬에서 재현한 데모를 남겼습니다. 예시 계정과 보관된 공연 데이터를 사용합니다.",
+      "화면의 응답이 API 요청과 추천용 데이터에 반영되는 과정을 구현했습니다. 실제 사용자 완료율과 추천 품질은 측정하지 않았습니다."
+    ],
+    "evidence": [
       {
-        label: "요구사항정의서 v1.4~v1.7 변경 이력",
-        category: "문서 산출물",
-        description:
-          "팀원 이탈 이후 기능 범위와 화면/API 기준을 맞추기 위해 요구사항정의서 버전을 지속 관리했습니다.",
-        availability: "internal",
+        "label": "온보딩 명세와 역할 기록",
+        "category": "기능·기여",
+        "description": "2인 팀의 역할과 2025년 12월 온보딩 구현 커밋입니다.",
+        "availability": "public",
+        "href": "/pm/sources/play-pick-onboarding.txt"
       },
       {
-        label: "구독 관리·알림·마이페이지 담당 화면",
-        category: "화면 구현",
-        description:
-          "구독 생성·수정·삭제, 알림함, FCM, 마이페이지, 구독 분석 흐름의 FE 구현과 연동 기준을 맡았습니다.",
-        availability: "internal",
-      },
-      {
-        label: "브랜치 전략·UsageStats 가이드·FE 테스트 계획",
-        category: "협업 기준",
-        description:
-          "프론트엔드 초기 세팅과 협업 문서를 정리해 팀이 같은 기준으로 구현 범위를 확인할 수 있게 했습니다.",
-        availability: "internal",
-      },
+        "label": "화면 상태·API·취향 저장",
+        "category": "구현 근거",
+        "description": "응답 값 변환, 저장·완료 요청 순서와 서버 취향 계산 코드입니다.",
+        "availability": "public",
+        "href": "/pm/sources/play-pick-implementation.txt"
+      }
     ],
-    links: {},
-    thumbnail: "",
-    media: [],
+    "links": {},
+    "thumbnail": "",
+    "media": []
   },
   {
-    id: "play-pick",
-    slug: "play-pick",
-    title: "Play Pick",
-    summary:
-      "공연 콘텐츠 데이터를 구조화하고 사용자 취향과 공연 정보를 연결하는 공연추천 커뮤니티 플랫폼입니다.",
-    valueStatement:
-      "기획에서 개발, 배포까지 이어진 사이클을 경험한 보조 프로젝트 사례입니다.",
-    problem:
-      "공연 정보는 장르, 일정, 장소, 사용자 취향이 흩어져 있어 사용자가 탐색하고 비교하기 어렵습니다. 콘텐츠 데이터를 서비스에서 활용 가능한 구조로 정리할 필요가 있었습니다.",
-    role: ["기획", "개발", "REST API 연동", "배포 경험"],
-    stack: ["Django", "Vue.js", "REST API", "Python"],
-    implementationHighlights: [
-      "공연 콘텐츠 데이터를 사용자 취향과 연결할 수 있도록 서비스 구조를 설계했습니다.",
-      "Django, Vue.js, REST API 기반으로 기획→개발→배포 사이클을 경험했습니다.",
-      "배포 경험은 보조 맥락으로 두고, 현재 상세 설명은 데이터 구조화와 API 연동 흐름에 집중했습니다.",
-    ],
-    troubleshooting: [
-      "추천/커뮤니티라는 표현이 과장되지 않도록 구현된 기능과 데이터 구조화 경험 중심으로 설명해야 합니다.",
-      "공연 데이터가 어떤 기준으로 정리됐는지, 사용자가 어떤 흐름으로 정보를 탐색하는지 보강 자료가 필요했습니다.",
-      "라이브 서비스 여부보다 GitHub, 화면 캡처, 시연 흐름으로 구현 범위를 설명하는 편이 안전합니다.",
-    ],
-    result: [
-      "배포 경험과 데이터 구조화 경험을 보조적으로 설명할 수 있습니다.",
-      "주요 화면, 기능 명세, API 연동 흐름을 통해 기획에서 구현까지의 경험을 보여줄 수 있습니다.",
-    ],
-    evidence: [
-      {
-        label: "공연 콘텐츠 데이터 구조화",
-        category: "데이터 구조",
-        description:
-          "장르, 일정, 장소, 사용자 취향을 서비스 탐색 흐름에서 활용할 수 있는 데이터 기준으로 정리했습니다.",
-        availability: "internal",
-      },
-      {
-        label: "Django/Vue REST API 연동 경험",
-        category: "구현 근거",
-        description:
-          "기획에서 화면 구현과 REST API 연동까지 이어지는 전체 개발 흐름을 실습했습니다.",
-        availability: "internal",
-      },
-    ],
-    links: {},
-    thumbnail: "",
-    media: [],
-  },
-  {
-    id: "smile-game",
-    slug: "smile-game",
-    title: "웃지마게임",
-    summary:
-      "WebRTC 기반 실시간 화상 환경에서 웃음참기 대결을 설계한 7인 팀 프로젝트입니다.",
-    valueStatement:
-      "아이디어를 고집하지 않고 설문 데이터와 피드백을 바탕으로 MVP 방향을 조정한 기획 사례입니다.",
-    problem:
-      "초기 아이디어가 실제 사용자에게 충분히 설득력 있는지 확인해야 했습니다. 실시간 화상 서비스 특성상 기술 난도와 재미 요소, MVP 범위를 함께 검증해야 했습니다.",
-    role: [
+    "id": "smile-game",
+    "slug": "smile-game",
+    "title": "웃지마게임",
+    "summary": "AI 웃음 감지로 승패를 정하는 7인 팀의 실시간 화상 대결 게임입니다.",
+    "valueStatement": "설문과 기획·기능명세를 맡고, 친구 초대방의 생성·입장·대기 화면을 구현했습니다.",
+    "problem": "게임에 흥미를 느껴도 낯선 사람 앞에서 얼굴을 공개하기는 부담스러울 수 있었습니다. 설문에서 흥미도·사용 의향·얼굴 공개 부담을 나눠 조사했습니다.",
+    "role": [
       "PM",
-      "Frontend",
-      "시장조사 통합",
-      "설문 설계",
-      "기능명세/발표자료 정리",
+      "설문 설계·분석",
+      "시장조사 취합",
+      "기획·기능명세",
+      "친구 초대방 구현"
     ],
-    stack: ["React", "WebRTC", "TypeScript", "Figma"],
-    implementationHighlights: [
-      "컨설턴트 피드백 이후 48시간 내 설문을 설계·배포하고 168개 응답을 확보했습니다.",
-      "응답 분석을 바탕으로 MVP 방향을 조정하고 기획서, 기능명세서, 발표자료, 회의록 6건을 정리했습니다.",
-      "WebRTC 기반 실시간 서비스의 기술 제약을 고려해 화면과 기능 범위를 조정했습니다.",
+    "stack": [
+      "React",
+      "TypeScript",
+      "WebRTC",
+      "OpenVidu"
     ],
-    troubleshooting: [
-      "소재가 가볍게 보일 수 있어 포트폴리오에서는 게임 자체보다 설문→분석→피봇 과정만 강조하는 편이 안전합니다.",
-      "168개 응답 숫자는 반복 사용하지 말고 이 프로젝트의 데이터 기반 의사결정 근거로만 사용해야 합니다.",
+    "implementationHighlights": [
+      "2026년 1월 13~14일 설문 응답 168건을 분석했습니다. 얼굴 공개가 꽤·매우 부담된다는 응답은 112명(66.7%)이었습니다.",
+      "팀은 1월 14일 회의에서 친구 초대방을 먼저 만들고 랜덤 매칭을 추가하기로 결정했습니다. 저는 기획서·기능명세서와 회의록 6건을 정리했습니다.",
+      "친구 초대방 생성·입장·대기실 화면을 구현하고, 초대한 상대가 보이지 않는 문제와 통신 연동 오류를 수정했습니다."
     ],
-    result: [
-      "PM/서비스기획 지원 시 사용자 검증과 MVP 피봇 경험을 보조 증거로 제시할 수 있습니다.",
-      "설문 문항, 응답 요약, 피봇 전후 기획안, 회의록, 발표자료로 의사결정 과정을 설명할 수 있습니다.",
+    "troubleshooting": [
+      "AI 판정의 오판과 지연은 승패·진행에 영향을 줍니다. 기획에는 판정 기준 설명과 리플레이를 넣었고, 실시간 처리가 어려울 때의 대안은 컨설턴트 회의에서 논의했습니다.",
+      "웃음 감지 모델은 양한빈 팀원, 배틀 화면의 AI 연동은 박세홍 팀원이 맡았습니다. 개인 기여는 조사·기획 문서와 초대방 구현입니다."
     ],
-    evidence: [
+    "result": [
+      "친구 초대부터 게임 시작까지의 시연과, 조사에서 기능 우선순위 결정으로 이어진 기록을 남겼습니다.",
+      "설문은 출시 전 사용 의향 조사입니다. 출시 후 참여율·재대결률과 모델 정확도의 사용자 검증 결과는 제시할 자료가 없습니다."
+    ],
+    "evidence": [
       {
-        label: "168개 응답 기반 설문 분석",
-        category: "사용자 검증",
-        description:
-          "컨설턴트 피드백 후 48시간 내 설문을 설계·배포하고 응답 분석 결과로 MVP 방향을 조정했습니다.",
-        availability: "internal",
+        "label": "168건 설문 분석",
+        "category": "사용 의향 조사",
+        "description": "조사 기간·표본 구성과 얼굴 노출 부담의 응답 수입니다.",
+        "availability": "public",
+        "href": "/pm/sources/smile-survey.txt"
       },
       {
-        label: "피봇 전후 기획안·회의록·발표자료",
-        category: "의사결정 기록",
-        description:
-          "초기 아이디어에서 MVP 범위를 재조정한 판단 근거를 기획안, 회의록, 발표자료로 남겼습니다.",
-        availability: "internal",
-      },
+        "label": "기획 변경과 초대방 구현",
+        "category": "회의·기여 기록",
+        "description": "친구 매칭 우선 결정, AI 판정 논의와 팀의 역할·구현 기록입니다.",
+        "availability": "public",
+        "href": "/pm/sources/smile-decisions.txt"
+      }
     ],
-    links: {},
-    thumbnail: "",
-    media: [],
-  },
+    "links": {},
+    "thumbnail": "",
+    "media": []
+  }
 ];

@@ -6,7 +6,7 @@ export const skills: Skill[] = [
     category: "problem-framing",
     level: "strong",
     description:
-      "조례, 예산, 회의록, 설문 데이터를 기준화해 공공문제를 의사결정 가능한 쟁점으로 정리했습니다.",
+      "부산참여연대에서 예산·결산 자료와 의회 활동을 검토하고 의정평가 보고서를 작성했습니다.",
     relatedProjects: ["busan-eumgil"],
   },
   {
@@ -22,7 +22,7 @@ export const skills: Skill[] = [
     category: "stakeholder",
     level: "comfortable",
     description:
-      "시민사회 네트워크 운영과 팀 프로젝트 PM 경험을 통해 이해관계자별 언어를 문서와 실행 기준으로 맞췄습니다.",
+      "행정사무감사 시민의제와 조례 의견을 취합했습니다. 웃지마게임에서는 회의 결정과 기능 우선순위를 기록했습니다.",
     relatedProjects: ["aekkim", "smile-game"],
   },
   {
@@ -30,7 +30,7 @@ export const skills: Skill[] = [
     category: "data",
     level: "comfortable",
     description:
-      "웃지마게임 설문 168개 응답 분석과 공공정책 설문 경험을 바탕으로 기획 방향을 검증하는 데 데이터를 사용했습니다.",
+      "웃지마게임 설문 168건에서 사용 의향과 얼굴 노출 부담을 분석하고 친구 매칭을 우선하는 팀 논의에 반영했습니다.",
     relatedProjects: ["smile-game"],
   },
   {
@@ -38,7 +38,7 @@ export const skills: Skill[] = [
     category: "technical",
     level: "comfortable",
     description:
-      "React, Next.js, TypeScript, Kotlin, REST API를 직접 다뤄 화면, API, 데이터 흐름의 제약을 이해합니다.",
+      "애낌의 구독 후보 상태와 플레이픽의 취향 저장 API를 구현하며 로딩·실패·완료 조건을 다뤘습니다.",
     relatedProjects: ["busan-eumgil", "aekkim", "play-pick"],
   },
   {

@@ -33,7 +33,7 @@ export function ProjectInspectorSidebar({
           <div className="min-w-0 flex-1">
             <p className="truncate text-[13px] font-bold">All projects</p>
             <p className="text-[11px] font-medium text-muted">
-              {totalLogCount} documented logs
+              {totalLogCount}개 설명 항목
             </p>
           </div>
           <span className="rounded-md bg-white/80 px-2 py-0.5 text-[11px] font-bold text-slate-700 dark:bg-white/10 dark:text-slate-100">

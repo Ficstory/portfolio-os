@@ -5,15 +5,15 @@ import { baseUrl } from "@/lib/seo";
 import { PmShell } from "@/components/tracks/pm/editorial/PmShell";
 
 export const metadata: Metadata = {
-  title: { absolute: "이재호 | 문제를 읽고, 실행을 설계하는 PM" },
+  title: { absolute: "이재호 | PM 포트폴리오" },
   description:
-    "AEKKIM, 부산이음길, 웃지마게임의 문제와 판단, 요구사항과 구현 근거를 담은 이재호의 PM 포트폴리오입니다.",
+    "애낌, 부산이음길, 웃지마게임, 플레이픽에서 맡은 조사, 요구사항 문서, 화면·API 구현을 소개합니다.",
   alternates: {
     canonical: new URL("/pm/", baseUrl).toString(),
   },
   openGraph: {
-    title: "이재호 | 문제를 읽고, 실행을 설계하는 PM",
-    description: "프로젝트의 문제와 판단, 요구사항과 구현 근거를 담은 PM 포트폴리오입니다.",
+    title: "이재호 | PM 포트폴리오",
+    description: "팀 프로젝트의 조사·기획·개발 경험과 산출물을 소개합니다.",
     url: new URL("/pm/", baseUrl).toString(),
     type: "website",
     images: [],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "이재호 | PM 포트폴리오",
-    description: "문제를 읽고, 실행을 설계합니다.",
+    description: "조사, 요구사항 문서, 화면·API 구현 경험을 소개합니다.",
     images: [],
   },
   robots: {

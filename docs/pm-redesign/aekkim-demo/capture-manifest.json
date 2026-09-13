@@ -1,0 +1,27 @@
+{
+  "sourceRepository": "https://github.com/Ficstory/aekkim",
+  "sourceFilesSha256": {
+    "app/build.gradle.kts": "e3815dc95bd0732dd8138367ddcbff816c691f78a157ed24fe0279f17c2518d5",
+    "app/src/main/java/com/ssafy/e106/app/App.kt": "93b7599ad2f70326c0986932a6849eba5f09e73c37402242642304db4824097a",
+    "app/src/main/java/com/ssafy/e106/app/MainActivity.kt": "0b132802900177a69d1a8cd38c60f6a88f9adf5ad4c89db71ec8e3c9f1c526c8",
+    "app/src/main/java/com/ssafy/e106/di/NetworkModule.kt": "62d2a39835c9bc1c6cbf1cc56945e9ab5ce0648d6ef70180ebbeb20fe7d93f32",
+    "app/src/main/java/com/ssafy/e106/data/repository/SubscriptionRepository.kt": "ba043573b9140c0b7b034841d0d58d9676b36947cba53a5159ae49d5f4b54e46",
+    "app/src/main/java/com/ssafy/e106/demo/OfflineDemoApi.kt": null,
+    "app/src/demo/AndroidManifest.xml": null
+  },
+  "captureDevice": "emulator-5560; Android 36.1; 1080x2340",
+  "demoPackage": "com.ssafy.e106.demo",
+  "internetPermission": false,
+  "video": {
+    "originalBytes": 2079696,
+    "originalSha256": "b4db5024a6a93de1c889f251534f1c25f3ea91ae1a294cd166810ee9e907a2ee",
+    "previewBytes": 270747,
+    "posterBytes": 20768,
+    "width": 480,
+    "height": 1040,
+    "fps": 24,
+    "audio": false,
+    "playbackSpeed": 1
+  },
+  "apkSha256": "83c9bf1038c22f0e1d82799d6a02d75b6848060175effafc499102ca0df1601f"
+}

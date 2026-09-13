@@ -5,29 +5,29 @@ const trackLinks = [
     href: "/public-digital",
     label: "공공·디지털 서비스기획",
     summary:
-      "공공 문제를 사용자 요구, 서비스 흐름, 요구사항, 기능 기준으로 번역하는 트랙입니다.",
+      "이동약자 길안내 앱의 문서·화면 작업과 공공자료 분석 경험을 소개합니다.",
     evidence: "부산이음길, 부산참여연대 공공자료 분석, AEKKIM",
   },
   {
     href: "/pm",
     label: "주니어 PM / APM",
     summary:
-      "요구사항, 화면 흐름, MVP 범위, 팀 협업 기준을 정리하는 트랙입니다.",
-    evidence: "AEKKIM, 부산이음길, 웃지마게임, 문서화 경험",
+      "네 개 팀 프로젝트에서 맡은 조사, 요구사항 문서, 화면·API 구현을 소개합니다.",
+    evidence: "AEKKIM, 부산이음길, 웃지마게임, Play Pick",
   },
   {
     href: "/policy",
     label: "정책지원관",
     summary:
-      "조례·예산·행정사무감사·지역 의제를 정책 문서와 의정지원 자료로 구조화하는 트랙입니다.",
+      "부산참여연대에서 맡은 예산·결산 분석과 의정평가, 행정사무감사 의제 취합 업무를 소개합니다.",
     evidence: "부산참여연대, 행감 의제, 조례·예산 분석, 정책문서 작성",
   },
   {
     href: "/assembly",
     label: "국회 보좌관",
     summary:
-      "공공 이슈를 조사하고 입법·상임위·질의·메시지 자료로 정리하는 트랙입니다.",
-    evidence: "의정감시, 회기 모니터링, 보도자료·논평, 이슈 브리프",
+      "지방의회 활동을 조사하고 보고서·발제·대외 설명 자료를 작성한 경험을 소개합니다.",
+    evidence: "의정감시, 회기 모니터링, 평가보고서, 발제·인터뷰",
   },
 ] as const;
 
@@ -43,7 +43,7 @@ export function TrackLinkPanel() {
             Career Tracks
           </h2>
           <p className="max-w-2xl text-sm leading-6 text-muted">
-            루트 포트폴리오는 통합 OS 허브로 유지하고, 지원서에는 아래 직무별 URL을 직접 첨부합니다.
+            관심 있는 직무별로 프로젝트와 경력을 살펴볼 수 있습니다.
           </p>
         </div>
       </header>

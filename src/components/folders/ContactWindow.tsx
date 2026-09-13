@@ -31,7 +31,7 @@ export function ContactWindow() {
           Contact
         </h3>
         <p className="max-w-2xl text-sm leading-6 text-muted">
-          서버 저장형 연락처 폼 대신 GitHub와 이메일 링크를 제공합니다.
+          프로젝트와 채용 관련 문의는 이메일로 연락해 주세요.
         </p>
       </div>
 

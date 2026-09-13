@@ -1,3 +1,5 @@
+기여 구분(2026-09-11 Git 재확인): 이재호는 초기 화면·후보 제외 상태(97ac7e3), 후보 중복(6c3125a), 결제 건수(d5ffadd·883e333)를 구현·수정했습니다. 초기 완료 처리는 FE 로컬 세션만 종료했습니다. 실제 구독 생성 요청·실패 처리는 김응서(b8de9e8), 번들 및 관련 실패 상태 보완은 박규빈(0f4e00a)의 기여입니다. 아래 코드는 이 작업들이 합쳐진 파일입니다.
+
 원본 파일: SubscriptionConfirmViewModel.kt
 원본 저장소: 3. 특화pjt\S14P21E106\FE\app\src\main\java\com\ssafy\e106\feature\subscriptionconfirm\SubscriptionConfirmViewModel.kt
 확인일: 2026-09-09

@@ -41,7 +41,7 @@ export function MobileHome() {
             {profile.headline}
           </p>
           <p className="mt-3 text-sm leading-6 text-muted">
-            모바일에서는 창을 끌어 움직이는 방식 대신 폴더별 문서 화면으로 탐색합니다.
+            아래에서 소개, 프로젝트, 이력서를 살펴보실 수 있습니다.
           </p>
         </header>
 

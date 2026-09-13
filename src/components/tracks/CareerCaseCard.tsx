@@ -14,9 +14,9 @@ type CareerDocumentCardProps = CareerCaseCardProps & {
 };
 
 const evidenceLevelLabel = {
-  strong: "강한 증빙",
-  medium: "보조 증빙",
-  "needs-check": "검증 필요",
+  strong: "관련 자료",
+  medium: "관련 자료",
+  "needs-check": "추가 확인",
 } as const;
 
 const documentTrackLabel = {
@@ -130,10 +130,10 @@ export function CareerCaseCard({
 
       <div className="mt-auto rounded-lg border border-slate-200 bg-slate-50 p-3">
         <h4 className="text-xs font-bold uppercase tracking-normal text-slate-500">
-          증빙 기준
+          관련 자료
         </h4>
         <ul className="mt-2 space-y-1.5 text-xs leading-5 text-slate-600">
-          {careerCase.evidence.slice(0, 2).map((evidence) => (
+          {careerCase.evidence.filter((evidence) => evidence.level !== "needs-check").slice(0, 2).map((evidence) => (
             <li className="min-w-0 break-words" key={`${careerCase.id}-${evidence.publicLabel}`}>
               <span className="font-bold text-slate-800">
                 {evidenceLevelLabel[evidence.level]}
@@ -154,10 +154,9 @@ export function CareerDocumentCard({
   index,
   trackId,
 }: CareerDocumentCardProps) {
-  const relevanceKey = resolveRelevanceKey(trackId);
   const linkedEvidence = careerCase.evidence.filter((evidence) => evidence.href);
   const visibleEvidence =
-    linkedEvidence.length > 0 ? linkedEvidence.slice(0, 3) : careerCase.evidence.slice(0, 2);
+    linkedEvidence.length > 0 ? linkedEvidence.slice(0, 3) : careerCase.evidence.filter((evidence) => evidence.level !== "needs-check").slice(0, 2);
 
   return (
     <article
@@ -191,7 +190,7 @@ export function CareerDocumentCard({
         <div className="mt-5 grid gap-4 md:grid-cols-2">
           <section>
             <h4 className="text-xs font-bold uppercase tracking-normal text-slate-500">
-              상황
+              업무 배경
             </h4>
             <p className="mt-2 break-words text-sm leading-6 text-slate-700">
               {careerCase.context}
@@ -200,11 +199,11 @@ export function CareerDocumentCard({
 
           <section>
             <h4 className="text-xs font-bold uppercase tracking-normal text-slate-500">
-              직무 연결
+              맡은 일
             </h4>
-            <p className="mt-2 break-words text-sm font-semibold leading-6 text-slate-950">
-              {careerCase.relevance[relevanceKey]}
-            </p>
+            <ul className="mt-2 space-y-2 break-words text-sm leading-6 text-slate-700">
+              {careerCase.workHighlights.map((work) => <li key={work}>{work}</li>)}
+            </ul>
           </section>
         </div>
       </div>

@@ -16,10 +16,10 @@ export function TrackHero({ model }: TrackHeroProps) {
           <p className="text-xs font-bold uppercase tracking-normal text-sky-700">
             {track.label}
           </p>
-          <h1 className="mt-3 max-w-[calc(100dvw-2.5rem)] break-all text-2xl font-bold leading-tight text-slate-950 [overflow-wrap:anywhere] sm:max-w-full sm:break-words sm:text-3xl md:text-4xl">
+          <h1 className="mt-3 max-w-[calc(100dvw-2.5rem)] break-keep text-2xl font-bold leading-tight text-slate-950 [overflow-wrap:anywhere] sm:max-w-full sm:text-3xl md:text-4xl">
             {profile.headline}
           </h1>
-          <p className="mt-5 max-w-[calc(100dvw-2.5rem)] break-all text-base leading-7 text-slate-700 [overflow-wrap:anywhere] sm:max-w-3xl sm:break-words">
+          <p className="mt-5 max-w-[calc(100dvw-2.5rem)] break-keep text-base leading-7 text-slate-700 [overflow-wrap:anywhere] sm:max-w-3xl">
             {profile.introduction}
           </p>
 
@@ -42,7 +42,7 @@ export function TrackHero({ model }: TrackHeroProps) {
             {profile.strengths.map((strength) => (
               <li className="flex max-w-[calc(100dvw-5rem)] gap-3 text-sm leading-6 text-slate-700 sm:max-w-full" key={strength}>
                 <span aria-hidden="true" className="mt-2 size-2 rounded-full bg-[var(--color-green)]" />
-                <span className="min-w-0 break-all [overflow-wrap:anywhere] sm:break-words">{strength}</span>
+                <span className="min-w-0 break-keep [overflow-wrap:anywhere]">{strength}</span>
               </li>
             ))}
           </ul>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ProjectMetaPanel } from "@/components/projects/ProjectMetaPanel";
 import { ExternalLink, FileCheck2 } from "lucide-react";
 import type { Project } from "@/types/portfolio";
@@ -89,7 +90,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           className="rounded-lg border border-white/54 bg-white/72 p-6 shadow-[0_18px_48px_rgba(15,23,42,0.12)] backdrop-blur-[18px] dark:border-white/14 dark:bg-slate-950/42"
         >
           <p className="text-xs font-bold uppercase tracking-normal text-sky-700 dark:text-sky-200">
-            프로젝트 한 줄 가치
+            프로젝트
           </p>
           <h1
             className="mt-3 text-pretty text-3xl font-bold text-slate-950 sm:text-4xl dark:text-white"
@@ -103,6 +104,9 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
             {project.summary}
           </p>
+          <Link className="mt-4 inline-flex text-sm font-bold text-sky-700 underline underline-offset-4 dark:text-sky-200" href={`/pm/${project.slug}/`}>
+            시연과 상세 작업 보기
+          </Link>
         </section>
 
         <ProjectSection id="project-problem" title="문제 정의">
@@ -124,7 +128,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           </ul>
         </ProjectSection>
 
-        <ProjectSection id="project-stack" title="기술 이해">
+        <ProjectSection id="project-stack" title="사용 기술">
           <ul className="flex flex-wrap gap-2">
             {project.stack.map((tech) => (
               <li
@@ -137,15 +141,15 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           </ul>
         </ProjectSection>
 
-        <ProjectSection id="project-implementation" title="산출물과 기술 이해">
+        <ProjectSection id="project-implementation" title="직접 수행한 작업">
           <TextList items={project.implementationHighlights} />
         </ProjectSection>
 
-        <ProjectSection id="project-troubleshooting" title="제약 조건과 주의점">
+        <ProjectSection id="project-troubleshooting" title="작업 중 다룬 제약">
           <TextList items={project.troubleshooting} />
         </ProjectSection>
 
-        <ProjectSection id="project-result" title="직무 관점의 의미와 증빙">
+        <ProjectSection id="project-result" title="작업 결과">
           <TextList items={project.result} />
         </ProjectSection>
 
@@ -153,9 +157,9 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <EvidenceList items={project.evidence} />
         </ProjectSection>
 
-        <ProjectSection id="project-links-media" title="역할·기술 요약">
+        {(project.media.length > 0 || Object.values(project.links).some(Boolean)) && <ProjectSection id="project-links-media" title="역할·기술 요약">
           <ProjectMetaPanel project={project} />
-        </ProjectSection>
+        </ProjectSection>}
       </div>
     </article>
   );

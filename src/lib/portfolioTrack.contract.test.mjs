@@ -38,7 +38,7 @@ test("resolves the public default track as the root portfolio", () => {
   assert.equal(track.id, "default");
   assert.equal(track.path, "/");
   assert.equal(track.noIndex, false);
-  assert.match(track.profile.headline, /공공·사회 문제/);
+  assert.match(track.profile.headline, /공공자료/);
   assert.equal(track.projectOrder[0], "busan-eumgil");
 });
 
@@ -51,7 +51,7 @@ test("resolves the PM track with AEKKIM first and noindex enabled", () => {
   assert.equal(track.kind, "serviceCase");
   assert.equal(track.noIndex, true);
   assert.equal(track.canonicalPath, "/");
-  assert.match(track.profile.headline, /주니어 서비스 기획자/);
+  assert.match(track.profile.headline, /요구사항/);
   assert.deepEqual(Array.from(track.projectOrder.slice(0, 2)), [
     "aekkim",
     "busan-eumgil",
@@ -67,7 +67,7 @@ test("resolves public digital, policy, and assembly tracks as direct-link portfo
   assert.equal(publicDigital.kind, "serviceCase");
   assert.equal(publicDigital.noIndex, true);
   assert.equal(publicDigital.canonicalPath, "/");
-  assert.match(publicDigital.profile.headline, /공공·디지털 서비스기획자/);
+  assert.match(publicDigital.profile.headline, /접근성/);
   assert.equal(publicDigital.projectOrder[0], "busan-eumgil");
   assert.equal(publicDigital.careerCaseOrder[0], "participation-local-governance");
 
@@ -77,7 +77,7 @@ test("resolves public digital, policy, and assembly tracks as direct-link portfo
   assert.equal(policy.kind, "careerDocument");
   assert.equal(policy.noIndex, true);
   assert.equal(policy.canonicalPath, "/");
-  assert.match(policy.profile.headline, /정책 문서/);
+  assert.match(policy.profile.headline, /조례·예산/);
   assert.equal(policy.careerCaseOrder[0], "participation-local-governance");
 
   const assembly = resolvePortfolioTrack("assembly");
@@ -86,7 +86,7 @@ test("resolves public digital, policy, and assembly tracks as direct-link portfo
   assert.equal(assembly.kind, "careerDocument");
   assert.equal(assembly.noIndex, true);
   assert.equal(assembly.canonicalPath, "/");
-  assert.match(assembly.profile.headline, /보좌 실무자/);
+  assert.match(assembly.profile.headline, /의회 활동/);
   assert.equal(assembly.careerCaseOrder[0], "council-monitoring");
 });
 

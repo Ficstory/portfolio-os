@@ -122,15 +122,15 @@ test("uses track-specific section copy around the case cards", () => {
   const publicDigital = getTrackLandingModel("publicDigital");
   assert.equal(publicDigital.caseSections.primary.eyebrow, "Public Digital Case");
   assert.equal(publicDigital.caseSections.primary.title, "공공디지털 대표 프로젝트");
-  assert.match(publicDigital.caseSections.secondary.title, /공공 문제정의/);
+  assert.match(publicDigital.caseSections.secondary.title, /공공자료/);
 
   const pm = getTrackLandingModel("pm");
   assert.equal(pm.caseSections.primary.eyebrow, "PM Case");
   assert.equal(pm.caseSections.primary.title, "PM 대표 프로젝트");
-  assert.match(pm.caseSections.secondary.summary, /제품 총괄 경험이 아니라/);
+  assert.match(pm.caseSections.secondary.summary, /공공자료/);
 
   const policy = getTrackLandingModel("policy");
-  assert.equal(policy.caseSections.primary.title, "정책지원관 경력 브리프");
+  assert.equal(policy.caseSections.primary.title, "정책지원관 지원 · 주요 경력");
   assert.match(policy.caseSections.primary.summary, /행정사무감사/);
 
   const assembly = getTrackLandingModel("assembly");

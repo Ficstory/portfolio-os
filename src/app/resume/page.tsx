@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Download } from "lucide-react";
 
 import { resumeSummary } from "@/content/resume-summary";
@@ -20,6 +21,7 @@ export default function ResumePage() {
   return (
     <main className="wallpaper min-h-screen px-5 py-8 sm:px-8 sm:py-12">
       <article className="mx-auto w-full max-w-5xl">
+        <nav aria-label="포트폴리오 이동" className="mb-5 flex gap-5 text-sm font-bold text-slate-800 dark:text-slate-100"><Link href="/pm/">PM 포트폴리오</Link><Link href="/">전체 포트폴리오</Link></nav>
         <div
           className={
             hasResumePdf
@@ -103,8 +105,10 @@ export default function ResumePage() {
                 key={highlight.projectId}
               >
                 <h3 className="text-sm font-bold text-slate-950 dark:text-white">
+                  <Link className="underline underline-offset-4" href={`/pm/${highlight.projectId}/`}>
                   {projectTitleById.get(highlight.projectId) ??
                     highlight.projectId}
+                  </Link>
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-200">
                   {highlight.summary}
