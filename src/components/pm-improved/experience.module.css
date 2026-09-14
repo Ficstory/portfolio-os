@@ -1,0 +1,196 @@
+.section {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(190px, 0.65fr) minmax(0, 1.75fr);
+  gap: 72px;
+  padding: 82px 0 104px;
+  border-top: 1px solid var(--pm-text);
+}
+
+.section .headingEyebrow {
+  margin: 0 0 18px;
+  color: var(--pm-accent);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.section .heading {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 620;
+  line-height: 1.45;
+  letter-spacing: -0.04em;
+}
+
+.body { max-width: 790px; }
+
+.section .lead {
+  margin: 0;
+  font-size: clamp(25px, 2.6vw, 36px);
+  font-weight: 550;
+  line-height: 1.55;
+  letter-spacing: -0.04em;
+}
+
+.group { margin-top: 48px; }
+.group:first-of-type { margin-top: 38px; }
+
+.section .groupTitle {
+  margin: 0 0 13px;
+  color: var(--pm-accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.records { border-top: 1px solid var(--pm-line); }
+
+.record {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(165px, 190px);
+  gap: 18px 28px;
+  padding: 24px 0 26px;
+  border-bottom: 1px solid var(--pm-line);
+}
+
+.section .recordTitle,
+.section .recordMeta,
+.section .recordDetail { margin: 0; }
+
+.recordTitle {
+  color: var(--pm-text);
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.65;
+}
+
+.recordTitle span {
+  display: block;
+  margin-top: 3px;
+  color: var(--pm-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.recordMeta {
+  color: var(--pm-muted);
+  font-size: 13px;
+  line-height: 1.65;
+  font-variant-numeric: tabular-nums;
+}
+
+.recordDetail {
+  grid-column: 1 / -1;
+  color: var(--pm-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.section .dutyList {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 7px;
+  margin: 2px 0 0;
+  padding-left: 1.15em;
+  list-style: disc;
+  color: var(--pm-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.award {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 23px 0 0;
+}
+
+.section .award p { margin: 0; }
+.awardTitle { font-weight: 650; }
+.awardMeta { margin-top: 5px !important; color: var(--pm-muted); font-size: 14px; }
+
+.awardLink {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--pm-text);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.skills {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.skills div {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 12px;
+  color: var(--pm-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.skills dt { color: var(--pm-accent); font-weight: 650; }
+.skills dd { margin: 0; }
+
+.resumeActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin-top: 38px;
+}
+
+.resumePrimary,
+.resumeSecondary {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 18px;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.resumePrimary { background: var(--pm-accent); color: #fff !important; }
+.resumeSecondary { border: 1px solid var(--pm-text); }
+.resumeFormat { color: var(--pm-muted); font-size: 12px; }
+
+.awardLink:hover,
+.resumeSecondary:hover { color: var(--pm-accent) !important; border-color: var(--pm-accent); }
+.resumePrimary:hover { background: #1745da; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .awardLink,
+  .resumePrimary,
+  .resumeSecondary { transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease; }
+}
+
+@media (max-width: 900px) {
+  .section { grid-template-columns: 1fr; gap: 32px; }
+  .record { grid-template-columns: minmax(0, 1fr) minmax(170px, 0.5fr); }
+  .recordDetail { grid-column: 1 / -1; }
+}
+
+@media (max-width: 767px) {
+  .section { gap: 27px; padding: 52px 0 67px; }
+  .section .headingEyebrow { margin-bottom: 8px; }
+  .section .heading { font-size: 22px; }
+  .section .lead { font-size: 24px; }
+  .group { margin-top: 39px; }
+  .group:first-of-type { margin-top: 29px; }
+  .record { grid-template-columns: 1fr; gap: 7px; padding: 20px 0 22px; }
+  .recordDetail { grid-column: auto; }
+  .section .dutyList { grid-column: auto; margin-top: 9px; font-size: 14px; }
+  .award { align-items: flex-start; flex-direction: column; }
+  .skills div { grid-template-columns: 78px minmax(0, 1fr); font-size: 13px; }
+  .resumeActions { align-items: stretch; }
+  .resumePrimary, .resumeSecondary { flex: 1 1 100%; justify-content: space-between; }
+  .resumeFormat { width: 100%; }
+}

@@ -1,0 +1,6 @@
+.flow { display:grid; margin:30px 0; border-block:1px solid var(--pm-line); }
+.flow li { display:grid; grid-template-columns:42px 1fr; gap:18px; padding:18px 0; }
+.flow li+li { border-top:1px solid var(--pm-line); }
+.flow li>span { padding-top:3px; color:var(--pm-accent); font-size:11px; font-variant-numeric:tabular-nums; }
+.flow strong { font-size:16px; }
+.flow p { margin:4px 0 0; color:var(--pm-muted); font-size:14px; line-height:1.65; }
