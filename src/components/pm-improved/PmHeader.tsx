@@ -9,6 +9,7 @@ import styles from "./pm.module.css";
 
 const navigation = [
   { label: "프로젝트", href: "/PM/#work" },
+  { label: "인쇄 미리보기", href: "/PM/print/" },
   { label: "경험", href: "/PM/#about" },
   { label: "이력서", href: pmResume.pdfPath, opensInNewTab: true },
   { label: "이메일", href: links.email },

@@ -71,20 +71,24 @@ export function BusanAdditionalVisual() {
 
 export function SurveyVisual() {
   const burdenCount = survey.responses[0].count + survey.responses[1].count;
+  const burdenPercent = (burdenCount / survey.total * 100).toFixed(1);
   return <div className={styles.surveyVisual}>
-    <div className={styles.surveyTakeaway}><span className={styles.visualLabel}>얼굴을 드러내는 일의 부담</span><p className={styles.surveyNumber}>{(burdenCount / survey.total * 100).toFixed(1)}<span>%</span></p><p>‘꽤’ 또는 ‘매우’ 부담됨<br /><span>{survey.total}명 중 {burdenCount}명</span></p></div>
-    <div className={styles.chart}><p className={styles.chartTitle}>얼굴 노출 부담</p><ul>{survey.responses.map((response, index) => <li key={response.label}><div><span>{response.label}</span><span>{response.count}명 <small>{(response.count / survey.total * 100).toFixed(1)}%</small></span></div><span aria-hidden="true" className={index < 2 ? styles.barStrong : styles.bar} style={{ width: `${response.count / 56 * 100}%` }} /></li>)}</ul><p className={styles.chartNote}>사전 설문 168명 · 2026.01 · 24–29세와 남성 응답 비중이 높음</p></div>
+    <div className={styles.surveyTakeaway}><span className={styles.visualLabel}>얼굴을 드러내는 일의 부담</span><p className={styles.surveyNumber}>{burdenPercent}<span>%</span></p><p>‘꽤’ 또는 ‘매우’ 부담됨<br /><span>{survey.total}명 중 {burdenCount}명</span></p></div>
+    <div className={styles.chart}><p className={styles.chartTitle}>얼굴 노출 부담</p><ul>{survey.responses.map((response, index) => <li key={response.label}><div><span>{response.label}</span><span>{response.count}명 <small>{(response.count / survey.total * 100).toFixed(1)}%</small></span></div><span aria-hidden="true" className={index < 2 ? styles.barStrong : styles.bar} style={{ width: `${response.count / 56 * 100}%` }} /></li>)}</ul><p className={styles.chartNote}>사전 설문 {survey.total}명 · 2026.01 · 24–29세와 남성 응답 비중이 높음</p></div>
   </div>;
 }
 
 function SmileResearchVisual() {
+  const burdenCount = survey.responses[0].count + survey.responses[1].count;
+  const burdenPercent = (burdenCount / survey.total * 100).toFixed(1);
+
   return <div className={visual.smileEvidence}>
     <SurveyVisual />
     <div className={visual.decisionTrace}>
       <span>설문 분석과 친구 초대방 구현 과정 요약</span>
       <ol>
-        <li><strong>사전 설문</strong><p>흥미 92/168<br />참여 의향 75/168</p></li>
-        <li><strong>장벽 확인</strong><p>얼굴 노출 부담<br />112/168 · 66.7%</p></li>
+        <li><strong>사전 설문</strong><p>흥미 {survey.signals.interest}/{survey.total}<br />참여 의향 {survey.signals.willingToParticipate}/{survey.total}</p></li>
+        <li><strong>장벽 확인</strong><p>얼굴 노출 부담<br />{burdenCount}/{survey.total} · {burdenPercent}%</p></li>
         <li><strong>팀 결정</strong><p>친구 초대 우선<br />랜덤 매칭도 유지</p></li>
         <li><strong>내 담당</strong><p>설문·결정 기록<br />방 생성·입장·대기 구현</p></li>
       </ol>

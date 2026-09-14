@@ -23,7 +23,7 @@ export const education: readonly ResumeEntry[] = [
     title: "졸업",
     organization: "국립한국해양대학교 동아시아학과",
     period: "2022.08",
-    detail: "국제지역학사 · 평점 3.74/4.5",
+    detail: "국제지역학사",
   },
   {
     title: "수료",

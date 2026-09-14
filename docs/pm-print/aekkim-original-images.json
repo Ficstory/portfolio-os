@@ -1,0 +1,26 @@
+{
+  "repository": "https://github.com/Ficstory/aekkim",
+  "readmeSection": "MVP 기능",
+  "sourceCommit": "f77dbefc35e0d63d5525b84b0194a51543892b45",
+  "verification": "Both downloaded develop images match the pinned commit bytes and the user's attached README screenshot. No image content was edited.",
+  "images": [
+    {
+      "role": "Aekkim introduction dashboard",
+      "source": "https://raw.githubusercontent.com/Ficstory/aekkim/f77dbefc35e0d63d5525b84b0194a51543892b45/docs/images/mvp/mvp-dashboard.jpg",
+      "local": "public/pm-improved/evidence/aekkim-dashboard-original.jpg",
+      "width": 1080,
+      "height": 2284,
+      "sha256": "a0fa4f0da20130d253b207066f74c201ccabb4bf6ae3bd1e609f512dc0c896c2",
+      "visualChecks": ["52,548원", "최대 39,190원", "검토가 필요한 결제 내역 3건"]
+    },
+    {
+      "role": "Aekkim introduction promotion detail",
+      "source": "https://raw.githubusercontent.com/Ficstory/aekkim/f77dbefc35e0d63d5525b84b0194a51543892b45/docs/images/mvp/mvp-promotion-detail.jpg",
+      "local": "public/pm-improved/evidence/aekkim-promotion-original.jpg",
+      "width": 1080,
+      "height": 2284,
+      "sha256": "00ff470c7be896c2073f163095ce71e0936cf271adf9fbd0af929c3a582ac0fd",
+      "visualChecks": ["디즈니+ 티빙 웨이브 번들", "34,300원 → 21,500원", "월 12,800원", "연간 153,600원"]
+    }
+  ]
+}

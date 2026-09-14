@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowUpRight, Pause, Play } from "lucide-react";
 import { useId, useRef, useState } from "react";
 
+import { pmMedia } from "./content";
 import styles from "./pm.module.css";
 
 type Props = {
@@ -27,8 +28,9 @@ export function PmVideoPreview({
   const [playing, setPlaying] = useState(false);
   const [failed, setFailed] = useState(false);
   const descriptionId = useId();
-  const src = `/pm/previews/${file}.mp4`;
-  const poster = `/pm/previews/${file}.webp`;
+  const media = pmMedia.previews[file];
+  const src = media.video;
+  const poster = media.poster;
 
   const togglePlayback = async () => {
     const video = videoRef.current;

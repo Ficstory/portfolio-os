@@ -162,6 +162,10 @@ export const workingPrinciples = [
 
 export const survey = {
   total: 168,
+  signals: {
+    interest: 92,
+    willingToParticipate: 75,
+  },
   responses: [
     { label: "매우 부담됨", count: 56 },
     { label: "꽤 부담됨", count: 56 },
@@ -170,6 +174,23 @@ export const survey = {
     { label: "전혀 부담 없음", count: 8 },
   ],
 };
+
+export const pmMedia = {
+  previews: {
+    aekkim: { poster: "/pm/previews/aekkim.webp", video: "/pm/previews/aekkim.mp4" },
+    busan: { poster: "/pm/previews/busan.webp", video: "/pm/previews/busan.mp4" },
+    smile: { poster: "/pm/previews/smile.webp", video: "/pm/previews/smile.mp4" },
+    "play-pick": { poster: "/pm/previews/play-pick.webp", video: "/pm/previews/play-pick.mp4" },
+  },
+  evidence: {
+    aekkimDashboard: "/pm-improved/evidence/aekkim-dashboard-original.jpg",
+    aekkimCandidateReview: "/pm-improved/evidence/aekkim-candidate-review-capture.png",
+    aekkimPromotion: "/pm-improved/evidence/aekkim-promotion-original.jpg",
+    busanMap: "/pm-improved/evidence/busan-route-map.png",
+    busanUserType: "/pm/busan-low-vision.png",
+    busanMeeting: "/pm-improved/evidence/busan-mvp-meeting.png",
+  },
+} as const;
 
 export const subscriptionFlow = [
   { title: "감지", description: "결제 내역 분석" },

@@ -5,10 +5,13 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (pathname === "/PM" || pathname.startsWith("/PM/")) {
-    const slug = pathname.slice(4).replace(/\/$/, "");
+    const slug = pathname === "/PM" || pathname === "/PM/"
+      ? ""
+      : pathname.slice(4).replace(/\/$/, "");
     // Validate before filesystem lookup: Windows can otherwise serve an SSG
     // file for a differently cased slug even with dynamicParams disabled.
-    if (slug && !selectedProjects.some((project) => project.slug === slug)) {
+    const isKnownProject = selectedProjects.some((project) => project.slug === slug);
+    if (pathname.includes("//") || (slug && slug !== "print" && !isKnownProject)) {
       return new NextResponse("Not Found", { status: 404 });
     }
     const destination = request.nextUrl.clone();

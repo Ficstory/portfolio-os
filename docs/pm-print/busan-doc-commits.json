@@ -1,0 +1,596 @@
+{
+  "generatedFrom": {
+    "repository": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\4. 자율pjt\\S14P31E102",
+    "head": "a4d140276d87afae163e8997685f66983f15eefc",
+    "refs": [
+      "fa6a8e2df2919f31b260af1a7552b4a3718d372a refs/codex-backup/route-01-440-fix",
+      "6a928a2360fdce97b2c0fe16d0dee76a9236994d refs/codex-backup/route-01-440-fix-encoding",
+      "61df0118a313534d1570ea83b758dc92702d027f refs/heads/claude/gracious-jones",
+      "a4d140276d87afae163e8997685f66983f15eefc refs/heads/develop",
+      "e64359996831397d8ace9959eb48341e010ccfb0 refs/heads/fe/feat/auth001-design-parity-S14P31E102-313",
+      "bec33a1543948ccf71e70c5bcdb1cf6470226a8e refs/heads/fe/feat/auth001-social-login-S14P31E102-438",
+      "744d313b465bda2300c6ff618779528675088647 refs/heads/fe/feat/auth002-design-parity-S14P31E102-326",
+      "e29b306fc907fe1ffcd85540ddf726dea229b203 refs/heads/fe/feat/bookmark-server-persistence-S14P31E102-689",
+      "817ce78d32711e4042570804a07eb782023160b0 refs/heads/fe/feat/dest-search-current-location-map-select-S14P31E102-340",
+      "95cc40d575983a7502dd79a865194cb578b01f57 refs/heads/fe/feat/dest-search-result-design-440",
+      "ddd44e27a6a04ef566e20a3ada7b9cef17d80ee8 refs/heads/fe/feat/fac01-sheet-design-parity-S14P31E102-319",
+      "fd6186bc791a68ca139b1b392ef0d965549eb4c6 refs/heads/fe/feat/main-entry-terms-api-S14P31E102-439",
+      "04b78c3100ebc9565bdc6064c93e2f2bd1ceab65 refs/heads/fe/feat/map-01-home-map-normal-mode-design-S14P31E102-437",
+      "4cbb28c9d86896920a3a96adf618fa8032c158f2 refs/heads/fe/feat/map-main-current-location-S14P31E102-104",
+      "eb944bdb585abfde4d44f732a52c550d091ff11c refs/heads/fe/feat/map-place-facility-api-sync-S14P31E102-436",
+      "46ccef8ed76d310aa7433b9cfd62858dd28240d4 refs/heads/fe/feat/mypage-common-state-ui-mvp-S14P31E102-331",
+      "033c73da54bf5ade94044f36231093a3092bb56d refs/heads/fe/feat/nav01-design-parity-S14P31E102-323",
+      "b003d96f57939f8304433fd3fb8f725c8f1b3825 refs/heads/fe/feat/navigation-report-button-S14P31E102-341",
+      "90a5c27a8aa0a98d210cbe56cc6d77c2eb15e11e refs/heads/fe/feat/navigation-screen-improvement-S14P31E102-582",
+      "584229871ac13dcd4b07857af5689f2e9e86b0da refs/heads/fe/feat/route-preview-map-layer-S14P31E102-203",
+      "39892169006aca358ab057d6596e11e25c634b0d refs/heads/fe/feat/route01-design-parity-S14P31E102-321",
+      "3a5a44381844c1db4f650af58ad4ae6626bfbe01 refs/heads/fe/feat/route02-design-parity-S14P31E102-322",
+      "3100f20a8780a6f7b9a77acedc99e0e7cf1d78e0 refs/heads/fe/feat/screen-transition-design-parity-S14P31E102-587",
+      "a6c8ca481c5a2086e527ce5f9e0501aab72dfa3f refs/heads/fe/feat/screen-transition-ux-S14P31E102-584",
+      "4c1b1a7501cec4dc96707b916c8b54d75f576628 refs/heads/fe/feat/text-search-map-handoff-S14P31E102-106",
+      "450c07d4b99dfb599ce4d8e9192dd0563bcf44a6 refs/heads/fe/feat/text-size-screen-renewal-S14P31E102-699",
+      "a6e1dac23e3dfafdcd4a00513b203be428836ef6 refs/heads/fe/feat/text-size-setting-704",
+      "1211b454e3297a767942467c5e074a9b661592a8 refs/heads/fe/feat/tts-guidance-S14P31E102-202",
+      "91fe163b9dd44d75fbbebcf809ff33ed564f24dc refs/heads/fe/fix/docs-terms-696",
+      "70de212445255928d610bf2c2ec05de58e218856 refs/heads/fe/fix/low-vision-back-701",
+      "bda7b81f8e122635ced417f7a8cb725f38d2f7d9 refs/heads/fe/fix/route-error-message-classification-S14P31E102-694",
+      "24b3503b0e3ab62b098ffb08b6fb612ec2ce01ce refs/heads/fe/fix/route-walk-test-S14P31E102-628",
+      "a4d140276d87afae163e8997685f66983f15eefc refs/remotes/origin/HEAD",
+      "162d1558bbf61405ddc4b2aeda6d18f73f94c33b refs/remotes/origin/ai/docs/modelchoice-30",
+      "b24e808ce2c18f329c8c53d9902bce8c822286c4 refs/remotes/origin/ai/feat/Pocdocs-167",
+      "dc35ffa794b5c597d60e60795ed4880aff40312d refs/remotes/origin/ai/feat/agent-225",
+      "e68c1dd932e053f3d0b9ad70600ea22621aa187d refs/remotes/origin/ai/feat/agentwheel-225",
+      "02cee0fb03a197e5ced882f5d1f84458411f314b refs/remotes/origin/ai/feat/blockcoderenew-217",
+      "d254aed453ad41a3c0c1f9979d87569e1b48ce85 refs/remotes/origin/ai/feat/claudeapi-163",
+      "38c426d56f9efe0d6f77c1f5db67c49ef48fe65e refs/remotes/origin/ai/feat/dataprepare-226",
+      "cde0ad70a1c05ca9f700783e2410c09e9f2f4290 refs/remotes/origin/ai/feat/detection-345",
+      "963fff01587cea918d337af1e0ffd0a34d2c1b9b refs/remotes/origin/ai/feat/geminiapi-162",
+      "0502c221bbf718bda24bbe870d9c5ebd0ae91706 refs/remotes/origin/ai/feat/llmagent-225",
+      "e657fcfc27ed6c4a820cc46d8ff2d3678c734b1a refs/remotes/origin/ai/feat/ondevicemerge-434",
+      "a4ce406023bfea2223fb447481e53a21af869d7f refs/remotes/origin/ai/feat/promptrenew-224",
+      "5c4cdea969631eefb5887f669b0b4fc899988390 refs/remotes/origin/ai/feat/roadviewdetect-pipeline-428",
+      "ceebe3b05ae02260bcce2be77532ae8c86ef844a refs/remotes/origin/ai/test/aiupgrade-ondevice-361",
+      "d0c41bb74afbac3b371aa1e5f21a0c4a2643ae09 refs/remotes/origin/ai/test/sttpipeline-164",
+      "4b1d2dbe5a0d1f8161efa2370f588da072cc2e98 refs/remotes/origin/backup/develop-author-fix",
+      "5b73eee68f736d6b73f544c50d8bf0bbb3f2fc36 refs/remotes/origin/be/docs/accessibility-public-data-poc-S14P31E102-141",
+      "c55e30d285754f2de7e8a3047a067f89e2451028 refs/remotes/origin/be/docs/swagger-api-description",
+      "1cf0830a6de112c1747c15585411f998bf19ac0c refs/remotes/origin/be/feat/accessibility-public-data-poc-S14P31E102-141",
+      "995e185e6f7cd6b1d86931c5d0cc1123b5a959a8 refs/remotes/origin/be/feat/admin-api-S14P31E102-687",
+      "c8f94eef2ba4e021c4bbd5e457f3f81f2481eb7d refs/remotes/origin/be/feat/admin-ops-S14P31E102-383",
+      "0c98d3f8e26d44ecd29bc3140f9b3105fff3edc6 refs/remotes/origin/be/feat/api-erd-docs-renewal-S14P31E102-257",
+      "1bd187cafc596690c77b9e61655ca52d616c2491 refs/remotes/origin/be/feat/auth-S14P31E102-368",
+      "f1841c92783ec64f4073c87d3846261d31889b56 refs/remotes/origin/be/feat/hazard-report-real-data-S14P31E102-670",
+      "f1319dd3e69fc24a0d507358b78265266ffb117b refs/remotes/origin/be/feat/initial-setting-S14P31E102-74",
+      "3cd85bbff7ad16e8a8c36ca2e0e18d5d5190cda2 refs/remotes/origin/be/feat/route-rating-api-S14P31E102-512",
+      "cad3698ca81dfab2220923aab64a061ecf1b9fe7 refs/remotes/origin/be/feat/setting-S14P31E102-271",
+      "219da043869a6ac6b1447bdd7f3aa77a4ef0410e refs/remotes/origin/be/feat/transit-refresh-S14P31E102-501",
+      "2f4ddda6517462c5ff102f9e8854e357ef00b6ac refs/remotes/origin/be/feat/transit-search-S14P31E102-519",
+      "f638a9a17d85438d0750ec08059c74b5b223d73c refs/remotes/origin/be/feat/user-role-S14P31E102-529",
+      "569c0c5dd04ee4e6773c55db9247109604d16cd8 refs/remotes/origin/be/fix/graphhopper-patch-S14P31E102-593",
+      "481befa6022d10637c94cc8725604ba8deb567cc refs/remotes/origin/codex/hotfix-admin-map-performance",
+      "d731472ab864ee82fb43728b8e4a1daec72cfb62 refs/remotes/origin/codex/hotfix-segment-attribute-detail-20260520",
+      "ba65df6e0e0c85284ce04369f993ecfff84571c8 refs/remotes/origin/codex/prod-observability-log-signal-20260513",
+      "a4d140276d87afae163e8997685f66983f15eefc refs/remotes/origin/develop",
+      "4bd6184ab9ff8021fd6c04df1b2354796a343db3 refs/remotes/origin/fe/feat/S14P31E102-333-fe",
+      "6ee1d3e1a48633ffcfac9c6c73561341681bc2c5 refs/remotes/origin/fe/feat/S14P31E102-476-bmk-02-api",
+      "717399bcdd99afa70ab518f759f7440e763841ac refs/remotes/origin/fe/feat/S14P31E102-479-report-01-02",
+      "4d55c6c39a138309012a9689a402e694687596b4 refs/remotes/origin/fe/feat/S14P31E102-481-report-api-pending-retry",
+      "e06fdb4827ba59093732eb2091d4b1237157b550 refs/remotes/origin/fe/feat/S14P31E102-583-report-design-edit",
+      "b80734a622ab68fc5fe8d4df50c664f8aea442cc refs/remotes/origin/fe/feat/S14P31E102-660-gps-currentlocationmanager",
+      "4149feb413d400324e5c584e0b02bcaa6765a8ed refs/remotes/origin/fe/feat/S14P31E102-667-androidnetworkmonitor-submitreport",
+      "815b7b3c84a6e46624cbe9fc0ebf7dad8a52e41f refs/remotes/origin/fe/feat/app-entry-init-setting-S14P31E102-103",
+      "de14db82869a970a0f78986932b49fcb3f4d0730 refs/remotes/origin/fe/feat/arr-design-parity-S14P31E102-324",
+      "e64359996831397d8ace9959eb48341e010ccfb0 refs/remotes/origin/fe/feat/auth001-design-parity-S14P31E102-313",
+      "bec33a1543948ccf71e70c5bcdb1cf6470226a8e refs/remotes/origin/fe/feat/auth001-social-login-S14P31E102-438",
+      "744d313b465bda2300c6ff618779528675088647 refs/remotes/origin/fe/feat/auth002-design-parity-S14P31E102-326",
+      "e29b306fc907fe1ffcd85540ddf726dea229b203 refs/remotes/origin/fe/feat/bookmark-server-persistence-S14P31E102-689",
+      "817ce78d32711e4042570804a07eb782023160b0 refs/remotes/origin/fe/feat/dest-search-current-location-map-select-S14P31E102-340",
+      "95cc40d575983a7502dd79a865194cb578b01f57 refs/remotes/origin/fe/feat/dest-search-result-design-440",
+      "ddd44e27a6a04ef566e20a3ada7b9cef17d80ee8 refs/remotes/origin/fe/feat/fac01-sheet-design-parity-S14P31E102-319",
+      "cd4009dfa4783a5819c4d06a43a02f18764ce782 refs/remotes/origin/fe/feat/fe-pending-S14P31E102-334",
+      "c1af916048a2ddc9816e560b8632710863e65664 refs/remotes/origin/fe/feat/low-vision-guidance-S14P31E102-278",
+      "c9876456f70e3a870c43a130122d6dd0bbc8af1c refs/remotes/origin/fe/feat/low-vision-live-guidance-S14P31E102-588",
+      "fd6186bc791a68ca139b1b392ef0d965549eb4c6 refs/remotes/origin/fe/feat/main-entry-terms-api-S14P31E102-439",
+      "04b78c3100ebc9565bdc6064c93e2f2bd1ceab65 refs/remotes/origin/fe/feat/map-01-home-map-normal-mode-design-S14P31E102-437",
+      "4cbb28c9d86896920a3a96adf618fa8032c158f2 refs/remotes/origin/fe/feat/map-main-current-location-S14P31E102-104",
+      "eb944bdb585abfde4d44f732a52c550d091ff11c refs/remotes/origin/fe/feat/map-place-facility-api-sync-S14P31E102-436",
+      "d8dc2436887bfdfa27aea36b7d6e448424e88087 refs/remotes/origin/fe/feat/mobility-tts-integration-S14P31E102-454",
+      "69647fadcd9f4c51de20f6cb1c66e84bb8fcf6eb refs/remotes/origin/fe/feat/mypage-app-info-card-style-S14P31E102-328",
+      "46ccef8ed76d310aa7433b9cfd62858dd28240d4 refs/remotes/origin/fe/feat/mypage-common-state-ui-mvp-S14P31E102-331",
+      "033c73da54bf5ade94044f36231093a3092bb56d refs/remotes/origin/fe/feat/nav01-design-parity-S14P31E102-323",
+      "b003d96f57939f8304433fd3fb8f725c8f1b3825 refs/remotes/origin/fe/feat/navigation-report-button-S14P31E102-341",
+      "90a5c27a8aa0a98d210cbe56cc6d77c2eb15e11e refs/remotes/origin/fe/feat/navigation-screen-improvement-S14P31E102-582",
+      "584229871ac13dcd4b07857af5689f2e9e86b0da refs/remotes/origin/fe/feat/route-preview-map-layer-S14P31E102-203",
+      "39892169006aca358ab057d6596e11e25c634b0d refs/remotes/origin/fe/feat/route01-design-parity-S14P31E102-321",
+      "3a5a44381844c1db4f650af58ad4ae6626bfbe01 refs/remotes/origin/fe/feat/route02-design-parity-S14P31E102-322",
+      "958e029dff087bf15bef7c2b76f602cef4540dc0 refs/remotes/origin/fe/feat/saved-place-map-route-handoff-S14P31E102-214",
+      "3100f20a8780a6f7b9a77acedc99e0e7cf1d78e0 refs/remotes/origin/fe/feat/screen-transition-design-parity-S14P31E102-587",
+      "a6c8ca481c5a2086e527ce5f9e0501aab72dfa3f refs/remotes/origin/fe/feat/screen-transition-ux-S14P31E102-584",
+      "ba530edda32f65d0bb60c88086d63fbcbb050837 refs/remotes/origin/fe/feat/terms-guide-5step-S14P31E102-284",
+      "4c1b1a7501cec4dc96707b916c8b54d75f576628 refs/remotes/origin/fe/feat/text-search-map-handoff-S14P31E102-106",
+      "450c07d4b99dfb599ce4d8e9192dd0563bcf44a6 refs/remotes/origin/fe/feat/text-size-screen-renewal-S14P31E102-699",
+      "a6e1dac23e3dfafdcd4a00513b203be428836ef6 refs/remotes/origin/fe/feat/text-size-setting-704",
+      "1211b454e3297a767942467c5e074a9b661592a8 refs/remotes/origin/fe/feat/tts-guidance-S14P31E102-202",
+      "0e5edbdade395746df75fc465fe38dd4d1c9fc6b refs/remotes/origin/fe/feat/voice-agent-contract-S14P31E102-225",
+      "91fe163b9dd44d75fbbebcf809ff33ed564f24dc refs/remotes/origin/fe/fix/docs-terms-696",
+      "70de212445255928d610bf2c2ec05de58e218856 refs/remotes/origin/fe/fix/low-vision-back-701",
+      "58f625ac338827e918fab2e804ef2194d9197e98 refs/remotes/origin/fe/fix/low-vision-terms-flow-S14P31E102-400",
+      "1170d4e3171f21147a08164bc64067aaa2a79191 refs/remotes/origin/fe/fix/map-home-design-alignment-S14P31E102-437",
+      "b3c7e2e1963d551ab949bc520f6f86794b1ef7e6 refs/remotes/origin/fe/fix/map-qc-S14P31E102-421",
+      "4defc46fbb34e78b0ad878c732828071f8855f0f refs/remotes/origin/fe/fix/navigation-remaining-metrics-S14P31E102-588",
+      "150279ed0afcc2036808c398b3fc7fb097968459 refs/remotes/origin/fe/fix/parser-category-S14P31E102-402",
+      "6ba1fb3db22609a056677fcc586f6f776e9394d2 refs/remotes/origin/fe/fix/report-history-new-report-S14P31E102-285",
+      "bda7b81f8e122635ced417f7a8cb725f38d2f7d9 refs/remotes/origin/fe/fix/route-error-message-classification-S14P31E102-694",
+      "cc62af9f3661b3e3bc4c8b4c02ac83fdfc81725a refs/remotes/origin/fe/fix/route-walk-fix-S14P31E102-628",
+      "bae5ff167dc946bd86f0806eda31838d2c1625b7 refs/remotes/origin/fe/fix/search-place-route-qc-S14P31E102-421",
+      "8365f90d3cdfe77dfc7023f44e7ef91c81fb8151 refs/remotes/origin/fe/refactor/low-vision-bottom-safe-zone-S14P31E102-402",
+      "26a027ddb37236e11fa3094fce1ab43c3b0dac62 refs/remotes/origin/fe/refactor/low-vision-my-page-layout-S14P31E102-282",
+      "7d927fd291df01806cda38b34b085b9379802a79 refs/remotes/origin/feat/admin-hazard-review-flow-S14P31E102-670",
+      "3fce6526bfa06e214a33de4981b5bf5c0ae207e5 refs/remotes/origin/fix/author-jayul-to-kjy",
+      "3a5a44381844c1db4f650af58ad4ae6626bfbe01 refs/remotes/origin/fix/develop-before-72efe938-S14P31E102-0",
+      "9f5044fb9a2129338510487fca33a8df3487290a refs/remotes/origin/fix/develop-recovery",
+      "9f5044fb9a2129338510487fca33a8df3487290a refs/remotes/origin/fix/develop-recovery-S14P31E102-0",
+      "7bef7526d31b25f47d873e7ff86f378269364292 refs/remotes/origin/hotfix/S14P31E102-752-segment-attribute-sync",
+      "1fb4814d25634d8b6aa4bc835d5904d899f18b56 refs/remotes/origin/inf/feat/hourly-observability-S14P31E102-549",
+      "0767d541eef647e13027beda70ad8f4e27d5398d refs/remotes/origin/inf/fix/graphhopper-refresh-snap-guard-S14P31E102-687",
+      "1e6553561d26ee07101ad4152beda2dee95faca1 refs/remotes/origin/inf/hotfix/jenkins-timestamper-S14P31E102-549",
+      "b7c571994985d901d8de90e4376f65b19230a2f5 refs/remotes/origin/infra/chore/docker-disk-maintenance-S14P31E102-549",
+      "ad0f5b771e376ebbec1542c2052533f033d80949 refs/remotes/origin/infra/feat/graphhopper-bluegreen-refresh-S14P31E102-405",
+      "16abbcef5611e711c0abdfb2ec3770622ae59e1b refs/remotes/origin/master",
+      "8be30cadedf40e013e2113d4e42f8ea81274f78a refs/remotes/origin/test/route-policy-layout-fix",
+      "a8666d25c794aca079edee2bf8924cea36c427af refs/stash"
+    ],
+    "command": "node .codex_tmp/pm-print-revision/generate-busan-doc-commits.mjs <repo> docs/pm-print/busan-doc-commits.json"
+  },
+  "scope": {
+    "startInclusive": "2026-04-01T00:00:00+09:00",
+    "endExclusive": "2026-06-01T00:00:00+09:00",
+    "authorsExact": [
+      "LeeJaeho",
+      "이재호"
+    ],
+    "rootPathExact": "Docs/",
+    "noMerges": true,
+    "filtering": "For each --all --no-merges commit, exact author name and parsed author timestamp are checked; commits with at least one exact Docs/ path are retained."
+  },
+  "count": 29,
+  "commits": [
+    {
+      "hash": "91fe163b9dd44d75fbbebcf809ff33ed564f24dc",
+      "authorTimestamp": "2026-05-20T06:45:56+09:00",
+      "committerTimestamp": "2026-05-20T06:45:56+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝 Docs[S14P31E102-696]: 요구사항명세서와 기능 정합성 최신화",
+      "paths": [
+        "Docs/PRD/2026-04-14_기능명세서.md",
+        "Docs/PRD/2026-05-20_요구사항명세서.md",
+        "Docs/PRD/archive/2026-04_requirement_sources/2026-04-20_MON-01_연계_요구사항_정리.md"
+      ]
+    },
+    {
+      "hash": "42ad6dbd8a2793dfb90ded841fcd558d0863a9ae",
+      "authorTimestamp": "2026-05-20T06:23:57+09:00",
+      "committerTimestamp": "2026-05-20T06:23:57+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "🗂️ Chore[S14P31E102-696]: 제출용 Docs 목차와 archive 구조 정리",
+      "paths": [
+        "Docs/2026-04-07_docs_작성_규칙.md",
+        "Docs/ADR/2026-04-15_BE_접근성_공공데이터_적재_PoC_결과.md",
+        "Docs/ADR/2026-04-15_BE_접근성_공공데이터_적재_PoC_계획.md",
+        "Docs/ADR/2026-04-20_BE_도시철도_접근성_보강_PoC_결과.md",
+        "Docs/ADR/2026-04-20_BE_도시철도_접근성_보강_PoC_계획.md",
+        "Docs/ADR/2026-04-20_BE_보행_네트워크_GIS_보강_PoC_결과.md",
+        "Docs/ADR/2026-04-20_BE_보행_네트워크_GIS_보강_PoC_계획.md",
+        "Docs/ERD/ERD_v1.md",
+        "Docs/ERD/ERD_v2.md",
+        "Docs/ERD/ERD_v3.md",
+        "Docs/ERD/archive/ERD_v1.md",
+        "Docs/ERD/archive/ERD_v2.md",
+        "Docs/ERD/archive/ERD_v3.md",
+        "Docs/PRD/2026-04-20_MON-01_연계_요구사항_정리.md",
+        "Docs/PRD/archive/2026-04_requirement_sources/2026-04-20_MON-01_연계_요구사항_정리.md",
+        "Docs/PoC/2026-04-21_부산_경사도_추출_정제_OSM_연계_통합_PoC.md",
+        "Docs/README.md",
+        "Docs/기획/2026-04-10 함세상 장애인자립생활센터 미팅 자료.pdf",
+        "Docs/기획/2026-04-10_필드트립_질문지_v2.docx",
+        "Docs/기획/2026-04-10_함세상_장애인자립생활센터_인터뷰_결과.md",
+        "Docs/기획/2026-04-11_MVP_화면명세서.md",
+        "Docs/기획/2026-04-11_확장_기능_화면명세서.md",
+        "Docs/기획/2026-04-13_간트차트.pdf",
+        "Docs/기획/2026-04-20_간트차트_정리.md",
+        "Docs/기획/2026-04-23_개발_일정_공유.md",
+        "Docs/기획/archive/drafts/2026-04-11_MVP_화면명세서.md",
+        "Docs/기획/archive/drafts/2026-04-11_확장_기능_화면명세서.md",
+        "Docs/기획/archive/drafts/기능명세서_재구성안.md",
+        "Docs/기획/archive/research/2026-04-10 함세상 장애인자립생활센터 미팅 자료.pdf",
+        "Docs/기획/archive/research/2026-04-10_필드트립_질문지_v2.docx",
+        "Docs/기획/archive/research/2026-04-10_함세상_장애인자립생활센터_인터뷰_결과.md",
+        "Docs/기획/archive/research/검토자료/20260407_또산템_바이올낫_기획안_평가보고서_장주윤.md",
+        "Docs/기획/archive/research/검토자료/20260407_배리어프리_키오스크_기획안_검증 평가보고서_이재호.md",
+        "Docs/기획/archive/research/검토자료/20260407_부산동행맵_기획안_및_검증_평가보고서_이재호.md",
+        "Docs/기획/archive/research/검토자료/20260407_소상공인_트렌드_숏폼_마케팅_솔루션_기획안_평가보고서_김응서.md",
+        "Docs/기획/archive/research/검토자료/20260407_소아_진료_보조_플랫폼_기획안_평가보고서_김지윤.md",
+        "Docs/기획/archive/research/검토자료/20260407_앨범_AI_에이전트_기획안_평가보고서_백수연.md",
+        "Docs/기획/archive/research/검토자료/20260407_클로즈팩_기획안_평가보고서_유준호.md",
+        "Docs/기획/archive/research/검토자료/20260407_한국형_전략_에이전트_기획안_검증_평가보고서_유준호.md",
+        "Docs/기획/archive/schedules/2026-04-13_간트차트.pdf",
+        "Docs/기획/archive/schedules/2026-04-20_간트차트_정리.md",
+        "Docs/기획/archive/schedules/2026-04-23_개발_일정_공유.md",
+        "Docs/기획/검토자료/20260407_또산템_바이올낫_기획안_평가보고서_장주윤.md",
+        "Docs/기획/검토자료/20260407_배리어프리_키오스크_기획안_검증 평가보고서_이재호.md",
+        "Docs/기획/검토자료/20260407_부산동행맵_기획안_및_검증_평가보고서_이재호.md",
+        "Docs/기획/검토자료/20260407_소상공인_트렌드_숏폼_마케팅_솔루션_기획안_평가보고서_김응서.md",
+        "Docs/기획/검토자료/20260407_소아_진료_보조_플랫폼_기획안_평가보고서_김지윤.md",
+        "Docs/기획/검토자료/20260407_앨범_AI_에이전트_기획안_평가보고서_백수연.md",
+        "Docs/기획/검토자료/20260407_클로즈팩_기획안_평가보고서_유준호.md",
+        "Docs/기획/검토자료/20260407_한국형_전략_에이전트_기획안_검증_평가보고서_유준호.md",
+        "Docs/기획/기능명세서_재구성안.md",
+        "Docs/컨벤션/2026-04-07_docs_작성_규칙.md"
+      ]
+    },
+    {
+      "hash": "f053e72c9186fbe7021ab3780a31f8747c9e96cb",
+      "authorTimestamp": "2026-05-20T06:21:21+09:00",
+      "committerTimestamp": "2026-05-20T06:21:21+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝 Docs[S14P31E102-696]: 기획 및 기능명세 기준 최신화",
+      "paths": [
+        "Docs/PRD/2026-04-09_부산이음길_PRD.md",
+        "Docs/PRD/2026-04-14_기능명세서.md",
+        "Docs/기획/2026-04-09_화면명세서.md",
+        "Docs/기획/2026-04-10 최종_프로젝트_기획서.md"
+      ]
+    },
+    {
+      "hash": "1c35877fc08c7ad2978a48e044007e6566def21c",
+      "authorTimestamp": "2026-05-20T06:13:19+09:00",
+      "committerTimestamp": "2026-05-20T06:13:19+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝 Docs[S14P31E102-696]: 개인정보 및 위치정보 정책 문서 정비",
+      "paths": [
+        "Docs/정책/개인 위치 정보 수집·이용 동의.md",
+        "Docs/정책/개인정보 처리방침.md",
+        "Docs/정책/민감정보 수집·이용 동의.md"
+      ]
+    },
+    {
+      "hash": "ef5457e71ce389e358fb9990fd60800460f0c8de",
+      "authorTimestamp": "2026-05-19T15:19:33+09:00",
+      "committerTimestamp": "2026-05-19T15:19:33+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "🐛 Fix[S14P31E102-698]: 개발용 문구 노출 방지 및 API 인계 정리",
+      "paths": [
+        "Docs/superpowers/plans/2026-05-19-approved-report-map-markers.md",
+        "Docs/트러블슈팅/2026-05-19_FE_BE_API_handoff.md"
+      ]
+    },
+    {
+      "hash": "dbe2ed408ffd8770245ed3382e351e76ec1774f7",
+      "authorTimestamp": "2026-05-19T14:04:30+09:00",
+      "committerTimestamp": "2026-05-19T14:04:30+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[S14P31E102-698]: 승인 제보 지도 API 인계 문서 추가",
+      "paths": [
+        "Docs/API/2026-05-19-approved-report-map-api-handoff.md"
+      ]
+    },
+    {
+      "hash": "608cec147951e5e847350d173b89946dd7d23aa4",
+      "authorTimestamp": "2026-05-11T17:53:05+09:00",
+      "committerTimestamp": "2026-05-11T17:53:05+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[S14P31E102-447]: FE 기능 화면 명세 런타임 정합성 동기화",
+      "paths": [
+        "Docs/PRD/2026-04-14_기능명세서.md",
+        "Docs/기획/2026-04-09_화면명세서.md"
+      ]
+    },
+    {
+      "hash": "db13364b4c6c6b876e0942eb492bc57285df3d83",
+      "authorTimestamp": "2026-05-03T19:32:43+09:00",
+      "committerTimestamp": "2026-05-03T19:32:43+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝 Docs[S14P31E102-331]: FE 문서 기준선과 로그인/API 연동 작업순서 정리",
+      "paths": [
+        "Docs/PRD/2026-04-14_기능명세서.md",
+        "Docs/기획/2026-04-09_화면명세서.md",
+        "Docs/기획/2026-04-11_MVP_화면명세서.md",
+        "Docs/기획/2026-04-11_확장_기능_화면명세서.md"
+      ]
+    },
+    {
+      "hash": "c17c84617b23f19f46edef15fccbd9d11ed8d883",
+      "authorTimestamp": "2026-04-28T13:42:24+09:00",
+      "committerTimestamp": "2026-04-28T13:42:24+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[S14P31E102-286]: 저시력자 온보딩 및 LV 화면군 문서 정합성 복구",
+      "paths": [
+        "Docs/PRD/2026-04-09_부산이음길_PRD.md",
+        "Docs/PRD/2026-04-14_기능명세서.md",
+        "Docs/PRD/2026-04-20_MON-01_연계_요구사항_정리.md",
+        "Docs/기획/2026-04-09_화면명세서.md",
+        "Docs/기획/2026-04-10 최종_프로젝트_기획서.md",
+        "Docs/기획/2026-04-11_MVP_화면명세서.md",
+        "Docs/기획/2026-04-11_확장_기능_화면명세서.md",
+        "Docs/기획/기능명세서_재구성안.md"
+      ]
+    },
+    {
+      "hash": "7b06b9f1783c795831b44fef3a757e3da635e640",
+      "authorTimestamp": "2026-04-28T01:11:07+09:00",
+      "committerTimestamp": "2026-04-28T01:11:07+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝 Docs[S14P31E102-286]: FE 기준 문서와 확장 명세 정합성 추가 정리",
+      "paths": [
+        "Docs/기획/2026-04-11_확장_기능_화면명세서.md",
+        "Docs/기획/2026-04-20_간트차트_정리.md"
+      ]
+    },
+    {
+      "hash": "7e981e347230db3151a0e36defd1c7b5d0c3d6c2",
+      "authorTimestamp": "2026-04-28T00:24:30+09:00",
+      "committerTimestamp": "2026-04-28T00:24:30+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝  Docs[S14P31E102-286]: 온보딩 기준으로 화면명세서·기능명세서·PRD 문서 정합성 정리",
+      "paths": [
+        "Docs/PRD/2026-04-09_부산이음길_PRD.md",
+        "Docs/PRD/2026-04-14_기능명세서.md",
+        "Docs/기획/2026-04-09_화면명세서.md",
+        "Docs/기획/2026-04-10 최종_프로젝트_기획서.md",
+        "Docs/기획/2026-04-11_MVP_화면명세서.md"
+      ]
+    },
+    {
+      "hash": "3db5b9d857daa81811c858b73c1c71a4b5de9828",
+      "authorTimestamp": "2026-04-27T16:52:58+09:00",
+      "committerTimestamp": "2026-04-27T16:52:58+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[S14P31E102-301]: 아이콘 리소스 문서 기준 정리",
+      "paths": [
+        "Docs/기획/2026-04-09_화면명세서.md",
+        "Docs/기획/2026-04-11_MVP_화면명세서.md"
+      ]
+    },
+    {
+      "hash": "7e3d796c607cee039c4f7fb9cfc8e2cd22a1e6fe",
+      "authorTimestamp": "2026-04-27T14:53:13+09:00",
+      "committerTimestamp": "2026-04-27T14:53:13+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[S14P31E102-286]: 화면 명세서 수정 작업",
+      "paths": [
+        "Docs/기획/2026-04-09_화면명세서.md",
+        "Docs/기획/2026-04-10 최종_프로젝트_기획서.md",
+        "Docs/기획/2026-04-10 함세상 장애인자립생활센터 미팅 자료.pdf",
+        "Docs/기획/2026-04-11_MVP_화면명세서.md",
+        "Docs/기획/2026-04-11_확장_기능_화면명세서.md",
+        "Docs/기획/2026-04-20_간트차트_정리.md",
+        "Docs/기획/2026-04-23_개발_일정_공유.md"
+      ]
+    },
+    {
+      "hash": "c570561cc476429af39ac9cb43d67f88353b9ac6",
+      "authorTimestamp": "2026-04-20T14:46:12+09:00",
+      "committerTimestamp": "2026-04-20T14:46:12+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[S14P31E102-243]: FE 스프린트 문서 체계 정리 및 일정표 개편",
+      "paths": [
+        "Docs/PRD/2026-04-20_MON-01_연계_요구사항_정리.md",
+        "Docs/기획/2026-04-20_간트차트_정리.md"
+      ]
+    },
+    {
+      "hash": "59e93e54f5eed8273201ad3454b9fc1a1042a6e2",
+      "authorTimestamp": "2026-04-13T17:55:17+09:00",
+      "committerTimestamp": "2026-04-13T17:55:17+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[S14P31E102-133]: 기능명세서 로그인 범위 및 로컬 저장 정책 정리",
+      "paths": [
+        "Docs/PRD/2026-04-09_기능명세서.md"
+      ]
+    },
+    {
+      "hash": "b4f2d8869e40fb604b7e8438e1a1fa1608d0a779",
+      "authorTimestamp": "2026-04-13T15:13:26+09:00",
+      "committerTimestamp": "2026-04-13T15:13:26+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[S14P31E102-132]: PRD 및 기획서 수정",
+      "paths": [
+        "Docs/PRD/2026-04-09_부산이음길_PRD.md",
+        "Docs/기획/2026-04-10 최종_프로젝트_기획서.md"
+      ]
+    },
+    {
+      "hash": "1da8f24e372d935d2075a4598e142a406af35e5e",
+      "authorTimestamp": "2026-04-13T15:12:49+09:00",
+      "committerTimestamp": "2026-04-13T15:12:49+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[S14P31E102-131]: 화면명세서 수정",
+      "paths": [
+        "Docs/기획/2026-04-09_화면명세서.md",
+        "Docs/기획/2026-04-11_MVP_화면명세서.md",
+        "Docs/기획/2026-04-11_확장_기능_화면명세서.md"
+      ]
+    },
+    {
+      "hash": "e7801c3967e8ada2d7c8c419a63bea9365b88d8a",
+      "authorTimestamp": "2026-04-11T23:13:11+09:00",
+      "committerTimestamp": "2026-04-11T23:13:11+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝 Docs[S14P31E102-20]: 필드트립 질문지 정리",
+      "paths": [
+        "Docs/기획/2026-04-09_필드트립_질문지.md"
+      ]
+    },
+    {
+      "hash": "1710ead8c7bf85f054ff477f523daed1bdcd18a2",
+      "authorTimestamp": "2026-04-11T23:11:13+09:00",
+      "committerTimestamp": "2026-04-11T23:11:13+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝 Docs[S14P31E102-53]: 부산이음길 PRD 정합성 반영",
+      "paths": [
+        "Docs/PRD/2026-04-09_부산이음길_PRD.md"
+      ]
+    },
+    {
+      "hash": "449d68dfe29741eed84ac9f973f788936e1e46fc",
+      "authorTimestamp": "2026-04-11T23:09:39+09:00",
+      "committerTimestamp": "2026-04-11T23:09:39+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝 Docs[S14P31E102-50]: 최종 프로젝트 기획서 정합성 반영",
+      "paths": [
+        "Docs/기획/2026-04-10 최종_프로젝트_기획서.md"
+      ]
+    },
+    {
+      "hash": "ab7e53321cd630305d35356899da500b9447cafb",
+      "authorTimestamp": "2026-04-11T23:08:12+09:00",
+      "committerTimestamp": "2026-04-11T23:08:12+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝 Docs[S14P31E102-50]: 화면명세서와 MVP·확장 기능 화면명세서 정리",
+      "paths": [
+        "Docs/기획/2026-04-09_화면명세서.md",
+        "Docs/기획/2026-04-11_MVP_화면명세서.md",
+        "Docs/기획/2026-04-11_확장_기능_화면명세서.md"
+      ]
+    },
+    {
+      "hash": "71e3a34d709bf9331212018228800b75b20ccc5f",
+      "authorTimestamp": "2026-04-11T20:08:15+09:00",
+      "committerTimestamp": "2026-04-11T20:08:15+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝 Docs[S14P31E102-20]: 필드트립 질문지 및 미팅 자료 추가",
+      "paths": [
+        "Docs/기획/2026-04-10 함세상 장애인자립생활센터 미팅 자료.pdf",
+        "Docs/기획/2026-04-10_필드트립_질문지_v2.docx"
+      ]
+    },
+    {
+      "hash": "7f4940ef60c10a09b693e8fdbf18a08727f3cb85",
+      "authorTimestamp": "2026-04-11T20:03:01+09:00",
+      "committerTimestamp": "2026-04-11T20:03:01+09:00",
+      "author": "LeeJaeho",
+      "committer": "LeeJaeho",
+      "subject": "📝 Docs[S14P31E102-19]: 함세상 장애인자립생활센터 인터뷰 결과 정리",
+      "paths": [
+        "Docs/기획/2026-04-10_함세상_장애인자립생활센터_인터뷰_결과.md"
+      ]
+    },
+    {
+      "hash": "61df0118a313534d1570ea83b758dc92702d027f",
+      "authorTimestamp": "2026-04-09T17:51:41+09:00",
+      "committerTimestamp": "2026-04-09T17:51:41+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[#7]: 기능명세서 수정",
+      "paths": [
+        "Docs/PRD/2026-04-09_기능명세서.md"
+      ]
+    },
+    {
+      "hash": "fdf5c02a92f45fbea14b2f540d2be6ec5c430847",
+      "authorTimestamp": "2026-04-09T17:50:29+09:00",
+      "committerTimestamp": "2026-04-09T17:50:29+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[#49]: 부산이음길 PRD 작성",
+      "paths": [
+        "Docs/PRD/2026-04-09_부산이음길_PRD.md"
+      ]
+    },
+    {
+      "hash": "59ec3306943ddd5cedcb631e3f37bfadedf7fbff",
+      "authorTimestamp": "2026-04-09T17:49:22+09:00",
+      "committerTimestamp": "2026-04-09T17:49:22+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[#20]: 필드트립 질문지 작성",
+      "paths": [
+        "Docs/기획/2026-04-09_필드트립_질문지.md"
+      ]
+    },
+    {
+      "hash": "427c803a3e8b1d172847579b1029f348c297c398",
+      "authorTimestamp": "2026-04-09T17:47:14+09:00",
+      "committerTimestamp": "2026-04-09T17:47:14+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[#50]: 화면명세서 초기 진입 플로우 수정",
+      "paths": [
+        "Docs/기획/2026-04-09_화면명세서.md"
+      ]
+    },
+    {
+      "hash": "3400385c204c97ef1dd5a74c553da9b80ca2d8ea",
+      "authorTimestamp": "2026-04-09T15:46:54+09:00",
+      "committerTimestamp": "2026-04-09T15:46:54+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "📝 Docs[#49]: 기능명세서와 화면명세서 위치 및 기획 문서 구조 정리",
+      "paths": [
+        "Docs/2026-04-09_기능명세서.md",
+        "Docs/PRD/2026-04-09_기능명세서.md",
+        "Docs/기획/2026-04-09_화면명세서.md",
+        "Docs/기획/20260407_또산템_바이올낫_기획안_평가보고서_장주윤.md",
+        "Docs/기획/20260407_배리어프리_키오스크_기획안_검증 평가보고서_이재호.md",
+        "Docs/기획/20260407_부산동행맵_기획안_및_검증_평가보고서_이재호.md",
+        "Docs/기획/20260407_소상공인_트렌드_숏폼_마케팅_솔루션_기획안_평가보고서_김응서.md",
+        "Docs/기획/20260407_소아_진료_보조_플랫폼_기획안_평가보고서_김지윤.md",
+        "Docs/기획/20260407_앨범_AI_에이전트_기획안_평가보고서_백수연.md",
+        "Docs/기획/20260407_클로즈팩_기획안_평가보고서_유준호.md",
+        "Docs/기획/20260407_한국형_전략_에이전트_기획안_검증_평가보고서_유준호.md",
+        "Docs/기획/검토자료/20260407_또산템_바이올낫_기획안_평가보고서_장주윤.md",
+        "Docs/기획/검토자료/20260407_배리어프리_키오스크_기획안_검증 평가보고서_이재호.md",
+        "Docs/기획/검토자료/20260407_부산동행맵_기획안_및_검증_평가보고서_이재호.md",
+        "Docs/기획/검토자료/20260407_소상공인_트렌드_숏폼_마케팅_솔루션_기획안_평가보고서_김응서.md",
+        "Docs/기획/검토자료/20260407_소아_진료_보조_플랫폼_기획안_평가보고서_김지윤.md",
+        "Docs/기획/검토자료/20260407_앨범_AI_에이전트_기획안_평가보고서_백수연.md",
+        "Docs/기획/검토자료/20260407_클로즈팩_기획안_평가보고서_유준호.md",
+        "Docs/기획/검토자료/20260407_한국형_전략_에이전트_기획안_검증_평가보고서_유준호.md"
+      ]
+    },
+    {
+      "hash": "73dc90862ced9ba76562100659176cce21988a2d",
+      "authorTimestamp": "2026-04-07T17:53:00+09:00",
+      "committerTimestamp": "2026-04-07T17:53:00+09:00",
+      "author": "이재호",
+      "committer": "이재호",
+      "subject": "기획문서 정리",
+      "paths": [
+        "Docs/기획/20260407_또산템_바이올낫_기획안_평가보고서_장주윤.md",
+        "Docs/기획/20260407_배리어프리_키오스크_기획안_검증 평가보고서_이재호.md",
+        "Docs/기획/20260407_부산동행맵_기획안_및_검증_평가보고서_이재호.md",
+        "Docs/기획/20260407_소상공인_트렌드_숏폼_마케팅_솔루션_기획안_평가보고서_김응서.md",
+        "Docs/기획/20260407_소아_진료_보조_플랫폼_기획안_평가보고서_김지윤.md",
+        "Docs/기획/20260407_앨범_AI_에이전트_기획안_평가보고서_백수연.md",
+        "Docs/기획/20260407_클로즈팩_기획안_평가보고서_유준호.md",
+        "Docs/기획/20260407_한국형_전략_에이전트_기획안_검증_평가보고서_유준호.md"
+      ]
+    }
+  ],
+  "notes": [
+    "This is the root Docs/ count used in the print deck.",
+    "A broader FE/docs and documentation-like path count mixes code, tests and handoff artifacts and is excluded from this claim."
+  ]
+}

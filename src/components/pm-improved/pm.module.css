@@ -202,6 +202,27 @@
 .compactVisual .visualStatement>p { font-size:38px; }
 .supportingBody { max-width:720px; margin:70px auto 85px; }
 
+@media screen {
+  .site:has([data-pm-print-preview]) > .header,
+  .site:has([data-pm-print-preview]) > .footer { display:none; }
+}
+
+@media print {
+  .site:has([data-pm-print]) {
+    min-height:0;
+    background:#fff;
+  }
+  .site:has([data-pm-print]) > .header,
+  .site:has([data-pm-print]) > .footer,
+  .site:has([data-pm-print]) > .skipLink,
+  .site:has([data-pm-print]):not(:has([data-pm-print-preview])) > main {
+    display:none !important;
+  }
+  .site:has([data-pm-print]) [data-pm-print] {
+    display:block !important;
+  }
+}
+
 @media (prefers-reduced-motion:no-preference) {
   .projectArrow { transition:transform .2s ease; }
   .site a { transition:color .15s ease; }

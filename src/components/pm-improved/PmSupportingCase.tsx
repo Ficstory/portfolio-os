@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { type PmProject } from "./content";
+import { pmMedia, survey, type PmProject } from "./content";
 import {
   BusanAdditionalVisual,
   BusanOnboardingVisual,
@@ -18,6 +18,9 @@ import detail from "./caseStudy.module.css";
 import visual from "./visuals.module.css";
 
 function SmileCase({ project }: { project: PmProject }) {
+  const burdenCount = survey.responses[0].count + survey.responses[1].count;
+  const burdenPercent = (burdenCount / survey.total * 100).toFixed(1);
+
   return <>
     <CaseHero project={project} />
     <figure className={detail.mediaEvidence}>
@@ -27,14 +30,14 @@ function SmileCase({ project }: { project: PmProject }) {
     <CaseBody labels={{ collaboration: "역할 분담", result: "구현 결과" }}>
       <CaseSection id="problem" title="재미있다는 반응만으로 참여를 기대하기 어려웠습니다.">
         <p>웃지마게임은 얼굴을 보이며 웃음을 참는 실시간 화상 대결입니다. 아이디어에 흥미를 느끼는 것과 실제로 카메라를 켜고 참여하는 것은 다른 문제였습니다.</p>
-        <p>저는 참여 장벽을 분리해 확인하기 위해 흥미, 이용 의향, 얼굴 노출 부담을 각각 묻는 설문을 설계하고 응답 168건을 분석했습니다.</p>
+        <p>저는 참여 장벽을 분리해 확인하기 위해 흥미, 이용 의향, 얼굴 노출 부담을 각각 묻는 설문을 설계하고 응답 {survey.total}건을 분석했습니다.</p>
       </CaseSection>
 
       <CaseSection id="evidence" title="흥미, 참여 의향, 얼굴 노출 부담을 각각 확인했습니다.">
         <EvidenceList items={[
-          { title: "흥미", text: "서비스가 흥미롭다고 답한 응답은 92/168명이었습니다." },
-          { title: "참여 의향", text: "해볼 의향이 있다고 답한 응답은 75/168명이었습니다." },
-          { title: "얼굴 공개 부담", text: "‘꽤’ 또는 ‘매우’ 부담된다는 응답은 112/168명, 66.7%였습니다." },
+          { title: "흥미", text: `서비스가 흥미롭다고 답한 응답은 ${survey.signals.interest}/${survey.total}명이었습니다.` },
+          { title: "참여 의향", text: `해볼 의향이 있다고 답한 응답은 ${survey.signals.willingToParticipate}/${survey.total}명이었습니다.` },
+          { title: "얼굴 공개 부담", text: `‘꽤’ 또는 ‘매우’ 부담된다는 응답은 ${burdenCount}/${survey.total}명, ${burdenPercent}%였습니다.` },
         ]} />
       </CaseSection>
 
@@ -44,7 +47,7 @@ function SmileCase({ project }: { project: PmProject }) {
 
       <CaseSection id="action" title="결정 기록과 친구 초대방 흐름을 구현으로 남겼습니다.">
         <EvidenceList items={[
-          { title: "조사·분석", text: "168건의 설문 응답을 문항별로 분석해 참여 부담과 기능 요구를 정리했습니다." },
+          { title: "조사·분석", text: `${survey.total}건의 설문 응답을 문항별로 분석해 참여 부담과 기능 요구를 정리했습니다.` },
           { title: "결정 기록", text: "기획서, 기능명세, 회의록에 매칭 우선순위와 필수 흐름을 반영했습니다." },
           { title: "초대방 구현", text: "방 생성·입장·대기 화면을 구현하고, 초대한 상대가 보이지 않는 문제와 통신 연동 오류를 수정했습니다." },
         ]} />
@@ -92,7 +95,7 @@ function BusanCase({ project }: { project: PmProject }) {
         <figure className={detail.mediaEvidence}>
           <div className={visual.meetingEvidence}>
             <Image
-              src="/pm-improved/evidence/busan-mvp-meeting.png"
+              src={pmMedia.evidence.busanMeeting}
               alt="MVP 지도 기능을 화면으로 설명하고 참석자들과 의견을 나누는 미팅 장면"
               width={1920}
               height={1080}
@@ -113,7 +116,7 @@ function BusanCase({ project }: { project: PmProject }) {
         <figure className={detail.mediaEvidence}>
           <div className={visual.routeMapEvidence}>
             <Image
-              src="/pm-improved/evidence/busan-route-map.png"
+              src={pmMedia.evidence.busanMap}
               alt="접근성 시설과 최근 목적지를 표시하는 부산이음길 지도 화면"
               width={720}
               height={1560}
