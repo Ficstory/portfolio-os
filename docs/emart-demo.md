@@ -1,6 +1,6 @@
-# 이마트 매장 안내 데모
+# 이마트 신촌점 이벤트 안내
 
-기존 Next.js / React / CSS Modules / lucide-react로 만든 모바일 안내 페이지입니다. 기존 페이지와 전역 스타일, 배포 설정, 의존성 선언을 수정하지 않습니다. 모든 운영·요금·행사는 가상 예시이며 두 언어로 고지합니다.
+기존 Next.js / React / CSS Modules / lucide-react로 만든 모바일 안내 페이지입니다. 기존 페이지와 전역 스타일, 배포 설정, 의존성 선언을 수정하지 않습니다. 공식 신촌점 정보와 사용자가 지정한 B1 패킹존·B3 K 팔레트 행사 구성을 사용합니다. 근거와 확인되지 않은 항목은 [신촌점 정보 기록](emart-sinchon-sources.md)을 확인하세요.
 
 ## 주소와 QR
 
@@ -34,4 +34,4 @@ node scripts/check-emart.mjs https://ficstory.dev
 
 ## 제거
 
-`src/app/event/emart/`와 `public/event/emart/`를 제거하고 기존 방식으로 main에 반영하면 페이지와 QR이 함께 사라집니다. 관련 검사·QR 생성 스크립트와 이 문서도 필요에 따라 제거합니다. 기존 프로필 경로는 수정할 필요가 없습니다. 이 데모만 추가한 커밋을 `git revert`하여 재배포해도 됩니다.
+`src/app/event/emart/`와 `public/event/emart/`를 제거하고 기존 방식으로 main에 반영하면 페이지와 QR이 함께 사라집니다. 관련 검사·QR 생성 스크립트와 이 문서도 필요에 따라 제거합니다. 기존 프로필 경로는 수정할 필요가 없습니다.
