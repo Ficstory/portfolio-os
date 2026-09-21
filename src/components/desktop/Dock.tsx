@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  BookOpen,
   Code2,
   ExternalLink,
   FileText,
@@ -211,6 +212,27 @@ function DockExternalLink({
   );
 }
 
+function DockTilLink({ mouseX }: { mouseX: MotionValue<number> }) {
+  const shouldReduceMotion = Boolean(useReducedMotion());
+  const { ref, style } = useDockItemMotion<HTMLAnchorElement>(
+    mouseX,
+    shouldReduceMotion,
+  );
+
+  return (
+    <motion.a
+      aria-label="Future & Dream TIL 아카이브 열기"
+      className={cn(dockControlClassName, dockFallbackClassName)}
+      href="/TIL/"
+      ref={ref}
+      style={style}
+      title="TIL Archive"
+    >
+      <BookOpen aria-hidden="true" size={23} strokeWidth={2.1} />
+    </motion.a>
+  );
+}
+
 export function Dock() {
   const mouseX = useMotionValue(Number.POSITIVE_INFINITY);
   const openWindow = useDesktopStore((state) => state.openWindow);
@@ -254,6 +276,8 @@ export function Dock() {
           onOpen={handleOpen}
         />
       ))}
+
+      <DockTilLink mouseX={mouseX} />
 
       <span
         aria-hidden="true"

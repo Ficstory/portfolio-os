@@ -12,6 +12,7 @@ const routes = [
   "/policy",
   "/assembly",
   "/resume",
+  "/TIL/",
   "/projects/busan-eumgil",
   "/projects/aekkim",
   "/projects/play-pick",

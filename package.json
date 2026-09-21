@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "til:validate": "node --experimental-strip-types scripts/til-content.mjs validate",
+    "til:test": "node --experimental-strip-types --test src/lib/tilContent.contract.test.mjs src/lib/tilArchive.contract.test.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

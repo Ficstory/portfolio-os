@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/TIL",
+        destination: "/til/future-dream",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

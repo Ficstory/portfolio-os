@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  BookOpen,
   Code2,
   FileText,
   Folder,
@@ -10,6 +11,7 @@ import {
   UserRound,
   type LucideIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 import { MobileSection } from "@/components/mobile/MobileSection";
 import { usePortfolioTrack } from "@/components/portfolio/PortfolioTrackProvider";
@@ -46,6 +48,24 @@ export function MobileHome() {
         </header>
 
         <nav aria-label="모바일 포트폴리오 섹션" className="space-y-3">
+          <Link
+            aria-label="Future & Dream TIL 아카이브 열기"
+            className="flex min-h-20 w-full items-start gap-4 rounded-lg border border-slate-200/80 bg-white/72 p-4 text-left shadow-sm transition active:scale-[0.99] dark:border-white/12 dark:bg-slate-950/34"
+            href="/TIL/"
+          >
+            <span className="grid size-12 shrink-0 place-items-center rounded-lg bg-[#ffe7eb] text-[#c9213b] dark:bg-[#e9364f]/20 dark:text-[#ff8c9c]">
+              <BookOpen aria-hidden="true" size={23} strokeWidth={2.2} />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-base font-bold text-slate-950 dark:text-white">
+                TIL Archive
+              </span>
+              <span className="mt-1 block text-sm leading-6 text-muted">
+                Future &amp; Dream Academy에서 배운 내용을 기록한 학습 아카이브.
+              </span>
+            </span>
+          </Link>
+
           {folders.map((folder) => {
             const Icon = iconMap[folder.iconName] ?? Folder;
 

@@ -1,0 +1,13 @@
+{
+  "categories": [
+    { "id": "education", "label": "교육", "tone": "lavender" },
+    { "id": "field", "label": "현장 경험", "tone": "green" },
+    { "id": "team", "label": "팀 프로젝트", "tone": "blue" },
+    { "id": "problem-solving", "label": "문제 해결", "tone": "amber" },
+    { "id": "reflection", "label": "회고", "tone": "rose" }
+  ],
+  "journey": {
+    "label": "My Academy Journey",
+    "status": "배움을 기록하고, 다음 시도를 이어가는 중입니다."
+  }
+}

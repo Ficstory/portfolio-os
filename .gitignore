@@ -40,3 +40,7 @@ tools/transcribe_audio.py
 
 # local PPT planning notes
 ppt 작성/
+
+# Local TIL drafts (published Markdown remains tracked)
+content/til/drafts/*.md
+!content/til/drafts/.gitkeep
