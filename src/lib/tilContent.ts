@@ -192,10 +192,10 @@ function parseBullets(lines: string[], heading: string, sourcePath: string) {
   return values;
 }
 
-function mediaFilename(src: string, slug: string, kind: "image" | "video", sourcePath: string) {
+function mediaFilename(src: string, slug: string, kind: "image" | "video" | "document", sourcePath: string) {
   const prefix = `/til/media/${slug}/`;
   const filename = src.startsWith(prefix) ? src.slice(prefix.length) : "";
-  const pattern = kind === "image" ? /^[a-zA-Z0-9_-]+\.(png|jpe?g|webp|gif|avif)$/i : /^[a-zA-Z0-9_-]+\.(mp4|webm|ogv)$/i;
+  const pattern = kind === "document" ? /^[a-zA-Z0-9_-]+\.pdf$/i : kind === "image" ? /^[a-zA-Z0-9_-]+\.(png|jpe?g|webp|gif|avif)$/i : /^[a-zA-Z0-9_-]+\.(mp4|webm|ogv)$/i;
   if (!pattern.test(filename)) throw failure(sourcePath, `invalid ${kind} media URL; use ${prefix}filename with a supported extension`);
   return filename;
 }
@@ -287,7 +287,7 @@ function isValidHref(href: string) {
   }
 }
 
-function parseResources(lines: string[], sourcePath: string): TILResource[] {
+function parseResources(lines: string[], slug: string, sourcePath: string): TILResource[] {
   const seen = new Set<string>();
 
   return lines
@@ -317,6 +317,9 @@ function parseResources(lines: string[], sourcePath: string): TILResource[] {
       }
       if (!link || !isValidHref(link[2])) {
         throw failure(sourcePath, `invalid resource link: ${markdownLink}`);
+      }
+      if (type === "document" && link[2].startsWith("/til/media/")) {
+        mediaFilename(link[2], slug, "document", sourcePath);
       }
       seen.add(id);
       return {
@@ -379,7 +382,7 @@ export function parseTILMarkdown(
     ...(Object.keys(blocks).length ? { blocks } : {}),
     nextActions: parseActions(sections.get("다음 액션") ?? [], sourcePath),
     skills: parseBullets(sections.get("관련 역량") ?? [], "관련 역량", sourcePath),
-    resources: parseResources(sections.get("관련 자료") ?? [], sourcePath),
+    resources: parseResources(sections.get("관련 자료") ?? [], slug, sourcePath),
     sourcePath,
   };
 
@@ -512,11 +515,13 @@ function validateEntries(entries: TILSourceEntry[], config: TILContentConfig) {
 }
 
 function localMedia(entry: TILEntry) {
-  return [...new Set(Object.values(entry.blocks ?? {}).flatMap((blocks) => blocks.flatMap((block) => {
+  const blockMedia = Object.values(entry.blocks ?? {}).flatMap((blocks) => blocks.flatMap((block) => {
     if (block.type === "image") return [block.src];
     if (block.type === "video") return [block.src, ...(block.poster ? [block.poster] : [])];
     return [];
-  })))];
+  }));
+  const documents = entry.resources.filter((resource) => resource.type === "document" && resource.href.startsWith("/til/media/"));
+  return [...new Set([...blockMedia, ...documents.map((resource) => resource.href)])];
 }
 
 function assetPath(contentRoot: string, entry: TILSourceEntry, src: string) {

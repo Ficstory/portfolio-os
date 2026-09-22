@@ -126,7 +126,13 @@ export function TILReader({ entry, categories, onBack, previous, next, onSelect,
             <h2 id="til-resources" tabIndex={-1}>관련 자료</h2>
             {entry.skills.length ? <ul className={styles.skills} aria-label="관련 역량">{entry.skills.map((skill) => <li key={skill}>{skill}</li>)}</ul> : null}
             {entry.resources.length ? <ul className={styles.resources}>{entry.resources.map((resource) => <li key={resource.id}>
-              <a href={resource.href}>{resource.title}<ArrowRight size={15} aria-hidden="true" /></a>
+              {resource.type === "document" && /^\/til\/media\/.*\.pdf$/i.test(resource.href) ? <>
+                <strong>{resource.title}</strong>
+                <div className={styles.documentLinks}>
+                  <a href={resource.href} target="_blank" rel="noopener noreferrer">PDF 보기<ArrowRight size={15} aria-hidden="true" /></a>
+                  <a href={resource.href} download>다운로드</a>
+                </div>
+              </> : <a href={resource.href}>{resource.title}<ArrowRight size={15} aria-hidden="true" /></a>}
               {resource.description ? <p>{resource.description}</p> : null}
             </li>)}</ul> : null}
           </section> : null}

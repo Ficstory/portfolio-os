@@ -1,9 +1,9 @@
 ---
 id: til-2026-09-22-structure-team-video-production
 slug: structure-team-video-production
-date: 2026-09-22
+date: 2026-09-21
 createdAt: 2026-09-22T00:38:30+09:00
-updatedAt: 2026-09-22T14:45:33+09:00
+updatedAt: 2026-09-22T16:16:11+09:00
 session: Future & Dream Academy 팀 프로젝트
 category: team
 title: 카드뉴스·포스터·영상, 공통 기준으로 제작 흐름 맞추기

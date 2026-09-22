@@ -236,6 +236,57 @@ test("only referenced published assets are staged, lifecycle moves assets and re
   } finally { cleanup(projectRoot); }
 });
 
+test("managed PDF resources reject unsafe paths and preserve other document links", () => {
+  const document = (href) => entryMarkdown({ resources: `- document | report | [보고서](${href})` });
+  assert.equal(parseTILMarkdown(document("/til/media/test-learning/final-report.pdf")).resources[0].type, "document");
+  for (const href of [
+    "/til/media/other/report.pdf",
+    "/til/media/test-learning/../report.pdf",
+    "/til/media/test-learning/nested/report.pdf",
+    "/til/media/test-learning/%2e%2e/report.pdf",
+    "/til/media/test-learning/report.pdf?download=1",
+    "/til/media/test-learning/report.pdf#page=1",
+    "/til/media/test-learning/report.png",
+    "/til/media/test-learning/report\\other.pdf",
+  ]) assert.throws(() => parseTILMarkdown(document(href)), /invalid document media URL/);
+  for (const href of ["https://example.com/report.pdf", "/documents/report.pdf", "/about/"]) {
+    assert.equal(parseTILMarkdown(document(href)).resources[0].href, href);
+  }
+});
+
+test("PDF attachments stay private until published and follow the media lifecycle", () => {
+  const { projectRoot, contentRoot } = createFixture();
+  try {
+    const resources = "- document | report | [보고서](/til/media/test-learning/report.pdf)";
+    const draft = writeEntry(contentRoot, "drafts", { resources });
+    assert.throws(() => validateTILContent(contentRoot), /missing media file/);
+    assert.throws(() => publishTIL(contentRoot, "test-learning"), /missing media file/);
+    assert.equal(existsSync(draft), true);
+    const privateMedia = path.join(contentRoot, "drafts", "media", "test-learning");
+    const publicMedia = path.join(contentRoot, "media", "test-learning", "report.pdf");
+    const generated = path.join(projectRoot, "public", "til", "media", "test-learning", "report.pdf");
+    mkdirSync(privateMedia, { recursive: true });
+    writeFileSync(path.join(privateMedia, "report.pdf"), "%PDF-1.7\nreport");
+    writeFileSync(path.join(privateMedia, "unused.pdf"), "private");
+    assert.equal(validateTILContent(contentRoot).drafts.length, 1);
+    assert.equal(stageTILMedia(projectRoot), 0);
+    assert.equal(existsSync(generated), false);
+    assert.equal(loadPublishedTILContent(projectRoot).entries.length, 0);
+    publishTIL(contentRoot, "test-learning", new Date("2026-09-22T00:00:00Z"));
+    assert.equal(existsSync(publicMedia), true);
+    assert.equal(existsSync(path.join(privateMedia, "report.pdf")), false);
+    assert.equal(stageTILMedia(projectRoot), 1);
+    assert.equal(readFileSync(generated, "utf8"), "%PDF-1.7\nreport");
+    assert.equal(existsSync(path.join(path.dirname(generated), "unused.pdf")), false);
+    assert.equal(existsSync(path.join(privateMedia, "unused.pdf")), true);
+    unpublishTIL(contentRoot, "test-learning", new Date("2026-09-22T01:00:00Z"));
+    assert.equal(existsSync(publicMedia), false);
+    assert.equal(existsSync(generated), false);
+    assert.equal(readFileSync(path.join(privateMedia, "report.pdf"), "utf8"), "%PDF-1.7\nreport");
+    assert.equal(loadPublishedTILContent(projectRoot).entries.length, 0);
+  } finally { cleanup(projectRoot); }
+});
+
 test("missing media and publication destination collisions fail before changing the entry", () => {
   const { projectRoot, contentRoot } = createFixture();
   try {
