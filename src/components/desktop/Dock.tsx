@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  BookOpen,
   Code2,
   ExternalLink,
   FileText,
@@ -123,12 +122,15 @@ function useDockItemMotion<TElement extends HTMLElement>(
   };
 }
 
-function DockIconImage({ src }: { src: string }) {
+function DockIconImage({ src, className }: { src: string; className?: string }) {
   return (
     <Image
       alt=""
       aria-hidden="true"
-      className="pointer-events-none size-full select-none object-contain drop-shadow-md"
+      className={cn(
+        "pointer-events-none size-full select-none object-contain drop-shadow-md",
+        className,
+      )}
       draggable={false}
       height={512}
       sizes={`${MAX_DOCK_ICON_SIZE}px`}
@@ -222,13 +224,16 @@ function DockTilLink({ mouseX }: { mouseX: MotionValue<number> }) {
   return (
     <motion.a
       aria-label="Future & Dream TIL 아카이브 열기"
-      className={cn(dockControlClassName, dockFallbackClassName)}
+      className={dockControlClassName}
       href="/TIL/"
       ref={ref}
       style={style}
       title="TIL Archive"
     >
-      <BookOpen aria-hidden="true" size={23} strokeWidth={2.1} />
+      <DockIconImage
+        className="[clip-path:inset(1.1%_3%_round_24%)]"
+        src="/icons/dock/til.webp"
+      />
     </motion.a>
   );
 }

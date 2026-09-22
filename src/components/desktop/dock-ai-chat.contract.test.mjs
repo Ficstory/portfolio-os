@@ -56,6 +56,8 @@ test("dock can render generated 3d icon assets before falling back to lucide ico
   assert.match(dockSource, /<DockIconImage src=\{item\.dockIconSrc\}/);
   assert.match(dockSource, /alt=""/);
   assert.match(dockSource, /dockIconSrc="\/icons\/dock\/git\.webp"/);
+  assert.match(dockSource, /src="\/icons\/dock\/til\.webp"/);
+  assert.doesNotMatch(dockSource, /<BookOpen aria-hidden="true"/);
 });
 
 test("unfinished ai chat is not exposed as an internal portfolio window", () => {
