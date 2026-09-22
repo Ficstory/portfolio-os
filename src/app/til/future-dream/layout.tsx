@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import type { ReactNode } from "react";
 
 import { baseUrl } from "@/lib/seo";
+
+const pretendard = localFont({
+  src: "../../../../public/pm/fonts/PretendardVariable.woff2",
+  variable: "--font-til-body",
+  weight: "100 900",
+  display: "swap",
+});
 
 const title = "Future & Dream Academy TIL 아카이브";
 const description =
@@ -30,5 +38,5 @@ export const metadata: Metadata = {
 export default function FutureDreamTilLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
-  return children;
+  return <div className={pretendard.variable}>{children}</div>;
 }

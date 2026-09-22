@@ -1,14 +1,7 @@
 "use client";
 
 import {
-  AlertTriangle,
-  ArrowRight,
   BookOpen,
-  Check,
-  ChevronLeft,
-  ChevronRight,
-  FlaskConical,
-  Lightbulb,
   RotateCcw,
   Search,
 } from "lucide-react";
@@ -27,8 +20,6 @@ import { links } from "@/data/links";
 import {
   filterTILEntries,
   formatTILDate,
-  normalizeTILSearch,
-  resolveSelectedTILEntry,
   type TILCategoryFilter,
 } from "@/lib/tilArchive";
 import type {
@@ -39,13 +30,8 @@ import type {
 } from "@/types/til";
 
 import styles from "./future-dream-til.module.css";
-
-const reflectionSections = [
-  { key: "learned", label: "오늘 배운 것", Icon: BookOpen },
-  { key: "tried", label: "직접 시도한 것", Icon: FlaskConical },
-  { key: "blocked", label: "막혔던 지점", Icon: AlertTriangle },
-  { key: "insights", label: "새롭게 이해한 것", Icon: Lightbulb },
-] as const;
+import { TILReader } from "./TILReader";
+import { navigateToTILAnchor } from "./tilNavigation";
 
 function createArchiveSearch(
   category: TILCategoryFilter,
@@ -115,11 +101,11 @@ function Sidebar() {
           <span>01</span>
           About Me
         </Link>
-        <a href="#academy">
+        <a href="#academy" onClick={(event) => navigateToTILAnchor(event, "academy")}>
           <span>02</span>
           Future &amp; Dream Academy
         </a>
-        <a aria-current="page" className={styles.sidebarActive} href="#archive">
+        <a aria-current="page" className={styles.sidebarActive} href="#archive" onClick={(event) => navigateToTILAnchor(event, "archive")}>
           <span>03</span>
           TIL Archive
         </a>
@@ -150,11 +136,11 @@ function TopNavigation() {
   return (
     <header className={styles.topNavigation}>
       <Link href="/">About</Link>
-      <a aria-current="page" className={styles.topActive} href="#archive">
+      <a aria-current="page" className={styles.topActive} href="#archive" onClick={(event) => navigateToTILAnchor(event, "archive")}>
         TIL
       </a>
       <Link href="/pm/">Projects</Link>
-      <a href="#academy">Academy</a>
+      <a href="#academy" onClick={(event) => navigateToTILAnchor(event, "academy")}>Academy</a>
       <a href={links.email}>Contact</a>
       <p>
         A SMALL STEP
@@ -171,7 +157,7 @@ function Hero({ journey }: { journey: AcademyJourney }) {
     : null;
 
   return (
-    <section className={styles.hero} id="academy">
+    <section className={styles.hero} id="academy" tabIndex={-1}>
       <div className={styles.heroCopy}>
         <p className={styles.eyebrow}>
           <span /> FUTURE &amp; DREAM ACADEMY <span />
@@ -261,6 +247,7 @@ function EntryList({
         return (
           <li key={entry.id}>
             <button
+              id={`til-entry-${entry.slug}`}
               aria-current={isSelected ? "true" : undefined}
               className={styles.entryButton}
               data-selected={isSelected}
@@ -298,124 +285,7 @@ function EmptyState({ onReset }: { onReset: () => void }) {
   );
 }
 
-function EntryDetail({
-  entry,
-  categories,
-  hasPrevious,
-  hasNext,
-  onBack,
-  onPrevious,
-  onNext,
-  headingRef,
-}: {
-  entry: TILEntry;
-  categories: readonly TILCategoryMeta[];
-  hasPrevious: boolean;
-  hasNext: boolean;
-  onBack: () => void;
-  onPrevious: () => void;
-  onNext: () => void;
-  headingRef: React.RefObject<HTMLHeadingElement | null>;
-}) {
-  return (
-    <article className={styles.detailArticle}>
-      <div className={styles.detailNavigation}>
-        <button className={styles.mobileBack} onClick={onBack} type="button">
-          <ChevronLeft aria-hidden="true" size={18} />
-          목록으로
-        </button>
-        <div>
-          <button disabled={!hasPrevious} onClick={onPrevious} type="button">
-            <ChevronLeft aria-hidden="true" size={16} /> 이전 글
-          </button>
-          <span aria-hidden="true" />
-          <button disabled={!hasNext} onClick={onNext} type="button">
-            다음 글 <ChevronRight aria-hidden="true" size={16} />
-          </button>
-        </div>
-      </div>
-
-      <header className={styles.entryHeader}>
-        <div className={styles.entryMeta}>
-          <time dateTime={entry.date}>{formatTILDate(entry.date)}</time>
-          {entry.session ? <span>{entry.session}</span> : null}
-          {entry.isDemo ? <span>샘플 기록</span> : null}
-        </div>
-        <div className={styles.entryTitleRow}>
-          <h2 ref={headingRef} tabIndex={-1}>
-            {entry.title}
-          </h2>
-          <CategoryBadge categories={categories} category={entry.category} />
-        </div>
-        <blockquote>“ {entry.summary} ”</blockquote>
-      </header>
-
-      <div className={styles.reflectionGrid}>
-        {reflectionSections.map(({ key, label, Icon }) => (
-          <section key={key}>
-            <div className={styles.reflectionHeading}>
-              <Icon aria-hidden="true" size={21} strokeWidth={1.8} />
-              <h3>{label}</h3>
-            </div>
-            {entry[key].map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </section>
-        ))}
-      </div>
-
-      <section className={styles.nextActions}>
-        <div className={styles.reflectionHeading}>
-          <ArrowRight aria-hidden="true" size={22} strokeWidth={1.8} />
-          <h3>다음 액션</h3>
-        </div>
-        <ul>
-          {entry.nextActions.map((action) => (
-            <li key={action.id}>
-              <span
-                aria-label={action.status === "done" ? "완료" : "계획"}
-                className={styles.actionStatus}
-                data-status={action.status}
-              >
-                {action.status === "done" ? (
-                  <Check aria-hidden="true" size={12} strokeWidth={2.5} />
-                ) : null}
-              </span>
-              <span>{action.text}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className={styles.resources}>
-        <h3>관련 자료</h3>
-        <div className={styles.skillList} aria-label="관련 역량">
-          {entry.skills.map((skill) => (
-            <span key={skill}>{skill}</span>
-          ))}
-        </div>
-        {entry.resources.length > 0 ? (
-          <ul>
-            {entry.resources.map((resource) => (
-              <li key={resource.id}>
-                <a href={resource.href}>{resource.title}</a>
-                {resource.description ? <p>{resource.description}</p> : null}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className={styles.resourcesPending}>연결할 자료를 준비 중입니다.</p>
-        )}
-      </section>
-    </article>
-  );
-}
-
-export function FutureDreamTilPage({
-  categories,
-  entries,
-  journey,
-}: {
+export function FutureDreamTilPage({ categories, entries, journey }: {
   categories: readonly TILCategoryMeta[];
   entries: readonly TILEntry[];
   journey: AcademyJourney;
@@ -424,301 +294,170 @@ export function FutureDreamTilPage({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const rawCategory = searchParams.get("category");
-  const categoryIds = useMemo(
-    () => new Set<TILCategory>(categories.map((item) => item.id)),
-    [categories],
-  );
-  const category: TILCategoryFilter =
-    rawCategory !== null && categoryIds.has(rawCategory as TILCategory)
-      ? (rawCategory as TILCategory)
-      : "all";
+  const category: TILCategoryFilter = categories.some((item) => item.id === rawCategory)
+    ? rawCategory! : "all";
   const urlQuery = searchParams.get("q") ?? "";
   const requestedSlug = searchParams.get("entry");
-  const filteredEntries = useMemo(
-    () => filterTILEntries(entries, category, urlQuery),
-    [category, entries, urlQuery],
-  );
-  const selectedEntry = useMemo(
-    () => resolveSelectedTILEntry(filteredEntries, requestedSlug),
-    [filteredEntries, requestedSlug],
-  );
-  const selectedIndex = selectedEntry
-    ? filteredEntries.findIndex((entry) => entry.slug === selectedEntry.slug)
-    : -1;
+  const isReading = requestedSlug !== null;
+  // A direct article URL remains valid even when its archive filters exclude it.
+  const selectedEntry = entries.find((entry) => entry.slug === requestedSlug) ?? null;
+  const filteredEntries = useMemo(() => filterTILEntries(entries, category, urlQuery), [entries, category, urlQuery]);
+  const selectedIndex = filteredEntries.findIndex((entry) => entry.slug === requestedSlug);
   const [searchDraft, setSearchDraft] = useState(urlQuery);
-  const [isComposing, setIsComposing] = useState(false);
-  const [mobileView, setMobileView] = useState<"list" | "detail">(
-    requestedSlug ? "detail" : "list",
-  );
-  const searchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const listScrollPositionRef = useRef(0);
-  const searchInputRef = useRef<HTMLInputElement>(null);
-  const detailHeadingRef = useRef<HTMLHeadingElement>(null);
+  const isComposing = useRef(false);
+  const searchTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const searchInput = useRef<HTMLInputElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const positions = useRef(new Map<string, number>());
+  const listFocus = useRef(new Map<string, string>());
+  const listKey = createArchiveSearch(category, urlQuery, null);
+  const locationKey = searchParams.toString();
+  const previousLocation = useRef(locationKey);
+  const previousReading = useRef(isReading);
 
-  const navigateToState = (
-    nextCategory: TILCategoryFilter,
-    nextQuery: string,
-    nextEntrySlug: string | null,
-    mode: "push" | "replace",
-  ) => {
-    const search = createArchiveSearch(
-      nextCategory,
-      nextQuery,
-      nextEntrySlug,
-    );
-    const href = search ? `${pathname}?${search}` : pathname;
-
-    router[mode](href, { scroll: false });
+  const cancelSearch = () => {
+    if (searchTimer.current) clearTimeout(searchTimer.current);
+    searchTimer.current = null;
+  };
+  const navigate = (nextCategory: TILCategoryFilter, query: string, slug: string | null, mode: "push" | "replace" = "push") => {
+    cancelSearch();
+    positions.current.set(locationKey, window.scrollY);
+    const search = createArchiveSearch(nextCategory, query, slug);
+    router[mode](search ? `${pathname}?${search}` : pathname, { scroll: false });
   };
 
   useEffect(() => {
-    if (
-      isComposing ||
-      searchDraft === urlQuery ||
-      searchInputRef.current === document.activeElement
-    ) {
-      return;
-    }
-
-    const animationFrameId = requestAnimationFrame(() => {
-      setSearchDraft(urlQuery);
+    const frame = requestAnimationFrame(() => {
+      if (!isComposing.current && document.activeElement !== searchInput.current) setSearchDraft(urlQuery);
     });
-
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [isComposing, searchDraft, urlQuery]);
+    return () => cancelAnimationFrame(frame);
+  }, [urlQuery]);
 
   useEffect(() => {
-    const desiredSearch = createArchiveSearch(
-      category,
-      normalizeTILSearch(urlQuery),
-      selectedEntry?.slug ?? null,
-    );
-
-    if (desiredSearch !== searchParams.toString()) {
-      router.replace(desiredSearch ? `${pathname}?${desiredSearch}` : pathname, {
-        scroll: false,
-      });
-    }
-  }, [category, pathname, router, searchParams, selectedEntry, urlQuery]);
-
-  useEffect(
-    () => () => {
-      if (searchTimerRef.current) {
-        clearTimeout(searchTimerRef.current);
+    const changed = previousLocation.current !== locationKey;
+    const wasReading = previousReading.current;
+    previousLocation.current = locationKey;
+    previousReading.current = isReading;
+    const savedPosition = positions.current.get(locationKey) ?? 0;
+    let restoring = changed && (isReading || wasReading);
+    const frame = requestAnimationFrame(() => {
+      if (changed && (isReading || wasReading)) {
+        if (isReading) headingRef.current?.focus({ preventScroll: true });
+        else {
+          const slug = listFocus.current.get(listKey);
+          const target = slug ? document.getElementById(`til-entry-${slug}`) : document.getElementById("archive-title");
+          target?.focus({ preventScroll: true });
+        }
+        window.scrollTo({ top: savedPosition, behavior: "instant" });
       }
-    },
-    [],
-  );
+      restoring = false;
+    });
+    const remember = () => { if (!restoring) positions.current.set(locationKey, window.scrollY); };
+    window.addEventListener("scroll", remember, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", remember);
+    };
+  }, [locationKey, isReading, listKey]);
 
-  const commitSearch = (value: string) => {
-    const normalizedQuery = value.trim();
-    const nextResults = filterTILEntries(
-      entries,
-      category,
-      normalizedQuery,
-    );
-    const nextSelected = resolveSelectedTILEntry(
-      nextResults,
-      selectedEntry?.slug ?? null,
-    );
-
-    navigateToState(
-      category,
-      normalizedQuery,
-      nextSelected?.slug ?? null,
-      "replace",
-    );
-  };
+  useEffect(() => {
+    const handleHistory = () => {
+      cancelSearch();
+      if (!isComposing.current) setSearchDraft(new URL(window.location.href).searchParams.get("q") ?? "");
+    };
+    window.addEventListener("popstate", handleHistory);
+    return () => { cancelSearch(); window.removeEventListener("popstate", handleHistory); };
+  }, []);
 
   const scheduleSearch = (value: string) => {
-    if (searchTimerRef.current) {
-      clearTimeout(searchTimerRef.current);
-    }
-
-    searchTimerRef.current = setTimeout(() => commitSearch(value), 240);
+    cancelSearch();
+    searchTimer.current = setTimeout(() => navigate(category, value, null, "replace"), 240);
   };
-
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    setSearchDraft(value);
-
-    if (!isComposing) {
-      scheduleSearch(value);
-    }
+    setSearchDraft(event.target.value);
+    if (!isComposing.current) scheduleSearch(event.target.value);
   };
-
-  const handleCompositionStart = () => {
-    setIsComposing(true);
-
-    if (searchTimerRef.current) {
-      clearTimeout(searchTimerRef.current);
-    }
-  };
-
   const handleCompositionEnd = (event: CompositionEvent<HTMLInputElement>) => {
-    setIsComposing(false);
+    isComposing.current = false;
     scheduleSearch(event.currentTarget.value);
   };
-
-  const handleCategoryChange = (nextCategory: TILCategoryFilter) => {
-    if (searchTimerRef.current) {
-      clearTimeout(searchTimerRef.current);
-    }
-
-    const nextResults = filterTILEntries(
-      entries,
-      nextCategory,
-      searchDraft,
-    );
-    const nextSelected = resolveSelectedTILEntry(
-      nextResults,
-      selectedEntry?.slug ?? null,
-    );
-
-    navigateToState(
-      nextCategory,
-      searchDraft,
-      nextSelected?.slug ?? null,
-      "push",
-    );
-  };
-
-  const focusDetailOnMobile = () => {
-    requestAnimationFrame(() => {
-      if (window.matchMedia("(max-width: 1023px)").matches) {
-        detailHeadingRef.current?.focus({ preventScroll: true });
-      }
-    });
-  };
-
   const handleSelect = (entry: TILEntry) => {
-    listScrollPositionRef.current = window.scrollY;
-    setMobileView("detail");
-    navigateToState(category, urlQuery, entry.slug, "push");
-    focusDetailOnMobile();
+    // Opening a currently visible result cancels any uncommitted search.
+    setSearchDraft(urlQuery);
+    isComposing.current = false;
+    listFocus.current.set(listKey, entry.slug);
+    navigate(category, urlQuery, entry.slug);
   };
-
-  const handleEntryNavigation = (offset: number) => {
-    const nextEntry = filteredEntries[selectedIndex + offset];
-
-    if (!nextEntry) {
-      return;
-    }
-
-    navigateToState(category, urlQuery, nextEntry.slug, "push");
-    focusDetailOnMobile();
-  };
-
-  const handleBackToList = () => {
-    setMobileView("list");
-    requestAnimationFrame(() => {
-      window.scrollTo({ top: listScrollPositionRef.current, behavior: "auto" });
-    });
-  };
-
+  const handleBack = () => navigate(category, urlQuery, null);
   const handleReset = () => {
     setSearchDraft("");
-    setMobileView("list");
-    navigateToState("all", "", entries[0]?.slug ?? null, "push");
-    requestAnimationFrame(() => searchInputRef.current?.focus());
+    navigate("all", "", null);
+    searchInput.current?.focus();
   };
-
-  const hasDemoEntries = entries.some((entry) => entry.isDemo);
 
   return (
     <div className={styles.page}>
-      <a className={styles.skipLink} href="#archive">
-        TIL 기록으로 건너뛰기
+      <a className={styles.skipLink} href={isReading ? "#til-reader-title" : "#archive"}
+        onClick={(event) => navigateToTILAnchor(event, isReading ? "til-reader-title" : "archive")}>
+        {isReading ? "본문으로 건너뛰기" : "TIL 기록으로 건너뛰기"}
       </a>
-      <Sidebar />
-      <main className={styles.main}>
-        <TopNavigation />
-        <Hero journey={journey} />
-
-        <section className={styles.archive} id="archive">
-          <div className={styles.archiveHeader}>
-            <div>
-              <div className={styles.archiveTitleLine}>
-                <h2>TIL Archive</h2>
-                <p>하루의 배움이, 내일의 가능성이 된다.</p>
-                {hasDemoEntries ? <span>샘플 기록</span> : null}
-              </div>
+      {isReading ? (
+        <main className={styles.readerMain}>
+          {selectedEntry ? (
+            <TILReader key={selectedEntry.slug} entry={selectedEntry} categories={categories}
+              headingRef={headingRef} onBack={handleBack}
+              previous={selectedIndex > 0 ? filteredEntries[selectedIndex - 1] : undefined}
+              next={selectedIndex >= 0 ? filteredEntries[selectedIndex + 1] : undefined}
+              onSelect={(entry) => navigate(category, urlQuery, entry.slug)} />
+          ) : (
+            <div className={styles.missingEntry}>
+              <p>TIL ARCHIVE</p>
+              <h1 id="til-reader-title" ref={headingRef} tabIndex={-1}>기록을 찾을 수 없습니다.</h1>
+              <p>주소가 변경되었거나 공개되지 않은 기록입니다.</p>
+              <button type="button" onClick={handleBack}>TIL 목록으로 돌아가기</button>
             </div>
-            <label className={styles.searchField}>
-              <Search aria-hidden="true" size={16} strokeWidth={1.8} />
-              <span className={styles.srOnly}>기록 검색</span>
-              <input
-                autoComplete="off"
-                onChange={handleSearchChange}
-                onCompositionEnd={handleCompositionEnd}
-                onCompositionStart={handleCompositionStart}
-                placeholder="기록 검색하기…"
-                ref={searchInputRef}
-                type="search"
-                value={searchDraft}
-              />
-            </label>
-          </div>
-
-          <div className={styles.archiveBody} data-mobile-view={mobileView}>
-            <div className={styles.listPanel}>
-              <div aria-label="TIL 카테고리" className={styles.filters}>
-                <button
-                  aria-pressed={category === "all"}
-                  data-active={category === "all"}
-                  onClick={() => handleCategoryChange("all")}
-                  type="button"
-                >
-                  전체
-                </button>
-                {categories.map((item) => (
-                  <button
-                    aria-pressed={category === item.id}
-                    data-active={category === item.id}
-                    key={item.id}
-                    onClick={() => handleCategoryChange(item.id)}
-                    type="button"
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
-
-              {entries.length === 0 ? (
-                <div className={styles.emptyState} role="status">
-                  <strong>아직 등록된 학습 기록이 없습니다.</strong>
+          )}
+        </main>
+      ) : (
+        <>
+          <Sidebar />
+          <main className={styles.main}>
+            <TopNavigation />
+            <Hero journey={journey} />
+            <section className={styles.archive} id="archive" tabIndex={-1}>
+              <div className={styles.archiveHeader}>
+                <div className={styles.archiveTitleLine}>
+                  <h2 id="archive-title" tabIndex={-1}>TIL Archive</h2>
+                  <p>하루의 배움이, 내일의 가능성이 된다.</p>
+                  {entries.some((entry) => entry.isDemo) ? <span>샘플 기록</span> : null}
                 </div>
-              ) : filteredEntries.length === 0 ? (
-                <EmptyState onReset={handleReset} />
-              ) : (
-                <EntryList
-                  categories={categories}
-                  entries={filteredEntries}
-                  onSelect={handleSelect}
-                  selectedEntry={selectedEntry}
-                />
-              )}
-            </div>
-
-            <div className={styles.detailPanel}>
-              {selectedEntry ? (
-                <EntryDetail
-                  categories={categories}
-                  entry={selectedEntry}
-                  hasNext={selectedIndex < filteredEntries.length - 1}
-                  hasPrevious={selectedIndex > 0}
-                  headingRef={detailHeadingRef}
-                  onBack={handleBackToList}
-                  onNext={() => handleEntryNavigation(1)}
-                  onPrevious={() => handleEntryNavigation(-1)}
-                />
-              ) : (
-                <EmptyState onReset={handleReset} />
-              )}
-            </div>
-          </div>
-        </section>
-      </main>
+                <label className={styles.searchField}>
+                  <Search aria-hidden="true" size={16} />
+                  <span className={styles.srOnly}>기록 검색</span>
+                  <input autoComplete="off" onChange={handleSearchChange}
+                    onCompositionStart={() => { isComposing.current = true; cancelSearch(); }}
+                    onCompositionEnd={handleCompositionEnd}
+                    placeholder="기록 검색하기…" ref={searchInput} type="search" value={searchDraft} />
+                </label>
+              </div>
+              <div className={styles.archiveBody}>
+                <div className={styles.listPanel}>
+                  <div aria-label="TIL 카테고리" className={styles.filters}>
+                    {[{ id: "all", label: "전체" }, ...categories].map((item) => (
+                      <button aria-pressed={category === item.id} data-active={category === item.id}
+                        key={item.id} onClick={() => navigate(item.id, searchDraft, null)} type="button">{item.label}</button>
+                    ))}
+                  </div>
+                  <p className={styles.resultCount} role="status">{filteredEntries.length}개의 기록 · 기록을 선택해 이어 읽어 보세요.</p>
+                  {entries.length === 0 ? <div className={styles.emptyState} role="status"><strong>아직 등록된 학습 기록이 없습니다.</strong></div>
+                    : filteredEntries.length === 0 ? <EmptyState onReset={handleReset} />
+                      : <EntryList categories={categories} entries={filteredEntries} onSelect={handleSelect} selectedEntry={null} />}
+                </div>
+              </div>
+            </section>
+          </main>
+        </>
+      )}
     </div>
   );
 }

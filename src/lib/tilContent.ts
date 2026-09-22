@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync, renameSync, unlinkSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, lstatSync, mkdirSync, readFileSync, readdirSync, realpathSync, renameSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 import type {
@@ -6,6 +6,8 @@ import type {
   TILCategoryMeta,
   TILEntry,
   TILResource,
+  TILBlock,
+  TILReflectionKey,
 } from "../types/til";
 
 export type TILSourceStatus = "draft" | "published";
@@ -131,8 +133,22 @@ function parseFrontmatter(markdown: string, sourcePath: string) {
 function parseSections(body: string, sourcePath: string) {
   const sections = new Map<string, string[]>();
   let activeHeading: string | null = null;
+  let inPrompt = false;
 
   for (const line of body.split("\n")) {
+    if (inPrompt) {
+      if (activeHeading) sections.get(activeHeading)?.push(line);
+      if (line.trim() === "```") inPrompt = false;
+      continue;
+    }
+    if (line.trim() === "```prompt") {
+      if (!activeHeading || !Object.keys(SECTION_KEYS).slice(0, 4).includes(activeHeading)) {
+        throw failure(sourcePath, "prompt must belong to a reflection section");
+      }
+      sections.get(activeHeading)?.push(line.trim());
+      inPrompt = true;
+      continue;
+    }
     const heading = line.match(/^##\s+(.+?)\s*$/);
     if (heading) {
       activeHeading = heading[1];
@@ -151,6 +167,7 @@ function parseSections(body: string, sourcePath: string) {
     }
   }
 
+  if (inPrompt) throw failure(sourcePath, "unclosed prompt fence");
   const missing = REQUIRED_SECTIONS.filter((heading) => !sections.has(heading));
   if (missing.length > 0) {
     throw failure(sourcePath, `missing section(s): ${missing.join(", ")}`);
@@ -173,6 +190,68 @@ function parseBullets(lines: string[], heading: string, sourcePath: string) {
   }
 
   return values;
+}
+
+function mediaFilename(src: string, slug: string, kind: "image" | "video", sourcePath: string) {
+  const prefix = `/til/media/${slug}/`;
+  const filename = src.startsWith(prefix) ? src.slice(prefix.length) : "";
+  const pattern = kind === "image" ? /^[a-zA-Z0-9_-]+\.(png|jpe?g|webp|gif|avif)$/i : /^[a-zA-Z0-9_-]+\.(mp4|webm|ogv)$/i;
+  if (!pattern.test(filename)) throw failure(sourcePath, `invalid ${kind} media URL; use ${prefix}filename with a supported extension`);
+  return filename;
+}
+
+function parseReflection(lines: string[], heading: string, slug: string, sourcePath: string): TILBlock[] {
+  const blocks: TILBlock[] = [];
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+    if (line === "```prompt") {
+      const media = blocks.at(-1);
+      if (!media || media.type === "paragraph") throw failure(sourcePath, "prompt requires a preceding media item");
+      if (media.prompt !== undefined) throw failure(sourcePath, "duplicate prompt for media item");
+      const promptLines: string[] = [];
+      index += 1;
+      while (index < lines.length && lines[index].trim() !== "```") {
+        promptLines.push(lines[index]);
+        index += 1;
+      }
+      if (index === lines.length) throw failure(sourcePath, "unclosed prompt fence");
+      const prompt = promptLines.join("\n");
+      if (!prompt.trim()) throw failure(sourcePath, "empty prompt is not allowed");
+      media.prompt = prompt;
+    } else {
+      blocks.push(parseReflectionBlock(line, heading, slug, sourcePath));
+    }
+  }
+  return blocks;
+}
+
+function parseReflectionBlock(line: string, heading: string, slug: string, sourcePath: string): TILBlock {
+    const text = line.replace(/^-\s+/, "").trim();
+    const mediaSyntax = /^(?:!\[|\[(?:video|youtube):)/.test(text);
+    const media = mediaSyntax ? text.match(/^(!?)\[([^\]]+)\]\(([^\s)]+)\)(.*)$/) : null;
+    if (!media) {
+      if (mediaSyntax || /<\/?[a-z][^>]*>/i.test(text)) throw failure(sourcePath, `invalid media or raw HTML in ${heading}`);
+      return { type: "paragraph", text };
+    }
+    const [, image, label, src, suffix] = media;
+    const type = image ? "image" : label.startsWith("video: ") ? "video" : label.startsWith("youtube: ") ? "youtube" : null;
+    if (!type) throw failure(sourcePath, "media link requires video: or youtube: title");
+    const parts = suffix.split("|").map((part) => part.trim());
+    const size = parts[1]?.match(/^([1-9]\d{0,4})x([1-9]\d{0,4})$/);
+    if (parts[0] || !size || parts.length > (type === "video" ? 4 : 3)) throw failure(sourcePath, "media dimensions required: | WIDTHxHEIGHT | optional caption");
+    const common = { src, width: Number(size[1]), height: Number(size[2]), ...(parts[2] ? { caption: parts[2] } : {}) };
+    if (type === "image") {
+      mediaFilename(src, slug, "image", sourcePath);
+      return { type, alt: requireString(label, "image alt", sourcePath), ...common };
+    }
+    const title = requireString(label.slice(type.length + 2), "media title", sourcePath);
+    if (type === "youtube") {
+      if (!/^https:\/\/www\.youtube\.com\/watch\?v=[a-zA-Z0-9_-]{11}$/.test(src)) throw failure(sourcePath, "YouTube URL must be https://www.youtube.com/watch?v=VIDEO_ID (11 characters)");
+      return { type, title, ...common };
+    }
+    mediaFilename(src, slug, "video", sourcePath);
+    if (parts[3]) mediaFilename(parts[3], slug, "image", sourcePath);
+    return { type, title, ...common, ...(parts[3] ? { poster: parts[3] } : {}) };
 }
 
 function parseActions(lines: string[], sourcePath: string) {
@@ -276,6 +355,9 @@ export function parseTILMarkdown(
     throw failure(sourcePath, "status must be draft or published");
   }
 
+  const reflections = Object.fromEntries(Object.entries(SECTION_KEYS).slice(0, 4).map(([heading, key]) => [key, parseReflection(sections.get(heading) ?? [], heading, slug, sourcePath)])) as Record<TILReflectionKey, TILBlock[]>;
+  const blocks = Object.fromEntries(Object.entries(reflections).filter(([, values]) => values.some((block) => block.type !== "paragraph")));
+  const paragraphs = (key: TILReflectionKey) => reflections[key].flatMap((block) => block.type === "paragraph" ? [block.text] : []);
   const entry: TILSourceEntry = {
     id,
     slug,
@@ -290,10 +372,11 @@ export function parseTILMarkdown(
     isDemo: metadata.isDemo
       ? parseBoolean(metadata.isDemo, "isDemo", sourcePath)
       : false,
-    learned: parseBullets(sections.get("오늘 배운 것") ?? [], "오늘 배운 것", sourcePath),
-    tried: parseBullets(sections.get("직접 시도한 것") ?? [], "직접 시도한 것", sourcePath),
-    blocked: parseBullets(sections.get("막혔던 지점") ?? [], "막혔던 지점", sourcePath),
-    insights: parseBullets(sections.get("새롭게 이해한 것") ?? [], "새롭게 이해한 것", sourcePath),
+    learned: paragraphs("learned"),
+    tried: paragraphs("tried"),
+    blocked: paragraphs("blocked"),
+    insights: paragraphs("insights"),
+    ...(Object.keys(blocks).length ? { blocks } : {}),
     nextActions: parseActions(sections.get("다음 액션") ?? [], sourcePath),
     skills: parseBullets(sections.get("관련 역량") ?? [], "관련 역량", sourcePath),
     resources: parseResources(sections.get("관련 자료") ?? [], sourcePath),
@@ -359,8 +442,12 @@ export function readTILConfig(contentRoot: string): TILContentConfig {
 
 function markdownFiles(directory: string) {
   if (!existsSync(directory)) return [];
+  assertNoSymlinkAncestor(path.resolve(directory));
   return readdirSync(directory, { withFileTypes: true })
-    .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
+    .filter((entry) => {
+      if (entry.name.endsWith(".md") && entry.isSymbolicLink()) throw new Error(`Markdown symlinks are not supported: ${path.join(directory, entry.name)}`);
+      return entry.isFile() && entry.name.endsWith(".md");
+    })
     .map((entry) => path.join(directory, entry.name))
     .toSorted();
 }
@@ -424,12 +511,99 @@ function validateEntries(entries: TILSourceEntry[], config: TILContentConfig) {
   }
 }
 
+function localMedia(entry: TILEntry) {
+  return [...new Set(Object.values(entry.blocks ?? {}).flatMap((blocks) => blocks.flatMap((block) => {
+    if (block.type === "image") return [block.src];
+    if (block.type === "video") return [block.src, ...(block.poster ? [block.poster] : [])];
+    return [];
+  })))];
+}
+
+function assetPath(contentRoot: string, entry: TILSourceEntry, src: string) {
+  const root = path.resolve(contentRoot, ...(entry.status === "draft" ? ["drafts", "media"] : ["media"]));
+  const target = path.resolve(root, entry.slug, path.basename(src));
+  if (!target.startsWith(root + path.sep)) throw failure(entry.sourcePath, "media path escapes source directory");
+  if (!existsSync(target) || !lstatSync(target).isFile()) throw failure(entry.sourcePath, `missing media file: ${target}`);
+  if (!realpathSync(target).startsWith(path.resolve(contentRoot) + path.sep) || realpathSync(target) !== target) throw failure(entry.sourcePath, `symlink media is not supported: ${target}`);
+  return target;
+}
+
+function validateMedia(contentRoot: string, entries: TILSourceEntry[]) {
+  for (const entry of entries) for (const src of localMedia(entry)) assetPath(contentRoot, entry, src);
+}
+
+function generatedMediaRoot(contentRoot: string) {
+  // Custom content roots must retain the project/content/til convention.
+  if (path.basename(contentRoot) !== "til" || path.basename(path.dirname(contentRoot)) !== "content") return null;
+  return path.resolve(contentRoot, "..", "..", "public", "til", "media");
+}
+
+function assertNoSymlinkAncestor(target: string) {
+  let existing = target;
+  while (!existsSync(existing)) {
+    const parent = path.dirname(existing);
+    if (parent === existing) throw new Error(`Cannot resolve media parent: ${target}`);
+    existing = parent;
+  }
+  if (realpathSync(existing) !== existing) throw new Error(`Media directory cannot use symlinks: ${target}`);
+}
+
+function removeGeneratedMedia(contentRoot: string, slug: string) {
+  const root = generatedMediaRoot(contentRoot);
+  if (!root) return;
+  const target = path.resolve(root, slug);
+  if (!target.startsWith(root + path.sep)) throw new Error("Generated media path escaped its root");
+  assertNoSymlinkAncestor(root);
+  rmSync(target, { recursive: true, force: true });
+}
+
+export function stageTILMedia(projectRoot = process.cwd()) {
+  const contentRoot = path.resolve(projectRoot, "content", "til");
+  const config = readTILConfig(contentRoot);
+  const entries = readEntries(path.join(contentRoot, "published"), "published");
+  validateEntries(entries, config);
+  validateMedia(contentRoot, entries);
+  const root = path.resolve(projectRoot, "public", "til", "media");
+  const publicRoot = path.resolve(projectRoot, "public");
+  if (!root.startsWith(publicRoot + path.sep)) throw new Error("Generated media directory escaped public root");
+  assertNoSymlinkAncestor(root);
+  rmSync(root, { recursive: true, force: true });
+  for (const entry of entries) for (const src of localMedia(entry)) {
+    const target = path.join(root, entry.slug, path.basename(src));
+    mkdirSync(path.dirname(target), { recursive: true });
+    copyFileSync(assetPath(contentRoot, entry, src), target);
+  }
+  return entries.reduce((count, entry) => count + localMedia(entry).length, 0);
+}
+
+function moveMedia(contentRoot: string, entry: TILSourceEntry, status: TILSourceStatus) {
+  const moves = localMedia(entry).map((src) => {
+    const source = assetPath(contentRoot, entry, src);
+    const target = path.resolve(contentRoot, ...(status === "draft" ? ["drafts", "media"] : ["media"]), entry.slug, path.basename(src));
+    if (existsSync(target)) throw failure(entry.sourcePath, `media target already exists; resolve it before changing publication: ${target}`);
+    return { source, target };
+  });
+  for (const { target } of moves) {
+    assertNoSymlinkAncestor(path.dirname(target));
+    mkdirSync(path.dirname(target), { recursive: true });
+    if (realpathSync(path.dirname(target)) !== path.dirname(target)) throw new Error("Media destination cannot be a symlink");
+  }
+  const moved: typeof moves = [];
+  try {
+    for (const move of moves) { renameSync(move.source, move.target); moved.push(move); }
+  } catch (error) {
+    for (const move of moved.reverse()) renameSync(move.target, move.source);
+    throw error;
+  }
+}
+
 export function validateTILContent(contentRoot: string) {
   const config = readTILConfig(contentRoot);
   const published = readEntries(path.join(contentRoot, "published"), "published");
   const drafts = readEntries(path.join(contentRoot, "drafts"), "draft");
   const entries = [...published, ...drafts];
   validateEntries(entries, config);
+  validateMedia(contentRoot, entries);
   return { ...config, published, drafts };
 }
 
@@ -440,6 +614,7 @@ export function loadPublishedTILContent(
   const config = readTILConfig(contentRoot);
   const sourceEntries = readEntries(path.join(contentRoot, "published"), "published");
   validateEntries(sourceEntries, config);
+  validateMedia(contentRoot, sourceEntries);
   const entries = sourceEntries
     .map((sourceEntry) => {
       const { status, sourcePath, ...entry } = sourceEntry;
@@ -509,10 +684,44 @@ function lifecycleTimestamp(entry: TILSourceEntry, now: Date, operation: string)
   return updatedAt;
 }
 
+function transitionTIL(contentRoot: string, entry: TILSourceEntry, target: string, status: TILSourceStatus, updated: string) {
+  const source = entry.sourcePath;
+  const original = readFileSync(source, "utf8");
+  let mediaMoved = false;
+  let markdownMoved = false;
+  try {
+    moveMedia(contentRoot, entry, status);
+    mediaMoved = true;
+    writeFileSync(source, updated, "utf8");
+    renameSync(source, target);
+    markdownMoved = true;
+    validateTILContent(contentRoot);
+    if (status === "draft") removeGeneratedMedia(contentRoot, entry.slug);
+  } catch (error) {
+    const rollbackErrors: unknown[] = [];
+    try {
+      if (markdownMoved) renameSync(target, source);
+      writeFileSync(source, original, "utf8");
+    } catch (rollbackError) { rollbackErrors.push(rollbackError); }
+    try {
+      if (mediaMoved) moveMedia(contentRoot, { ...entry, status }, entry.status);
+    } catch (rollbackError) { rollbackErrors.push(rollbackError); }
+    // A failed cleanup can have removed some generated files. Restore published references.
+    if (entry.status === "published" && generatedMediaRoot(contentRoot)) {
+      try { stageTILMedia(path.resolve(contentRoot, "..", "..")); }
+      catch (rollbackError) { rollbackErrors.push(rollbackError); }
+    }
+    if (rollbackErrors.length) throw new AggregateError([error, ...rollbackErrors], `TIL transition failed and rollback needs attention: ${entry.slug}`);
+    throw error;
+  }
+}
+
 export function publishTIL(contentRoot: string, slug: string, now = new Date()) {
   assertSafeSlug(slug);
   const source = path.join(contentRoot, "drafts", `${slug}.md`);
   const target = path.join(contentRoot, "published", `${slug}.md`);
+  assertNoSymlinkAncestor(path.resolve(source));
+  assertNoSymlinkAncestor(path.resolve(target));
   if (!existsSync(source)) throw new Error(`Draft not found: ${slug}`);
   if (existsSync(target)) throw new Error(`Published target already exists: ${slug}`);
   const entry = parseTILMarkdown(readFileSync(source, "utf8"), source);
@@ -526,9 +735,12 @@ export function publishTIL(contentRoot: string, slug: string, now = new Date()) 
     "published",
     lifecycleTimestamp(entry, now, "Publish"),
   );
-  writeFileSync(source, updated, "utf8");
-  renameSync(source, target);
-  validateTILContent(contentRoot);
+  const archive = validateTILContent(contentRoot);
+  if (entry.resources.some((resource) => {
+    const linked = relatedTILSlug(resource);
+    return linked && linked !== slug && !archive.published.some((candidate) => candidate.slug === linked);
+  })) throw new Error("Cannot publish an entry linking to a private draft; publish linked entries first");
+  transitionTIL(contentRoot, entry, target, "published", updated);
   return target;
 }
 
@@ -536,6 +748,8 @@ export function unpublishTIL(contentRoot: string, slug: string, now = new Date()
   assertSafeSlug(slug);
   const source = path.join(contentRoot, "published", `${slug}.md`);
   const target = path.join(contentRoot, "drafts", `${slug}.md`);
+  assertNoSymlinkAncestor(path.resolve(source));
+  assertNoSymlinkAncestor(path.resolve(target));
   if (!existsSync(source)) throw new Error(`Published entry not found: ${slug}`);
   if (existsSync(target)) throw new Error(`Draft target already exists: ${slug}`);
   const entry = parseTILMarkdown(readFileSync(source, "utf8"), source);
@@ -560,9 +774,7 @@ export function unpublishTIL(contentRoot: string, slug: string, now = new Date()
     "draft",
     lifecycleTimestamp(entry, now, "Unpublish"),
   );
-  writeFileSync(source, updated, "utf8");
-  renameSync(source, target);
-  validateTILContent(contentRoot);
+  transitionTIL(contentRoot, entry, target, "draft", updated);
   return target;
 }
 
@@ -576,6 +788,7 @@ export function deleteTIL(
     throw new Error("Delete scope must be drafts or published");
   }
   const target = path.join(contentRoot, scope, `${slug}.md`);
+  assertNoSymlinkAncestor(path.resolve(target));
   if (!existsSync(target)) throw new Error(`Exact delete target not found: ${scope}/${slug}.md`);
   const { drafts, published } = validateTILContent(contentRoot);
   const targetEntry = [...drafts, ...published].find(
@@ -592,5 +805,6 @@ export function deleteTIL(
     throw new Error(`Cannot delete ${slug}; referenced by: ${inbound.join(", ")}`);
   }
   unlinkSync(target);
+  removeGeneratedMedia(contentRoot, slug);
   return target;
 }

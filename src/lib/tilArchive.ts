@@ -14,6 +14,9 @@ export function getTILSearchText(entry: TILEntry) {
     ...entry.tried,
     ...entry.blocked,
     ...entry.insights,
+    ...Object.values(entry.blocks ?? {}).flatMap((blocks) => blocks.flatMap((block) =>
+      block.type === "paragraph" ? [block.text] : [block.caption ?? "", block.prompt ?? "", block.type === "image" ? block.alt : block.title],
+    )),
     ...entry.nextActions.map((action) => action.text),
     ...entry.skills,
     ...entry.resources.flatMap((resource) => [
@@ -53,7 +56,7 @@ export function resolveSelectedTILEntry(
     }
   }
 
-  return entries[0] ?? null;
+  return null;
 }
 
 export function formatTILDate(date: string) {

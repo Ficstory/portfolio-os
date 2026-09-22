@@ -43,4 +43,6 @@ ppt 작성/
 
 # Local TIL drafts (published Markdown remains tracked)
 content/til/drafts/*.md
+content/til/drafts/media/
+public/til/media/
 !content/til/drafts/.gitkeep

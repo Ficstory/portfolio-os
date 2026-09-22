@@ -1,5 +1,13 @@
 export type TILCategory = string;
 
+export type TILReflectionKey = "learned" | "tried" | "blocked" | "insights";
+type TILMediaSize = { width: number; height: number; caption?: string; prompt?: string };
+export type TILBlock =
+  | { type: "paragraph"; text: string }
+  | ({ type: "image"; src: string; alt: string } & TILMediaSize)
+  | ({ type: "video"; src: string; title: string; poster?: string } & TILMediaSize)
+  | ({ type: "youtube"; src: string; title: string } & TILMediaSize);
+
 export type TILAction = {
   id: string;
   text: string;
@@ -28,6 +36,7 @@ export type TILEntry = {
   tried: string[];
   blocked: string[];
   insights: string[];
+  blocks?: Partial<Record<TILReflectionKey, TILBlock[]>>;
   nextActions: TILAction[];
   skills: string[];
   resources: TILResource[];

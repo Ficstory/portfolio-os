@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "npm run til:media",
+    "prebuild": "npm run til:media",
+    "postbuild": "node scripts/til-build-check.mjs",
+    "til:media": "node --experimental-strip-types scripts/til-media.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

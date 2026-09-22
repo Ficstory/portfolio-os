@@ -88,13 +88,26 @@ test("search is case-insensitive and includes actions and skills", () => {
   assert.equal(filterTILEntries(entries, "all", "협업")[0].slug, "team-note");
 });
 
-test("selection keeps a valid slug and safely falls back to the first result", () => {
+test("selection keeps a valid slug and returns null for list or missing entry", () => {
   const { resolveSelectedTILEntry } = loadArchiveModule();
   const sortedEntries = [...entries].reverse();
 
   assert.equal(resolveSelectedTILEntry(sortedEntries, "field-note").slug, "field-note");
-  assert.equal(resolveSelectedTILEntry(sortedEntries, "missing").slug, "team-note");
+  assert.equal(resolveSelectedTILEntry(sortedEntries, "missing"), null);
+  assert.equal(resolveSelectedTILEntry(sortedEntries, null), null);
   assert.equal(resolveSelectedTILEntry([], "missing"), null);
+});
+
+test("media alt, captions, titles and ordered text are searchable", () => {
+  const { filterTILEntries } = loadArchiveModule();
+  const mediaEntry = { ...entries[0], blocks: { learned: [
+    { type: "paragraph", text: "추가 본문" },
+    { type: "image", src: "/til/media/field-note/photo.png", alt: "화면 구조", caption: "전후 비교", prompt: "수채화 풍경 원문", width: 800, height: 600 },
+    { type: "video", src: "/til/media/field-note/demo.mp4", title: "실행 영상", width: 800, height: 600 },
+  ] } };
+  for (const query of ["추가 본문", "화면 구조", "전후 비교", "실행 영상", "수채화 풍경 원문"]) {
+    assert.equal(filterTILEntries([mediaEntry], "all", query).length, 1);
+  }
 });
 
 test("route, Markdown content, notebook asset, and Portfolio OS launchers stay connected", () => {

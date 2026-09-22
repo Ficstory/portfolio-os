@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // File tracing can otherwise include drafts while following dynamic fs paths.
+  outputFileTracingExcludes: {
+    "/*": ["./content/til/drafts/**/*"],
+  },
   async rewrites() {
     return [
       {

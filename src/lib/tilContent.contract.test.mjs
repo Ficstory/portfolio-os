@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import { syncBuiltinESMExports } from "node:module";
 import {
   existsSync,
   mkdirSync,
@@ -14,6 +16,8 @@ import test from "node:test";
 import {
   deleteTIL,
   loadPublishedTILContent,
+  parseTILMarkdown,
+  stageTILMedia,
   publishTIL,
   unpublishTIL,
   validateTILContent,
@@ -104,6 +108,148 @@ function writeEntry(contentRoot, scope, options) {
 function cleanup(projectRoot) {
   rmSync(projectRoot, { recursive: true, force: true });
 }
+
+const MEDIA_LINE = "- ![실험 결과](/til/media/test-learning/chart.png) | 1200x800 | 비교 캡션";
+function mediaMarkdown(options = {}) {
+  return entryMarkdown(options).replace("- 사실과 해석을 분리했다.", `- 시작 문단\n${MEDIA_LINE}\n- 마지막 문단`);
+}
+
+test("prompt fences preserve raw multiline content on the preceding media only", () => {
+  const prompt = "  첫 줄 들여쓰기\n\n## 프롬프트 내부 제목\n<!-- 그대로 보존 -->\n<script>alert('text only')</script>\n  마지막 줄  ";
+  for (const media of [MEDIA_LINE, "- [video: 과정](/til/media/test-learning/demo.mp4) | 800x600", "- [youtube: 과정](https://www.youtube.com/watch?v=abcdefghijk) | 800x600"]) {
+    const markdown = mediaMarkdown().replace(MEDIA_LINE, `${media}\n\n\`\`\`prompt\n${prompt}\n\`\`\``);
+    const entry = parseTILMarkdown(markdown);
+    assert.equal(entry.blocks.learned[1].prompt, prompt);
+    assert.deepEqual(entry.blocks.learned.map((block) => block.type), ["paragraph", entry.blocks.learned[1].type, "paragraph"]);
+    assert.deepEqual(entry.learned, ["시작 문단", "마지막 문단"]);
+    assert.equal(entry.tried[0], "작은 실험을 실행했다.");
+  }
+});
+
+test("prompt fences reject duplicate, orphan, empty and unclosed prompts", () => {
+  const fence = "```prompt\n프롬프트\n```";
+  const duplicate = mediaMarkdown().replace(MEDIA_LINE, `${MEDIA_LINE}\n${fence}\n${fence}`);
+  assert.throws(() => parseTILMarkdown(duplicate), /duplicate prompt/);
+  assert.throws(() => parseTILMarkdown(mediaMarkdown().replace("- 시작 문단", `- 시작 문단\n${fence}`)), /preceding media/);
+  assert.throws(() => parseTILMarkdown(mediaMarkdown().replace(MEDIA_LINE, `${MEDIA_LINE}\n\`\`\`prompt\n  \n\n\`\`\``)), /empty prompt/);
+  assert.throws(() => parseTILMarkdown(mediaMarkdown().replace(MEDIA_LINE, `${MEDIA_LINE}\n\`\`\`prompt\n안 닫힘`)), /unclosed prompt/);
+  assert.throws(() => parseTILMarkdown(entryMarkdown().replace("## 관련 역량", `${fence}\n## 관련 역량`)), /reflection section/);
+});
+
+test("ordered media preserves paragraphs and rejects unsafe sources and dimensions", () => {
+  const entry = parseTILMarkdown(mediaMarkdown());
+  assert.deepEqual(entry.blocks.learned.map((block) => block.type), ["paragraph", "image", "paragraph"]);
+  assert.deepEqual(entry.learned, ["시작 문단", "마지막 문단"]);
+  assert.equal(entry.blocks.learned[1].caption, "비교 캡션");
+  for (const bad of ["javascript:alert", "/til/media/other/chart.png", "/til/media/test-learning/../chart.png", "https://example.com/chart.png"]) {
+    assert.throws(() => parseTILMarkdown(mediaMarkdown().replace("/til/media/test-learning/chart.png", bad)), /media/);
+  }
+  assert.throws(() => parseTILMarkdown(mediaMarkdown().replace("1200x800", "0x800")), /dimensions/);
+  const video = mediaMarkdown().replace(MEDIA_LINE, "- [youtube: 실험 영상](https://www.youtube.com/watch?v=abcdefghijk) | 1920x1080 | 영상 설명");
+  assert.equal(parseTILMarkdown(video).blocks.learned[1].type, "youtube");
+  assert.throws(() => parseTILMarkdown(video.replace("www.youtube.com", "evil.example")), /YouTube/);
+  const linked = entryMarkdown().replace("- 사실과 해석을 분리했다.", "- [문서](https://example.com)에서 배웠다.");
+  assert.deepEqual(parseTILMarkdown(linked).learned, ["[문서](https://example.com)에서 배웠다."]);
+});
+
+test("publication transitions roll back Markdown and media on filesystem failures", () => {
+  for (const status of ["draft", "published"]) for (const operation of ["writeFileSync", "renameSync", ...(status === "published" ? ["rmSync"] : [])]) {
+    const { projectRoot, contentRoot } = createFixture();
+    const originalFunction = fs[operation];
+    try {
+      const folder = status === "draft" ? "drafts" : "published";
+      const source = path.join(contentRoot, folder, "test-learning.md");
+      const originalMarkdown = mediaMarkdown({ status });
+      writeFileSync(source, originalMarkdown);
+      const asset = path.join(contentRoot, ...(status === "draft" ? ["drafts", "media"] : ["media"]), "test-learning", "chart.png");
+      mkdirSync(path.dirname(asset), { recursive: true });
+      writeFileSync(asset, "image");
+      stageTILMedia(projectRoot);
+      let injected = false;
+      fs[operation] = (...args) => {
+        if (!injected && (operation === "rmSync" || String(args[0]) === source)) {
+          injected = true;
+          throw new Error(`injected ${operation} failure`);
+        }
+        return originalFunction(...args);
+      };
+      syncBuiltinESMExports();
+      const action = status === "draft" ? publishTIL : unpublishTIL;
+      assert.throws(() => action(contentRoot, "test-learning", new Date("2026-09-22T00:00:00Z")), /injected/);
+      assert.equal(injected, true);
+      assert.equal(readFileSync(source, "utf8"), originalMarkdown);
+      assert.equal(readFileSync(asset, "utf8"), "image");
+      assert.equal(validateTILContent(contentRoot)[folder].length, 1);
+      if (status === "published") assert.equal(existsSync(path.join(projectRoot, "public", "til", "media", "test-learning", "chart.png")), true);
+    } finally {
+      fs[operation] = originalFunction;
+      syncBuiltinESMExports();
+      cleanup(projectRoot);
+    }
+  }
+});
+
+test("publication refuses a linked source directory without modifying external Markdown", () => {
+  const { projectRoot, contentRoot } = createFixture();
+  try {
+    const external = path.join(projectRoot, "external-drafts");
+    mkdirSync(external);
+    const original = entryMarkdown();
+    const source = path.join(external, "test-learning.md");
+    writeFileSync(source, original);
+    fs.rmdirSync(path.join(contentRoot, "drafts"));
+    fs.symlinkSync(external, path.join(contentRoot, "drafts"), process.platform === "win32" ? "junction" : "dir");
+    assert.throws(() => publishTIL(contentRoot, "test-learning"), /symlink/);
+    assert.equal(readFileSync(source, "utf8"), original);
+  } finally { cleanup(projectRoot); }
+});
+
+test("only referenced published assets are staged, lifecycle moves assets and removes generated copies", () => {
+  const { projectRoot, contentRoot } = createFixture();
+  try {
+    const draft = path.join(contentRoot, "drafts", "test-learning.md");
+    writeFileSync(draft, mediaMarkdown());
+    const draftMedia = path.join(contentRoot, "drafts", "media", "test-learning");
+    mkdirSync(draftMedia, { recursive: true });
+    writeFileSync(path.join(draftMedia, "chart.png"), "public-image");
+    writeFileSync(path.join(draftMedia, "private.png"), "private-image");
+    const generated = path.join(projectRoot, "public", "til", "media", "test-learning", "chart.png");
+    stageTILMedia(projectRoot);
+    assert.equal(existsSync(generated), false);
+    publishTIL(contentRoot, "test-learning", new Date("2026-09-22T00:00:00Z"));
+    stageTILMedia(projectRoot);
+    assert.equal(readFileSync(generated, "utf8"), "public-image");
+    assert.equal(existsSync(path.join(path.dirname(generated), "private.png")), false);
+    assert.equal(existsSync(path.join(draftMedia, "private.png")), true);
+    const stale = path.join(path.dirname(generated), "stale.png");
+    writeFileSync(stale, "stale");
+    stageTILMedia(projectRoot);
+    assert.equal(existsSync(stale), false);
+    unpublishTIL(contentRoot, "test-learning", new Date("2026-09-22T01:00:00Z"));
+    assert.equal(existsSync(generated), false);
+    assert.equal(existsSync(path.join(draftMedia, "chart.png")), true);
+    assert.equal(loadPublishedTILContent(projectRoot).entries.length, 0);
+    publishTIL(contentRoot, "test-learning", new Date("2026-09-22T02:00:00Z"));
+    stageTILMedia(projectRoot);
+    deleteTIL(contentRoot, "test-learning", "published");
+    assert.equal(existsSync(generated), false);
+  } finally { cleanup(projectRoot); }
+});
+
+test("missing media and publication destination collisions fail before changing the entry", () => {
+  const { projectRoot, contentRoot } = createFixture();
+  try {
+    const draft = path.join(contentRoot, "drafts", "test-learning.md");
+    writeFileSync(draft, mediaMarkdown());
+    assert.throws(() => validateTILContent(contentRoot), /missing media file/);
+    for (const folder of [path.join(contentRoot, "drafts", "media", "test-learning"), path.join(contentRoot, "media", "test-learning")]) {
+      mkdirSync(folder, { recursive: true });
+      writeFileSync(path.join(folder, "chart.png"), "image");
+    }
+    assert.throws(() => publishTIL(contentRoot, "test-learning", new Date("2026-09-22T00:00:00Z")), /media target already exists/);
+    assert.match(readFileSync(draft, "utf8"), /status: draft/);
+  } finally { cleanup(projectRoot); }
+});
 
 test("draft creation, in-place supplement, publish, correction, unpublish, and delete", () => {
   const { projectRoot, contentRoot } = createFixture();
