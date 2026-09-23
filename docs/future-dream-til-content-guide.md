@@ -108,4 +108,4 @@ node --experimental-strip-types scripts/til-content.mjs delete <slug> --scope pu
 
 ## 기존 페이지 자산
 
-노트 비주얼은 `public/til/future-dream/notebook-lines.svg`와 CSS로 구성되어 있다. 카테고리/콘텐츠 저장 방식 변경과 무관하게 기존 검색·필터·선택 UI와 이 자산을 유지한다.
+목록 상단에는 사용자가 제공한 `public/til/future-dream/learning-character.png`를 사용한다. CSS로 원본의 왼쪽 빈 여백만 덜어내고 캐릭터와 책상 장면의 비율을 유지한다. 모바일에서는 소개 아래에 배치하며, 개별 글 읽기 화면에는 반복해서 표시하지 않는다.

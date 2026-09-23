@@ -5,6 +5,7 @@ import {
   RotateCcw,
   Search,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
@@ -56,28 +57,18 @@ function createArchiveSearch(
   return params.toString();
 }
 
-function NotebookVisual() {
+function CharacterVisual() {
   return (
-    <div aria-hidden="true" className={styles.notebookVisual}>
-      <div className={styles.notebookShadow} />
-      <div className={styles.notebook}>
-        <div className={styles.notebookPage}>
-          <p className={styles.handwritingEnglish}>
-            Better Questions,
-            <br />
-            Brighter Tomorrow.
-          </p>
-          <span className={styles.redStroke} />
-        </div>
-        <div className={styles.notebookSpine} />
-        <div className={styles.notebookPage}>
-          <p className={styles.handwritingKorean}>
-            배움이
-            <br />
-            오늘의 나를 만든다.
-          </p>
-          <span className={styles.pencilMark}>—</span>
-        </div>
+    <div className={styles.characterVisual}>
+      <div className={styles.characterScene}>
+        <Image
+          alt="책상에서 노트북으로 배운 내용을 기록하는 캐릭터"
+          className={styles.characterImage}
+          src="/til/future-dream/learning-character.png"
+          width={1916}
+          height={821}
+          preload
+        />
       </div>
     </div>
   );
@@ -199,7 +190,7 @@ function Hero({ journey }: { journey: AcademyJourney }) {
           )}
         </div>
       </div>
-      <NotebookVisual />
+      <CharacterVisual />
     </section>
   );
 }

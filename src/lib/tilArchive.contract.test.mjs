@@ -110,11 +110,10 @@ test("media alt, captions, titles and ordered text are searchable", () => {
   }
 });
 
-test("route, Markdown content, notebook asset, and Portfolio OS launchers stay connected", () => {
+test("route, Markdown content, character asset, and Portfolio OS launchers stay connected", () => {
   const publishedDirectory = path.join(root, "content/til/published");
   const publishedSources = readFileSync(path.join(publishedDirectory, "learning-to-action.md"), "utf8");
   const pageSource = readSource("src/components/til/FutureDreamTilPage.tsx");
-  const styleSource = readSource("src/components/til/future-dream-til.module.css");
   const routeSource = readSource("src/app/til/future-dream/page.tsx");
   const layoutSource = readSource("src/app/til/future-dream/layout.tsx");
   const dockSource = readSource("src/components/desktop/Dock.tsx");
@@ -128,7 +127,8 @@ test("route, Markdown content, notebook asset, and Portfolio OS launchers stay c
     readFileSync(path.join(root, "content/til/config.json"), "utf8").includes("My Academy Journey"),
     true,
   );
-  assert.match(styleSource, /notebook-lines\.svg/);
+  assert.match(pageSource, /\/til\/future-dream\/learning-character\.png/);
+  assert.ok(readFileSync(path.join(root, "public/til/future-dream/learning-character.png")).length > 0);
   assert.match(pageSource, /onCompositionStart/);
   assert.match(pageSource, /router\[mode\]/);
   assert.match(routeSource, /loadPublishedTILContent/);
