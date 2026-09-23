@@ -3,7 +3,7 @@ id: til-2026-09-22-structure-team-video-production
 slug: structure-team-video-production
 date: 2026-09-21
 createdAt: 2026-09-22T00:38:30+09:00
-updatedAt: 2026-09-23T09:31:09+09:00
+updatedAt: 2026-09-23T10:02:27+09:00
 session: Future & Dream Academy 팀 프로젝트
 category: team
 title: 카드뉴스·포스터·영상, 공통 기준으로 제작 흐름 맞추기
@@ -1179,7 +1179,700 @@ K-Palette Zone 도착! 한국인 찐 추천 라면 꿀조합과 SNS 화제 식�
 - ![거리 사진과 인물의 흰 외곽선 위에 손글씨와 여행 낙서가 겹쳐진 여행 이미지](/til/media/structure-team-video-production/k-palette-video-reference-7404.jpg) | 1200x1500 | 공유받은 레퍼런스 2 · IMG_7404.jpg. 이후 영상 제작에서도 캐릭터 시트와 함께 팀 전체가 공통으로 참고했다.
 - ![발밑을 내려다보는 시점의 사진 위에 찢어진 지도와 이동 경로, 여행 스티커를 배치한 JOURNEY 이미지](/til/media/structure-team-video-production/k-palette-video-reference-7405.jpg) | 1024x1536 | 페르소나 제작을 물어본 뒤 팀원에게 공유받은 레퍼런스 3 · IMG_7405.jpg.
 - 그다음 우리 팀은 캐릭터 시트를 제작했다. 완성된 시트를 팀원 전체에게 공유하고, 각자 캐릭터 시트와 IMG_7404를 함께 참고해 스토리보드의 시퀀스 번호대로 작업했다.
-- ![청록색과 파란색 재킷을 입은 캐릭터의 다섯 방향 전신, 표정 여섯 가지, 행동 포즈와 손·소품·색상 기준을 모은 캐릭터 시트](/til/media/structure-team-video-production/k-palette-video-character-sheet.png) | 1672x941 | 팀 전체가 공유한 캐릭터 시트 · 제공 파일: image (5).png. 시퀀스별 제작에 IMG_7404와 함께 사용했다.
+- ![청록색과 파란색 재킷을 입은 캐릭터의 다섯 방향 전신, 표정 여섯 가지, 행동 포즈와 손·소품·색상 기준을 모은 캐릭터 시트](/til/media/structure-team-video-production/k-palette-video-character-sheet.png) | 1672x941 | 팀 전체가 공유한 캐릭터 시트 · 제공 파일: image (5).png. 시퀀스별 제작에 IMG_7404와 함께 사용했다. 캡션 옆 펼치기에서 제작 프롬프트 원문을 볼 수 있다.
+
+```prompt
+이마트 신촌점 ‘K-Palette Zone’ 글로벌 홍보 쇼츠 영상에
+Scene 1부터 Scene 6까지 동일하게 등장할
+메인 주인공의 CHARACTER REFERENCE PALETTE / CHARACTER MODEL SHEET를 제작한다.
+
+이 이미지는 최종 광고 장면이 아니다.
+
+향후 AI 영상 생성 과정에서
+동일한 인물의 얼굴, 헤어스타일, 체형, 의상, 가방, 신발,
+스마트폰 등의 외형을 일관되게 유지하기 위한
+“영상 제작용 인물 기준 이미지”다.
+
+────────────────────────
+[출력 목적]
+────────────────────────
+
+30초짜리 K-Palette Zone SNS 홍보영상에서
+6개의 서로 다른 장면에 동일한 주인공을 등장시키기 위한
+캐릭터 레퍼런스 시트를 제작한다.
+
+향후 다음 장면에서 이 이미지가 reference image로 사용된다.
+
+Scene 1
+신촌역에서 이마트 신촌점으로 이동하는 1인칭 POV
+
+Scene 2
+이마트 B3에서 길을 몰라 잠시 고민하는 모습
+
+Scene 3
+스마트폰 AR 길안내를 사용하는 모습
+
+Scene 4
+K-Palette Zone에서 인기 K-Food를 발견하는 모습
+
+Scene 5
+NFC 태그에 스마트폰을 가져다 대는 모습
+
+Scene 6
+쇼핑을 마친 뒤 K-Food가 담긴 카트와 함께 웃는 모습
+
+따라서
+다양한 카메라 앵글과 행동에서도
+동일 인물이라는 것이 확실하게 유지되도록
+충분한 시각 정보를 제공한다.
+
+────────────────────────
+[CHARACTER CONCEPT]
+────────────────────────
+
+20대 중반의 외국인 여성 관광객.
+
+한국을 여행하며
+K-Pop, K-Food, K-Culture를 적극적으로 즐기는
+Gen-Z 여행자.
+
+전체적인 캐릭터 인상:
+
+- 밝고 호기심이 많음
+- 새로운 장소를 발견하는 것을 좋아함
+- SNS 활용에 익숙함
+- 한국 여행을 즐기고 있음
+- 트렌디하지만 과도하게 꾸민 느낌은 아님
+- 실제 관광객처럼 자연스러움
+- 활기차고 긍정적
+- 스마트하고 독립적인 여행자
+
+과도하게 모델 또는 아이돌처럼 보이지 않는다.
+
+실제 Instagram / TikTok 여행 Vlog에서
+볼 법한 자연스러운 젊은 여행자의 이미지.
+
+────────────────────────
+[FACE IDENTITY — VERY IMPORTANT]
+────────────────────────
+
+모든 포즈에서
+정확히 동일한 한 사람이어야 한다.
+
+same exact woman
+same facial identity
+same facial proportions
+same eyes
+same nose
+same lips
+same jawline
+same skin tone
+same hairstyle
+same age
+same body proportions
+
+포즈마다 다른 모델처럼 바뀌지 않는다.
+
+얼굴 특징:
+
+- 20대 중반
+- 부드러운 타원형 얼굴
+- 자연스러운 턱선
+- 밝고 생기 있는 눈
+- 너무 크거나 애니메이션 같은 눈 금지
+- 자연스러운 코와 입술
+- 건강하고 자연스러운 피부
+- 과도한 피부 보정 없음
+- 자연스러운 데일리 메이크업
+- 은은한 립 컬러
+- 가벼운 아이라인 정도
+
+실존 유명인이나 연예인을 닮게 만들지 않는다.
+
+────────────────────────
+[HAIR]
+────────────────────────
+
+헤어스타일은 모든 장면에서 반드시 동일하게 유지한다.
+
+dark brown to almost black hair
+
+길이:
+어깨 아래까지 내려오는 medium-long hair
+
+스타일:
+자연스러운 스트레이트 헤어에
+끝부분만 아주 약한 웨이브.
+
+가르마:
+자연스러운 center 또는 slightly off-center part
+
+앞머리:
+무거운 앞머리 없이
+얼굴선을 자연스럽게 드러낸다.
+
+바람이 불거나 움직일 때도
+기본 헤어 실루엣이 유지되어야 한다.
+
+────────────────────────
+[WARDROBE CONCEPT]
+────────────────────────
+
+영상 전체에서 사용할
+하나의 고정된 여행자 룩.
+
+테마:
+
+Y2K street casual
+\+
+K-pop inspired travel fashion
+\+
+comfortable tourist outfit
+
+메인 아우터:
+
+오버사이즈 컬러 블록 윈드브레이커.
+
+컬러 구성:
+
+- teal / turquoise
+- off-white
+- cobalt blue
+- small pastel pink accent
+
+90년대 후반\~2000년대 초반의
+Y2K 스포츠웨어를 현대적으로 재해석한 디자인.
+
+브랜드 로고는 없다.
+
+상의:
+
+심플한 화이트 또는 크림색 티셔츠.
+
+하의:
+
+dark charcoal 또는 black
+relaxed-fit cargo pants.
+
+너무 와이드하지 않고
+걷기 편한 스트리트 캐주얼 핏.
+
+────────────────────────
+[SHOES — IMPORTANT FOR POV SHOTS]
+────────────────────────
+
+Scene 1의 1인칭 탑뷰에서
+발과 신발이 직접 보이므로
+신발 디자인을 명확하게 만든다.
+
+white / light gray retro running sneakers
+
+작은 포인트:
+
+lime yellow 또는 e·mart yellow accent
+
+두꺼운 러닝화 형태지만
+과도하게 미래적이지 않다.
+
+영상 전체에서
+동일한 신발을 유지한다.
+
+신발 앞, 옆, 위쪽 디자인을
+reference sheet에서 명확하게 보여준다.
+
+────────────────────────
+[BAG]
+────────────────────────
+
+검은색 또는 dark charcoal 컬러의
+심플한 여행용 백팩.
+
+medium-sized backpack
+
+너무 큰 등산 가방이 아니라
+도시 관광객이 사용하는 가방.
+
+추가로:
+
+small crossbody pouch
+
+컬러:
+black + pastel yellow 또는 muted pink accent
+
+모든 장면에서 동일한 가방 디자인 유지.
+
+────────────────────────
+[SMARTPHONE]
+────────────────────────
+
+영상의 핵심 소품.
+
+modern premium smartphone
+
+색상:
+dark gray / graphite
+
+심플한 투명 또는 반투명 케이스.
+
+특정 스마트폰 브랜드 로고를
+강하게 보여주지 않는다.
+
+Scene 3 AR Navigation,
+Scene 5 NFC Tap에서
+같은 스마트폰을 사용한다.
+
+다음 각도에서도 동일하게 보여야 한다.
+
+- front
+- back
+- side
+- hand-held
+- camera-facing
+
+────────────────────────
+[REFERENCE SHEET COMPOSITION]
+────────────────────────
+
+16:9 가로형
+high-resolution character reference board.
+
+깔끔한 warm white 또는 very light gray 배경.
+
+광고 장면이나 이마트 매장 배경을 넣지 않는다.
+
+Y2K 낙서,
+찢어진 종이,
+별,
+화살표 등의 장식도
+이번 Character Sheet에는 최소화한다.
+
+캐릭터 자체를 정확하게 파악하는 것이 최우선이다.
+
+한 화면에
+동일 인물을 반복해서 보여주는
+professional character model sheet 구성.
+
+────────────────────────
+[ROW 1 — FULL BODY TURNAROUND]
+────────────────────────
+
+상단에는 동일 인물의 전신을 배치한다.
+
+1.
+
+FRONT VIEW
+
+정면 전신.
+자연스럽게 서 있는 자세.
+
+2.
+
+3/4 FRONT VIEW
+
+약 45도 방향.
+
+3.
+
+SIDE PROFILE
+
+정확한 측면.
+
+4.
+
+3/4 BACK VIEW
+
+뒤쪽 45도.
+
+5.
+
+BACK VIEW
+
+정확한 후면.
+
+모든 전신 컷은
+
+- 동일한 체형
+- 동일한 얼굴
+- 동일한 머리
+- 동일한 옷
+- 동일한 가방
+- 동일한 신발
+
+을 사용한다.
+
+카메라 높이와 렌즈 왜곡을 최소화하여
+의상과 체형을 쉽게 비교할 수 있도록 한다.
+
+────────────────────────
+[ROW 2 — FACE & EXPRESSION PALETTE]
+────────────────────────
+
+같은 인물의
+가슴 위 또는 어깨 위 클로즈업.
+
+표정 6종:
+
+1.
+
+neutral
+
+편안하고 자연스러운 기본 표정.
+
+2.
+
+curious
+
+처음 보는 장소를 살펴보는
+호기심 있는 표정.
+
+3.
+
+slightly confused
+
+길을 찾지 못해
+“어디지?”라고 생각하는 정도의
+살짝 난감한 표정.
+
+과장된 코미디 얼굴 금지.
+
+4.
+
+surprised / discovery
+
+좋은 상품이나 K-Palette Zone을 발견했을 때
+눈이 조금 커지고 밝아지는 표정.
+
+5.
+
+happy smile
+
+쇼핑을 즐기는 자연스러운 미소.
+
+6.
+
+excited
+
+마음에 드는 K-Food를 발견해서
+기분이 좋아진 표정.
+
+모든 표정에서
+얼굴 정체성이 절대 바뀌지 않는다.
+
+────────────────────────
+[ROW 3 — ACTION POSES]
+────────────────────────
+
+영상의 주요 행동을 미리 reference pose로 보여준다.
+
+ACTION 01 — Walking
+
+관광객이 스마트폰을 들고
+앞으로 걷는 자연스러운 자세.
+
+ACTION 02 — Looking for direction
+
+한 손에 스마트폰,
+주변을 둘러보면서
+길을 찾는 모습.
+
+ACTION 03 — AR Navigation
+
+스마트폰을 눈높이보다 조금 아래로 들고
+화면을 보며 이동하는 모습.
+
+ACTION 04 — Product Discovery
+
+한 손으로 K-Food 상품을 들고
+관심 있게 살펴보는 모습.
+
+ACTION 05 — NFC Tap
+
+스마트폰을 앞으로 내밀어
+매대 NFC 태그에 가까이 대는 자세.
+
+ACTION 06 — Shopping Finish
+
+쇼핑 바구니 또는 카트 손잡이를 잡고
+밝게 웃는 자세.
+
+────────────────────────
+[POV REFERENCE]
+────────────────────────
+
+영상 Scene 1을 위한
+별도 작은 reference frame을 포함한다.
+
+FIRST-PERSON TOP VIEW
+
+주인공 자신의 시점에서
+아래를 바라보는 구도.
+
+보이는 요소:
+
+- dark charcoal cargo pants 일부
+- 동일한 white retro sneakers
+- lime/e·mart yellow shoe accent
+- 한 손에 동일한 graphite smartphone
+- 걸어가는 발
+
+이 POV reference와
+전신 캐릭터의 의상 및 신발이
+정확하게 일치해야 한다.
+
+────────────────────────
+[HAND REFERENCE]
+────────────────────────
+
+Scene 3과 Scene 5의
+스마트폰 사용 장면을 위해
+손의 형태도 일관되게 표현한다.
+
+별도 close-up reference:
+
+1.
+
+한 손으로 스마트폰을 잡는 모습
+
+2.
+
+스마트폰 화면을 엄지손가락으로 조작하는 모습
+
+3.
+
+NFC 태깅을 위해
+스마트폰을 앞으로 내미는 모습
+
+4.
+
+제품을 들고 다른 손에 스마트폰을 들고 있는 모습
+
+손가락 개수와 구조는 정상적이어야 한다.
+
+────────────────────────
+[PROP PALETTE]
+────────────────────────
+
+캐릭터 옆 작은 영역에
+영상에서 계속 사용할 주요 소품을
+개별적으로 보여준다.
+
+- graphite smartphone
+- black backpack
+- small crossbody pouch
+- yellow shopping basket
+- white retro sneakers
+- one generic K-Ramen package
+- one generic Korean snack package
+
+특정 상표나 브랜드 로고는 넣지 않는다.
+
+────────────────────────
+[COLOR PALETTE]
+────────────────────────
+
+캐릭터 컬러를 한눈에 확인할 수 있도록
+작은 color swatch 영역을 포함한다.
+
+MAIN COLORS:
+
+Teal / Turquoise
+\#1FA7A5 계열
+
+Cobalt Blue
+\#2864C7 계열
+
+Off White
+\#F3F0E8 계열
+
+Charcoal
+\#25262A 계열
+
+Pastel Pink
+\#E79CB5 계열
+
+Accent Yellow
+\#F7C928 계열
+
+색상은 약간의 조정은 가능하지만
+영상 전체에서 동일한 색상 관계를 유지한다.
+
+────────────────────────
+[PHOTOGRAPHY STYLE]
+────────────────────────
+
+photorealistic commercial lifestyle photography
+
+not illustration
+not anime
+not 3D character
+not cartoon
+
+현실적인 젊은 여행자.
+
+스타일 참고:
+
+modern Seoul travel vlog
+K-fashion editorial
+Gen-Z travel campaign
+natural commercial photography
+clean skin texture
+soft daylight studio lighting
+high-end social media advertising
+
+35mm\~50mm lens feeling
+
+자연스러운 신체 비율.
+
+지나치게 넓은 광각 왜곡 금지.
+
+────────────────────────
+[LIGHTING]
+────────────────────────
+
+Character reference sheet에서는
+광원도 일관되게 한다.
+
+soft neutral studio lighting
+
+밝은 확산광.
+
+얼굴과 의상의 색상이
+정확하게 보이도록 한다.
+
+강한 컬러 조명,
+네온 조명,
+드라마틱한 그림자는 사용하지 않는다.
+
+실제 영상 Scene 제작 단계에서
+환경 조명을 변경할 예정이므로
+이번 팔레트에서는 neutral lighting을 유지한다.
+
+────────────────────────
+[VIDEO CHARACTER CONSISTENCY]
+────────────────────────
+
+이 캐릭터는 이후
+6개의 영상 장면을 연결하는
+하나의 동일한 주인공이다.
+
+따라서 이미지 생성에서 가장 중요한 우선순위:
+
+1. facial identity consistency
+2. hairstyle consistency
+3. outfit consistency
+4. body proportion consistency
+5. accessories consistency
+6. smartphone consistency
+7. shoes consistency
+
+각 포즈에서
+외모나 의상의 임의 변경을 절대 하지 않는다.
+
+No face variation.
+No hairstyle variation.
+No wardrobe variation.
+No age variation.
+No body-shape variation.
+
+────────────────────────
+[DO NOT]
+────────────────────────
+
+하지 말아야 할 것:
+
+- 여러 명의 서로 다른 모델처럼 생성
+- 포즈마다 얼굴 변경
+- 포즈마다 머리 길이 변경
+- 옷 색깔 변경
+- 신발 변경
+- 가방 변경
+- 스마트폰 변경
+- 지나친 아이돌 메이크업
+- 성숙한 패션모델 화보
+- 아동 캐릭터처럼 표현
+- anime
+- cartoon
+- Pixar-like 3D
+- plastic skin
+- exaggerated facial features
+- excessive beauty filter
+- celebrity resemblance
+- warped hands
+- extra fingers
+- random text
+- store background
+- cluttered collage background
+
+────────────────────────
+[IMPORTANT DISTINCTION]
+────────────────────────
+
+최종 영상은
+
+Y2K STREET VLOG
+\+
+TRAVEL MAGAZINE COLLAGE
+\+
+HAND-DRAWN DOODLES
+\+
+RIPPED PAPER
+\+
+NEON TYPOGRAPHY
+
+스타일이지만,
+
+이 CHARACTER PALETTE에서는
+그 그래픽 효과를 인물 위에 직접 적용하지 않는다.
+
+먼저 현실적인 인물의
+깨끗하고 정확한 기준 이미지를 만든다.
+
+이후 영상 장면 제작 단계에서
+
+- white outline cutout
+- handwritten doodles
+- torn paper
+- neon lime typography
+- arrows
+- stars
+- EP stickers
+
+등을 후처리 스타일로 추가한다.
+
+캐릭터 디자인과
+영상 그래픽 디자인을 분리한다.
+
+────────────────────────
+[FINAL OUTPUT]
+────────────────────────
+
+one single 16:9 horizontal
+high-resolution professional character reference board
+
+showing:
+
+- 5-view full body turnaround
+- 6 facial expressions
+- 6 action poses
+- first-person POV reference
+- smartphone hand interaction references
+- clothing / accessories / props
+- character color swatches
+
+모든 이미지 속 여성은
+정확히 같은 한 명의 인물이어야 한다.
+
+Clean studio character model sheet
+for AI video generation.
+
+The sheet must be optimized for
+character consistency across multiple video scenes.
+
+The character should feel like
+a real Gen-Z international traveler
+visiting Seoul,
+not a fictional mascot.
+```
 - 나는 1번 시퀀스를 맡았다. 장면을 각자 만들기 전에 배경음악은 나중에 넣기로 모두 합의했고, 개별 작업에서는 배경음악을 넣지 않기로 했다. 스토리보드에 담긴 BGM 제안과 실제 장면 제작 단계의 합의는 이렇게 구분했다.
 - 배경음악은 제미나이 음악 도구로 제작했다.
 - 내가 맡은 1번 시퀀스의 결과를 확인하니 오른손이 화면 왼쪽에 배치되어 있었다. 손의 좌우와 화면 위치를 바로잡으려고 한 번 더 생성해 봤지만 같은 오류가 남았다.
