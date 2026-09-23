@@ -311,6 +311,7 @@ export function FutureDreamTilPage({ categories, entries, journey }: {
   const positions = useRef(new Map<string, number>());
   const listFocus = useRef(new Map<string, string>());
   const listKey = createArchiveSearch(category, urlQuery, null);
+  const listHref = `${pathname}${listKey ? `?${listKey}` : ""}#archive`;
   const locationKey = searchParams.toString();
   const previousLocation = useRef(locationKey);
   const previousReading = useRef(isReading);
@@ -388,7 +389,6 @@ export function FutureDreamTilPage({ categories, entries, journey }: {
     listFocus.current.set(listKey, entry.slug);
     navigate(category, urlQuery, entry.slug);
   };
-  const handleBack = () => navigate(category, urlQuery, null);
   const handleReset = () => {
     setSearchDraft("");
     navigate("all", "", null);
@@ -405,7 +405,7 @@ export function FutureDreamTilPage({ categories, entries, journey }: {
         <main className={styles.readerMain}>
           {selectedEntry ? (
             <TILReader key={selectedEntry.slug} entry={selectedEntry} categories={categories}
-              headingRef={headingRef} onBack={handleBack}
+              headingRef={headingRef} listHref={listHref}
               previous={selectedIndex > 0 ? filteredEntries[selectedIndex - 1] : undefined}
               next={selectedIndex >= 0 ? filteredEntries[selectedIndex + 1] : undefined}
               onSelect={(entry) => navigate(category, urlQuery, entry.slug)} />
@@ -414,7 +414,7 @@ export function FutureDreamTilPage({ categories, entries, journey }: {
               <p>TIL ARCHIVE</p>
               <h1 id="til-reader-title" ref={headingRef} tabIndex={-1}>기록을 찾을 수 없습니다.</h1>
               <p>주소가 변경되었거나 공개되지 않은 기록입니다.</p>
-              <button type="button" onClick={handleBack}>TIL 목록으로 돌아가기</button>
+              <a href={listHref}>TIL 목록으로 돌아가기</a>
             </div>
           )}
         </main>

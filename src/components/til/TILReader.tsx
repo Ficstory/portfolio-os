@@ -6,6 +6,7 @@ import { useEffect, useState, type RefObject } from "react";
 import { formatTILDate } from "@/lib/tilArchive";
 import type { TILBlock, TILCategoryMeta, TILEntry } from "@/types/til";
 import { TILMedia } from "./TILMedia";
+import { StoreAnalysis } from "./StoreAnalysis";
 import { navigateToTILAnchor } from "./tilNavigation";
 import styles from "./til-reader.module.css";
 
@@ -16,10 +17,10 @@ const reflectionSections = [
   { key: "insights", label: "새롭게 이해한 것" },
 ] as const;
 
-export function TILReader({ entry, categories, onBack, previous, next, onSelect, headingRef }: {
+export function TILReader({ entry, categories, listHref, previous, next, onSelect, headingRef }: {
   entry: TILEntry;
   categories: readonly TILCategoryMeta[];
-  onBack: () => void;
+  listHref: string;
   previous?: TILEntry;
   next?: TILEntry;
   onSelect: (entry: TILEntry) => void;
@@ -83,7 +84,7 @@ export function TILReader({ entry, categories, onBack, previous, next, onSelect,
   return (
     <>
       <header className={styles.readerNav}>
-        <button type="button" onClick={onBack}><ArrowLeft size={17} aria-hidden="true" /> TIL 목록</button>
+        <a href={listHref}><ArrowLeft size={17} aria-hidden="true" /> TIL 목록</a>
         <span>LEARNING IN PUBLIC</span>
         <Link href="/">Portfolio <ArrowRight size={14} aria-hidden="true" /></Link>
       </header>
@@ -112,6 +113,7 @@ export function TILReader({ entry, categories, onBack, previous, next, onSelect,
               {section.blocks.map((block: TILBlock, blockIndex: number) => block.type === "paragraph"
                 ? <p key={blockIndex}>{block.text}</p>
                 : <TILMedia key={blockIndex} block={block} />)}
+              {section.key === "tried" && entry.visualizations?.type === "store-analysis" ? <StoreAnalysis data={entry.visualizations} /> : null}
             </section>
           ))}
           {entry.nextActions.length ? <section className={styles.section} aria-labelledby="til-next-actions">
@@ -143,7 +145,7 @@ export function TILReader({ entry, categories, onBack, previous, next, onSelect,
             {previous ? <button type="button" onClick={() => onSelect(previous)}><span><ArrowLeft size={15} aria-hidden="true" /> 이전 글</span><strong>{previous.title}</strong></button> : <div />}
             {next ? <button type="button" onClick={() => onSelect(next)}><span>다음 글 <ArrowRight size={15} aria-hidden="true" /></span><strong>{next.title}</strong></button> : <div />}
           </nav>
-          <button type="button" className={styles.backToList} onClick={onBack}>TIL 목록으로 돌아가기</button>
+          <a href={listHref} className={styles.backToList}>TIL 목록으로 돌아가기</a>
         </footer>
       </article>
     </>

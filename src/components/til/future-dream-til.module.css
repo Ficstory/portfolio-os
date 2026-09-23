@@ -780,7 +780,7 @@
 .missingEntry { max-width: 720px; margin: 0 auto; padding: 100px 24px; }
 .missingEntry h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -0.04em; }
 .missingEntry p { color: var(--til-secondary); }
-.missingEntry button { min-height: 44px; margin-top: 20px; padding: 8px 16px; border: 1px solid var(--til-border); background: white; color: var(--til-ink); cursor: pointer; font: inherit; }
+.missingEntry a { display: inline-flex; align-items: center; min-height: 44px; margin-top: 20px; padding: 8px 16px; border: 1px solid var(--til-border); background: white; color: var(--til-ink); font: inherit; text-decoration: none; }
 
 @media (max-width: 1199px) {
   .sidebar {

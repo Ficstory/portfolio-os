@@ -121,6 +121,7 @@ function parseFrontmatter(markdown: string, sourcePath: string) {
     "summary",
     "status",
     "isDemo",
+    "visualizations",
   ]);
   const unknown = Object.keys(metadata).filter((key) => !allowed.has(key));
   if (unknown.length > 0) {
@@ -375,6 +376,7 @@ export function parseTILMarkdown(
     isDemo: metadata.isDemo
       ? parseBoolean(metadata.isDemo, "isDemo", sourcePath)
       : false,
+    ...(metadata.visualizations ? { visualizations: readVisualizations(metadata.visualizations, slug, sourcePath) } : {}),
     learned: paragraphs("learned"),
     tried: paragraphs("tried"),
     blocked: paragraphs("blocked"),
@@ -512,6 +514,30 @@ function validateEntries(entries: TILSourceEntry[], config: TILContentConfig) {
       }
     }
   }
+}
+
+function readVisualizations(type: string, slug: string, sourcePath: string): TILEntry["visualizations"] {
+  if (type !== "store-analysis") throw failure(sourcePath, `unknown visualization type: ${type}`);
+  const file = path.join(path.dirname(path.dirname(sourcePath)), "visualizations", `${slug}.json`);
+  let value: unknown;
+  try {
+    value = JSON.parse(readFileSync(file, "utf8"));
+  } catch (error) {
+    throw failure(sourcePath, `cannot read visualizations: ${String(error)}`);
+  }
+  const number = (candidate: unknown) => typeof candidate === "number" && Number.isFinite(candidate);
+  const string = (candidate: unknown) => typeof candidate === "string" && candidate.trim().length > 0;
+  if (!isRecord(value) || value.type !== type || !string(value.period) || !string(value.comparison) ||
+    !Array.isArray(value.stores) || value.stores.length !== 3 || !value.stores.every((store) => isRecord(store) &&
+      string(store.name) && string(store.observation) && ["revenue", "share", "salesChange", "visitsChange", "purchasesBefore", "purchasesAfter", "conversionPointChange", "basketChange", "unitsBefore", "unitsAfter"].every((key) => number(store[key]))) ||
+    !Array.isArray(value.kpis) || !value.kpis.every((kpi) => isRecord(kpi) && string(kpi.label) && string(kpi.value)) ||
+    !Array.isArray(value.categories) || !value.categories.every((category) => isRecord(category) && string(category.name) && Array.isArray(category.changes) && category.changes.length === 3 && category.changes.every(number) && Array.isArray(category.coverDays) && category.coverDays.length === 3 && category.coverDays.every(number)) ||
+    !Array.isArray(value.weeks) || !value.weeks.every((week) => isRecord(week) && string(week.label) && number(week.revenue)) ||
+    !Array.isArray(value.promotion) || !value.promotion.every((period) => isRecord(period) && string(period.label) && string(period.dates) && Array.isArray(period.sales) && period.sales.length === 3 && period.sales.every(number)) ||
+    !Array.isArray(value.events) || !value.events.every((event) => isRecord(event) && string(event.date) && string(event.store) && string(event.text))) {
+    throw failure(sourcePath, "invalid store-analysis visualizations");
+  }
+  return value as TILEntry["visualizations"];
 }
 
 function localMedia(entry: TILEntry) {

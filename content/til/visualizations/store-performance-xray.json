@@ -1,0 +1,48 @@
+{
+  "type": "store-analysis",
+  "period": "2026-08-01~2026-09-24 · 55일",
+  "comparison": "2026-08-14~08-27 ↔ 2026-09-11~09-24",
+  "kpis": [
+    { "label": "전체 순매출", "value": "524,552,540원" },
+    { "label": "전체 방문 집계", "value": "36,057" },
+    { "label": "전체 구매건수", "value": "16,010" },
+    { "label": "전체 구매율", "value": "44.40%" },
+    { "label": "전체 객단가", "value": "32,764원" },
+    { "label": "비교기간 매출", "value": "+2.19%" }
+  ],
+  "stores": [
+    { "name": "센트럴점", "revenue": 223843230, "share": 42.67, "salesChange": 1.28, "visitsChange": -0.95, "purchasesBefore": 1712, "purchasesAfter": 1704, "conversionPointChange": 0.225, "basketChange": 1.76, "unitsBefore": 4.722, "unitsAfter": 4.805, "observation": "방문수와 구매건수 감소, 매출·객단가·구매당 수량 증가가 동시에 관찰됐다." },
+    { "name": "리버점", "revenue": 136119960, "share": 25.95, "salesChange": 3.74, "visitsChange": 2.58, "purchasesBefore": 1054, "purchasesAfter": 1087, "conversionPointChange": 0.224, "basketChange": 0.59, "unitsBefore": 4.715, "unitsAfter": 4.741, "observation": "매출 증가율과 증가액은 세 점포 중 가장 컸다." },
+    { "name": "파크점", "revenue": 164589350, "share": 31.38, "salesChange": 2.13, "visitsChange": 2.07, "purchasesBefore": 1253, "purchasesAfter": 1285, "conversionPointChange": 0.209, "basketChange": -0.42, "unitsBefore": 4.757, "unitsAfter": 4.712, "observation": "방문수와 구매건수 증가, 객단가와 구매당 수량 감소가 동시에 관찰됐다." }
+  ],
+  "categories": [
+    { "name": "냉장 간편식", "changes": [-337700, 464600, -68700], "coverDays": [5.11, 5.21, 5.18] },
+    { "name": "신선식품", "changes": [-218300, 231200, 343900], "coverDays": [2.42, 2.77, 2.56] },
+    { "name": "가공식품", "changes": [653000, 151700, 373100], "coverDays": [6.44, 6.40, 6.62] },
+    { "name": "유제품", "changes": [259600, 197900, 81200], "coverDays": [3.02, 3.12, 3.09] },
+    { "name": "음료", "changes": [205000, 92400, 61400], "coverDays": [4.61, 4.80, 4.64] },
+    { "name": "생활용품", "changes": [153200, 145600, 83700], "coverDays": [8.44, 8.38, 8.80] }
+  ],
+  "weeks": [
+    { "label": "08-03~08-09", "revenue": 64472900 },
+    { "label": "08-10~08-16", "revenue": 64979100 },
+    { "label": "08-17~08-23", "revenue": 65647400 },
+    { "label": "08-24~08-30", "revenue": 65940700 },
+    { "label": "08-31~09-06", "revenue": 70909940 },
+    { "label": "09-07~09-13", "revenue": 70492000 },
+    { "label": "09-14~09-20", "revenue": 67152700 }
+  ],
+  "promotion": [
+    { "label": "행사 전", "dates": "08-28~09-03", "sales": [10657200, 6432900, 7771200] },
+    { "label": "행사 중", "dates": "09-04~09-10", "sales": [14593330, 6594560, 9859850] },
+    { "label": "행사 후", "dates": "09-11~09-17", "sales": [9797700, 6461700, 7524000] }
+  ],
+  "events": [
+    { "date": "08-18", "store": "센트럴점", "text": "음료 냉장 진열대 한 구역을 행사 상품으로 변경" },
+    { "date": "08-22", "store": "파크점", "text": "신선식품 오후 입고 3시간 지연" },
+    { "date": "09-06", "store": "리버점", "text": "냉장 쇼케이스 점검으로 17~19시 판매 중단" },
+    { "date": "09-09", "store": "리버점", "text": "쇼케이스 3대 중 1대를 유제품 전용으로 운영" },
+    { "date": "09-13", "store": "센트럴점", "text": "생활용품 가격표 교체 작업이 개점 후 완료" },
+    { "date": "09-19", "store": "파크점", "text": "가공식품 시식행사 14~17시 운영" }
+  ]
+}

@@ -1,6 +1,17 @@
 export type TILCategory = string;
 
 export type TILReflectionKey = "learned" | "tried" | "blocked" | "insights";
+export type StoreAnalysisVisualization = {
+  type: "store-analysis";
+  period: string;
+  comparison: string;
+  stores: { name: string; revenue: number; share: number; salesChange: number; visitsChange: number; purchasesBefore: number; purchasesAfter: number; conversionPointChange: number; basketChange: number; unitsBefore: number; unitsAfter: number; observation: string }[];
+  kpis: { label: string; value: string }[];
+  categories: { name: string; changes: number[]; coverDays: number[] }[];
+  weeks: { label: string; revenue: number }[];
+  promotion: { label: string; dates: string; sales: number[] }[];
+  events: { date: string; store: string; text: string }[];
+};
 type TILMediaSize = { width: number; height: number; caption?: string; prompt?: string };
 export type TILBlock =
   | { type: "paragraph"; text: string }
@@ -41,6 +52,7 @@ export type TILEntry = {
   skills: string[];
   resources: TILResource[];
   isDemo?: boolean;
+  visualizations?: StoreAnalysisVisualization;
 };
 
 export type TILCategoryMeta = {
