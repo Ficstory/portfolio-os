@@ -488,8 +488,8 @@
 }
 
 .searchField:focus-within {
-  border-color: var(--til-accent);
-  box-shadow: inset 0 -1px var(--til-accent);
+  outline: 2px solid #bc2842;
+  outline-offset: 1px;
 }
 
 .searchField input {
@@ -501,6 +501,10 @@
   color: var(--til-ink);
   font: inherit;
   font-size: var(--til-text-xs);
+}
+
+.searchField input:focus-visible {
+  outline: none;
 }
 
 .searchField input::placeholder {

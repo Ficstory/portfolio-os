@@ -301,9 +301,9 @@ export function FutureDreamTilPage({ categories, entries, journey }: {
   const isReading = requestedSlug !== null;
   // A direct article URL remains valid even when its archive filters exclude it.
   const selectedEntry = entries.find((entry) => entry.slug === requestedSlug) ?? null;
-  const filteredEntries = useMemo(() => filterTILEntries(entries, category, urlQuery), [entries, category, urlQuery]);
-  const selectedIndex = filteredEntries.findIndex((entry) => entry.slug === requestedSlug);
   const [searchDraft, setSearchDraft] = useState(urlQuery);
+  const filteredEntries = useMemo(() => filterTILEntries(entries, category, searchDraft), [entries, category, searchDraft]);
+  const selectedIndex = filteredEntries.findIndex((entry) => entry.slug === requestedSlug);
   const isComposing = useRef(false);
   const searchTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const searchInput = useRef<HTMLInputElement>(null);
@@ -383,11 +383,10 @@ export function FutureDreamTilPage({ categories, entries, journey }: {
     scheduleSearch(event.currentTarget.value);
   };
   const handleSelect = (entry: TILEntry) => {
-    // Opening a currently visible result cancels any uncommitted search.
-    setSearchDraft(urlQuery);
+    // Keep the visible results and article navigation on the same query.
     isComposing.current = false;
-    listFocus.current.set(listKey, entry.slug);
-    navigate(category, urlQuery, entry.slug);
+    listFocus.current.set(createArchiveSearch(category, searchDraft, null), entry.slug);
+    navigate(category, searchDraft, entry.slug);
   };
   const handleReset = () => {
     setSearchDraft("");
