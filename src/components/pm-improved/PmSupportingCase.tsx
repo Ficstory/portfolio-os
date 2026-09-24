@@ -1,8 +1,5 @@
-import Image from "next/image";
-import { pmMedia, survey, type PmProject } from "./content";
+import { survey, type PmProject } from "./content";
 import {
-  BusanAdditionalVisual,
-  BusanOnboardingVisual,
   ProjectVisual,
   SmileTeamDemoVisual,
 } from "./PmVisuals";
@@ -13,9 +10,9 @@ import {
   EvidenceList,
   NextProject,
 } from "./PmCaseStudy";
+import { PmBusanCase } from "./PmBusanCase";
 import base from "./pm.module.css";
 import detail from "./caseStudy.module.css";
-import visual from "./visuals.module.css";
 
 function SmileCase({ project }: { project: PmProject }) {
   const burdenCount = survey.responses[0].count + survey.responses[1].count;
@@ -75,99 +72,9 @@ function SmileCase({ project }: { project: PmProject }) {
   </>;
 }
 
-function BusanCase({ project }: { project: PmProject }) {
-  return <>
-    <CaseHero project={project} />
-    <figure className={detail.mediaEvidence}>
-      <ProjectVisual slug="busan-eumgil" />
-      <figcaption>기여 요약</figcaption>
-    </figure>
-    <CaseBody labels={{
-      problem: "기획",
-      evidence: "지도 개발",
-      decision: "추가 구현",
-      action: "주요 산출물",
-      collaboration: "역할 분담",
-      result: "팀 결과",
-    }}>
-      <CaseSection id="problem" label="초기 기획·인터뷰 / Planning" title="처음부터 기획하고, 현장 인터뷰로 MVP 범위를 정했습니다.">
-        <p>부산이음길의 초기 서비스 기획을 맡았습니다. 기획을 구체화하기 위해 함세상 장애인자립생활센터를 직접 섭외하고, 2026년 4월 10일 미팅·인터뷰를 진행했습니다. 그 내용을 바탕으로 MVP 범위를 선정했습니다.</p>
-        <figure className={detail.mediaEvidence}>
-          <div className={visual.meetingEvidence}>
-            <Image
-              src={pmMedia.evidence.busanMeeting}
-              alt="MVP 지도 기능을 화면으로 설명하고 참석자들과 의견을 나누는 미팅 장면"
-              width={1920}
-              height={1080}
-              sizes="(max-width: 767px) 100vw, 800px"
-            />
-          </div>
-          <figcaption>MVP 기능을 설명하고 의견을 나눈 미팅 현장</figcaption>
-        </figure>
-        <EvidenceList items={[
-          { title: "경로 비교", text: "여러 경로 선택지와 경사·계단·폭 같은 위험 정보를 확인하려는 요구를 경로 비교·상세·안내 흐름으로 연결했습니다." },
-          { title: "사용자 이동 조건", text: "이동 보조기기마다 조건이 다르다는 의견을 사용자 유형 온보딩으로 반영했습니다." },
-          { title: "접근성 시설 탐색", text: "화장실·충전기·건물 접근성 정보에 대한 요구를 접근성 필터와 시설 상세 탐색으로 연결했습니다." },
-        ]} />
-      </CaseSection>
-
-      <CaseSection id="evidence" label="지도 개발 / Map development" title="길안내 지도 화면과 마커 고정 동작을 구현했습니다.">
-        <p>보행약자가 목적지와 이동 정보를 확인하는 길안내 지도 화면을 개발했습니다. 지도 위 선택 핀의 고정 렌더링과 카메라 제스처 동기화를 포함한 관련 프론트엔드 작업을 맡았습니다.</p>
-        <figure className={detail.mediaEvidence}>
-          <div className={visual.routeMapEvidence}>
-            <Image
-              src={pmMedia.evidence.busanMap}
-              alt="접근성 시설과 최근 목적지를 표시하는 부산이음길 지도 화면"
-              width={720}
-              height={1560}
-              sizes="(max-width: 767px) 88vw, 560px"
-            />
-          </div>
-          <figcaption>지도 화면 캡처 · 시설 탐색과 최근 목적지</figcaption>
-        </figure>
-      </CaseSection>
-
-      <CaseSection id="decision" label="추가 구현 / Additional work" title="접근성 설정과 제보 표시도 구현했습니다.">
-        <p>글자 크기를 선택하면 즉시 저장·적용되도록 구현하고, 승인된 사용자 제보를 접근성 시설과 구분해 지도에 표시했습니다. 제보를 선택하면 내용을 확인하는 하단 패널로 연결했습니다.</p>
-        <figure className={detail.mediaEvidence}>
-          <BusanAdditionalVisual />
-          <figcaption>구현 기준 요약 · 글자 크기 설정과 승인된 제보의 표시 기준</figcaption>
-        </figure>
-      </CaseSection>
-
-      <CaseSection id="action" label="주요 산출물 / Outputs" title="초기 기획과 MVP 선정, 지도 화면 개발을 산출물로 남겼습니다.">
-        <EvidenceList items={[
-          { title: "초기 기획·기관 인터뷰", text: "서비스를 기획하고 함세상 장애인자립생활센터를 섭외해 회의·인터뷰를 진행했습니다." },
-          { title: "MVP 선정", text: "인터뷰에서 확인한 이동 조건을 경로 비교, 사용자 유형 온보딩, 접근성 시설 탐색 범위로 연결했습니다." },
-          { title: "지도 프론트엔드", text: "길안내 지도 화면과 마커 고정 동작을 구현했습니다." },
-          { title: "추가 구현", text: "글자 크기 설정, 승인된 제보 표시, 관련 명세 관리를 맡았습니다." },
-        ]} />
-      </CaseSection>
-
-      <CaseSection id="collaboration" label="역할 분담 / Role split" title="역할 분담">
-        <EvidenceList items={[
-          { title: "내 담당", text: "초기 서비스 기획, 함세상 장애인자립생활센터 섭외·회의·인터뷰, MVP 선정, 길안내 지도·마커 고정 동작을 포함한 프론트엔드 개발, 접근성 설정·승인 제보 표시·명세 관리" },
-          { title: "팀원 담당", text: "경로 탐색과 공간 데이터 개발" },
-        ]} />
-      </CaseSection>
-
-      <CaseSection id="result" label="팀 결과 / Team output" title="팀이 완성한 서비스의 온보딩 흐름입니다.">
-        <figure className={detail.mediaEvidence}>
-          <BusanOnboardingVisual />
-          <figcaption>팀 서비스 시연 · 온보딩</figcaption>
-        </figure>
-      </CaseSection>
-
-      <CaseSection id="learning" title="초기 기획부터 인터뷰와 화면 구현을 한 흐름으로 연결했습니다.">
-        <p>처음 세운 서비스 방향을 기관 인터뷰로 구체화하고, 그 내용을 MVP 범위와 길안내 지도 화면 구현으로 연결했습니다.</p>
-      </CaseSection>
-    </CaseBody>
-  </>;
-}
-
 export function PmSupportingCase({ project }: { project: PmProject }) {
   return <main id="pm-content" tabIndex={-1} className={base.container}>
-    {project.slug === "smile-game" ? <SmileCase project={project} /> : <BusanCase project={project} />}
+    {project.slug === "smile-game" ? <SmileCase project={project} /> : <PmBusanCase project={project} />}
     <NextProject project={project} />
   </main>;
 }
