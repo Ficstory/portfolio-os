@@ -75,8 +75,9 @@ export function PmPlayPickCase({ project }: { project: PmProject }) {
         <p>호감·비호감·중립 선택, 유효 응답 8개 조건, 취향 저장, 완료 처리와 추천 화면 이동을 연결했습니다.</p>
       </CaseSection>
 
-      <CaseSection id="learning" title="사용자 행동의 의미와 저장 실패 상태를 함께 다뤘습니다.">
-        <p>선택의 의미와 서버 저장 결과를 화면 전환의 기준으로 삼았습니다.</p>
+      <CaseSection id="learning" title="선택의 의미와 저장 완료 조건을 먼저 맞추겠습니다">
+        <p>판단 보류를 비호감과 분리하고, 호감·비호감 응답 8개를 완료 조건으로 삼았습니다. 다음에는 세 가지 선택이 각각 어떤 요청 데이터와 완료 개수로 이어지는지 화면 명세와 예시 응답에 함께 적겠습니다.</p>
+        <p>취향 저장이 성공한 뒤 온보딩을 완료하고 추천 화면으로 이동하도록 연결했습니다. 다음에는 저장 성공·오류 응답별 화면 상태와 이동 조건을 테스트 사례로 남겨, 입력·저장·완료가 같은 기준을 따르는지 확인하겠습니다.</p>
       </CaseSection>
     </CaseBody>
     <NextProject project={project} />

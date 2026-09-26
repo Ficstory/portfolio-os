@@ -70,7 +70,7 @@ export function PmBusanCase({ project }: { project: PmProject }) {
           </figure>
         </CaseSection>
 
-        <CaseSection id="evidence" label="회고 01 / 현장 의견을 MVP로" title="‘교통약자를 위한 길찾기’를 사용자가 비교하고 확인할 수 있는 기준으로 바꿨습니다.">
+        <CaseSection id="evidence" label="사례 01 / 현장 의견을 MVP로" title="‘교통약자를 위한 길찾기’를 사용자가 비교하고 확인할 수 있는 기준으로 바꿨습니다.">
           <p>4월 10일 인터뷰에서는 수동 휠체어가 경사·단차·보도 상태와 폭의 영향을 크게 받고, 음성 안내를 들으면서도 화면을 함께 확인한다는 의견이 나왔습니다.</p>
           <p>저는 인터뷰 내용을 이슈별로 정리해 안전한 길과 최단거리 비교, 접근성 시설 확인, 화면과 음성을 함께 쓰는 흐름으로 구체화했습니다. 이 기준을 PRD와 화면·기능 명세에 반영했습니다.</p>
           <EvidenceList items={[
@@ -78,10 +78,10 @@ export function PmBusanCase({ project }: { project: PmProject }) {
             { title: "접근성 정보", text: "경사·단차·보도 폭과 시설 정보를 경로와 지도에서 함께 확인하도록 기준을 정리했습니다." },
             { title: "화면과 음성", text: "화면에서 경로를 확인하며 음성 안내를 함께 사용하는 기준을 세웠습니다." },
           ]} />
-          <p>정리한 기준은 이후 경로 데이터, 지도 필터, 길안내 음성 구현에 반영됐습니다. 다음 프로젝트에서는 인터뷰 기록에 연락·진행·참석·결정 담당을 함께 남기고, 실제 이동 테스트에서 경사·GPS 오차·재탐색·음성 안내를 같은 체크리스트로 검증하겠습니다.</p>
+          <p>정리한 기준은 이후 경로 데이터, 지도 필터, 길안내 음성 구현에 반영됐습니다.</p>
         </CaseSection>
 
-        <CaseSection id="decision" label="회고 02 / 예시 데이터에서 실제 연동으로" title="예시 경로로 세운 데이터 구조를 실제 지도와 경로 API에 연결했습니다.">
+        <CaseSection id="decision" label="사례 02 / 예시 데이터에서 실제 연동으로" title="예시 경로로 세운 데이터 구조를 실제 지도와 경로 API에 연결했습니다.">
           <p>4월에는 예시 경로 응답과 좌표 변환, 데이터 접근 구조와 테스트를 먼저 만들었습니다. 5월에는 이 구조에 실제 Kakao 지도와 장소 검색, 도보·대중교통 경로 API를 차례로 연결했습니다.</p>
           <p>저는 Kakao 지도의 초기화·카메라·마커·경로선과 장소 검색을 구현하고, 경로 검색·선택·재탐색·도착·평가 응답이 길안내 상태로 이어지게 만들었습니다. 기능별 요청과 응답 조건은 백엔드와 직접 맞췄습니다.</p>
           <figure className={detail.mediaEvidence}>
@@ -101,11 +101,11 @@ export function PmBusanCase({ project }: { project: PmProject }) {
             { title: "지도·경로", text: "지도 상태·필터·마커에서 시작해 실제 지도, 장소 검색, 경로 응답 변환과 안내 상태를 연결했습니다." },
             { title: "안내·접근성", text: "경로 진행 상태와 음성 안내(TTS), 글자 크기 공통 설정과 즉시 적용을 구현했습니다." },
           ]} />
-          <p>지도·검색·경로·안내 코드와 각 계층의 테스트, 기능 시연까지 남았습니다. 다음에는 지도 연결→응답 변환→화면 표시→통합 테스트 순으로 변경을 나누고, 실제 API 예시와 테스트 데이터의 차이를 자동으로 검사하겠습니다.</p>
+          <p>지도·검색·경로·안내 코드와 각 계층의 테스트, 기능 시연까지 남았습니다.</p>
           <p className={styles.inlineLinks}><ExternalLink href={youtube.route}>경로 탐색 시연</ExternalLink><ExternalLink href={youtube.fontSize}>글자 크기 시연</ExternalLink><ExternalLink href={youtube.report}>제보 기능 시연</ExternalLink></p>
         </CaseSection>
 
-        <CaseSection id="action" label="회고 03 / 인증과 상태 복구" title="인증과 계정 상태의 복구 처리를 공통 흐름으로 모았습니다.">
+        <CaseSection id="action" label="사례 03 / 인증과 상태 복구" title="인증과 계정 상태의 복구 처리를 공통 흐름으로 모았습니다.">
           <p>Google 로그인은 ID token 검증 방식으로 연결한 다음 날, AccessToken으로 사용자 정보를 조회하는 계약으로 프론트엔드와 서버 코드를 함께 변경했습니다. 이어 인증이 만료되면 세션을 갱신하고 원래 요청을 한 번만 다시 보내는 공통 처리 계층을 추가했습니다.</p>
           <p>로그아웃 뒤에는 이전 사용자의 장소·출발지·목적지·미전송 제보가 남지 않도록 계정별 저장 정보를 정리했습니다. 북마크도 서버 저장 결과를 기준으로 바꾸고 로컬 임시 저장 경로를 제거했습니다.</p>
           <EvidenceList items={[
@@ -113,7 +113,7 @@ export function PmBusanCase({ project }: { project: PmProject }) {
             { title: "계정 격리", text: "로그아웃 때 계정에 묶인 장소·경로·제보 정보를 저장소 단위로 정리했습니다." },
             { title: "저장 일관성", text: "북마크는 서버 응답을 기준으로 삼아 화면과 저장소가 다른 결과를 갖는 경로를 줄였습니다." },
           ]} />
-          <p>인증 갱신과 요청 재시도, 계정 전환 시 저장 정보 정리를 테스트로 남겼습니다. 다음에는 로그인 수단별 전달 값·서버 검증 방식·갱신 책임을 한 장의 계약표로 먼저 맞추고, 만료·갱신 실패·로그아웃·다른 계정 재로그인을 공통 테스트 시나리오로 운영하겠습니다.</p>
+          <p>인증 갱신과 요청 재시도, 계정 전환 시 저장 정보 정리를 테스트로 남겼습니다.</p>
         </CaseSection>
 
         <CaseSection id="collaboration" label="API·인계 / Collaboration" title="기능별 API 연동 조건과 음성 기능의 인계 내용을 정리했습니다.">
@@ -136,13 +136,10 @@ export function PmBusanCase({ project }: { project: PmProject }) {
           <p className={styles.inlineLinks}><ExternalLink href={youtube.appDemo}>앱 기능 요약 영상</ExternalLink><ExternalLink href={youtube.playlist}>8개 영상 플레이리스트</ExternalLink></p>
         </CaseSection>
 
-        <CaseSection id="learning" label="다음 프로젝트에 적용할 것 / Reflection" title="다음에는 ‘구현됨’과 ‘검증됨’을 더 일찍 나누어 관리하겠습니다.">
-          <p>다음 프로젝트에서는 외부 연동의 요청·응답 형식과 완료 기준을 개발 전에 합의하고, 코드 작성·테스트·시연·현장 검증을 각각 다른 완료 상태로 관리하겠습니다.</p>
-          <EvidenceList items={[
-            { title: "연동표 먼저", text: "API별 요청·응답 예시, 인증 방식, 오류 처리 책임을 한 장에 모으고 같은 예시 데이터로 연결 테스트를 시작합니다." },
-            { title: "작게 통합", text: "외부 서비스 연결, 응답 변환, 화면 표시, 통합 테스트를 순서대로 나눠 검토하고 장애 원인을 좁힙니다." },
-            { title: "현장에서 검증", text: "기기·OS·실제 경로와 함께 GPS 오차, 네트워크 단절, 경로 재탐색, 음성 재생 충돌을 기록합니다." },
-          ]} />
+        <CaseSection id="learning" label="다음 프로젝트에 적용할 것 / Reflection" title="현장 기준을 연동 계약과 검증 단계까지 이어가겠습니다">
+          <p>기관 인터뷰에서 들은 이동 조건을 PRD와 MVP의 기준으로 옮겼습니다. 다음에는 인터뷰 기록에 연락·진행·참석·결정 담당을 함께 남기고, 경사·GPS 오차·재탐색·음성 안내를 실제 이동 체크리스트로 확인하겠습니다.</p>
+          <p>예시 경로를 실제 지도와 도보·대중교통 API에 연결하며 기능별 요청·응답 조건을 백엔드와 맞췄습니다. 다음에는 API 예시, 인증 방식, 오류 처리 책임을 먼저 한 장에 모으고, 지도 연결→응답 변환→화면 표시→통합 테스트 순서로 변경을 나눠 실제 응답과 테스트 데이터의 차이를 확인하겠습니다.</p>
+          <p>인증 갱신과 계정 상태 복구는 코드와 테스트로 남겼습니다. 다음에는 로그인 수단별 전달 값과 갱신 책임을 먼저 맞추고, 만료·갱신 실패·계정 전환을 공통 시나리오로 확인하겠습니다. 코드 작성·테스트 실행·시연·현장 검증도 서로 다른 완료 상태로 기록하겠습니다.</p>
           <details className={styles.references}>
             <summary>영상·참고 자료 전체 보기</summary>
             <ul>

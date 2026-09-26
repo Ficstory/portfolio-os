@@ -78,7 +78,7 @@ export function PmEditorialHome() {
         <span id="case-studies" className={styles.anchorAlias} />
         <header className={home.sectionHeading}>
           <h2 id="work-heading">Selected Work</h2>
-          <p>맡은 일과 판단, 다음에 바꾸고 싶은 점을 정리했습니다.</p>
+          <p>맡은 일과 판단, 남긴 결과를 정리했습니다.</p>
         </header>
 
         {selectedProjects.map((project) => {
