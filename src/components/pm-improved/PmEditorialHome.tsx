@@ -9,14 +9,6 @@ import styles from "./pm.module.css";
 import { ProjectVisual } from "./PmVisuals";
 import { PmExperience } from "./PmExperience";
 
-function splitResult(result: string) {
-  const [individual, team] = result.split(" 팀:");
-  return {
-    individual: individual.replace(/^개인:\s*/, ""),
-    team,
-  };
-}
-
 export function PmEditorialHome() {
   return (
     <main id="pm-content" tabIndex={-1} className={styles.container}>
@@ -86,11 +78,11 @@ export function PmEditorialHome() {
         <span id="case-studies" className={styles.anchorAlias} />
         <header className={home.sectionHeading}>
           <h2 id="work-heading">Selected Work</h2>
-          <p>조사, 요구사항, 화면과 데이터 흐름을 보여주는 네 프로젝트</p>
+          <p>맡은 일과 판단, 다음에 바꾸고 싶은 점을 정리했습니다.</p>
         </header>
 
         {selectedProjects.map((project) => {
-          const result = splitResult(project.result);
+          const result = project.result.split(" 팀:")[0].replace(/^개인:\s*/, "");
           return (
             <article
               key={project.slug}
@@ -122,12 +114,6 @@ export function PmEditorialHome() {
                       <dt>내 담당</dt>
                       <dd>{project.role}</dd>
                     </div>
-                    {project.teamRole && (
-                      <div>
-                        <dt>팀원 담당</dt>
-                        <dd>{project.teamRole}</dd>
-                      </div>
-                    )}
                   </dl>
                   <ul className={home.actionList}>
                     {project.actions.map((action) => (
@@ -137,19 +123,19 @@ export function PmEditorialHome() {
                 </section>
 
                 <section aria-labelledby={`${project.slug}-result`}>
-                  <p className={home.evidenceLabel}>RESULT</p>
-                  <h4 id={`${project.slug}-result`}>주요 산출물과 결과</h4>
+                  <p className={home.evidenceLabel}>DECISION &amp; OUTPUT</p>
+                  <h4 id={`${project.slug}-result`}>판단과 남긴 결과</h4>
                   <dl className={home.resultList}>
-                    <div>
-                      <dt>개인</dt>
-                      <dd>{result.individual}</dd>
-                    </div>
-                    {result.team && (
+                    {project.decision && (
                       <div>
-                        <dt>팀</dt>
-                        <dd>{result.team}</dd>
+                        <dt>판단</dt>
+                        <dd>{project.decision}</dd>
                       </div>
                     )}
+                    <div>
+                      <dt>결과</dt>
+                      <dd>{result}</dd>
+                    </div>
                   </dl>
                 </section>
               </div>
@@ -174,7 +160,7 @@ export function PmEditorialHome() {
                   )}
                 </dl>
                 <Link className={home.projectLink} href={`/PM/${project.slug}/`}>
-                  프로젝트 상세 보기
+                  맡은 일과 회고 읽기
                   <ArrowRight size={18} aria-hidden="true" />
                 </Link>
               </div>

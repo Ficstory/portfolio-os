@@ -229,7 +229,7 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
           </table>
           <div className={styles.criteriaNotes}>
             <section><span>워터폴 진행</span><p>요구사항·화면명세를 먼저 정리해 단계별로 개발했습니다. 변경된 MVP 범위는 문서와 화면에 반영했습니다.</p></section>
-            <section><span>개발 방식에 대한 회고</span><p>중간 팀원 이탈로 MVP 범위가 바뀌었고, 개발도 예상보다 느리게 진행됐습니다. 다음 프로젝트에서는 범위와 구현을 더 자주 점검하는 방식으로 바꿔야겠다고 느꼈습니다.</p></section>
+            <section><span>개발 방식에 대한 회고</span><p>다음에는 MVP 범위 변경을 정기적으로 점검하고, 명세와 실제 구현의 차이를 함께 확인하겠습니다.</p></section>
           </div>
         </div>
       ),
@@ -345,7 +345,7 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
             <li><span>03</span><strong>완료</strong><p>저장 성공 뒤 온보딩 완료 처리</p></li>
             <li><span>04</span><strong>추천 이동</strong><p>저장된 취향을 첫 추천에 연결</p></li>
           </ol>
-          <div className={styles.failureRule}><strong>실패 기준</strong><p>저장 요청이 실패하면 현재 화면에 머물고 완료 처리와 추천 이동을 진행하지 않습니다.</p></div>
+          <div className={styles.failureRule}><strong>저장 결과에 따른 화면 상태</strong><p>저장 성공 후에 온보딩을 완료하고 추천 화면으로 이동합니다. 저장 오류 때는 현재 화면을 유지합니다.</p></div>
           <RoleSplit mine="팀장 · 온보딩 화면·프론트엔드, API, 사용자 선호 저장 처리" team={playPick.teamRole ?? "핵심 검색·추천 엔진 개발"} />
         </div>
       ),

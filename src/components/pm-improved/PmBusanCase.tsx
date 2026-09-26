@@ -5,7 +5,6 @@ import {
   CaseHero,
   CaseSection,
   EvidenceList,
-  RoleBoundary,
 } from "./PmCaseStudy";
 import { PmBusanDemos } from "./PmBusanDemos";
 import detail from "./caseStudy.module.css";
@@ -20,45 +19,25 @@ const youtube = {
   lowVision: "https://www.youtube.com/watch?v=SOZbTG74Aek&list=PLv_Yl-rq-62rcCDquK6y2S8j1RRBETKtJ",
   appDemo: "https://www.youtube.com/watch?v=NYmv58tJr7o&list=PLv_Yl-rq-62rcCDquK6y2S8j1RRBETKtJ",
   presentation: "https://www.youtube.com/watch?v=Ghsyp3Pk8RI&list=PLv_Yl-rq-62rcCDquK6y2S8j1RRBETKtJ",
-  admin: "https://www.youtube.com/watch?v=H7rwuiiyHuo&list=PLv_Yl-rq-62rcCDquK6y2S8j1RRBETKtJ",
 } as const;
 
 function ExternalLink({ href, children }: { href: string; children: React.ReactNode }) {
   return <a href={href} target="_blank" rel="noreferrer">{children}<span aria-hidden="true"> ↗</span></a>;
 }
 
-function AdminFigure({ src, alt, title, width, height, children }: {
-  src: string;
-  alt: string;
-  title: string;
-  width: number;
-  height: number;
-  children: React.ReactNode;
-}) {
-  return (
-    <figure className={styles.adminFigure}>
-      <a href={src} target="_blank" rel="noreferrer" aria-label={`${title} 원본 이미지 새 탭에서 열기`}>
-        <Image src={src} alt={alt} width={width} height={height} sizes="(max-width: 767px) 100vw, 760px" />
-      </a>
-      <figcaption><strong>TEAM · {title}</strong>{children} <span>이미지를 누르면 원본 크기로 볼 수 있습니다.</span></figcaption>
-    </figure>
-  );
-}
-
 export function PmBusanCase({ project }: { project: PmProject }) {
   const caseProject: PmProject = {
     ...project,
-    subtitle: "함세상 장애인자립생활센터 인터뷰에서 확인한 이동 조건을 MVP로 좁히고, 길안내 지도의 핵심 상호작용을 구현한 7인 팀 프로젝트입니다.",
-    role: "초기 서비스 기획 · 기관 섭외·인터뷰 · MVP 선정 · 지도 프론트엔드 · API 사용 계약",
-    teamRole: "경로 알고리즘·공간 데이터 · 온보딩·저시력 모드·즐겨찾기·제보 등록 등 팀 구현",
+    subtitle: "장애인자립생활센터에 직접 연락해 들은 이동 조건을 제품 기준으로 정리하고, Android 기반부터 지도·경로·내비게이션의 데이터 흐름까지 구현한 프로젝트입니다.",
+    role: "서비스 기획·기관 연락·인터뷰 · Android 기반 · 지도·경로·내비게이션 FE · 인증·API 연동",
     actions: [
-      "함세상 장애인자립생활센터를 직접 섭외해 2026년 4월 10일 인터뷰를 진행하고 MVP 범위를 정했습니다.",
-      "지도 렌더링과 선택 마커 고정, 카메라 제스처 동기화를 구현했습니다.",
-      "글자 크기 즉시 저장·적용과 승인된 제보 마커·하단 정보 패널을 구현했습니다.",
-      "Aro/ODsay 대중교통 API 사용 계약에 E102 대표로 서명하고 기획·기능 명세를 동기화했습니다.",
+      "함세상 장애인자립생활센터에 최초 연락하고 인터뷰를 진행해 이동 조건을 PRD와 MVP 기준으로 구체화했습니다.",
+      "Android 앱의 기본 구조와 초기 설정 저장·재진입 분기, 지도 상태·필터·마커 구조를 만들었습니다.",
+      "Kakao 지도·장소 검색, 경로 API 응답 변환, 길안내 상태와 음성 안내를 하나의 흐름으로 연결했습니다.",
+      "인증 재발급·재시도, 계정별 저장 정보 정리, 북마크 저장 기준과 음성 기능의 프론트엔드 범위를 코드와 문서로 남겼습니다.",
     ],
-    result: "개인: 인터뷰를 MVP 결정으로 연결하고 지도 핵심 상호작용, 접근성 설정, 승인 제보 표시를 구현했으며 API 사용 근거와 협업 문서를 남겼습니다. 팀: 보행약자의 이동 조건을 반영한 길안내 앱과 운영 검토 화면을 완성했습니다.",
-    strengths: ["현장 인터뷰→MVP", "지도 상호작용 구현", "외부 API·문서 협업"],
+    result: "현장 요구를 제품 기준으로 바꾸고, 앱 기반부터 지도·경로·안내·인증 복구까지 이어지는 프론트엔드 구조와 테스트를 남겼습니다. 기능별 API 연동 조건을 백엔드와 맞추고 대중교통 API 사용 약정에도 대표로 서명했습니다.",
+    strengths: ["현장 요구의 제품화", "지도·경로 통합", "오류 복구·계약 정리"],
   };
 
   return (
@@ -67,17 +46,17 @@ export function PmBusanCase({ project }: { project: PmProject }) {
       <PmBusanDemos />
 
       <CaseBody labels={{
-        problem: "현장 인터뷰",
-        evidence: "MVP 판단",
-        decision: "지도 구현",
-        action: "API·문서",
-        collaboration: "운영 협업",
-        result: "결과·한계",
-        learning: "회고·자료",
+        problem: "프로젝트와 역할",
+        evidence: "현장→MVP",
+        decision: "예시→실연동",
+        action: "인증·상태 복구",
+        collaboration: "API·인계",
+        result: "구현 결과",
+        learning: "다음 적용",
       }}>
-        <CaseSection id="problem" label="현장 인터뷰 / Discovery" title="기획안을 들고 현장으로 가서, 이동에서 막히는 지점을 먼저 들었습니다.">
-          <p>저는 부산이음길의 초기 서비스 기획을 맡고, 함세상 장애인자립생활센터를 직접 섭외했습니다. 2026년 4월 10일 센터를 방문해 기획 중인 지도 기능을 설명하고 이동 경험과 필요한 정보를 인터뷰했습니다.</p>
-          <p>인터뷰는 아이디어를 확인하는 데서 끝내지 않고, 제한된 개발 기간에 무엇부터 구현할지 정하는 근거로 사용했습니다.</p>
+        <CaseSection id="problem" label="프로젝트와 역할 / Context" title="기획 문서에서 시작한 역할은 앱의 기반과 데이터 흐름을 잇는 일까지 넓어졌습니다.">
+          <p>부산이음길은 보행약자가 목적지까지 이동할 때 접근성 정보, 경로 비교, 장애물 제보를 한 흐름에서 확인하도록 만든 Android 서비스입니다. 저는 초기 기획과 현장 인터뷰를 맡은 뒤 Android 기반, 지도·경로·내비게이션, 인증과 상태 복구까지 이어서 구현했습니다.</p>
+          <p>작업 범위는 초기 설정 저장과 재진입 분기에서 시작해 실제 지도·경로 API 연결, 음성 안내, 인증 재발급과 계정별 저장 정보 정리까지 순서대로 확장됐습니다.</p>
           <figure className={detail.mediaEvidence}>
             <Image
               className={styles.meetingImage}
@@ -87,22 +66,24 @@ export function PmBusanCase({ project }: { project: PmProject }) {
               height={1080}
               sizes="(max-width: 767px) 100vw, 760px"
             />
-            <figcaption>MY ROLE · MVP 기능을 설명하고 이동 조건에 관한 의견을 들은 인터뷰 현장</figcaption>
+            <figcaption>2026.04.10 · 직접 연락하고 진행한 함세상 장애인자립생활센터 인터뷰</figcaption>
           </figure>
-          <RoleBoundary kind="MY ROLE">초기 기획, 기관 섭외와 일정 조율, 인터뷰 진행, 인터뷰 내용을 MVP 범위로 정리하는 일까지 직접 맡았습니다.</RoleBoundary>
         </CaseSection>
 
-        <CaseSection id="evidence" label="MVP 판단 / From interview to scope" title="요구를 기능 목록이 아니라, 첫 사용 흐름의 세 가지 판단으로 바꿨습니다.">
+        <CaseSection id="evidence" label="회고 01 / 현장 의견을 MVP로" title="‘교통약자를 위한 길찾기’를 사용자가 비교하고 확인할 수 있는 기준으로 바꿨습니다.">
+          <p>4월 10일 인터뷰에서는 수동 휠체어가 경사·단차·보도 상태와 폭의 영향을 크게 받고, 음성 안내를 들으면서도 화면을 함께 확인한다는 의견이 나왔습니다.</p>
+          <p>저는 인터뷰 내용을 이슈별로 정리해 안전한 길과 최단거리 비교, 접근성 시설 확인, 화면과 음성을 함께 쓰는 흐름으로 구체화했습니다. 이 기준을 PRD와 화면·기능 명세에 반영했습니다.</p>
           <EvidenceList items={[
-            { title: "이동 조건을 먼저 묻기", text: "이동 보조기기마다 피해야 할 조건이 다르다는 의견을 사용자 유형 온보딩과 경로 조건의 출발점으로 삼았습니다." },
-            { title: "경로를 비교해 선택하기", text: "하나의 최단 경로만 주기보다 경사·계단·폭과 같은 정보를 확인하고 선택할 수 있도록 경로 비교·상세·안내 흐름을 MVP에 포함했습니다." },
-            { title: "시설과 현장 정보를 함께 보기", text: "화장실·충전기·건물 접근성 정보와 사용자 제보를 지도에서 구분해 탐색하는 범위를 정했습니다." },
+            { title: "경로 비교", text: "안전한 길과 최단거리 중 이동 조건에 맞는 경로를 고르는 구조를 MVP에 넣었습니다." },
+            { title: "접근성 정보", text: "경사·단차·보도 폭과 시설 정보를 경로와 지도에서 함께 확인하도록 기준을 정리했습니다." },
+            { title: "화면과 음성", text: "화면에서 경로를 확인하며 음성 안내를 함께 사용하는 기준을 세웠습니다." },
           ]} />
-          <p className={styles.scopeNote}>제가 MVP 판단에 사용한 4월 10일 인터뷰만으로 다양한 이동 조건에서의 효과를 일반화할 수는 없습니다. 실제 이동 상황에서의 후속 검증이 필요합니다.</p>
+          <p>정리한 기준은 이후 경로 데이터, 지도 필터, 길안내 음성 구현에 반영됐습니다. 다음 프로젝트에서는 인터뷰 기록에 연락·진행·참석·결정 담당을 함께 남기고, 실제 이동 테스트에서 경사·GPS 오차·재탐색·음성 안내를 같은 체크리스트로 검증하겠습니다.</p>
         </CaseSection>
 
-        <CaseSection id="decision" label="지도 프론트엔드 / Implementation" title="선택한 장소가 지도 조작 중에도 맥락을 잃지 않도록 만들었습니다.">
-          <p>길안내 지도에서 사용자가 선택한 마커는 화면 기준 위치에 고정되어야 했고, 지도 이동·확대 같은 카메라 제스처와 표시 상태가 함께 움직여야 했습니다. 저는 지도 렌더링과 선택 마커의 고정 동작, 카메라 제스처 동기화를 구현했습니다.</p>
+        <CaseSection id="decision" label="회고 02 / 예시 데이터에서 실제 연동으로" title="예시 경로로 세운 데이터 구조를 실제 지도와 경로 API에 연결했습니다.">
+          <p>4월에는 예시 경로 응답과 좌표 변환, 데이터 접근 구조와 테스트를 먼저 만들었습니다. 5월에는 이 구조에 실제 Kakao 지도와 장소 검색, 도보·대중교통 경로 API를 차례로 연결했습니다.</p>
+          <p>저는 Kakao 지도의 초기화·카메라·마커·경로선과 장소 검색을 구현하고, 경로 검색·선택·재탐색·도착·평가 응답이 길안내 상태로 이어지게 만들었습니다. 기능별 요청과 응답 조건은 백엔드와 직접 맞췄습니다.</p>
           <figure className={detail.mediaEvidence}>
             <div className={styles.mapImage}>
               <Image
@@ -113,67 +94,55 @@ export function PmBusanCase({ project }: { project: PmProject }) {
                 sizes="(max-width: 767px) 88vw, 430px"
               />
             </div>
-            <figcaption>MY ROLE · 지도 렌더링, 선택 마커 고정, 카메라 제스처 동기화</figcaption>
+            <figcaption>지도·장소 검색·경로 API와 길안내 상태를 연결한 실제 앱 화면</figcaption>
           </figure>
           <EvidenceList items={[
-            { title: "글자 크기", text: "기본·크게·매우 크게 중 하나를 선택하면 값을 즉시 저장하고 앱 화면에 바로 반영하도록 구현했습니다." },
-            { title: "승인 제보", text: "승인된 제보는 접근성 시설과 다른 마커로 구분하고, 선택 시 하단 패널에서 내용을 확인하도록 구현했습니다." },
-            { title: "역할 경계", text: "경로 알고리즘과 공간 데이터는 팀원이 담당했습니다. 저는 그 결과가 사용자의 지도 조작과 선택 상태로 이어지는 프론트엔드 경험을 맡았습니다." },
+            { title: "앱 기반", text: "Android 앱 구조와 화면 이동, 초기 설정 저장(DataStore), 재진입 분기를 만들었습니다." },
+            { title: "지도·경로", text: "지도 상태·필터·마커에서 시작해 실제 지도, 장소 검색, 경로 응답 변환과 안내 상태를 연결했습니다." },
+            { title: "안내·접근성", text: "경로 진행 상태와 음성 안내(TTS), 글자 크기 공통 설정과 즉시 적용을 구현했습니다." },
           ]} />
+          <p>지도·검색·경로·안내 코드와 각 계층의 테스트, 기능 시연까지 남았습니다. 다음에는 지도 연결→응답 변환→화면 표시→통합 테스트 순으로 변경을 나누고, 실제 API 예시와 테스트 데이터의 차이를 자동으로 검사하겠습니다.</p>
           <p className={styles.inlineLinks}><ExternalLink href={youtube.route}>경로 탐색 시연</ExternalLink><ExternalLink href={youtube.fontSize}>글자 크기 시연</ExternalLink><ExternalLink href={youtube.report}>제보 기능 시연</ExternalLink></p>
         </CaseSection>
 
-        <CaseSection id="action" label="외부 API 확보·문서 / Delivery" title="외부 API 사용 조건과 화면 명세를 구현 가능한 약속으로 관리했습니다.">
-          <p>Aro/ODsay 대중교통 API 사용 계약에 E102 대표로 서명해 2026년 5월 13일부터 2027년 5월 12일까지 1년간 무상 사용 근거를 확보했습니다. 계약서에는 로고·출처 표기와 서비스 기획안·화면 제출 의무가 명시되어 있습니다.</p>
-          <p>팀 서비스에서는 지하철 도착 정보와 역 접근성 정보를 함께 보여주고, 엘리베이터 접근 지점을 포함한 이동 정보를 안내했습니다. 이 대중교통 연동은 팀 산출물입니다.</p>
-          <p className={styles.scopeNote}>이용 기간과 조건은 사용 약정서 기준이며, 개인정보가 포함된 원문은 공개하지 않습니다.</p>
+        <CaseSection id="action" label="회고 03 / 인증과 상태 복구" title="인증과 계정 상태의 복구 처리를 공통 흐름으로 모았습니다.">
+          <p>Google 로그인은 ID token 검증 방식으로 연결한 다음 날, AccessToken으로 사용자 정보를 조회하는 계약으로 프론트엔드와 서버 코드를 함께 변경했습니다. 이어 인증이 만료되면 세션을 갱신하고 원래 요청을 한 번만 다시 보내는 공통 처리 계층을 추가했습니다.</p>
+          <p>로그아웃 뒤에는 이전 사용자의 장소·출발지·목적지·미전송 제보가 남지 않도록 계정별 저장 정보를 정리했습니다. 북마크도 서버 저장 결과를 기준으로 바꾸고 로컬 임시 저장 경로를 제거했습니다.</p>
           <EvidenceList items={[
-            { title: "기획 문서", text: "인터뷰에서 확인한 요구와 MVP 선택 이유를 팀이 같은 기준으로 볼 수 있도록 정리했습니다." },
-            { title: "기능·화면 명세", text: "접근성 설정, 지도 마커, 하단 패널의 상태와 표시 기준을 구현 내용에 맞춰 갱신했습니다." },
-            { title: "API 사용 조건", text: "계약서에서 사용 기간, 출처·로고 표기, 서비스 기획안·화면 제출 의무를 확인했습니다." },
+            { title: "인증 복구", text: "세션 재발급, 갱신, 원 요청 1회 재시도와 재인증 실패 처리를 한 계층에 모았습니다." },
+            { title: "계정 격리", text: "로그아웃 때 계정에 묶인 장소·경로·제보 정보를 저장소 단위로 정리했습니다." },
+            { title: "저장 일관성", text: "북마크는 서버 응답을 기준으로 삼아 화면과 저장소가 다른 결과를 갖는 경로를 줄였습니다." },
           ]} />
-          <RoleBoundary kind="COLLABORATION">문서가 기획의 기록으로만 남지 않고, 디자인·프론트엔드·경로 개발이 같은 상태와 용어를 보도록 구현 변화와 함께 맞췄습니다.</RoleBoundary>
+          <p>인증 갱신과 요청 재시도, 계정 전환 시 저장 정보 정리를 테스트로 남겼습니다. 다음에는 로그인 수단별 전달 값·서버 검증 방식·갱신 책임을 한 장의 계약표로 먼저 맞추고, 만료·갱신 실패·로그아웃·다른 계정 재로그인을 공통 테스트 시나리오로 운영하겠습니다.</p>
         </CaseSection>
 
-        <CaseSection id="collaboration" label="운영 검토 / Team operations" title="시설·경로 검수부터 오류 관측까지, 팀 서비스의 운영 흐름을 갖췄습니다.">
-          <p>아래 관리자·모니터링 화면은 팀 구현입니다. PM 관점에서는 시설 정보의 신뢰성, 경로 구간의 조건, 오류 상황을 운영자가 다시 확인할 수 있어야 사용자 화면의 품질을 유지할 수 있다고 판단했습니다.</p>
-          <div className={styles.adminGallery}>
-            <AdminFigure
-              src="/pm-improved/busan/admin-facilities.jpg"
-              alt="접근성 시설의 위치와 상세 정보를 검토하는 부산이음길 관리자 화면"
-              title="접근성 시설 검토"
-              width={4500}
-              height={2569}
-            >시설 위치와 접근성 속성을 운영자가 확인하는 화면입니다.</AdminFigure>
-            <AdminFigure
-              src="/pm-improved/busan/admin-routes.jpg"
-              alt="경로 구간과 프로파일, 구간별 속성을 검토하는 부산이음길 관리자 화면"
-              title="경로 구간 검토"
-              width={4493}
-              height={2577}
-            >구간별 속성과 경로 프로파일을 함께 확인해 사용자에게 보이는 경로의 근거를 추적합니다.</AdminFigure>
-            <AdminFigure
-              src="/pm-improved/busan/monitoring.jpg"
-              alt="애플리케이션 로그와 오류 상태를 확인하는 Grafana 모니터링 화면"
-              title="Grafana 모니터링"
-              width={4502}
-              height={2585}
-            >오류와 로그를 관찰해 시연·운영 중 발생한 문제를 찾는 팀의 관측 화면입니다.</AdminFigure>
-          </div>
-          <p className={styles.inlineLinks}><ExternalLink href={youtube.admin}>관리자 기능 영상 보기</ExternalLink></p>
+        <CaseSection id="collaboration" label="API·인계 / Collaboration" title="기능별 API 연동 조건과 음성 기능의 인계 내용을 정리했습니다.">
+          <p>대중교통 API 사용 약정에는 E102 대표로 서명했고, 앱 기능별 API 요청·응답 조건은 백엔드와 직접 합의했습니다. 이 조건을 프론트엔드의 경로 데이터와 길안내 동작에 연결하고, 구현 변화에 맞춰 기획·화면·기능 문서를 갱신했습니다.</p>
+          <p>음성 기능에서는 받아쓴 문장을 앱 동작으로 바꾸는 규칙 기반 프론트엔드와 테스트를 만들었습니다. 장소 분석과 앱 제어의 역할, 추가 연동 대상 API를 인계 문서에 구분해 적었습니다.</p>
+          <EvidenceList items={[
+            { title: "음성 기능 기반", text: "음성 명령을 화면 이동·장소 검색·제보 열기 같은 앱 동작으로 바꾸고 실패 시 대체 흐름을 만들었습니다." },
+            { title: "승인 제보", text: "승인된 제보를 별도 마커와 상세 화면으로 보여 주고 API 응답과 지도 상태를 맞췄습니다." },
+            { title: "문서 동기화", text: "기획·화면·기능 명세와 인계 문서를 실제 화면 상태와 요청·응답 형식에 맞춰 갱신했습니다." },
+          ]} />
         </CaseSection>
 
-        <CaseSection id="result" label="결과와 한계 / Output" title="인터뷰의 언어를 앱의 선택 기준과 지도 상호작용으로 연결했습니다.">
+        <CaseSection id="result" label="구현 결과 / Output" title="현장 요구부터 앱 기반, 실제 API와 복구 흐름까지 하나의 흐름으로 연결했습니다.">
           <EvidenceList items={[
-            { title: "개인 산출물", text: "기관 인터뷰 기록과 MVP 범위, 지도 핵심 상호작용, 글자 크기 설정, 승인 제보 표시, API 사용 계약과 협업 명세를 남겼습니다." },
-            { title: "팀 산출물", text: "사용자 유형 온보딩, 경로 탐색, 저시력 모드, 즐겨찾기, 제보 등록과 관리자·모니터링 화면을 포함한 앱을 완성했습니다." },
+            { title: "제품 기준", text: "기관 연락·인터뷰 진행, 결과 보고서와 PRD, 안전/최단 경로·접근성·음성 보조 원칙을 남겼습니다." },
+            { title: "동작하는 구조", text: "Android 기반, 초기 설정 저장, Kakao 지도·검색, 경로 응답 변환, 길안내·음성, 인증 복구와 계정별 저장 정보 정리를 구현했습니다." },
+            { title: "확장 접점", text: "글자 크기, 승인 제보 지도 표시, 북마크 일관성, 음성 기능 기반과 API·인계 문서를 실제 흐름에 연결했습니다." },
           ]} />
-          <p>현재 확인한 근거는 프로토타입 구현과 시연 단계입니다. 실제 사용자 대상의 경로 선택·지도 가독성·제보 신뢰도 검증은 후속 과제로 남았습니다.</p>
+          <p>기능 시연과 테스트 코드까지 남겼습니다. 자동 테스트 실행은 환경 오류로 중단됐습니다. 실제 이동 환경의 경로 선택·GPS 오차·네트워크 단절·음성 안내는 현장 검증 과제입니다.</p>
           <p className={styles.inlineLinks}><ExternalLink href={youtube.appDemo}>앱 기능 요약 영상</ExternalLink><ExternalLink href={youtube.playlist}>8개 영상 플레이리스트</ExternalLink></p>
         </CaseSection>
 
-        <CaseSection id="learning" label="회고와 참고 자료 / Reflection" title="PM의 역할은 요구를 많이 모으는 것이 아니라, 확인 가능한 결정과 역할 경계로 바꾸는 일이었습니다.">
-          <p>현장 인터뷰를 직접 만들고 그 결과를 MVP로 좁힌 뒤, 제가 맡은 지도 화면까지 구현하면서 기획과 개발 사이의 간격을 체감했습니다. 사용자 요구를 화면 상태와 데이터, 운영 검토 기준까지 연결해야 팀이 같은 기능을 구현할 수 있다는 점을 배웠습니다.</p>
+        <CaseSection id="learning" label="다음 프로젝트에 적용할 것 / Reflection" title="다음에는 ‘구현됨’과 ‘검증됨’을 더 일찍 나누어 관리하겠습니다.">
+          <p>다음 프로젝트에서는 외부 연동의 요청·응답 형식과 완료 기준을 개발 전에 합의하고, 코드 작성·테스트·시연·현장 검증을 각각 다른 완료 상태로 관리하겠습니다.</p>
+          <EvidenceList items={[
+            { title: "연동표 먼저", text: "API별 요청·응답 예시, 인증 방식, 오류 처리 책임을 한 장에 모으고 같은 예시 데이터로 연결 테스트를 시작합니다." },
+            { title: "작게 통합", text: "외부 서비스 연결, 응답 변환, 화면 표시, 통합 테스트를 순서대로 나눠 검토하고 장애 원인을 좁힙니다." },
+            { title: "현장에서 검증", text: "기기·OS·실제 경로와 함께 GPS 오차, 네트워크 단절, 경로 재탐색, 음성 재생 충돌을 기록합니다." },
+          ]} />
           <details className={styles.references}>
             <summary>영상·참고 자료 전체 보기</summary>
             <ul>
@@ -185,7 +154,6 @@ export function PmBusanCase({ project }: { project: PmProject }) {
               <li><ExternalLink href={youtube.fontSize}>글자 크기 설정 · 15초</ExternalLink></li>
               <li><ExternalLink href={youtube.lowVision}>저시력 모드 · 16초</ExternalLink></li>
               <li><ExternalLink href={youtube.appDemo}>앱 기능 요약 · 27초</ExternalLink></li>
-              <li><ExternalLink href={youtube.admin}>관리자 기능 · 3분 15초</ExternalLink></li>
             </ul>
           </details>
         </CaseSection>

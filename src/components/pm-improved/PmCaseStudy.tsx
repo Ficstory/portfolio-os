@@ -20,12 +20,11 @@ export const sectionLabels: Record<CaseSectionId, string> = {
   action: "실행 / Action",
   collaboration: "협업 / Collaboration",
   result: "결과 / Result",
-  learning: "배움 / Learning",
+  learning: "회고 / Reflection",
 };
 
 export function CaseHero({ project }: { project: PmProject }) {
-  const [personalResult, ...teamResultParts] = project.result.split(" 팀:");
-  const teamResult = teamResultParts.join(" 팀:");
+  const personalResult = project.result.split(" 팀:")[0].replace(/^개인:\s*/, "");
 
   return (
     <section className={styles.hero} aria-labelledby="case-title">
@@ -48,9 +47,6 @@ export function CaseHero({ project }: { project: PmProject }) {
           <h2 id="my-role-title">역할과 핵심 기여</h2>
           <dl className={styles.roleOwnership}>
             <div><dt>내 담당</dt><dd>{project.role}</dd></div>
-            {project.teamRole && (
-              <div><dt>팀원 담당</dt><dd>{project.teamRole}</dd></div>
-            )}
           </dl>
           <ol className={styles.actionList}>
             {project.actions.map((action, index) => (
@@ -60,10 +56,9 @@ export function CaseHero({ project }: { project: PmProject }) {
         </section>
         <section aria-labelledby="result-title">
           <p className={`${styles.roleTag} ${styles.teamTag}`}>RESULT</p>
-          <h2 id="result-title">주요 산출물과 결과</h2>
+          <h2 id="result-title">남긴 결과</h2>
           <dl className={styles.resultSplit}>
-            <div><dt>개인</dt><dd>{personalResult.replace(/^개인:\s*/, "")}</dd></div>
-            {teamResult && <div><dt>팀</dt><dd>{teamResult}</dd></div>}
+            <div><dt>산출물</dt><dd>{personalResult}</dd></div>
           </dl>
         </section>
       </div>

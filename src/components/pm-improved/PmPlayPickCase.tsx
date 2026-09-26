@@ -37,7 +37,7 @@ export function PmPlayPickCase({ project }: { project: PmProject }) {
         <EvidenceList items={[
           { title: "보고싶어요", text: "호감 응답으로 공연 ID와 함께 저장 요청에 포함합니다." },
           { title: "안볼래요", text: "비호감 응답으로 저장 요청에 포함합니다." },
-          { title: "모르겠어요", text: "판단 보류로 다음 공연을 보여주되, 비호감으로 저장하거나 완료 개수에 포함하지 않습니다." },
+          { title: "모르겠어요", text: "판단 보류를 선택하면 다음 공연을 보여 줍니다. 완료 개수는 호감·비호감 응답만 셉니다." },
           { title: "완료 조건", text: "호감·비호감 응답이 8개 이상일 때 완료할 수 있습니다." },
         ]} />
         <p className={detail.compactNote}>제품 명세: 호감·비호감 응답 최소 8개</p>
@@ -56,7 +56,7 @@ export function PmPlayPickCase({ project }: { project: PmProject }) {
           { title: "선택 상태", text: "현재 공연과 호불호 응답, 유효 응답 개수에 따라 진행 상태와 완료 버튼을 갱신했습니다." },
           { title: "요청 데이터", text: "공연 ID와 호감·비호감 값을 서버 요청 형식으로 바꾸고, 중립 응답은 제외했습니다." },
           { title: "저장 처리", text: "사용자의 응답을 공연 특성 데이터에 반영해 서버에 취향 정보로 저장하는 처리를 구현했습니다." },
-          { title: "실패 상태", text: "저장 요청이 실패하면 오류를 보여주고 현재 화면에 머물며, 완료 처리와 추천 이동을 진행하지 않게 했습니다." },
+          { title: "실패 상태", text: "저장 오류 때 현재 화면을 유지하고 오류를 표시했습니다. 저장 성공 후에만 완료 처리와 추천 이동을 실행했습니다." },
         ]} />
         <details className={base.evidenceDetails}>
           <summary>구현 세부 정보</summary>
@@ -72,11 +72,11 @@ export function PmPlayPickCase({ project }: { project: PmProject }) {
       </CaseSection>
 
       <CaseSection id="result" label="구현 결과" title="취향 입력부터 저장·완료·추천 조회까지 연결했습니다.">
-        <p>호감·비호감·중립 선택, 유효 응답 8개 조건, 취향 저장, 완료 처리와 추천 화면 이동을 연결했습니다. 저장에 실패하면 현재 화면에 머물도록 처리했습니다.</p>
+        <p>호감·비호감·중립 선택, 유효 응답 8개 조건, 취향 저장, 완료 처리와 추천 화면 이동을 연결했습니다.</p>
       </CaseSection>
 
       <CaseSection id="learning" title="사용자 행동의 의미와 저장 실패 상태를 함께 다뤘습니다.">
-        <p>중립 응답을 비선호와 분리하고, 저장에 실패하면 완료 상태로 넘어가지 않게 처리했습니다. 사용자의 선택 의미와 요청 결과를 화면 상태에 함께 반영한 경험이었습니다.</p>
+        <p>선택의 의미와 서버 저장 결과를 화면 전환의 기준으로 삼았습니다.</p>
       </CaseSection>
     </CaseBody>
     <NextProject project={project} />

@@ -24,18 +24,18 @@ export function BusanVisual() {
   return <div className={visual.busanContribution}>
     <div className={visual.contributionIntro}>
       <span className={styles.visualLabel}>초기 기획·기관 인터뷰 · 프론트엔드 개발</span>
-      <p>초기 기획부터 MVP 선정까지 맡고,<br /><em>길안내 지도 화면을 구현했습니다.</em></p>
+      <p>현장에서 들은 이동 조건을,<br /><em>앱의 길안내 기준으로.</em></p>
     </div>
     <div className={visual.contributionGrid} aria-label="부산이음길 핵심 기여">
       <section>
         <span>01</span>
-        <strong>초기 기획·인터뷰·MVP 선정</strong>
-        <p>함세상 장애인자립생활센터를 직접 섭외해 회의·인터뷰를 진행하고 MVP 범위를 선정했습니다.</p>
+        <strong>기관 연락·인터뷰·PRD</strong>
+        <p>함세상 장애인자립생활센터에 직접 연락해 인터뷰를 진행하고, 안전한 길과 최단거리 비교 등 요구사항을 정리했습니다.</p>
       </section>
       <section>
         <span>02</span>
-        <strong>길안내 지도·프론트엔드 개발</strong>
-        <p>길안내 지도 위 마커를 고정하는 동작과 관련 프론트엔드를 구현했습니다.</p>
+        <strong>지도·경로·음성 안내</strong>
+        <p>지도와 장소 검색, 경로 데이터 처리, 내비게이션 상태와 음성 안내를 연결했습니다.</p>
       </section>
     </div>
   </div>;
@@ -74,7 +74,7 @@ export function SurveyVisual() {
   const burdenPercent = (burdenCount / survey.total * 100).toFixed(1);
   return <div className={styles.surveyVisual}>
     <div className={styles.surveyTakeaway}><span className={styles.visualLabel}>얼굴을 드러내는 일의 부담</span><p className={styles.surveyNumber}>{burdenPercent}<span>%</span></p><p>‘꽤’ 또는 ‘매우’ 부담됨<br /><span>{survey.total}명 중 {burdenCount}명</span></p></div>
-    <div className={styles.chart}><p className={styles.chartTitle}>얼굴 노출 부담</p><ul>{survey.responses.map((response, index) => <li key={response.label}><div><span>{response.label}</span><span>{response.count}명 <small>{(response.count / survey.total * 100).toFixed(1)}%</small></span></div><span aria-hidden="true" className={index < 2 ? styles.barStrong : styles.bar} style={{ width: `${response.count / 56 * 100}%` }} /></li>)}</ul><p className={styles.chartNote}>사전 설문 {survey.total}명 · 2026.01 · 24–29세와 남성 응답 비중이 높음</p></div>
+    <div className={styles.chart}><p className={styles.chartTitle}>얼굴 노출 부담</p><ul>{survey.responses.map((response, index) => <li key={response.label}><div><span>{response.label}</span><span>{response.count}명 <small>{(response.count / survey.total * 100).toFixed(1)}%</small></span></div><span aria-hidden="true" className={index < 2 ? styles.barStrong : styles.bar} style={{ width: `${response.count / 56 * 100}%` }} /></li>)}</ul><p className={styles.chartNote}>사전 설문 {survey.total}명 · 2026.01 · 24–29세와 남성 응답 비중이 높음 · 비율은 응답 수 기준 재계산</p></div>
   </div>;
 }
 
@@ -89,8 +89,8 @@ function SmileResearchVisual() {
       <ol>
         <li><strong>사전 설문</strong><p>흥미 {survey.signals.interest}/{survey.total}<br />참여 의향 {survey.signals.willingToParticipate}/{survey.total}</p></li>
         <li><strong>장벽 확인</strong><p>얼굴 노출 부담<br />{burdenCount}/{survey.total} · {burdenPercent}%</p></li>
-        <li><strong>팀 결정</strong><p>친구 초대 우선<br />랜덤 매칭도 유지</p></li>
-        <li><strong>내 담당</strong><p>설문·결정 기록<br />방 생성·입장·대기 구현</p></li>
+        <li><strong>우선순위 제안</strong><p>친구 대결<br />카메라 안전 장치</p></li>
+        <li><strong>구현</strong><p>초대 후 로그인 복귀<br />입장·대기 상태 처리</p></li>
       </ol>
     </div>
   </div>;
@@ -98,15 +98,15 @@ function SmileResearchVisual() {
 
 export function SmileTeamDemoVisual() {
   return <div className={styles.smileVisual}>
-    <div className={styles.smileStatement}><span className={styles.visualLabel}>팀 서비스 시연 · 랜덤 매칭</span><p>준비부터,<br /><em>웃음 판정과 결과까지.</em></p></div>
-    <PmVideoPreview name="웃지마게임" file="smile" width={1280} height={720} wide description="팀 서비스 시연 · 랜덤 매칭" />
+    <div className={styles.smileStatement}><span className={styles.visualLabel}>서비스 시연 · 랜덤 매칭</span><p>준비부터,<br /><em>웃음 판정과 결과까지.</em></p></div>
+    <PmVideoPreview name="웃지마게임" file="smile" width={1280} height={720} wide description="서비스 시연 · 랜덤 매칭" />
   </div>;
 }
 
 export function BusanOnboardingVisual() {
   return <div className={visual.secondaryVideo}>
-    <div><span className={styles.visualLabel}>팀 서비스 시연 · 온보딩</span><p>사용자 유형과 보행 조건 선택</p></div>
-    <PmVideoPreview name="부산이음길" file="busan" width={480} height={1040} description="팀 서비스 시연 · 온보딩" />
+    <div><span className={styles.visualLabel}>서비스 시연 · 온보딩</span><p>사용자 유형과 보행 조건 선택</p></div>
+    <PmVideoPreview name="부산이음길" file="busan" width={480} height={1040} description="서비스 시연 · 온보딩" />
   </div>;
 }
 

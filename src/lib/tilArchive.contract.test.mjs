@@ -112,7 +112,7 @@ test("media alt, captions, titles and ordered text are searchable", () => {
 
 test("route, Markdown content, character asset, and Portfolio OS launchers stay connected", () => {
   const publishedDirectory = path.join(root, "content/til/published");
-  const publishedSources = readFileSync(path.join(publishedDirectory, "learning-to-action.md"), "utf8");
+  const publishedSources = readFileSync(path.join(publishedDirectory, "reference-led-html-pdf-report.md"), "utf8");
   const pageSource = readSource("src/components/til/FutureDreamTilPage.tsx");
   const routeSource = readSource("src/app/til/future-dream/page.tsx");
   const layoutSource = readSource("src/app/til/future-dream/layout.tsx");

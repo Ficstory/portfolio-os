@@ -9,48 +9,52 @@ const demos = [
     label: "사용자 유형 온보딩",
     video: "/pm-improved/busan/onboarding-v2.mp4",
     poster: "/pm-improved/busan/onboarding.jpg",
-    owner: "TEAM",
-    summary: "이동 보조기기와 사용자 조건을 먼저 확인해 이후 경로 탐색의 기준으로 삼는 팀 구현입니다.",
+    summary: "이동 보조기기와 사용자 조건을 고르는 첫 설정 화면을 보여 줍니다.",
+    roles: [{ label: "구현한 내용", detail: "초기 설정을 저장하고, 다음 실행부터 알맞은 화면으로 진입하는 분기" }],
   },
   {
     id: "route-search",
     label: "경로 탐색",
     video: "/pm-improved/busan/route-search-v2.mp4",
     poster: "/pm-improved/busan/route-search.jpg",
-    owner: "MY ROLE + TEAM",
-    summary: "저는 지도 렌더링과 선택 마커 고정, 카메라 제스처 동기화를 맡았고 경로 알고리즘과 공간 데이터는 팀원이 담당했습니다.",
+    summary: "목적지를 검색·선택하고 실제 지도에서 경로를 확인하는 흐름을 보여 줍니다.",
+    roles: [
+      { label: "구현한 내용", detail: "Kakao 지도 초기화·카메라·마커·경로선, 장소 검색, 경로 응답 변환과 길안내 상태 연결" },
+    ],
   },
   {
     id: "font-size",
     label: "글자 크기",
     video: "/pm-improved/busan/font-size-v2.mp4",
     poster: "/pm-improved/busan/font-size.jpg",
-    owner: "MY ROLE",
-    summary: "기본·크게·매우 크게 중 선택한 값을 바로 저장하고 화면에 적용하는 접근성 설정을 구현했습니다.",
+    summary: "기본·크게·매우 크게 중 하나를 선택하면 글자 크기가 즉시 바뀌는 장면입니다.",
+    roles: [{ label: "구현한 내용", detail: "공통 글자 크기 설정, 선택값 저장·즉시 적용과 관련 화면 오류 수정" }],
   },
   {
     id: "low-vision",
     label: "저시력 모드",
     video: "/pm-improved/busan/low-vision-v2.mp4",
     poster: "/pm-improved/busan/low-vision.jpg",
-    owner: "TEAM",
-    summary: "색과 대비를 조정해 지도 정보를 구분하는 저시력 모드는 팀이 함께 완성한 서비스 기능입니다.",
+    summary: "색과 대비를 조정한 저시력 화면에서 지도 정보를 확인하는 전체 흐름입니다.",
+    roles: [{ label: "구현한 내용", detail: "사용자 설정 저장·재진입 분기와 경로 음성 안내 기반" }],
   },
   {
     id: "report",
     label: "사용자 제보",
     video: "/pm-improved/busan/report.mp4",
     poster: "/pm-improved/busan/report.jpg",
-    owner: "MY ROLE + TEAM",
-    summary: "제보 화면·입력 흐름 약 15초 · 사진 첨부 화면 이전까지의 발췌입니다. 저는 승인된 제보를 시설과 다른 마커로 표시하고 하단 패널에서 내용을 읽는 화면을 맡았으며, 입력·승인 흐름 전체는 팀 산출물입니다.",
+    summary: "사진 첨부 전까지의 제보 입력 화면을 보여 줍니다.",
+    roles: [
+      { label: "구현한 내용", detail: "승인된 제보의 별도 지도 마커·상세 화면, API 응답 연결과 길안내 상태 보정" },
+    ],
   },
   {
     id: "bookmark",
     label: "즐겨찾기",
     video: "/pm-improved/busan/bookmark-v2.mp4",
     poster: "/pm-improved/busan/bookmark.jpg",
-    owner: "TEAM",
-    summary: "자주 확인하는 장소를 다시 찾기 쉽게 저장하는 팀 구현입니다.",
+    summary: "장소를 즐겨찾기에 저장하고 다시 확인하는 사용 흐름을 보여 줍니다.",
+    roles: [{ label: "구현한 내용", detail: "서버 저장 결과를 기준으로 정리하고 로컬 임시 저장 경로를 제거해 상태 불일치 축소" }],
   },
 ] as const;
 
@@ -180,21 +184,20 @@ export function PmBusanDemos() {
     <section className={styles.demoSection} aria-labelledby="busan-demo-title">
       <div className={styles.demoIntro}>
         <div>
-          <p className={styles.kicker}>PRODUCT DEMO / 실제 팀 산출물</p>
-          <h2 id="busan-demo-title">기능 하나씩, 담당 범위와 함께 봅니다.</h2>
+          <p className={styles.kicker}>PRODUCT DEMO / 실제 앱 시연</p>
+          <h2 id="busan-demo-title">실제 앱에서 확인하는 주요 기능</h2>
         </div>
-        <p>직접 녹화한 실제 앱 화면 · 무음. 아래 기능을 선택하면 해당 영상만 불러옵니다.</p>
+        <p>직접 녹화한 앱 시연 · 무음</p>
       </div>
 
       <div className={styles.demoPicker} aria-label="시연 기능 선택">
-        {demos.map((demo, index) => (
+        {demos.map((demo) => (
           <button
             key={demo.id}
             type="button"
             aria-pressed={demo.id === selected.id}
             onClick={() => setSelectedId(demo.id)}
           >
-            <span>{String(index + 1).padStart(2, "0")}</span>
             {demo.label}
           </button>
         ))}
@@ -211,9 +214,16 @@ export function PmBusanDemos() {
           />
         </div>
         <div className={styles.demoDescription} aria-live="polite">
-          <p className={styles.ownerLabel}>{selected.owner}</p>
           <h3>{selected.label}</h3>
           <p>{selected.summary}</p>
+          <dl className={styles.roleList}>
+            {selected.roles.map((role) => (
+              <div key={role.label}>
+                <dt>{role.label}</dt>
+                <dd>{role.detail}</dd>
+              </div>
+            ))}
+          </dl>
           <a href={selected.video} target="_blank" rel="noreferrer">영상 파일 새 탭에서 열기 ↗</a>
         </div>
       </div>

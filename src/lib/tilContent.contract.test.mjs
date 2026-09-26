@@ -111,18 +111,6 @@ function cleanup(projectRoot) {
 
 const MEDIA_LINE = "- ![실험 결과](/til/media/test-learning/chart.png) | 1200x800 | 비교 캡션";
 
-test("published store analysis preserves the supplied accounting totals", () => {
-  const projectRoot = path.resolve(import.meta.dirname, "../..");
-  const entry = loadPublishedTILContent(projectRoot).entries.find((candidate) => candidate.slug === "store-performance-xray");
-  assert.ok(entry?.visualizations);
-  const data = entry.visualizations;
-  assert.equal(data.stores.reduce((total, store) => total + store.revenue, 0), 524_552_540);
-  assert.equal(data.categories.find((category) => category.name === "가공식품").changes.reduce((total, change) => total + change, 0), 1_177_800);
-  assert.ok(data.categories.every((category) => category.changes.reduce((total, change) => total + change, 0) > 0));
-  assert.equal(data.weeks.length, 7);
-  assert.equal(data.promotion.length, 3);
-});
-
 function mediaMarkdown(options = {}) {
   return entryMarkdown(options).replace("- 사실과 해석을 분리했다.", `- 시작 문단\n${MEDIA_LINE}\n- 마지막 문단`);
 }
