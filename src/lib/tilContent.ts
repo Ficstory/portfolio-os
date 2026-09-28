@@ -239,11 +239,15 @@ function parseReflectionBlock(line: string, heading: string, slug: string, sourc
     if (!type) throw failure(sourcePath, "media link requires video: or youtube: title");
     const parts = suffix.split("|").map((part) => part.trim());
     const size = parts[1]?.match(/^([1-9]\d{0,4})x([1-9]\d{0,4})$/);
-    if (parts[0] || !size || parts.length > (type === "video" ? 4 : 3)) throw failure(sourcePath, "media dimensions required: | WIDTHxHEIGHT | optional caption");
+    if (parts[0] || !size || parts.length > (type === "video" || type === "image" ? 4 : 3)) throw failure(sourcePath, "media dimensions required: | WIDTHxHEIGHT | optional caption");
     const common = { src, width: Number(size[1]), height: Number(size[2]), ...(parts[2] ? { caption: parts[2] } : {}) };
     if (type === "image") {
       mediaFilename(src, slug, "image", sourcePath);
-      return { type, alt: requireString(label, "image alt", sourcePath), ...common };
+      if (parts[3] && (parts[3] !== "triptych" || common.height < common.width * 3)) {
+        throw failure(sourcePath, "image presentation must be triptych for a tall image");
+      }
+      return { type, alt: requireString(label, "image alt", sourcePath), ...common,
+        ...(parts[3] ? { presentation: "triptych" as const } : {}) };
     }
     const title = requireString(label.slice(type.length + 2), "media title", sourcePath);
     if (type === "youtube") {

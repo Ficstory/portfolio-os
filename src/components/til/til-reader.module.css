@@ -45,6 +45,11 @@
 .media { max-width: var(--reader-wide); margin: 32px auto 40px; }
 .imageButton { display: block; position: relative; width: 100%; padding: 0; border: 1px solid var(--til-border); background: #eeede8; cursor: zoom-in; }
 .imageButton img { display: block; width: auto; max-width: 100%; height: auto; max-height: 720px; max-height: min(80svh, 720px); object-fit: contain; margin: auto; }
+.imageTriptych { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.segmentPanel { min-width: 0; }
+.imageSegment { min-width: 0; overflow: hidden; }
+.imageSegment img { position: absolute; top: 0; left: 0; width: 100%; max-width: none; max-height: none; margin: 0; object-fit: fill; }
+.segmentNumber { display: block; margin-bottom: 8px; color: #bd2138; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; }
 .expandLabel { display: inline-flex; align-items: center; gap: 6px; position: absolute; right: 12px; bottom: 12px; padding: 6px 10px; background: #fff; color: #292925; font-size: 0.75rem; box-shadow: 0 1px 8px #0001; }
 .media figcaption { margin-top: 12px; text-align: center; font-size: 0.85rem; color: var(--til-secondary); line-height: 1.65; overflow-wrap: anywhere; }
 .promptDetails summary { min-height: 44px; padding: 10px 0; list-style: none; cursor: pointer; }
@@ -124,6 +129,8 @@
   .section > h2 { font-size: 1.25rem; margin-bottom: 20px; }
   .section > p { font-size: 1rem; line-height: 1.9; }
   .media { margin-block: 24px 32px; }
+  .imageTriptych { grid-auto-columns: minmax(180px, min(66vw, 240px)); grid-auto-flow: column; grid-template-columns: none; gap: 10px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 8px; }
+  .segmentPanel { scroll-snap-align: start; }
   .expandLabel { right: 8px; bottom: 8px; padding: 4px 8px; font-size: 0.65rem; }
   .lightbox { padding-inline: 12px; }
   .entryNavigation { gap: 20px; }

@@ -38,7 +38,26 @@ export function TILMedia({ block }: { block: MediaBlock }) {
     <figure className={styles.media}>
       {block.type === "image" ? (
         <>
-          {failed ? <p className={styles.mediaFallback}>이미지를 불러오지 못했습니다. {block.alt}</p> : (
+          {failed ? <p className={styles.mediaFallback}>이미지를 불러오지 못했습니다. {block.alt}</p> : block.presentation === "triptych" ? (
+            <div className={styles.imageTriptych} role="group" aria-label={`${block.alt} — 세 구간 미리보기`}>
+              {[0, 1, 2].map((index) => (
+                <div className={styles.segmentPanel} key={index}>
+                  <span className={styles.segmentNumber} aria-hidden="true">{String(index + 1).padStart(2, "0")} / 03</span>
+                  <button type="button" className={`${styles.imageButton} ${styles.imageSegment}`}
+                    ref={index === 0 ? trigger : undefined}
+                    style={{ aspectRatio: `${block.width} / ${block.height / 3}` }}
+                    aria-label={`${block.alt} — ${index + 1}번째 구간 확대`}
+                    onClick={(event) => { trigger.current = event.currentTarget; setZoomed(false); setExpanded(true); }}>
+                    {/* One original file supplies all three exact, uncropped-at-source previews. */}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={block.src} alt="" width={block.width} height={block.height}
+                      style={{ transform: `translateY(-${index * 100 / 3}%)` }}
+                      loading="lazy" decoding="async" onError={() => setFailed(true)} />
+                  </button>
+                </div>
+              ))}
+            </div>
+          ) : (
             <button type="button" className={styles.imageButton} ref={trigger}
               aria-label={`이미지 확대: ${block.alt}`} onClick={() => { setZoomed(false); setExpanded(true); }}>
               {/* Authored width and height preserve the image's intrinsic ratio. */}

@@ -41,6 +41,8 @@ Frontmatter에는 `id`, `slug`, `date`, `createdAt`, `updatedAt`, 선택적인 `
 
 이미지 대체 텍스트와 영상 제목, 가로×세로 크기는 필수이며 캡션과 영상 포스터는 선택이다. YouTube는 `- [youtube: 제목](실제 YouTube 주소) | 1920x1080 | 선택적 캡션`으로 작성한다. 지원 URL과 상세 문법은 프로젝트 TIL 스킬의 `references/schema-and-style.md`를 따른다. 외부 이미지·임의 iframe·HTML은 지원하지 않는다.
 
+화면처럼 아주 긴 이미지(높이가 너비의 3배 이상)는 캡션 뒤에 `| triptych`를 붙이면 원본 파일을 위·가운데·아래 세 구간으로 가로 배치한다. 각 구간을 누르면 원본 전체를 볼 수 있다. 예: `- ![모바일 안내 화면](/til/media/learning-note/mobile-page.png) | 390x2778 | 모바일 안내 화면. | triptych`
+
 기존 글의 문자열 배열은 그대로 지원한다. 미디어가 있는 섹션에만 순서가 보존된 `blocks`가 생성되고, 화면에서는 해당 블록만 사용해 본문이 중복되지 않는다. 캡션·대체 텍스트·영상 제목도 검색 대상이다.
 
 ## PDF 결과물 첨부

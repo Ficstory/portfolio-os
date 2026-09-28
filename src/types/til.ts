@@ -15,7 +15,7 @@ export type StoreAnalysisVisualization = {
 type TILMediaSize = { width: number; height: number; caption?: string; prompt?: string };
 export type TILBlock =
   | { type: "paragraph"; text: string }
-  | ({ type: "image"; src: string; alt: string } & TILMediaSize)
+  | ({ type: "image"; src: string; alt: string; presentation?: "triptych" } & TILMediaSize)
   | ({ type: "video"; src: string; title: string; poster?: string } & TILMediaSize)
   | ({ type: "youtube"; src: string; title: string } & TILMediaSize);
 

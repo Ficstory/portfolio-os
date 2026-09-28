@@ -153,6 +153,15 @@ test("ordered media preserves paragraphs and rejects unsafe sources and dimensio
   assert.deepEqual(parseTILMarkdown(linked).learned, ["[문서](https://example.com)에서 배웠다."]);
 });
 
+test("tall screenshots can use a three-panel preview without duplicating their source", () => {
+  const tall = MEDIA_LINE.replace("1200x800 | 비교 캡션", "390x2778 | 긴 화면 안내 | triptych");
+  const entry = parseTILMarkdown(mediaMarkdown().replace(MEDIA_LINE, tall));
+  assert.equal(entry.blocks.learned[1].presentation, "triptych");
+  assert.equal(entry.blocks.learned[1].src, "/til/media/test-learning/chart.png");
+  assert.throws(() => parseTILMarkdown(mediaMarkdown().replace(MEDIA_LINE, `${MEDIA_LINE} | triptych`)), /tall image/);
+  assert.throws(() => parseTILMarkdown(mediaMarkdown().replace(MEDIA_LINE, tall.replace("triptych", "unknown"))), /presentation/);
+});
+
 test("publication transitions roll back Markdown and media on filesystem failures", () => {
   for (const status of ["draft", "published"]) for (const operation of ["writeFileSync", "renameSync", ...(status === "published" ? ["rmSync"] : [])]) {
     const { projectRoot, contentRoot } = createFixture();

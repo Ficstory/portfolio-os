@@ -3,7 +3,7 @@ id: til-2026-09-24
 slug: startcamp-market-visit-motivation
 date: 2026-09-15
 createdAt: 2026-09-23T10:43:52+09:00
-updatedAt: 2026-09-26T20:52:27+09:00
+updatedAt: 2026-09-28T09:17:48+09:00
 session: 스타트캠프 아이디어톤 회고
 category: reflection
 title: 아이디어톤 회고, 페르소나보다 먼저 물었어야 할 것
@@ -34,9 +34,9 @@ As-Is 고객 여정은 쇼핑 정보 탐색 → 매장 방문 → 상품 탐색 
 
 해결안은 이마트 신촌점 지하 3층의 ‘K-Palette Zone’으로 구체화했다. 첫째, 매장 입구부터 이어지는 바닥 화살표와 AR 길찾기·QR 안내로 구역까지 헤매지 않게 한다. 둘째, 샤오홍슈 등 소셜 신호를 바탕으로 인기 상품을 큐레이션하고 연관 상품을 함께 진열해 비교와 선택을 돕는다. 셋째, 상품에 NFC를 태그하면 다국어 정보를 바로 확인할 수 있게 한다. 모두 검증된 성과가 아니라 앞서 정의한 불편을 줄이기 위한 팀의 제안이었다.
 
-2026년 9월 15일에는 이 아이디어를 구체화하려고 한국어·중국어 모바일 이벤트 가이드를 `/event/emart`에 빠르게 만들고 배포했다. 신촌점과 층별 정보, 지하 3층 K-Palette Zone, 지하 1층 패킹존, 주차 정보를 담은 빠른 프로토타입이었으며, 검증된 영향은 아니었다. 페이지는 같은 날 내렸고, 이 회고를 위해 Git 이력에서 다시 복원했다.
+2026년 9월 15일에는 이 아이디어를 화면으로 확인하려고 한국어·중국어 모바일 행사 안내 페이지를 만들어 잠시 공개했다. 방문자가 신촌점 정보와 층별 안내, 지하 3층 K-Palette Zone, 지하 1층 패킹존, 주차 정보를 찾아볼 수 있도록 구성했다. 현재는 운영하지 않는 시안이며, 실제 이용자 반응이나 성과를 확인한 결과는 아니다.
 
-- ![지하 3층 K-Palette Zone이 선택된 이마트 신촌점 모바일 이벤트 가이드](/til/media/startcamp-market-visit-motivation/emart-event-page-mobile.png) | 390x2778 | 커밋 14b348b에서 복원한 모바일 화면 캡처. 지하 3층 K-Palette Zone 선택 상태.
+- ![지하 3층 K-Palette Zone이 선택된 이마트 신촌점 모바일 행사 안내 화면](/til/media/startcamp-market-visit-motivation/emart-event-page-mobile.png) | 390x2778 | 직접 만든 모바일 안내 화면. 작은 화면에서는 옆으로 넘겨 보고, 이미지를 누르면 원본을 확대할 수 있다. | triptych
 
 ## 막혔던 지점
 
@@ -71,4 +71,3 @@ As-Is 고객 여정은 쇼핑 정보 탐색 → 매장 방문 → 상품 탐색 
 ## 관련 자료
 
 - document | ideathon-presentation | [이마트 신촌 K-Palette Zone 아이디어톤 발표자료](/til/media/startcamp-market-visit-motivation/emart-sinchon-k-palette-zone-ideathon.pdf) | 페르소나, 고객 여정 맵, 제안 솔루션, 기대 효과를 담은 14쪽 아이디어 발표자료.
-- github | emart-event-page-commit | [이마트 이벤트 페이지 복원 기준 커밋](https://github.com/Ficstory/portfolio-os/commit/14b348b0cc9f4fed23d69492e85f89cac3627dc0) | 이 회고에서 이벤트 페이지를 복원할 때 참고한 Git 이력.
