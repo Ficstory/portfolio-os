@@ -14,11 +14,8 @@
 .brand span { margin-left: 10px; font-size: 13px; color: var(--muted); font-weight: 450; }
 .toolbar nav { display: flex; gap: 28px; font-size: 14px; }
 .toolbar nav a { text-decoration: none; }
-.printAction button { border: 1px solid var(--ink); padding: 10px 17px; background: var(--ink); color: #fff; font-size: 13px; font-weight: 650; cursor: pointer; }
-.printAction button:disabled { opacity: .6; cursor: wait; }
-.printAction p { display: none; }
-.printStatus:empty { display: none; }
-.printStatus { width: 100%; color: #a22e26; font-size: 14px; }
+.printAction a { border: 1px solid var(--ink); padding: 10px 17px; background: var(--ink); color: #fff; font-size: 13px; font-weight: 650; cursor: pointer; display: inline-block; text-decoration: none; }
+.printAction a:hover { color: #fff; background: #2457d8; border-color: #2457d8; }
 .deck { max-width: 1312px; padding: 28px 32px; margin: auto; }
 .page { page: common-portfolio; background: #fff; height: 680px; padding: 30px 46px 20px; margin-bottom: 28px; display: flex; flex-direction: column; border: 1px solid var(--line); scroll-margin-top: 24px; }
 .page:last-child { margin-bottom: 0; }
@@ -93,7 +90,7 @@
   .toolbar nav { order: 3; width: 100%; justify-content: space-between; gap: 16px; }
   .brand { font-size: 18px; }
   .brand span { font-size: 12px; margin-left: 5px; }
-  .printAction button { font-size: 12px; padding: 8px 12px; }
+  .printAction a { font-size: 12px; padding: 8px 12px; }
   .deck { padding: 16px 12px; }
   .page { height: auto; padding: 23px 22px 18px; margin-bottom: 16px; }
   .pageBody { min-height: auto; padding: 26px 0 30px; }
