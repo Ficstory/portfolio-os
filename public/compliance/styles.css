@@ -23,3 +23,13 @@ dialog{padding:0;border:1px solid var(--line);width:min(94vw,1050px);max-height:
 .project-footer .project-detail{justify-self:center;text-align:center}
 .project-footer .page-number{justify-self:end}
 @media screen and (max-width:600px){.page-footer.project-footer{grid-template-columns:1fr auto;row-gap:10px}.project-footer .project-detail{grid-column:1 / -1;grid-row:1}.project-footer .project-contact{grid-column:1;grid-row:2}.project-footer .page-number{grid-column:2;grid-row:2}}
+
+/* Align each activity description with its activity title, below the date. */
+@media screen and (min-width:901px),print{
+  .activity-list article{column-gap:3cqw;row-gap:0}
+  .activity-list article>div:first-child{display:contents}
+  .activity-list article>div:first-child>.step{grid-column:1;grid-row:1}
+  .activity-list article>div:first-child>h3{grid-column:1;grid-row:2}
+  .activity-list article>div:first-child>p{grid-column:1;grid-row:3}
+  .activity-list article>div:last-child{grid-column:2;grid-row:2 / 4;align-self:start}
+}
