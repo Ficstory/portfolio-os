@@ -353,6 +353,8 @@
 }
 
 .archive {
+  /* Short or empty results must not pull the search field down the viewport. */
+  min-height: 100svh;
   padding: 24px clamp(26px, 3vw, 42px) 72px;
   background:
     linear-gradient(rgb(255 255 255 / 68%), rgb(255 255 255 / 68%)),

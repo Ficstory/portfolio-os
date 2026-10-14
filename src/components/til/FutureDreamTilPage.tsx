@@ -293,7 +293,8 @@ export function FutureDreamTilPage({ categories, entries, journey }: {
   // A direct article URL remains valid even when its archive filters exclude it.
   const selectedEntry = entries.find((entry) => entry.slug === requestedSlug) ?? null;
   const [searchDraft, setSearchDraft] = useState(urlQuery);
-  const filteredEntries = useMemo(() => filterTILEntries(entries, category, searchDraft), [entries, category, searchDraft]);
+  // Filter only after the debounced query is committed, never on partial IME text.
+  const filteredEntries = useMemo(() => filterTILEntries(entries, category, urlQuery), [entries, category, urlQuery]);
   const selectedIndex = filteredEntries.findIndex((entry) => entry.slug === requestedSlug);
   const isComposing = useRef(false);
   const searchTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -363,7 +364,13 @@ export function FutureDreamTilPage({ categories, entries, journey }: {
 
   const scheduleSearch = (value: string) => {
     cancelSearch();
-    searchTimer.current = setTimeout(() => navigate(category, value, null, "replace"), 240);
+    searchTimer.current = setTimeout(() => {
+      searchTimer.current = null;
+      const search = createArchiveSearch(category, value, null);
+      // Next.js synchronizes useSearchParams with native history updates. Search
+      // only changes local results; it must not navigate or discard the anchor.
+      window.history.replaceState(null, "", `${pathname}${search ? `?${search}` : ""}${window.location.hash}`);
+    }, 240);
   };
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchDraft(event.target.value);
