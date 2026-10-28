@@ -3,10 +3,10 @@ id: til-2026-10-02-ai-trends-search-and-use
 slug: ai-trends-search-and-use
 date: 2026-10-02
 createdAt: 2026-10-28T23:03:15+09:00
-updatedAt: 2026-10-28T23:49:24+09:00
+updatedAt: 2026-10-29T00:03:56+09:00
 session: Future & Dream Academy
 category: education
-title: [초안] AI 트렌드 조사, 자료를 모으는 것에서 발표의 흐름을 만드는 것까지
+title: AI 트렌드 조사, 자료를 모으는 것에서 발표의 흐름을 만드는 것까지
 summary: AI와 조사하며 검색어와 그래프를 고치고, 가격 정책이라는 설명도 다시 살펴봤다. 내 제미나이 사용 경험과 설문 결과가 다르다는 의문에서 사람들이 AI를 고르는 이유를 더 찾아봤다.
 status: published
 isDemo: false
