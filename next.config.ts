@@ -5,9 +5,12 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // File tracing can otherwise include drafts while following dynamic fs paths.
+  // Static assets are deployed from public, not copied into server functions.
   outputFileTracingExcludes: {
-    "/*": ["./content/til/drafts/**/*"],
+    "/*": ["./content/til/drafts/**/*", "./content/til/media/**/*", "./public/**/*"],
+  },
+  outputFileTracingIncludes: {
+    "/til/future-dream": ["./content/til/config.json", "./content/til/published/*.md"],
   },
   async rewrites() {
     return [

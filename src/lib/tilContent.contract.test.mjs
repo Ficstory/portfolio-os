@@ -162,6 +162,24 @@ test("journal end matter stays optional but supplied actions, skills and resourc
   assert.throws(() => parseTILMarkdown(journalMarkdown(body.replace("https://example.com/report", "javascript:alert"))), /resource link/);
 });
 
+test("runtime reads published media URLs without requiring source assets in the server bundle", () => {
+  const { projectRoot, contentRoot } = createFixture();
+  try {
+    writeFileSync(path.join(contentRoot, "drafts", "test-learning.md"), journalMarkdown(`본문\n${MEDIA_LINE}`), "utf8");
+    const privateMedia = path.join(contentRoot, "drafts", "media", "test-learning");
+    mkdirSync(privateMedia, { recursive: true });
+    writeFileSync(path.join(privateMedia, "chart.png"), "fixture asset");
+    publishTIL(contentRoot, "test-learning");
+    stageTILMedia(projectRoot);
+    rmSync(path.join(contentRoot, "media"), { recursive: true });
+    assert.equal(loadPublishedTILContent(projectRoot).entries[0].journal[0].blocks[1].type, "image");
+    assert.equal(existsSync(path.join(projectRoot, "public", "til", "media", "test-learning", "chart.png")), true);
+    assert.throws(() => stageTILMedia(projectRoot), /missing media/);
+  } finally {
+    cleanup(projectRoot);
+  }
+});
+
 test("journal media stays private until publication and follows the existing asset lifecycle", () => {
   const { projectRoot, contentRoot } = createFixture();
   try {

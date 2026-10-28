@@ -4,7 +4,7 @@ import path from "node:path";
 
 // Check the deployment manifests, not just the data rendered in the browser.
 const buildRoot = path.resolve(".next");
-const draftRoot = path.resolve("content/til/drafts");
+const excludedRoots = ["content/til/drafts", "content/til/media", "public"].map((root) => path.resolve(root));
 assert(existsSync(path.join(buildRoot, "BUILD_ID")), "Run a successful build before checking TIL privacy");
 let checked = 0;
 
@@ -17,9 +17,11 @@ function checkTraces(directory) {
     if (!entry.name.endsWith(".nft.json")) continue;
     const trace = JSON.parse(readFileSync(path.join(directory, entry.name), "utf8"));
     for (const file of trace.files) {
-      const relative = path.relative(draftRoot, path.resolve(directory, file));
-      const isDraft = relative === "" || (!path.isAbsolute(relative) && relative !== ".." && !relative.startsWith(`..${path.sep}`));
-      assert(!isDraft, `Private TIL source included in deployment trace: ${file}`);
+      for (const root of excludedRoots) {
+        const relative = path.relative(root, path.resolve(directory, file));
+        const isExcluded = relative === "" || (!path.isAbsolute(relative) && relative !== ".." && !relative.startsWith(`..${path.sep}`));
+        assert(!isExcluded, `Private source or static asset included in server deployment trace: ${file}`);
+      }
     }
     checked++;
   }
@@ -27,4 +29,4 @@ function checkTraces(directory) {
 
 checkTraces(buildRoot);
 assert(checked > 0, "No deployment traces found; TIL privacy check did not run");
-console.log(`TIL build privacy: ${checked} deployment traces checked; no draft files included.`);
+console.log(`TIL build privacy: ${checked} deployment traces checked; no drafts or static assets included.`);

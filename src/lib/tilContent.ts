@@ -700,7 +700,8 @@ export function loadPublishedTILContent(
   const config = readTILConfig(contentRoot);
   const sourceEntries = readEntries(path.join(contentRoot, "published"), "published");
   validateEntries(sourceEntries, config);
-  validateMedia(contentRoot, sourceEntries);
+  // Publish and prebuild staging validate assets. Runtime only needs their URLs;
+  // source media is deliberately absent from the deployed server function.
   const entries = sourceEntries
     .map((sourceEntry) => {
       const { status, sourcePath, ...entry } = sourceEntry;
