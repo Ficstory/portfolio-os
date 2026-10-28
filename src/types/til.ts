@@ -19,6 +19,11 @@ export type TILBlock =
   | ({ type: "video"; src: string; title: string; poster?: string } & TILMediaSize)
   | ({ type: "youtube"; src: string; title: string } & TILMediaSize);
 
+export type TILJournalSection = {
+  heading?: string;
+  blocks: TILBlock[];
+};
+
 export type TILAction = {
   id: string;
   text: string;
@@ -43,6 +48,8 @@ export type TILEntry = {
   category: TILCategory;
   title: string;
   summary: string;
+  format?: "reflection" | "journal";
+  journal?: TILJournalSection[];
   learned: string[];
   tried: string[];
   blocked: string[];

@@ -122,6 +122,7 @@ function parseFrontmatter(markdown: string, sourcePath: string) {
     "status",
     "isDemo",
     "visualizations",
+    "format",
   ]);
   const unknown = Object.keys(metadata).filter((key) => !allowed.has(key));
   if (unknown.length > 0) {
@@ -191,6 +192,46 @@ function parseBullets(lines: string[], heading: string, sourcePath: string) {
   }
 
   return values;
+}
+
+function parseJournalSections(body: string, sourcePath: string) {
+  const narrative: { heading?: string; lines: string[] }[] = [{ lines: [] }];
+  const details = new Map<string, string[]>();
+  const detailHeadings = new Set(REQUIRED_SECTIONS.slice(4));
+  let activeLines = narrative[0].lines;
+  let inPrompt = false;
+  let inDetails = false;
+
+  for (const line of body.split("\n")) {
+    if (inPrompt) {
+      activeLines.push(line);
+      if (line.trim() === "```") inPrompt = false;
+      continue;
+    }
+    if (line.trim() === "```prompt") {
+      if (inDetails) throw failure(sourcePath, "prompt must belong to the journal body");
+      activeLines.push(line.trim());
+      inPrompt = true;
+      continue;
+    }
+    const heading = line.match(/^##\s+(.+?)\s*$/)?.[1];
+    if (heading) {
+      if (/<\/?[a-z][^>]*>/i.test(heading)) throw failure(sourcePath, "raw HTML in journal heading");
+      activeLines = [];
+      if (detailHeadings.has(heading)) {
+        if (details.has(heading)) throw failure(sourcePath, `duplicate section: ${heading}`);
+        details.set(heading, activeLines);
+        inDetails = true;
+      } else {
+        if (inDetails) throw failure(sourcePath, "journal body must precede optional actions, skills and resources");
+        narrative.push({ heading, lines: activeLines });
+      }
+    } else if (line.trim() && !line.trim().startsWith("<!--")) {
+      activeLines.push(line.trim());
+    }
+  }
+  if (inPrompt) throw failure(sourcePath, "unclosed prompt fence");
+  return { narrative, details };
 }
 
 function mediaFilename(src: string, slug: string, kind: "image" | "video" | "document", sourcePath: string) {
@@ -342,7 +383,10 @@ export function parseTILMarkdown(
   sourcePath = "<memory>",
 ): TILSourceEntry {
   const { metadata, body } = parseFrontmatter(markdown, sourcePath);
-  const sections = parseSections(body, sourcePath);
+  const format = metadata.format ?? "reflection";
+  if (format !== "reflection" && format !== "journal") throw failure(sourcePath, `unknown format: ${format}`);
+  const journalSource = format === "journal" ? parseJournalSections(body, sourcePath) : null;
+  const sections = journalSource?.details ?? parseSections(body, sourcePath);
   const id = requireString(metadata.id, "id", sourcePath);
   const slug = requireString(metadata.slug, "slug", sourcePath);
   const date = requireString(metadata.date, "date", sourcePath);
@@ -363,6 +407,11 @@ export function parseTILMarkdown(
     throw failure(sourcePath, "status must be draft or published");
   }
 
+  const journal = journalSource?.narrative.map(({ heading, lines }) => ({
+    ...(heading ? { heading } : {}),
+    blocks: parseReflection(lines, heading ?? "본문", slug, sourcePath),
+  })).filter((section) => section.blocks.length > 0);
+  if (journal && journal.length === 0) throw failure(sourcePath, "journal must contain body content");
   const reflections = Object.fromEntries(Object.entries(SECTION_KEYS).slice(0, 4).map(([heading, key]) => [key, parseReflection(sections.get(heading) ?? [], heading, slug, sourcePath)])) as Record<TILReflectionKey, TILBlock[]>;
   const blocks = Object.fromEntries(Object.entries(reflections).filter(([, values]) => values.some((block) => block.type !== "paragraph")));
   const paragraphs = (key: TILReflectionKey) => reflections[key].flatMap((block) => block.type === "paragraph" ? [block.text] : []);
@@ -376,6 +425,7 @@ export function parseTILMarkdown(
     category: category as TILEntry["category"],
     title: requireString(metadata.title, "title", sourcePath),
     summary: requireString(metadata.summary, "summary", sourcePath),
+    ...(journal ? { format: "journal" as const, journal } : {}),
     status,
     isDemo: metadata.isDemo
       ? parseBoolean(metadata.isDemo, "isDemo", sourcePath)
@@ -386,8 +436,8 @@ export function parseTILMarkdown(
     blocked: paragraphs("blocked"),
     insights: paragraphs("insights"),
     ...(Object.keys(blocks).length ? { blocks } : {}),
-    nextActions: parseActions(sections.get("다음 액션") ?? [], sourcePath),
-    skills: parseBullets(sections.get("관련 역량") ?? [], "관련 역량", sourcePath),
+    nextActions: journal && !sections.has("다음 액션") ? [] : parseActions(sections.get("다음 액션") ?? [], sourcePath),
+    skills: journal && !sections.has("관련 역량") ? [] : parseBullets(sections.get("관련 역량") ?? [], "관련 역량", sourcePath),
     resources: parseResources(sections.get("관련 자료") ?? [], slug, sourcePath),
     sourcePath,
   };
@@ -545,11 +595,12 @@ function readVisualizations(type: string, slug: string, sourcePath: string): TIL
 }
 
 function localMedia(entry: TILEntry) {
-  const blockMedia = Object.values(entry.blocks ?? {}).flatMap((blocks) => blocks.flatMap((block) => {
+  const allBlocks = [...Object.values(entry.blocks ?? {}).flat(), ...(entry.journal ?? []).flatMap((section) => section.blocks)];
+  const blockMedia = allBlocks.flatMap((block) => {
     if (block.type === "image") return [block.src];
     if (block.type === "video") return [block.src, ...(block.poster ? [block.poster] : [])];
     return [];
-  }));
+  });
   const documents = entry.resources.filter((resource) => resource.type === "document" && resource.href.startsWith("/til/media/"));
   return [...new Set([...blockMedia, ...documents.map((resource) => resource.href)])];
 }

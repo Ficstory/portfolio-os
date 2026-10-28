@@ -115,6 +115,86 @@ function mediaMarkdown(options = {}) {
   return entryMarkdown(options).replace("- 사실과 해석을 분리했다.", `- 시작 문단\n${MEDIA_LINE}\n- 마지막 문단`);
 }
 
+function journalMarkdown(body, options = {}) {
+  const frontmatter = entryMarkdown(options).split("\n---\n")[0];
+  return `${frontmatter}\nformat: journal\n---\n\n${body}\n`;
+}
+
+test("journals accept unheaded prose and arbitrary ordered subheadings without required end matter", () => {
+  const entry = parseTILMarkdown(journalMarkdown("오늘은 직접 데이터를 살펴봤다.\n\n## 예상과 달랐던 숫자\n비교 기준을 바꿔 보니 결과도 달라졌다.\n\n## 아직 남은 질문\n어느 기준이 더 나은지는 아직 모르겠다."));
+  assert.equal(entry.format, "journal");
+  assert.deepEqual(entry.journal.map((section) => section.heading), [undefined, "예상과 달랐던 숫자", "아직 남은 질문"]);
+  assert.equal(entry.journal[0].blocks[0].text, "오늘은 직접 데이터를 살펴봤다.");
+  assert.deepEqual(entry.nextActions, []);
+  assert.deepEqual(entry.skills, []);
+  assert.deepEqual(entry.resources, []);
+  assert.deepEqual(entry.learned, []);
+  assert.equal(parseTILMarkdown(entryMarkdown()).journal, undefined);
+  assert.throws(() => parseTILMarkdown(journalMarkdown("<!-- 메모만 있음 -->")), /body content/);
+  assert.throws(() => parseTILMarkdown(journalMarkdown("본문").replace("format: journal", "format: unknown")), /unknown format/);
+});
+
+test("journals retain media and raw prompts in narrative order and reject unsafe markup", () => {
+  const prompt = "  첫 줄\n\n## 관련 자료\n<script>quoted only</script>\n마지막 줄  ";
+  const body = `처음 시도했다.\n\n${MEDIA_LINE}\n\n\`\`\`prompt\n${prompt}\n\`\`\`\n\n## 결과를 보고\n생각을 바꿨다.`;
+  const entry = parseTILMarkdown(journalMarkdown(body));
+  assert.deepEqual(entry.journal[0].blocks.map((block) => block.type), ["paragraph", "image"]);
+  assert.equal(entry.journal[0].blocks[1].prompt, prompt);
+  assert.equal(entry.journal[1].blocks[0].text, "생각을 바꿨다.");
+  for (const unsafe of ["https://example.com/chart.png", "/til/media/other/chart.png", "/til/media/test-learning/../chart.png"]) {
+    assert.throws(() => parseTILMarkdown(journalMarkdown(body.replace("/til/media/test-learning/chart.png", unsafe))), /media/);
+  }
+  assert.throws(() => parseTILMarkdown(journalMarkdown(body.replace("1200x800", "0x800"))), /dimensions/);
+  assert.throws(() => parseTILMarkdown(journalMarkdown("## <script>bad</script>\n본문")), /HTML/);
+  assert.throws(() => parseTILMarkdown(journalMarkdown("<iframe>bad</iframe>")), /HTML/);
+  assert.throws(() => parseTILMarkdown(journalMarkdown("```prompt\n원문\n```")), /preceding media/);
+});
+
+test("journal end matter stays optional but supplied actions, skills and resources are validated", () => {
+  const body = "직접 해봤다.\n\n## 다음 액션\n- [ ] compare-again | 기준을 다시 비교한다.\n\n## 관련 역량\n- 데이터 분석\n\n## 관련 자료\n- document | source | [원본](https://example.com/report)";
+  const entry = parseTILMarkdown(journalMarkdown(body));
+  assert.equal(entry.nextActions[0].text, "기준을 다시 비교한다.");
+  assert.deepEqual(entry.skills, ["데이터 분석"]);
+  assert.equal(entry.resources[0].href, "https://example.com/report");
+  assert.throws(() => parseTILMarkdown(journalMarkdown("본문\n## 다음 액션")), /at least one/);
+  assert.throws(() => parseTILMarkdown(journalMarkdown(body + "\n## 추가 이야기\n본문")), /must precede/);
+  assert.throws(() => parseTILMarkdown(journalMarkdown(body + "\n## 관련 자료")), /duplicate section/);
+  assert.throws(() => parseTILMarkdown(journalMarkdown(body.replace("https://example.com/report", "javascript:alert"))), /resource link/);
+});
+
+test("journal media stays private until publication and follows the existing asset lifecycle", () => {
+  const { projectRoot, contentRoot } = createFixture();
+  try {
+    const body = `직접 만든 결과다.\n${MEDIA_LINE}\n- [video: 제작 과정](/til/media/test-learning/demo.mp4) | 800x600 | 과정 | /til/media/test-learning/poster.jpg\n## 관련 자료\n- document | report | [결과 보고서](/til/media/test-learning/report.pdf)`;
+    writeFileSync(path.join(contentRoot, "drafts", "test-learning.md"), journalMarkdown(body), "utf8");
+    const privateMedia = path.join(contentRoot, "drafts", "media", "test-learning");
+    mkdirSync(privateMedia, { recursive: true });
+    assert.throws(() => validateTILContent(contentRoot), /missing media/);
+    for (const filename of ["chart.png", "demo.mp4", "poster.jpg", "report.pdf", "unused.png"]) {
+      writeFileSync(path.join(privateMedia, filename), "fixture asset");
+    }
+    assert.equal(validateTILContent(contentRoot).drafts.length, 1);
+    assert.equal(loadPublishedTILContent(projectRoot).entries.length, 0);
+    assert.equal(stageTILMedia(projectRoot), 0);
+    publishTIL(contentRoot, "test-learning");
+    assert.equal(loadPublishedTILContent(projectRoot).entries[0].journal[0].blocks[1].type, "image");
+    assert.equal(existsSync(path.join(privateMedia, "unused.png")), true);
+    assert.equal(stageTILMedia(projectRoot), 4);
+    const generated = path.join(projectRoot, "public", "til", "media", "test-learning");
+    for (const filename of ["chart.png", "demo.mp4", "poster.jpg", "report.pdf"]) {
+      assert.equal(existsSync(path.join(generated, filename)), true);
+    }
+    assert.equal(existsSync(path.join(generated, "unused.png")), false);
+    unpublishTIL(contentRoot, "test-learning");
+    assert.equal(existsSync(generated), false);
+    assert.equal(loadPublishedTILContent(projectRoot).entries.length, 0);
+    assert.equal(existsSync(path.join(privateMedia, "chart.png")), true);
+    assert.equal(parseTILMarkdown(readFileSync(path.join(contentRoot, "drafts", "test-learning.md"), "utf8")).format, "journal");
+  } finally {
+    cleanup(projectRoot);
+  }
+});
+
 test("prompt fences preserve raw multiline content on the preceding media only", () => {
   const prompt = "  첫 줄 들여쓰기\n\n## 프롬프트 내부 제목\n<!-- 그대로 보존 -->\n<script>alert('text only')</script>\n  마지막 줄  ";
   for (const media of [MEDIA_LINE, "- [video: 과정](/til/media/test-learning/demo.mp4) | 800x600", "- [youtube: 과정](https://www.youtube.com/watch?v=abcdefghijk) | 800x600"]) {

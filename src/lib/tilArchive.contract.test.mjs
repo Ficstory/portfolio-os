@@ -6,6 +6,8 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 import vm from "node:vm";
 import ts from "typescript";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
@@ -31,6 +33,23 @@ function loadArchiveModule() {
     require,
   });
 
+  return cjsModule.exports;
+}
+
+function loadReaderModule() {
+  const compiled = ts.transpileModule(readSource("src/components/til/TILReader.tsx"), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2023, jsx: ts.JsxEmit.ReactJSX },
+  }).outputText;
+  const cjsModule = { exports: {} };
+  const readerRequire = (id) => {
+    if (id === "@/lib/tilArchive") return loadArchiveModule();
+    if (id === "./til-reader.module.css") return { default: {} };
+    if (id === "./TILMedia") return { TILMedia: () => null };
+    if (id === "./StoreAnalysis") return { StoreAnalysis: () => null };
+    if (id === "./tilNavigation") return { navigateToTILAnchor: () => {} };
+    return require(id);
+  };
+  vm.runInNewContext(compiled, { exports: cjsModule.exports, module: cjsModule, require: readerRequire });
   return cjsModule.exports;
 }
 
@@ -96,6 +115,39 @@ test("selection keeps a valid slug and returns null for list or missing entry", 
   assert.equal(resolveSelectedTILEntry(sortedEntries, "missing"), null);
   assert.equal(resolveSelectedTILEntry(sortedEntries, null), null);
   assert.equal(resolveSelectedTILEntry([], "missing"), null);
+});
+
+test("journal headings, narrative, media captions and prompts participate in archive search", () => {
+  const { filterTILEntries } = loadArchiveModule();
+  const journalEntry = { ...entries[0], learned: [], format: "journal", journal: [
+    { blocks: [{ type: "paragraph", text: "처음 해본 시장조사" }] },
+    { heading: "예상과 달랐던 방문 이유", blocks: [
+      { type: "image", src: "/til/media/field-note/photo.png", alt: "매장 관찰", caption: "동선 비교", prompt: "메모를 요약한 원문", width: 800, height: 600 },
+    ] },
+  ] };
+  for (const query of ["시장조사", "방문 이유", "매장 관찰", "동선 비교", "요약한 원문"]) {
+    assert.equal(filterTILEntries([journalEntry], "all", query)[0]?.slug, "field-note");
+  }
+});
+
+test("the reader renders journal prose without forced reflection headings and retains legacy sections", () => {
+  const { TILReader } = loadReaderModule();
+  const render = (entry) => renderToStaticMarkup(createElement(TILReader, {
+    entry, categories: [], listHref: "/til/future-dream/", onSelect: () => {}, headingRef: { current: null },
+  }));
+  const journalEntry = { ...entries[0], learned: [], nextActions: [], skills: [], format: "journal", journal: [
+    { blocks: [{ type: "paragraph", text: "먼저 직접 해봤다." }] },
+  ] };
+  const prose = render(journalEntry);
+  assert.match(prose, /<p>먼저 직접 해봤다\.<\/p>/);
+  assert.doesNotMatch(prose, /<h2|오늘 배운 것|직접 시도한 것|새롭게 이해한 것/);
+  const headed = render({ ...journalEntry, journal: [
+    ...journalEntry.journal,
+    { heading: "예상과 달랐던 점", blocks: [{ type: "paragraph", text: "아직 이유는 모르겠다." }] },
+  ] });
+  assert.match(headed, /id="til-journal-1"[^>]*>예상과 달랐던 점<\/h2>/);
+  assert.doesNotMatch(headed, /<span>02<\/span>/);
+  assert.match(render(entries[0]), /오늘 배운 것/);
 });
 
 test("media alt, captions, titles and ordered text are searchable", () => {

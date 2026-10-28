@@ -10,6 +10,11 @@ export function getTILSearchText(entry: TILEntry) {
   return [
     entry.title,
     entry.summary,
+    ...(entry.journal ?? []).flatMap((section) => [
+      section.heading ?? "",
+      ...section.blocks.flatMap((block) => block.type === "paragraph" ? [block.text]
+        : [block.caption ?? "", block.prompt ?? "", block.type === "image" ? block.alt : block.title]),
+    ]),
     ...entry.learned,
     ...entry.tried,
     ...entry.blocked,

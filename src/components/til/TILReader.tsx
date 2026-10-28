@@ -26,14 +26,17 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
   onSelect: (entry: TILEntry) => void;
   headingRef: RefObject<HTMLHeadingElement | null>;
 }) {
-  const sections = reflectionSections.map((section) => ({ ...section,
+  const isJournal = entry.format === "journal";
+  const sections: { key: string; label?: string; blocks: TILBlock[] }[] = isJournal
+    ? (entry.journal ?? []).map((section, index) => ({ key: `journal-${index}`, label: section.heading, blocks: section.blocks }))
+    : reflectionSections.map((section) => ({ ...section,
     blocks: (entry.blocks?.[section.key] ?? entry[section.key].map((text) => ({ type: "paragraph", text } as const)))
       .filter((block) => block.type !== "paragraph" || block.text.trim()),
   })).filter((section) => section.blocks.length > 0);
   const hasResources = entry.resources.length > 0 || entry.skills.length > 0;
   const contents = [
-    ...sections.map((section) => ({ id: section.key, label: section.label })),
-    ...(entry.nextActions.length ? [{ id: "next-actions", label: "다음 액션" }] : []),
+    ...sections.flatMap((section) => section.label ? [{ id: section.key, label: section.label }] : []),
+    ...(entry.nextActions.length ? [{ id: "next-actions", label: isJournal ? "다음에 해볼 것" : "다음 액션" }] : []),
     ...(hasResources ? [{ id: "resources", label: "관련 자료" }] : []),
   ];
   const readingLength = sections.reduce((length, section) => length + section.blocks.reduce((size, block) =>
@@ -108,16 +111,17 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
         </div> : null}
         <div className={styles.body}>
           {sections.map((section, index) => (
-            <section className={styles.section} key={section.key} aria-labelledby={`til-${section.key}`}>
-              <h2 id={`til-${section.key}`} tabIndex={-1}><span>{String(index + 1).padStart(2, "0")}</span>{section.label}</h2>
+            <section className={styles.section} key={section.key} aria-labelledby={section.label ? `til-${section.key}` : undefined} aria-label={section.label ? undefined : "본문"}>
+              {section.label ? <h2 id={`til-${section.key}`} tabIndex={-1}>{isJournal ? null : <span>{String(index + 1).padStart(2, "0")}</span>}{section.label}</h2> : null}
               {section.blocks.map((block: TILBlock, blockIndex: number) => block.type === "paragraph"
                 ? <p key={blockIndex}>{block.text}</p>
                 : <TILMedia key={blockIndex} block={block} />)}
               {section.key === "tried" && entry.visualizations?.type === "store-analysis" ? <StoreAnalysis data={entry.visualizations} /> : null}
             </section>
           ))}
+          {isJournal && entry.visualizations?.type === "store-analysis" ? <StoreAnalysis data={entry.visualizations} /> : null}
           {entry.nextActions.length ? <section className={styles.section} aria-labelledby="til-next-actions">
-            <h2 id="til-next-actions" tabIndex={-1}>다음 액션</h2>
+            <h2 id="til-next-actions" tabIndex={-1}>{isJournal ? "다음에 해볼 것" : "다음 액션"}</h2>
             <ul className={styles.actions}>{entry.nextActions.map((action) => <li key={action.id}>
               <span className={styles.actionStatus} data-status={action.status} aria-label={action.status === "done" ? "완료" : "계획"}>
                 {action.status === "done" ? <Check size={13} aria-hidden="true" /> : null}
