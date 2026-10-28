@@ -3,7 +3,7 @@ id: til-2026-10-07-knock-nok-brand-name-and-logo
 slug: knock-nok-brand-name-and-logo
 date: 2026-10-07
 createdAt: 2026-10-28T23:03:15+09:00
-updatedAt: 2026-10-28T23:04:44+09:00
+updatedAt: 2026-10-28T23:24:38+09:00
 session: Future & Dream Academy
 category: education
 title: [초안] KNOCK:nOK, 브랜드명을 로고로 옮기며 고친 것들
@@ -23,7 +23,7 @@ SMILE, MELT, PAUSE/DOOR 세 방향을 비교했다. 초콜릿색과 크림색을
 
 이름의 의미를 설명하는 것과 작은 글자 차이를 시각적으로 맞추는 일은 별도의 작업이었다. 아래 시안은 AI로 만든 브랜드 개발 연습 결과이며, 실제 출시나 상표 검토를 마친 로고는 아니다. 각 이미지 옆에는 보관된 생성·높이 보정 프롬프트 원문을 함께 연결했다.
 
-![KNOCK:nOK SMILE 로고 시안](/til/media/knock-nok-brand-name-and-logo/logo-1.png) | 1536x1024 | 미소 곡선를 활용한 시안 · 이미지 생성: 내장 image_gen · 보관된 생성 및 높이 보정 요청 원문
+![KNOCK:nOK SMILE 로고 시안](/til/media/knock-nok-brand-name-and-logo/logo-1.png) | 1536x1024 | 미소 곡선을 활용한 시안 · 이미지 생성: 내장 image_gen · 보관된 생성 및 높이 보정 요청 원문
 
 ```prompt
 Use case: precise-object-edit / logo-brand.
