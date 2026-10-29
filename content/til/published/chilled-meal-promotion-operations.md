@@ -3,17 +3,15 @@ id: til-2026-09-21-chilled-meal-promotion-operations
 slug: chilled-meal-promotion-operations
 date: 2026-09-21
 createdAt: 2026-10-28T23:03:15+09:00
-updatedAt: 2026-10-28T23:04:43+09:00
+updatedAt: 2026-10-29T11:15:45+09:00
 session: Future & Dream Academy
 category: education
-title: [초안] 냉장 간편식 할인안을 점포 운영 문서로 풀어보기
-summary: 다구매 할인 조건을 진열·공급·직원 응대·예산 관리까지 이어 붙인 기획 초안을 남겼다.
+title: 냉장 간편식 할인안을 점포 운영 문서로 풀어보기
+summary: 두 개 이상 사면 할인한다는 조건을 점포에서 어떻게 운영할지 고민했다. 진열과 추가 공급부터 품절 응대, 예산 집계까지 정하니 할인 문구만으로는 설명되지 않던 일이 보였다.
 status: published
 isDemo: false
 format: journal
 ---
-
-이 글은 당시 작업 기록과 산출물을 바탕으로 먼저 정리한 회고 초안이다.
 
 냉장 간편식을 두 개 이상 구매하면 할인하는 교육 시나리오로 프로모션 기획서를 작성했다. 할인 문구뿐 아니라 어떤 점포에서 어떤 상품을 대상으로 운영하고, 고객에게 어떻게 설명할지까지 문서로 풀었다.
 
@@ -21,11 +19,11 @@ format: journal
 
 품절이 나면 다른 행사 대상 상품을 안내하되, 임의 보상이나 다음 방문 쿠폰을 약속하지 않는 응대 예시를 넣었다. 할인 예산의 소진 상황을 점검하는 기준과 마감 후 집계 흐름도 함께 적었다.
 
-첨부 자료는 9월 21일 저장된 개인 기획서의 원문을 읽기 쉬운 PDF로 옮긴 것이다. 문서 속 본사 승인과 행사 일정은 실습 설정이며 실제 집행 사실이 아니다. 작성 시점과 가상 행사 일정이 맞지 않는 부분도 원문에 남아 있어, 후속 보완 대상으로 둔다.
+실습이라 본사 승인과 행사 일정도 가정해 작성했다. 다만 작성 기준일과 행사 일정이 서로 맞지 않는 부분은 놓쳤다. 할인 조건을 정하는 데서 끝내지 않고 준비·진행·마감 순서대로 읽어 보며 실제로 실행할 수 있는 일정인지까지 점검해야 했다.
 
-![냉장 간편식 프로모션 기획서 미리보기](/til/media/chilled-meal-promotion-operations/preview.png) | 1061x1500 | 개인 프로모션 기획 초안의 원문 보존용 PDF. 가상의 조직·상품·예산·행사 조건을 사용한 실습이다.
+![냉장 간편식 프로모션 기획서 미리보기](/til/media/chilled-meal-promotion-operations/preview.png) | 1061x1500 | 진열·공급·직원 응대와 예산 관리를 정리한 교육용 프로모션 기획안.
 
 ## 관련 자료
 
-- document | artifact | [냉장 간편식 프로모션 기획서](/til/media/chilled-meal-promotion-operations/artifact.pdf) | 개인 프로모션 기획 초안의 원문 보존용 PDF. 가상의 조직·상품·예산·행사 조건을 사용한 실습이다.
+- document | artifact | [냉장 간편식 프로모션 기획서](/til/media/chilled-meal-promotion-operations/artifact.pdf) | 진열·공급·직원 응대와 예산 관리를 정리한 교육용 프로모션 기획안.
 

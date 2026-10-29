@@ -3,17 +3,17 @@ id: til-2026-10-07-knock-nok-brand-name-and-logo
 slug: knock-nok-brand-name-and-logo
 date: 2026-10-07
 createdAt: 2026-10-28T23:03:15+09:00
-updatedAt: 2026-10-29T10:28:45+09:00
+updatedAt: 2026-10-29T11:15:45+09:00
 session: Future & Dream Academy
 category: education
-title: [초안] KNOCK:nOK, 브랜드명을 로고로 옮기며 고친 것들
+title: KNOCK:nOK, 브랜드명을 로고로 옮기며 고친 것들
 summary: ‘달콤함의 여유’를 이름과 로고로 옮기며, 감정 키워드와 전체 표기·글자 높이를 각각 확인해야 한다는 점을 배웠다.
 status: published
 isDemo: false
 format: journal
 ---
 
-이마트의 냉동·해동 디저트인 치즈케이크, 퐁당 쇼콜라, 브라우니를 함께 묶는 브랜드를 구상했다. 과제의 콘셉트는 ‘달콤함의 여유’, 타깃은 20대 초반부터 30대 초중반이었다. 팀에서 여러 이름을 검토했고, 나는 그중 KNOCK:nOK를 로고와 디저트 이미지로 구체화했다. 당시 슬랙 논의와 Codex 제작 대화를 함께 보며, 이름의 의미가 실제 시안으로 옮겨지는 과정을 정리했다.
+이마트의 냉동·해동 디저트인 치즈케이크, 퐁당 쇼콜라, 브라우니를 함께 묶는 브랜드를 구상했다. 과제의 콘셉트는 ‘달콤함의 여유’, 타깃은 20대 초반부터 30대 초중반이었다. 팀에서 여러 이름을 검토했고, 나는 그중 KNOCK:nOK를 로고와 디저트 이미지로 구체화했다.
 
 ## 이름보다 먼저 ‘어떤 여유인지’ 정하기
 
@@ -25,17 +25,17 @@ format: journal
 
 슬랙에서는 녹녹, KNOKNOK, NOKNOK, KNOCK:NOK 등 여러 표기가 오갔고, DERÉ도 함께 검토했다. ‘달콤함이 문을 두드린다’는 KNOCK의 이미지와 ‘녹여 먹는 동안 잠시 쉬어 간다’는 의미를 연결하는 문구가 나왔다. 내가 공유한 네 가지 감정 키워드에 팀원들의 이름·슬로건 제안이 더해지며 방향이 구체화됐다.
 
-시안 제작에 사용한 표기는 KNOCK:nOK였다. ‘녹다’를 연상시키는 소리와 문을 두드리는 이미지를 브랜드 이야기로 붙인 것이지, NOK라는 단어의 사전적 뜻으로 설명한 것은 아니다. 초콜릿색도 디저트의 맛과 편안한 분위기를 연결하려는 의도로 선택했다. 여러 후보 중 하나를 발전시킨 작업이므로, 팀의 최종 선정이나 실제 고객 선호가 검증된 결과로 보기는 어렵다.
+여러 후보 중 KNOCK:nOK를 골라 시안을 발전시켰다. ‘녹다’를 연상시키는 소리에 문을 두드리는 이미지를 더해 브랜드 이야기를 만들었다. NOK의 사전적 의미보다는 이름에서 떠오르는 느낌에 집중했고, 초콜릿색으로 디저트의 맛과 편안한 분위기를 연결하려고 했다. 실제 고객이 이 이름을 어떻게 읽고 받아들이는지까지는 물어보지 못했다.
 
 ## 전체 이름을 읽히게 만든 세 가지 로고
 
 처음에는 로고 세 방향과 제품 이미지 세 가지를 요청했다. 초콜릿색을 쓰고, n은 소문자로 유지하되 O·K와 세로 높이를 맞추는 조건도 넣었다. 이후 시안을 보며 “로고 KNOCK:nOK 다 들어가게 만들어봐”라고 다시 요청했다. 이름의 의미를 설명하는 일과 이름 전체를 같은 비중으로 읽히게 만드는 일은 별도의 문제였다.
 
-수정 요청은 전체 이름을 한 줄에 배치하고, nOK만 크게 쓰거나 KNOCK를 작은 부제로 두지 않는 쪽으로 구체화됐다. 콜론 위치와 대소문자를 고정하고, 소문자 n의 둥근 형태를 남기면서 옆의 대문자와 높이를 맞추도록 보정했다. ‘같은 높이’라는 말만으로 끝내지 않고 어느 글자의 윗선을 움직일지까지 지정한 기록이 남아 있다.
+수정 요청은 전체 이름을 한 줄에 배치하고, nOK만 크게 쓰거나 KNOCK를 작은 부제로 두지 않는 쪽으로 구체화됐다. 콜론 위치와 대소문자를 고정하고, 소문자 n의 둥근 형태를 남기면서 옆의 대문자와 높이를 맞추도록 보정했다. ‘같은 높이’라는 말만으로는 부족해서 어느 글자의 윗선을 움직일지까지 지정했다.
 
-SMILE, MELT, PAUSE/DOOR는 초콜릿색과 크림색을 공통으로 두고 각각 미소 곡선, 부드럽게 녹는 듯한 글자, 문을 떠올리게 하는 아치로 분위기를 달리한 시안이다. 아래에는 당시 생성 결과와 생성·높이 보정 프롬프트 원문을 함께 남겼다.
+SMILE, MELT, PAUSE/DOOR는 초콜릿색과 크림색을 공통으로 두고 각각 미소 곡선, 부드럽게 녹는 듯한 글자, 문을 떠올리게 하는 아치로 분위기를 달리했다.
 
-![KNOCK:nOK SMILE 로고 시안](/til/media/knock-nok-brand-name-and-logo/logo-1.png) | 1536x1024 | 미소 곡선을 활용한 시안 · 이미지 생성: 내장 image_gen · 보관된 생성 및 높이 보정 요청 원문
+![KNOCK:nOK SMILE 로고 시안](/til/media/knock-nok-brand-name-and-logo/logo-1.png) | 1536x1024 | 미소 곡선을 활용한 시안 · 이미지 생성: 내장 image_gen
 
 ```prompt
 Use case: precise-object-edit / logo-brand.
@@ -46,7 +46,7 @@ Keep the supplied concept's chocolate-brown/cream palette and overall distinct t
 Surgical typography correction of this supplied logo image. Change ONLY the lowercase "n" immediately after the colon in "KNOCK:nOK". It is currently too short. Make that one lowercase n TALLER so the rounded apex aligns with the TOP of the uppercase O and K immediately to its right. Source n occupies approximately x=977..1116 and y=373..532 on the 1536x1024 canvas. Raise its rounded arch to y=355 while keeping its baseline y=532 and its horizontal width unchanged, about 12 percent taller. Preserve the n as a lowercase rounded arch, never replace it with a capital N. Its inside counter must rise proportionally too, preserving the stem thickness and the original letter style. Crucial: the lowercase n must have the SAME height as uppercase OK. The main logo still reads EXACTLY "KNOCK:nOK". Everything else must remain unchanged: all the other letters, their size, width, position, spacing, the colon, the Korean tagline, any smile stroke, the palette and background and 1536x1024 composition. Do not add text or symbols. Do not recenter or redesign. Only extend the lowercase n upward to match the adjacent capitals.
 ```
 
-![KNOCK:nOK MELT 로고 시안](/til/media/knock-nok-brand-name-and-logo/logo-2.png) | 1536x1024 | 초콜릿 같은 글자 형태를 활용한 시안 · 이미지 생성: 내장 image_gen · 보관된 생성 및 높이 보정 요청 원문
+![KNOCK:nOK MELT 로고 시안](/til/media/knock-nok-brand-name-and-logo/logo-2.png) | 1536x1024 | 초콜릿 같은 글자 형태를 활용한 시안 · 이미지 생성: 내장 image_gen
 
 ```prompt
 Use case: precise-object-edit / logo-brand.
@@ -57,7 +57,7 @@ Keep the supplied concept's chocolate-brown/cream palette and overall distinct t
 Surgical typography correction of this supplied logo image. Change ONLY the lowercase "n" immediately after the colon in "KNOCK:nOK". It is currently too short. Make that one lowercase n TALLER so the rounded apex aligns with the TOP of the uppercase O and K immediately to its right. Source n occupies approximately x=956..1116 and y=374..549 on the 1536x1024 canvas. Raise its rounded arch to y=365 while keeping its baseline y=549 and its horizontal width unchanged, about 5 percent taller. Preserve the n as a lowercase rounded arch, never replace it with a capital N. Its inside counter must rise proportionally too, preserving the stem thickness and the original letter style. Crucial: the lowercase n must have the SAME height as uppercase OK. The main logo still reads EXACTLY "KNOCK:nOK". Everything else must remain unchanged: all the other letters, their size, width, position, spacing, the colon, the Korean tagline, any smile stroke, the palette and background and 1536x1024 composition. Do not add text or symbols. Do not recenter or redesign. Only extend the lowercase n upward to match the adjacent capitals.
 ```
 
-![KNOCK:nOK PAUSE DOOR 로고 시안](/til/media/knock-nok-brand-name-and-logo/logo-3.png) | 1536x1024 | 문을 닮은 아치를 활용한 시안 · 이미지 생성: 내장 image_gen · 보관된 생성 및 높이 보정 요청 원문
+![KNOCK:nOK PAUSE DOOR 로고 시안](/til/media/knock-nok-brand-name-and-logo/logo-3.png) | 1536x1024 | 문을 닮은 아치를 활용한 시안 · 이미지 생성: 내장 image_gen
 
 ```prompt
 Use case: precise-object-edit / logo-brand.
@@ -73,9 +73,9 @@ Surgical typography correction of this supplied logo image. Change ONLY the lowe
 
 제품 이미지를 만드는 작업도 두 단계로 나뉘었다. 처음에는 같은 로고를 치즈케이크·퐁당 쇼콜라·브라우니에 적용했고, 나중에는 참고 이미지를 바탕으로 NOC와 KNOCK:nOK의 글자 자체가 디저트 형태에 자연스럽게 들어가도록 요청했다. 포장에 로고를 얹는 것에서, 제품의 질감과 구조로 이름을 표현하는 쪽으로 확장한 것이다.
 
-이때 퐁당 쇼콜라 시안에서 KNOCK의 O가 빠져 KNCK:nOK로 보이는 문제가 생겼다. 수정 기록에는 N과 C 사이에 O를 넣고, 그 O의 높이와 소문자 n의 형태를 다시 맞추는 요청이 이어진다. 초콜릿이 녹는 분위기가 그럴듯해도 브랜드명이 정확한지는 따로 확인해야 했다. 글자 순서, 대소문자, 콜론, 높이를 각각 점검할 기준으로 나누는 것이 필요했다.
+이때 퐁당 쇼콜라 시안에서 KNOCK의 O가 빠져 KNCK:nOK로 보이는 문제가 생겼다. N과 C 사이에 O를 넣어 달라고 요청하고, O의 높이와 소문자 n의 형태도 다시 맞췄다. 초콜릿이 녹는 분위기가 그럴듯해도 브랜드명이 정확한지는 따로 확인해야 했다. 글자 순서, 대소문자, 콜론, 높이를 하나씩 살펴야 놓치는 부분을 줄일 수 있었다.
 
-![KNOCK:nOK 글자를 녹는 초콜릿 디저트 형태로 표현한 시안](/til/media/knock-nok-brand-name-and-logo/dessert-fondant.png) | 1536x1024 | 퐁당 쇼콜라 형태로 확장한 AI 콘셉트 시안 · 프롬프트: Codex · 이미지: 내장 image_gen · 생성 및 철자·높이 보정 요청 원문
+![KNOCK:nOK 글자를 녹는 초콜릿 디저트 형태로 표현한 시안](/til/media/knock-nok-brand-name-and-logo/dessert-fondant.png) | 1536x1024 | 퐁당 쇼콜라 형태로 확장한 AI 콘셉트 시안 · 프롬프트: Codex · 이미지: 내장 image_gen
 
 ```prompt
 Use case: precise-object-edit / logo-brand.
@@ -110,7 +110,7 @@ The n currently has a notched top and is shorter than OK. Completely redraw that
 
 ## 다음에는 작은 크기에서도 확인하기
 
-이번 작업을 돌아보면, 감정 키워드에서 시작해 이름의 의미를 만들고 그 의미를 눈으로 확인할 조건으로 바꾸는 과정이 핵심이었다. 팀 논의는 이름과 문구를 넓히는 데 도움이 됐고, AI와의 수정 대화는 전체 표기와 글자 형태처럼 놓치기 쉬운 조건을 드러냈다. 결과가 마음에 드는지와 요청한 조건을 지켰는지는 따로 봐야 한다는 점도 배웠다.
+‘미소, 여유로움, 쉼, 달콤함’이라고 말할 때는 원하는 분위기가 분명하다고 생각했다. 그런데 로고로 옮기려니 이름 전체를 어떻게 배치하고 글자 높이를 어디에 맞출지까지 설명해야 했다. 팀원들과 이름과 문구를 넓혀 가는 일도, AI가 만든 시안에서 빠진 글자를 찾아 고치는 일도 필요했다. 분위기가 마음에 들어도 작은 글자 하나가 틀리면 그대로 쓸 수 없었다.
 
-다음에는 로고를 실제 포장에 들어갈 정도로 줄여 이름이 읽히는지 확인하고 싶다. 처음 보는 사람이 어떻게 읽는지, 어떤 느낌을 받는지도 물어봐야 한다. ‘달콤함의 여유’라는 의도가 전달되는지는 아직 확인할 과제다. 여기 남긴 이미지는 브랜드 개발 연습을 위한 AI 시안이며 실제 출시 제품이나 상표 검토를 마친 로고는 아니다.
+다음에는 로고를 실제 포장에 들어갈 정도로 줄여 이름이 읽히는지 확인하고 싶다. 처음 보는 사람이 어떻게 읽는지, 어떤 느낌을 받는지도 물어봐야 한다. 이번에는 AI로 브랜드 시안을 만드는 데까지 해봤지만, 실제로 사용하려면 ‘달콤함의 여유’가 전달되는지와 상표 사용 가능성도 검토해야 한다.
 

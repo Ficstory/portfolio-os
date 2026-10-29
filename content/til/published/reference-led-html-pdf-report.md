@@ -3,7 +3,7 @@ id: til-2026-09-22-reference-led-html-pdf-report
 slug: reference-led-html-pdf-report
 date: 2026-09-22
 createdAt: 2026-09-22T16:12:36+09:00
-updatedAt: 2026-09-22T16:25:49+09:00
+updatedAt: 2026-10-29T11:15:45+09:00
 session: Future & Dream Academy 팀 프로젝트
 category: problem-solving
 title: 레퍼런스로 방향을 잡고 HTML → PDF로 홍보기획서 완성하기
@@ -26,18 +26,18 @@ AI로 문서를 만들 때 원하는 결과의 기준을 먼저 정리하는 것
 
 미리캔버스에서 보고서 레퍼런스 8장을 내려받아 전달했다. 넓은 여백, 가는 글자와 굵은 글자를 조합한 제목, 얇은 구분선, 원형 번호, 부드러운 곡선 같은 편집 요소를 참고하도록 했다. 레퍼런스의 파란색을 그대로 쓰는 대신 이마트 브랜드 색상을 적용하고, 새로 작성하는 텍스트의 서체는 Pretendard로 지정했다.
 
-- ![큰 제목과 넓은 여백, 하단의 파란 곡선으로 구성된 보고서 표지 레퍼런스](/til/media/reference-led-html-pdf-report/report-reference-cover.png) | 794x1123 | 미리캔버스에서 내려받은 참고 템플릿 1쪽. 내가 제작한 최종 보고서가 아닌 편집 방향 참고 자료다.
-- ![원형 번호와 가는 구분선으로 다섯 항목을 정리한 보고서 목록 레퍼런스](/til/media/reference-led-html-pdf-report/report-reference-list.png) | 794x1123 | 참고 템플릿 6쪽. 번호·정렬·구분선의 구조를 참고했으며 예시 문구와 워터마크는 보고서에 사용하지 않도록 요청했다.
+- ![큰 제목과 넓은 여백, 하단의 파란 곡선으로 구성된 보고서 표지 레퍼런스](/til/media/reference-led-html-pdf-report/report-reference-cover.png) | 794x1123 | 미리캔버스 표지 레퍼런스. 큰 제목과 넓은 여백, 하단 곡선의 배치를 참고했다.
+- ![원형 번호와 가는 구분선으로 다섯 항목을 정리한 보고서 목록 레퍼런스](/til/media/reference-led-html-pdf-report/report-reference-list.png) | 794x1123 | 미리캔버스 목록 레퍼런스. 번호·정렬·구분선의 구조를 참고하고 예시 문구와 워터마크는 제외하도록 했다.
 
-프롬프트는 단계적으로 구체화했다. 처음에는 작업계획과 구성 순서를 요청했고, 이후 A4 출력 방식과 레퍼런스, 브랜드 색상, 서체를 더했다. 최종 프롬프트에는 약 16쪽의 페이지 구성과 홍보물별 설명 순서, 미확정 정보의 처리 기준, PDF 검수 항목까지 포함했다.
+프롬프트는 단계적으로 구체화했다. 처음에는 작업계획과 구성 순서를 요청했고, 이후 A4 출력 방식과 레퍼런스, 브랜드 색상, 서체를 더했다. 최종 프롬프트에는 보고서 전체 구성과 홍보물별 설명 순서, 미확정 정보의 처리 기준, PDF 검수 항목까지 포함했다.
 
 특히 카드뉴스·포스터·영상은 실제 이미지와 장면을 중심으로 설명하고, 제작 의도에서 채널·노출 위치·행동 요청·확인할 성과까지 연결하도록 했다. 기존 기획과 다른 내용을 섞거나 확인되지 않은 가격·혜택·성과 수치를 만들어 넣지 않도록 기준도 명시했다.
 
 이렇게 정리한 프롬프트로 GPT 아스트라 모델에서 HTML → PDF 워크플로우를 실행했다. 이번 결과물은 내 기준에서 매우 만족스러웠다.
 
-완성한 「이마트 신촌점 K-Palette Zone 오픈 홍보기획서」는 A4 세로 16쪽이다. 아래는 실제 PDF에서 뽑은 표지와 본문이다. 앞서 첨부한 미리캔버스 레퍼런스와 구분해 결과를 함께 남겼다. 전체 원본은 글 아래 관련 자료에서 보거나 내려받을 수 있다.
+완성한 「이마트 신촌점 K-Palette Zone 오픈 홍보기획서」에는 레퍼런스의 여백과 곡선 구성을 살리면서 노란색으로 브랜드 분위기를 더했다. 홍보물 이미지를 크게 보여주고, 그 옆에서 제작 의도와 운영 계획을 읽을 수 있도록 구성했다.
 
-- ![이마트 신촌점 K-Palette Zone 오픈 홍보기획서의 노랑 곡선과 큰 제목으로 구성한 완성 표지](/til/media/reference-led-html-pdf-report/report-result-cover.webp) | 1072x1516 | 완성본 1/16쪽 · GPT 아스트라로 제작한 HTML → PDF 결과. 캡션 옆 펼치기에서 제작에 사용한 최종 프롬프트를 볼 수 있다.
+- ![이마트 신촌점 K-Palette Zone 오픈 홍보기획서의 노랑 곡선과 큰 제목으로 구성한 완성 표지](/til/media/reference-led-html-pdf-report/report-result-cover.webp) | 1072x1516 | 노란 곡선과 큰 제목을 적용한 표지. GPT 아스트라와 HTML → PDF 방식으로 제작했다.
 
 ```prompt
 당신은 기업 보고서의 콘텐츠 기획과 편집 디자인, HTML/CSS 기반 PDF 제작을 담당하는 디자이너다.
@@ -217,9 +217,9 @@ HTML/CSS 단계부터 A4 인쇄 크기와 페이지 나눔을 명시한다. 곡�
 모든 페이지를 렌더링해 시각적으로 검수하고, 발견한 문제를 수정한 뒤 최종 PDF와 편집 원본을 제공하라.
 ```
 
-- ![카드뉴스 여섯 장을 한 페이지에서 보여주고 각 장의 역할을 설명한 완성 보고서](/til/media/reference-led-html-pdf-report/report-result-card-news.webp) | 1072x1516 | 완성본 5/16쪽 · 카드뉴스 6장의 흐름과 제작 의도, 메시지, 채널·노출 계획을 함께 정리했다.
-- ![홍보 포스터를 크게 배치하고 타깃 상황과 메시지, 채널, 행동 요청을 설명한 완성 보고서](/til/media/reference-led-html-pdf-report/report-result-poster.webp) | 1072x1516 | 완성본 8/16쪽 · 실제 포스터와 설명을 나란히 배치하고, 가격·혜택 표기는 운영 확인 대상으로 구분했다.
-- ![오픈 전 시점별 할 일과 담당 역할, 완료 증빙, 문제 발생 시 조치를 정리한 표](/til/media/reference-led-html-pdf-report/report-result-checklist.webp) | 1072x1516 | 완성본 13/16쪽 · 오픈 전 실행 체크리스트. 실제 집행 완료 기록이 아닌 실행 계획이다.
+- ![카드뉴스 여섯 장의 흐름과 역할을 설명한 완성 보고서](/til/media/reference-led-html-pdf-report/report-result-card-news.webp) | 1072x1516 | 카드뉴스의 흐름과 제작 의도, 메시지, 채널·노출 계획.
+- ![홍보 포스터를 크게 배치하고 타깃 상황과 메시지, 채널, 행동 요청을 설명한 완성 보고서](/til/media/reference-led-html-pdf-report/report-result-poster.webp) | 1072x1516 | 포스터와 타깃·메시지·채널 설명. 가격과 혜택은 실행 전에 확인할 항목으로 표시했다.
+- ![오픈 전 시점별 할 일과 담당 역할, 완료 증빙, 문제 발생 시 조치를 정리한 표](/til/media/reference-led-html-pdf-report/report-result-checklist.webp) | 1072x1516 | 오픈 전에 필요한 준비와 담당 역할, 문제 발생 시 조치를 정리한 실행계획.
 
 ## 막혔던 지점
 
@@ -249,5 +249,5 @@ HTML/CSS 단계부터 A4 인쇄 크기와 페이지 나눔을 명시한다. 곡�
 
 ## 관련 자료
 
-- document | completed-promotion-report | [이마트 신촌점 K-Palette Zone 오픈 홍보기획서 — 완성본](/til/media/reference-led-html-pdf-report/k-palette-opening-promotion-plan.pdf) | A4 세로 16쪽 · PDF 약 19.7MB · 표지, 홍보물 3종, 채널별 집행 계획, 실행 체크리스트를 포함한 원본.
-- til | promotion-assets | [카드뉴스·포스터·영상, 공통 기준으로 제작 흐름 맞추기](/til/future-dream/?entry=structure-team-video-production) | 같은 프로젝트의 홍보물 제작 과정 기록.
+- document | completed-promotion-report | [이마트 신촌점 K-Palette Zone 오픈 홍보기획서 — 완성본](/til/media/reference-led-html-pdf-report/k-palette-opening-promotion-plan.pdf) | 홍보물 3종, 채널별 집행 계획과 실행 체크리스트를 담은 홍보기획서.
+- til | promotion-assets | [카드뉴스·포스터·영상, 공통 기준으로 제작 흐름 맞추기](/til/future-dream/?entry=structure-team-video-production) | 같은 프로젝트에서 카드뉴스·포스터·영상을 만들었던 경험.
