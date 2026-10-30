@@ -28,7 +28,7 @@ function ExternalLink({ href, children }: { href: string; children: React.ReactN
 export function PmBusanCase({ project }: { project: PmProject }) {
   const caseProject: PmProject = {
     ...project,
-    subtitle: "장애인자립생활센터에 직접 연락해 들은 이동 조건을 제품 기준으로 정리하고, Android 기반부터 지도·경로·내비게이션의 데이터 흐름까지 구현한 프로젝트입니다.",
+    subtitle: "공공 접근성 정보와 AI가 식별한 로드뷰 시설물 데이터를 활용하는 길안내 앱입니다. 저는 현장 인터뷰와 기획, Android 지도·경로·내비게이션 구현을 맡았습니다.",
     role: "서비스 기획·기관 연락·인터뷰 · Android 기반 · 지도·경로·내비게이션 FE · 인증·API 연동",
     actions: [
       "함세상 장애인자립생활센터에 최초 연락하고 인터뷰를 진행해 이동 조건을 PRD와 MVP 기준으로 구체화했습니다.",
@@ -47,7 +47,7 @@ export function PmBusanCase({ project }: { project: PmProject }) {
 
       <CaseBody labels={{
         problem: "프로젝트와 역할",
-        evidence: "현장→MVP",
+        evidence: "현장·AI 데이터",
         decision: "예시→실연동",
         action: "인증·상태 복구",
         collaboration: "API·인계",
@@ -56,6 +56,7 @@ export function PmBusanCase({ project }: { project: PmProject }) {
       }}>
         <CaseSection id="problem" label="프로젝트와 역할 / Context" title="기획 문서에서 시작한 역할은 앱의 기반과 데이터 흐름을 잇는 일까지 넓어졌습니다.">
           <p>부산이음길은 보행약자가 목적지까지 이동할 때 접근성 정보, 경로 비교, 장애물 제보를 한 흐름에서 확인하도록 만든 Android 서비스입니다. 저는 초기 기획과 현장 인터뷰를 맡은 뒤 Android 기반, 지도·경로·내비게이션, 인증과 상태 복구까지 이어서 구현했습니다.</p>
+          <p>팀은 공공데이터에 충분히 담기지 않은 볼라드·점자블록 정보를 AI로 보강했습니다. 로드뷰에서 시설물의 존재 여부를 판별해 경로 가중치 산출에 사용할 기반 데이터를 자동 생성했습니다.</p>
           <p>작업 범위는 초기 설정 저장과 재진입 분기에서 시작해 실제 지도·경로 API 연결, 음성 안내, 인증 재발급과 계정별 저장 정보 정리까지 순서대로 확장됐습니다.</p>
           <figure className={detail.mediaEvidence}>
             <Image
@@ -79,6 +80,15 @@ export function PmBusanCase({ project }: { project: PmProject }) {
             { title: "화면과 음성", text: "화면에서 경로를 확인하며 음성 안내를 함께 사용하는 기준을 세웠습니다." },
           ]} />
           <p>정리한 기준은 이후 경로 데이터, 지도 필터, 길안내 음성 구현에 반영됐습니다.</p>
+          <h3>팀의 AI 활용 · 로드뷰에서 경로 판단에 필요한 시설물 정보를 만들었습니다.</h3>
+          <p>공공데이터에는 횡단보도 좌표가 있어도 진입부의 점자블록과 주변 볼라드 정보가 충분하지 않았습니다. 팀은 AI Hub 도로 시설물 이미지로 YOLOv11m-seg 모델을 파인튜닝하고, 부산 로드뷰 이미지로 학습을 보강했습니다.</p>
+          <EvidenceList items={[
+            { title: "로드뷰 수집", text: "부산 신호등·횡단보도 약 10,000개 좌표를 순회하고, 각 지점의 로드뷰를 36도씩 회전하며 10장씩 캡처했습니다." },
+            { title: "시설물 식별", text: "여러 방향의 이미지에서 볼라드·점자블록을 탐지해 해당 지점의 시설물 존재 여부를 판별했습니다." },
+            { title: "경로용 데이터", text: "판별 결과를 경로 가중치 산출의 기반 데이터로 만들어 공공 접근성 정보를 보강했습니다." },
+          ]} />
+          <p>공모전 신청서의 팀 평가 결과는 Box mAP50 0.858, Mask mAP50 0.860입니다. 이는 이미지 탐지 평가 지표이며 실제 보행 안전성이나 이동 성공률을 측정한 수치는 아닙니다.</p>
+          <p>AI 모델과 공간 데이터 구축은 팀의 작업이며, 제 역할은 기관 인터뷰·요구사항 정리와 지도·경로·안내 화면의 프론트엔드 구현입니다.</p>
         </CaseSection>
 
         <CaseSection id="decision" label="사례 02 / 예시 데이터에서 실제 연동으로" title="예시 경로로 세운 데이터 구조를 실제 지도와 경로 API에 연결했습니다.">
@@ -143,7 +153,8 @@ export function PmBusanCase({ project }: { project: PmProject }) {
           <details className={styles.references}>
             <summary>영상·참고 자료 전체 보기</summary>
             <ul>
-              <li><span>2026.06 · 사업계획서, 기능·운영 구성 확인 · 비공개 자료</span></li>
+              <li><span>2026.06 · 공모전 신청서 · AI 모델·검증 결과(8~9쪽), 로드뷰 기반 경로 가중치용 데이터 생성(11쪽) · 비공개 자료</span></li>
+              <li><ExternalLink href="https://github.com/busaneumgil/busaneumgil/blob/develop/AI/model_train/step4_colab_yolov11_seg_train.ipynb">팀 AI 학습 기록 · 도로 시설물 식별과 볼라드·점자블록 탐지</ExternalLink></li>
               <li><ExternalLink href={youtube.presentation}>프로젝트 소개 발표 · 4분 37초</ExternalLink></li>
               <li><ExternalLink href={youtube.onboarding}>사용자 유형 온보딩 · 약 20초</ExternalLink></li>
               <li><ExternalLink href={youtube.route}>경로 탐색 · 34초</ExternalLink></li>

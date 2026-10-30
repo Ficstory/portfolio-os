@@ -5,7 +5,7 @@ export const projects: Project[] = [
     "id": "busan-eumgil",
     "slug": "busan-eumgil",
     "title": "부산이음길",
-    "summary": "부산의 보행약자·저시력자가 접근성 시설과 경로를 확인하는 Android 길안내 앱입니다.",
+    "summary": "AI로 로드뷰의 볼라드·점자블록을 탐지해 경로 가중치에 활용하는 보행약자·저시력자용 Android 길안내 앱입니다.",
     "valueStatement": "기획 문서 갱신과 글자 크기 설정, 승인 제보의 지도 표시를 맡았습니다.",
     "problem": "휠체어 사용자는 경사·계단·단차를, 저시력자는 화면을 읽고 목적지를 입력하는 방식을 함께 고려해야 합니다. 팀은 지도 중심의 보행약자 화면과 큰 버튼·음성 중심의 저시력자 화면을 나눴습니다.",
     "role": [
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     ],
     "troubleshooting": [
       "지도에 표시할 시설과 승인 제보는 데이터 종류가 달라 마커와 상세 패널을 구분했습니다.",
-      "경로 계산과 공간 데이터 구축은 팀의 백엔드·AI 작업입니다. 제가 갱신한 요구사항명세서는 화면 구현과 경로 품질 확인을 별도 항목으로 다룹니다."
+      "팀은 YOLOv11m-seg로 카카오 로드뷰의 볼라드·점자블록을 탐지하고, 시설 유무를 경로 가중치에 활용했습니다. 모델 학습과 공간 데이터 구축은 팀의 백엔드·AI 작업이며, 제 기여는 기획 문서와 Android 화면·API 연동입니다."
     ],
     "result": [
       "팀은 사용자 유형별 길안내 화면을 구현하고 시연 자료를 남겼습니다. 제 작업은 문서 갱신과 Android 화면·API 연동에서 확인할 수 있습니다.",
@@ -40,6 +40,13 @@ export const projects: Project[] = [
         "description": "사용자 유형과 보행 조건, 화면 설정을 선택하는 원본 앱 시연입니다.",
         "availability": "public",
         "href": "/pm/previews/busan.mp4"
+      },
+      {
+        "label": "팀 AI 모델 학습·탐지 기록",
+        "category": "AI·데이터",
+        "description": "YOLO 기반 볼라드·점자블록 탐지의 팀 학습·평가 기록입니다. 개인 프론트엔드 기여와 구분합니다.",
+        "availability": "public",
+        "href": "https://github.com/busaneumgil/busaneumgil/blob/develop/AI/model_train/step4_colab_yolov11_seg_train.ipynb"
       }
     ],
     "links": {},

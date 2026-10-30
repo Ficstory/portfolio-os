@@ -19,7 +19,7 @@ const publicDigitalCaseCopy: Record<
   }
 > = {
   "busan-eumgil": {
-    "policyContext": "경로 계산과 공간 데이터 구축은 팀의 백엔드·AI 담당 범위입니다. 실제 통행 안전성을 확인한 사용자 검증 자료는 없습니다.",
+    "policyContext": "팀은 로드뷰에서 볼라드·점자블록을 AI로 식별해 경로 가중치용 데이터를 구축했습니다. 실제 통행 안전성은 별도의 현장 검증 과제입니다.",
     "requirementTranslation": "제보 사진과 처리 상태를 PRD·기능·화면명세에 반영하고 구현 상태를 갱신했습니다.",
     "userFlow": "개인 구현은 글자 크기 설정과 마이페이지 연결, 승인된 제보 마커와 상세 패널입니다."
   },

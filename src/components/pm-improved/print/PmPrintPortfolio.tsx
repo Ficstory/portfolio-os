@@ -260,9 +260,9 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
           <div className={styles.introCopy}>
             <p className={styles.lead}>{busan.headline}</p>
             <p>{busan.subtitle}</p>
-            <section className={styles.problemBox} aria-label="대상 사용자와 문제">
-              <span>USER PROBLEM</span>
-              <p>부산의 보행약자와 저시력자가 자신의 이동 조건과 화면 이용 조건을 반영해 길을 확인할 수 있어야 했습니다.</p>
+            <section className={styles.problemBox} aria-label="팀의 AI 시설물 데이터 구축">
+              <span>TEAM · AI DATA</span>
+              <p>로드뷰 수집 → 볼라드·점자블록 식별 → 경로 가중치용 데이터 생성. 공공데이터에 부족한 보행 시설물 정보를 팀의 AI 모델로 보강했습니다.</p>
             </section>
             <ProjectMeta project={busan} />
           </div>
@@ -303,7 +303,7 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
               <p className={styles.documentMetric}><strong>{busanDocumentCommitMetric.count}<small>건</small></strong><span>{busanDocumentCommitMetric.label}</span><small>{busanDocumentCommitMetric.scope}</small></p>
             </section>
             <p className={styles.supportingWork}><strong>보조 구현</strong> 글자 크기 즉시 저장·적용 · 승인된 제보 구분 표시와 내용 확인 패널 연결</p>
-            <RoleSplit mine="길안내 지도·마커 고정, 문서 갱신, 접근성 설정·제보 표시" team="경로 탐색과 공간 데이터 개발" />
+            <RoleSplit mine="길안내 지도·마커 고정, 문서 갱신, 접근성 설정·제보 표시" team="AI 시설물 식별·경로 가중치용 데이터, 경로 탐색·공간 데이터 개발" />
           </div>
         </div>
       ),
