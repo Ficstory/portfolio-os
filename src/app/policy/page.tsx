@@ -1,5 +1,6 @@
-import { TrackLandingPage } from "@/components/tracks/TrackLandingPage";
+import { notFound } from "next/navigation";
 
 export default function PolicyPage() {
-  return <TrackLandingPage trackId="policy" />;
+  // Temporarily unpublished; keep the track content for later reactivation.
+  notFound();
 }

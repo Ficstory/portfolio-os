@@ -15,20 +15,6 @@ const trackLinks = [
       "네 개 팀 프로젝트에서 맡은 조사, 요구사항 문서, 화면·API 구현을 소개합니다.",
     evidence: "AEKKIM, 부산이음길, 웃지마게임, Play Pick",
   },
-  {
-    href: "/policy",
-    label: "정책지원관",
-    summary:
-      "부산참여연대에서 맡은 예산·결산 분석과 의정평가, 행정사무감사 의제 취합 업무를 소개합니다.",
-    evidence: "부산참여연대, 행감 의제, 조례·예산 분석, 정책문서 작성",
-  },
-  {
-    href: "/assembly",
-    label: "국회 보좌관",
-    summary:
-      "지방의회 활동을 조사하고 보고서·발제·대외 설명 자료를 작성한 경험을 소개합니다.",
-    evidence: "의정감시, 회기 모니터링, 평가보고서, 발제·인터뷰",
-  },
 ] as const;
 
 export function TrackLinkPanel() {

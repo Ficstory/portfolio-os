@@ -35,12 +35,6 @@ export function TrackLandingPage({ trackId }: TrackLandingPageProps) {
             <Link className="rounded-md px-2.5 py-1.5 hover:bg-white/10 hover:text-white" href="/pm">
               PM
             </Link>
-            <Link className="rounded-md px-2.5 py-1.5 hover:bg-white/10 hover:text-white" href="/policy">
-              Policy
-            </Link>
-            <Link className="rounded-md px-2.5 py-1.5 hover:bg-white/10 hover:text-white" href="/assembly">
-              Assembly
-            </Link>
           </div>
         </div>
       </nav>
