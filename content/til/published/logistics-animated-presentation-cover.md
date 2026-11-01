@@ -3,7 +3,7 @@ id: til-2026-10-25-logistics-animated-presentation-cover
 slug: logistics-animated-presentation-cover
 date: 2026-10-25
 createdAt: 2026-11-01T23:57:52+09:00
-updatedAt: 2026-11-01T23:59:19+09:00
+updatedAt: 2026-11-02T00:13:06+09:00
 session: Future & Dream Academy 발표 디자인 실험
 category: problem-solving
 title: 유통차량의 이동을 30초 발표 표지로 만들기
@@ -16,6 +16,18 @@ format: journal
 발표 표지에서 물류센터와 매장을 잇는 과정을 움직임으로 보여주는 작업을 해봤다. 노란 유통차량에 상품을 싣고, 도로를 달려 도착한 뒤 상품을 내리는 30초짜리 장면이다. AI로 만든 차량·작업자·상품 이미지와 HTML/CSS, SVG를 조합하고, 마지막에는 「흐름을 설계하다」라는 제목이 있는 표지로 멈추도록 구성했다.
 
 [video: 유통차량 애니메이션 발표 표지 시연](/til/media/logistics-animated-presentation-cover/cover-demo.mp4) | 1600x900 | 제작한 HTML 표지의 30초 애니메이션과 마지막 화면 2초. 배경 사진: 해안건축, 이마트몰 김포물류센터. 차량·작업자·상품은 AI 생성 이미지다. | /til/media/logistics-animated-presentation-cover/cover-poster.webp
+
+## Instagram에서 본 물류 웹사이트
+
+출발점은 Instagram의 @gilt_foundry 계정이 소개한 United Carriers 웹사이트 영상이었다. 노트북에서 물류 웹사이트를 스크롤하는 영상이었는데, 화면 안에서 적재 장비가 화물을 옮기고 트럭과 도로, 컨테이너선으로 장면이 이어졌다. 이 연출을 제목과 내용만 바꿔 쓸 수 있는 HTML 발표 표지로 만들어 보고 싶었다. 제작 과정에서는 게시물에 나온 실제 United Carriers 사이트도 확인했다.
+
+참고한 것은 물류 오브젝트를 크게 배치하는 방식과 장면을 잇는 시점 변화였다. 측면에서 보던 트럭을 위에서 내려다보는 시점으로 바꾸고, 중앙의 세로 도로 양옆에 큰 제목과 설명을 놓는 구성이 특히 직접적인 기준이 됐다. 미색과 검정의 넓은 면, 굵은 산세리프 글자, 넉넉한 여백도 함께 참고했다.
+
+![United Carriers 웹사이트에서 중앙의 세로 도로와 상공 시점 트럭, 양쪽의 큰 문구를 배치한 원본 화면](/til/media/logistics-animated-presentation-cover/reference-united-carriers-road.png) | 1366x768 | 참고한 원본 — United Carriers 웹사이트의 2026년 10월 25일 캡처. 중앙 도로·상공 시점·양옆 문구 구성을 참고했다. 사이트 화면의 권리는 원저작권자에게 있다.
+
+첫 시안은 트럭 이미지 한 장에 짧은 움직임을 넣은 수준이라 원본에서 보고 싶었던 공간감과 장면 전환을 충분히 담지 못했다. 원본을 다시 확인하면서 적재 → 트럭 → 도로 → 선박으로 이어지는 흐름부터 재구성했다.
+
+이후에는 발표 주제에 맞게 방향을 바꿨다. 바다와 선박으로 끝나는 장면은 이마트 물류와 어울리지 않는다고 생각해, 노란 이마트 물류 탑차가 도착해서 상품을 내리는 모습으로 바꿔 달라고 했다. 원본의 시점 전환과 세로 도로 구성을 가져오되, 색상과 차량, 마지막 장면은 이마트의 상품 운송 흐름에 맞췄다. 웹사이트의 스크롤 동작도 발표용 자동 재생과 장면 탐색으로 바꿨다.
 
 ## 차량이 멈춘 다음에 상품을 내리도록
 
@@ -30,6 +42,8 @@ format: journal
 ![정차한 트럭에서 상품을 꺼낸 뒤 작업자와 팔레트가 리프트 위에서 내려오는 장면](/til/media/logistics-animated-presentation-cover/unloading-scene.webp) | 1600x900 | 차량 정차와 문 열기를 마친 뒤 리프트가 내려오는 구간. 작업자는 보행 대신 정지 자세를 유지한다. 배경 사진: 해안건축.
 
 ## 실제 사진을 배경으로 바꾸며 맞춘 것
+
+차량의 모습은 Allison Transmission이 공개한 이마트 여주 물류센터의 현대 마이티 운행 사례 사진을 확인했다. 노란 적재함과 큰 emart 로고가 있는 물류 운송용 탑차를 기준으로 삼았고, 로고를 수정할 때도 사진에 보이는 흰색 e와 짙은 mart를 참고했다. 사진 속 차량을 그대로 가져온 것은 아니고, 이 모습을 기준으로 생성한 차량 이미지를 조정했다.
 
 처음의 생성 창고 배경과 별도로 얹었던 이마트 간판은 걷어냈다. 대신 해안건축이 공개한 실제 이마트몰 김포물류센터의 외부 하역장 사진을 사용했다. 사진에 있는 차양과 도크를 살리고, 아래쪽은 밝게 흐려지도록 배치해 제목과 하역 동작을 읽을 수 있게 했다.
 
@@ -46,4 +60,7 @@ format: journal
 ## 관련 자료
 
 - document | presentation-pdf | [유통차량 발표 표지와 본문 PDF](/til/media/logistics-animated-presentation-cover/presentation.pdf) | 마지막 표지와 본문을 담은 기존 2쪽 PDF. 애니메이션은 본문의 시연 영상에서 볼 수 있다.
+- document | instagram-reference | [처음 참고한 Instagram 게시물 — @gilt_foundry](https://www.instagram.com/p/DeNRvutT_F-/) | United Carriers 웹사이트의 물류 연출을 소개한 영상. 이 게시물에서 발표 표지 제작을 시작했다.
+- document | united-carriers-reference | [United Carriers — 물류 애니메이션 레퍼런스](https://unitedcarriers.com/) | 적재 장비에서 트럭·도로·선박으로 이어지는 전환, 큰 오브젝트와 타이포그래피, 중앙 세로 도로 구성을 참고했다.
+- document | emart-truck-reference | [Allison Transmission — 이마트 여주 물류센터 운송차량 사례](https://www.allisontransmission.com/newsroom/article/2023/07/10/emart-yeoju-logistics-center-chooses-hyundai-mighty-equipped-with-allison-transmission) | 노란 물류 탑차의 모습과 차량에 적용된 흰색 e·짙은 mart 로고를 확인한 사진.
 - document | background-source | [해안건축 — 이마트몰 김포물류센터](https://www.haeahn.com/en/project/detail.do?prjctSeq=1084&prjctUseSeq=19) | 배경에 사용한 외부 하역장 사진의 출처. 사진의 권리는 원저작권자에게 있다.
