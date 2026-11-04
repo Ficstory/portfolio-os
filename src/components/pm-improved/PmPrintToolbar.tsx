@@ -9,7 +9,7 @@ type PrintStatus = "idle" | "preparing" | "failed";
 
 async function preparePrintAssets() {
   await Promise.all([
-    document.fonts.load("1em 'Pm Pretendard'"),
+    document.fonts.load("1em 'Pm Print Sans'"),
     document.fonts.ready,
   ]);
 

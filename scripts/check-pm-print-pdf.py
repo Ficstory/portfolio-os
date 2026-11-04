@@ -11,7 +11,8 @@ import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw
-from pypdf import PdfReader
+from pypdf import PdfReader, PdfWriter
+from pypdf.generic import RectangleObject
 
 output = Path(sys.argv[1] if len(sys.argv) > 1 else "output/pdf")
 qa = output / "qa"
@@ -24,8 +25,22 @@ for filename, prefix in [
     ("lee-jaeho-pm-portfolio-preview.pdf", "preview"),
 ]:
     pdf = output / filename
+    original = PdfReader(pdf)
+    writer = PdfWriter(clone_from=original)
+    target = (320 / 25.4 * 72, 180 / 25.4 * 72)
+    for page in writer.pages:
+        assert abs(float(page.mediabox.width) - target[0]) < 1
+        assert abs(float(page.mediabox.height) - target[1]) < 1
+        # Restore exact millimetres after Chromium pixel-grid rounding;
+        # preserve content positions and avoid stretching screenshots.
+        page.mediabox = RectangleObject([0, 0, *target])
+        page.cropbox = RectangleObject([0, 0, *target])
+    writer.add_metadata({"/Title": "이재호 PM 포트폴리오", "/Author": "이재호"})
+    temporary = pdf.with_suffix(".finalizing.pdf")
+    writer.write(temporary)
+    temporary.replace(pdf)
     reader = PdfReader(pdf)
-    assert len(reader.pages) == 13, f"{filename}: actual page count {len(reader.pages)} != 13"
+    assert len(reader.pages) == 14, f"{filename}: actual page count {len(reader.pages)} != 14"
     pages = []
     for index, page in enumerate(reader.pages, start=1):
         text = page.extract_text()
@@ -33,15 +48,19 @@ for filename, prefix in [
         assert "\ufffd" not in text, f"{filename}: replacement glyph on page {index}"
         assert abs(float(page.mediabox.width) - 320 / 25.4 * 72) < 1
         assert abs(float(page.mediabox.height) - 180 / 25.4 * 72) < 1
-        for unwanted in ["본문으로 건너뛰기", "머리글과 바닥글 해제", "PDF 저장·인쇄", "프로젝트 상세 보기"]:
+        for unwanted in ["본문으로 건너뛰기", "머리글과 바닥글 해제", "PDF 저장·인쇄", "프로젝트 상세 보기", "PM PORTFOLIO", "fixture", "Docker 부재", "서비스 전체 성능으로 일반화"]:
             assert unwanted not in text, f"{filename}: unwanted UI on page {index}: {unwanted}"
         pages.append({"page": index, "width_pt": float(page.mediabox.width), "height_pt": float(page.mediabox.height), "text": text})
     normalized = [re.sub(r"\s+", "", page["text"]) for page in pages]
-    assert all(token in "".join(normalized) for token in ["이재호", "168", "함세상", "PlayPick", "dlwo4367@gmail.com"])
+    assert all(token in "".join(normalized) for token in ["이재호", "168", "함세상", "J-OS", "dlwo4367@gmail.com"])
+    assert not any("PlayPick" in text for text in normalized)
+    assert all(f"{i:02d}/14" in text for i, text in enumerate(normalized, 1))
+    assert all(abs(float(page.mediabox.width) / float(page.mediabox.height) - 16/9) < 0.000001 for page in reader.pages)
+    assert pdf.stat().st_size < 100_000_000
     texts.append(normalized)
     subprocess.run(["pdftoppm", "-r", "120", "-png", str(pdf), str(qa / prefix)], check=True)
-    rendered = sorted(qa.glob(f"{prefix}-*.png"))
-    assert len(rendered) == 13, f"expected 13 rendered pages for {filename}"
+    rendered = [qa / f"{prefix}-{i:02d}.png" for i in range(1, len(reader.pages) + 1)]
+    assert len(rendered) == 14, f"expected 14 rendered pages for {filename}"
     hashes = []
     for image_path in rendered:
         with Image.open(image_path) as image:
@@ -49,7 +68,7 @@ for filename, prefix in [
     pixels.append(hashes)
     report["pdfs"].append({"file": str(pdf), "page_count": len(pages), "pages": pages, "rendered_pages": [str(item) for item in rendered]})
     if prefix == "main":
-        for start in range(0, 13, 4):
+        for start in range(0, 14, 4):
             subset = rendered[start:start + 4]
             sheet = Image.new("RGB", (1600, ((len(subset) + 1) // 2) * 482), "#dededb")
             draw = ImageDraw.Draw(sheet)
@@ -65,4 +84,4 @@ report["identical_renderings"] = pixels[0] == pixels[1]
 assert report["identical_text"], "main and preview PDF page text differs"
 assert report["identical_renderings"], "main and preview PDF page renderings differ"
 (qa / "pdf-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-print("PASS: two complete 13-page PDFs; 320 x 180 mm; searchable Korean text; identical text and rendered pixels; all 26 pages rendered.")
+print("PASS: two complete 14-page PDFs; 320 x 180 mm; searchable Korean text; identical text and rendered pixels; all 28 pages rendered.")

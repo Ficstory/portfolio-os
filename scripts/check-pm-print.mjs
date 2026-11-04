@@ -22,11 +22,11 @@ const check = (condition, label) => { assert.ok(condition, label); report.checks
 const normalize = (text) => text.replace(/\s+/g, " ").trim();
 // The authorized resume edit removed this exact GPA suffix; keep every other baseline character strict.
 const normalizeBaselineText = (text) => normalize(text).replace(" · 평점 3.74/4.5", "");
-const expected = [null, "부산이음길", "부산이음길", "부산이음길", "애낌", "애낌", "애낌", "웃지마게임", "웃지마게임", "웃지마게임", "Play Pick", "Play Pick", null];
+const expected = [null, "J-OS", "J-OS", "J-OS", "부산이음길", "부산이음길", "부산이음길", "애낌", "애낌", "애낌", "웃지마게임", "웃지마게임", "웃지마게임", null];
 async function ready(page) {
   await page.evaluate(async () => {
     await document.fonts.ready;
-    await document.fonts.load('500 20px "Pm Pretendard"');
+    await document.fonts.load('500 20px "Pm Print Sans"');
     await Promise.all([...document.querySelectorAll("[data-pm-print] img")].map(image => image.decode()));
   });
 }
@@ -38,7 +38,7 @@ try {
     const response = await page.goto(new URL(route, origin).href, { waitUntil: "networkidle" });
     check(response.status() === 200, `${route}: direct HTTP 200`);
     const source = await response.text();
-    check((source.match(/data-pm-slide(?:=|\s|>)/g) || []).length === 13, `${route}: all 13 slides server-rendered`);
+    check((source.match(/data-pm-slide(?:=|\s|>)/g) || []).length === 14, `${route}: all 14 slides server-rendered`);
     await ready(page);
     check(await page.evaluate(() => window.scrollY === 0), `${route}: print prepared without scrolling`);
     if (route === "/PM/") {
@@ -76,14 +76,16 @@ try {
         bodyFonts: [...slide.querySelectorAll("p,li,dd,td")].map(element => ({text: element.textContent.slice(0, 60), size: parseFloat(getComputedStyle(element).fontSize)})) };
     }));
     report.routes.push({ route, slides });
-    check(slides.length === 13, `${route}: 13 DOM slides`);
-    const busanText = normalize(slides.slice(1, 4).map(slide => slide.text).join(" "));
-    const aekkimText = normalize(slides.slice(4, 7).map(slide => slide.text).join(" "));
+    check(slides.length === 14, `${route}: 14 DOM slides`);
+    check(!slides.some(slide => slide.text.includes("Play Pick")), `${route}: Play Pick removed from print deck`);
+    check(slides[9].images[0].src === "/pm-improved/evidence/aekkim-candidate-list-demo.png", `${route}: former page 7 uses populated candidate-list capture`);
+    const busanText = normalize(slides.slice(4, 7).map(slide => slide.text).join(" "));
+    const aekkimText = normalize(slides.slice(7, 10).map(slide => slide.text).join(" "));
     check(busanText.includes("애자일") && busanText.includes("본인 문서 변경 커밋") && /29\s*건/.test(busanText) && busanText.includes("Docs/ 기준"), `${route}: Busan agile documentation and verified commit count`);
-    check(["워터폴", "팀원 이탈", "MVP", "예상", "개발 방식"].every(text => aekkimText.includes(text)), `${route}: Aekkim process change and retrospective included`);
-    check(slides[4].images.length > 0 && slides[6].images.length > 0 && [...slides[4].images, ...slides[6].images].every(image => image.src !== "/pm/previews/aekkim.webp"), `${route}: Aekkim uses existing still captures instead of the video poster`);
-    check(slides[4].images[0].src !== slides[6].images[0].src, `${route}: Aekkim overview and contribution use distinct matching captures`);
-    check([slides[1], slides[4]].every(slide => slide.images.length === 2 && new Set(slide.images.map(image => image.src)).size === 2), `${route}: Busan and Aekkim introductions each show two distinct captures`);
+    check(["워터폴", "MVP", "개발 방식"].every(text => aekkimText.includes(text)), `${route}: Aekkim process change and retrospective included`);
+    check(slides[7].images.length > 0 && slides[9].images.length > 0 && [...slides[7].images, ...slides[9].images].every(image => image.src !== "/pm/previews/aekkim.webp"), `${route}: Aekkim uses existing still captures instead of the video poster`);
+    check(slides[7].images[0].src !== slides[9].images[0].src, `${route}: Aekkim overview and contribution use distinct matching captures`);
+    check([slides[4], slides[7]].every(slide => slide.images.length === 2 && new Set(slide.images.map(image => image.src)).size === 2), `${route}: Busan and Aekkim introductions each show two distinct captures`);
     for (const [index, slide] of slides.entries()) {
       check(!expected[index] || slide.text.includes(expected[index]), `${route}: project order on page ${index+1}`);
       check(Math.abs(slide.width - 320 / 25.4 * 96) < 1 && Math.abs(slide.height - 180 / 25.4 * 96) < 1, `${route}: page ${index+1} is 320 × 180 mm`);

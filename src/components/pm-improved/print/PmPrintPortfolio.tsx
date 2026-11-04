@@ -7,8 +7,9 @@ import { profile } from "@/data/profile";
 import { pmMedia, selectedProjects, survey, type PmProject } from "../content";
 import { career, education, skills } from "../resume-content";
 import styles from "./PmPrintPortfolio.module.css";
+import { agentSlides } from "./PmPrintAgentSlides";
 
-type PrintSlide = {
+export type PrintSlide = {
   id: string;
   eyebrow: string;
   title: ReactNode;
@@ -87,11 +88,11 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
   const smile = getProject("smile-game");
   const aekkim = getProject("aekkim");
   const busan = getProject("busan-eumgil");
-  const playPick = getProject("play-pick");
   const burdenCount = survey.responses[0].count + survey.responses[1].count;
   const burdenPercent = ((burdenCount / survey.total) * 100).toFixed(1);
 
   const slides: PrintSlide[] = [
+    ...agentSlides,
     {
       id: "pm-print-cover",
       eyebrow: "Product manager portfolio · 2026",
@@ -116,7 +117,7 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
     },
     {
       id: "pm-print-smile-intro",
-      eyebrow: "Project 03 · 실시간 화상 게임",
+      eyebrow: "Project 04 · 실시간 화상 게임",
       title: smile.name,
       className: styles.projectIntro,
       content: (
@@ -191,7 +192,7 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
     },
     {
       id: "pm-print-aekkim-intro",
-      eyebrow: "Project 02 · Android 구독 관리 앱",
+      eyebrow: "Project 03 · Android 구독 관리 앱",
       title: aekkim.name,
       className: styles.projectIntro,
       content: (
@@ -240,7 +241,7 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
       title: "후보 확인 UI와 제외·중복·남은 건수 표시를 수정했습니다.",
       content: (
         <div className={styles.interfaceGrid}>
-          <EvidenceImage phone src={pmMedia.evidence.aekkimCandidateReview} alt="확인이 필요한 결제 묶음과 서비스 선택·제거 버튼" width={1080} height={2340} caption="후보 확인·제외 화면 캡처 · 예시 데이터" />
+          <EvidenceImage phone src="/pm-improved/evidence/aekkim-candidate-list-demo.png" alt="여러 구독 후보, 구독 아님 버튼, 확인이 필요한 결제 1건과 확인완료 버튼" width={1080} height={2340} caption="후보·미해결 결제 확인 · 예시 데이터 앱 시연" />
           <ol className={styles.numberedEvidence}>
             <li><span>01</span><div><strong>초기 확인 UI</strong><p>분석 결과가 없을 때의 안내와 후보 목록의 기본 화면을 구현했습니다.</p></div></li>
             <li><span>02</span><div><strong>제외 상태</strong><p>사용자가 고른 제외 상태를 화면에 반영하고 남은 후보를 구분했습니다.</p></div></li>
@@ -252,7 +253,7 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
     },
     {
       id: "pm-print-busan-intro",
-      eyebrow: "Project 01 · 보행약자 길안내 앱",
+      eyebrow: "Project 02 · 보행약자 길안내 앱",
       title: busan.name,
       className: styles.projectIntro,
       content: (
@@ -309,48 +310,6 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
       ),
     },
     {
-      id: "pm-print-play-pick-intro",
-      eyebrow: "Project 04 · 공연 추천 웹 서비스",
-      title: playPick.name,
-      className: styles.projectIntro,
-      content: (
-        <div className={styles.introGrid}>
-          <div className={styles.introCopy}>
-            <p className={styles.lead}>{playPick.headline}</p>
-            <p>{playPick.subtitle}</p>
-            <section className={styles.problemBox} aria-label="온보딩의 역할">
-              <span>ONBOARDING ROLE</span>
-              <p>이용 기록이 없는 신규 사용자의 첫 추천에 활용할 취향 정보를 가입 직후 수집합니다.</p>
-            </section>
-            <ProjectMeta project={playPick} />
-          </div>
-          <EvidenceImage src={pmMedia.previews["play-pick"].poster} alt="Play Pick 공연 취향 온보딩 화면" width={960} height={720} caption="서비스 화면 재현 데모 · 예시 데이터 사용" />
-        </div>
-      ),
-    },
-    {
-      id: "pm-print-play-pick-flow",
-      eyebrow: "Play Pick · 핵심 기여",
-      title: "선택의 의미를 지키며 저장 성공 뒤에만 추천으로 이동했습니다.",
-      content: (
-        <div className={styles.playFlowLayout}>
-          <dl className={styles.choiceRules}>
-            <div><dt>보고싶어요</dt><dd>호감 응답으로 저장</dd></div>
-            <div><dt>안볼래요</dt><dd>비호감 응답으로 저장</dd></div>
-            <div><dt>모르겠어요</dt><dd>판단 보류 · 저장과 완료 개수에서 제외</dd></div>
-          </dl>
-          <ol className={styles.pipeline} aria-label="온보딩 저장과 완료 흐름">
-            <li><span>01</span><strong>선택</strong><p>호감·비호감 유효 응답을 8개 이상 수집</p></li>
-            <li><span>02</span><strong>저장</strong><p>공연 ID와 응답 값을 서버 요청으로 전달</p></li>
-            <li><span>03</span><strong>완료</strong><p>저장 성공 뒤 온보딩 완료 처리</p></li>
-            <li><span>04</span><strong>추천 이동</strong><p>저장된 취향을 첫 추천에 연결</p></li>
-          </ol>
-          <div className={styles.failureRule}><strong>저장 결과에 따른 화면 상태</strong><p>저장 성공 후에 온보딩을 완료하고 추천 화면으로 이동합니다. 저장 오류 때는 현재 화면을 유지합니다.</p></div>
-          <RoleSplit mine="팀장 · 온보딩 화면·프론트엔드, API, 사용자 선호 저장 처리" team={playPick.teamRole ?? "핵심 검색·추천 엔진 개발"} />
-        </div>
-      ),
-    },
-    {
       id: "pm-print-experience-contact",
       eyebrow: "Experience · Education · Contact",
       title: "분석 실무를 제품의 요구사항과 구현 기준으로 확장했습니다.",
@@ -385,6 +344,9 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
 
   const orderedSlideIds = [
     "pm-print-cover",
+    "pm-print-jos-intro",
+    "pm-print-jos-memory",
+    "pm-print-jos-execution",
     "pm-print-busan-intro",
     "pm-print-busan-planning",
     "pm-print-busan-map",
@@ -394,8 +356,6 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
     "pm-print-smile-intro",
     "pm-print-smile-research",
     "pm-print-smile-delivery",
-    "pm-print-play-pick-intro",
-    "pm-print-play-pick-flow",
     "pm-print-experience-contact",
   ] as const;
   const orderedSlides = orderedSlideIds.map((id) => {
@@ -415,6 +375,13 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
       <div className={styles.deck}>
         {orderedSlides.map((slide, index) => {
           const titleId = `${slide.id}-title`;
+          const projectNumber = slide.id.startsWith("pm-print-jos-") ? "01"
+            : slide.id.startsWith("pm-print-busan-") ? "02"
+            : slide.id.startsWith("pm-print-aekkim-") ? "03"
+            : slide.id.startsWith("pm-print-smile-") ? "04" : null;
+          const projectLabel = projectNumber ? `Project ${projectNumber}` : null;
+          const headerLabel = projectLabel && !slide.eyebrow.startsWith(projectLabel)
+            ? `${projectLabel} · ${slide.eyebrow}` : slide.eyebrow;
           return (
             <article
               className={`${styles.page} ${slide.className ?? ""}`}
@@ -424,13 +391,12 @@ export function PmPrintPortfolio({ preview = false }: { preview?: boolean }) {
               aria-labelledby={titleId}
             >
               <header className={styles.pageHeader}>
-                <p>{slide.eyebrow}</p>
-                <span>LEE JAEHO · PM PORTFOLIO</span>
+                <p>{headerLabel}</p>
               </header>
               <h2 id={titleId}>{slide.title}</h2>
               <div className={styles.pageContent} data-pm-slide-content="">{slide.content}</div>
               <footer className={styles.pageFooter}>
-                <span>{slide.eyebrow.split(" · ")[0]}</span>
+                <span>{projectLabel ?? slide.eyebrow.split(" · ")[0]}</span>
                 <span>{String(index + 1).padStart(2, "0")}/{String(total).padStart(2, "0")}</span>
               </footer>
             </article>

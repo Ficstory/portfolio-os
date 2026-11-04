@@ -1,3 +1,11 @@
+/* Same licensed typeface, subset for reliable PDF numeral extraction. */
+@font-face {
+  font-family: "Pm Print Sans";
+  src: url("/pm/fonts/PmPrintSans.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 @page pm-portfolio {
   size: 320mm 180mm;
   margin: 0;
@@ -16,7 +24,7 @@
   display: none;
   color: var(--print-ink);
   background: #d7d6d1;
-  font-family: "Pm Pretendard", Pretendard, "Malgun Gothic", sans-serif;
+  font-family: "Pm Print Sans", "Pm Pretendard", Pretendard, "Malgun Gothic", sans-serif;
   font-size: var(--print-body);
   line-height: 1.52;
   word-break: keep-all;
