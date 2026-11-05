@@ -1,0 +1,32 @@
+/* Web additions only; typography, spacing and video visuals reuse PM CSS. */
+@font-face { font-family:"AX Portfolio Sans"; src:url("/ax/fonts/AxPortfolioSans.woff2") format("woff2"); font-weight:100 900; font-style:normal; font-display:swap; }
+.shell.shell { font-family:"AX Portfolio Sans","Malgun Gothic",sans-serif; }
+.josVisual { display:grid; grid-template-columns:.8fr 1.65fr; gap:45px; align-items:center; min-height:510px; background:#eeede7; padding:48px; }
+.josStatement>p { font-size:42px; line-height:1.35; letter-spacing:-.05em; font-weight:550; }
+.josStatement em { color:#2457ff; font-style:normal; }
+.josStatement>span:last-child { display:block; margin-top:26px; color:#666; font-size:13px; }
+.josVisual>a { min-width:0; }
+.josVisual img { width:100%; height:auto; display:block; border:1px solid #d8d6d0; }
+.supporting { padding:65px 0 90px; border-top:1px solid #d8d6d0; display:grid; grid-template-columns:1fr 2fr; gap:60px; }
+.supporting h2 { font-size:24px; font-weight:550; letter-spacing:-.04em; }
+.supporting>div { display:grid; gap:30px; }
+.supporting a { display:grid; grid-template-columns:1fr auto; gap:10px; border-bottom:1px solid #d8d6d0; padding-bottom:28px; }
+.supporting a>span { grid-column:1/-1; color:#666; font-size:13px; }
+.supporting strong { font-size:24px; line-height:1.5; font-weight:550; letter-spacing:-.03em; }
+.supporting a:hover { color:#2457ff; }
+.metric { padding:32px 0; margin:28px 0; border-block:1px solid #d8d6d0; }
+.metric>strong { display:block; font-size:86px; line-height:1.15; color:#2457ff; letter-spacing:-.055em; font-weight:600; font-variant-numeric:tabular-nums; }
+.metric strong small { font-size:30px; color:#666; }
+.metric p { margin-top:16px!important; color:#666; font-size:15px; }
+.architecture { margin:32px 0!important; display:grid; gap:0; border-top:1px solid #171717; }
+.architecture li { display:grid; grid-template-columns:30px 1fr; gap:15px; padding:20px 0; border-bottom:1px solid #d8d6d0; }
+.architecture li>span { font-size:12px; color:#2457ff; padding-top:4px; }
+.architecture strong { font-size:18px; font-weight:550; }
+.architecture p { font-size:15px; color:#666; margin-top:5px!important; }
+.screen { margin:30px 0!important; }
+.screen img { display:block; width:100%; height:auto; border:1px solid #d8d6d0; }
+.routeVideo { width:100%; max-width:300px; display:block; margin:28px auto 0; border:1px solid #d8d6d0; border-radius:20px; background:#eeede7; }
+.evidence { border-top:1px solid #d8d6d0; padding-top:24px; margin-top:35px; }
+.evidence p { font-size:13px!important; color:#666; }
+@media (max-width:1100px) { .josVisual { padding:35px; gap:25px; min-height:450px; } .josStatement>p { font-size:34px; } }
+@media (max-width:767px) { .josVisual { grid-template-columns:1fr; min-height:0; padding:30px 24px; gap:30px; } .josStatement>p { font-size:30px; } .josStatement>span:last-child { margin-top:18px; } .supporting { grid-template-columns:1fr; padding:42px 0 56px; gap:28px; } .supporting strong { font-size:21px; } .metric>strong { font-size:66px; } .metric strong small { font-size:24px; } }

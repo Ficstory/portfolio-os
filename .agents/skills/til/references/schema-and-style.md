@@ -10,7 +10,7 @@ The filename must equal `<slug>.md`. Use lowercase ASCII letters, numbers, and s
 
 ## Frontmatter
 
-Every key is required except `session` and `isDemo` (defaults to `false`):
+Every listed key is required except `session`, `isDemo` (defaults to `false`), and `format` (defaults to the existing `reflection` format):
 
 - `id`: stable unique ID
 - `slug`: stable unique URL selector
@@ -19,24 +19,35 @@ Every key is required except `session` and `isDemo` (defaults to `false`):
 - `updatedAt`: actual latest content or lifecycle change time in the same KST format; it cannot precede `createdAt`
 - `session`: optional program/session label
 - `category`: an ID from `content/til/config.json`
-- `title`: concise learning outcome
-- `summary`: one-sentence observation and consequence
+- `title`: the experience or question at the center of the entry
+- `summary`: a short introduction in the same voice as the body
 - `status`: `draft` in drafts, `published` in published
 - `isDemo`: `true` only for explicitly fictional/sample material; otherwise `false`
+- `format`: `journal` for new blog-style entries; `reflection` or omitted for existing structured entries
 
 Do not add unknown frontmatter keys.
 
 `date` describes when the learning happened. `createdAt` and `updatedAt` describe when this Markdown record was written and changed. Preserve `createdAt` on corrections and supplements, and set `updatedAt` to the actual current KST time whenever content changes. Publish and unpublish commands update `updatedAt` automatically.
 
-## Required sections
+## Body formats
 
-Keep these headings exactly once and in this order: `오늘 배운 것`, `직접 시도한 것`, `막혔던 지점`, `새롭게 이해한 것`, `다음 액션`, `관련 역량`, `관련 자료`.
+### Journal — default for new entries
 
-The first four sections accept ordinary Markdown bullets or plain paragraphs and the media items below. `관련 역량` remains ordinary bullets. Actions use `- [ ] action-id | text` or `- [x] action-id | text`. Resources use `- type | resource-id | [title](href) | optional description`, where type is `project`, `document`, `github`, or `til`. Leave an empty resources section as `<!-- 없음 -->`. Related TIL links use `/til/future-dream/?entry=<slug>` and must resolve.
+Set `format: journal`. Write a non-empty narrative directly after frontmatter. No fixed body headings are required. Optional `##` subheadings use the author's own wording and appear in their original order. A short opening paragraph can precede the first heading. Keep each paragraph on one source line and separate paragraphs with blank lines. Supported body blocks are plain paragraphs, media, and attached prompt fences; general rich Markdown, arbitrary embeds, and HTML are not added by this format.
+
+If useful, append any of `## 다음 액션`, `## 관련 역량`, and `## 관련 자료` after the narrative. These three names are reserved for structured end matter; do not use them as free-form story headings. They are optional and need not be added to fill a checklist. Do not resume the narrative after end matter. Supplied actions and skills must be non-empty; omit unused sections. The reader shows journal actions as `다음에 해볼 것`.
+
+### Reflection — compatibility for existing entries
+
+Existing entries without `format` retain the seven headings: `오늘 배운 것`, `직접 시도한 것`, `막혔던 지점`, `새롭게 이해한 것`, `다음 액션`, `관련 역량`, `관련 자료`. Keep them exactly once in that order. The first four accept paragraphs, Markdown bullets, and the media syntax below. Do not split a new journal into these fields merely to imitate old posts.
+
+### End matter in either format
+
+`관련 역량` accepts ordinary bullets. Actions use `- [ ] action-id | text` or `- [x] action-id | text`. Resources use `- type | resource-id | [title](href) | optional description`, where type is `project`, `document`, `github`, or `til`. Leave an empty resources section as `<!-- 없음 -->` or omit it in a journal. Related TIL links use `/til/future-dream/?entry=<slug>` and must resolve.
 
 ## Ordered paragraphs and media
 
-Write text and media in reading order within one of the first four sections. Each text line is one paragraph; blank lines separate them for editing. Existing bullet-only records remain valid without migration. A media-containing section produces ordered `blocks`; the reader uses these instead of also printing the legacy text array. Search includes text, image alt text, video titles, and captions.
+Write text and media in reading order in the journal body or a reflection's first four sections. Each text line is one paragraph; blank lines separate them for editing. Existing bullet-only records remain valid without migration. The reader renders ordered journal blocks or the reflection's media-containing `blocks` without duplicating text. Search includes journal headings and text, media titles, alt text, captions, and prompts.
 
 For an entry whose slug is `learning-note`:
 
@@ -93,7 +104,8 @@ Local images/videos use `/til/media/<this-entry-slug>/<filename>` only. External
 
 ## Conversational capture
 
+- Follow [writing-guide.md](writing-guide.md) for the default first-person voice and flexible narrative.
 - Preserve concrete facts, uncertainty, and the user's wording; do not invent achievements, metrics, links, or identities.
-- Separate observation from interpretation. Make the next action small and verifiable.
+- Separate observation from interpretation. Include a next action only when it belongs to this account.
 - Before adding a new record, search both content directories for the date, slug, topic, and distinctive phrases. When the user is supplementing or correcting an existing record, patch that file in place and preserve stable IDs.
-- Treat personal, employer, customer, participant, account, credential, and non-public project details as potentially public. Ask the user to generalize or omit them before publication.
+- Handle non-public personal or work details in the reviewed public copy. Generalize or omit irrelevant details; ask only when that choice would materially change the account or public disclosure is unclear.

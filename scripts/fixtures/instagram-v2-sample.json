@@ -1,0 +1,31 @@
+{
+  "dateKst": "2026-08-22",
+  "timeKst": "04:30",
+  "runId": "fixture-20260822-0430",
+  "results": [
+    {
+      "name": "강득구",
+      "handle": "deukgu_kang",
+      "url": "https://www.instagram.com/deukgu_kang/",
+      "status": "확인됨",
+      "contentCheckStatus": "확인됨",
+      "followers": { "raw": "6,435", "exact": 6435, "quality": "정확 공개값" },
+      "following": { "raw": "1,675", "exact": 1675, "quality": "정확 공개값" },
+      "activeStory": "확인 불가",
+      "contents": [
+        {
+          "shortcode": "DcIbQ1jRAzu",
+          "kind": "릴스",
+          "url": "https://www.instagram.com/deukgu_kang/reel/DcIbQ1jRAzu/",
+          "publishedDateKst": "2026-08-15",
+          "publishedTimeKst": "10:20",
+          "caption": "검증용 공개 콘텐츠",
+          "likes": { "raw": "124", "exact": 124, "quality": "정확 공개값" },
+          "comments": { "raw": "8", "exact": 8, "quality": "정확 공개값" },
+          "plays": { "raw": "1.2K", "quality": "반올림 공개값" },
+          "note": "검증용 입력"
+        }
+      ]
+    }
+  ]
+}

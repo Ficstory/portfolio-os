@@ -1,0 +1,27 @@
+{
+  "play10-onboarding-card-crop.png": {
+    "source": "assets/play10-onboarding-start.png",
+    "crop": [
+      500,
+      120,
+      1100,
+      1160
+    ],
+    "warning": "0/8 progress remains visible in original; crop shows three response actions only"
+  },
+  "busan9-marker-change-log.png": {
+    "source": "sources/busan-marker-log-verbatim.txt",
+    "method": "verbatim git subject rendered; emoji omitted; line wrapping only",
+    "no_behavior_validation": true
+  },
+  "play10-first-recommendations-crop.png": {
+    "source": "assets/play10-first-recommendations.png",
+    "crop": [
+      170,
+      225,
+      1450,
+      1090
+    ],
+    "method": "Original recommendation heading, five cards and recommendation button retained; outer margins removed"
+  }
+}

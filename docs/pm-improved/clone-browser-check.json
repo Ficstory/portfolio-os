@@ -1,0 +1,52 @@
+{
+  "note": "Raw main.textContent includes CSS-hidden responsive descriptions; playback button label normalized. Each of 5 pages retains all main links after normalizing only /PM/ to /pm/.",
+  "results": [
+    {
+      "path": "/PM/",
+      "allContentEqual": true
+    },
+    {
+      "path": "/PM/smile-game/",
+      "allContentEqual": true
+    },
+    {
+      "path": "/PM/aekkim/",
+      "allContentEqual": true
+    },
+    {
+      "path": "/PM/busan-eumgil/",
+      "allContentEqual": true
+    },
+    {
+      "path": "/PM/play-pick/",
+      "allContentEqual": true
+    }
+  ],
+  "linkComparisons": [
+    {
+      "path": "/PM/",
+      "linksEqual": true,
+      "canonical": "https://ficstory.dev/PM/"
+    },
+    {
+      "path": "/PM/smile-game/",
+      "linksEqual": true,
+      "canonical": "https://ficstory.dev/PM/smile-game/"
+    },
+    {
+      "path": "/PM/aekkim/",
+      "linksEqual": true,
+      "canonical": "https://ficstory.dev/PM/aekkim/"
+    },
+    {
+      "path": "/PM/busan-eumgil/",
+      "linksEqual": true,
+      "canonical": "https://ficstory.dev/PM/busan-eumgil/"
+    },
+    {
+      "path": "/PM/play-pick/",
+      "linksEqual": true,
+      "canonical": "https://ficstory.dev/PM/play-pick/"
+    }
+  ]
+}

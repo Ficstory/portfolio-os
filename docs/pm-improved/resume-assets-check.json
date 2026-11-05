@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-14T10:45:09.415Z",
+  "results": [
+    {
+      "format": "pdf",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 251664,
+      "sha256": "752606b191a91137610c2e4fd4fea96a66491e6cd295316c502b2fdcc3c81af9"
+    },
+    {
+      "format": "docx",
+      "status": 200,
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "bytes": 1573220,
+      "sha256": "b70a77de0a979d579b2170f228d712940a4638703f0ea97aac67f8a04da46195"
+    }
+  ]
+}

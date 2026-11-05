@@ -1,0 +1,41 @@
+{
+  "baselineFormat": 1,
+  "capturedAt": "2026-09-14T09:50:36.1800270Z",
+  "gitHead": "bd1904b45555e47fc0b91bb208c6d17e58b8f4f3",
+  "gitStatusPorcelain": [
+    " M next-env.d.ts",
+    "?? docs/2026-06-09_acctual_pm_portfolio_application_plan.md",
+    "?? docs/2026-06-09_daydream_public_digital_application_plan.md",
+    "?? docs/2026-06-09_pm_portfolio_work_prompt.md",
+    "?? docs/2026-06-09_public_digital_implementation_prompt.md",
+    "?? docs/2026-09-14-pm1-portfolio-prompt-reviewed.md",
+    "?? docs/pm1-assets/",
+    "?? docs/pm1-fix-2026-09-14.md",
+    "?? docs/pm1-implementation.md",
+    "?? \"docs/\\355\\206\\265\\352\\263\\204/\"",
+    "?? electioncommon.js",
+    "?? scripts/apply-instagram-browser-results.mjs",
+    "?? scripts/apply-instagram-public-results-v2.mjs",
+    "?? scripts/build-instagram-tracker.mjs",
+    "?? scripts/collect-instagram-public-v2.mjs",
+    "?? scripts/collect-instagram-public.mjs",
+    "?? scripts/collect-youtube-daily.mjs",
+    "?? scripts/fixtures/",
+    "?? scripts/prepare-instagram-browser-collection.mjs",
+    "?? scripts/rebuild-instagram-tracker-v2.mjs",
+    "?? src/components/tracks/PublicDigitalMethodSection.tsx",
+    "?? src/components/tracks/pm/PmArtifactStack.tsx",
+    "?? src/components/tracks/pm/PmComparisonTable.tsx",
+    "?? src/components/tracks/pm/PmLandingPage.tsx",
+    "?? src/components/tracks/pm/pmLandingContent.ts"
+  ],
+  "hashing": {
+    "algorithm": "SHA-256",
+    "perFileRecordFormat": "path + tab + lowercase SHA-256 + LF, sorted by path",
+    "coveredPathSets": ["rg --files src public", "next.config.ts", "package.json", "package-lock.json", "tsconfig.json", "next-env.d.ts"],
+    "coveredFileCount": 168,
+    "perFileRecordsFile": "docs/pm-improved/baseline-files.tsv",
+    "perFileRecordsSha256": "2dcfe119f5abd6b41d939c67d19002ed95f653a7db74c4cd33df58144e01129f",
+    "nextEnvPreDevBackup": ".codex_tmp/pm-improved/next-env.d.ts.before"
+  }
+}

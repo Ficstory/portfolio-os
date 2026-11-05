@@ -1,0 +1,550 @@
+[
+  {
+    "badImages": [],
+    "clientWidth": 1425,
+    "fontLoaded": false,
+    "h1": "조사 결과를 요구사항으로 정리하고,화면과 API까지 연결하는 PM",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1447,
+        "tag": "P",
+        "text": "기존 앱 UI를 예시 데이터로 실행한 오프라인 시연. 결제 후보를 확인해 서비스에 연결한 "
+      },
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1769,
+        "tag": "P",
+        "text": "원본 온보딩 화면을 로컬에서 실행한 시연. 보고싶어요, 모르겠어요, 안볼래요를 선택하고 호"
+      }
+    ],
+    "path": "/PM/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/aekkim.mp4"
+      },
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/play-pick.mp4"
+      }
+    ],
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "badImages": [],
+    "clientWidth": 1425,
+    "fontLoaded": true,
+    "h1": "웃지마게임",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1386,
+        "tag": "P",
+        "text": "팀 서비스의 랜덤 매칭 원본 녹화에서 대기 구간을 줄인 편집본입니다. 준비부터 웃음 판정과"
+      }
+    ],
+    "path": "/PM/smile-game/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/smile.mp4"
+      }
+    ],
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "badImages": [],
+    "clientWidth": 1425,
+    "fontLoaded": true,
+    "h1": "AEKKIM",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1232,
+        "tag": "P",
+        "text": "기존 앱 UI를 예시 데이터로 실행한 오프라인 시연. 결제 후보를 확인해 서비스에 연결한 "
+      }
+    ],
+    "path": "/PM/aekkim/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/aekkim.mp4"
+      }
+    ],
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "badImages": [],
+    "clientWidth": 1425,
+    "fontLoaded": true,
+    "h1": "부산이음길",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1196,
+        "tag": "P",
+        "text": "원본 온보딩 시연. 사용자 유형과 보행 조건을 고르는 흐름입니다. 지도 화면의 승인 제보 "
+      }
+    ],
+    "path": "/PM/busan-eumgil/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/busan.mp4"
+      }
+    ],
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "badImages": [],
+    "clientWidth": 1425,
+    "fontLoaded": true,
+    "h1": "Play Pick",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1512,
+        "tag": "P",
+        "text": "원본 온보딩 화면을 로컬에서 실행한 시연. 보고싶어요, 모르겠어요, 안볼래요를 선택하고 호"
+      }
+    ],
+    "path": "/PM/play-pick/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/play-pick.mp4"
+      }
+    ],
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "badImages": [],
+    "clientWidth": 753,
+    "fontLoaded": true,
+    "h1": "조사 결과를 요구사항으로 정리하고,화면과 API까지 연결하는 PM",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1232,
+        "tag": "P",
+        "text": "기존 앱 UI를 예시 데이터로 실행한 오프라인 시연. 결제 후보를 확인해 서비스에 연결한 "
+      },
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1512,
+        "tag": "P",
+        "text": "원본 온보딩 화면을 로컬에서 실행한 시연. 보고싶어요, 모르겠어요, 안볼래요를 선택하고 호"
+      }
+    ],
+    "path": "/PM/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/aekkim.mp4"
+      },
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/play-pick.mp4"
+      }
+    ],
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "badImages": [],
+    "clientWidth": 753,
+    "fontLoaded": true,
+    "h1": "웃지마게임",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1386,
+        "tag": "P",
+        "text": "팀 서비스의 랜덤 매칭 원본 녹화에서 대기 구간을 줄인 편집본입니다. 준비부터 웃음 판정과"
+      }
+    ],
+    "path": "/PM/smile-game/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/smile.mp4"
+      }
+    ],
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "badImages": [],
+    "clientWidth": 753,
+    "fontLoaded": true,
+    "h1": "AEKKIM",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1232,
+        "tag": "P",
+        "text": "기존 앱 UI를 예시 데이터로 실행한 오프라인 시연. 결제 후보를 확인해 서비스에 연결한 "
+      }
+    ],
+    "path": "/PM/aekkim/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/aekkim.mp4"
+      }
+    ],
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "badImages": [],
+    "clientWidth": 753,
+    "fontLoaded": true,
+    "h1": "부산이음길",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1196,
+        "tag": "P",
+        "text": "원본 온보딩 시연. 사용자 유형과 보행 조건을 고르는 흐름입니다. 지도 화면의 승인 제보 "
+      }
+    ],
+    "path": "/PM/busan-eumgil/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/busan.mp4"
+      }
+    ],
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "badImages": [],
+    "clientWidth": 753,
+    "fontLoaded": true,
+    "h1": "Play Pick",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1512,
+        "tag": "P",
+        "text": "원본 온보딩 화면을 로컬에서 실행한 시연. 보고싶어요, 모르겠어요, 안볼래요를 선택하고 호"
+      }
+    ],
+    "path": "/PM/play-pick/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/play-pick.mp4"
+      }
+    ],
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "badImages": [],
+    "clientWidth": 375,
+    "fontLoaded": true,
+    "h1": "조사 결과를 요구사항으로 정리하고,화면과 API까지 연결하는 PM",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1159,
+        "tag": "P",
+        "text": "기존 앱 UI를 예시 데이터로 실행한 오프라인 시연. 결제 후보를 확인해 서비스에 연결한 "
+      },
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1423,
+        "tag": "P",
+        "text": "원본 온보딩 화면을 로컬에서 실행한 시연. 보고싶어요, 모르겠어요, 안볼래요를 선택하고 호"
+      }
+    ],
+    "path": "/PM/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/aekkim.mp4"
+      },
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/play-pick.mp4"
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "badImages": [],
+    "clientWidth": 375,
+    "fontLoaded": true,
+    "h1": "웃지마게임",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1304,
+        "tag": "P",
+        "text": "팀 서비스의 랜덤 매칭 원본 녹화에서 대기 구간을 줄인 편집본입니다. 준비부터 웃음 판정과"
+      }
+    ],
+    "path": "/PM/smile-game/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/smile.mp4"
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "badImages": [],
+    "clientWidth": 375,
+    "fontLoaded": true,
+    "h1": "AEKKIM",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1159,
+        "tag": "P",
+        "text": "기존 앱 UI를 예시 데이터로 실행한 오프라인 시연. 결제 후보를 확인해 서비스에 연결한 "
+      }
+    ],
+    "path": "/PM/aekkim/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/aekkim.mp4"
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "badImages": [],
+    "clientWidth": 375,
+    "fontLoaded": true,
+    "h1": "부산이음길",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1126,
+        "tag": "P",
+        "text": "원본 온보딩 시연. 사용자 유형과 보행 조건을 고르는 흐름입니다. 지도 화면의 승인 제보 "
+      }
+    ],
+    "path": "/PM/busan-eumgil/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/busan.mp4"
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "badImages": [],
+    "clientWidth": 375,
+    "fontLoaded": true,
+    "h1": "Play Pick",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1423,
+        "tag": "P",
+        "text": "원본 온보딩 화면을 로컬에서 실행한 시연. 보고싶어요, 모르겠어요, 안볼래요를 선택하고 호"
+      }
+    ],
+    "path": "/PM/play-pick/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/play-pick.mp4"
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "badImages": [],
+    "clientWidth": 345,
+    "fontLoaded": true,
+    "h1": "조사 결과를 요구사항으로 정리하고,화면과 API까지 연결하는 PM",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1159,
+        "tag": "P",
+        "text": "기존 앱 UI를 예시 데이터로 실행한 오프라인 시연. 결제 후보를 확인해 서비스에 연결한 "
+      },
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1423,
+        "tag": "P",
+        "text": "원본 온보딩 화면을 로컬에서 실행한 시연. 보고싶어요, 모르겠어요, 안볼래요를 선택하고 호"
+      }
+    ],
+    "path": "/PM/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/aekkim.mp4"
+      },
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/play-pick.mp4"
+      }
+    ],
+    "scrollWidth": 345,
+    "width": 360
+  },
+  {
+    "badImages": [],
+    "clientWidth": 345,
+    "fontLoaded": true,
+    "h1": "웃지마게임",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1304,
+        "tag": "P",
+        "text": "팀 서비스의 랜덤 매칭 원본 녹화에서 대기 구간을 줄인 편집본입니다. 준비부터 웃음 판정과"
+      }
+    ],
+    "path": "/PM/smile-game/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/smile.mp4"
+      }
+    ],
+    "scrollWidth": 345,
+    "width": 360
+  },
+  {
+    "badImages": [],
+    "clientWidth": 345,
+    "fontLoaded": true,
+    "h1": "AEKKIM",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1159,
+        "tag": "P",
+        "text": "기존 앱 UI를 예시 데이터로 실행한 오프라인 시연. 결제 후보를 확인해 서비스에 연결한 "
+      }
+    ],
+    "path": "/PM/aekkim/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/aekkim.mp4"
+      }
+    ],
+    "scrollWidth": 345,
+    "width": 360
+  },
+  {
+    "badImages": [],
+    "clientWidth": 345,
+    "fontLoaded": true,
+    "h1": "부산이음길",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1126,
+        "tag": "P",
+        "text": "원본 온보딩 시연. 사용자 유형과 보행 조건을 고르는 흐름입니다. 지도 화면의 승인 제보 "
+      }
+    ],
+    "path": "/PM/busan-eumgil/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/busan.mp4"
+      }
+    ],
+    "scrollWidth": 345,
+    "width": 360
+  },
+  {
+    "badImages": [],
+    "clientWidth": 345,
+    "fontLoaded": true,
+    "h1": "Play Pick",
+    "overflowElements": [
+      {
+        "class": "pm-module__0Kf_Ra__visuallyHidden",
+        "client": 1,
+        "scroll": 1423,
+        "tag": "P",
+        "text": "원본 온보딩 화면을 로컬에서 실행한 시연. 보고싶어요, 모르겠어요, 안볼래요를 선택하고 호"
+      }
+    ],
+    "path": "/PM/play-pick/",
+    "pausedVideos": [
+      {
+        "autoplay": false,
+        "paused": true,
+        "src": "/pm/previews/play-pick.mp4"
+      }
+    ],
+    "scrollWidth": 345,
+    "width": 360
+  }
+]

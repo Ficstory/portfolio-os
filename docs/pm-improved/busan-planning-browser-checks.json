@@ -1,0 +1,103 @@
+{
+  "responsive": [
+    {
+      "center": true,
+      "client": 1425,
+      "h1": "팀이 같은 기준으로 일하도록,기획과 개발을 연결합니다.",
+      "initialPlanning": true,
+      "mvp": true,
+      "scroll": 1425,
+      "stale": false,
+      "url": "/PM/",
+      "width": 1440
+    },
+    {
+      "center": true,
+      "client": 1425,
+      "h1": "부산이음길",
+      "initialPlanning": true,
+      "mvp": true,
+      "scroll": 1425,
+      "stale": false,
+      "url": "/PM/busan-eumgil/",
+      "width": 1440
+    },
+    {
+      "center": true,
+      "client": 753,
+      "h1": "팀이 같은 기준으로 일하도록,기획과 개발을 연결합니다.",
+      "initialPlanning": true,
+      "mvp": true,
+      "scroll": 753,
+      "stale": false,
+      "url": "/PM/",
+      "width": 768
+    },
+    {
+      "center": true,
+      "client": 753,
+      "h1": "부산이음길",
+      "initialPlanning": true,
+      "mvp": true,
+      "scroll": 753,
+      "stale": false,
+      "url": "/PM/busan-eumgil/",
+      "width": 768
+    },
+    {
+      "center": true,
+      "client": 375,
+      "h1": "팀이 같은 기준으로 일하도록,기획과 개발을 연결합니다.",
+      "initialPlanning": true,
+      "mvp": true,
+      "scroll": 375,
+      "stale": false,
+      "url": "/PM/",
+      "width": 390
+    },
+    {
+      "center": true,
+      "client": 375,
+      "h1": "부산이음길",
+      "initialPlanning": true,
+      "mvp": true,
+      "scroll": 375,
+      "stale": false,
+      "url": "/PM/busan-eumgil/",
+      "width": 390
+    },
+    {
+      "center": true,
+      "client": 345,
+      "h1": "팀이 같은 기준으로 일하도록,기획과 개발을 연결합니다.",
+      "initialPlanning": true,
+      "mvp": true,
+      "scroll": 345,
+      "stale": false,
+      "url": "/PM/",
+      "width": 360
+    },
+    {
+      "center": true,
+      "client": 345,
+      "h1": "부산이음길",
+      "initialPlanning": true,
+      "mvp": true,
+      "scroll": 345,
+      "stale": false,
+      "url": "/PM/busan-eumgil/",
+      "width": 360
+    }
+  ],
+  "image": {
+    "height": 1080,
+    "src": "/pm-improved/evidence/busan-mvp-meeting.png",
+    "width": 1920
+  },
+  "checkedAt": "2026-09-14T11:36:46.898Z",
+  "reload": {
+    "url": "http://127.0.0.1:3211/PM/busan-eumgil/",
+    "h1": "부산이음길"
+  },
+  "console": []
+}

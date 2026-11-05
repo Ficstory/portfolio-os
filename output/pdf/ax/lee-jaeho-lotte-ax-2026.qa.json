@@ -1,0 +1,94 @@
+{
+  "pdf": "lee-jaeho-lotte-ax-2026.pdf",
+  "pages": 14,
+  "bytes": 6424423,
+  "page_mm": [
+    320.0,
+    180.0
+  ],
+  "local_links_removed": 0,
+  "public_links_rewritten": 0,
+  "unique_external_links": [
+    "https://ficstory.dev/pm/",
+    "https://lotteaxchallenge.com/jobs/RC20261015037730",
+    "mailto:dlwo4367@gmail.com"
+  ],
+  "page_text_lengths": [
+    310,
+    396,
+    528,
+    567,
+    511,
+    354,
+    400,
+    451,
+    385,
+    454,
+    453,
+    545,
+    623,
+    522
+  ],
+  "text_outside_page": [],
+  "aspect_ratio": "16:9 (all pages checked)",
+  "requires_visual_review": true,
+  "chromium_export_boxes_pt": [
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ],
+    [
+      906.95996,
+      510.0
+    ]
+  ],
+  "box_normalization": "Exact 320 × 180 mm; content not scaled"
+}

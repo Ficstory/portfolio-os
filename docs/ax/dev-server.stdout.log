@@ -1,0 +1,82 @@
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://127.0.0.1:3226
+- Network:       http://127.0.0.1:3226
+✓ Ready in 1000ms
+
+○ Compiling /ax ...
+ GET /ax/ 200 in 6.1s (next.js: 5.3s, application-code: 797ms)
+ GET /ax/print/ 200 in 855ms (next.js: 567ms, application-code: 288ms)
+✓ Compiled in 213ms
+ GET /ax/print/ 200 in 275ms (next.js: 11ms, application-code: 264ms)
+ GET /ax/ 200 in 181ms (next.js: 10ms, application-code: 172ms)
+✓ Compiled in 180ms
+ GET /ax/print/ 200 in 346ms (next.js: 10ms, application-code: 336ms)
+ GET /ax/ 200 in 492ms (next.js: 99ms, application-code: 392ms)
+ GET /ax/ 200 in 300ms (next.js: 13ms, application-code: 288ms)
+ GET /ax/ 200 in 189ms (next.js: 9ms, application-code: 180ms)
+ GET /ax/ 200 in 189ms (next.js: 90ms, application-code: 100ms)
+ GET /ax/ 200 in 454ms (next.js: 77ms, application-code: 377ms)
+ GET /ax/ 200 in 299ms (next.js: 7ms, application-code: 292ms)
+ GET /ax/ 200 in 226ms (next.js: 107ms, application-code: 119ms)
+ GET /ax/ 200 in 229ms (next.js: 10ms, application-code: 219ms)
+ GET /ax/ 200 in 755ms (next.js: 10ms, application-code: 745ms)
+ GET /ax/ 200 in 424ms (next.js: 80ms, application-code: 344ms)
+ GET /ax/ 200 in 269ms (next.js: 6ms, application-code: 263ms)
+ GET /ax/ 200 in 203ms (next.js: 106ms, application-code: 97ms)
+ GET /ax/ 200 in 205ms (next.js: 8ms, application-code: 198ms)
+ GET /ax/ 200 in 451ms (next.js: 94ms, application-code: 357ms)
+ GET /ax/ 200 in 273ms (next.js: 9ms, application-code: 263ms)
+ GET /ax/ 200 in 183ms (next.js: 8ms, application-code: 175ms)
+ GET /ax/ 200 in 184ms (next.js: 82ms, application-code: 102ms)
+ GET /ax/ 200 in 551ms (next.js: 111ms, application-code: 440ms)
+ GET /ax/ 200 in 313ms (next.js: 10ms, application-code: 304ms)
+ GET /ax/ 200 in 202ms (next.js: 12ms, application-code: 190ms)
+ GET /ax/ 200 in 201ms (next.js: 89ms, application-code: 112ms)
+ GET /ax/print/ 200 in 1279ms (next.js: 149ms, application-code: 1131ms)
+ GET /ax/ 200 in 220ms (next.js: 10ms, application-code: 210ms)
+✓ Compiled in 134ms
+✓ Compiled in 4.9s
+✓ Compiled in 208ms
+ GET /ax/print/ 200 in 1229ms (next.js: 387ms, application-code: 842ms)
+✓ Compiled in 179ms
+ GET /ax/print/ 200 in 244ms (next.js: 26ms, application-code: 218ms)
+✓ Compiled in 162ms
+ GET /ax/print/ 200 in 263ms (next.js: 112ms, application-code: 151ms)
+✓ Compiled in 203ms
+ GET /ax/print/ 200 in 485ms (next.js: 141ms, application-code: 344ms)
+ GET /ax/print/ 200 in 254ms (next.js: 123ms, application-code: 131ms)
+✓ Compiled in 193ms
+ GET /ax/print/ 200 in 451ms (next.js: 57ms, application-code: 394ms)
+ GET /ax/print/ 200 in 302ms (next.js: 109ms, application-code: 193ms)
+ GET /ax/print/ 200 in 104ms (next.js: 9ms, application-code: 95ms)
+✓ Compiled in 254ms
+ GET /ax/print/ 200 in 843ms (next.js: 10ms, application-code: 833ms)
+ GET /ax/print/ 200 in 703ms (next.js: 164ms, application-code: 538ms)
+ GET /ax/print/ 200 in 520ms (next.js: 9ms, application-code: 511ms)
+ GET /ax/print/ 200 in 520ms (next.js: 278ms, application-code: 241ms)
+ GET /ax/print/ 200 in 522ms (next.js: 89ms, application-code: 432ms)
+ GET /ax/print/ 200 in 523ms (next.js: 166ms, application-code: 357ms)
+ GET /ax/print/ 200 in 111ms (next.js: 11ms, application-code: 99ms)
+ GET /ax/ 200 in 652ms (next.js: 153ms, application-code: 498ms)
+ GET /ax/ 200 in 62ms (next.js: 14ms, application-code: 48ms)
+ GET /ax/jos/ 200 in 2.0s (next.js: 1974ms, generate-params: 902ms, application-code: 72ms)
+ GET /ax/busan-eumgil/ 200 in 315ms (next.js: 22ms, generate-params: 14ms, application-code: 293ms)
+ GET /ax/aekkim/ 200 in 230ms (next.js: 29ms, generate-params: 15ms, application-code: 202ms)
+✓ Compiled in 257ms
+ GET /ax/print/ 200 in 860ms (next.js: 139ms, application-code: 721ms)
+ GET /ax/print/ 200 in 325ms (next.js: 123ms, application-code: 202ms)
+ GET /ax/print/ 200 in 99ms (next.js: 8ms, application-code: 91ms)
+✓ Compiled in 197ms
+ GET /ax/print/ 200 in 383ms (next.js: 229ms, application-code: 154ms)
+ GET /ax/print/ 200 in 286ms (next.js: 108ms, application-code: 178ms)
+ GET /ax/print/ 200 in 81ms (next.js: 7ms, application-code: 75ms)
+ GET /ax/print/ 200 in 750ms (next.js: 9ms, application-code: 741ms)
+ GET /pm-improved/print/ 200 in 2.1s (next.js: 1065ms, application-code: 1052ms)
+✓ Compiled in 183ms
+✓ Compiled in 149ms
+ GET /pm-improved/print/ 200 in 339ms (next.js: 196ms, application-code: 143ms)
+✓ Compiled in 159ms
+ GET /pm-improved/print/ 200 in 1388ms (next.js: 114ms, application-code: 1273ms)
+✓ Compiled in 154ms
+ GET /pm-improved/print/ 200 in 289ms (next.js: 98ms, application-code: 191ms)
+ GET /pm-improved/print/ 200 in 80ms (next.js: 7ms, application-code: 74ms)

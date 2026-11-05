@@ -1,0 +1,22 @@
+{
+  "checkFormat": 1,
+  "checkedBeforeCloneEdits": true,
+  "normalization": "SHA-256 byte comparison; no normalization needed because every initial clone matched byte-for-byte.",
+  "mappings": [
+    { "from": "src/app/pm/page.tsx", "to": "src/app/pm-improved/page.tsx", "sha256": "940afc528cc44a6f252c83ca9fbd58dfb7e99f37554d451644d18a75dcfed77d" },
+    { "from": "src/app/pm/layout.tsx", "to": "src/app/pm-improved/layout.tsx", "sha256": "12367b2341dac20c4d655b3a7dba85496eb470cd19c1eef9b8102175171e9867" },
+    { "from": "src/app/pm/[slug]/page.tsx", "to": "src/app/pm-improved/[slug]/page.tsx", "sha256": "e877a02f71cbe9473f7674b2374d005e76e4d2f86b0c755525e59db40153dbf1" },
+    { "from": "src/components/tracks/pm/editorial/content.ts", "to": "src/components/pm-improved/content.ts", "sha256": "a61b3ff1a895a9ed23c6a937722c947f2fd36d703d60862c27f82fa71be3fb6b" },
+    { "from": "src/components/tracks/pm/editorial/pm.module.css", "to": "src/components/pm-improved/pm.module.css", "sha256": "c14c468b134560a49d6f176cd796acbc2928af27bb3b940ed443fb3f8238c619" },
+    { "from": "src/components/tracks/pm/editorial/PmAekkimCase.tsx", "to": "src/components/pm-improved/PmAekkimCase.tsx", "sha256": "14b7e20486c7c5dac619b672b2e71d2d3205ac884da52ffe294e7997fd07055d" },
+    { "from": "src/components/tracks/pm/editorial/PmEditorialHome.tsx", "to": "src/components/pm-improved/PmEditorialHome.tsx", "sha256": "7b0c54f2189a3c3a7b4d816cc2f463fe8a91a897e0fee5516418aa854343c83e" },
+    { "from": "src/components/tracks/pm/editorial/PmHeader.tsx", "to": "src/components/pm-improved/PmHeader.tsx", "sha256": "c18755e81809c0b89bc5ddeb3f23bcb89fdf0816ff0a7396aaabdf5878b46353" },
+    { "from": "src/components/tracks/pm/editorial/PmPlayPickCase.tsx", "to": "src/components/pm-improved/PmPlayPickCase.tsx", "sha256": "442103d0acd718ddf7e2aa4550fb05d3fa81fe9e6068d64d497c93bc78b74470" },
+    { "from": "src/components/tracks/pm/editorial/PmShell.tsx", "to": "src/components/pm-improved/PmShell.tsx", "sha256": "07da9c7fe03833ff3c03d94d8209a069255ad94d2a2b640635b471e821e79380" },
+    { "from": "src/components/tracks/pm/editorial/PmSupportingCase.tsx", "to": "src/components/pm-improved/PmSupportingCase.tsx", "sha256": "2e8ba8d1238430d52533beddc9b17ccbc3f4c9dbc884e19ada9baff5e3c71455" },
+    { "from": "src/components/tracks/pm/editorial/PmVideoPreview.tsx", "to": "src/components/pm-improved/PmVideoPreview.tsx", "sha256": "cc5fa3b2c3a3a00848f9a999c0db83282a80ae0780da0b4962aca4efb5aaf486" },
+    { "from": "src/components/tracks/pm/editorial/PmVisuals.tsx", "to": "src/components/pm-improved/PmVisuals.tsx", "sha256": "b4048ee4ffdcf4aa883b8354842c83b471733382ec213583ad259ba7d23f933c" }
+  ],
+  "allMappingsByteIdentical": true,
+  "cssByteIdentical": true
+}

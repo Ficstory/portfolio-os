@@ -1,0 +1,699 @@
+{
+  "상태": "사용자 미리보기 승인 후 Codex가 Canva에 13개 자료 삽입 및 12페이지 수정 저장 완료",
+  "검수": {
+    "전체_asset_파일수": 23,
+    "asset_SHA256_확인": "확인 완료",
+    "원본_존재확인": "확인 완료",
+    "삽입_파일수": 13,
+    "sha256_불일치": 0,
+    "페이지별_삽입수": {
+      "05": 1,
+      "06": 2,
+      "07": 2,
+      "08": 3,
+      "09": 3,
+      "10": 2
+    }
+  },
+  "보조자료_미삽입": [
+    {
+      "파일": "assets/aekkim8-promotions-detail.png",
+      "상태": "미삽입",
+      "크기": [
+        1080,
+        2340
+      ],
+      "sha256": "daa3577ae9d9e3136a3ebe4eb943ffcd55b84a1c27430ea71121dc33ed09dd13",
+      "원본_로컬": "docs/pm-redesign/aekkim-demo/recordings/screenshots/01-promotions-detail.png",
+      "원본_존재확인": true,
+      "상세_원본_확보기록": {
+        "file": "assets/aekkim8-promotions-detail.png",
+        "page": "Aekkim8",
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "bytes": 152164,
+        "sha256": "daa3577ae9d9e3136a3ebe4eb943ffcd55b84a1c27430ea71121dc33ed09dd13",
+        "source_local_path": "docs/pm-redesign/aekkim-demo/recordings/screenshots/01-promotions-detail.png",
+        "source_type": "actual_demo",
+        "public_url": null,
+        "related_deployed_preview_url": null,
+        "proof": "Representative still from the 2026-09-11 directly operated Android emulator recording of the promotions detail view; the recordings README identifies it as the promotions flow.",
+        "limitations": "This is an offline demo with fixed example profile, benefits, and copy. It is supplementary evidence and is less directly paired with the payment-review flow than the two payment screenshots."
+      },
+      "페이지": null
+    },
+    {
+      "파일": "assets/aekkim8-select-service.png",
+      "상태": "미삽입",
+      "크기": [
+        1080,
+        2340
+      ],
+      "sha256": "761e17618055277fb88956c21e7049576a74661f866f1ae945ab4dd4a2234485",
+      "원본_로컬": "docs/pm-redesign/aekkim-demo/screenshots/03-select-service.png",
+      "원본_존재확인": true,
+      "상세_원본_확보기록": {
+        "file": "assets/aekkim8-select-service.png",
+        "page": "Aekkim8",
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "bytes": 191239,
+        "sha256": "761e17618055277fb88956c21e7049576a74661f866f1ae945ab4dd4a2234485",
+        "source_local_path": "docs/pm-redesign/aekkim-demo/screenshots/03-select-service.png",
+        "source_type": "actual_demo",
+        "public_url": null,
+        "related_deployed_preview_url": "/pm/previews/aekkim.mp4",
+        "proof": "Screenshot from the same directly operated emulator demo, showing the service-selection bottom sheet after the review state.",
+        "limitations": "Service choices and values are demo fixtures; the screen does not prove external subscription matching or persisted production behavior."
+      },
+      "페이지": null
+    },
+    {
+      "파일": "assets/busan9-marker-change-log.png",
+      "상태": "미삽입",
+      "크기": [
+        1500,
+        590
+      ],
+      "sha256": "d55d22ee2eeea6dd544233cb629611745fa5c92a4535dc27ac37c605cbd38b67",
+      "원본_로컬": "artifacts/canva-pm-evidence/sources/busan-marker-log-verbatim.txt",
+      "원본_존재확인": true,
+      "페이지": null
+    },
+    {
+      "파일": "assets/p05-meeting-decisions-markdown.png",
+      "상태": "미삽입",
+      "크기": [
+        1700,
+        952
+      ],
+      "sha256": "3063a1403ec8c736e52232f5347b51c2901a78b8635bcbba65089a9bdd9637c8",
+      "원본_로컬": "sources/original-docs/260114_회의록.md",
+      "원본_존재확인": true,
+      "페이지": null
+    },
+    {
+      "파일": "assets/p07-requirements-fr03-fr05-markdown.png",
+      "상태": "미삽입",
+      "크기": [
+        1700,
+        1050
+      ],
+      "sha256": "02e3ff07372a6bd7af5771cb61bab2100d9f0ebfe028405014cbd607c636c684",
+      "원본_로컬": "sources/original-docs/2026-03-21_요구사항정의서_v2_AEKKIM.md",
+      "원본_존재확인": true,
+      "페이지": null
+    },
+    {
+      "파일": "assets/p07-screen-spec-manual-mapping-markdown.png",
+      "상태": "미삽입",
+      "크기": [
+        1700,
+        1080
+      ],
+      "sha256": "dd243ae583bd04a110e5bd9441be31aef90221405fd67e25749c1c976d107b1d",
+      "원본_로컬": "sources/original-docs/2026-03-21_화면명세서_v2_AEKKIM.md",
+      "원본_존재확인": true,
+      "페이지": null
+    },
+    {
+      "파일": "assets/p08-design-review-execution-order-markdown.png",
+      "상태": "미삽입",
+      "크기": [
+        1600,
+        830
+      ],
+      "sha256": "e41ba663cbbeeb2af85edeeac956e6c1ba9606f53af0d14aa790844a13ec5cbc",
+      "원본_로컬": "sources/original-docs/2026-03-28_FE_디자인리뷰_반영_우선순위_및_작업계획서.md",
+      "원본_존재확인": true,
+      "페이지": null
+    },
+    {
+      "파일": "assets/p08-mvp-test-yearly-monthly-copy-markdown.png",
+      "상태": "미삽입",
+      "크기": [
+        1600,
+        850
+      ],
+      "sha256": "5941eb89049e67c0555a02eda929b25ec5207cff89fe1168a409f699ce857402",
+      "원본_로컬": "sources/original-docs/2026-03-24_MVP_테스트_개선사항_정리.md",
+      "원본_존재확인": true,
+      "페이지": null
+    },
+    {
+      "파일": "assets/play10-onboarding-start.png",
+      "상태": "미삽입",
+      "크기": [
+        1600,
+        1200
+      ],
+      "sha256": "2011105ec918d6f7af31262b9434e6f3be69452068881c10744e2197c279c0cc",
+      "원본_로컬": "docs/pm-redesign/play-pick-demo/onboarding-start.png",
+      "원본_존재확인": true,
+      "상세_원본_확보기록": {
+        "file": "assets/play10-onboarding-start.png",
+        "page": "Play10",
+        "dimensions": [
+          1600,
+          1200
+        ],
+        "bytes": 116688,
+        "sha256": "2011105ec918d6f7af31262b9434e6f3be69452068881c10744e2197c279c0cc",
+        "source_local_path": "docs/pm-redesign/play-pick-demo/onboarding-start.png",
+        "source_type": "actual_demo",
+        "public_url": null,
+        "related_deployed_preview_url": "/pm/previews/play-pick.mp4",
+        "proof": "Still from the 2026-09-11 continuous capture of the running original Vue UI (source commit c5e2f13) with current local Django and an isolated SQLite demo database; no API responses were mocked.",
+        "limitations": "Example account and scripted sample choices. This capture covers onboarding and first recommendations only; it does not validate external integrations or recommendation quality."
+      },
+      "페이지": null
+    },
+    {
+      "파일": "assets/play10-first-recommendations.png",
+      "상태": "미삽입",
+      "크기": [
+        1585,
+        1189
+      ],
+      "sha256": "2b857f16081044117f0f5474b891a8e2949089c3c33cb23aa13a169f95aaa45d",
+      "원본_로컬": "docs/pm-redesign/play-pick-demo/first-recommendations.png",
+      "원본_존재확인": true,
+      "상세_원본_확보기록": {
+        "file": "assets/play10-first-recommendations.png",
+        "page": "Play10",
+        "dimensions": [
+          1585,
+          1189
+        ],
+        "bytes": 143893,
+        "sha256": "2b857f16081044117f0f5474b891a8e2949089c3c33cb23aa13a169f95aaa45d",
+        "source_local_path": "docs/pm-redesign/play-pick-demo/first-recommendations.png",
+        "source_type": "actual_demo",
+        "public_url": null,
+        "related_deployed_preview_url": "/pm/previews/play-pick.mp4",
+        "proof": "Captured endpoint of the same continuous original Vue UI demo. The capture manifest records eight preference signals, completion, and the resulting first-recommendation list.",
+        "limitations": "The displayed reason is regional information. Do not claim that the scripted onboarding choices alone changed recommendation order, or that any product metric was measured."
+      },
+      "페이지": null
+    }
+  ],
+  "design_id": "DAHVKsJYGbg",
+  "canva_url": "https://www.canva.com/design/DAHVKsJYGbg/7oiqu_OCUuH7PLQE0zCKrw/edit",
+  "저장_근거": "canva-save-result.json: status committed + 본문 전체 readback 일치",
+  "로컬_경로_기준": {
+    "workspace": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\개인PJT\\개인 포트폴리오 사이트\\portfolio-os",
+    "package": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\개인PJT\\개인 포트폴리오 사이트\\portfolio-os\\artifacts\\canva-pm-evidence"
+  },
+  "Canva_저장_삽입": [
+    {
+      "파일": "assets/p05-meeting-readable.png",
+      "크기": [
+        1700,
+        1050
+      ],
+      "sha256": "8d36c71b501684b9342bee039a4b396b552a5199336490c8cf9002393dd1d8ab",
+      "구분": "원문 렌더",
+      "projectURL": "https://ficstory.dev/PM/smile-game/",
+      "public_url": null,
+      "원본_로컬": "C:/Users/ljh43/OneDrive/Desktop/workspace/SSAFY/프로젝트/2. 공통pjt/S14P11E207/docs/이재호/회의록/260114_회의록.md",
+      "원본_존재확인": true,
+      "원문_줄": "32–45",
+      "증명범위": "친구/지인 매칭 중심, 랜덤 매칭 유지, 방 기능 우선의 팀 결정 기록.",
+      "한계": "팀 결정이며 개인별 역할·이후 구현 완료를 증명하지 않음.",
+      "귀속": "팀 결정",
+      "데이터": "실사용·성과 데이터 아님",
+      "페이지": 5,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLJy9iXs",
+      "canva_element_id": "PBxMT6P3lbfDTMZF-LBWyNycqjtQNfRVt",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 302.00000000000006,
+          "left": 694
+        },
+        "dimension": {
+          "width": 830,
+          "height": 512.65
+        }
+      }
+    },
+    {
+      "파일": "assets/smile6-create-join-entry-00.50.png",
+      "크기": [
+        1280,
+        720
+      ],
+      "sha256": "a807b2a4315b78d8743dec22c925937cd8aa6fcdbb1f4b7e139c1413f0bae416",
+      "구분": "원본 영상 프레임",
+      "projectURL": "https://ficstory.dev/PM/smile-game/",
+      "public_url": null,
+      "원본_로컬": "C:/Users/ljh43/OneDrive/Desktop/workspace/SSAFY/프로젝트/2. 공통pjt/캡처/초대배틀.mp4",
+      "원본_존재확인": true,
+      "타임스탬프": "00:00.50 (0.50 seconds)",
+      "증명범위": "초대 배틀 시연의 생성/참여 진입 화면.",
+      "한계": "생성 완료·코드 입력·랜덤 매칭 동작은 이 프레임에서 보이지 않음.",
+      "귀속": "팀 서비스 시연",
+      "데이터": "실사용·성과 데이터 아님",
+      "페이지": 6,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLAor8Pw",
+      "canva_element_id": "PBtrMkZb9RTC8z01-LB6xzrkcHBFwzfsM",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 315,
+          "left": 76
+        },
+        "dimension": {
+          "width": 700,
+          "height": 393.75
+        }
+      },
+      "동일_원본_사본": "C:/Users/ljh43/OneDrive/Desktop/workspace/SSAFY/프로젝트/2. 공통pjt/S14P11E207/docs/demo/videos/invite-battle.mp4",
+      "패키지_원본": "sources/smile-invite-original.mp4",
+      "원본_sha256": "dd59c389ba982f86e66f975f9491bdeaac7bbdb04249082c41f462ced3db74b7",
+      "timestamp_seconds": 0.5,
+      "원본_URL_상태": "공개 URL 없음; 로컬 원본에서 직접 추출"
+    },
+    {
+      "파일": "assets/smile6-waiting-09.50.png",
+      "크기": [
+        1280,
+        720
+      ],
+      "sha256": "6b5815a873e08b3dec9a78d0df2b3013645621fab6caad7ec85e2561b80b5c99",
+      "구분": "원본 영상 프레임",
+      "projectURL": "https://ficstory.dev/PM/smile-game/",
+      "public_url": null,
+      "원본_로컬": "C:/Users/ljh43/OneDrive/Desktop/workspace/SSAFY/프로젝트/2. 공통pjt/캡처/초대배틀.mp4",
+      "원본_존재확인": true,
+      "타임스탬프": "00:09.50 (9.50 seconds)",
+      "증명범위": "초대 배틀 시연의 대기방 화면.",
+      "한계": "이 프레임만으로 방 생성·참여 전체 흐름이나 랜덤 매칭 동작을 증명하지 않음.",
+      "귀속": "팀 서비스 시연",
+      "데이터": "실사용·성과 데이터 아님",
+      "페이지": 6,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLLQ5UuY",
+      "canva_element_id": "PBtrMkZb9RTC8z01-LBL1c80BxkGpcMQG",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 315,
+          "left": 824
+        },
+        "dimension": {
+          "width": 700,
+          "height": 393.75
+        }
+      },
+      "동일_원본_사본": "C:/Users/ljh43/OneDrive/Desktop/workspace/SSAFY/프로젝트/2. 공통pjt/S14P11E207/docs/demo/videos/invite-battle.mp4",
+      "패키지_원본": "sources/smile-invite-original.mp4",
+      "원본_sha256": "dd59c389ba982f86e66f975f9491bdeaac7bbdb04249082c41f462ced3db74b7",
+      "timestamp_seconds": 9.5,
+      "원본_URL_상태": "공개 URL 없음; 로컬 원본에서 직접 추출"
+    },
+    {
+      "파일": "assets/p07-requirements-readable.png",
+      "크기": [
+        1500,
+        850
+      ],
+      "sha256": "f576bc233966333234222e86de234ce98b7b236ea9f1bfead60170890be1d5ac",
+      "구분": "원문 렌더",
+      "projectURL": "https://ficstory.dev/PM/aekkim/",
+      "public_url": null,
+      "원본_로컬": "C:/Users/ljh43/OneDrive/Desktop/workspace/SSAFY/프로젝트/3. 특화pjt/S14P21E106/docs/2026-03-21_요구사항정의서_v2_AEKKIM.md",
+      "원본_존재확인": true,
+      "원문_줄": "83, 87, 100, 107",
+      "증명범위": "구독 후보 확인과 수동 매핑 요구사항.",
+      "한계": "현행 요구사항 문서이며 개인 기여·라이브 동작 증거가 아님.",
+      "귀속": "팀 문서",
+      "데이터": "실제 예시 데이터 아님",
+      "페이지": 7,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLCiztFc",
+      "canva_element_id": "PBh0LFwH9cVs3W2q-LBl7wyB4ZwMzBQY2",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 342,
+          "left": 76
+        },
+        "dimension": {
+          "width": 700,
+          "height": 396.67
+        }
+      }
+    },
+    {
+      "파일": "assets/p07-screen-spec-readable.png",
+      "크기": [
+        1500,
+        850
+      ],
+      "sha256": "6d91acb55396e3b824d4b391a69d7bd62bcc45413ce13bbae3796dd71874e80e",
+      "구분": "원문 렌더",
+      "projectURL": "https://ficstory.dev/PM/aekkim/",
+      "public_url": null,
+      "원본_로컬": "C:/Users/ljh43/OneDrive/Desktop/workspace/SSAFY/프로젝트/3. 특화pjt/S14P21E106/docs/2026-03-21_화면명세서_v2_AEKKIM.md",
+      "원본_존재확인": true,
+      "원문_줄": "99, 103, 105, 126, 130, 132",
+      "증명범위": "구독 확인·수동 매핑 검토 화면의 목적과 주요 액션.",
+      "한계": "문서 발췌이며 실제 실행 화면·개인별 완료 작업 증거가 아님.",
+      "귀속": "팀 문서",
+      "데이터": "실제 예시 데이터 아님",
+      "페이지": 7,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLMk6CuY",
+      "canva_element_id": "PBh0LFwH9cVs3W2q-LBB5RFVwvsn8GLHJ",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 342,
+          "left": 824
+        },
+        "dimension": {
+          "width": 700,
+          "height": 396.67
+        }
+      }
+    },
+    {
+      "파일": "assets/p08-plan-readable.png",
+      "크기": [
+        1100,
+        620
+      ],
+      "sha256": "ecbfef1cc3cbb9af2b62ce3233ad8e9d41e3ca7961d52ccbdbc6ade9a89d7f76",
+      "구분": "원문 렌더",
+      "projectURL": "https://ficstory.dev/PM/aekkim/",
+      "public_url": null,
+      "원본_로컬": "C:/Users/ljh43/OneDrive/Desktop/workspace/SSAFY/프로젝트/3. 특화pjt/S14P21E106/FE/docs/archive/planning-history/2026-03-28_FE_디자인리뷰_반영_우선순위_및_작업계획서.md",
+      "원본_존재확인": true,
+      "원문_줄": "166, 168, 175, 177, 181",
+      "증명범위": "권장 실행 순서.",
+      "한계": "계획 문서로 완료 증거가 아님.",
+      "귀속": "팀 작업 계획",
+      "데이터": "실제 예시 데이터 아님",
+      "페이지": 8,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLJmMMiM",
+      "canva_element_id": "PBmZQGB2TkZ4Klbc-LBM4HMQ1s9xVnTXg",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 332,
+          "left": 76
+        },
+        "dimension": {
+          "width": 548,
+          "height": 308.87
+        }
+      }
+    },
+    {
+      "파일": "assets/p08-qa-readable.png",
+      "크기": [
+        1100,
+        620
+      ],
+      "sha256": "a9bced874d2f747a96a9730f47b5da919550d564e6754b4ec3a9342b156163c7",
+      "구분": "원문 렌더",
+      "projectURL": "https://ficstory.dev/PM/aekkim/",
+      "public_url": null,
+      "원본_로컬": "C:/Users/ljh43/OneDrive/Desktop/workspace/SSAFY/프로젝트/3. 특화pjt/S14P21E106/docs/2026-03-24_MVP_테스트_개선사항_정리.md",
+      "원본_존재확인": true,
+      "원문_줄": "26, 30, 35",
+      "증명범위": "연간 할인액이 월 절감처럼 보인 팀 QA 문제와 문구 완화 방안.",
+      "한계": "팀 QA 기록이며 개인 해결·해결 완료 증거가 아님.",
+      "귀속": "팀 QA",
+      "데이터": "실제 예시 데이터 아님",
+      "페이지": 8,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLPgZqHg",
+      "canva_element_id": "PBmZQGB2TkZ4Klbc-LBX2LkRx6KH8WFL7",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 332,
+          "left": 635
+        },
+        "dimension": {
+          "width": 548,
+          "height": 308.87
+        }
+      }
+    },
+    {
+      "파일": "assets/aekkim8-review-payment.png",
+      "크기": [
+        1080,
+        2340
+      ],
+      "sha256": "72f93a66a08125b78ebcbd52b5ab1e35b459edfd540b086acf519eae457e6e6d",
+      "구분": "실제 데모 화면",
+      "projectURL": "https://ficstory.dev/PM/aekkim/",
+      "public_url": null,
+      "related_public_url": "/pm/previews/aekkim.mp4",
+      "원본_로컬": "docs/pm-redesign/aekkim-demo/screenshots/02-review-payment.png",
+      "원본_존재확인": true,
+      "증명범위": "직접 조작한 오프라인 Android 데모의 결제 검토 화면.",
+      "한계": "인메모리 고정 예시 응답이며 실제 결제·계정·운영 백엔드 증거가 아님.",
+      "귀속": "기존 앱 UI 데모",
+      "데이터": "고정 예시 데이터",
+      "페이지": 8,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLIkqBOM",
+      "canva_element_id": "PBmZQGB2TkZ4Klbc-LBd2M4mL7fQWlQ8M",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 294,
+          "left": 1230
+        },
+        "dimension": {
+          "width": 235,
+          "height": 509.17
+        }
+      },
+      "상세_원본_확보기록": {
+        "file": "assets/aekkim8-review-payment.png",
+        "page": "Aekkim8",
+        "dimensions": [
+          1080,
+          2340
+        ],
+        "bytes": 76611,
+        "sha256": "72f93a66a08125b78ebcbd52b5ab1e35b459edfd540b086acf519eae457e6e6d",
+        "source_local_path": "docs/pm-redesign/aekkim-demo/screenshots/02-review-payment.png",
+        "source_type": "actual_demo",
+        "public_url": null,
+        "related_deployed_preview_url": "/pm/previews/aekkim.mp4",
+        "proof": "Screenshot from an Android emulator running the existing Compose app UI in the com.ssafy.e106.demo offline APK. It shows the demo payment-review state described in the capture README.",
+        "limitations": "The demo uses an in-memory fixed response instead of server calls; no real payment information, live account, or production backend is shown."
+      }
+    },
+    {
+      "파일": "assets/busan9-mvp-meeting.png",
+      "크기": [
+        1920,
+        1080
+      ],
+      "sha256": "9b9dfa91117d7cb20213bcc548bd7a669d61767d435f506936ea4e4c784f87a4",
+      "구분": "원본 사진",
+      "projectURL": "https://ficstory.dev/PM/busan-eumgil/",
+      "public_url": "https://ficstory.dev/pm-improved/evidence/busan-mvp-meeting.png",
+      "원본_로컬": "public/pm-improved/evidence/busan-mvp-meeting.png; 원본 PPTX: S14P31E102/Docs/기획/2026-04-17_기획발표_장표.pptx:ppt/media/image43.png",
+      "원본_존재확인": true,
+      "증명범위": "MVP 지도 기능을 설명하고 의견을 나눈 미팅 현장.",
+      "한계": "사진만으로 기관·날짜·인물별 역할을 식별·추론하지 않음.",
+      "귀속": "팀 미팅",
+      "데이터": "실제 사용자 성과 데이터 아님",
+      "페이지": 9,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLPza-CQ",
+      "canva_element_id": "PBWpr5ZNxnbKfJND-LBV25lsq5kqLPJpq",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 492,
+          "left": 76
+        },
+        "dimension": {
+          "width": 520,
+          "height": 292.5
+        }
+      },
+      "상세_원본_확보기록": {
+        "file": "assets/busan9-mvp-meeting.png",
+        "page": "Busan9",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "bytes": 2304691,
+        "sha256": "9b9dfa91117d7cb20213bcc548bd7a669d61767d435f506936ea4e4c784f87a4",
+        "source_local_path": "public/pm-improved/evidence/busan-mvp-meeting.png",
+        "source_type": "original",
+        "public_url": "/pm-improved/evidence/busan-mvp-meeting.png",
+        "proof": "Byte-identical copy of the image extracted from ppt/media/image43.png in the original project presentation; slides 28–32 reference it. The deployed case study captions it as an MVP discussion meeting image.",
+        "limitations": "Do not identify people in the photo or infer individual roles. The slide image itself does not state the meeting date or institution; use only the cautious MVP-discussion caption."
+      }
+    },
+    {
+      "파일": "assets/busan9-marker-change-readable.png",
+      "크기": [
+        1000,
+        500
+      ],
+      "sha256": "aa251c435249de4cfa8808ac0a458764cdcbd88c8b95991983df5a768c0cfa83",
+      "구분": "원문 Git 텍스트 렌더",
+      "projectURL": "https://ficstory.dev/PM/busan-eumgil/",
+      "public_url": null,
+      "원본_로컬": "artifacts/canva-pm-evidence/sources/busan-marker-log-verbatim.txt",
+      "원본_존재확인": true,
+      "커밋": "ac698b3 · 2026-05-09 · 이재호",
+      "증명범위": "원본 커밋 제목과 작성자/날짜.",
+      "한계": "crop가 아닌 Git 텍스트 읽기용 렌더이며 런타임 지도 동작·테스트·운영 배포 증거가 아님.",
+      "귀속": "개인 Git 커밋",
+      "데이터": "실제 예시 데이터 아님",
+      "페이지": 9,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLJ5euRc",
+      "canva_element_id": "PBWpr5ZNxnbKfJND-LBvpV0R8h3MYtmgG",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 345,
+          "left": 700
+        },
+        "dimension": {
+          "width": 435,
+          "height": 217.49999999999997
+        }
+      },
+      "패키지_원본": "sources/busan-marker-log-verbatim.txt"
+    },
+    {
+      "파일": "assets/busan9-route-map.png",
+      "크기": [
+        720,
+        1560
+      ],
+      "sha256": "3362fb57150f676efc4ec0ecc090b45261dab70b669fa7fda3fbe9cc9b46b534",
+      "구분": "원본 화면 캡처",
+      "projectURL": "https://ficstory.dev/PM/busan-eumgil/",
+      "public_url": "https://ficstory.dev/pm-improved/evidence/busan-route-map.png",
+      "원본_로컬": "public/pm-improved/evidence/busan-route-map.png; 원본: S14P31E102/Docs/media/route-search_thumb.png",
+      "원본_존재확인": true,
+      "증명범위": "접근성 시설 탐색과 최근 목적지를 보여주는 실제 지도 화면.",
+      "한계": "정적 화면이라 마커 고정·제스처·경로 탐색·현장 사용성을 증명하지 않음.",
+      "귀속": "팀 앱 화면",
+      "데이터": "실제 화면 상태",
+      "페이지": 9,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLKlm_XM",
+      "canva_element_id": "PBWpr5ZNxnbKfJND-LBYBz261kqL5Jbyg",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 312,
+          "left": 1190
+        },
+        "dimension": {
+          "width": 234,
+          "height": 507
+        }
+      },
+      "상세_원본_확보기록": {
+        "file": "assets/busan9-route-map.png",
+        "page": "Busan9",
+        "dimensions": [
+          720,
+          1560
+        ],
+        "bytes": 1132511,
+        "sha256": "3362fb57150f676efc4ec0ecc090b45261dab70b669fa7fda3fbe9cc9b46b534",
+        "source_local_path": "public/pm-improved/evidence/busan-route-map.png",
+        "source_type": "original",
+        "public_url": "/pm-improved/evidence/busan-route-map.png",
+        "proof": "Byte-identical copy of the original project image Docs/media/route-search_thumb.png. It is already used in the case study as the map screen showing facility exploration and recent destinations.",
+        "limitations": "A static screenshot shows the screen only; it does not prove marker pinning, map gesture behavior, routing, or field usability."
+      }
+    },
+    {
+      "파일": "assets/play10-onboarding-card-crop.png",
+      "크기": [
+        600,
+        1040
+      ],
+      "sha256": "62a420f26ca92805c9e07715b05e3de09113b4377b667737cd329ba893a1acde",
+      "구분": "원본 화면의 무손실 크롭",
+      "projectURL": "https://ficstory.dev/PM/play-pick/",
+      "public_url": null,
+      "related_public_url": "/pm/previews/play-pick.mp4",
+      "원본_로컬": "docs/pm-redesign/play-pick-demo/onboarding-start.png",
+      "원본_존재확인": true,
+      "크롭": "[500,120,1100,1160] · 외곽만 제거",
+      "증명범위": "온보딩 카드와 세 가지 응답 액션.",
+      "한계": "0/8 진행 표시는 원본 전체 이미지에만 있고 이 크롭에는 없음; 전체 흐름·추천 품질을 증명하지 않음.",
+      "귀속": "실제 로컬 Vue/Django 데모",
+      "데이터": "예시 계정·스크립트 선택·격리 SQLite 데이터",
+      "페이지": 10,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLIBl6ro",
+      "canva_element_id": "PB7ldw6mmVVDlfjy-LBswvJ4Gq6c1D8dG",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 310.00000000000006,
+          "left": 450
+        },
+        "dimension": {
+          "width": 276,
+          "height": 478.4
+        }
+      }
+    },
+    {
+      "파일": "assets/play10-first-recommendations-crop.png",
+      "크기": [
+        1280,
+        865
+      ],
+      "sha256": "5a07e2e87496e5a2cbfd1e62a5e92513e4db3da9dabbead9bedf3d90bf0ec355",
+      "구분": "원본 화면의 무손실 크롭",
+      "projectURL": "https://ficstory.dev/PM/play-pick/",
+      "public_url": null,
+      "related_public_url": "/pm/previews/play-pick.mp4",
+      "원본_로컬": "docs/pm-redesign/play-pick-demo/first-recommendations.png",
+      "원본_존재확인": true,
+      "크롭": "[170,225,1450,1090] · 외곽만 제거",
+      "증명범위": "첫 추천 제목·5개 카드·추천 버튼 결과 화면.",
+      "한계": "예시 계정·데모 데이터이며 온보딩 선택이 추천 순위를 바꿨거나 추천 품질·전환을 입증하지 않음.",
+      "귀속": "실제 로컬 Vue/Django 데모",
+      "데이터": "예시 계정·스크립트 선택·격리 SQLite 데이터",
+      "페이지": 10,
+      "상태": "Canva 저장 완료",
+      "canva_asset_id": "MAHVLDhEEcA",
+      "canva_element_id": "PB7ldw6mmVVDlfjy-LB0WypfPgsNNRXgm",
+      "배치": {
+        "type": "RECT",
+        "position": {
+          "top": 310,
+          "left": 810
+        },
+        "dimension": {
+          "width": 714,
+          "height": 482.5
+        }
+      }
+    }
+  ]
+}

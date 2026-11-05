@@ -1,0 +1,146 @@
+{
+  "directReload": [
+    {
+      "canonical": "https://ficstory.dev/PM/smile-game/",
+      "h1": "웃지마게임",
+      "path": "/PM/smile-game/"
+    },
+    {
+      "canonical": "https://ficstory.dev/PM/aekkim/",
+      "h1": "AEKKIM",
+      "path": "/PM/aekkim/"
+    },
+    {
+      "canonical": "https://ficstory.dev/PM/busan-eumgil/",
+      "h1": "부산이음길",
+      "path": "/PM/busan-eumgil/"
+    },
+    {
+      "canonical": "https://ficstory.dev/PM/play-pick/",
+      "h1": "Play Pick",
+      "path": "/PM/play-pick/"
+    }
+  ],
+  "media": [
+    {
+      "slug": "smile-game",
+      "earlyClick": "Initial click immediately after reload did not start playback; confirmed button unchanged, then repeated click after page settled.",
+      "playing": {
+        "duration": 37.5,
+        "error": null,
+        "paused": false,
+        "readyState": 4
+      },
+      "pausedAfter": true
+    },
+    {
+      "slug": "aekkim",
+      "playing": {
+        "duration": 26.75,
+        "error": null,
+        "paused": false,
+        "readyState": 4
+      },
+      "pausedAfter": true
+    },
+    {
+      "slug": "busan-eumgil",
+      "playing": {
+        "duration": 14.791667,
+        "error": null,
+        "paused": false,
+        "readyState": 4
+      },
+      "pausedAfter": true
+    },
+    {
+      "slug": "play-pick",
+      "playing": {
+        "duration": 30.583333,
+        "error": null,
+        "paused": false,
+        "readyState": 4
+      },
+      "pausedAfter": true
+    }
+  ],
+  "navigation": [
+    {
+      "action": "detail back",
+      "url": "http://127.0.0.1:3211/PM/#work"
+    },
+    {
+      "action": "home card",
+      "url": "http://127.0.0.1:3211/PM/smile-game/"
+    },
+    {
+      "action": "next project",
+      "url": "http://127.0.0.1:3211/PM/aekkim/",
+      "heading": "AEKKIM"
+    },
+    {
+      "action": "next project",
+      "url": "http://127.0.0.1:3211/PM/busan-eumgil/",
+      "heading": "부산이음길"
+    },
+    {
+      "action": "next project",
+      "url": "http://127.0.0.1:3211/PM/play-pick/",
+      "heading": "Play Pick"
+    },
+    {
+      "action": "next project",
+      "url": "http://127.0.0.1:3211/PM/smile-game/",
+      "heading": "웃지마게임"
+    },
+    {
+      "action": "logo",
+      "url": "http://127.0.0.1:3211/PM/"
+    }
+  ],
+  "keyboard": {
+    "menuOpenedByEnter": true,
+    "menuEscape": {
+      "closed": true,
+      "focus": "SUMMARY",
+      "outline": "rgb(36, 87, 255) solid 3px"
+    },
+    "menuLink": {
+      "closed": true,
+      "hash": "#about",
+      "path": "/PM/"
+    },
+    "firstTab": {
+      "href": "#pm-content",
+      "outline": "rgb(36, 87, 255) solid 3px",
+      "text": "본문으로 건너뛰기",
+      "top": 12
+    },
+    "skip": {
+      "hash": "#pm-content",
+      "id": "pm-content",
+      "tag": "MAIN"
+    }
+  },
+  "logs": [],
+  "settledHome": {
+    "fontLoaded": true,
+    "scrollWidth": 1425,
+    "width": 1425
+  },
+  "originalRoot": {
+    "unlockWorks": true
+  },
+  "originalResume": {
+    "badImages": [],
+    "h1": "이력서 요약",
+    "mainVisible": true,
+    "path": "/resume/"
+  },
+  "originalPm": {
+    "canonical": "https://ficstory.dev/pm/",
+    "h1": "요구사항을 정리하고,화면을 구현했습니다.",
+    "path": "/pm/"
+  },
+  "completedAt": "2026-09-14T10:19:48.893Z"
+}

@@ -1,0 +1,130 @@
+{
+  "collection": "Canva PM portfolio evidence assets",
+  "created_at": "2026-09-14",
+  "handling": {
+    "copies_are_byte_identical_to_sources": true,
+    "generated_ui": false,
+    "browser_chrome_crops": false,
+    "inspection": "Each supplied image was visually inspected from a contact sheet made only for review; no source image was changed."
+  },
+  "recommended_visible_pairs": [
+    {
+      "page": "Busan9",
+      "assets": [
+        "assets/busan9-mvp-meeting.png",
+        "assets/busan9-route-map.png"
+      ],
+      "use": "Pair the meeting image with the map screen to show planning/interview context beside the implemented map UI.",
+      "limitation": "The map still does not demonstrate marker movement or other dynamic behavior."
+    },
+    {
+      "page": "Play10",
+      "assets": [
+        "assets/play10-onboarding-start.png",
+        "assets/play10-first-recommendations.png"
+      ],
+      "use": "Use as a before/after pair: onboarding start and the first recommendation list after completion.",
+      "limitation": "This is an isolated local demo using an example account and scripted choices; it is not evidence that onboarding choices changed ranking."
+    },
+    {
+      "page": "Aekkim8",
+      "assets": [
+        "assets/aekkim8-review-payment.png",
+        "assets/aekkim8-select-service.png"
+      ],
+      "use": "Use as a sequential UI pair: payment review followed by service selection.",
+      "limitation": "These are offline Android demo screens backed by fixed example data, not live production payment data or a live backend."
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/busan9-mvp-meeting.png",
+      "page": "Busan9",
+      "dimensions": [1920, 1080],
+      "bytes": 2304691,
+      "sha256": "9b9dfa91117d7cb20213bcc548bd7a669d61767d435f506936ea4e4c784f87a4",
+      "source_local_path": "public/pm-improved/evidence/busan-mvp-meeting.png",
+      "source_type": "original",
+      "public_url": "/pm-improved/evidence/busan-mvp-meeting.png",
+      "proof": "Byte-identical copy of the image extracted from ppt/media/image43.png in the original project presentation; slides 28–32 reference it. The deployed case study captions it as an MVP discussion meeting image.",
+      "limitations": "Do not identify people in the photo or infer individual roles. The slide image itself does not state the meeting date or institution; use only the cautious MVP-discussion caption."
+    },
+    {
+      "file": "assets/busan9-route-map.png",
+      "page": "Busan9",
+      "dimensions": [720, 1560],
+      "bytes": 1132511,
+      "sha256": "3362fb57150f676efc4ec0ecc090b45261dab70b669fa7fda3fbe9cc9b46b534",
+      "source_local_path": "public/pm-improved/evidence/busan-route-map.png",
+      "source_type": "original",
+      "public_url": "/pm-improved/evidence/busan-route-map.png",
+      "proof": "Byte-identical copy of the original project image Docs/media/route-search_thumb.png. It is already used in the case study as the map screen showing facility exploration and recent destinations.",
+      "limitations": "A static screenshot shows the screen only; it does not prove marker pinning, map gesture behavior, routing, or field usability."
+    },
+    {
+      "file": "assets/play10-onboarding-start.png",
+      "page": "Play10",
+      "dimensions": [1600, 1200],
+      "bytes": 116688,
+      "sha256": "2011105ec918d6f7af31262b9434e6f3be69452068881c10744e2197c279c0cc",
+      "source_local_path": "docs/pm-redesign/play-pick-demo/onboarding-start.png",
+      "source_type": "actual_demo",
+      "public_url": null,
+      "related_deployed_preview_url": "/pm/previews/play-pick.mp4",
+      "proof": "Still from the 2026-09-11 continuous capture of the running original Vue UI (source commit c5e2f13) with current local Django and an isolated SQLite demo database; no API responses were mocked.",
+      "limitations": "Example account and scripted sample choices. This capture covers onboarding and first recommendations only; it does not validate external integrations or recommendation quality."
+    },
+    {
+      "file": "assets/play10-first-recommendations.png",
+      "page": "Play10",
+      "dimensions": [1585, 1189],
+      "bytes": 143893,
+      "sha256": "2b857f16081044117f0f5474b891a8e2949089c3c33cb23aa13a169f95aaa45d",
+      "source_local_path": "docs/pm-redesign/play-pick-demo/first-recommendations.png",
+      "source_type": "actual_demo",
+      "public_url": null,
+      "related_deployed_preview_url": "/pm/previews/play-pick.mp4",
+      "proof": "Captured endpoint of the same continuous original Vue UI demo. The capture manifest records eight preference signals, completion, and the resulting first-recommendation list.",
+      "limitations": "The displayed reason is regional information. Do not claim that the scripted onboarding choices alone changed recommendation order, or that any product metric was measured."
+    },
+    {
+      "file": "assets/aekkim8-review-payment.png",
+      "page": "Aekkim8",
+      "dimensions": [1080, 2340],
+      "bytes": 76611,
+      "sha256": "72f93a66a08125b78ebcbd52b5ab1e35b459edfd540b086acf519eae457e6e6d",
+      "source_local_path": "docs/pm-redesign/aekkim-demo/screenshots/02-review-payment.png",
+      "source_type": "actual_demo",
+      "public_url": null,
+      "related_deployed_preview_url": "/pm/previews/aekkim.mp4",
+      "proof": "Screenshot from an Android emulator running the existing Compose app UI in the com.ssafy.e106.demo offline APK. It shows the demo payment-review state described in the capture README.",
+      "limitations": "The demo uses an in-memory fixed response instead of server calls; no real payment information, live account, or production backend is shown."
+    },
+    {
+      "file": "assets/aekkim8-select-service.png",
+      "page": "Aekkim8",
+      "dimensions": [1080, 2340],
+      "bytes": 191239,
+      "sha256": "761e17618055277fb88956c21e7049576a74661f866f1ae945ab4dd4a2234485",
+      "source_local_path": "docs/pm-redesign/aekkim-demo/screenshots/03-select-service.png",
+      "source_type": "actual_demo",
+      "public_url": null,
+      "related_deployed_preview_url": "/pm/previews/aekkim.mp4",
+      "proof": "Screenshot from the same directly operated emulator demo, showing the service-selection bottom sheet after the review state.",
+      "limitations": "Service choices and values are demo fixtures; the screen does not prove external subscription matching or persisted production behavior."
+    },
+    {
+      "file": "assets/aekkim8-promotions-detail.png",
+      "page": "Aekkim8",
+      "dimensions": [1080, 2340],
+      "bytes": 152164,
+      "sha256": "daa3577ae9d9e3136a3ebe4eb943ffcd55b84a1c27430ea71121dc33ed09dd13",
+      "source_local_path": "docs/pm-redesign/aekkim-demo/recordings/screenshots/01-promotions-detail.png",
+      "source_type": "actual_demo",
+      "public_url": null,
+      "related_deployed_preview_url": null,
+      "proof": "Representative still from the 2026-09-11 directly operated Android emulator recording of the promotions detail view; the recordings README identifies it as the promotions flow.",
+      "limitations": "This is an offline demo with fixed example profile, benefits, and copy. It is supplementary evidence and is less directly paired with the payment-review flow than the two payment screenshots."
+    }
+  ]
+}

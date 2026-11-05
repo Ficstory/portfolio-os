@@ -1,0 +1,74 @@
+LOTTE AX Challenge 2026 포트폴리오 | 이재호 | 근거 요약
+자료 확인일: 2026-11-04 (Asia/Seoul)
+
+이 요약은 원문·코드·역할 기록을 대조한 공개용 설명이다. 비공개 대화, 개인 자료 본문, 계약·서명·인증 정보는 포함하지 않았다. 본문과 PDF에 핵심 증거를 싣고 링크는 보충 자료로만 사용한다.
+
+[J1] J-OS의 기억·검색·실행 구조
+원 자료: ai-agent-platform/docs/foundation/ARCHITECTURE.md, README.md.
+대화 원문과 파생 기억을 구분하고 원문 범위·해시·처리 위치를 보존한다. 등록 지식은 원문 구절·문서 버전·좌표·인용 ID와 함께 전달한다. React/Vite 웹, TypeScript/Fastify API, SQLite, 실행 모듈을 연결한 개인 프로젝트다. 실행 모듈은 API가 불러 사용하는 패키지이며 별도 분산 큐로 소개하지 않는다.
+
+[J2] J-OS 검색 엄격 기준 6 → 10 / 14
+원 기록: docs/agent-platform/KNOWLEDGE_EVIDENCE_COVERAGE_20261024.md.
+원 산출물: data/knowledge-consolidation-20261024/local-retrieval-review/oracle-baseline.json 및 oracle-candidate.json.
+평가 구현: .codex-run/knowledge-consolidation-20261024/local-oracle-evaluate.mjs.
+기본 코퍼스는 활성 일반 자료 325개다. 두 결과의 코퍼스·평가 기준 파일 해시가 같고 실제 입력 파일과도 일치하는 것을 대조했다. 고정 14개 질문의 strictPass를 재집계해 변경 전 6개, 변경 후 10개를 확인했다. 필요한 근거 구절, 금지 문서 배제, 원문·문서 버전·좌표·메타데이터 정합성, 발췌 전달 예산, 전체 코퍼스 검색 조건을 검사했다.
+메타데이터 미끼 항목은 같은 기본 자료에 고정 합성 문서 1개를 추가한 326개 조건이다. 산술 질문의 검색 필요 여부 불일치도 포함하는 strict 집계를 사용한다. 추가 질문의 누락·무관 자료 유입이 남아 있다. 새 모델의 최종 답변 정확도나 운영 성능을 측정한 결과가 아니다.
+
+[J3] J-OS 실행 관리·운영
+원 기록: EXECUTION_FOUNDATION_20261010.md, YUNA_ENTRY_DEPLOYMENT_20261030.md, README.md.
+실행 계획 검사, 단계 의존관계·시도·실행 키·결과·근거 보존, 회차 키·실행 임대 기반 중복 억제, 성공 산출물 재사용, 단계·시간·모델 호출 예산 관리가 로컬 구현·검증 기록에 있다.
+취소·재시작·부분 실패 등의 fixture 검증과 실제 외부 시스템의 종단 완료는 다르다. 개발 컨테이너 검증은 Docker 부재로 blocked였다. OCI 릴리스 전환·SQLite 백업·격리 복원·데이터 보존 확인과 10/30 진입 계약 변경의 운영 반영 기록을 별도로 읽었다. 운영 응답 속도 보장을 주장하지 않는다.
+이미지: reports/link-intent-desktop.png. 실제 UI에 모의 원문·모델 결과를 넣은 화면으로 example.com과 화면 검증 문구가 표시되어 있다. 운영 모델 응답의 증거가 아니다.
+
+[B1] 부산이음길 인터뷰와 요구사항
+원 프로젝트: S14P31E102.
+원 자료: Docs/기획/archive/research/2026-04-10_함세상_장애인자립생활센터_인터뷰_결과.md, Docs/PRD/2026-04-09_부산이음길_PRD.md.
+경사·단차·폭과 안전 정보, 선택 가능한 경로, 음성·화면 병행 요구를 확인했다. 기관 최초 연락·인터뷰 진행은 2026-09-26 본인 확인 기록이고, PRD·인터뷰 결과 정리의 작성은 원본 Git 기록으로 구분한다. 최초 제안자·최종 의사결정권 전체를 개인에게 귀속하지 않는다.
+본인 작성 기록: fdf5c02a(PRD), 7f4940ef(인터뷰 결과 정리), caf73609·19ebb31e·bf94dcdd(글자 크기 기반·연결·큰 글자 대응).
+
+[B2] 부산이음길 실제 코드
+FE/app/src/main/java/com/ssafy/e102/eumgil/data/route/RouteGeometryParser.kt: geometry 빈값·형식·좌표 오류 구분, 경로 좌표 변환.
+core/tts/TextToSpeechController.kt: Initializing/Ready/Unavailable, speak/stop/shutdown, 재생 상태.
+feature/textsize/TextSizeSettingViewModel.kt: 선택 시 repository 저장, 저장 상태 관찰.
+원본 Git의 지도 SDK·장소 검색·경로 API·TTS 구현 기록과 기여 분석 v2를 대조했다. 팀의 AI 시설물 탐지·경로 가중치·서버를 본인 모델 개발로 표현하지 않는다.
+테스트 코드 존재와 실제 기기·현장 검증 성공은 다르다. 이번 포트폴리오 작업에서 Android 테스트를 재실행하지 않았다.
+공개 프로젝트: https://github.com/busaneumgil/busaneumgil
+시연: https://ficstory.dev/pm-improved/busan/route-search-v2.mp4
+사진은 원본 앱 시연의 정지 화면이며 현장 안전성 측정 결과가 아니다. busan-font-size.jpg는 font-size-v2.mp4의 10초, busan-route-29s.jpg는 route-search-v2.mp4의 29초를 추출했다. 사용자 유형 화면은 기존 공개 busan-low-vision.png다.
+
+[A1] 애낌 분석 흐름과 역할
+원 프로젝트: S14P21E106.
+AnalysisPipelineOrchestrator.kt: 결제 준비 → catalog → UsageStats → 정규화 → 후보 추출 → 규칙 → 일괄 조회 → AI resolver → 결과 저장.
+일괄 조회 실패 시 createBatchLookupFallback을 사용한다. 결과를 병합하고 AnalysisHandoffRepository에 넘긴다.
+본인 대표 커밋: c516317, 9f193c3(분석 흐름·계약 통합), 97ac7e3(초기 후보 화면), d5ffadd(후보 재생성·남은 수).
+FastText·XGBoost 모델과 추론 엔진은 AI 담당 팀원 백수연의 구현이다. 본인은 팀장·PM·프론트엔드로 분석 흐름 연결, 계약·fallback, 결과·실패 상태, 사용자 확인 화면과 서비스 통합을 맡았다. 파일 전체의 단독 작성자로 주장하지 않는다.
+
+[A2] 애낌 상태 수정·QA·수상
+SubscriptionRepository.kt: seedPendingReviewsFromAnalysisSession에서 latestPendingReviewSeedKey가 같으면 재초기화하지 않는다. 원본 d5ffadd 변경과 기여 분석을 확인했다.
+OnDeviceAiContractsTest.kt: JSON 객체·배열 파싱과 ID·허용 서비스 계약 검사 코드가 있다. 기존 계약의 테스트 코드이며 최신 FastText/XGBoost의 예측 정확도를 평가한 검사가 아니다. 이번에 Android 테스트를 재실행하지 않았다.
+구독 생성 요청·실패 처리 b8de9e8은 김응서, 번들·관련 실패 보완 0f4e00a는 박규빈 기여로 구분한다.
+포트폴리오 데모는 기존 Compose UI·ViewModel에 예시 API 응답을 주는 오프라인 실행이다. 실제 결제 수집·AI 추론·운영 백엔드의 검증은 아니다. 등록 후 화면은 docs/pm-redesign/aekkim-demo/screenshots/05-dashboard-after.png를 사용했다.
+상장 원본 이미지 확인: 2026-03-30, 삼성청년SW·AI아카데미 특화 프로젝트, 우수상, 부울경 1반 3등, 이재호 포함 5인 팀 수상. 상장 원본의 다른 개인정보는 공개하지 않는다.
+데모: https://ficstory.dev/pm/previews/aekkim.mp4
+공개 결과 저장소: https://github.com/Ficstory/aekkim (원본 GitLab 상세 이력과 다른 이관 스냅샷이므로 개인 기여는 원 이력으로 확인).
+
+[S1] 웃지마게임
+260115_설문조사결과_분석.pdf와 기존 공개 발췌를 확인했다. 168건 중 흥미 긍정 92, 참여 의향 긍정 75, 얼굴 공개 매우·꽤 부담 각 56으로 합계 112. 원 응답 데이터는 미확보다. 남성·24~29세 중심 표본이며 모집단 대표성·참여율 개선을 주장하지 않는다.
+설문 문항·분석과 기능 명세, 친구 초대 로그인 복귀·입장·대기 구현이 본인 기여다. 팀 랜덤 매칭 시연을 개인 구현 시연으로 쓰지 않는다.
+https://ficstory.dev/pm/sources/smile-survey.txt
+
+[S2] Play Pick
+원 저장소 c5e2f13, 본인 온보딩 커밋 6fde165·e51d2d3 및 명세. 선호·중립·비선호 입력과 저장·완료 처리, 예시 계정의 호불호 8개 저장과 추천 조회를 확인한 데모 기록이 있다. 추천 엔진은 팀원 구현이며 8개는 구현 기준이다. 추천 품질·완료율 최적화를 측정하지 않았다.
+시연은 원본 UI, 예시 계정, 보관된 공연 임베딩과 별도 DB를 이용했다. 영상은 조작 대기 구간을 줄인 편집본이다.
+https://ficstory.dev/pm/sources/play-pick-onboarding.txt
+
+[L1] LOTTE 공식 안내 최신 재확인
+2026-11-04 브라우저에서 공식 모집 공고와 펼친 FAQ 본문 확인.
+https://lotteaxchallenge.com/jobs/RC20261015037730
+https://lotteaxchallenge.com/faq
+접수 마감 2026-11-04 23:59. 롯데칠성음료 요구는 가상 소비자 반응 시뮬레이션, 검증 서비스 아키텍처·운영 프로세스 기획이다. 공개 평가축은 비즈니스 임팩트, AI 에이전트 완성도, AI 이해 및 활용 역량. 예선 FAQ는 내부 평가 기준을 안내하며 확정 배점은 확인되지 않았다.
+포트폴리오는 AI 역량 추가 확인 용도. 기존 실제 입력폼 기록의 첨부 안내는 100MB 이하이며, 이번에는 로그인된 최신 입력폼을 확인하지 못했다. 첨부 개수·파일별/전체 용량 단위는 제출 직전 확인이 필요하다. 제출 PDF는 사용자 지시에 따라 모든 페이지를 16:9로 구성했다. 12쪽은 편집 제안이며 공식 제한이 아니다.
+
+[L2] 현재 기획
+롯데 AX챌린지/docs/application-draft-2026-11-04.md, persona-choice-architecture-2026-11-03.md, README.md.
+Nemotron-Personas-Korea 기본 소스, 고유 가상 소비자 최소 1만 명 구성 계획, 기존 시장에 신제품 투입 전후 비교. 시장·패널·상황을 고정하고 경쟁·대체 관계를 분석한다. 시장 DB 구축·1만 명 실행·시뮬레이터 구현 완료가 아니다. 합성 반응은 실제 소비자 선택 정답이 아니며 기업 자료가 사용 가능할 때 보정·검증을 연결할 계획이다.

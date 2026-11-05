@@ -8,13 +8,13 @@ Run commands from the repository root.
 npm run til:validate
 ```
 
-Validation checks config shape, required metadata and sections, filename/slug/status alignment, duplicate IDs/slugs, allowed categories, action/resource syntax, URL shape, and related-TIL targets across drafts and published entries.
+Validation checks config shape, required metadata, journal or reflection body rules, filename/slug/status alignment, duplicate IDs/slugs, allowed categories, action/resource syntax, URL shape, referenced media, and related-TIL targets across drafts and published entries.
 
 `npm run build` also runs `scripts/til-build-check.mjs` afterward. It rejects deployment file traces that include `content/til/drafts/` (Markdown or media); keep the matching exclusion in `next.config.ts` when changing the loader.
 
 ## Publish
 
-Only after the user confirms the exact draft slug is ready for public repository content:
+Use this command for the exact reviewed entry when publication is authorized. “이 글을 TIL 페이지에 올려줘” or an equivalent request about the discussed entry provides that intent; do not request the same approval again. “정리해줘” or “초안으로 남겨줘” alone does not authorize publication. If intent is missing, finish the reviewable private draft before asking whether to publish it.
 
 ```powershell
 node --experimental-strip-types scripts/til-content.mjs publish <slug>
@@ -32,7 +32,7 @@ The command moves only the named published record and its referenced source medi
 
 ## Delete
 
-Confirm the exact slug and scope with the user, then run one of:
+Resolve the exact slug and deletion scope from the user's request or existing session authorization. Ask only if either is missing, then run one of:
 
 ```powershell
 node --experimental-strip-types scripts/til-content.mjs delete <slug> --scope drafts
@@ -45,7 +45,16 @@ Deletion removes the Markdown and generated public media. It retains source medi
 
 ## Create and update boundary
 
-There is intentionally no create/update CLI. After conversational review, use `apply_patch` to add or edit the exact Markdown file, then validate. Publication changes public build input; deploying the site remains a separate repository/deployment action.
+There is intentionally no create/update CLI. Use `apply_patch` to add or edit the exact Markdown file, then validate. Patch an existing entry in place, preserving its ID, slug, learning date, and `createdAt`; change the learning date only when correcting it. Update `updatedAt` on every content edit. New records default to `format: journal`. A format conversion preserves content, ordered media, prompt fences, actions, and links rather than summarizing them away.
+
+## From conversation to the TIL page
+
+1. Prepare a readable first-person draft grounded in the user's account and supplied artifacts. Show enough of the title and body for review, or point to the saved source. Resolve material factual gaps and requested corrections. Do not make the user fill the old seven-section questionnaire.
+2. For a new authorized page update, run the publish command for that slug and then `npm run til:validate`. For a correction to an already published entry, patch the same source and validate; no unpublish/publish round trip is needed. Use `npm run til:media` for published media changes with an active dev server. For draft-only work, stop with the private source file.
+3. Check the affected local reader, title, search/list entry, media, prompt expansion, and related documents. Drafts must remain outside public routes and builds. Review a private draft in its Markdown source; use a disposable content tree for automated or rendered draft evaluations rather than publishing test content into the operational archive.
+4. When the request includes updating the online page, identify the existing deployment route from repository configuration and current session evidence. Check the current branch, remote, and user changes. Commit or push only the intended entry, its required media, and any necessary supporting changes through that established route, within the user's authorization. A publication command alone does not deploy the site. Do not guess a deployment target or create a new hosting project.
+5. Run checks required by that deployment route, observe completion, and open `https://ficstory.dev/til/future-dream/?entry=<slug>`. Verify the changed content, title, list entry, and any affected media. For an unpublish/delete page update, verify the entry is absent from the online list and its old selector no longer opens that entry. If deployment access or the existing route is unavailable, preserve the validated sources and report the specific remaining step.
+6. State the actual result and link the verified online entry. Distinguish a private draft, published source awaiting deployment, and an online update. Do not report an attempted deployment as a completed page update.
 
 ## Isolated lifecycle testing
 

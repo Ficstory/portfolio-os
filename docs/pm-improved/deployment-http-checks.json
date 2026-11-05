@@ -1,0 +1,51 @@
+{
+  "result": "pass",
+  "checkedAt": "2026-09-14T11:52:05.689Z",
+  "origin": "https://ficstory.dev",
+  "protectedFiles": 168,
+  "pages": [
+    "/PM/",
+    "/PM/smile-game/",
+    "/PM/aekkim/",
+    "/PM/busan-eumgil/",
+    "/PM/play-pick/",
+    "/pm/",
+    "/pm/smile-game/",
+    "/pm/aekkim/",
+    "/pm/busan-eumgil/",
+    "/pm/play-pick/",
+    "/",
+    "/resume/",
+    "/PM1/"
+  ],
+  "localTargets": 65,
+  "redirectChecks": [
+    {
+      "route": "/PM",
+      "status": 308,
+      "location": "/PM/?from=case-check"
+    },
+    {
+      "route": "/PM/smile-game",
+      "status": 308,
+      "location": "/PM/smile-game/?from=case-check"
+    },
+    {
+      "route": "/PM/aekkim",
+      "status": 308,
+      "location": "/PM/aekkim/?from=case-check"
+    },
+    {
+      "route": "/PM/busan-eumgil",
+      "status": 308,
+      "location": "/PM/busan-eumgil/?from=case-check"
+    },
+    {
+      "route": "/PM/play-pick",
+      "status": 308,
+      "location": "/PM/play-pick/?from=case-check"
+    }
+  ],
+  "rscRequests": 4,
+  "externalLinksNotFetched": []
+}

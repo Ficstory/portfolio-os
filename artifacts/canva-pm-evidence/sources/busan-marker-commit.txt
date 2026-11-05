@@ -1,0 +1,15 @@
+commit ac698b34796d393d451fe0eaf52b4c8685c2ba1e
+Author:     이재호 <ljh4367@naver.com>
+AuthorDate: Sat May 9 13:52:28 2026 +0900
+Commit:     이재호 <ljh4367@naver.com>
+CommitDate: Sat May 9 13:52:28 2026 +0900
+
+    🐛 Fix[S14P31E102-436]: 지도 선택 핀 고정 렌더링과 카메라 제스처 동기화 보정
+
+ .../com/ssafy/e102/eumgil/feature/map/MapScreen.kt | 13 +++----
+ .../feature/map/component/KakaoMapViewport.kt      | 43 +++++++++++++++++-----
+ .../map/component/KakaoMapViewportBindings.kt      | 16 ++++++++
+ .../eumgil/feature/map/component/MapViewport.kt    |  4 +-
+ .../main/res/drawable/ic_map_selected_pin_blue.xml |  4 +-
+ .../map/component/KakaoMapViewportBindingsTest.kt  | 25 +++++++++++++
+ 6 files changed, 85 insertions(+), 20 deletions(-)

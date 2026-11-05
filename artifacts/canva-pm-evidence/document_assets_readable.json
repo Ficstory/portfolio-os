@@ -1,0 +1,113 @@
+{
+  "collection": "Canva PM portfolio concise readable Markdown excerpt renders",
+  "render_label": "원문 발췌 · Markdown 렌더",
+  "handling": {
+    "new_variants_only": true,
+    "generated_ui": false,
+    "source_body_text_verbatim": true,
+    "omission_marker": "[중간 생략] appears only between declared noncontiguous source ranges."
+  },
+  "assets": [
+    {
+      "file": "assets/p07-requirements-readable.png",
+      "page": "p07",
+      "dimensions": [
+        1500,
+        850
+      ],
+      "sha256": "f576bc233966333234222e86de234ce98b7b236ea9f1bfead60170890be1d5ac",
+      "source_local_path": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\3. 특화pjt\\S14P21E106\\docs\\2026-03-21_요구사항정의서_v2_AEKKIM.md",
+      "copied_source_path": "sources/original-docs/2026-03-21_요구사항정의서_v2_AEKKIM.md",
+      "source_sha256": "a03c0a2a461e34b5e33812ab6dcf854bc28b2ceadae72054ac22b5683ac156ce",
+      "source_line_ranges": [
+        [
+          83,
+          83
+        ],
+        [
+          87,
+          87
+        ],
+        [
+          100,
+          100
+        ],
+        [
+          107,
+          107
+        ]
+      ],
+      "inserted_display_text": "[중간 생략]",
+      "source_type": "original_markdown",
+      "rendering": "Original text rendered from copied Markdown source with visual line wrapping only. No wording was changed.",
+      "footer_clearance_px": 81,
+      "limitations": "현행 요구사항 문서의 선택 발췌다. 문서의 구현 상태는 개인 기여나 라이브 서비스 동작의 증거가 아니다."
+    },
+    {
+      "file": "assets/p07-screen-spec-readable.png",
+      "page": "p07",
+      "dimensions": [
+        1500,
+        850
+      ],
+      "sha256": "6d91acb55396e3b824d4b391a69d7bd62bcc45413ce13bbae3796dd71874e80e",
+      "source_local_path": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\3. 특화pjt\\S14P21E106\\docs\\2026-03-21_화면명세서_v2_AEKKIM.md",
+      "copied_source_path": "sources/original-docs/2026-03-21_화면명세서_v2_AEKKIM.md",
+      "source_sha256": "e827aefb75c7a5fa06fd173a01031bb5e76a7f9fa4e4b994e9bda9188c4abda3",
+      "source_line_ranges": [
+        [
+          99,
+          99
+        ],
+        [
+          103,
+          103
+        ],
+        [
+          105,
+          105
+        ],
+        [
+          126,
+          126
+        ],
+        [
+          130,
+          130
+        ],
+        [
+          132,
+          132
+        ]
+      ],
+      "inserted_display_text": "[중간 생략]",
+      "source_type": "original_markdown",
+      "rendering": "Original text rendered from copied Markdown source with visual line wrapping only. No wording was changed.",
+      "footer_clearance_px": 211,
+      "limitations": "화면명세서의 선택 발췌다. 실제 실행 화면이나 개인별 완료 작업을 주장하지 않는다."
+    },
+    {
+      "file": "assets/p05-meeting-readable.png",
+      "page": "p05",
+      "dimensions": [
+        1700,
+        1050
+      ],
+      "sha256": "8d36c71b501684b9342bee039a4b396b552a5199336490c8cf9002393dd1d8ab",
+      "source_local_path": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\2. 공통pjt\\S14P11E207\\docs\\이재호\\회의록\\260114_회의록.md",
+      "copied_source_path": "sources/original-docs/260114_회의록.md",
+      "source_sha256": "eff112e377a294c3dcb4ab1df78708f24f6293a0f9bffbc41e32e511e519224d",
+      "source_line_ranges": [
+        [
+          32,
+          45
+        ]
+      ],
+      "inserted_display_text": null,
+      "source_type": "original_markdown",
+      "rendering": "Original text rendered from copied Markdown source with visual line wrapping only. No wording was changed.",
+      "footer_clearance_px": 71,
+      "limitations": "회의록의 결정 블록 발췌다. 개인별 역할이나 이후 구현 완료를 보여주지 않는다."
+    }
+  ]
+}

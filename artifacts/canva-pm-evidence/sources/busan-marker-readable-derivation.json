@@ -1,0 +1,21 @@
+{
+  "file": "assets/busan9-marker-change-readable.png",
+  "dimensions": [
+    1000,
+    500
+  ],
+  "sha256": "aa251c435249de4cfa8808ac0a458764cdcbd88c8b95991983df5a768c0cfa83",
+  "source": "sources/busan-marker-log-verbatim.txt",
+  "source_sha256": "13fd271c2ab663eb076619cb9ddb6912cbda7aa6dac41ff0aa2e1b671d2788ef",
+  "source_type": "original_git_text",
+  "method": "Original commit subject rendered as readable text; the Fix tag and issue number are intentionally omitted from the displayed title only.",
+  "displayed_verbatim_title": "지도 선택 핀 고정 렌더링과 카메라 제스처 동기화 보정",
+  "displayed_metadata": {
+    "commit": "ac698b3",
+    "date": "2026-05-09",
+    "author": "이재호"
+  },
+  "crop": false,
+  "proof_scope": "Shows the original Git commit subject and author/date metadata.",
+  "limitations": "A commit-log render does not demonstrate runtime map behavior, user testing, or production deployment."
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "name": "PM-home",
+    "url": "https://ficstory.dev/PM/",
+    "status": 200,
+    "textFile": "PM-home.txt",
+    "links": [
+      {
+        "href": "#work",
+        "text": "프로젝트와 맡은 일 보기"
+      },
+      {
+        "href": "#about",
+        "text": "경력·이력서 보기"
+      },
+      {
+        "href": "mailto:dlwo4367@gmail.com",
+        "text": "이메일로 연락하기"
+      },
+      {
+        "href": "/PM/smile-game/",
+        "text": "웃지마게임"
+      },
+      {
+        "href": "/PM/busan-eumgil/",
+        "text": "부산이음길"
+      },
+      {
+        "href": "/PM/aekkim/",
+        "text": "애낌"
+      },
+      {
+        "href": "/PM/play-pick/",
+        "text": "Play Pick"
+      },
+      {
+        "href": "/PM/smile-game/",
+        "text": "웃지마게임"
+      },
+      {
+        "href": "/PM/smile-game/",
+        "text": "프로젝트 상세 보기"
+      },
+      {
+        "href": "/PM/aekkim/",
+        "text": "AEKKIM · 애낌"
+      },
+      {
+        "href": "/PM/aekkim/",
+        "text": "프로젝트 상세 보기"
+      },
+      {
+        "href": "/pm/previews/aekkim.mp4",
+        "text": "크게 보기"
+      },
+      {
+        "href": "/PM/busan-eumgil/",
+        "text": "부산이음길"
+      },
+      {
+        "href": "/PM/busan-eumgil/",
+        "text": "프로젝트 상세 보기"
+      },
+      {
+        "href": "/PM/play-pick/",
+        "text": "Play Pick"
+      },
+      {
+        "href": "/PM/play-pick/",
+        "text": "프로젝트 상세 보기"
+      },
+      {
+        "href": "/pm/previews/play-pick.mp4",
+        "text": "크게 보기"
+      },
+      {
+        "href": "/PM/aekkim/",
+        "text": "프로젝트 보기"
+      },
+      {
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "text": "이력서 보기 (PDF) 새 탭에서 열림"
+      },
+      {
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.docx",
+        "text": "Word 원본 다운로드"
+      }
+    ],
+    "imageUrls": []
+  },
+  {
+    "name": "PM-smile-game",
+    "url": "https://ficstory.dev/PM/smile-game/",
+    "status": 200,
+    "textFile": "PM-smile-game.txt",
+    "links": [
+      {
+        "href": "/PM/#work",
+        "text": "선택한 작업으로"
+      },
+      {
+        "href": "#problem",
+        "text": "문제"
+      },
+      {
+        "href": "#evidence",
+        "text": "근거"
+      },
+      {
+        "href": "#decision",
+        "text": "판단"
+      },
+      {
+        "href": "#action",
+        "text": "실행"
+      },
+      {
+        "href": "#collaboration",
+        "text": "역할 분담"
+      },
+      {
+        "href": "#result",
+        "text": "구현 결과"
+      },
+      {
+        "href": "#learning",
+        "text": "배움"
+      },
+      {
+        "href": "/pm/previews/smile.mp4",
+        "text": "크게 보기"
+      },
+      {
+        "href": "/PM/aekkim/",
+        "text": "AEKKIM · 애낌"
+      }
+    ],
+    "imageUrls": []
+  },
+  {
+    "name": "PM-aekkim",
+    "url": "https://ficstory.dev/PM/aekkim/",
+    "status": 200,
+    "textFile": "PM-aekkim.txt",
+    "links": [
+      {
+        "href": "/PM/#work",
+        "text": "선택한 작업으로"
+      },
+      {
+        "href": "/pm/previews/aekkim.mp4",
+        "text": "크게 보기"
+      },
+      {
+        "href": "#problem",
+        "text": "문제"
+      },
+      {
+        "href": "#evidence",
+        "text": "근거"
+      },
+      {
+        "href": "#decision",
+        "text": "판단"
+      },
+      {
+        "href": "#action",
+        "text": "실행"
+      },
+      {
+        "href": "#collaboration",
+        "text": "역할 분담"
+      },
+      {
+        "href": "#result",
+        "text": "구현 결과"
+      },
+      {
+        "href": "#learning",
+        "text": "배움"
+      },
+      {
+        "href": "/PM/busan-eumgil/",
+        "text": "부산이음길"
+      }
+    ],
+    "imageUrls": []
+  },
+  {
+    "name": "PM-busan-eumgil",
+    "url": "https://ficstory.dev/PM/busan-eumgil/",
+    "status": 200,
+    "textFile": "PM-busan-eumgil.txt",
+    "links": [
+      {
+        "href": "/PM/#work",
+        "text": "선택한 작업으로"
+      },
+      {
+        "href": "#problem",
+        "text": "기획"
+      },
+      {
+        "href": "#evidence",
+        "text": "지도 개발"
+      },
+      {
+        "href": "#decision",
+        "text": "추가 구현"
+      },
+      {
+        "href": "#action",
+        "text": "주요 산출물"
+      },
+      {
+        "href": "#collaboration",
+        "text": "역할 분담"
+      },
+      {
+        "href": "#result",
+        "text": "팀 결과"
+      },
+      {
+        "href": "#learning",
+        "text": "배움"
+      },
+      {
+        "href": "/pm/previews/busan.mp4",
+        "text": "크게 보기"
+      },
+      {
+        "href": "/PM/play-pick/",
+        "text": "Play Pick"
+      }
+    ],
+    "imageUrls": [
+      "/pm-improved/evidence/busan-mvp-meeting.png",
+      "/pm-improved/evidence/busan-route-map.png"
+    ]
+  },
+  {
+    "name": "PM-play-pick",
+    "url": "https://ficstory.dev/PM/play-pick/",
+    "status": 200,
+    "textFile": "PM-play-pick.txt",
+    "links": [
+      {
+        "href": "/PM/#work",
+        "text": "선택한 작업으로"
+      },
+      {
+        "href": "/pm/previews/play-pick.mp4",
+        "text": "크게 보기"
+      },
+      {
+        "href": "#problem",
+        "text": "문제"
+      },
+      {
+        "href": "#evidence",
+        "text": "근거"
+      },
+      {
+        "href": "#decision",
+        "text": "판단"
+      },
+      {
+        "href": "#action",
+        "text": "실행"
+      },
+      {
+        "href": "#collaboration",
+        "text": "역할 분담"
+      },
+      {
+        "href": "#result",
+        "text": "구현 결과"
+      },
+      {
+        "href": "#learning",
+        "text": "배움"
+      },
+      {
+        "href": "/PM/smile-game/",
+        "text": "웃지마게임"
+      }
+    ],
+    "imageUrls": []
+  }
+]

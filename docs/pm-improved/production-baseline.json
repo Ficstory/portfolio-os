@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-09-14T09:55:55.722Z",
+  "checks": [
+    {
+      "path": "/pm/",
+      "status": 200,
+      "server": "Vercel",
+      "matchedPath": "/pm",
+      "mainContentEqual": true
+    },
+    {
+      "path": "/pm/smile-game/",
+      "status": 200,
+      "server": "Vercel",
+      "matchedPath": "/pm/smile-game",
+      "mainContentEqual": true
+    },
+    {
+      "path": "/pm/aekkim/",
+      "status": 200,
+      "server": "Vercel",
+      "matchedPath": "/pm/aekkim",
+      "mainContentEqual": true
+    },
+    {
+      "path": "/pm/busan-eumgil/",
+      "status": 200,
+      "server": "Vercel",
+      "matchedPath": "/pm/busan-eumgil",
+      "mainContentEqual": true
+    },
+    {
+      "path": "/pm/play-pick/",
+      "status": 200,
+      "server": "Vercel",
+      "matchedPath": "/pm/play-pick",
+      "mainContentEqual": true
+    },
+    {
+      "path": "/resume/",
+      "status": 200,
+      "server": "Vercel",
+      "matchedPath": "/resume",
+      "mainContentEqual": true
+    }
+  ],
+  "uppercaseBeforeDeployment": {
+    "status": 404,
+    "location": null
+  },
+  "deployed": false
+}

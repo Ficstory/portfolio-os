@@ -1,0 +1,161 @@
+{
+  "responsive": [
+    {
+      "clientWidth": 1425,
+      "fontSize": "36px",
+      "groups": [
+        "경력",
+        "학력·교육",
+        "대외활동",
+        "수상",
+        "기술·협업 도구"
+      ],
+      "hero": "팀이 같은 기준으로 일하도록,기획과 개발을 연결합니다.",
+      "links": [
+        {
+          "download": null,
+          "href": "/PM/aekkim/",
+          "target": null,
+          "text": "프로젝트 보기 "
+        },
+        {
+          "download": null,
+          "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+          "target": "_blank",
+          "text": "이력서 보기 (PDF)새 탭에서 열림"
+        },
+        {
+          "download": "이재호_PM_이력서.docx",
+          "href": "/pm-improved/resume/lee-jaeho-pm-resume.docx",
+          "target": null,
+          "text": "Word 원본 다운로드"
+        }
+      ],
+      "missing": [],
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "clientWidth": 753,
+      "fontSize": "25px",
+      "groups": [
+        "경력",
+        "학력·교육",
+        "대외활동",
+        "수상",
+        "기술·협업 도구"
+      ],
+      "hero": "팀이 같은 기준으로 일하도록,기획과 개발을 연결합니다.",
+      "links": [
+        {
+          "download": null,
+          "href": "/PM/aekkim/",
+          "target": null,
+          "text": "프로젝트 보기 "
+        },
+        {
+          "download": null,
+          "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+          "target": "_blank",
+          "text": "이력서 보기 (PDF)새 탭에서 열림"
+        },
+        {
+          "download": "이재호_PM_이력서.docx",
+          "href": "/pm-improved/resume/lee-jaeho-pm-resume.docx",
+          "target": null,
+          "text": "Word 원본 다운로드"
+        }
+      ],
+      "missing": [],
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "clientWidth": 375,
+      "fontSize": "24px",
+      "groups": [
+        "경력",
+        "학력·교육",
+        "대외활동",
+        "수상",
+        "기술·협업 도구"
+      ],
+      "hero": "팀이 같은 기준으로 일하도록,기획과 개발을 연결합니다.",
+      "links": [
+        {
+          "download": null,
+          "href": "/PM/aekkim/",
+          "target": null,
+          "text": "프로젝트 보기 "
+        },
+        {
+          "download": null,
+          "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+          "target": "_blank",
+          "text": "이력서 보기 (PDF)새 탭에서 열림"
+        },
+        {
+          "download": "이재호_PM_이력서.docx",
+          "href": "/pm-improved/resume/lee-jaeho-pm-resume.docx",
+          "target": null,
+          "text": "Word 원본 다운로드"
+        }
+      ],
+      "missing": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "clientWidth": 345,
+      "fontSize": "24px",
+      "groups": [
+        "경력",
+        "학력·교육",
+        "대외활동",
+        "수상",
+        "기술·협업 도구"
+      ],
+      "hero": "팀이 같은 기준으로 일하도록,기획과 개발을 연결합니다.",
+      "links": [
+        {
+          "download": null,
+          "href": "/PM/aekkim/",
+          "target": null,
+          "text": "프로젝트 보기 "
+        },
+        {
+          "download": null,
+          "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+          "target": "_blank",
+          "text": "이력서 보기 (PDF)새 탭에서 열림"
+        },
+        {
+          "download": "이재호_PM_이력서.docx",
+          "href": "/pm-improved/resume/lee-jaeho-pm-resume.docx",
+          "target": null,
+          "text": "Word 원본 다운로드"
+        }
+      ],
+      "missing": [],
+      "scrollWidth": 345,
+      "width": 360
+    }
+  ],
+  "navigation": [
+    {
+      "action": "header Experience link",
+      "url": "http://127.0.0.1:3211/PM/#about"
+    },
+    {
+      "action": "award project link",
+      "url": "http://127.0.0.1:3211/PM/aekkim/",
+      "h1": "AEKKIM · 애낌"
+    }
+  ],
+  "source": "Attached resume DOCX",
+  "checkedAt": "2026-09-14T11:24:20.461Z",
+  "console": [],
+  "sourceSha256": "b70a77de0a979d579b2170f228d712940a4638703f0ea97aac67f8a04da46195",
+  "sourceFactChecks": 28,
+  "finishedAt": "2026-09-14T11:24:54.828Z"
+}

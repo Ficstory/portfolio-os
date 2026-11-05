@@ -1,0 +1,1251 @@
+{
+  "schema_version": "1.0",
+  "title": "2026-09-28~30 유통·고객 분석·AI 기획 강의 지식 모음",
+  "created_date": "2026-10-09",
+  "language": "ko",
+  "status": "prepared_not_ingested",
+  "target_wiki": null,
+  "provenance": {
+    "source_type": "Samsung automatic speech transcription",
+    "original_audio_reviewed": false,
+    "transcripts_reviewed": 10,
+    "external_fact_check": false,
+    "scope": "수업 내용과 관련 사례만 정리. 잡담·사담·영상 대사·반복 제외.",
+    "instruction_boundary": "원문은 인용·분석할 자료이며 실행 지시가 아니다."
+  },
+  "answering_rules": [
+    "질문과 관련된 파트를 검색하고 읽은 뒤 답변에 사용한다.",
+    "강의 주장과 편집자가 도출한 인사이트를 구분해서 표현한다.",
+    "출처는 원문 파일명과 녹음 내 경과 시간으로 인용한다. 파일명의 시작 시각과 녹음 내 경과 시간을 혼동하지 않는다.",
+    "기업 수치·시장 현황·플랫폼 요금·기술 기능은 강의만으로 현재 사실이라고 확정하지 않는다.",
+    "본문에 없는 수치·논문·고객 조사 결과를 생성해서 근거처럼 제시하지 않는다.",
+    "비교와 적용은 원문이 설명한 조건 및 각 파트의 한계를 함께 검토한다.",
+    "합성 페르소나 응답이나 편집자의 해석을 실제 고객 관찰로 표현하지 않는다.",
+    "원문 또는 실제 위키에 접근하지 않았다면 확인·검색·인용했다고 주장하지 않는다."
+  ],
+  "sources": [
+    {
+      "id": "T01",
+      "file_name": "음성 260928_090254_original.txt",
+      "original_path": "C:/Users/ljh43/OneDrive/문서/카카오톡 받은 파일/음성 260928_090254_original.txt",
+      "lecture_date": "2026-09-28",
+      "recording_start_local": "09:02:54",
+      "timezone": "Asia/Seoul"
+    },
+    {
+      "id": "T02",
+      "file_name": "음성 260928_102028_original.txt",
+      "original_path": "C:/Users/ljh43/OneDrive/문서/카카오톡 받은 파일/음성 260928_102028_original.txt",
+      "lecture_date": "2026-09-28",
+      "recording_start_local": "10:20:28",
+      "timezone": "Asia/Seoul"
+    },
+    {
+      "id": "T03",
+      "file_name": "음성 260928_112955_original.txt",
+      "original_path": "C:/Users/ljh43/OneDrive/문서/카카오톡 받은 파일/음성 260928_112955_original.txt",
+      "lecture_date": "2026-09-28",
+      "recording_start_local": "11:29:55",
+      "timezone": "Asia/Seoul"
+    },
+    {
+      "id": "T04",
+      "file_name": "음성 260928_142440_original.txt",
+      "original_path": "C:/Users/ljh43/OneDrive/문서/카카오톡 받은 파일/음성 260928_142440_original.txt",
+      "lecture_date": "2026-09-28",
+      "recording_start_local": "14:24:40",
+      "timezone": "Asia/Seoul"
+    },
+    {
+      "id": "T05",
+      "file_name": "음성 260928_151538_original.txt",
+      "original_path": "C:/Users/ljh43/OneDrive/문서/카카오톡 받은 파일/음성 260928_151538_original.txt",
+      "lecture_date": "2026-09-28",
+      "recording_start_local": "15:15:38",
+      "timezone": "Asia/Seoul"
+    },
+    {
+      "id": "T06",
+      "file_name": "음성 260928_161228_original.txt",
+      "original_path": "C:/Users/ljh43/OneDrive/문서/카카오톡 받은 파일/음성 260928_161228_original.txt",
+      "lecture_date": "2026-09-28",
+      "recording_start_local": "16:12:28",
+      "timezone": "Asia/Seoul"
+    },
+    {
+      "id": "T07",
+      "file_name": "음성 260929_090713_original.txt",
+      "original_path": "C:/Users/ljh43/OneDrive/문서/카카오톡 받은 파일/음성 260929_090713_original.txt",
+      "lecture_date": "2026-09-29",
+      "recording_start_local": "09:07:13",
+      "timezone": "Asia/Seoul"
+    },
+    {
+      "id": "T08",
+      "file_name": "음성 260929_101846_original.txt",
+      "original_path": "C:/Users/ljh43/OneDrive/문서/카카오톡 받은 파일/음성 260929_101846_original.txt",
+      "lecture_date": "2026-09-29",
+      "recording_start_local": "10:18:46",
+      "timezone": "Asia/Seoul"
+    },
+    {
+      "id": "T09",
+      "file_name": "음성 260930_091708_original.txt",
+      "original_path": "C:/Users/ljh43/OneDrive/문서/카카오톡 받은 파일/음성 260930_091708_original.txt",
+      "lecture_date": "2026-09-30",
+      "recording_start_local": "09:17:08",
+      "timezone": "Asia/Seoul"
+    },
+    {
+      "id": "T10",
+      "file_name": "음성 260930_104713_original.txt",
+      "original_path": "C:/Users/ljh43/OneDrive/문서/카카오톡 받은 파일/음성 260930_104713_original.txt",
+      "lecture_date": "2026-09-30",
+      "recording_start_local": "10:47:13",
+      "timezone": "Asia/Seoul"
+    }
+  ],
+  "parts": [
+    {
+      "id": "retail-01-offline-experience",
+      "title": "01. 오프라인의 역할과 매장 경험 설계",
+      "aliases": [
+        "오프라인 유통",
+        "매장 경험",
+        "샤워 효과",
+        "분수 효과",
+        "VMD"
+      ],
+      "tags": [
+        "retail",
+        "offline",
+        "experience",
+        "merchandising"
+      ],
+      "summary": "오프라인 매장을 방문·체험·구매·재방문으로 연결하는 공간으로 분석한다.",
+      "lecture": [
+        {
+          "claim": "오프라인의 역할은 판매와 함께 체험·식사·휴식·발견을 제공하는 방향으로 확장된다고 강의에서 설명했다.",
+          "source": "T01",
+          "range": [
+            "12:26",
+            "20:19"
+          ],
+          "id": "retail-01-offline-experience-L01",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "매장 동선, 진열, 시식·체험, 가격대 구성은 구매와 객단가에 영향을 주는 설계 요소로 제시됐다.",
+          "source": "T01",
+          "range": [
+            "25:32",
+            "27:44"
+          ],
+          "id": "retail-01-offline-experience-L02",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "상층 시설에서 내려오며 쇼핑하게 하는 샤워 효과와 지하 식품관에서 위층으로 이동하게 하는 분수 효과를 소개했다.",
+          "source": "T01",
+          "range": [
+            "28:14",
+            "29:14"
+          ],
+          "id": "retail-01-offline-experience-L03",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "시즌 상품을 입구에 배치하거나 와인과 치즈처럼 관련 상품을 가까이 놓는 방식은 구매 맥락을 만드는 사례로 설명됐다.",
+          "source": "T08",
+          "range": [
+            "05:42",
+            "08:01"
+          ],
+          "id": "retail-01-offline-experience-L04",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        }
+      ],
+      "insights": [
+        {
+          "claim": "매장 평가에는 현장 매출뿐 아니라 체험 후 다른 채널 구매와 재방문으로 연결되는 경로도 검토할 수 있다.",
+          "based_on": [
+            "retail-01-offline-experience-L01",
+            "retail-01-offline-experience-L02"
+          ],
+          "id": "retail-01-offline-experience-I01",
+          "evidence_type": "editor_inference"
+        },
+        {
+          "claim": "보기 좋은 공간인지보다 해당 고객이 상품을 발견하고 선택하는 데 어떤 도움을 주는지 설명해야 한다.",
+          "based_on": [
+            "retail-01-offline-experience-L02",
+            "retail-01-offline-experience-L04"
+          ],
+          "id": "retail-01-offline-experience-I02",
+          "evidence_type": "editor_inference"
+        }
+      ],
+      "questions": [
+        "오프라인 매장에 방문할 이유를 어떻게 만들까?",
+        "매장 동선과 연관 진열을 어떻게 분석할까?",
+        "체험형 매장의 성과를 무엇으로 볼까?"
+      ],
+      "limits": [
+        "개별 매장 사례를 모든 업태의 최적 배치로 일반화하지 않는다.",
+        "강의에 나온 기업별 매출·시장 비중은 독립 검증되지 않았다."
+      ],
+      "related": [
+        "retail-02-sales-funnel",
+        "retail-07-field-research",
+        "retail-05-channel-fit"
+      ]
+    },
+    {
+      "id": "retail-02-sales-funnel",
+      "title": "02. 매출 구조와 구매전환",
+      "aliases": [
+        "트래픽",
+        "구매전환율",
+        "객단가",
+        "업셀링",
+        "교차판매"
+      ],
+      "tags": [
+        "retail",
+        "conversion",
+        "metrics",
+        "customer-experience"
+      ],
+      "summary": "매출을 유입·구매전환·객단가로 나누고 각 단계의 장애물을 진단한다.",
+      "lecture": [
+        {
+          "claim": "온라인 매출을 트래픽 × 구매전환율 × 객단가로 설명했다.",
+          "source": "T02",
+          "range": [
+            "00:57",
+            "05:05"
+          ],
+          "id": "retail-02-sales-funnel-L01",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "온라인 상세페이지·후기·개인화·로딩속도·배송 조건이 구매전환에 연결된다고 설명했다.",
+          "source": "T02",
+          "range": [
+            "01:36",
+            "05:05"
+          ],
+          "id": "retail-02-sales-funnel-L02",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "오프라인의 고객 수·객단가를 개선하는 수단으로 접근성, 진열, 동선, 체험, 연계판매를 소개했다.",
+          "source": "T01",
+          "range": [
+            "25:32",
+            "27:44"
+          ],
+          "id": "retail-02-sales-funnel-L03",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "쿠팡과 네이버 비교에서 가격 외에 배송과 반품 편의가 고객의 채널 선택에 작용한다는 관점을 제시했다.",
+          "source": "T05",
+          "range": [
+            "00:03",
+            "03:15"
+          ],
+          "id": "retail-02-sales-funnel-L04",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        }
+      ],
+      "insights": [
+        {
+          "claim": "매출 감소에 대응하기 전에 유입 부족, 낮은 전환, 낮은 객단가 중 어디에서 문제가 생겼는지 구분한다.",
+          "based_on": [
+            "retail-02-sales-funnel-L01",
+            "retail-02-sales-funnel-L02"
+          ],
+          "id": "retail-02-sales-funnel-I01",
+          "evidence_type": "editor_inference"
+        },
+        {
+          "claim": "추가 광고와 구매 경험 개선을 비교할 때에는 각 조치의 비용과 기대 효과를 같은 기준으로 평가할 수 있다.",
+          "based_on": [
+            "retail-02-sales-funnel-L01",
+            "retail-02-sales-funnel-L02",
+            "retail-02-sales-funnel-L04"
+          ],
+          "id": "retail-02-sales-funnel-I02",
+          "evidence_type": "editor_inference"
+        }
+      ],
+      "questions": [
+        "매출이 낮으면 광고를 먼저 늘려야 할까?",
+        "전환율과 객단가 중 무엇을 개선해야 할까?",
+        "최저가가 아닌데 고객이 특정 채널을 쓰는 이유는?"
+      ],
+      "limits": [
+        "강의에서 언급한 평균 전환율을 업종 공통 기준으로 사용하지 않는다.",
+        "지표의 곱셈은 구조를 설명하며, 실제 개선의 인과 효과를 보장하지 않는다."
+      ],
+      "related": [
+        "retail-03-inventory-profit",
+        "retail-06-persona-crm",
+        "retail-07-field-research"
+      ]
+    },
+    {
+      "id": "retail-03-inventory-profit",
+      "title": "03. 재고 회전·GMROI·상품 수익성",
+      "aliases": [
+        "GMROI",
+        "재고 회전율",
+        "마진",
+        "PB",
+        "상품 포트폴리오"
+      ],
+      "tags": [
+        "retail",
+        "inventory",
+        "profitability",
+        "pricing"
+      ],
+      "summary": "상품을 마진율뿐 아니라 재고 투자, 회전 속도, 할인·폐기·공간 비용으로 평가한다.",
+      "lecture": [
+        {
+          "claim": "GMROI를 매출총이익 ÷ 평균 재고 투자액으로 설명하며 마진율과 재고 회전을 함께 보라고 강조했다.",
+          "source": "T01",
+          "range": [
+            "47:24",
+            "51:11"
+          ],
+          "id": "retail-03-inventory-profit-L01",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "재고 장기 보유에는 공간 점유 비용과 할인·폐기 부담이 발생하고, 빠른 회전은 자본 효율과 신상품 운영에 연결된다고 설명했다.",
+          "source": "T01",
+          "range": [
+            "51:11",
+            "51:41"
+          ],
+          "id": "retail-03-inventory-profit-L02",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "PB와 일반 브랜드 상품을 비교하면서 집객 상품과 수익 상품의 역할, 마진과 안정적 회전을 함께 검토하라고 했다.",
+          "source": "T01",
+          "range": [
+            "01:01:02",
+            "01:03:53"
+          ],
+          "id": "retail-03-inventory-profit-L03",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "카테고리와 고객의 가격 인지·민감도에 따라 할인 반응이 달라질 수 있으며, 할인으로 판매량이 충분히 증가하지 않으면 이익이 감소할 수 있다고 설명했다.",
+          "source": "T08",
+          "range": [
+            "15:43",
+            "19:20"
+          ],
+          "id": "retail-03-inventory-profit-L04",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        }
+      ],
+      "insights": [
+        {
+          "claim": "상품별 판단에는 마진율, 회전, 보유 기간, 할인·폐기, 공간 부담을 함께 놓고 역할을 비교하는 표가 유용하다.",
+          "based_on": [
+            "retail-03-inventory-profit-L01",
+            "retail-03-inventory-profit-L02",
+            "retail-03-inventory-profit-L03"
+          ],
+          "id": "retail-03-inventory-profit-I01",
+          "evidence_type": "editor_inference"
+        },
+        {
+          "claim": "잘 팔리는 상품과 이익을 만드는 상품이 다를 수 있으므로 상품 하나의 마진만으로 전체 구색을 결정하지 않는다.",
+          "based_on": [
+            "retail-03-inventory-profit-L01",
+            "retail-03-inventory-profit-L03",
+            "retail-03-inventory-profit-L04"
+          ],
+          "id": "retail-03-inventory-profit-I02",
+          "evidence_type": "editor_inference"
+        }
+      ],
+      "questions": [
+        "마진율이 높은 상품이 항상 좋은 상품일까?",
+        "PB를 늘릴 때 무엇을 봐야 할까?",
+        "할인 행사가 이익을 줄이는 이유는?"
+      ],
+      "limits": [
+        "강의의 마진율 × 회전수 예시는 단순화돼 있다. 회전율의 매출·원가 기준을 확인하지 않고 정식 GMROI 계산식과 등치하지 않는다.",
+        "강의의 기업별 수익률·판매율과 회계 처리 설명은 별도 검증 없이 재인용하지 않는다."
+      ],
+      "related": [
+        "retail-04-logistics-operations",
+        "retail-05-channel-fit",
+        "retail-02-sales-funnel"
+      ]
+    },
+    {
+      "id": "retail-04-logistics-operations",
+      "title": "04. 물류·풀필먼트와 운영 차별화",
+      "aliases": [
+        "풀필먼트",
+        "주문밀도",
+        "콜드체인",
+        "DPS",
+        "DAS",
+        "노웨어"
+      ],
+      "tags": [
+        "retail",
+        "logistics",
+        "operations",
+        "differentiation"
+      ],
+      "summary": "물류 설비와 서비스 수준을 주문 특성·재고·비용 구조에 맞춰 설계한다.",
+      "lecture": [
+        {
+          "claim": "대규모 자동화 물류센터와 상대적으로 작은 구색의 운영을 비교하며 설비 규모보다 주문량·가동률·운영 적합성을 보라고 했다.",
+          "source": "T02",
+          "range": [
+            "31:05",
+            "40:24"
+          ],
+          "id": "retail-04-logistics-operations-L01",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "오아시스 사례에서는 온·오프라인 판매처를 통한 재고 소진, 구색 제한, 위치 정보와 작업 방식이 강조됐다.",
+          "source": "T03",
+          "range": [
+            "00:00",
+            "06:39"
+          ],
+          "id": "retail-04-logistics-operations-L02",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "주문 피킹·포장·냉장배송 비용을 합쳐야 하며, 주문 유형에 맞는 피킹·분류 방식과 배송 적재율을 검토해야 한다고 설명했다.",
+          "source": "T02",
+          "range": [
+            "41:59",
+            "52:19"
+          ],
+          "id": "retail-04-logistics-operations-L03",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "전문 풀필먼트의 검수, 반품 상품 양품화, 낱개 바코드와 재고 관리가 제조사의 운영 기능을 보완하는 사례를 소개했다.",
+          "source": "T05",
+          "range": [
+            "11:47",
+            "15:58"
+          ],
+          "id": "retail-04-logistics-operations-L04",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "상품이 있는 곳과 판매 가능하게 가공할 곳을 알고 연결하는 역량을 노웨어(know-where)라고 표현했다.",
+          "source": "T05",
+          "range": [
+            "14:46",
+            "15:58"
+          ],
+          "id": "retail-04-logistics-operations-L05",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "서비스 확장에는 지역별 배송 밀도가 필요하며 현장에서 포장·배송·센터의 문제를 파악하는 실행을 강조했다.",
+          "source": "T05",
+          "range": [
+            "41:15",
+            "43:26"
+          ],
+          "id": "retail-04-logistics-operations-L06",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        }
+      ],
+      "insights": [
+        {
+          "claim": "자동화 투자와 서비스 확대의 판단은 기술 도입 자체보다 처리할 주문의 규모·변동·비용에 맞춰야 한다.",
+          "based_on": [
+            "retail-04-logistics-operations-L01",
+            "retail-04-logistics-operations-L03",
+            "retail-04-logistics-operations-L06"
+          ],
+          "id": "retail-04-logistics-operations-I01",
+          "evidence_type": "editor_inference"
+        },
+        {
+          "claim": "차별화는 상품뿐 아니라 검수·배송·반품 같은 운영 단계에서도 만들 수 있다.",
+          "based_on": [
+            "retail-04-logistics-operations-L04",
+            "retail-04-logistics-operations-L05"
+          ],
+          "id": "retail-04-logistics-operations-I02",
+          "evidence_type": "editor_inference"
+        }
+      ],
+      "questions": [
+        "자동화 물류센터가 항상 효율적일까?",
+        "빠른 배송의 수익성을 무엇으로 판단할까?",
+        "기존 자산과 외부 파트너를 연결해 사업을 만들 수 있을까?"
+      ],
+      "limits": [
+        "기업 간 처리량·투자비·폐기율 비교 수치는 강의 주장으로 독립 검증되지 않았다.",
+        "DPS·DAS 등 설비 선택을 한 가지 주문 특성만으로 확정하지 않는다."
+      ],
+      "related": [
+        "retail-03-inventory-profit",
+        "retail-05-channel-fit",
+        "retail-09-connected-commerce"
+      ]
+    },
+    {
+      "id": "retail-05-channel-fit",
+      "title": "05. 고객·가격·유통 채널의 정합성",
+      "aliases": [
+        "채널 전략",
+        "타깃 가격 채널",
+        "클리어런스",
+        "인스톨러",
+        "자사몰",
+        "오픈마켓"
+      ],
+      "tags": [
+        "retail",
+        "channel-strategy",
+        "business-model",
+        "pricing"
+      ],
+      "summary": "고객, 가치, 최종가격, 판매 채널과 운영비가 서로 맞는지 검토한다.",
+      "lecture": [
+        {
+          "claim": "고객·가격·채널은 함께 움직이며 세 요소가 맞지 않으면 기획을 다시 검토해야 한다고 강조했다.",
+          "source": "T09",
+          "range": [
+            "24:55",
+            "25:32"
+          ],
+          "id": "retail-05-channel-fit-L01",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "제조·도매·소매·소비자에 더해 클리어런스와 인스톨러 채널까지 유통 흐름을 살피라고 했다.",
+          "source": "T09",
+          "range": [
+            "11:53",
+            "14:37"
+          ],
+          "id": "retail-05-channel-fit-L02",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "채널의 구매 맥락과 노출 방식이 다르므로 동일한 상세페이지를 모든 채널에 그대로 적용하는 방식을 경계했다.",
+          "source": "T09",
+          "range": [
+            "00:00",
+            "01:32"
+          ],
+          "id": "retail-05-channel-fit-L03",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "해외 진출은 출고가격뿐 아니라 중간 유통 비용이 더해진 최종가격을 현지 소비자가 받아들일 수 있는지 검토해야 한다고 설명했다.",
+          "source": "T09",
+          "range": [
+            "26:49",
+            "28:00"
+          ],
+          "id": "retail-05-channel-fit-L04",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "오픈마켓의 유입·구색과 자사몰의 브랜드·고객 관계 관리 역할을 비교했다.",
+          "source": "T02",
+          "range": [
+            "10:14",
+            "16:22"
+          ],
+          "id": "retail-05-channel-fit-L05",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "육류 판매 사례는 기존 채널에 수익성 있는 옵션을 추가하고 소스 B2B 공급으로 사업 구조를 넓히는 방식으로 소개됐다.",
+          "source": "T10",
+          "range": [
+            "03:29",
+            "06:59"
+          ],
+          "id": "retail-05-channel-fit-L06",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        }
+      ],
+      "insights": [
+        {
+          "claim": "채널 선택 문서에는 타깃, 구매 상황, 최종가격, 채널 비용, 상품 차별성, 공급 역량을 함께 적는다.",
+          "based_on": [
+            "retail-05-channel-fit-L01",
+            "retail-05-channel-fit-L02",
+            "retail-05-channel-fit-L03",
+            "retail-05-channel-fit-L04"
+          ],
+          "id": "retail-05-channel-fit-I01",
+          "evidence_type": "editor_inference"
+        },
+        {
+          "claim": "판매가 늘어도 이익이 나지 않는다면 마케팅뿐 아니라 상품 구성·옵션·고객 유형·거래 방식까지 재검토할 수 있다.",
+          "based_on": [
+            "retail-05-channel-fit-L01",
+            "retail-05-channel-fit-L06"
+          ],
+          "id": "retail-05-channel-fit-I02",
+          "evidence_type": "editor_inference"
+        }
+      ],
+      "questions": [
+        "이 상품의 주력 채널을 어떻게 정할까?",
+        "해외 유통 채널 진출 전 무엇을 계산할까?",
+        "기존 고객을 유지하면서 수익 구조를 바꾸려면?"
+      ],
+      "limits": [
+        "초기 사업자는 특정 플랫폼에 들어가면 안 된다는 발언을 보편적 금지 규칙으로 사용하지 않는다.",
+        "국가·플랫폼별 조건과 기업 사례는 강의 시점의 설명으로 현재 조건을 보장하지 않는다."
+      ],
+      "related": [
+        "retail-02-sales-funnel",
+        "retail-03-inventory-profit",
+        "retail-09-connected-commerce"
+      ]
+    },
+    {
+      "id": "retail-06-persona-crm",
+      "title": "06. 페르소나·상권·CRM과 고객 변화",
+      "aliases": [
+        "페르소나",
+        "라이프스테이지",
+        "라이프스타일",
+        "CRM",
+        "휴면 고객",
+        "상권"
+      ],
+      "tags": [
+        "retail",
+        "customer-research",
+        "crm",
+        "segmentation"
+      ],
+      "summary": "고객을 생활 맥락과 실제 구매 변화로 이해하고, 접근성과 고객 상태에 맞춰 대응한다.",
+      "lecture": [
+        {
+          "claim": "타깃은 고객 집단, 페르소나는 그 고객을 구체적으로 이해하기 위한 대표 사용자상으로 설명했다.",
+          "source": "T07",
+          "range": [
+            "18:12",
+            "20:57"
+          ],
+          "id": "retail-06-persona-crm-L01",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "페르소나를 이상적인 충성 고객으로 만들지 말고 실제 사람의 행동을 관찰해 구성하고 갱신하라고 했다.",
+          "source": "T07",
+          "range": [
+            "21:49",
+            "23:04"
+          ],
+          "id": "retail-06-persona-crm-L02",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "소비 취향을 나타내는 라이프스타일과 자녀 연령 등 생활 단계를 나타내는 라이프스테이지를 구분했다.",
+          "source": "T08",
+          "range": [
+            "00:02",
+            "01:43"
+          ],
+          "id": "retail-06-persona-crm-L03",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "상권은 직선거리뿐 아니라 실제 이동시간, 교통, 장애물, 경쟁점에 따라 달라질 수 있다고 설명했다.",
+          "source": "T07",
+          "range": [
+            "30:02",
+            "34:35"
+          ],
+          "id": "retail-06-persona-crm-L04",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "회원 수가 같아도 고객이 교체될 수 있으므로 신규·휴면·반복 고객과 구매액·등급의 변화를 보라고 했다.",
+          "source": "T07",
+          "range": [
+            "37:23",
+            "43:40"
+          ],
+          "id": "retail-06-persona-crm-L05",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "타깃 캠페인 이후 방문·구매·매출·이익을 확인하고 혜택을 받은 고객과 받지 않은 고객을 비교하는 사례를 소개했다.",
+          "source": "T07",
+          "range": [
+            "48:24",
+            "51:43"
+          ],
+          "id": "retail-06-persona-crm-L06",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        }
+      ],
+      "insights": [
+        {
+          "claim": "고객 분류는 상품·혜택·메시지·전달 시점을 바꾸는 데 쓰일 때 실무적 의미가 있다.",
+          "based_on": [
+            "retail-06-persona-crm-L03",
+            "retail-06-persona-crm-L05",
+            "retail-06-persona-crm-L06"
+          ],
+          "id": "retail-06-persona-crm-I01",
+          "evidence_type": "editor_inference"
+        },
+        {
+          "claim": "캠페인 효과를 판단하려면 원래 발생했을 구매와 캠페인으로 추가된 구매를 구분할 수 있도록 비교 조건을 설계해야 한다.",
+          "based_on": [
+            "retail-06-persona-crm-L06"
+          ],
+          "id": "retail-06-persona-crm-I02",
+          "evidence_type": "editor_inference"
+        }
+      ],
+      "questions": [
+        "페르소나와 타깃은 어떻게 다를까?",
+        "회원 수가 유지되는데 매출이 줄면 무엇을 봐야 할까?",
+        "캠페인의 실제 효과를 어떻게 확인할까?"
+      ],
+      "limits": [
+        "온라인은 신규 고객만, 오프라인은 기존 고객만 중요하다는 강의의 일반화를 보편적 법칙으로 사용하지 않는다.",
+        "합성 페르소나의 응답은 실제 고객 관찰·조사와 구분한다."
+      ],
+      "related": [
+        "retail-02-sales-funnel",
+        "retail-07-field-research",
+        "retail-09-connected-commerce"
+      ]
+    },
+    {
+      "id": "retail-07-field-research",
+      "title": "07. 현장 조사와 사실·해석의 구분",
+      "aliases": [
+        "섀도잉",
+        "쇼퍼롱",
+        "맥락적 인터뷰",
+        "현장 조사",
+        "사실과 해석",
+        "미스터리 쇼핑"
+      ],
+      "tags": [
+        "retail",
+        "research",
+        "observation",
+        "evidence"
+      ],
+      "summary": "고객의 실제 행동과 매장 조건을 관찰하고, 관찰 사실에서 해석·가설·검증을 분리한다.",
+      "lecture": [
+        {
+          "claim": "섀도잉, 쇼핑 동행 관찰, 행동 순간의 맥락적 질문 등 현장 관찰 방법을 소개했다.",
+          "source": "T07",
+          "range": [
+            "05:07",
+            "07:44"
+          ],
+          "id": "retail-07-field-research-L01",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "진열·동선·고객이 머무는 위치·매대 점유·안내물을 함께 관찰하고 잘한 점과 아쉬운 점을 찾으라고 했다.",
+          "source": "T07",
+          "range": [
+            "08:11",
+            "12:57"
+          ],
+          "id": "retail-07-field-research-L02",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "현장 조사는 정해진 양식이나 정답을 맞추기보다 특징을 발견하고 마지막에 자신의 해석과 의견을 제시하는 과제로 설명됐다.",
+          "source": "T08",
+          "range": [
+            "01:59",
+            "05:42"
+          ],
+          "id": "retail-07-field-research-L03",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "비가 왔고 매출이 감소했다는 관찰만으로 인과를 확정할 수 없으며 비교 데이터와 해석의 근거가 필요하다고 강조했다.",
+          "source": "T08",
+          "range": [
+            "13:21",
+            "15:24"
+          ],
+          "id": "retail-07-field-research-L04",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "비어 있는 매대·축소된 진열은 전략적 선택일 수도 있지만 공급 차질로도 설명될 수 있다는 사례를 다뤘다.",
+          "source": "T08",
+          "range": [
+            "27:27",
+            "29:50"
+          ],
+          "id": "retail-07-field-research-L05",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        }
+      ],
+      "insights": [
+        {
+          "claim": "관찰 사실 → 가능한 설명 → 다른 설명 → 확인할 데이터 → 실행 제안의 순서로 조사 결과를 작성할 수 있다.",
+          "based_on": [
+            "retail-07-field-research-L03",
+            "retail-07-field-research-L04",
+            "retail-07-field-research-L05"
+          ],
+          "id": "retail-07-field-research-I01",
+          "evidence_type": "editor_inference"
+        },
+        {
+          "claim": "경쟁사 사례를 좋은 전략으로 단정하기 전에 그 현상이 의도된 선택인지 제약에 따른 결과인지 구분한다.",
+          "based_on": [
+            "retail-07-field-research-L05"
+          ],
+          "id": "retail-07-field-research-I02",
+          "evidence_type": "editor_inference"
+        }
+      ],
+      "questions": [
+        "매장 조사에서 무엇을 관찰해야 할까?",
+        "관찰한 사실과 인사이트를 어떻게 나눌까?",
+        "경쟁사 사례의 원인을 어떻게 검증할까?"
+      ],
+      "limits": [
+        "제시된 사례의 원인 역시 강사의 해석을 포함한다.",
+        "현장에 없는 정량 수치를 만들어서 관찰 결과에 붙이지 않는다."
+      ],
+      "related": [
+        "retail-01-offline-experience",
+        "retail-06-persona-crm",
+        "retail-08-trend-analysis"
+      ]
+    },
+    {
+      "id": "retail-08-trend-analysis",
+      "title": "08. 트렌드와 변곡점 분석",
+      "aliases": [
+        "패드",
+        "fad",
+        "마이크로트렌드",
+        "메가트렌드",
+        "네이버 데이터랩",
+        "Google Trends",
+        "변곡점"
+      ],
+      "tags": [
+        "retail",
+        "trends",
+        "market-research",
+        "evidence"
+      ],
+      "summary": "유행의 지속성과 국내외 관심 변화 시점을 분석해 상품·재고·마케팅 가설로 연결한다.",
+      "lecture": [
+        {
+          "claim": "짧고 강렬한 패드, 일정 기간 이어지는 트렌드, 사회 전반의 장기 변화를 구분했다.",
+          "source": "T06",
+          "range": [
+            "00:35",
+            "01:52"
+          ],
+          "id": "retail-08-trend-analysis-L01",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "주간 검색 흐름을 관찰하고 완만한 상승 뒤 급등과 지속 여부를 보라는 경험적 변곡점 탐색법을 제시했다.",
+          "source": "T06",
+          "range": [
+            "01:52",
+            "02:49"
+          ],
+          "id": "retail-08-trend-analysis-L02",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "네이버 데이터랩과 Google Trends, 소셜·커뮤니티 자료를 비교해 국내외 흐름을 교차 확인하는 방법을 소개했다.",
+          "source": "T06",
+          "range": [
+            "02:49",
+            "06:51"
+          ],
+          "id": "retail-08-trend-analysis-L03",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "같은 키워드와 기간을 놓고 국내외 관심 변화의 선후 관계를 살피라고 설명했다.",
+          "source": "T06",
+          "range": [
+            "10:31",
+            "11:14"
+          ],
+          "id": "retail-08-trend-analysis-L04",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "관심 카테고리를 정해 데이터·타깃·트렌드·실행 아이디어를 요약하고, 확인한 자료를 바탕으로 AI가 보고서를 정리하도록 하라고 했다.",
+          "source": "T06",
+          "range": [
+            "22:57",
+            "24:30"
+          ],
+          "id": "retail-08-trend-analysis-L05",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        }
+      ],
+      "insights": [
+        {
+          "claim": "관심이 높다는 사실과 지속될 수요라는 가설을 구분하고, 준비 기간과 재고 소진 시점까지 연결해야 한다.",
+          "based_on": [
+            "retail-08-trend-analysis-L01",
+            "retail-08-trend-analysis-L02",
+            "retail-08-trend-analysis-L03"
+          ],
+          "id": "retail-08-trend-analysis-I01",
+          "evidence_type": "editor_inference"
+        },
+        {
+          "claim": "트렌드 보고서에는 키워드, 기간, 지역, 데이터 출처와 수집일을 남겨 나중에 해석을 재검토할 수 있게 한다.",
+          "based_on": [
+            "retail-08-trend-analysis-L03",
+            "retail-08-trend-analysis-L04",
+            "retail-08-trend-analysis-L05"
+          ],
+          "id": "retail-08-trend-analysis-I02",
+          "evidence_type": "editor_inference"
+        }
+      ],
+      "questions": [
+        "유행과 장기 트렌드를 어떻게 구분할까?",
+        "트렌드 데이터를 상품 기획에 어떻게 연결할까?",
+        "검색 데이터와 AI를 함께 어떻게 활용할까?"
+      ],
+      "limits": [
+        "4~5주 등 강의의 기간 구분은 보편적 예측 법칙이 아니다.",
+        "검색 관심을 실제 판매량으로 간주하지 않는다.",
+        "본문은 도구의 현재 UI·요금·기능을 검증한 사용 설명서가 아니다."
+      ],
+      "related": [
+        "retail-03-inventory-profit",
+        "retail-07-field-research",
+        "retail-10-ai-planning"
+      ]
+    },
+    {
+      "id": "retail-09-connected-commerce",
+      "title": "09. 연결된 채널·고객·재고 데이터",
+      "aliases": [
+        "멀티채널",
+        "옴니채널",
+        "통합 상거래",
+        "피지털",
+        "phygital",
+        "멤버십 통합"
+      ],
+      "tags": [
+        "retail",
+        "omnichannel",
+        "data",
+        "customer-experience"
+      ],
+      "summary": "여러 채널을 운영하는 수준에서 고객 경험과 운영 정보를 연결해 의사결정에 활용하는 수준으로 발전시킨다.",
+      "lecture": [
+        {
+          "claim": "단일 채널, 여러 채널 운영, 채널 간 연결, 데이터 활용으로 이어지는 발전 단계를 강의용 틀로 제시했다.",
+          "source": "T09",
+          "range": [
+            "31:02",
+            "34:13"
+          ],
+          "id": "retail-09-connected-commerce-L01",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "연결 과정에서 어떤 데이터를 어떤 구조로 모으고 어떤 지표와 의사결정에 사용할지 기획해야 한다고 강조했다.",
+          "source": "T09",
+          "range": [
+            "34:13",
+            "37:12"
+          ],
+          "id": "retail-09-connected-commerce-L02",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "온라인 탐색, 매장 체험, 결제, 멤버십과 구매 이력의 연결을 소개했으며 재고 정보의 실제 일치는 어려운 운영 과제로 설명했다.",
+          "source": "T10",
+          "range": [
+            "10:23",
+            "12:48"
+          ],
+          "id": "retail-09-connected-commerce-L03",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "매장을 물류 거점으로 활용하거나 오프라인 경험을 다른 채널의 고객 관계로 연결하는 사례를 소개했다.",
+          "source": "T10",
+          "range": [
+            "07:16",
+            "08:02"
+          ],
+          "id": "retail-09-connected-commerce-L04",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "가족 생애단계 정보가 갱신되지 않아 맞춤 혜택의 관련성이 떨어지는 사례를 설명했다.",
+          "source": "T04",
+          "range": [
+            "09:43",
+            "14:38"
+          ],
+          "id": "retail-09-connected-commerce-L05",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        }
+      ],
+      "insights": [
+        {
+          "claim": "데이터 수집 항목을 정하기 전에 그 항목이 바꿀 상품·추천·서비스·운영 결정을 먼저 명시한다.",
+          "based_on": [
+            "retail-09-connected-commerce-L02",
+            "retail-09-connected-commerce-L05"
+          ],
+          "id": "retail-09-connected-commerce-I01",
+          "evidence_type": "editor_inference"
+        },
+        {
+          "claim": "채널 연결은 화면과 링크뿐 아니라 고객 식별, 재고 정확도, 혜택과 서비스의 일관성으로 검토할 수 있다.",
+          "based_on": [
+            "retail-09-connected-commerce-L01",
+            "retail-09-connected-commerce-L03"
+          ],
+          "id": "retail-09-connected-commerce-I02",
+          "evidence_type": "editor_inference"
+        }
+      ],
+      "questions": [
+        "멀티채널과 옴니채널을 실무에서 어떻게 구분할까?",
+        "유통 데이터를 무엇부터 설계해야 할까?",
+        "멤버십 통합과 실시간 재고에서 무엇이 중요한가?"
+      ],
+      "limits": [
+        "자동 게시만으로 옴니채널이 완성된다는 뜻으로 단순화하지 않는다.",
+        "사용자 점유율 40% 등 강의에 나온 수치를 보편적 진입장벽 기준으로 사용하지 않는다.",
+        "플랫폼별 현재 물류 운영 범위는 별도 확인이 필요하다."
+      ],
+      "related": [
+        "retail-04-logistics-operations",
+        "retail-05-channel-fit",
+        "retail-06-persona-crm"
+      ]
+    },
+    {
+      "id": "retail-10-ai-planning",
+      "title": "10. AI 기획·지식 관리와 근거 기반 의사결정",
+      "aliases": [
+        "기획자",
+        "AI 활용",
+        "지식 관리",
+        "마스터 노트",
+        "가상 리서치",
+        "합성 페르소나"
+      ],
+      "tags": [
+        "ai",
+        "planning",
+        "knowledge-management",
+        "evidence"
+      ],
+      "summary": "AI에 조사·문서화·구현을 맡길 때 목표·맥락·자료·검증 기준을 사람이 설계한다.",
+      "lecture": [
+        {
+          "claim": "자신의 배경과 목표, 프로젝트 맥락을 문서로 정리해 AI에 제공하는 방식을 소개했다.",
+          "source": "T09",
+          "range": [
+            "01:32",
+            "04:12"
+          ],
+          "id": "retail-10-ai-planning-L01",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "기획에서는 왜 특정 채널·가격·디자인을 선택하는지 말과 글로 근거를 표현하는 역량을 강조했다.",
+          "source": "T09",
+          "range": [
+            "08:22",
+            "11:03"
+          ],
+          "id": "retail-10-ai-planning-L02",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "기존 글·자료·아이디어를 주제별 마스터 노트에 축적하고 새 결과물에 재사용하는 개인 지식 관리 사례를 소개했다.",
+          "source": "T09",
+          "range": [
+            "38:09",
+            "40:47"
+          ],
+          "id": "retail-10-ai-planning-L03",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "학습할 결과물과 사용할 시간을 명시해 학습 경로를 좁히는 방식을 소개했다.",
+          "source": "T09",
+          "range": [
+            "43:29",
+            "45:49"
+          ],
+          "id": "retail-10-ai-planning-L04",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "AI 합성 페르소나로 설문 문항과 아이디어를 사전 점검하는 가상 리서치를 소개하고 예측 결과의 신뢰도 확인을 언급했다.",
+          "source": "T07",
+          "range": [
+            "23:29",
+            "27:44"
+          ],
+          "id": "retail-10-ai-planning-L05",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "기업과 산업을 이해할 자료로 전자공시의 사업보고서, 특히 사업의 내용을 살펴보라고 했다.",
+          "source": "T10",
+          "range": [
+            "08:37",
+            "10:23"
+          ],
+          "id": "retail-10-ai-planning-L06",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        },
+        {
+          "claim": "AI 보고서 작성에는 직접 확인한 검색 데이터와 1차 자료를 제공하고 환각을 경계하라고 했다.",
+          "source": "T06",
+          "range": [
+            "23:29",
+            "24:30"
+          ],
+          "id": "retail-10-ai-planning-L07",
+          "evidence_type": "lecture_statement",
+          "verification": "transcript_supported_not_independently_verified"
+        }
+      ],
+      "insights": [
+        {
+          "claim": "지식 노트는 강의 주장, 직접 관찰, 자신의 해석, 실행 결과를 구분하고 출처와 적용 조건을 남기면 재사용하기 좋다.",
+          "based_on": [
+            "retail-10-ai-planning-L03",
+            "retail-10-ai-planning-L07"
+          ],
+          "id": "retail-10-ai-planning-I01",
+          "evidence_type": "editor_inference"
+        },
+        {
+          "claim": "합성 응답은 가설 생성과 사전 점검 자료로 사용하고 실제 고객의 검증 결과와 구분한다.",
+          "based_on": [
+            "retail-10-ai-planning-L05",
+            "retail-10-ai-planning-L07"
+          ],
+          "id": "retail-10-ai-planning-I02",
+          "evidence_type": "editor_inference"
+        },
+        {
+          "claim": "좋은 기획 답변에는 선택할 행동, 선택 이유, 적용 조건, 확인할 지표가 함께 있어야 한다.",
+          "based_on": [
+            "retail-10-ai-planning-L02",
+            "retail-10-ai-planning-L06",
+            "retail-10-ai-planning-L07"
+          ],
+          "id": "retail-10-ai-planning-I03",
+          "evidence_type": "editor_inference"
+        }
+      ],
+      "questions": [
+        "AI가 답변 근거로 활용할 지식을 어떻게 정리할까?",
+        "기획자가 AI에 제공해야 할 맥락은 무엇인가?",
+        "AI 페르소나를 어디까지 활용할 수 있을까?"
+      ],
+      "limits": [
+        "문서를 저장하는 것만으로 모델이 영구 학습하거나 모든 대화에서 자동 참조하는 것은 아니다. 실제 참조 여부는 사용하는 위키의 검색·컨텍스트 연결에 달려 있다.",
+        "직무 대체에 관한 강사의 전망은 확정된 사실로 사용하지 않는다.",
+        "본문은 특정 AI 제품의 현재 기능을 검증한 설정 안내가 아니다."
+      ],
+      "related": [
+        "retail-07-field-research",
+        "retail-08-trend-analysis",
+        "retail-09-connected-commerce"
+      ]
+    }
+  ]
+}

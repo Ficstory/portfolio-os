@@ -1,0 +1,31 @@
+{
+  "dateKst": "2026-08-22",
+  "timeKst": "16:25",
+  "runId": "instagram-browser-20260822-1625",
+  "source": "Instagram 공개 프로필·콘텐츠 상세 화면",
+  "results": [
+    {
+      "name": "강득구",
+      "handle": "deukgu_kang",
+      "url": "https://www.instagram.com/deukgu_kang/",
+      "status": "확인됨",
+      "followers": { "raw": "6,434", "exact": 6434, "quality": "정확 공개값" },
+      "following": { "raw": "1,674", "exact": 1674, "quality": "정확 공개값" },
+      "activeStory": "확인 불가",
+      "contentCheckStatus": "부분",
+      "note": "공개 프로필 화면 확인. 콘텐츠 상세는 표본 1건만 확인함.",
+      "contents": [
+        {
+          "shortcode": "DcIbQ1jRAzu",
+          "kind": "릴스",
+          "url": "https://www.instagram.com/deukgu_kang/reel/DcIbQ1jRAzu/",
+          "publishedAtKst": "2026-08-17T15:46:29+09:00",
+          "publishedDateKst": "2026-08-17",
+          "publishedTimeKst": "15:46",
+          "caption": "경기도 당원 여러분과 함께한 뜨거운 합동연설회 현장🎉 #강득구 #경기도 #합동연설회 #전당대회 #민주당",
+          "note": "공개 콘텐츠 상세의 time[datetime]에서 게시 시각 확인"
+        }
+      ]
+    }
+  ]
+}

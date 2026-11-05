@@ -1,0 +1,130 @@
+{
+  "collection": "Canva PM portfolio verbatim Markdown excerpt renders",
+  "render_label": "원문 발췌 · Markdown 렌더",
+  "handling": {
+    "source_copies_preserved": true,
+    "generated_ui": false,
+    "editor_or_app_screenshots": false,
+    "body_text_policy": "Source body text is verbatim. [중간 생략] appears only between noncontiguous declared source ranges."
+  },
+  "assets": [
+    {
+      "file": "assets/p05-meeting-decisions-markdown.png",
+      "page": "p05",
+      "dimensions": [
+        1700,
+        952
+      ],
+      "sha256": "3063a1403ec8c736e52232f5347b51c2901a78b8635bcbba65089a9bdd9637c8",
+      "source_local_path": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\2. 공통pjt\\S14P11E207\\docs\\이재호\\회의록\\260114_회의록.md",
+      "copied_source_path": "sources/original-docs/260114_회의록.md",
+      "source_sha256": "eff112e377a294c3dcb4ab1df78708f24f6293a0f9bffbc41e32e511e519224d",
+      "source_line_ranges": [
+        [
+          32,
+          45
+        ]
+      ],
+      "inserted_display_text": null,
+      "source_type": "original_markdown",
+      "rendering": "Original text rendered from copied Markdown source with Markdown headings/bullets and automatic visual wrapping. No wording was changed.",
+      "limitations": "회의록의 결정 블록 발췌다. 개인별 역할이나 이후 구현 완료를 보여주지 않는다."
+    },
+    {
+      "file": "assets/p07-requirements-fr03-fr05-markdown.png",
+      "page": "p07",
+      "dimensions": [
+        1700,
+        1050
+      ],
+      "sha256": "02e3ff07372a6bd7af5771cb61bab2100d9f0ebfe028405014cbd607c636c684",
+      "source_local_path": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\3. 특화pjt\\S14P21E106\\docs\\2026-03-21_요구사항정의서_v2_AEKKIM.md",
+      "copied_source_path": "sources/original-docs/2026-03-21_요구사항정의서_v2_AEKKIM.md",
+      "source_sha256": "a03c0a2a461e34b5e33812ab6dcf854bc28b2ceadae72054ac22b5683ac156ce",
+      "source_line_ranges": [
+        [
+          83,
+          89
+        ],
+        [
+          100,
+          110
+        ]
+      ],
+      "inserted_display_text": "[중간 생략]",
+      "source_type": "original_markdown",
+      "rendering": "Original text rendered from copied Markdown source with Markdown headings/bullets and automatic visual wrapping. No wording was changed.",
+      "limitations": "현행 요구사항 문서 발췌다. 문서의 구현 상태 표기는 개인 기여나 라이브 서비스 동작의 증거가 아니다."
+    },
+    {
+      "file": "assets/p07-screen-spec-manual-mapping-markdown.png",
+      "page": "p07",
+      "dimensions": [
+        1700,
+        1080
+      ],
+      "sha256": "dd243ae583bd04a110e5bd9441be31aef90221405fd67e25749c1c976d107b1d",
+      "source_local_path": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\3. 특화pjt\\S14P21E106\\docs\\2026-03-21_화면명세서_v2_AEKKIM.md",
+      "copied_source_path": "sources/original-docs/2026-03-21_화면명세서_v2_AEKKIM.md",
+      "source_sha256": "e827aefb75c7a5fa06fd173a01031bb5e76a7f9fa4e4b994e9bda9188c4abda3",
+      "source_line_ranges": [
+        [
+          99,
+          106
+        ],
+        [
+          126,
+          133
+        ]
+      ],
+      "inserted_display_text": "[중간 생략]",
+      "source_type": "original_markdown",
+      "rendering": "Original text rendered from copied Markdown source with Markdown headings/bullets and automatic visual wrapping. No wording was changed.",
+      "limitations": "화면명세서의 화면 목적·요소·액션 발췌다. 실제 실행 화면이나 개인별 완료 작업을 주장하지 않는다."
+    },
+    {
+      "file": "assets/p08-design-review-execution-order-markdown.png",
+      "page": "p08",
+      "dimensions": [
+        1600,
+        830
+      ],
+      "sha256": "e41ba663cbbeeb2af85edeeac956e6c1ba9606f53af0d14aa790844a13ec5cbc",
+      "source_local_path": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\3. 특화pjt\\S14P21E106\\FE\\docs\\archive\\planning-history\\2026-03-28_FE_디자인리뷰_반영_우선순위_및_작업계획서.md",
+      "copied_source_path": "sources/original-docs/2026-03-28_FE_디자인리뷰_반영_우선순위_및_작업계획서.md",
+      "source_sha256": "e9380d93a7d1bdf2426fed3e3d29306df03b5272e1ab07e45c1ee8d4129cc9ff",
+      "source_line_ranges": [
+        [
+          164,
+          173
+        ]
+      ],
+      "inserted_display_text": null,
+      "source_type": "original_markdown",
+      "rendering": "Original text rendered from copied Markdown source with Markdown headings/bullets and automatic visual wrapping. No wording was changed.",
+      "limitations": "권장 실행 순서를 적은 계획 문서 발췌다. 계획된 항목이 완료되었음을 증명하지 않는다."
+    },
+    {
+      "file": "assets/p08-mvp-test-yearly-monthly-copy-markdown.png",
+      "page": "p08",
+      "dimensions": [
+        1600,
+        850
+      ],
+      "sha256": "5941eb89049e67c0555a02eda929b25ec5207cff89fe1168a409f699ce857402",
+      "source_local_path": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\3. 특화pjt\\S14P21E106\\docs\\2026-03-24_MVP_테스트_개선사항_정리.md",
+      "copied_source_path": "sources/original-docs/2026-03-24_MVP_테스트_개선사항_정리.md",
+      "source_sha256": "637e34106bf42d5c4a8f99a732222688b51fb6a0191f1913f3196647cd584ed1",
+      "source_line_ranges": [
+        [
+          26,
+          35
+        ]
+      ],
+      "inserted_display_text": null,
+      "source_type": "original_markdown",
+      "rendering": "Original text rendered from copied Markdown source with Markdown headings/bullets and automatic visual wrapping. No wording was changed.",
+      "limitations": "팀 QA 문서의 문제·해결 방안 발췌다. 이 기록을 이재호 개인의 완료 작업으로 귀속하지 않는다."
+    }
+  ]
+}

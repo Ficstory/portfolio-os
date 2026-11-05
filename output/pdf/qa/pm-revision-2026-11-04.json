@@ -1,0 +1,18 @@
+{
+  "pages": 14,
+  "bytes": 7215305,
+  "page_mm": [
+    320,
+    180
+  ],
+  "aspect_ratio": "16:9",
+  "image_sha256": "fdddd2f6dda5d87e747992db51028fca8a49c88b663e80a2ee4e723cb4bb671a",
+  "original_page": 7,
+  "new_page": 10,
+  "source": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\개인PJT\\개인 포트폴리오 사이트\\portfolio-os\\docs\\pm-redesign\\aekkim-demo\\recordings\\screenshots\\03-payments-review-summary.png",
+  "image_changed_without_editing": true,
+  "unmapped_glyphs": 0,
+  "removed_previous_page": 4,
+  "removed_right_header": true,
+  "project_number_labels": true
+}

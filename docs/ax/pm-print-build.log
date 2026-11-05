@@ -1,0 +1,81 @@
+
+> portfolio-os@0.1.0 prebuild
+> npm run til:media
+
+
+> portfolio-os@0.1.0 til:media
+> node --experimental-strip-types scripts/til-media.mjs
+
+(node:10872) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/ljh43/OneDrive/Desktop/workspace/%EA%B0%9C%EC%9D%B8PJT/%EA%B0%9C%EC%9D%B8%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%20%EC%82%AC%EC%9D%B4%ED%8A%B8/portfolio-os/src/lib/tilContent.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\ljh43\OneDrive\Desktop\workspace\개인PJT\개인 포트폴리오 사이트\portfolio-os\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+TIL media staged: 87 published asset(s)
+
+> portfolio-os@0.1.0 build
+> next build
+
+▲ Next.js 16.2.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.2s
+  Running TypeScript ...
+  Finished TypeScript in 5.3s ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/34) ...
+  Generating static pages using 11 workers (8/34) 
+  Generating static pages using 11 workers (16/34) 
+  Generating static pages using 11 workers (25/34) 
+✓ Generating static pages using 11 workers (34/34) in 1445ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /assembly
+├ ○ /ax
+├ ● /ax/[slug]
+│ ├ /ax/jos
+│ ├ /ax/busan-eumgil
+│ └ /ax/aekkim
+├ ○ /ax/print
+├ ○ /pm
+├ ○ /pm-improved
+├ ● /pm-improved/[slug]
+│ ├ /pm-improved/busan-eumgil
+│ ├ /pm-improved/aekkim
+│ ├ /pm-improved/smile-game
+│ └ /pm-improved/play-pick
+├ ○ /pm-improved/print
+├ ● /pm/[slug]
+│ ├ /pm/aekkim
+│ ├ /pm/busan-eumgil
+│ ├ /pm/smile-game
+│ └ /pm/play-pick
+├ ○ /PM1
+├ ○ /PM1/opengraph-image
+├ ○ /policy
+├ ○ /portfolio
+├ ○ /portfolio/print
+├ ● /projects/[slug]
+│ ├ /projects/busan-eumgil
+│ ├ /projects/aekkim
+│ ├ /projects/play-pick
+│ └ /projects/smile-game
+├ ○ /public-digital
+├ ○ /resume
+├ ○ /robots.txt
+├ ○ /sitemap.xml
+└ ○ /til/future-dream
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+
+> portfolio-os@0.1.0 postbuild
+> node scripts/til-build-check.mjs
+
+TIL build privacy: 26 deployment traces checked; no drafts or static assets included.

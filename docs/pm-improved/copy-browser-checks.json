@@ -1,0 +1,455 @@
+{
+  "directReload": [
+    {
+      "canonical": "https://ficstory.dev/PM/smile-game/",
+      "h1": "웃지마게임",
+      "path": "/PM/smile-game/"
+    },
+    {
+      "canonical": "https://ficstory.dev/PM/aekkim/",
+      "h1": "AEKKIM · 애낌",
+      "path": "/PM/aekkim/"
+    },
+    {
+      "canonical": "https://ficstory.dev/PM/busan-eumgil/",
+      "h1": "부산이음길",
+      "path": "/PM/busan-eumgil/"
+    },
+    {
+      "canonical": "https://ficstory.dev/PM/play-pick/",
+      "h1": "Play Pick",
+      "path": "/PM/play-pick/"
+    }
+  ],
+  "responsive": [
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        },
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "조사 결과를 요구사항으로 정리하고,화면과 API까지 연결하는 PM",
+      "path": "/PM/",
+      "scrollWidth": 1425,
+      "viewport": 1440,
+      "width": 1425
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "웃지마게임",
+      "path": "/PM/smile-game/",
+      "scrollWidth": 1425,
+      "viewport": 1440,
+      "width": 1425
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "AEKKIM · 애낌",
+      "path": "/PM/aekkim/",
+      "scrollWidth": 1425,
+      "viewport": 1440,
+      "width": 1425
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "부산이음길",
+      "path": "/PM/busan-eumgil/",
+      "scrollWidth": 1425,
+      "viewport": 1440,
+      "width": 1425
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "Play Pick",
+      "path": "/PM/play-pick/",
+      "scrollWidth": 1425,
+      "viewport": 1440,
+      "width": 1425
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        },
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "조사 결과를 요구사항으로 정리하고,화면과 API까지 연결하는 PM",
+      "path": "/PM/",
+      "scrollWidth": 753,
+      "viewport": 768,
+      "width": 753
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "웃지마게임",
+      "path": "/PM/smile-game/",
+      "scrollWidth": 753,
+      "viewport": 768,
+      "width": 753
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "AEKKIM · 애낌",
+      "path": "/PM/aekkim/",
+      "scrollWidth": 753,
+      "viewport": 768,
+      "width": 753
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "부산이음길",
+      "path": "/PM/busan-eumgil/",
+      "scrollWidth": 753,
+      "viewport": 768,
+      "width": 753
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "Play Pick",
+      "path": "/PM/play-pick/",
+      "scrollWidth": 753,
+      "viewport": 768,
+      "width": 753
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        },
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "조사 결과를 요구사항으로 정리하고,화면과 API까지 연결하는 PM",
+      "path": "/PM/",
+      "scrollWidth": 375,
+      "viewport": 390,
+      "width": 375
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "웃지마게임",
+      "path": "/PM/smile-game/",
+      "scrollWidth": 375,
+      "viewport": 390,
+      "width": 375
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "AEKKIM · 애낌",
+      "path": "/PM/aekkim/",
+      "scrollWidth": 375,
+      "viewport": 390,
+      "width": 375
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "부산이음길",
+      "path": "/PM/busan-eumgil/",
+      "scrollWidth": 375,
+      "viewport": 390,
+      "width": 375
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "Play Pick",
+      "path": "/PM/play-pick/",
+      "scrollWidth": 375,
+      "viewport": 390,
+      "width": 375
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        },
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "조사 결과를 요구사항으로 정리하고,화면과 API까지 연결하는 PM",
+      "path": "/PM/",
+      "scrollWidth": 345,
+      "viewport": 360,
+      "width": 345
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "웃지마게임",
+      "path": "/PM/smile-game/",
+      "scrollWidth": 345,
+      "viewport": 360,
+      "width": 345
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "AEKKIM · 애낌",
+      "path": "/PM/aekkim/",
+      "scrollWidth": 345,
+      "viewport": 360,
+      "width": 345
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "부산이음길",
+      "path": "/PM/busan-eumgil/",
+      "scrollWidth": 345,
+      "viewport": 360,
+      "width": 345
+    },
+    {
+      "autoplay": [
+        {
+          "autoplay": false,
+          "paused": true
+        }
+      ],
+      "badImages": [],
+      "banned": [],
+      "fontLoaded": true,
+      "h1": "Play Pick",
+      "path": "/PM/play-pick/",
+      "scrollWidth": 345,
+      "viewport": 360,
+      "width": 345
+    }
+  ],
+  "media": [
+    {
+      "slug": "busan-eumgil",
+      "playing": {
+        "duration": 14.791667,
+        "error": null,
+        "paused": false,
+        "readyState": 4
+      },
+      "pausedAfter": true
+    },
+    {
+      "slug": "smile-game",
+      "playing": [
+        {
+          "duration": 37.5,
+          "error": null,
+          "paused": false,
+          "readyState": 4
+        }
+      ],
+      "pausedAfter": true
+    },
+    {
+      "slug": "aekkim",
+      "playing": [
+        {
+          "duration": 26.75,
+          "error": null,
+          "paused": false,
+          "readyState": 4
+        }
+      ],
+      "pausedAfter": true
+    },
+    {
+      "slug": "play-pick",
+      "playing": [
+        {
+          "duration": 30.583333,
+          "error": null,
+          "paused": false,
+          "readyState": 4
+        }
+      ],
+      "pausedAfter": true
+    }
+  ],
+  "navigation": [
+    {
+      "action": "detail back to work",
+      "url": "http://127.0.0.1:3211/PM/#work"
+    },
+    {
+      "action": "home AEKKIM title link",
+      "url": "http://127.0.0.1:3211/PM/aekkim/",
+      "h1": "AEKKIM · 애낌"
+    },
+    {
+      "action": "next project link",
+      "url": "http://127.0.0.1:3211/PM/busan-eumgil/",
+      "h1": "부산이음길"
+    }
+  ],
+  "content": [
+    {
+      "actualMap": "/pm-improved/evidence/busan-route-map.png",
+      "contributionBlocks": [
+        {
+          "height": 230,
+          "text": "01복지관 섭외와 기획 보완복지관을 직접 섭외하고, 이를 바탕으로 서비스 기획을 보완했습니다.",
+          "width": 575.5
+        },
+        {
+          "height": 230,
+          "text": "02길안내 지도·프론트엔드 개발길안내 지도 위 마커를 고정하는 동작과 관련 프론트엔드를 구현했습니다.",
+          "width": 575.5
+        }
+      ],
+      "page": "/PM/busan-eumgil/",
+      "sectionOrder": [
+        "problem",
+        "evidence",
+        "decision",
+        "action",
+        "collaboration",
+        "result",
+        "learning"
+      ]
+    }
+  ],
+  "console": [],
+  "finishedAt": "2026-09-14T11:11:42.808Z"
+}

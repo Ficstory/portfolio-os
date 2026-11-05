@@ -1,0 +1,49 @@
+{
+  "Commit": "3af24c60fe9692997d27381ca85fb4d26f352d60",
+  "CheckedAt": "2026-11-04T23:28:39.9810329+09:00",
+  "Pages": [
+    {
+      "Path": "/PM/print/",
+      "Status": 200,
+      "Slides": 14
+    },
+    {
+      "Path": "/PM/",
+      "Status": 200,
+      "Slides": 14
+    },
+    {
+      "Path": "/pm/",
+      "Status": 200,
+      "Slides": 0
+    },
+    {
+      "Path": "/",
+      "Status": 200,
+      "Slides": 0
+    }
+  ],
+  "Assets": [
+    {
+      "Path": "/pm-improved/evidence/aekkim-candidate-list-demo.png",
+      "Status": 200,
+      "Type": [
+        "image/png"
+      ]
+    },
+    {
+      "Path": "/pm-improved/evidence/jos-report-fixture.png",
+      "Status": 200,
+      "Type": [
+        "image/png"
+      ]
+    },
+    {
+      "Path": "/pm/fonts/PmPrintSans.woff2",
+      "Status": 200,
+      "Type": [
+        "font/woff2"
+      ]
+    }
+  ]
+}

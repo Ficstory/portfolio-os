@@ -1,0 +1,71 @@
+{
+  "collection": "Canva PM p08 concise readable Markdown renders",
+  "assets": [
+    {
+      "file": "assets/p08-plan-readable.png",
+      "dimensions": [
+        1100,
+        620
+      ],
+      "source_local_path": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\3. 특화pjt\\S14P21E106\\FE\\docs\\archive\\planning-history\\2026-03-28_FE_디자인리뷰_반영_우선순위_및_작업계획서.md",
+      "copied_source_path": "sources/original-docs/2026-03-28_FE_디자인리뷰_반영_우선순위_및_작업계획서.md",
+      "source_sha256": "e9380d93a7d1bdf2426fed3e3d29306df03b5272e1ab07e45c1ee8d4129cc9ff",
+      "source_line_ranges": [
+        [
+          166,
+          166
+        ],
+        [
+          168,
+          168
+        ],
+        [
+          175,
+          175
+        ],
+        [
+          177,
+          177
+        ],
+        [
+          181,
+          181
+        ]
+      ],
+      "inserted_display_text": "[중간 생략]",
+      "sha256": "ecbfef1cc3cbb9af2b62ce3233ad8e9d41e3ca7961d52ccbdbc6ade9a89d7f76",
+      "source_type": "original_markdown",
+      "rendering": "Original source text rendered with visual line wrapping only; no wording was changed.",
+      "limitations": "권장 실행 순서를 적은 계획 문서 발췌다. 계획된 항목이 완료되었음을 증명하지 않는다."
+    },
+    {
+      "file": "assets/p08-qa-readable.png",
+      "dimensions": [
+        1100,
+        620
+      ],
+      "source_local_path": "C:\\Users\\ljh43\\OneDrive\\Desktop\\workspace\\SSAFY\\프로젝트\\3. 특화pjt\\S14P21E106\\docs\\2026-03-24_MVP_테스트_개선사항_정리.md",
+      "copied_source_path": "sources/original-docs/2026-03-24_MVP_테스트_개선사항_정리.md",
+      "source_sha256": "637e34106bf42d5c4a8f99a732222688b51fb6a0191f1913f3196647cd584ed1",
+      "source_line_ranges": [
+        [
+          26,
+          26
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          35,
+          35
+        ]
+      ],
+      "inserted_display_text": "[중간 생략]",
+      "sha256": "a9bced874d2f747a96a9730f47b5da919550d564e6754b4ec3a9342b156163c7",
+      "source_type": "original_markdown",
+      "rendering": "Original source text rendered with visual line wrapping only; no wording was changed.",
+      "limitations": "팀 QA 문서의 문제·해결 방안 발췌다. 이 기록을 이재호 개인의 완료 작업으로 귀속하지 않으며, 화면이 해결을 입증하지 않는다."
+    }
+  ]
+}

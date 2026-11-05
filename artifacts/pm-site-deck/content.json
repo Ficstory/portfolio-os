@@ -1,0 +1,1126 @@
+{
+  "version": 1,
+  "design": {
+    "width": 1440,
+    "height": 810,
+    "font": "Malgun Gothic",
+    "colors": {
+      "background": "#F7F6F2",
+      "ink": "#171717",
+      "muted": "#666666",
+      "line": "#D8D6D0",
+      "accent": "#2457FF"
+    },
+    "margin": 76
+  },
+  "scope": "메인과 연결된 4개 상세 원문. 내비게이션·중복 재생 안내는 제외. 중복 프로젝트 소개는 한 번만. 각 상세 섹션의 문장·역할·수치를 보존.",
+  "slides": [
+    {
+      "id": "01-cover",
+      "project": "home",
+      "layout": "cover",
+      "title": "팀이 같은 기준으로 일하도록,\n기획과 개발을 연결합니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/"
+      ],
+      "kicker": "이재호 · Product Manager",
+      "paragraphs": [
+        "공공자료 분석 실무 3년 10개월과 소프트웨어 팀 프로젝트 경험을 바탕으로,",
+        "조사·기획 문서부터 사용자의 선택이 데이터로 저장되는 과정까지 다뤘습니다."
+      ],
+      "strengths": [
+        "조사·분석",
+        "요구사항 관리",
+        "화면·데이터 흐름",
+        "개발 협업"
+      ]
+    },
+    {
+      "id": "02-bridge",
+      "project": "home",
+      "layout": "intro",
+      "titleSize": 40,
+      "title": "자료를 분석해 판단 근거를 정리하던 경험을,\n제품의 요구사항과 구현 기준을 다루는 일로 확장했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/"
+      ],
+      "columns": [
+        {
+          "heading": "조사 결과가 기능 선택으로 이어지도록",
+          "paragraphs": [
+            "웃지마게임의 조사와 우선순위 사례"
+          ],
+          "link": "https://ficstory.dev/PM/smile-game/"
+        },
+        {
+          "heading": "초기 기획과 인터뷰를 MVP와 화면 구현으로 이어가도록",
+          "paragraphs": [
+            "부산이음길의 기관 섭외·인터뷰·MVP 선정·길안내 지도 개발"
+          ],
+          "link": "https://ficstory.dev/PM/busan-eumgil/"
+        },
+        {
+          "heading": "문서와 구현 상태가 일치하도록",
+          "paragraphs": [
+            "애낌의 요구사항·화면명세 관리 사례"
+          ],
+          "link": "https://ficstory.dev/PM/aekkim/"
+        },
+        {
+          "heading": "사용자 행동이 데이터에 정확히 반영되도록",
+          "paragraphs": [
+            "Play Pick의 입력·저장 흐름"
+          ],
+          "link": "https://ficstory.dev/PM/play-pick/"
+        }
+      ],
+      "notes": "홈의 역량 연결 순서(웃지마게임·부산이음길·애낌·Play Pick)를 유지한다. 이후 프로젝트 본문은 홈 Selected Work의 웃지마게임·애낌·부산이음길·Play Pick 순서.",
+      "footnote": "Selected Work · 조사, 요구사항, 화면과 데이터 흐름을 보여주는 네 프로젝트"
+    },
+    {
+      "id": "03-smile-overview",
+      "project": "smile",
+      "layout": "overview",
+      "title": "웃지마게임",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/smile-game/"
+      ],
+      "kicker": "실시간 화상 게임",
+      "lead": "친구와 실시간 화상으로 겨루는 웃음 참기 게임",
+      "paragraphs": [
+        "AI가 웃음을 감지하고, 친구 초대와 랜덤 매칭으로 대결하는 서비스입니다."
+      ],
+      "strengths": [
+        "사용자 조사·분석",
+        "기능 우선순위",
+        "초대방 구현"
+      ],
+      "meta": "2026.01~2026.02 · 7인 팀",
+      "columns": [
+        {
+          "heading": "역할과 핵심 기여",
+          "paragraphs": [
+            "내 담당: PM · 사용자 조사 · 프론트엔드 개발",
+            "팀원 담당: 웃음 판정 모델·배틀 연동",
+            "설문을 설계하고 168건의 응답을 분석했습니다.",
+            "팀 논의를 바탕으로 기능 우선순위와 결정 기록을 정리했습니다.",
+            "친구 초대방의 생성·입장·대기 화면을 구현했습니다."
+          ]
+        },
+        {
+          "heading": "주요 산출물과 결과",
+          "paragraphs": [
+            "개인: 설문 분석과 결정 기록을 남기고 친구 초대방 생성·입장·대기 흐름을 구현했습니다.",
+            "팀: 친구 초대와 랜덤 매칭을 포함한 실시간 화상 게임을 구현했습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04-smile-problem",
+      "project": "smile",
+      "layout": "two-column",
+      "title": "재미있다는 반응만으로 참여를 기대하기 어려웠습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/smile-game/"
+      ],
+      "kicker": "웃지마게임 / 문제",
+      "paragraphs": [
+        "웃지마게임은 얼굴을 보이며 웃음을 참는 실시간 화상 대결입니다. 아이디어에 흥미를 느끼는 것과 실제로 카메라를 켜고 참여하는 것은 다른 문제였습니다.",
+        "저는 참여 장벽을 분리해 확인하기 위해 흥미, 이용 의향, 얼굴 노출 부담을 각각 묻는 설문을 설계하고 응답 168건을 분석했습니다."
+      ],
+      "columns": [
+        {
+          "heading": "흥미",
+          "paragraphs": [
+            "서비스가 흥미롭다고 답한 응답은 92/168명이었습니다."
+          ]
+        },
+        {
+          "heading": "참여 의향",
+          "paragraphs": [
+            "해볼 의향이 있다고 답한 응답은 75/168명이었습니다."
+          ]
+        },
+        {
+          "heading": "얼굴 공개 부담",
+          "paragraphs": [
+            "‘꽤’ 또는 ‘매우’ 부담된다는 응답은 112/168명, 66.7%였습니다."
+          ]
+        }
+      ],
+      "footnote": "사전 설문 168명 · 2026.01 · 24–29세와 남성 응답 비중이 높음"
+    },
+    {
+      "id": "05-smile-survey",
+      "project": "smile",
+      "layout": "survey",
+      "title": "흥미, 참여 의향, 얼굴 노출 부담을 각각 확인했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/smile-game/"
+      ],
+      "kicker": "웃지마게임 / 근거",
+      "metrics": [
+        {
+          "label": "‘꽤’ 또는 ‘매우’ 부담됨",
+          "value": "66.7%",
+          "detail": "168명 중 112명"
+        }
+      ],
+      "chart": {
+        "title": "얼굴 노출 부담",
+        "categories": [
+          "매우 부담됨",
+          "꽤 부담됨",
+          "조금 부담됨",
+          "보통",
+          "전혀 부담 없음"
+        ],
+        "values": [
+          56,
+          56,
+          35,
+          13,
+          8
+        ],
+        "percentages": [
+          "33.3%",
+          "33.3%",
+          "20.8%",
+          "7.7%",
+          "4.8%"
+        ],
+        "unit": "명"
+      },
+      "footnote": "사전 설문 168명 · 2026.01 · 24–29세와 남성 응답 비중이 높음. 문항별 응답이며 행동 전환 퍼널이 아닙니다."
+    },
+    {
+      "id": "06-smile-decision",
+      "project": "smile",
+      "layout": "table",
+      "title": "팀은 친구 초대를 우선하고 랜덤 매칭도 유지했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/smile-game/"
+      ],
+      "kicker": "웃지마게임 / 판단",
+      "paragraphs": [
+        "팀 논의를 통해 아는 사람과 시작할 수 있는 친구 초대 흐름을 우선 개발하고, 랜덤 매칭도 함께 제공하기로 결정했습니다. 저는 설문 분석 결과와 결정 내용을 기획서·기능명세·회의 기록에 반영했습니다."
+      ],
+      "table": {
+        "columns": [
+          "구분",
+          "설문 분석과 친구 초대방 구현 과정"
+        ],
+        "rows": [
+          [
+            "사전 설문",
+            "흥미 92/168 · 참여 의향 75/168"
+          ],
+          [
+            "장벽 확인",
+            "얼굴 노출 부담 112/168 · 66.7%"
+          ],
+          [
+            "팀 결정",
+            "친구 초대 우선 · 랜덤 매칭도 유지"
+          ],
+          [
+            "내 담당",
+            "설문·결정 기록 · 방 생성·입장·대기 구현"
+          ]
+        ]
+      },
+      "footnote": "설문 보고서·구현 기록 기반"
+    },
+    {
+      "id": "07-smile-action",
+      "project": "smile",
+      "layout": "two-column",
+      "title": "결정 기록과 친구 초대방 흐름을 구현으로 남겼습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/smile-game/"
+      ],
+      "kicker": "웃지마게임 / 실행·역할 분담",
+      "columns": [
+        {
+          "heading": "조사·분석",
+          "paragraphs": [
+            "168건의 설문 응답을 문항별로 분석해 참여 부담과 기능 요구를 정리했습니다."
+          ]
+        },
+        {
+          "heading": "결정 기록",
+          "paragraphs": [
+            "기획서, 기능명세, 회의록에 매칭 우선순위와 필수 흐름을 반영했습니다."
+          ]
+        },
+        {
+          "heading": "초대방 구현",
+          "paragraphs": [
+            "방 생성·입장·대기 화면을 구현하고, 초대한 상대가 보이지 않는 문제와 통신 연동 오류를 수정했습니다."
+          ]
+        }
+      ],
+      "table": {
+        "columns": [
+          "내 담당",
+          "팀원 담당"
+        ],
+        "rows": [
+          [
+            "설문 설계·분석, 결정 기록, 친구 초대방 생성·입장·대기 화면 구현",
+            "웃음 판정 모델·배틀 연동"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "08-smile-output",
+      "project": "smile",
+      "layout": "evidence",
+      "title": "조사 근거와 친구 초대방 구현 결과를 남겼습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/smile-game/"
+      ],
+      "kicker": "웃지마게임 / 구현 결과",
+      "paragraphs": [
+        "사전 설문 분석과 기획·기능명세의 결정 기록, 친구 초대방 생성·입장·대기 화면을 산출물로 남겼습니다."
+      ],
+      "images": [
+        {
+          "path": "../canva-pm-evidence/assets/smile6-create-join-entry-00.50.png",
+          "caption": "친구 초대방 진입 · 원본 00:00.50"
+        },
+        {
+          "path": "../canva-pm-evidence/assets/smile6-waiting-09.50.png",
+          "caption": "친구 초대방 대기실 · 원본 00:09.50"
+        }
+      ],
+      "footnote": "진입·대기실 실제 시연. 생성 완료·코드 입력 과정의 별도 장면은 미확보.",
+      "links": [
+        {
+          "text": "원문 팀 서비스 시연 · 랜덤 매칭",
+          "url": "https://ficstory.dev/pm/previews/smile.mp4"
+        }
+      ],
+      "notes": "초대방 이미지와 원문 랜덤 매칭 팀 서비스 영상은 서로 다른 근거다. 이전 차수에 확보한 원본 초대배틀.mp4의 프레임을 추가 배치했다."
+    },
+    {
+      "id": "09-smile-learning",
+      "project": "smile",
+      "layout": "two-column",
+      "title": "반응과 실제 참여 조건을 분리해서 물어야 했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/smile-game/"
+      ],
+      "kicker": "웃지마게임 / 배움",
+      "paragraphs": [
+        "‘재미있다’는 반응과 카메라를 켜고 참여할 의향을 별도로 묻고, 참여 부담까지 함께 살펴 팀이 시작 방식의 우선순위를 정할 수 있도록 근거를 나눠 제시했습니다."
+      ]
+    },
+    {
+      "id": "10-aekkim-overview",
+      "project": "aekkim",
+      "layout": "overview",
+      "title": "AEKKIM · 애낌",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/aekkim/"
+      ],
+      "kicker": "Android 구독 관리 앱",
+      "lead": "이용 중인 구독과 매달 나가는 비용을 한눈에",
+      "paragraphs": [
+        "여러 구독 서비스의 비용과 결제일을 한곳에서 확인하고 관리하는 앱입니다."
+      ],
+      "meta": "2026.03 · 프로젝트 우수상(팀 수상)",
+      "strengths": [
+        "요구사항 관리",
+        "개발 이해",
+        "개발 협업"
+      ],
+      "columns": [
+        {
+          "heading": "역할과 핵심 기여",
+          "paragraphs": [
+            "내 담당: PM·FE",
+            "요구사항과 화면명세를 구현 상태에 맞춰 갱신했습니다.",
+            "후보 확인 화면과 제외 상태를 구현했습니다.",
+            "중복 후보와 확인 대기 건수 표시를 수정했습니다."
+          ]
+        },
+        {
+          "heading": "주요 산출물과 결과",
+          "paragraphs": [
+            "개인: 변경된 처리 기준을 요구사항·화면명세와 후보 확인 화면에 반영했습니다.",
+            "팀: Android MVP를 완성해 프로젝트 우수상을 받았습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11-aekkim-problem",
+      "project": "aekkim",
+      "layout": "two-column",
+      "title": "결제 내역에서 찾은 후보를 확인해 등록했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/aekkim/"
+      ],
+      "kicker": "애낌 / 구독 등록 흐름",
+      "paragraphs": [
+        "결제 내역에서 구독으로 추정되는 항목을 찾고, 사용자가 확인한 항목을 앱의 구독 목록에 등록합니다.",
+        "후보에는 구독이 아닌 결제와 서비스 정보가 부족한 항목도 있어, 등록 전 사용자가 확인하고 제외할 수 있는 흐름을 만들었습니다."
+      ],
+      "columns": [
+        {
+          "heading": "감지된 후보",
+          "paragraphs": [
+            "서비스가 식별된 결제를 사용자 확인 뒤 등록합니다."
+          ]
+        },
+        {
+          "heading": "제외한 후보",
+          "paragraphs": [
+            "구독이 아니라고 판단한 항목은 등록 대상에서 뺍니다."
+          ]
+        },
+        {
+          "heading": "미확인 결제",
+          "paragraphs": [
+            "서비스 정보가 부족한 항목은 수동 매핑으로 넘깁니다."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12-aekkim-decision",
+      "project": "aekkim",
+      "layout": "table",
+      "title": "후보 확인과 등록 요청을 나눴습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/aekkim/"
+      ],
+      "kicker": "애낌 / 근거·판단",
+      "lead": "후보별 상태에 맞는 확인 흐름이 필요했습니다.",
+      "paragraphs": [
+        "감지된 후보를 먼저 확인하고 제외할 항목을 고른 뒤, 서비스가 정해지지 않은 결제는 수동 매핑으로 넘겼습니다. 남은 대상만 등록 요청으로 연결했습니다."
+      ],
+      "table": {
+        "columns": [
+          "단계",
+          "처리 기준"
+        ],
+        "rows": [
+          [
+            "감지",
+            "결제 내역 분석"
+          ],
+          [
+            "후보",
+            "확인할 항목 분리"
+          ],
+          [
+            "사용자 확인",
+            "등록 대상 확인·제외"
+          ],
+          [
+            "목록 등록",
+            "앱의 구독 목록에 반영"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "13-aekkim-screen",
+      "project": "aekkim",
+      "layout": "evidence",
+      "title": "구독 확인 화면과 등록 흐름",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/aekkim/"
+      ],
+      "kicker": "애낌 / 실제 화면",
+      "images": [
+        {
+          "path": "../../docs/pm-redesign/aekkim-demo/screenshots/02-review-payment.png",
+          "caption": "결제 후보 확인"
+        },
+        {
+          "path": "../../docs/pm-redesign/aekkim-demo/screenshots/03-select-service.png",
+          "caption": "서비스 수동 선택"
+        },
+        {
+          "path": "../../docs/pm-redesign/aekkim-demo/screenshots/05-dashboard-after.png",
+          "caption": "등록 후 구독 목록"
+        }
+      ],
+      "footnote": "구독 관리 화면 데모 · 오프라인 · 예시 데이터 사용",
+      "links": [
+        {
+          "text": "원문 데모 영상",
+          "url": "https://ficstory.dev/pm/previews/aekkim.mp4"
+        }
+      ],
+      "notes": "실제 코드 기반 오프라인 Android 데모의 기존 원본 캡처다. 화면의 금액은 실제 절감 성과가 아니다."
+    },
+    {
+      "id": "14-aekkim-action",
+      "project": "aekkim",
+      "layout": "two-column",
+      "title": "후보 확인 화면과 표시 상태를 구현했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/aekkim/"
+      ],
+      "kicker": "애낌 / 실행",
+      "columns": [
+        {
+          "heading": "초기 확인 화면",
+          "paragraphs": [
+            "분석 결과가 없을 때의 빈 상태와 안내, 구독 후보 목록의 기본 UI를 구현했습니다."
+          ]
+        },
+        {
+          "heading": "후보 제외",
+          "paragraphs": [
+            "사용자가 고른 제외 상태를 화면에 반영하고, 남은 후보를 구분했습니다."
+          ]
+        },
+        {
+          "heading": "표시 정합성",
+          "paragraphs": [
+            "중복 후보 노출과 수동 확인이 필요한 결제의 남은 건수 표시를 수정했습니다."
+          ]
+        },
+        {
+          "heading": "명세 갱신",
+          "paragraphs": [
+            "지원 범위, 빈 상태·오류 상태, 화면 진입과 이동 조건을 현재 구현에 맞춰 정리했습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15-aekkim-output",
+      "project": "aekkim",
+      "layout": "two-column",
+      "title": "구독 확인 화면과 등록 흐름을 완성했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/aekkim/"
+      ],
+      "kicker": "애낌 / 역할 분담·구현 결과",
+      "paragraphs": [
+        "구독 확인 화면의 초기 UI와 상태 수정, 요구사항·화면 명세를 남겼습니다. 팀은 Android MVP를 완성해 프로젝트 우수상을 받았습니다."
+      ],
+      "columns": [
+        {
+          "heading": "내 담당",
+          "paragraphs": [
+            "후보 확인 초기 UI, 제외 상태, 중복 후보와 남은 건수 표시, 요구사항·화면 명세를 맡았습니다."
+          ]
+        },
+        {
+          "heading": "팀원 담당",
+          "paragraphs": [
+            "김응서 팀원이 구독 등록 요청과 실패 처리를, 박규빈 팀원이 번들 보완을 맡았습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16-aekkim-learning",
+      "project": "aekkim",
+      "layout": "two-column",
+      "title": "화면의 건수는 처리 대상과 같은 기준으로 계산해야 했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/aekkim/"
+      ],
+      "kicker": "애낌 / 배움",
+      "paragraphs": [
+        "화면에 보이는 상태·개수와 요청 대상을 같은 기준으로 정리했습니다. 중복 후보와 남은 결제 건수도 현재 동작 기준으로 맞췄습니다."
+      ]
+    },
+    {
+      "id": "17-busan-overview",
+      "project": "busan",
+      "layout": "overview",
+      "title": "부산이음길",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/busan-eumgil/"
+      ],
+      "kicker": "보행약자 길안내 앱",
+      "lead": "보행약자의 이동 조건을 고려한 길안내",
+      "paragraphs": [
+        "부산의 보행약자와 저시력자를 위해 이동 조건과 접근성 설정을 반영한 길안내 앱입니다."
+      ],
+      "meta": "2026.04~2026.05 · 7인 팀",
+      "strengths": [
+        "초기 기획·MVP 선정",
+        "기관 인터뷰",
+        "길안내 지도 구현"
+      ],
+      "columns": [
+        {
+          "heading": "역할과 핵심 기여",
+          "paragraphs": [
+            "내 담당: 서비스 기획 · 기관 섭외·인터뷰 · MVP 선정 · 프론트엔드 개발",
+            "서비스를 처음부터 기획하고, 함세상 장애인자립생활센터를 직접 섭외했습니다.",
+            "센터와의 미팅·인터뷰를 바탕으로 MVP 범위를 선정했습니다.",
+            "길안내 지도 위 마커를 고정하는 동작과 관련 프론트엔드를 구현했습니다.",
+            "글자 크기 설정·승인된 제보 표시를 구현하고 관련 명세를 관리했습니다."
+          ]
+        },
+        {
+          "heading": "주요 산출물과 결과",
+          "paragraphs": [
+            "개인: 초기 기획과 기관 섭외·인터뷰를 거쳐 MVP 범위를 선정하고, 길안내 지도의 마커 고정 동작을 포함한 프론트엔드를 구현했습니다.",
+            "팀: 보행약자를 위한 길안내 앱을 함께 구현했습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18-busan-planning",
+      "project": "busan",
+      "layout": "evidence",
+      "title": "처음부터 기획하고,\n현장 인터뷰로 MVP 범위를 정했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/busan-eumgil/"
+      ],
+      "kicker": "부산이음길 / 초기 기획·인터뷰",
+      "paragraphs": [
+        "부산이음길의 초기 서비스 기획을 맡았습니다. 기획을 구체화하기 위해 함세상 장애인자립생활센터를 직접 섭외하고, 2026년 4월 10일 미팅·인터뷰를 진행했습니다. 그 내용을 바탕으로 MVP 범위를 선정했습니다."
+      ],
+      "images": [
+        {
+          "path": "../../public/pm-improved/evidence/busan-mvp-meeting.png",
+          "caption": "MVP 기능을 설명하고 의견을 나눈 미팅 현장"
+        }
+      ],
+      "notes": "사진 자체로 날짜·기관·인물을 특정하지 않는다. 초기 기획·기관명·2026-04-10은 배포 원문과 원본 인터뷰 문서 근거."
+    },
+    {
+      "id": "19-busan-mvp",
+      "project": "busan",
+      "layout": "two-column",
+      "title": "초기 기획·인터뷰·MVP 선정",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/busan-eumgil/"
+      ],
+      "kicker": "부산이음길 / 초기 기획·인터뷰",
+      "lead": "함세상 장애인자립생활센터를 직접 섭외해 회의·인터뷰를 진행하고 MVP 범위를 선정했습니다.",
+      "columns": [
+        {
+          "heading": "경로 비교",
+          "paragraphs": [
+            "여러 경로 선택지와 경사·계단·폭 같은 위험 정보를 확인하려는 요구를 경로 비교·상세·안내 흐름으로 연결했습니다."
+          ]
+        },
+        {
+          "heading": "사용자 이동 조건",
+          "paragraphs": [
+            "이동 보조기기마다 조건이 다르다는 의견을 사용자 유형 온보딩으로 반영했습니다."
+          ]
+        },
+        {
+          "heading": "접근성 시설 탐색",
+          "paragraphs": [
+            "화장실·충전기·건물 접근성 정보에 대한 요구를 접근성 필터와 시설 상세 탐색으로 연결했습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20-busan-map",
+      "project": "busan",
+      "layout": "evidence",
+      "title": "길안내 지도 화면과 마커 고정 동작을 구현했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/busan-eumgil/"
+      ],
+      "kicker": "부산이음길 / 지도 개발",
+      "paragraphs": [
+        "보행약자가 목적지와 이동 정보를 확인하는 길안내 지도 화면을 개발했습니다. 지도 위 선택 핀의 고정 렌더링과 카메라 제스처 동기화를 포함한 관련 프론트엔드 작업을 맡았습니다."
+      ],
+      "images": [
+        {
+          "path": "../../public/pm-improved/evidence/busan-route-map.png",
+          "caption": "지도 화면 캡처 · 시설 탐색과 최근 목적지"
+        }
+      ],
+      "footnote": "정지 화면은 지도 표시의 근거입니다. 마커 동작 기여는 원문 및 변경 기록을 근거로 기술했습니다.",
+      "notes": "원본 Git ac698b3(2026-05-09, 이재호)의 선택 핀 고정 렌더링·카메라 동기화 보정 기록을 앞선 작업에서 확인했다. 현장 보행·경로 안전성 검증 완료로 확대하지 않는다."
+    },
+    {
+      "id": "21-busan-additional",
+      "project": "busan",
+      "layout": "table",
+      "title": "접근성 설정과 제보 표시도 구현했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/busan-eumgil/"
+      ],
+      "kicker": "부산이음길 / 추가 구현",
+      "paragraphs": [
+        "글자 크기를 선택하면 즉시 저장·적용되도록 구현하고, 승인된 사용자 제보를 접근성 시설과 구분해 지도에 표시했습니다. 제보를 선택하면 내용을 확인하는 하단 패널로 연결했습니다."
+      ],
+      "table": {
+        "columns": [
+          "구분",
+          "구현 기준"
+        ],
+        "rows": [
+          [
+            "글자 크기 설정",
+            "기본 · 크게 · 아주 크게"
+          ],
+          [
+            "저장·적용",
+            "선택 즉시 저장하고 앱 화면에 적용 · 별도 저장 버튼 없음"
+          ],
+          [
+            "승인된 제보",
+            "시설 마커 + 승인 제보 마커"
+          ],
+          [
+            "제보 선택",
+            "시설 마커와 분리해 표시 · 제보를 누르면 하단 패널에서 내용 확인"
+          ]
+        ]
+      },
+      "footnote": "구현 기준 요약 · 글자 크기 설정과 승인된 제보의 표시 기준"
+    },
+    {
+      "id": "22-busan-outputs",
+      "project": "busan",
+      "layout": "two-column",
+      "title": "초기 기획과 MVP 선정,\n지도 화면 개발을 산출물로 남겼습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/busan-eumgil/"
+      ],
+      "kicker": "부산이음길 / 주요 산출물",
+      "columns": [
+        {
+          "heading": "초기 기획·기관 인터뷰",
+          "paragraphs": [
+            "서비스를 기획하고 함세상 장애인자립생활센터를 섭외해 회의·인터뷰를 진행했습니다."
+          ]
+        },
+        {
+          "heading": "MVP 선정",
+          "paragraphs": [
+            "인터뷰에서 확인한 이동 조건을 경로 비교, 사용자 유형 온보딩, 접근성 시설 탐색 범위로 연결했습니다."
+          ]
+        },
+        {
+          "heading": "지도 프론트엔드",
+          "paragraphs": [
+            "길안내 지도 화면과 마커 고정 동작을 구현했습니다."
+          ]
+        },
+        {
+          "heading": "추가 구현",
+          "paragraphs": [
+            "글자 크기 설정, 승인된 제보 표시, 관련 명세 관리를 맡았습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23-busan-roles",
+      "project": "busan",
+      "layout": "two-column",
+      "title": "역할 분담",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/busan-eumgil/"
+      ],
+      "kicker": "부산이음길",
+      "columns": [
+        {
+          "heading": "내 담당",
+          "paragraphs": [
+            "초기 서비스 기획, 함세상 장애인자립생활센터 섭외·회의·인터뷰, MVP 선정, 길안내 지도·마커 고정 동작을 포함한 프론트엔드 개발, 접근성 설정·승인 제보 표시·명세 관리"
+          ]
+        },
+        {
+          "heading": "팀원 담당",
+          "paragraphs": [
+            "경로 탐색과 공간 데이터 개발"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24-busan-team",
+      "project": "busan",
+      "layout": "evidence",
+      "title": "팀이 완성한 서비스의 온보딩 흐름입니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/busan-eumgil/"
+      ],
+      "kicker": "부산이음길 / 팀 결과",
+      "lead": "사용자 유형과 보행 조건 선택",
+      "images": [{"path":"assets/busan-onboarding-user-type-02.00.png","caption":"사용자 유형 선택 · 원본 00:02.00"},{"path":"assets/busan-onboarding-mobility-type-05.00.png","caption":"이동 보조 유형 선택 · 원본 00:05.00"}],
+      "footnote": "팀 서비스 시연 · 온보딩",
+      "links": [
+        {
+          "text": "원문 온보딩 영상",
+          "url": "https://ficstory.dev/pm/previews/busan.mp4"
+        }
+      ],
+      "notes": "배포된 원문 동영상 https://ficstory.dev/pm/previews/busan.mp4의 실제 프레임. 00:02.00와00:05.00. 팀 서비스 온보딩으로 개인 구현이나 현장 사용성 검증을 증명하지 않는다."
+    },
+    {
+      "id": "25-busan-learning",
+      "project": "busan",
+      "layout": "two-column",
+      "title": "초기 기획부터 인터뷰와 화면 구현을\n한 흐름으로 연결했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/busan-eumgil/"
+      ],
+      "kicker": "부산이음길 / 배움",
+      "paragraphs": [
+        "처음 세운 서비스 방향을 기관 인터뷰로 구체화하고, 그 내용을 MVP 범위와 길안내 지도 화면 구현으로 연결했습니다."
+      ]
+    },
+    {
+      "id": "26-play-overview",
+      "project": "play",
+      "layout": "overview",
+      "title": "Play Pick",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/play-pick/"
+      ],
+      "kicker": "공연 추천 웹 서비스",
+      "lead": "취향에 맞는 공연을 탐색하는 추천 서비스",
+      "paragraphs": [
+        "가입 직후 취향을 수집해 첫 공연 탐색을 돕는 추천 서비스입니다."
+      ],
+      "meta": "2025.12 · 2인 팀",
+      "strengths": [
+        "온보딩 설계",
+        "화면·데이터 흐름",
+        "프론트엔드 개발"
+      ],
+      "columns": [
+        {
+          "heading": "역할과 핵심 기여",
+          "paragraphs": [
+            "내 담당: 팀장 · 온보딩 화면 설계·프론트엔드 개발",
+            "팀원 담당: 핵심 검색·추천 엔진 개발",
+            "온보딩의 선택 상태를 구현했습니다.",
+            "응답 저장과 완료 처리를 연결했습니다.",
+            "저장 뒤 추천 화면으로 이동하게 했습니다."
+          ]
+        },
+        {
+          "heading": "주요 산출물과 결과",
+          "paragraphs": [
+            "개인: 온보딩의 선택·저장·완료·추천 조회 흐름을 연결했습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "27-play-problem",
+      "project": "play",
+      "layout": "evidence",
+      "title": "이용 기록이 없는 사용자의\n첫 추천에는 입력이 필요했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/play-pick/"
+      ],
+      "kicker": "Play Pick / 문제",
+      "paragraphs": [
+        "Play Pick은 공연 정보와 사용자 취향을 연결하는 추천 웹 서비스입니다. 가입 직후에는 조회·찜·관람 기록이 없으므로, 첫 추천에 사용할 관심 정보를 별도로 받아야 했습니다.",
+        "공연을 한 장씩 보여주고 호감·비호감·판단 보류를 받는 온보딩 화면을 만들었습니다. 핵심 과제는 각 행동의 의미를 데이터에 다르게 담고, 저장이 끝난 뒤에만 추천으로 이동하는 것이었습니다."
+      ],
+      "images": [
+        {
+          "path": "../canva-pm-evidence/assets/play10-onboarding-card-crop.png",
+          "caption": "서비스 화면 재현 데모 · 예시 데이터 사용"
+        }
+      ],
+      "notes": "원본 docs/pm-redesign/play-pick-demo/onboarding-start.png를 이전작업에서 crop[500,120,1100,1160]. 0/8표시는전체원본에만있고crop에는없다."
+    },
+    {
+      "id": "28-play-evidence",
+      "project": "play",
+      "layout": "table",
+      "title": "세 가지 응답은 저장 규칙이 서로 달랐습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/play-pick/"
+      ],
+      "kicker": "Play Pick / 근거",
+      "table": {
+        "columns": [
+          "사용자 응답",
+          "저장 규칙"
+        ],
+        "rows": [
+          [
+            "보고싶어요",
+            "호감 응답으로 공연 ID와 함께 저장 요청에 포함합니다."
+          ],
+          [
+            "안볼래요",
+            "비호감 응답으로 저장 요청에 포함합니다."
+          ],
+          [
+            "모르겠어요",
+            "판단 보류로 다음 공연을 보여주되, 비호감으로 저장하거나 완료 개수에 포함하지 않습니다."
+          ],
+          [
+            "완료 조건",
+            "호감·비호감 응답이 8개 이상일 때 완료할 수 있습니다."
+          ]
+        ]
+      },
+      "footnote": "제품 명세: 호감·비호감 응답 최소 8개"
+    },
+    {
+      "id": "29-play-decision",
+      "project": "play",
+      "layout": "table",
+      "title": "중립 응답을 제외하고,\n저장 성공 뒤에 완료 처리했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/play-pick/"
+      ],
+      "kicker": "Play Pick / 판단",
+      "paragraphs": [
+        "판단을 보류한 응답을 비선호로 오해하지 않도록 요청 데이터에서 제외했습니다. 호불호가 8개 이상 쌓이면 완료 버튼을 활성화하고, 선택 저장 → 온보딩 완료 → 추천 화면 이동 순서를 지키도록 했습니다."
+      ],
+      "table": {
+        "columns": [
+          "순서",
+          "처리"
+        ],
+        "rows": [
+          [
+            "01 선택",
+            "호감·비호감만 응답 목록에 추가"
+          ],
+          [
+            "02 저장",
+            "공연 ID와 응답 값을 서버에 전달"
+          ],
+          [
+            "03 완료",
+            "저장이 성공한 뒤 온보딩 완료 처리"
+          ],
+          [
+            "04 이동",
+            "추천 화면에서 저장된 취향 사용"
+          ]
+        ]
+      },
+      "footnote": "사용자의 선택 상태, 요청 데이터 변환, 저장·완료 요청 순서와 화면 이동을 프론트엔드에서 연결했습니다."
+    },
+    {
+      "id": "30-play-action",
+      "project": "play",
+      "layout": "two-column",
+      "title": "화면 상태와 서버의 취향 저장 처리를 연결했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/play-pick/"
+      ],
+      "kicker": "Play Pick / 실행",
+      "columns": [
+        {
+          "heading": "선택 상태",
+          "paragraphs": [
+            "현재 공연과 호불호 응답, 유효 응답 개수에 따라 진행 상태와 완료 버튼을 갱신했습니다."
+          ]
+        },
+        {
+          "heading": "요청 데이터",
+          "paragraphs": [
+            "공연 ID와 호감·비호감 값을 서버 요청 형식으로 바꾸고, 중립 응답은 제외했습니다."
+          ]
+        },
+        {
+          "heading": "저장 처리",
+          "paragraphs": [
+            "사용자의 응답을 공연 특성 데이터에 반영해 서버에 취향 정보로 저장하는 처리를 구현했습니다."
+          ]
+        },
+        {
+          "heading": "실패 상태",
+          "paragraphs": [
+            "저장 요청이 실패하면 오류를 보여주고 현재 화면에 머물며, 완료 처리와 추천 이동을 진행하지 않게 했습니다."
+          ]
+        }
+      ],
+      "footnote": "구현 세부 정보: 화면 상태는 Pinia에서 관리했습니다. 보고싶어요는 1.5, 안볼래요는 −1.0으로 전달하고, 서버는 공연 임베딩을 가중 합산·정규화해 사용자 선호 정보로 저장합니다."
+    },
+    {
+      "id": "31-play-roles",
+      "project": "play",
+      "layout": "two-column",
+      "title": "내 담당과 팀원 담당",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/play-pick/"
+      ],
+      "kicker": "Play Pick / 역할 분담",
+      "columns": [
+        {
+          "heading": "내 담당",
+          "paragraphs": [
+            "팀장으로 화면 설계·프론트엔드, 온보딩 API, 사용자 선호 저장 처리를 맡았습니다."
+          ]
+        },
+        {
+          "heading": "팀원 담당",
+          "paragraphs": [
+            "임경수 팀원이 공연 데이터 수집, 핵심 AI 검색·추천 엔진 개발, 배포 설정을 맡았습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "32-play-output",
+      "project": "play",
+      "layout": "evidence",
+      "title": "취향 입력부터 저장·완료·추천 조회까지 연결했습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/play-pick/"
+      ],
+      "kicker": "Play Pick / 구현 결과",
+      "paragraphs": [
+        "호감·비호감·중립 선택, 유효 응답 8개 조건, 취향 저장, 완료 처리와 추천 화면 이동을 연결했습니다. 저장에 실패하면 현재 화면에 머물도록 처리했습니다."
+      ],
+      "images": [
+        {
+          "path": "../canva-pm-evidence/assets/play10-first-recommendations-crop.png",
+          "caption": "서비스 화면 재현 데모 · 예시 데이터 사용"
+        }
+      ],
+      "links": [
+        {
+          "text": "원문 재현 데모 영상",
+          "url": "https://ficstory.dev/pm/previews/play-pick.mp4"
+        }
+      ],
+      "notes": "실제 Vue·Django 코드 기반 로컬 재현이며 예시 계정·보관 데이터를 사용한다. 추천 순위나품질 개선 성과를 주장하지 않는다."
+    },
+    {
+      "id": "33-play-learning",
+      "project": "play",
+      "layout": "two-column",
+      "title": "사용자 행동의 의미와\n저장 실패 상태를 함께 다뤘습니다.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/play-pick/"
+      ],
+      "kicker": "Play Pick / 배움",
+      "paragraphs": [
+        "중립 응답을 비선호와 분리하고, 저장에 실패하면 완료 상태로 넘어가지 않게 처리했습니다. 사용자의 선택 의미와 요청 결과를 화면 상태에 함께 반영한 경험이었습니다."
+      ]
+    },
+    {
+      "id": "34-experience",
+      "project": "home",
+      "layout": "two-column",
+      "title": "경력·교육·대외활동",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/"
+      ],
+      "kicker": "Experience",
+      "lead": "조사와 분석의 경험을, 제품의 요구사항과 구현 기준을 다루는 일로 이어 왔습니다.",
+      "columns": [
+        {
+          "heading": "부산참여연대",
+          "paragraphs": [
+            "지방자치·재정감시 실무 · 2021.05–2025.02",
+            "팀장 · 2024.03–2025.02 / 간사 · 2021.05–2024.03",
+            "부산시 예산·결산 분석, 부산시의회 의정활동 평가 보고서 작성",
+            "행정사무감사 시민의제 발굴, 조례 입법예고 의견 취합·정리",
+            "시민의제 제안 기자회견과 시의회 의장단 간담회 운영 지원"
+          ]
+        },
+        {
+          "heading": "학력·교육",
+          "paragraphs": [
+            "국립한국해양대학교 동아시아학과 · 2022.08 졸업",
+            "국제지역학사 · 평점 3.74/4.5",
+            "삼성청년SW·AI아카데미 SSAFY · 2025.07–2026.06 수료",
+            "총 1,628시간 · 코딩·알고리즘 및 SW·AI 프로젝트",
+            "신세계 퓨처앤드림아카데미 · 수강 중",
+            "고객의 상품 선택과 구매 행동을 데이터로 이해하기 위한 학습"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "35-activities",
+      "project": "home",
+      "layout": "two-column",
+      "title": "대외활동과 기술·협업 도구",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/"
+      ],
+      "kicker": "Experience",
+      "columns": [
+        {
+          "heading": "대외활동",
+          "paragraphs": [
+            "부산진구 청년네트워크 · 위원 위촉 · 2025.02–2025.12",
+            "부산진구 의정비심의위원회 · 위원 위촉 · 2024.02–2025.01",
+            "부산청년정책네트워크 · 2022 청년거버넌스 참여자 · 2022.02–2022.12"
+          ]
+        },
+        {
+          "heading": "수상",
+          "paragraphs": [
+            "SSAFY 특화 프로젝트 우수상 · 애낌 AEKKIM",
+            "2026.03 · 팀 수상"
+          ]
+        },
+        {
+          "heading": "개발",
+          "paragraphs": [
+            "Python, Django, Kotlin, Jetpack Compose"
+          ]
+        },
+        {
+          "heading": "디자인·협업",
+          "paragraphs": [
+            "Figma, Notion, Slack, Git, Jira"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "text": "이력서 보기 (PDF)",
+          "url": "https://ficstory.dev/pm-improved/resume/lee-jaeho-pm-resume.pdf"
+        },
+        {
+          "text": "Word 원본",
+          "url": "https://ficstory.dev/pm-improved/resume/lee-jaeho-pm-resume.docx"
+        }
+      ]
+    },
+    {
+      "id": "36-contact",
+      "project": "home",
+      "layout": "closing",
+      "title": "다음에 풀 문제를\n함께 이야기해요.",
+      "sourceUrls": [
+        "https://ficstory.dev/PM/"
+      ],
+      "kicker": "Contact",
+      "lead": "dlwo4367@gmail.com",
+      "paragraphs": [
+        "이재호 · PM 포트폴리오",
+        "ficstory.dev/PM/"
+      ],
+      "links": [
+        {
+          "text": "이메일",
+          "url": "mailto:dlwo4367@gmail.com"
+        },
+        {
+          "text": "포트폴리오 사이트",
+          "url": "https://ficstory.dev/PM/"
+        },
+        {
+          "text": "이력서 보기 (PDF)",
+          "url": "https://ficstory.dev/pm-improved/resume/lee-jaeho-pm-resume.pdf"
+        }
+      ]
+    }
+  ]
+}

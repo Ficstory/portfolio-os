@@ -1,0 +1,1745 @@
+{
+  "transaction_id": "4237277210073398359",
+  "pages": [
+    {
+      "page_id": "PBYThwT3xY8lYPwc",
+      "page_number": 1,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    },
+    {
+      "page_id": "PBV8Wnz1q4b7w97F",
+      "page_number": 2,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    },
+    {
+      "page_id": "PBG3wW1czt9RRvKK",
+      "page_number": 3,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    },
+    {
+      "page_id": "PBNhcX0VBXk4dlG8",
+      "page_number": 4,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    },
+    {
+      "page_id": "PBxMT6P3lbfDTMZF",
+      "page_number": 5,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    },
+    {
+      "page_id": "PBtrMkZb9RTC8z01",
+      "page_number": 6,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    },
+    {
+      "page_id": "PBh0LFwH9cVs3W2q",
+      "page_number": 7,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    },
+    {
+      "page_id": "PBmZQGB2TkZ4Klbc",
+      "page_number": 8,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    },
+    {
+      "page_id": "PBWpr5ZNxnbKfJND",
+      "page_number": 9,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    },
+    {
+      "page_id": "PB7ldw6mmVVDlfjy",
+      "page_number": 10,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    },
+    {
+      "page_id": "PBBCdbXp9qF0LwkY",
+      "page_number": 11,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    },
+    {
+      "page_id": "PBnmYRtkRT7vJyrx",
+      "page_number": 12,
+      "dimension": {
+        "width": 1600,
+        "height": 900
+      },
+      "is_responsive": false,
+      "is_empty": false,
+      "is_editable": true
+    }
+  ],
+  "operations": [
+    {
+      "type": "replace_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBrWKt1fpQfrDPY1",
+      "text": "설문을 바탕으로 팀과 방향을 정하고,\n방 기능의 개발 순서를 문서화했습니다."
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBrWKt1fpQfrDPY1",
+      "formatting": {
+        "font_size": 50,
+        "font_weight": "bold",
+        "color": "#142638",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LB6YMxTPm78XlJDr",
+      "text": "판단 근거"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LB6YMxTPm78XlJDr",
+      "left": 76,
+      "top": 284
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LB6YMxTPm78XlJDr",
+      "width": 420
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LB6YMxTPm78XlJDr",
+      "formatting": {
+        "font_size": 24,
+        "font_weight": "bold",
+        "color": "#1A5DDE",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBNKBn78Rh2wMvb1",
+      "text": "흥미 92명 · 참여 의향 75명\n얼굴 공개 부담 112/168명\n\n아는 사람과 시작하는 경로를\n우선할 근거로 제시했습니다."
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBNKBn78Rh2wMvb1",
+      "left": 76,
+      "top": 330
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBNKBn78Rh2wMvb1",
+      "width": 450
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBNKBn78Rh2wMvb1",
+      "formatting": {
+        "font_size": 26,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBD1NPpqvqTRjzXJ",
+      "text": "팀의 결정 → 내 실행"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBD1NPpqvqTRjzXJ",
+      "left": 76,
+      "top": 546
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBD1NPpqvqTRjzXJ",
+      "width": 460
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBD1NPpqvqTRjzXJ",
+      "formatting": {
+        "font_size": 24,
+        "font_weight": "bold",
+        "color": "#1A5DDE",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBYn9m3sBwPBdx8J",
+      "text": "친구 초대 우선 + 랜덤 매칭 유지\n내 담당: 조사·결정 기록·초대방 UI\n모델·배틀 연동: 팀원 담당"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBYn9m3sBwPBdx8J",
+      "left": 76,
+      "top": 592
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBYn9m3sBwPBdx8J",
+      "width": 475
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBYn9m3sBwPBdx8J",
+      "formatting": {
+        "font_size": 24,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBlYkBmpjlRv3lpd",
+      "text": "회의록 2026.01.14 | 개발 순서 결정"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBlYkBmpjlRv3lpd",
+      "left": 590,
+      "top": 276
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBlYkBmpjlRv3lpd",
+      "width": 930
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBlYkBmpjlRv3lpd",
+      "formatting": {
+        "font_size": 24,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBkXbWbSsNq7zVXl",
+      "text": "참여 부담 감소는 기획 의도이며 출시 후 효과는 미측정입니다."
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBkXbWbSsNq7zVXl",
+      "left": 76,
+      "top": 785
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBkXbWbSsNq7zVXl",
+      "width": 1440
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBkXbWbSsNq7zVXl",
+      "formatting": {
+        "font_size": 20,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBK009GjVPBTKJ32"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBvwYj9lDpM1hHmm"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBrzpXtkl6bfK73j"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBxMT6P3lbfDTMZF-LBpGQF8hmfK88zls"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PBxMT6P3lbfDTMZF",
+      "asset_id": "MAHVLEPkxPs",
+      "asset_type": "image",
+      "left": 578,
+      "top": 324,
+      "width": 946,
+      "height": 530,
+      "alt_text": "1월 14일 실제 회의록 결정 블록 원문 발췌"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBkbJr3X8FVHfWrP",
+      "text": "결정한 진입 흐름을,\n친구 초대방 구현으로 연결했습니다."
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBkbJr3X8FVHfWrP",
+      "formatting": {
+        "font_size": 50,
+        "font_weight": "bold",
+        "color": "#142638",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBJQtj8mfJ5TM9B3",
+      "text": "01  방 만들기·코드 입력 진입 | 00:00.50"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBJQtj8mfJ5TM9B3",
+      "left": 76,
+      "top": 263
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBJQtj8mfJ5TM9B3",
+      "width": 710
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBJQtj8mfJ5TM9B3",
+      "formatting": {
+        "font_size": 25,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBJ4cBv1kYzJ3Shf",
+      "text": "02  친구 초대방 대기실 | 00:09.50"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBJ4cBv1kYzJ3Shf",
+      "left": 824,
+      "top": 263
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBJ4cBv1kYzJ3Shf",
+      "width": 710
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBJ4cBv1kYzJ3Shf",
+      "formatting": {
+        "font_size": 25,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBBchMMJ1qkSvmvj",
+      "text": "내 실행: 방 생성·입장·대기 UI, 초대 상대 미표시·통신 연동 오류 수정"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBBchMMJ1qkSvmvj",
+      "left": 76,
+      "top": 712
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBBchMMJ1qkSvmvj",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBBchMMJ1qkSvmvj",
+      "formatting": {
+        "font_size": 25,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBYqYpT6qcQnHm07",
+      "text": "원본 초대배틀.mp4에서 추출 · 생성 완료·코드 입력 과정의 별도 장면은 추가 확보 필요"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBYqYpT6qcQnHm07",
+      "left": 76,
+      "top": 755
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBYqYpT6qcQnHm07",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBYqYpT6qcQnHm07",
+      "formatting": {
+        "font_size": 21,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBnp7xK7nXjZ8rfX",
+      "text": "출시 전 조사·구현 기록과 실제 시연 범위 / 출시 후 참여율·재대결률 미측정"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBnp7xK7nXjZ8rfX",
+      "left": 76,
+      "top": 791
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBnp7xK7nXjZ8rfX",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBnp7xK7nXjZ8rfX",
+      "formatting": {
+        "font_size": 20,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBtrMkZb9RTC8z01-LB6hXMxVBsxzYgNR"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBtrMkZb9RTC8z01-LB1Yg2CwKzGwrsWx"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBnLtDl16ZjksG2g"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBRgdZl404k92kKj"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBgbrdwmYRKFw8Tp"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBtrMkZb9RTC8z01-LB2dCysc7Z6BdQMx"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBS7vZMmZGCdYRKs"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBqs4hnqyT3hcW8F"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBtrMkZb9RTC8z01-LBLf7XgMPx3JmgNs"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PBtrMkZb9RTC8z01",
+      "asset_id": "MAHVLAor8Pw",
+      "asset_type": "image",
+      "left": 76,
+      "top": 315,
+      "width": 700,
+      "height": 393.75,
+      "alt_text": "초대배틀 원본 00:00.50 방 생성 및 방 코드 입력 진입 버튼"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PBtrMkZb9RTC8z01",
+      "asset_id": "MAHVLLQ5UuY",
+      "asset_type": "image",
+      "left": 824,
+      "top": 315,
+      "width": 700,
+      "height": 393.75,
+      "alt_text": "초대배틀 원본 00:09.50 두 참가자와 READY가 보이는 대기실"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBrcPcyGJDqFSQMm",
+      "text": "결제 후보를 확인·제외하는 기준을,\n요구사항과 화면 흐름에 연결했습니다."
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBrcPcyGJDqFSQMm",
+      "formatting": {
+        "font_size": 50,
+        "font_weight": "bold",
+        "color": "#142638",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBzzWjQhnbflGtZ2",
+      "text": "구독 후보에는 오탐·미확인 항목이 있어, 사용자 확인과 등록 요청을 나눴습니다."
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBzzWjQhnbflGtZ2",
+      "left": 76,
+      "top": 245
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBzzWjQhnbflGtZ2",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBzzWjQhnbflGtZ2",
+      "formatting": {
+        "font_size": 24,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBbbhDbBgS89n3Cc",
+      "text": "요구사항 | 후보 확인 → 수동 매핑"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBbbhDbBgS89n3Cc",
+      "left": 76,
+      "top": 300
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBbbhDbBgS89n3Cc",
+      "width": 700
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBbbhDbBgS89n3Cc",
+      "formatting": {
+        "font_size": 25,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBB1bKpJ3P0tFwt1",
+      "text": "화면명세 | 화면 목적·사용자 액션"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBB1bKpJ3P0tFwt1",
+      "left": 824,
+      "top": 300
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBB1bKpJ3P0tFwt1",
+      "width": 700
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBB1bKpJ3P0tFwt1",
+      "formatting": {
+        "font_size": 25,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBlyMDyz1XC5pNrw",
+      "text": "내 실행: 후보 확인 UI·제외 상태, 중복 후보·남은 건수 수정과 명세 갱신"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBlyMDyz1XC5pNrw",
+      "left": 76,
+      "top": 773
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBlyMDyz1XC5pNrw",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBlyMDyz1XC5pNrw",
+      "formatting": {
+        "font_size": 23,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBvtMdt35wVDpxNh",
+      "text": "2026.03 · PM·FE / 문서는 3월 29일 현행 기준 · 구독 생성·실패·번들은 팀원 기여"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBvtMdt35wVDpxNh",
+      "left": 76,
+      "top": 810
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBvtMdt35wVDpxNh",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBvtMdt35wVDpxNh",
+      "formatting": {
+        "font_size": 18,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LB8XrY8QSgQ5ltgr"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBR0f779XcQtVXZF"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LB5MNBBXtX2RH6MX"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBB1Q8VnCcpzw54W"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBspzK2nszYPC173"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LB8B6lcMGMxnRvwk"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LB7cyXvfxJqHGgbB"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBJrBdzbY8zd2x6w"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBN7KpbWRF9h9rcS"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBtjxnTbkSw5HLTg"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBRL33n1FdlZ7JzD"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LB63nLVZ4w9l0Vms"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBZWctgp49Fry4fd"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBPRRf32WNQCPkm0"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBs2JNB9hbt4ZMjJ"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBh0LFwH9cVs3W2q-LBtKbc2zl9m6zjMd"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PBh0LFwH9cVs3W2q",
+      "asset_id": "MAHVLMO8fl4",
+      "asset_type": "image",
+      "left": 76,
+      "top": 342,
+      "width": 700,
+      "height": 432.35,
+      "alt_text": "실제 요구사항정의서 FR03 FR05 원문 발췌"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PBh0LFwH9cVs3W2q",
+      "asset_id": "MAHVLILSm9A",
+      "asset_type": "image",
+      "left": 824,
+      "top": 342,
+      "width": 700,
+      "height": 444.7,
+      "alt_text": "실제 화면명세서 구독 확인 및 수동 매핑 원문 발췌"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBWyHyFwky4BxcpY",
+      "text": "작업 순서를 명세와 맞추고,\n개인 구현과 팀 QA를 구분했습니다."
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBWyHyFwky4BxcpY",
+      "formatting": {
+        "font_size": 50,
+        "font_weight": "bold",
+        "color": "#142638",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBVZZzGkGsyc8GcZ",
+      "text": "실제 연결된 화면을 확인하고, 오래된 문서의 동기화를 선행 작업으로 정리했습니다."
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBVZZzGkGsyc8GcZ",
+      "left": 76,
+      "top": 241
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBVZZzGkGsyc8GcZ",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBVZZzGkGsyc8GcZ",
+      "formatting": {
+        "font_size": 23,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBdTTLK8QGJPF8cv",
+      "text": "작업계획 | FE 단독 → 합의 필요 작업"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBdTTLK8QGJPF8cv",
+      "left": 76,
+      "top": 291
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBdTTLK8QGJPF8cv",
+      "width": 540
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBdTTLK8QGJPF8cv",
+      "formatting": {
+        "font_size": 21,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBX85gC0blq8dsL4",
+      "text": "팀 QA | 연간 할인액의 월 절감 오해"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBX85gC0blq8dsL4",
+      "left": 635,
+      "top": 291
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBX85gC0blq8dsL4",
+      "width": 540
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBX85gC0blq8dsL4",
+      "formatting": {
+        "font_size": 21,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBCVDStlGqMMSpvH",
+      "text": "실제 결제 확인"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBCVDStlGqMMSpvH",
+      "left": 1230,
+      "top": 258
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBCVDStlGqMMSpvH",
+      "width": 270
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBCVDStlGqMMSpvH",
+      "formatting": {
+        "font_size": 20,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBjQ1yjG990Tnyg1",
+      "text": "내 구현\n후보 확인 UI·제외 상태\n중복 후보·남은 건수 수정"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBjQ1yjG990Tnyg1",
+      "left": 76,
+      "top": 635
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBjQ1yjG990Tnyg1",
+      "width": 540
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBjQ1yjG990Tnyg1",
+      "formatting": {
+        "font_size": 25,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LB4J7SHHySZxN8nc",
+      "text": "팀 QA와 수정 근거\n알림 권한·금액·화면 이동 이슈\n구독 생성·실패·번들은 팀원 기여"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LB4J7SHHySZxN8nc",
+      "left": 635,
+      "top": 635
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LB4J7SHHySZxN8nc",
+      "width": 550
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LB4J7SHHySZxN8nc",
+      "formatting": {
+        "font_size": 23,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LB7bHzxVw13tt5LV",
+      "text": "Android MVP·우수상은 팀 결과 / 예시 데이터 오프라인 데모·실제 절감액 미측정"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LB7bHzxVw13tt5LV",
+      "left": 76,
+      "top": 789
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LB7bHzxVw13tt5LV",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LB7bHzxVw13tt5LV",
+      "formatting": {
+        "font_size": 20,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBCJc9PjmDQSMNt7",
+      "text": "계획은 완료 실적과 구분 · 팀 QA 기록과 오른쪽 결제 확인 화면은 서로 다른 근거"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBCJc9PjmDQSMNt7",
+      "left": 76,
+      "top": 819
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBCJc9PjmDQSMNt7",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBCJc9PjmDQSMNt7",
+      "formatting": {
+        "font_size": 16,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBFwPB5X0rzhqx36"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBbsDHLVTxtPC11b"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBdxpyK19b4pQZf1"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBt50G4CbpFk2b30"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBL20g2wWBqjZT43"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PBmZQGB2TkZ4Klbc",
+      "asset_id": "MAHVLAyeS1E",
+      "asset_type": "image",
+      "left": 76,
+      "top": 332,
+      "width": 548,
+      "height": 284.28,
+      "alt_text": "실제 FE 작업계획 원문, 권장 실행 순서이며 완료 증거 아님"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PBmZQGB2TkZ4Klbc",
+      "asset_id": "MAHVLLWARlw",
+      "asset_type": "image",
+      "left": 635,
+      "top": 332,
+      "width": 548,
+      "height": 291.13,
+      "alt_text": "실제 팀 QA 기록 연간 금액을 월절감처럼 표현한 문제와 수정방안"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PBmZQGB2TkZ4Klbc",
+      "asset_id": "MAHVLIkqBOM",
+      "asset_type": "image",
+      "left": 1230,
+      "top": 294,
+      "width": 235,
+      "height": 509.17,
+      "alt_text": "애낌 실제 Android 오프라인 데모의 결제 확인 화면, 예시 데이터"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBgMs3DSSQ1731Cx",
+      "text": "초기 기획·기관 인터뷰에서 MVP를 정하고,\n길안내 지도 구현으로 이어갔습니다."
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBgMs3DSSQ1731Cx",
+      "formatting": {
+        "font_size": 47,
+        "font_weight": "bold",
+        "color": "#142638",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBsFLPXRNztSnv6t",
+      "text": "2026.04–05 · 7인 팀 | 초기 기획·기관 섭외·MVP 선정·프론트엔드"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBsFLPXRNztSnv6t",
+      "left": 76,
+      "top": 245
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBsFLPXRNztSnv6t",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBsFLPXRNztSnv6t",
+      "formatting": {
+        "font_size": 24,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBMYXvjq58Ytp3hj",
+      "text": "01  기관 섭외·인터뷰 → MVP"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBMYXvjq58Ytp3hj",
+      "left": 76,
+      "top": 303
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBMYXvjq58Ytp3hj",
+      "width": 570
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBMYXvjq58Ytp3hj",
+      "formatting": {
+        "font_size": 24,
+        "font_weight": "bold",
+        "color": "#1A5DDE",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBx8GRWqYvfHrsXt",
+      "text": "함세상 장애인자립생활센터 직접 섭외\n4월 10일 미팅·인터뷰를 바탕으로\n경로 비교·이동 조건·시설 탐색 범위 선정"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBx8GRWqYvfHrsXt",
+      "left": 100,
+      "top": 350
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBx8GRWqYvfHrsXt",
+      "width": 536
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBx8GRWqYvfHrsXt",
+      "formatting": {
+        "font_size": 25,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBm4m9KVLB6HWZvR",
+      "text": "02  지도 마커·프론트엔드"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBm4m9KVLB6HWZvR",
+      "left": 700,
+      "top": 303
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBm4m9KVLB6HWZvR",
+      "width": 430
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBm4m9KVLB6HWZvR",
+      "formatting": {
+        "font_size": 24,
+        "font_weight": "bold",
+        "color": "#1A5DDE",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBnyd94R9H51Wc0h",
+      "text": "선택 핀 고정 렌더링과\n카메라 제스처 동기화 보정\n\n글자 크기·승인 제보 표시 구현,\n변경된 기준을 명세에 반영"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBnyd94R9H51Wc0h",
+      "left": 710,
+      "top": 544
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBnyd94R9H51Wc0h",
+      "width": 430
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBnyd94R9H51Wc0h",
+      "formatting": {
+        "font_size": 24,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBKWR0Y1DVNB7LVY",
+      "text": "MVP 기능을 설명하고 의견을 나눈 미팅 현장"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBKWR0Y1DVNB7LVY",
+      "left": 76,
+      "top": 791
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBKWR0Y1DVNB7LVY",
+      "width": 590
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBKWR0Y1DVNB7LVY",
+      "formatting": {
+        "font_size": 18,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBLCXgvhpFqGC17w",
+      "text": "정적 화면: 지도 표시 확인\n마커 동작: 원본 변경 이력 근거\n현장 보행·경로 품질 검증은 별도"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBLCXgvhpFqGC17w",
+      "left": 700,
+      "top": 729
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBLCXgvhpFqGC17w",
+      "width": 450
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBLCXgvhpFqGC17w",
+      "formatting": {
+        "font_size": 18,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBNR6xwYmN9XN0V0",
+      "text": "실제 지도 화면"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBNR6xwYmN9XN0V0",
+      "left": 1190,
+      "top": 273
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBNR6xwYmN9XN0V0",
+      "width": 320
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LBNR6xwYmN9XN0V0",
+      "formatting": {
+        "font_size": 20,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBb0rvwR1vdmYvd2"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBvnHPR2xsm4kL93"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBNGpMBCcC8mKgL6"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBsGxdKmGC4s04Cf"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBlgnvTZGsF7Mx2G"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBrsjpQlvTnBVKSg"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBzzbL6YGwPqW9b8"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LB5hpf9YknTbc8cR"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBxV18JDq7w6j5WC"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBhS20wW54B33rL7"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LBd5CFNBZN4HKdT9"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PBWpr5ZNxnbKfJND-LB1F4XWpQdQXcRbW"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PBWpr5ZNxnbKfJND",
+      "asset_id": "MAHVLPza-CQ",
+      "asset_type": "image",
+      "left": 76,
+      "top": 492,
+      "width": 520,
+      "height": 292.5,
+      "alt_text": "실제 발표자료에 포함된 MVP 미팅 사진, 사진만으로 기관 날짜 특정 불가"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PBWpr5ZNxnbKfJND",
+      "asset_id": "MAHVLMXdp5M",
+      "asset_type": "image",
+      "left": 700,
+      "top": 357,
+      "width": 435,
+      "height": 171.1,
+      "alt_text": "이재호 ac698b3 2026년5월9일 지도 선택핀 고정 렌더링 및 카메라 동기화 실제 변경 이력"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PBWpr5ZNxnbKfJND",
+      "asset_id": "MAHVLKlm_XM",
+      "asset_type": "image",
+      "left": 1190,
+      "top": 312,
+      "width": 234,
+      "height": 507,
+      "alt_text": "실제 지도 시설 탐색 및 최근 목적지 화면, 정지화면은 마커 동작 검증이 아님"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBMzgZX9NVsvCMq0",
+      "text": "판단 보류를 비선호로 저장하지 않고,\n저장이 끝난 뒤 첫 추천으로 연결했습니다."
+    },
+    {
+      "type": "format_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBMzgZX9NVsvCMq0",
+      "formatting": {
+        "font_size": 50,
+        "font_weight": "bold",
+        "color": "#142638",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBhjccpFTbG74l7g",
+      "text": "2025.12 · 2인 팀 | 내 담당: 화면·온보딩·저장 / 팀원: 데이터 수집·추천 엔진"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBhjccpFTbG74l7g",
+      "left": 76,
+      "top": 245
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBhjccpFTbG74l7g",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBhjccpFTbG74l7g",
+      "formatting": {
+        "font_size": 22,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LB9pdyPSVmNwt9fP",
+      "text": "첫 추천에 필요한 취향 입력"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LB9pdyPSVmNwt9fP",
+      "left": 76,
+      "top": 299
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LB9pdyPSVmNwt9fP",
+      "width": 350
+    },
+    {
+      "type": "format_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LB9pdyPSVmNwt9fP",
+      "formatting": {
+        "font_size": 24,
+        "font_weight": "bold",
+        "color": "#1A5DDE",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBF5PWftsrxcQTvX",
+      "text": "이용 기록이 없는 신규 사용자에게\n호감·비호감·판단 보류를 받았습니다."
+    },
+    {
+      "type": "position_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBF5PWftsrxcQTvX",
+      "left": 76,
+      "top": 345
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBF5PWftsrxcQTvX",
+      "width": 350
+    },
+    {
+      "type": "format_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBF5PWftsrxcQTvX",
+      "formatting": {
+        "font_size": 23,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBhCvPdw8KGRg0fl",
+      "text": "보고싶어요 / 안볼래요\n→ 저장·완료 개수 포함\n\n모르겠어요\n→ 저장·완료 개수 제외\n\n호불호 8개 → 저장 성공\n→ 완료 → 첫 추천"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBhCvPdw8KGRg0fl",
+      "left": 76,
+      "top": 443
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBhCvPdw8KGRg0fl",
+      "width": 360
+    },
+    {
+      "type": "format_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBhCvPdw8KGRg0fl",
+      "formatting": {
+        "font_size": 23,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LB1vZdWgVlYHjKtL",
+      "text": "취향 선택"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LB1vZdWgVlYHjKtL",
+      "left": 450,
+      "top": 277
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LB1vZdWgVlYHjKtL",
+      "width": 320
+    },
+    {
+      "type": "format_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LB1vZdWgVlYHjKtL",
+      "formatting": {
+        "font_size": 23,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBSJ4RqykrGZbCQN",
+      "text": "완료 후 첫 추천"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBSJ4RqykrGZbCQN",
+      "left": 810,
+      "top": 277
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBSJ4RqykrGZbCQN",
+      "width": 714
+    },
+    {
+      "type": "format_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBSJ4RqykrGZbCQN",
+      "formatting": {
+        "font_size": 23,
+        "font_weight": "bold",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBcsdS9NV9y2Wk1W",
+      "text": "실제 Vue·Django 코드 기반 재현 데모 · 예시 계정·데이터 사용 / 선택 8개는 구현 기준"
+    },
+    {
+      "type": "position_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBcsdS9NV9y2Wk1W",
+      "left": 76,
+      "top": 810
+    },
+    {
+      "type": "resize_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBcsdS9NV9y2Wk1W",
+      "width": 1448
+    },
+    {
+      "type": "format_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBcsdS9NV9y2Wk1W",
+      "formatting": {
+        "font_size": 19,
+        "font_weight": "normal",
+        "color": "#26364A",
+        "text_align": "start"
+      }
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBBMGZ4PDYtcV0zl"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBSh21TDl7pJ0BNN"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBTn3vyLYmHL2mM6"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBymmfVVQ7ZS0tf5"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LB95JgbPLlgQWdqj"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBywkS2S911lVVzH"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBlCFl3q1mWDhSml"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBhxG3xj3mn5Gb0z"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBfYWBC4rPY73QQW"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBC7X6DzlphSBTN8"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LB1YjyL5kCyrZnFP"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBL7shbbgC4s5cBg"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBd5xjMqgW4hbS5R"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LB3T5CKTms0zrW8B"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBsTM1Qw3cKQLgZJ"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBBjTscY4WjFBWV1"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LB1kLhdVWl4ZclMR"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBm5J3cydLsfC9Sq"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBv3xRdDntCQydB2"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBcNns10vnfX1d2H"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LBsbNCYPdKFbjX02"
+    },
+    {
+      "type": "delete_element",
+      "element_id": "PB7ldw6mmVVDlfjy-LB77KbcD64LLm5K4"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PB7ldw6mmVVDlfjy",
+      "asset_id": "MAHVLIBl6ro",
+      "asset_type": "image",
+      "left": 450,
+      "top": 310,
+      "width": 276,
+      "height": 478.4,
+      "alt_text": "원본 취향 선택 화면의 세응답 버튼과 공연카드, 여백만 크롭"
+    },
+    {
+      "type": "insert_fill",
+      "page_id": "PB7ldw6mmVVDlfjy",
+      "asset_id": "MAHVLDhEEcA",
+      "asset_type": "image",
+      "left": 810,
+      "top": 310,
+      "width": 714,
+      "height": 482.5,
+      "alt_text": "원본 실제 코드기반 데모 첫추천 화면, 예시계정 데이터, 바깥여백 크롭"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBV8Wnz1q4b7w97F-LBJGrZ6WWYXVzBP9",
+      "text": "출처: ficstory.dev/PM/"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBNhcX0VBXk4dlG8-LBsf8XkZXbd2DLM0",
+      "text": "출처: ficstory.dev/PM/smile-game/"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBxMT6P3lbfDTMZF-LBPBc0vG9xGQDqVy",
+      "text": "출처: ficstory.dev/PM/smile-game/"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBtrMkZb9RTC8z01-LBF2y08HWSsYC1yS",
+      "text": "ficstory.dev/PM/smile-game/"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBh0LFwH9cVs3W2q-LBQh34MpV9VCnfKv",
+      "text": "출처: ficstory.dev/PM/aekkim/"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBmZQGB2TkZ4Klbc-LBvGyrNmxCjXMYKW",
+      "text": "출처: ficstory.dev/PM/aekkim/"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBWpr5ZNxnbKfJND-LB3h2F2N6Y1jFNq4",
+      "text": "출처: ficstory.dev/PM/busan-eumgil/"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PB7ldw6mmVVDlfjy-LBBDyX4RdYgVr0rs",
+      "text": "ficstory.dev/PM/play-pick/"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBnmYRtkRT7vJyrx-LBs3VFHVgQ28DQW1",
+      "text": "ficstory.dev/PM/"
+    },
+    {
+      "type": "format_text",
+      "element_id": "PBnmYRtkRT7vJyrx-LBs3VFHVgQ28DQW1",
+      "formatting": {
+        "link": "https://ficstory.dev/PM/"
+      }
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBYThwT3xY8lYPwc-LB5GYvzYP33mNQlm",
+      "text": "사용자 문제를 판단 근거와 팀의 결정으로 정리하고,\n요구사항·화면 구현·확인된 결과로 연결해왔습니다."
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBG3wW1czt9RRvKK-LBnnJZ1gqjgCMrFL",
+      "text": "기관 인터뷰로 MVP를 구체화하고,\n지도 화면과 변경 기준에 반영"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBG3wW1czt9RRvKK-LB97CSXScj8xhHZJ",
+      "text": "부산이음길\n기관 인터뷰·지도 구현"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBNhcX0VBXk4dlG8-LBFHQVmb1Ks1RPZc",
+      "text": "실시간 화상 대결 서비스 | 2026.01–02 · 7인 팀 · PM·사용자 조사·프론트엔드"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBBCdbXp9qF0LwkY-LBMtSYCRR7QG4T0D",
+      "text": "구독 후보의 확인·제외 기준\n\n요구사항·화면명세 갱신\n후보 UI·상태·남은 건수 수정"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBBCdbXp9qF0LwkY-LBJpYSZHHb7n6cDc",
+      "text": "기관 섭외·인터뷰 → MVP 선정\n\n길안내 지도·마커 구현\n변경된 화면·명세 함께 갱신"
+    },
+    {
+      "type": "replace_text",
+      "element_id": "PBnmYRtkRT7vJyrx-LBVXQBG5Xz4XC9nM",
+      "text": "사용자 문제 · 팀의 결정 · 구현과 확인"
+    }
+  ]
+}

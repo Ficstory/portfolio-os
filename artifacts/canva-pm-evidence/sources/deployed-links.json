@@ -1,0 +1,702 @@
+[
+  {
+    "page": "PM-aekkim.html",
+    "refs": [
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__skipLink",
+        "href": "#pm-content"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__wordmark",
+        "aria-label": "Lee Jaeho, PM 포트폴리오 홈",
+        "href": "/PM/"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#about"
+      },
+      {
+        "tag": "a",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "a",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#about"
+      },
+      {
+        "tag": "a",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "a",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__backLink",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "video",
+        "src": "/pm/previews/aekkim.mp4",
+        "poster": "/pm/previews/aekkim.webp",
+        "width": "480",
+        "height": "1040",
+        "muted": "",
+        "loop": "",
+        "playsinline": "",
+        "preload": "none",
+        "aria-label": "AEKKIM 화면 미리보기",
+        "aria-describedby": "_R_iinpfebrb_"
+      },
+      {
+        "tag": "a",
+        "href": "/pm/previews/aekkim.mp4",
+        "target": "_blank",
+        "rel": "noreferrer",
+        "aria-label": "AEKKIM 미리보기 크게 보기 (새 창)"
+      },
+      {
+        "tag": "a",
+        "href": "#problem"
+      },
+      {
+        "tag": "a",
+        "href": "#evidence"
+      },
+      {
+        "tag": "a",
+        "href": "#decision"
+      },
+      {
+        "tag": "a",
+        "href": "#action"
+      },
+      {
+        "tag": "a",
+        "href": "#collaboration"
+      },
+      {
+        "tag": "a",
+        "href": "#result"
+      },
+      {
+        "tag": "a",
+        "href": "#learning"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/busan-eumgil/"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__email",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "href": "/pm/"
+      },
+      {
+        "tag": "a",
+        "href": "#pm-content"
+      }
+    ]
+  },
+  {
+    "page": "PM-busan-eumgil.html",
+    "refs": [
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__skipLink",
+        "href": "#pm-content"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__wordmark",
+        "aria-label": "Lee Jaeho, PM 포트폴리오 홈",
+        "href": "/PM/"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#about"
+      },
+      {
+        "tag": "a",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "a",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#about"
+      },
+      {
+        "tag": "a",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "a",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__backLink",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "#problem"
+      },
+      {
+        "tag": "a",
+        "href": "#evidence"
+      },
+      {
+        "tag": "a",
+        "href": "#decision"
+      },
+      {
+        "tag": "a",
+        "href": "#action"
+      },
+      {
+        "tag": "a",
+        "href": "#collaboration"
+      },
+      {
+        "tag": "a",
+        "href": "#result"
+      },
+      {
+        "tag": "a",
+        "href": "#learning"
+      },
+      {
+        "tag": "img",
+        "alt": "MVP 지도 기능을 화면으로 설명하고 참석자들과 의견을 나누는 미팅 장면",
+        "loading": "lazy",
+        "width": "1920",
+        "height": "1080",
+        "decoding": "async",
+        "data-nimg": "1",
+        "style": "color:transparent",
+        "src": "/pm-improved/evidence/busan-mvp-meeting.png"
+      },
+      {
+        "tag": "img",
+        "alt": "접근성 시설과 최근 목적지를 표시하는 부산이음길 지도 화면",
+        "loading": "lazy",
+        "width": "720",
+        "height": "1560",
+        "decoding": "async",
+        "data-nimg": "1",
+        "style": "color:transparent",
+        "src": "/pm-improved/evidence/busan-route-map.png"
+      },
+      {
+        "tag": "video",
+        "src": "/pm/previews/busan.mp4",
+        "poster": "/pm/previews/busan.webp",
+        "width": "480",
+        "height": "1040",
+        "muted": "",
+        "loop": "",
+        "playsinline": "",
+        "preload": "none",
+        "aria-label": "부산이음길 화면 미리보기",
+        "aria-describedby": "_R_4vbanpfebrb_"
+      },
+      {
+        "tag": "a",
+        "href": "/pm/previews/busan.mp4",
+        "target": "_blank",
+        "rel": "noreferrer",
+        "aria-label": "부산이음길 미리보기 크게 보기 (새 창)"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/play-pick/"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__email",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "href": "/pm/"
+      },
+      {
+        "tag": "a",
+        "href": "#pm-content"
+      }
+    ]
+  },
+  {
+    "page": "PM-home.html",
+    "refs": [
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__skipLink",
+        "href": "#pm-content"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__wordmark",
+        "aria-label": "Lee Jaeho, PM 포트폴리오 홈",
+        "href": "/PM/"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#about"
+      },
+      {
+        "tag": "a",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "a",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#about"
+      },
+      {
+        "tag": "a",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "a",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "class": "home-module__OWlamq__primaryAction",
+        "href": "#work"
+      },
+      {
+        "tag": "a",
+        "class": "home-module__OWlamq__secondaryAction",
+        "href": "#about"
+      },
+      {
+        "tag": "a",
+        "class": "home-module__OWlamq__contactAction",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/smile-game/"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/busan-eumgil/"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/aekkim/"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/play-pick/"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/smile-game/"
+      },
+      {
+        "tag": "a",
+        "class": "home-module__OWlamq__projectLink",
+        "href": "/PM/smile-game/"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/aekkim/"
+      },
+      {
+        "tag": "a",
+        "class": "home-module__OWlamq__projectLink",
+        "href": "/PM/aekkim/"
+      },
+      {
+        "tag": "video",
+        "src": "/pm/previews/aekkim.mp4",
+        "poster": "/pm/previews/aekkim.webp",
+        "width": "480",
+        "height": "1040",
+        "muted": "",
+        "loop": "",
+        "playsinline": "",
+        "preload": "none",
+        "aria-label": "AEKKIM 화면 미리보기",
+        "aria-describedby": "_R_9tdlfebrb_"
+      },
+      {
+        "tag": "a",
+        "href": "/pm/previews/aekkim.mp4",
+        "target": "_blank",
+        "rel": "noreferrer",
+        "aria-label": "AEKKIM 미리보기 크게 보기 (새 창)"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/busan-eumgil/"
+      },
+      {
+        "tag": "a",
+        "class": "home-module__OWlamq__projectLink",
+        "href": "/PM/busan-eumgil/"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/play-pick/"
+      },
+      {
+        "tag": "a",
+        "class": "home-module__OWlamq__projectLink",
+        "href": "/PM/play-pick/"
+      },
+      {
+        "tag": "video",
+        "src": "/pm/previews/play-pick.mp4",
+        "poster": "/pm/previews/play-pick.webp",
+        "width": "960",
+        "height": "720",
+        "muted": "",
+        "loop": "",
+        "playsinline": "",
+        "preload": "none",
+        "aria-label": "Play Pick 화면 미리보기",
+        "aria-describedby": "_R_9udlfebrb_"
+      },
+      {
+        "tag": "a",
+        "href": "/pm/previews/play-pick.mp4",
+        "target": "_blank",
+        "rel": "noreferrer",
+        "aria-label": "Play Pick 미리보기 크게 보기 (새 창)"
+      },
+      {
+        "tag": "a",
+        "class": "experience-module__9OOWqW__awardLink",
+        "href": "/PM/aekkim/"
+      },
+      {
+        "tag": "a",
+        "class": "experience-module__9OOWqW__resumePrimary",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "a",
+        "class": "experience-module__9OOWqW__resumeSecondary",
+        "download": "이재호_PM_이력서.docx",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.docx"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__email",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "href": "/pm/"
+      },
+      {
+        "tag": "a",
+        "href": "#pm-content"
+      }
+    ]
+  },
+  {
+    "page": "PM-play-pick.html",
+    "refs": [
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__skipLink",
+        "href": "#pm-content"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__wordmark",
+        "aria-label": "Lee Jaeho, PM 포트폴리오 홈",
+        "href": "/PM/"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#about"
+      },
+      {
+        "tag": "a",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "a",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#about"
+      },
+      {
+        "tag": "a",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "a",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__backLink",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "video",
+        "src": "/pm/previews/play-pick.mp4",
+        "poster": "/pm/previews/play-pick.webp",
+        "width": "960",
+        "height": "720",
+        "muted": "",
+        "loop": "",
+        "playsinline": "",
+        "preload": "none",
+        "aria-label": "Play Pick 화면 미리보기",
+        "aria-describedby": "_R_iinpfebrb_"
+      },
+      {
+        "tag": "a",
+        "href": "/pm/previews/play-pick.mp4",
+        "target": "_blank",
+        "rel": "noreferrer",
+        "aria-label": "Play Pick 미리보기 크게 보기 (새 창)"
+      },
+      {
+        "tag": "a",
+        "href": "#problem"
+      },
+      {
+        "tag": "a",
+        "href": "#evidence"
+      },
+      {
+        "tag": "a",
+        "href": "#decision"
+      },
+      {
+        "tag": "a",
+        "href": "#action"
+      },
+      {
+        "tag": "a",
+        "href": "#collaboration"
+      },
+      {
+        "tag": "a",
+        "href": "#result"
+      },
+      {
+        "tag": "a",
+        "href": "#learning"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/smile-game/"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__email",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "href": "/pm/"
+      },
+      {
+        "tag": "a",
+        "href": "#pm-content"
+      }
+    ]
+  },
+  {
+    "page": "PM-smile-game.html",
+    "refs": [
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__skipLink",
+        "href": "#pm-content"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__wordmark",
+        "aria-label": "Lee Jaeho, PM 포트폴리오 홈",
+        "href": "/PM/"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#about"
+      },
+      {
+        "tag": "a",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "a",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/#about"
+      },
+      {
+        "tag": "a",
+        "href": "/pm-improved/resume/lee-jaeho-pm-resume.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "a",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__backLink",
+        "href": "/PM/#work"
+      },
+      {
+        "tag": "a",
+        "href": "#problem"
+      },
+      {
+        "tag": "a",
+        "href": "#evidence"
+      },
+      {
+        "tag": "a",
+        "href": "#decision"
+      },
+      {
+        "tag": "a",
+        "href": "#action"
+      },
+      {
+        "tag": "a",
+        "href": "#collaboration"
+      },
+      {
+        "tag": "a",
+        "href": "#result"
+      },
+      {
+        "tag": "a",
+        "href": "#learning"
+      },
+      {
+        "tag": "video",
+        "src": "/pm/previews/smile.mp4",
+        "poster": "/pm/previews/smile.webp",
+        "width": "1280",
+        "height": "720",
+        "muted": "",
+        "loop": "",
+        "playsinline": "",
+        "preload": "none",
+        "aria-label": "웃지마게임 화면 미리보기",
+        "aria-describedby": "_R_jfbanpfebrb_"
+      },
+      {
+        "tag": "a",
+        "href": "/pm/previews/smile.mp4",
+        "target": "_blank",
+        "rel": "noreferrer",
+        "aria-label": "웃지마게임 미리보기 크게 보기 (새 창)"
+      },
+      {
+        "tag": "a",
+        "href": "/PM/aekkim/"
+      },
+      {
+        "tag": "a",
+        "class": "pm-module__0Kf_Ra__email",
+        "href": "mailto:dlwo4367@gmail.com"
+      },
+      {
+        "tag": "a",
+        "href": "/pm/"
+      },
+      {
+        "tag": "a",
+        "href": "#pm-content"
+      }
+    ]
+  }
+]

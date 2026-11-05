@@ -1,0 +1,22 @@
+{
+  "design_id": "DAHVKsJYGbg",
+  "saved": true,
+  "approved_by_user": "이대로 Canva에 저장",
+  "transaction_id": "1874013308011187100",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"transaction\":{\"id\":\"1874013308011187100\",\"status\":\"committed\"}}"
+      }
+    ],
+    "isError": false
+  },
+  "verified_after_commit": true,
+  "readback_tool": "canva_get_design_content",
+  "readback_verification": {
+    "all_visible_text_elements_matched": true,
+    "element_count": 166,
+    "page_count": 12
+  }
+}

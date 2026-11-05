@@ -1,0 +1,25 @@
+{
+  "pdfOpenedInNewTab": true,
+  "mobile": {
+    "actions": [
+      {
+        "download": "",
+        "height": 44,
+        "target": "_blank",
+        "text": "이력서 보기 (PDF)새 탭에서 열림",
+        "width": 331
+      },
+      {
+        "download": "이재호_PM_이력서.docx",
+        "height": 44,
+        "target": "",
+        "text": "Word 원본 다운로드",
+        "width": 331
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 375
+  },
+  "mobileMenuClosedAfterPdf": true,
+  "logs": []
+}
