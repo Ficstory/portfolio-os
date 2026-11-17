@@ -16,7 +16,7 @@ test("plain text, malformed links and executable protocols never become anchors"
   }
 });
 
-test("PP journal keeps all source links in the separate resources section", () => {
+test("PP journal source links follow the narrative at paragraph ends", () => {
   const markdown = readFileSync(new URL("../../content/til/published/ssg-pp-picking-questions.md", import.meta.url), "utf8");
   const [body, resources] = markdown.split("## 관련 자료");
   assert.doesNotMatch(markdown, /\[자료 \d/);
@@ -24,5 +24,9 @@ test("PP journal keeps all source links in the separate resources section", () =
   const sources = [...resources.matchAll(/\]\((https?:\/\/[^\s)]+)\)/g)].map(match => match[1]);
   assert.equal(sources.length, 16);
   assert.equal(new Set(sources).size, 16);
-  assert.equal(hrefs.length, 0, "Source links must stay outside the narrative");
+  for (const source of sources) assert.ok(hrefs.includes(source));
+  for (const line of body.split(/\r?\n/).filter(line => /\]\(https?:/.test(line))) {
+    assert.match(line, /\(출처: \[.+\]\(https?:.*\)\)$/);
+    assert.doesNotMatch(line.slice(0, line.indexOf("(출처:")), /\]\(https?:/);
+  }
 });
