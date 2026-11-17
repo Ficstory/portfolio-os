@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Check, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState, type RefObject } from "react";
 import { formatTILDate } from "@/lib/tilArchive";
+import { parseTILInlineLinks } from "@/lib/tilInlineLinks";
 import type { TILBlock, TILCategoryMeta, TILEntry } from "@/types/til";
 import { TILMedia } from "./TILMedia";
 import { StoreAnalysis } from "./StoreAnalysis";
@@ -114,7 +115,9 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
             <section className={styles.section} key={section.key} aria-labelledby={section.label ? `til-${section.key}` : undefined} aria-label={section.label ? undefined : "본문"}>
               {section.label ? <h2 id={`til-${section.key}`} tabIndex={-1}>{isJournal ? null : <span>{String(index + 1).padStart(2, "0")}</span>}{section.label}</h2> : null}
               {section.blocks.map((block: TILBlock, blockIndex: number) => block.type === "paragraph"
-                ? <p key={blockIndex}>{block.text}</p>
+                ? <p key={blockIndex}>{parseTILInlineLinks(block.text).map((part, partIndex) => part.href
+                  ? <a key={partIndex} href={part.href}>{part.text}</a>
+                  : part.text)}</p>
                 : <TILMedia key={blockIndex} block={block} />)}
               {section.key === "tried" && entry.visualizations?.type === "store-analysis" ? <StoreAnalysis data={entry.visualizations} /> : null}
             </section>

@@ -8,6 +8,7 @@ import vm from "node:vm";
 import ts from "typescript";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import { parseTILInlineLinks } from "./tilInlineLinks.ts";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
@@ -43,6 +44,7 @@ function loadReaderModule() {
   const cjsModule = { exports: {} };
   const readerRequire = (id) => {
     if (id === "@/lib/tilArchive") return loadArchiveModule();
+    if (id === "@/lib/tilInlineLinks") return { parseTILInlineLinks };
     if (id === "./til-reader.module.css") return { default: {} };
     if (id === "./TILMedia") return { TILMedia: () => null };
     if (id === "./StoreAnalysis") return { StoreAnalysis: () => null };
@@ -148,6 +150,9 @@ test("the reader renders journal prose without forced reflection headings and re
   assert.match(headed, /id="til-journal-1"[^>]*>예상과 달랐던 점<\/h2>/);
   assert.doesNotMatch(headed, /<span>02<\/span>/);
   assert.match(render(entries[0]), /오늘 배운 것/);
+  const linked = render({ ...journalEntry, journal: [{ blocks: [{ type: "paragraph", text: '출처: [배민](https://bcut.baemin.com/3529/). [위험](javascript:alert(1))' }] }] });
+  assert.match(linked, /<a href="https:\/\/bcut\.baemin\.com\/3529\/">배민<\/a>/);
+  assert.doesNotMatch(linked, /href="javascript:/);
 });
 
 test("media alt, captions, titles and ordered text are searchable", () => {

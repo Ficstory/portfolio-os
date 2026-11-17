@@ -3,7 +3,7 @@ id: til-2026-11-17-ssg-pp-picking-questions
 slug: ssg-pp-picking-questions
 date: 2026-11-17
 createdAt: 2026-11-17T22:20:16+09:00
-updatedAt: 2026-11-17T22:27:43+09:00
+updatedAt: 2026-11-17T22:43:37+09:00
 session: Future & Dream Academy 신세계아이앤씨 개인과제
 category: reflection
 title: 매대에서 헤매는 피킹 직원을 보고 시작한 질문
@@ -25,19 +25,19 @@ format: journal
 
 처음에는 상품을 찾는 시간이나 같은 곳을 다시 오가는 이동을 줄일 수 있지 않을까 생각했다. 그러려면 매장에서 보이는 동작뿐 아니라 주문이 들어온 뒤 일이 어떻게 배정되고, 상품을 집고, 분류하고, 포장하는지도 알아야 했다. SSG의 배송 방식과 기존 거점의 운영부터 찾아본 이유다.
 
-2026년 8월 SSG 공식 설명에서는 예약배송은 시간대별 주문을 모아 출고하고, 2시간 배송은 주문과 동시에 점포에서 피킹·포장을 시작해 1시간 이내 차량을 출발시킨다고 했다. 기존 점포에서 상품을 준비하는 일이 빠른 배송과 어떻게 연결되는지 볼 수 있었다. 다만 이것만으로 피킹이 전체 배송에서 가장 큰 병목이라고 말할 수는 없다. [자료 1]
+2026년 8월 SSG 공식 설명에서는 예약배송은 시간대별 주문을 모아 출고하고, 2시간 배송은 주문과 동시에 점포에서 피킹·포장을 시작해 1시간 이내 차량을 출발시킨다고 했다. 기존 점포에서 상품을 준비하는 일이 빠른 배송과 어떻게 연결되는지 볼 수 있었다. 다만 이것만으로 피킹이 전체 배송에서 가장 큰 병목이라고 말할 수는 없다. (출처: [신세계그룹 뉴스룸 · SSG닷컴 2시간 배송 운영 설명](https://www.shinsegaegroupnewsroom.com/why-ssg-com-launched-2hour-delivery/))
 
-기존 90개 PP센터의 처리능력 확대에 무게를 둔다는 더벨의 NDR 관련 보도도 읽었다. 그래서 “추가 PP센터를 늘리지 않겠다는 거야?”라고 물었다. 여기서 기존 거점의 처리능력을 높이는 방향과 신규 센터를 영구히 만들지 않는다는 결정은 구분해야 했다. 점포에 2시간 배송을 추가하는 것과 PP센터 자체를 새로 만드는 것도 같은 일이 아니었다. [자료 2]
+기존 90개 PP센터의 처리능력 확대에 무게를 둔다는 더벨의 NDR 관련 보도도 읽었다. 그래서 “추가 PP센터를 늘리지 않겠다는 거야?”라고 물었다. 여기서 기존 거점의 처리능력을 높이는 방향과 신규 센터를 영구히 만들지 않는다는 결정은 구분해야 했다. 점포에 2시간 배송을 추가하는 것과 PP센터 자체를 새로 만드는 것도 같은 일이 아니었다. (출처: [더벨 · 기존 PP센터 처리능력 확대 보도](https://www.thebell.co.kr/front/newsview.asp?key=202608241501091360102586))
 
 주문을 받으면 바로 준비한다는 설명도 처음 생각보다 조심해서 읽어야 했다. 직원 한 명이 주문 한 건씩만 처리한다는 뜻은 아니었다. 여러 주문을 묶는지, 예약배송과 즉시배송이 인력을 공유하는지, 새 주문이 들어오면 작업 순서를 바꾸는지는 별도로 확인해야 했다.
 
 ## 지금 SSG는 무엇을 하고 있는가?
 
-찾아보니 상품 위치나 동선을 안내하는 장치는 이미 있었다. 2024년 가든파이브점 현장 기사에는 POG 내비게이션 4.0이 스마트폰에 상품 정보와 진열대 이미지, 위치와 경로, 현재와 다음 집품 상품을 보여준다고 나왔다. 기사에서는 2023년 11월 전국 PP센터 도입이라고 설명했다. 내가 본 장면을 곧바로 “위치를 알려주는 기능이 없어서 헤맨다”로 연결할 수 없었다. [자료 3]
+찾아보니 상품 위치나 동선을 안내하는 장치는 이미 있었다. 2024년 가든파이브점 현장 기사에는 POG 내비게이션 4.0이 스마트폰에 상품 정보와 진열대 이미지, 위치와 경로, 현재와 다음 집품 상품을 보여준다고 나왔다. 기사에서는 2023년 11월 전국 PP센터 도입이라고 설명했다. 내가 본 장면을 곧바로 “위치를 알려주는 기능이 없어서 헤맨다”로 연결할 수 없었다. (출처: [한국경제 · 가든파이브점 POG 내비게이션 현장 기사](https://www.hankyung.com/amp/202405136943i))
 
-2023년 하남점 취재에는 상품 위치를 알려주는 mPDO 앱, 반지형 스캐너, DAS가 등장했다. 상품 바코드를 읽으면 그 상품을 넣을 주문 박스 쪽에 녹색등이 켜지는 방식이었다. 여기서 불이 켜지는 곳은 후방 분류 공간의 주문 박스다. 고객이 쇼핑하는 매장의 상품 가격표를 켜는 것과는 다른 기능이다. POG 내비게이션과 mPDO가 현재 어떤 관계인지까지 확인한 것은 아니어서, 별도의 앱 두 개를 동시에 쓴다고 정리하지 않았다. [자료 4]
+2023년 하남점 취재에는 상품 위치를 알려주는 mPDO 앱, 반지형 스캐너, DAS가 등장했다. 상품 바코드를 읽으면 그 상품을 넣을 주문 박스 쪽에 녹색등이 켜지는 방식이었다. 여기서 불이 켜지는 곳은 후방 분류 공간의 주문 박스다. 고객이 쇼핑하는 매장의 상품 가격표를 켜는 것과는 다른 기능이다. POG 내비게이션과 mPDO가 현재 어떤 관계인지까지 확인한 것은 아니어서, 별도의 앱 두 개를 동시에 쓴다고 정리하지 않았다. (출처: [동아일보 · 하남점 mPDO·반지형 스캐너·DAS 현장 기사](https://www.donga.com/news/Economy/article/all/20230130/117663935/1))
 
-2021년 이천점 확장 자료에는 자동화 소터와 DAS·DPS가 있었고, 청계천 E.OS 사례에는 구역별 집품, 집품 순서 안내, 주문 바구니 컨베이어와 무게 검수가 있었다. 같은 PP센터라는 이름 아래에서도 공간과 설비, 작업 방식이 달랐다. 한 점포의 설비를 모든 센터의 현재 모습으로 옮겨 놓으면 안 됐다. [자료 5·6]
+2021년 이천점 확장 자료에는 자동화 소터와 DAS·DPS가 있었고, 청계천 E.OS 사례에는 구역별 집품, 집품 순서 안내, 주문 바구니 컨베이어와 무게 검수가 있었다. 같은 PP센터라는 이름 아래에서도 공간과 설비, 작업 방식이 달랐다. 한 점포의 설비를 모든 센터의 현재 모습으로 옮겨 놓으면 안 됐다. (출처: [신세계그룹 뉴스룸 · 이천점 PP센터 확장과 자동화](https://www.shinsegaegroupnewsroom.com/ssgdotcom-pp-center-logistics-network/), [한경비즈니스 · 청계천 E.OS 운영 현장](https://magazine.hankyung.com/business/article/202102026953b))
 
 성과 수치도 있었다. POG 기사에는 상품당 처리시간과 인당 처리 건수의 개선이, 이천점 자료에는 공간 확장과 자동화 이후 생산성 증가가 나왔다. 이것은 기존 시스템에 대한 회사 설명이지 내가 제안할 기능의 예상효과가 아니다. 자료의 시점도 2021~2024년이어서, 2026년의 모든 점포가 같은 화면과 설비를 쓰는지는 남은 질문이다.
 
@@ -47,11 +47,11 @@ format: journal
 
 SSG 내부의 배정 규칙까지 공개자료만으로 알기는 어려웠다. 그래서 다른 회사는 어떻게 운영하고, 그중 SSG에 참고할 만한 방식은 무엇인지 찾아봤다. 11월 15일에 조사한 SSG·B마트·쿠팡 주문처리 자료와 이후 PP센터 조사를 함께 읽었다. 다른 회사의 공개사례를 본 것이며, 내가 그 현장에서 근무하거나 내부 시스템을 직접 사용한 것은 아니다.
 
-B마트는 고객이 쇼핑하는 영업 매대와 다른 조건의 도심 주문처리 거점을 운영한다. 2022년 공개한 개선 사례에서는 판매량 등을 바탕으로 선반 배치를 바꾸고, PDA로 상품 위치와 추천 동선을 확인하는 방식을 설명했다. 이 사례에서 참고할 부분은 화면뿐 아니라 실제 상품 배치도 함께 바꿨다는 점이었다. 다만 고객이 쇼핑하는 SSG 매대를 피킹 효율만으로 재배치할 수 있는지는 별도의 문제다. [자료 7]
+B마트는 고객이 쇼핑하는 영업 매대와 다른 조건의 도심 주문처리 거점을 운영한다. 2022년 공개한 개선 사례에서는 판매량 등을 바탕으로 선반 배치를 바꾸고, PDA로 상품 위치와 추천 동선을 확인하는 방식을 설명했다. 이 사례에서 참고할 부분은 화면뿐 아니라 실제 상품 배치도 함께 바꿨다는 점이었다. 다만 고객이 쇼핑하는 SSG 매대를 피킹 효율만으로 재배치할 수 있는지는 별도의 문제다. (출처: [B컷 by 배민 · B마트 진열과 PDA 개선](https://bcut.baemin.com/3529/))
 
-2025년 B마트 OMS 기술 문서에서는 현장 작업 여건에 따라 출고 요청과 라이더 호출 시점을 조정하는 방식을 봤다. 예약 주문을 분산해 준비하는 일과 배달 요청을 연결하는 일이 함께 다뤄졌다. 준비 시간을 줄이는 방법이 상품을 더 빨리 집는 동작에만 있지는 않았다. 그렇다고 SSG에 이런 조정 기능이 없다고 결론낼 근거가 생긴 것은 아니었다. [자료 8]
+2025년 B마트 OMS 기술 문서에서는 현장 작업 여건에 따라 출고 요청과 라이더 호출 시점을 조정하는 방식을 봤다. 예약 주문을 분산해 준비하는 일과 배달 요청을 연결하는 일이 함께 다뤄졌다. 준비 시간을 줄이는 방법이 상품을 더 빨리 집는 동작에만 있지는 않았다. 그렇다고 SSG에 이런 조정 기능이 없다고 결론낼 근거가 생긴 것은 아니었다. (출처: [우아한형제들 기술블로그 · B마트 OMS의 물류주문관리와 출고 최적화](https://techblog.woowahan.com/22263/))
 
-쿠팡은 전용 물류센터 안에서 집품·분류·포장·출고가 어떻게 나뉘는지 봤다. 2021년 공식 현장 체험에는 PDA의 위치·상품·수량 정보를 보고 집품하는 모습과 집품·리빈·포장 등의 공정 구분이 나왔다. 이 자료의 상온센터 집품 화면을 현재 모든 로켓프레시 센터의 화면이라고 볼 수는 없다. 같은 온라인 주문처리라도 SSG의 고객 공유 매장과 전용 물류센터는 공간 조건부터 다르다. [자료 9]
+쿠팡은 전용 물류센터 안에서 집품·분류·포장·출고가 어떻게 나뉘는지 봤다. 2021년 공식 현장 체험에는 PDA의 위치·상품·수량 정보를 보고 집품하는 모습과 집품·리빈·포장 등의 공정 구분이 나왔다. 이 자료의 상온센터 집품 화면을 현재 모든 로켓프레시 센터의 화면이라고 볼 수는 없다. 같은 온라인 주문처리라도 SSG의 고객 공유 매장과 전용 물류센터는 공간 조건부터 다르다. (출처: [쿠팡 뉴스룸 · 쿠팡 물류센터 현장 체험과 공정 구분](https://news.coupang.com/archives/10996/))
 
 이 비교에서 특정 회사가 SSG보다 무조건 효율적이라는 순위를 만들지는 않았다. 작업 배정과 준비 시점, 상품 배치, 정보 전달, 주문별 분류처럼 어느 부분을 바꾸는지 나눠 보고, 그 방식이 SSG의 매장 조건에도 맞는지 묻는 참고자료로 남겼다.
 
@@ -85,17 +85,17 @@ B마트는 고객이 쇼핑하는 영업 매대와 다른 조건의 도심 주�
 
 그 뒤 “아이앤씨의 스마트 글래스가 이걸 좀 해결할 수 있을까?”라고 물었다. 상품 위치 정보를 새로 만드는 대신, 기존 지시를 확인하고 물건을 집는 사이의 동작을 줄일 수 있을지 살펴보는 후보였다. 손으로 단말기를 다루는 횟수가 줄면 양손 작업을 이어가기 편해질 수 있지 않을까 하는 가설이다.
 
-그래서 DHL이 스마트 글래스로 피킹을 구체적으로 어떻게 하는지, SSG PP센터에도 참고할 수 있는지 자세히 찾아보자고 했다. DHL·Ricoh·Ubimax의 초기 발표자료에는 작업 ID 확인, 위치와 수량 안내, 바코드 스캔과 음성 수량 확인, 카트의 주문별 박스 안내가 이어졌다. TeamViewer 구축 사례에서도 창고관리시스템인 WMS와 연결된 지시, 시각·음성 피드백, 복수 주문 지원을 설명한다. 안경만 쓰는 방식이 아니라 기존 작업 정보와 확인 절차를 연결한 운영이었다. [자료 10·11]
+그래서 DHL이 스마트 글래스로 피킹을 구체적으로 어떻게 하는지, SSG PP센터에도 참고할 수 있는지 자세히 찾아보자고 했다. DHL·Ricoh·Ubimax의 초기 발표자료에는 작업 ID 확인, 위치와 수량 안내, 바코드 스캔과 음성 수량 확인, 카트의 주문별 박스 안내가 이어졌다. TeamViewer 구축 사례에서도 창고관리시스템인 WMS와 연결된 지시, 시각·음성 피드백, 복수 주문 지원을 설명한다. 안경만 쓰는 방식이 아니라 기존 작업 정보와 확인 절차를 연결한 운영이었다. (출처: [DHL·Ricoh·Ubimax · DHL·Ricoh·Ubimax 초기 비전 피킹 발표자료](https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/BUKU%20LOGISTIK%204.0/DHL/T.6_InnovationinPractise-AugmentedRealityinLogistics.pdf), [TeamViewer · TeamViewer의 DHL 구축 사례](https://www.teamviewer.com/en/success-stories/dhl/))
 
-2015년 초기 시험에서 발표한 효율 25% 향상과 후속 공급사 사례의 생산성 15%는 같은 시험의 숫자로 합치지 않았다. 특정 조건의 결과이므로 SSG에도 그만큼의 효과가 생긴다고 가져올 수 없다. TeamViewer와 Google Cloud가 식료품점 집품용 솔루션을 발표한 선례도 찾았지만, 그것이 SSG와 같은 매장에서의 효과 검증은 아니었다. [자료 11·12·13]
+2015년 초기 시험에서 발표한 효율 25% 향상과 후속 공급사 사례의 생산성 15%는 같은 시험의 숫자로 합치지 않았다. 특정 조건의 결과이므로 SSG에도 그만큼의 효과가 생긴다고 가져올 수 없다. TeamViewer와 Google Cloud가 식료품점 집품용 솔루션을 발표한 선례도 찾았지만, 그것이 SSG와 같은 매장에서의 효과 검증은 아니었다. (출처: [TeamViewer · TeamViewer의 DHL 구축 사례](https://www.teamviewer.com/en/success-stories/dhl/), [Vuzix · Vuzix의 DHL 초기 시험 발표](https://www.prnewswire.com/news-releases/vuzix-delivers-working-enterprise-smart-glasses-solution-to-dhl-for-warehouse-picking-300026954.html), [TeamViewer·Google Cloud · TeamViewer·Google Cloud 식료품점 집품 솔루션 발표](https://www.teamviewer.com/en/global/company/press/2021/teamviewer-partners-with-google-cloud-to-deliver-enterprise-augmented-reality-solutions-on-google-glass/))
 
 통제된 창고와 고객이 다니는 매장은 다르다. 화면을 시야에 띄워도 없는 재고가 생기거나 잘못된 위치 정보가 바로잡히지는 않는다. 고객으로 인한 통로 혼잡도 자동으로 해결되지 않는다. 현장에서 단말기를 얼마나 자주 조작하는지, 그 시간이 큰 비중인지, 이미 거치대나 웨어러블을 쓰는지부터 확인하지 못했다. 착용 부담과 오집품, 바코드 인식, 작업 흐름과의 연결도 살펴야 한다.
 
 주문별 바구니에 매장에서 바로 나눠 담는 방식이라면 DHL의 카트 안내가 참고가 될 수 있다. 후방에서 다시 분류하는 센터라면 같은 기능의 필요성이 달라질 수 있다. 기존 운영을 확인하지 않고 DHL의 절차 전체를 그대로 옮길 수는 없었다.
 
-신세계아이앤씨와의 연결도 따로 확인했다. 공식 사이트에는 주문·물류·검품·POG 등의 시스템 운영 영역이 있고, 2026년 발표에는 메타 글래스 국내 유통 역할이 있다. 하지만 유통을 한다는 사실이 곧 피킹에 맞는 디스플레이·스캔·업무 앱 연동을 지원한다는 뜻은 아니다. 자체 제조 제품이라고 확인한 것도 아니고, 아이앤씨가 POG 내비게이션이나 mPDO의 구체적인 개발·운영을 담당한다는 관계도 확인하지 못했다. [자료 14·15]
+신세계아이앤씨와의 연결도 따로 확인했다. 공식 사이트에는 주문·물류·검품·POG 등의 시스템 운영 영역이 있고, 2026년 발표에는 메타 글래스 국내 유통 역할이 있다. 하지만 유통을 한다는 사실이 곧 피킹에 맞는 디스플레이·스캔·업무 앱 연동을 지원한다는 뜻은 아니다. 자체 제조 제품이라고 확인한 것도 아니고, 아이앤씨가 POG 내비게이션이나 mPDO의 구체적인 개발·운영을 담당한다는 관계도 확인하지 못했다. (출처: [신세계아이앤씨 · 신세계아이앤씨 시스템 운영 사업](https://shinsegae-inc.com/business/itService/operation.do), [신세계그룹 뉴스룸 · 신세계아이앤씨 메타 글래스 국내 유통 발표](https://www.shinsegaegroupnewsroom.com/shinsegae-i-and-c-becomes-exclusive-domestic-distributor-of-meta-glass/))
 
-장비의 현재 상태도 따로 봤다. Google Glass Enterprise 제품군은 판매·지원이 종료됐다. 사례의 작업 방식을 참고하는 것과 지금 구매할 장비를 선정하는 것은 구분해야 했다. 실제 도입을 제안하려면 장비 사양뿐 아니라 SSG 데이터 접근 권한과 기존 시스템 연동 범위도 필요하다. [자료 16]
+장비의 현재 상태도 따로 봤다. Google Glass Enterprise 제품군은 판매·지원이 종료됐다. 사례의 작업 방식을 참고하는 것과 지금 구매할 장비를 선정하는 것은 구분해야 했다. 실제 도입을 제안하려면 장비 사양뿐 아니라 SSG 데이터 접근 권한과 기존 시스템 연동 범위도 필요하다. (출처: [Google · Google Glass Enterprise 판매·지원 종료 안내](https://support.google.com/glass-enterprise/customer/answer/13417888?hl=en))
 
 ## 개선 여지는 열어 두되, 해결 방향을 정했다고 쓰지는 않기로 했다
 
@@ -109,19 +109,19 @@ B마트는 고객이 쇼핑하는 영업 매대와 다른 조건의 도심 주�
 
 ## 관련 자료
 
-- document | ssg-two-hour | [자료 1 · SSG닷컴 2시간 배송 운영 설명](https://www.shinsegaegroupnewsroom.com/why-ssg-com-launched-2hour-delivery/) | 신세계그룹 뉴스룸, 2026-08-19. 주문 이후 준비와 차량 출발 설명. 묶음 피킹 여부의 증거는 아님.
-- document | ssg-pp-capacity | [자료 2 · 기존 PP센터 처리능력 확대 보도](https://www.thebell.co.kr/front/newsview.asp?key=202608241501091360102586) | 더벨, 2026-08-24. NDR 관련 보도이며 신규 센터 영구 중단 결정과 구분.
-- document | ssg-pog-navigation | [자료 3 · 가든파이브점 POG 내비게이션 현장 기사](https://www.hankyung.com/amp/202405136943i) | 한국경제, 2024-05-14. 당시 기능·도입 설명과 회사 측 성과.
-- document | ssg-hanam | [자료 4 · 하남점 mPDO·반지형 스캐너·DAS 현장 기사](https://www.donga.com/news/Economy/article/all/20230130/117663935/1) | 동아일보, 2023-01-31. 매장 집품과 후방 분류의 구분.
-- document | ssg-icheon | [자료 5 · 이천점 PP센터 확장과 자동화](https://www.shinsegaegroupnewsroom.com/ssgdotcom-pp-center-logistics-network/) | 신세계그룹 뉴스룸, 2021-11-03. 공간 확장·설비가 함께 반영된 회사 발표.
-- document | ssg-cheonggye | [자료 6 · 청계천 E.OS 운영 현장](https://magazine.hankyung.com/business/article/202102026953b) | 한경비즈니스, 2021-02-03. 구역 작업·운반·검수의 특정 운영 사례.
-- document | bmart-pda-layout | [자료 7 · B마트 진열과 PDA 개선](https://bcut.baemin.com/3529/) | B컷 by 배민, 2022-06-03. 당시 진열·작업 지원 개선 과정.
-- document | bmart-oms | [자료 8 · B마트 OMS의 물류주문관리와 출고 최적화](https://techblog.woowahan.com/22263/) | 우아한형제들 기술블로그, 2025-06-13. 준비 작업과 라이더 요청의 조정.
-- document | coupang-process | [자료 9 · 쿠팡 물류센터 현장 체험과 공정 구분](https://news.coupang.com/archives/10996/) | 쿠팡 뉴스룸, 2021-10-12. 상온 집품·신선 허브 체험으로 현재 전 센터 일반화 불가.
-- document | dhl-pilot-process | [자료 10 · DHL·Ricoh·Ubimax 초기 비전 피킹 발표자료](https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/BUKU%20LOGISTIK%204.0/DHL/T.6_InnovationinPractise-AugmentedRealityinLogistics.pdf) | 2015-04-16 공동 발표, PDF 19~21쪽. 2014년 12월 시험 절차를 담은 대학 서버 보관본.
-- document | dhl-teamviewer | [자료 11 · TeamViewer의 DHL 구축 사례](https://www.teamviewer.com/en/success-stories/dhl/) | 게시일 미표기. WMS 연동과 작업 지시, 공급업체의 성과 설명.
-- document | dhl-initial-result | [자료 12 · Vuzix의 DHL 초기 시험 발표](https://www.prnewswire.com/news-releases/vuzix-delivers-working-enterprise-smart-glasses-solution-to-dhl-for-warehouse-picking-300026954.html) | Vuzix 보도자료, 2015-01-28. 초기 25% 결과는 SSG의 예상효과가 아님.
-- document | grocery-vision-picking | [자료 13 · TeamViewer·Google Cloud 식료품점 집품 솔루션 발표](https://www.teamviewer.com/en/global/company/press/2021/teamviewer-partners-with-google-cloud-to-deliver-enterprise-augmented-reality-solutions-on-google-glass/) | 2021-10-12. 솔루션 발표와 개별 매장 효과 검증을 구분.
-- document | sinc-operation | [자료 14 · 신세계아이앤씨 시스템 운영 사업](https://shinsegae-inc.com/business/itService/operation.do) | 게시일 미표기. 유통 IT 사업 영역이며 특정 SSG 제품의 개발·운영 관계는 미확인.
-- document | sinc-meta-glasses | [자료 15 · 신세계아이앤씨 메타 글래스 국내 유통 발표](https://www.shinsegaegroupnewsroom.com/shinsegae-i-and-c-becomes-exclusive-domestic-distributor-of-meta-glass/) | 신세계그룹 뉴스룸, 2026-09-28. 기기 유통 역할과 피킹 솔루션 제공 여부를 구분.
-- document | glass-enterprise-end | [자료 16 · Google Glass Enterprise 판매·지원 종료 안내](https://support.google.com/glass-enterprise/customer/answer/13417888?hl=en) | 2023-03-15 갱신. 과거 사례 장비를 현재 도입 후보로 그대로 쓰지 않기 위한 확인 자료.
+- document | ssg-two-hour | [SSG닷컴 2시간 배송 운영 설명](https://www.shinsegaegroupnewsroom.com/why-ssg-com-launched-2hour-delivery/) | 신세계그룹 뉴스룸, 2026-08-19. 주문 이후 준비와 차량 출발 설명. 묶음 피킹 여부의 증거는 아님.
+- document | ssg-pp-capacity | [기존 PP센터 처리능력 확대 보도](https://www.thebell.co.kr/front/newsview.asp?key=202608241501091360102586) | 더벨, 2026-08-24. NDR 관련 보도이며 신규 센터 영구 중단 결정과 구분.
+- document | ssg-pog-navigation | [가든파이브점 POG 내비게이션 현장 기사](https://www.hankyung.com/amp/202405136943i) | 한국경제, 2024-05-14. 당시 기능·도입 설명과 회사 측 성과.
+- document | ssg-hanam | [하남점 mPDO·반지형 스캐너·DAS 현장 기사](https://www.donga.com/news/Economy/article/all/20230130/117663935/1) | 동아일보, 2023-01-31. 매장 집품과 후방 분류의 구분.
+- document | ssg-icheon | [이천점 PP센터 확장과 자동화](https://www.shinsegaegroupnewsroom.com/ssgdotcom-pp-center-logistics-network/) | 신세계그룹 뉴스룸, 2021-11-03. 공간 확장·설비가 함께 반영된 회사 발표.
+- document | ssg-cheonggye | [청계천 E.OS 운영 현장](https://magazine.hankyung.com/business/article/202102026953b) | 한경비즈니스, 2021-02-03. 구역 작업·운반·검수의 특정 운영 사례.
+- document | bmart-pda-layout | [B마트 진열과 PDA 개선](https://bcut.baemin.com/3529/) | B컷 by 배민, 2022-06-03. 당시 진열·작업 지원 개선 과정.
+- document | bmart-oms | [B마트 OMS의 물류주문관리와 출고 최적화](https://techblog.woowahan.com/22263/) | 우아한형제들 기술블로그, 2025-06-13. 준비 작업과 라이더 요청의 조정.
+- document | coupang-process | [쿠팡 물류센터 현장 체험과 공정 구분](https://news.coupang.com/archives/10996/) | 쿠팡 뉴스룸, 2021-10-12. 상온 집품·신선 허브 체험으로 현재 전 센터 일반화 불가.
+- document | dhl-pilot-process | [DHL·Ricoh·Ubimax 초기 비전 피킹 발표자료](https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/BUKU%20LOGISTIK%204.0/DHL/T.6_InnovationinPractise-AugmentedRealityinLogistics.pdf) | 2015-04-16 공동 발표, PDF 19~21쪽. 2014년 12월 시험 절차를 담은 대학 서버 보관본.
+- document | dhl-teamviewer | [TeamViewer의 DHL 구축 사례](https://www.teamviewer.com/en/success-stories/dhl/) | 게시일 미표기. WMS 연동과 작업 지시, 공급업체의 성과 설명.
+- document | dhl-initial-result | [Vuzix의 DHL 초기 시험 발표](https://www.prnewswire.com/news-releases/vuzix-delivers-working-enterprise-smart-glasses-solution-to-dhl-for-warehouse-picking-300026954.html) | Vuzix 보도자료, 2015-01-28. 초기 25% 결과는 SSG의 예상효과가 아님.
+- document | grocery-vision-picking | [TeamViewer·Google Cloud 식료품점 집품 솔루션 발표](https://www.teamviewer.com/en/global/company/press/2021/teamviewer-partners-with-google-cloud-to-deliver-enterprise-augmented-reality-solutions-on-google-glass/) | 2021-10-12. 솔루션 발표와 개별 매장 효과 검증을 구분.
+- document | sinc-operation | [신세계아이앤씨 시스템 운영 사업](https://shinsegae-inc.com/business/itService/operation.do) | 게시일 미표기. 유통 IT 사업 영역이며 특정 SSG 제품의 개발·운영 관계는 미확인.
+- document | sinc-meta-glasses | [신세계아이앤씨 메타 글래스 국내 유통 발표](https://www.shinsegaegroupnewsroom.com/shinsegae-i-and-c-becomes-exclusive-domestic-distributor-of-meta-glass/) | 신세계그룹 뉴스룸, 2026-09-28. 기기 유통 역할과 피킹 솔루션 제공 여부를 구분.
+- document | glass-enterprise-end | [Google Glass Enterprise 판매·지원 종료 안내](https://support.google.com/glass-enterprise/customer/answer/13417888?hl=en) | 2023-03-15 갱신. 과거 사례 장비를 현재 도입 후보로 그대로 쓰지 않기 위한 확인 자료.

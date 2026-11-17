@@ -12,7 +12,7 @@
     "start": "next start",
     "lint": "eslint",
     "til:validate": "node --experimental-strip-types scripts/til-content.mjs validate",
-    "til:test": "node --experimental-strip-types --test src/lib/tilContent.contract.test.mjs src/lib/tilArchive.contract.test.mjs"
+    "til:test": "node --experimental-strip-types --test src/lib/tilContent.contract.test.mjs src/lib/tilArchive.contract.test.mjs src/lib/tilInlineLinks.test.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

@@ -43,6 +43,9 @@
 .section > h2 > span { color: #bd2138; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em; }
 .section > p { margin-block: 0 22px; font-size: 1.0625rem; color: #393936; line-height: 1.95; word-break: keep-all; overflow-wrap: anywhere; white-space: pre-wrap; }
 .media { max-width: var(--reader-wide); margin: 32px auto 40px; }
+.section > p a { color: #a51d32; text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.section > p a:hover { color: #761426; }
+.section > p a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 .imageButton { display: block; position: relative; width: 100%; padding: 0; border: 1px solid var(--til-border); background: #eeede8; cursor: zoom-in; }
 .imageButton img { display: block; width: auto; max-width: 100%; height: auto; max-height: 720px; max-height: min(80svh, 720px); object-fit: contain; margin: auto; }
 .imageTriptych { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
