@@ -1,0 +1,22 @@
+{
+  "source": "https://emart.ssg.com/item/itemView.ssg?itemId=1000900014282&salestrNo=2037&siteNo=6001#cdtl_ItemComment",
+  "product_id": "1000900014282",
+  "product": "[냉장][국산] 방어회 (240g/팩)",
+  "observed_date_kst": "2026-11-18",
+  "displayed_total": 10,
+  "displayed_rating": 4.1,
+  "filter": "전체(10), 추천순, 내 점포 필터 미적용, 페이지1에 전체10건",
+  "rating_aggregate": {"freshness": {"positive":6,"neutral":2,"negative":2}, "taste":{"positive":5,"neutral":3,"negative":2}, "packaging":{"positive":6,"neutral":3,"negative":1}},
+  "rows": [
+    {"id":"YR01","date":"2026-11-17","store":"순천점","rating":5,"summary":"고소함과 부드러운 맛에 만족","fishy":false,"quantity":false,"packaging":false,"taste_positive":true,"pre_consumption":false},
+    {"id":"YR02","date":"2026-11-16","store":"월계점","rating":5,"summary":"두툼함과 맛에 만족","fishy":false,"quantity":false,"packaging":false,"taste_positive":true,"pre_consumption":false},
+    {"id":"YR03","date":"2026-11-15","store":"청계천점(B2)","rating":2,"summary":"강한 비린 느낌. 일부를 잘라내고 김·막장과 먹어 나아졌다고 설명. 조직 원인은 작성자의 추정","fishy":true,"quantity":false,"packaging":false,"taste_positive":false,"pre_consumption":false},
+    {"id":"YR04","date":"2026-11-15","store":"봉선점","rating":5,"summary":"영문 본문에서 음식에 호감. 세부 맛 평가는 보통 선택","fishy":false,"quantity":false,"packaging":false,"taste_positive":true,"pre_consumption":false},
+    {"id":"YR05","date":"2026-11-15","store":"만촌점","rating":5,"summary":"두툼함과 고소한 맛에 만족","fishy":false,"quantity":false,"packaging":false,"taste_positive":true,"pre_consumption":false},
+    {"id":"YR06","date":"2026-11-14","store":"세종점","rating":1,"summary":"비린 맛에 실망. 포장은 꼼꼼함 선택","fishy":true,"quantity":false,"packaging":false,"taste_positive":false,"pre_consumption":false},
+    {"id":"YR07","date":"2026-11-14","store":"김해점","rating":5,"summary":"신선하지만 양이 적다고 느낌. 세부 맛 평가는 맛있어요 선택","fishy":false,"quantity":true,"packaging":false,"taste_positive":true,"pre_consumption":false},
+    {"id":"YR08","date":"2026-11-13","store":"청계천점(B2)","rating":5,"summary":"야식으로 주문. 아직 먹기 전이라고 명시하고 외관에 기대","fishy":false,"quantity":false,"packaging":false,"taste_positive":false,"pre_consumption":true},
+    {"id":"YR09","date":"2026-11-13","store":"가든5점","rating":5,"summary":"맛·배송에 만족하며 재구매 의향. 실제 재구매 미확인","fishy":false,"quantity":false,"packaging":false,"taste_positive":true,"pre_consumption":false},
+    {"id":"YR10","date":"2026-11-13","store":"연수점","rating":3,"summary":"포장 열림과 적게 느껴진 양은 아쉽지만 맛은 긍정","fishy":false,"quantity":true,"packaging":true,"taste_positive":true,"pre_consumption":false}
+  ]
+}
