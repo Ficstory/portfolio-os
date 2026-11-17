@@ -16,12 +16,13 @@ test("plain text, malformed links and executable protocols never become anchors"
   }
 });
 
-test("every PP journal source is directly linked in the narrative", () => {
+test("PP journal keeps all source links in the separate resources section", () => {
   const markdown = readFileSync(new URL("../../content/til/published/ssg-pp-picking-questions.md", import.meta.url), "utf8");
   const [body, resources] = markdown.split("## 관련 자료");
   assert.doesNotMatch(markdown, /\[자료 \d/);
   const hrefs = parseTILInlineLinks(body).filter(part => part.href).map(part => part.href);
   const sources = [...resources.matchAll(/\]\((https?:\/\/[^\s)]+)\)/g)].map(match => match[1]);
   assert.equal(sources.length, 16);
-  for (const source of sources) assert.ok(hrefs.includes(source), `Missing inline source: ${source}`);
+  assert.equal(new Set(sources).size, 16);
+  assert.equal(hrefs.length, 0, "Source links must stay outside the narrative");
 });
