@@ -9,6 +9,7 @@ import type { TILBlock, TILCategoryMeta, TILEntry } from "@/types/til";
 import { TILMedia } from "./TILMedia";
 import { StoreAnalysis } from "./StoreAnalysis";
 import { JournalChart } from "./JournalChart";
+import { EvidenceSection } from "./EvidenceSection";
 import { navigateToTILAnchor } from "./tilNavigation";
 import styles from "./til-reader.module.css";
 
@@ -29,6 +30,7 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
   headingRef: RefObject<HTMLHeadingElement | null>;
 }) {
   const isJournal = entry.format === "journal";
+  const isEvidenceJournal = isJournal && entry.slug === "yellowtail-futomaki-prototype";
   const sections: { key: string; label?: string; blocks: TILBlock[] }[] = isJournal
     ? (entry.journal ?? []).map((section, index) => ({ key: `journal-${index}`, label: section.heading, blocks: section.blocks }))
     : reflectionSections.map((section) => ({ ...section,
@@ -177,7 +179,7 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
               {entry.visualizations?.type === "journal-figures" && entry.visualizations.figures
                 .filter(figure => figure.heading === section.label)
                 .map(figure => <JournalChart key={figure.heading} figure={figure} />)}
-              {section.blocks.map((block: TILBlock, blockIndex: number) => block.type === "paragraph"
+              {isEvidenceJournal ? <EvidenceSection blocks={section.blocks} sectionIndex={index} /> : section.blocks.map((block: TILBlock, blockIndex: number) => block.type === "paragraph"
                 ? <p key={blockIndex}>{parseTILInlineLinks(block.text).map((part, partIndex) => part.href
                   ? <a key={partIndex} href={part.href}>{part.text}</a>
                   : part.text)}</p>
@@ -210,7 +212,7 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
           </section> : null}
         </div>
         <footer className={styles.articleFooter} ref={footerRef} tabIndex={-1}>
-          <p>오늘의 배움을 다음의 시도로.</p>
+          {isEvidenceJournal ? null : <p>오늘의 배움을 다음의 시도로.</p>}
           <nav aria-label="TIL 글 이동" className={styles.entryNavigation}>
             {previous ? <button type="button" onClick={() => onSelect(previous)}><span><ArrowLeft size={15} aria-hidden="true" /> 이전 글</span><strong>{previous.title}</strong></button> : <div />}
             {next ? <button type="button" onClick={() => onSelect(next)}><span>다음 글 <ArrowRight size={15} aria-hidden="true" /></span><strong>{next.title}</strong></button> : <div />}

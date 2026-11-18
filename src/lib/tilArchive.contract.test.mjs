@@ -49,10 +49,26 @@ function loadReaderModule() {
     if (id === "./TILMedia") return { TILMedia: () => null };
     if (id === "./StoreAnalysis") return { StoreAnalysis: () => null };
     if (id === "./JournalChart") return { JournalChart: ({ figure }) => createElement("figure", null, figure.title) };
+    if (id === "./EvidenceSection") return loadEvidenceModule();
     if (id === "./tilNavigation") return { navigateToTILAnchor: () => {} };
     return require(id);
   };
   vm.runInNewContext(compiled, { exports: cjsModule.exports, module: cjsModule, require: readerRequire });
+  return cjsModule.exports;
+}
+
+function loadEvidenceModule() {
+  const compiled = ts.transpileModule(readSource("src/components/til/EvidenceSection.tsx"), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2023, jsx: ts.JsxEmit.ReactJSX },
+  }).outputText;
+  const cjsModule = { exports: {} };
+  const evidenceRequire = (id) => {
+    if (id === "@/lib/tilInlineLinks") return { parseTILInlineLinks };
+    if (id === "./evidence-section.module.css") return { __esModule: true, default: { decision: "decision", snapshot: "snapshot" } };
+    if (id === "./TILMedia") return { TILMedia: ({ block }) => createElement("figure", null, createElement("img", { src: block.src, alt: block.alt })) };
+    return require(id);
+  };
+  vm.runInNewContext(compiled, { exports: cjsModule.exports, module: cjsModule, require: evidenceRequire });
   return cjsModule.exports;
 }
 
@@ -171,6 +187,50 @@ test("media alt, captions, titles and ordered text are searchable", () => {
   for (const query of ["추가 본문", "화면 구조", "전후 비교", "실행 영상", "수채화 풍경 원문"]) {
     assert.equal(filterTILEntries([mediaEntry], "all", query).length, 1);
   }
+});
+
+test("evidence sections preserve accessible counts, journeys, comparisons and signed economics", () => {
+  const { EvidenceSection } = loadEvidenceModule();
+  const render = (lines, sectionIndex = 1) => renderToStaticMarkup(createElement(EvidenceSection, {
+    sectionIndex, blocks: lines.map(text => ({ type: "paragraph", text })),
+  }));
+  const reactions = render([
+    "### 구매 뒤의 반응", "| 반응 | 건수 | 근거 |", "| --- | --- | --- |",
+    "| 긍정 | 25 | 맛있었다 |", "| 거부 | 7 | 버렸다 |", "| 재시도 | 5 | 김을 더했다 |", "| 보류 | 4 | 남겼다 |", "시식에서 확인한다.",
+  ]);
+  assert.equal((reactions.match(/<i><\/i>/g) ?? []).length, 41);
+  assert.match(reactions, /25<span>건<\/span>/);
+  assert.match(reactions, /<h3>구매 뒤의 반응<\/h3>/);
+  assert.match(reactions, /<p class="decision">시식에서 확인한다\.<\/p>/);
+  assert.doesNotMatch(reactions, /\| ---/);
+  const journey = render(["| 고객여정 | 근거 |", "| --- | --- |", "| 매대에서 멈춤 | 지난 구매를 기억했다 |"]);
+  assert.match(journey, /<ol[^>]*aria-label="고객여정 · 근거"/);
+  assert.match(journey, /<strong>매대에서 멈춤<\/strong>/);
+  const receipt = render(["| 손익 항목 | 금액 | 설명 |", "| --- | --- | --- |", "| 결제액 | 61,500원 | 5팩 판매 |", "| 비용 | −37,714원 | 제작 6팩 |", "| 공헌이익 | +16,771원 | 고정비 제외 |"]);
+  assert.match(receipt, /<dl[^>]*aria-label="손익 항목 · 금액 · 설명"/);
+  assert.match(receipt, /−37,714원/);
+  assert.match(receipt, /data-total="true"><dt>공헌이익/);
+  const comparison = render(["| 채널 | 수량 | 가격 |", "| --- | --- | --- |", "| 본매장 | 6점 | 13,980원 |"]);
+  assert.match(comparison, /<th scope="col">채널<\/th>/);
+  assert.match(comparison, /<th scope="row">본매장<\/th>/);
+});
+
+test("evidence snapshots pair an expandable native image with an ingredient key only in section three", () => {
+  const { EvidenceSection } = loadEvidenceModule();
+  const blocks = [
+    { type: "image", src: "/til/media/example.webp", alt: "배합 시안", width: 1200, height: 400 },
+    ...["| 속재료 | 배합 |", "| --- | --- |", "| 방어 | 90g |"].map(text => ({ type: "paragraph", text })),
+    { type: "paragraph", text: "[출처](https://example.com/) [위험](javascript:alert(1))" },
+  ];
+  const markup = renderToStaticMarkup(createElement(EvidenceSection, { blocks, sectionIndex: 3 }));
+  assert.match(markup, /class="snapshot" role="group" aria-label="배합 시안"/);
+  assert.match(markup, /<dl[^>]*aria-label="속재료 · 배합"/);
+  assert.equal((markup.match(/배합 시안/g) ?? []).length, 2);
+  assert.match(markup, /href="https:\/\/example.com\/"/);
+  assert.doesNotMatch(markup, /href="javascript:/);
+  const otherSection = renderToStaticMarkup(createElement(EvidenceSection, { blocks, sectionIndex: 2 }));
+  assert.doesNotMatch(otherSection, /class="snapshot"/);
+  assert.match(otherSection, /<table/);
 });
 
 test("route, Markdown content, character asset, and Portfolio OS launchers stay connected", () => {
