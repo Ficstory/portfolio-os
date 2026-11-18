@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
     "/*": ["./content/til/drafts/**/*", "./content/til/media/**/*", "./public/**/*"],
   },
   outputFileTracingIncludes: {
-    "/til/future-dream": ["./content/til/config.json", "./content/til/published/*.md"],
+    "/til/future-dream": ["./content/til/config.json", "./content/til/published/*.md", "./content/til/visualizations/*.json"],
   },
   async rewrites() {
     return [

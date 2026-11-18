@@ -12,6 +12,16 @@ export type StoreAnalysisVisualization = {
   promotion: { label: string; dates: string; sales: number[] }[];
   events: { date: string; store: string; text: string }[];
 };
+export type JournalFigure = {
+  heading: string;
+  title: string;
+  kind: "composition" | "bars";
+  percentages?: boolean;
+  unit: string;
+  note: string;
+  rows: { label: string; value: number; highlight?: boolean }[];
+};
+
 type TILMediaSize = { width: number; height: number; caption?: string; prompt?: string };
 export type TILBlock =
   | { type: "paragraph"; text: string }
@@ -59,7 +69,7 @@ export type TILEntry = {
   skills: string[];
   resources: TILResource[];
   isDemo?: boolean;
-  visualizations?: StoreAnalysisVisualization;
+  visualizations?: StoreAnalysisVisualization | { type: "journal-figures"; figures: JournalFigure[] };
 };
 
 export type TILCategoryMeta = {

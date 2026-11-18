@@ -430,7 +430,7 @@ export function parseTILMarkdown(
     isDemo: metadata.isDemo
       ? parseBoolean(metadata.isDemo, "isDemo", sourcePath)
       : false,
-    ...(metadata.visualizations ? { visualizations: readVisualizations(metadata.visualizations, slug, sourcePath) } : {}),
+    ...(metadata.visualizations ? { visualizations: readVisualizations(metadata.visualizations, slug, sourcePath, journal) } : {}),
     learned: paragraphs("learned"),
     tried: paragraphs("tried"),
     blocked: paragraphs("blocked"),
@@ -570,8 +570,8 @@ function validateEntries(entries: TILSourceEntry[], config: TILContentConfig) {
   }
 }
 
-function readVisualizations(type: string, slug: string, sourcePath: string): TILEntry["visualizations"] {
-  if (type !== "store-analysis") throw failure(sourcePath, `unknown visualization type: ${type}`);
+function readVisualizations(type: string, slug: string, sourcePath: string, journal: TILEntry["journal"]): TILEntry["visualizations"] {
+  if (type !== "store-analysis" && type !== "journal-figures") throw failure(sourcePath, `unknown visualization type: ${type}`);
   const file = path.join(path.dirname(path.dirname(sourcePath)), "visualizations", `${slug}.json`);
   let value: unknown;
   try {
@@ -581,6 +581,25 @@ function readVisualizations(type: string, slug: string, sourcePath: string): TIL
   }
   const number = (candidate: unknown) => typeof candidate === "number" && Number.isFinite(candidate);
   const string = (candidate: unknown) => typeof candidate === "string" && candidate.trim().length > 0;
+  if (type === "journal-figures") {
+    const headings = new Set(journal?.map(section => section.heading));
+    if (!isRecord(value) || value.type !== type || !Array.isArray(value.figures) || !value.figures.length) {
+      throw failure(file, "expected a non-empty figures array");
+    }
+    for (const figure of value.figures) {
+      if (!isRecord(figure) || typeof figure.heading !== "string" || !headings.delete(figure.heading) ||
+        !string(figure.title) || !string(figure.unit) || !string(figure.note) ||
+        !["composition", "bars"].includes(String(figure.kind)) ||
+        (figure.percentages !== undefined && typeof figure.percentages !== "boolean") ||
+        !Array.isArray(figure.rows) || !figure.rows.length ||
+        !figure.rows.every(row => isRecord(row) && string(row.label) && typeof row.value === "number" &&
+          Number.isFinite(row.value) && row.value >= 0 && (row.highlight === undefined || typeof row.highlight === "boolean")) ||
+        !figure.rows.some(row => row.value > 0)) {
+        throw failure(file, "each chart needs a distinct journal heading, chart kind, labels and nonnegative values");
+      }
+    }
+    return value as NonNullable<TILEntry["visualizations"]>;
+  }
   if (!isRecord(value) || value.type !== type || !string(value.period) || !string(value.comparison) ||
     !Array.isArray(value.stores) || value.stores.length !== 3 || !value.stores.every((store) => isRecord(store) &&
       string(store.name) && string(store.observation) && ["revenue", "share", "salesChange", "visitsChange", "purchasesBefore", "purchasesAfter", "conversionPointChange", "basketChange", "unitsBefore", "unitsAfter"].every((key) => number(store[key]))) ||

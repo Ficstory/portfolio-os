@@ -224,7 +224,7 @@
   .articleHeader h1 { margin-block: 16px 20px; font-size: 2rem; }
   .summary { font-size: 1rem; padding-left: 16px; }
   .section { margin-top: 40px; }
-  .section > h2 { font-size: 1.25rem; margin-bottom: 20px; }
+  .section > h2 { font-size: 1.25rem; margin-bottom: 20px; scroll-margin-top: calc(var(--reader-tools-height) + 3.5rem); }
   .section > p { font-size: 1rem; line-height: 1.9; }
   .media { margin-block: 24px 32px; }
   .imageTriptych { grid-auto-columns: minmax(180px, min(66vw, 240px)); grid-auto-flow: column; grid-template-columns: none; gap: 10px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 8px; }

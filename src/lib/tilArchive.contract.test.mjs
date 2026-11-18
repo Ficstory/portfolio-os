@@ -48,6 +48,7 @@ function loadReaderModule() {
     if (id === "./til-reader.module.css") return { default: {} };
     if (id === "./TILMedia") return { TILMedia: () => null };
     if (id === "./StoreAnalysis") return { StoreAnalysis: () => null };
+    if (id === "./JournalChart") return { JournalChart: ({ figure }) => createElement("figure", null, figure.title) };
     if (id === "./tilNavigation") return { navigateToTILAnchor: () => {} };
     return require(id);
   };
@@ -150,6 +151,11 @@ test("the reader renders journal prose without forced reflection headings and re
   assert.match(headed, /id="til-journal-1"[^>]*>예상과 달랐던 점<\/h2>/);
   assert.doesNotMatch(headed, /<span>02<\/span>/);
   assert.match(render(entries[0]), /오늘 배운 것/);
+  const chart = render({ ...journalEntry,
+    journal: [{ heading: "후기", blocks: [{ type: "paragraph", text: "사례 본문" }] }],
+    visualizations: { type: "journal-figures", figures: [{ heading: "후기", title: "후기 건수" }] },
+  });
+  assert.match(chart, /<h2[^>]*>후기<\/h2><figure>후기 건수<\/figure><p>사례 본문<\/p>/);
   const linked = render({ ...journalEntry, journal: [{ blocks: [{ type: "paragraph", text: '출처: [배민](https://bcut.baemin.com/3529/). [위험](javascript:alert(1))' }] }] });
   assert.match(linked, /<a href="https:\/\/bcut\.baemin\.com\/3529\/">배민<\/a>/);
   assert.doesNotMatch(linked, /href="javascript:/);

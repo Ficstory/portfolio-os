@@ -8,6 +8,7 @@ import { parseTILInlineLinks } from "@/lib/tilInlineLinks";
 import type { TILBlock, TILCategoryMeta, TILEntry } from "@/types/til";
 import { TILMedia } from "./TILMedia";
 import { StoreAnalysis } from "./StoreAnalysis";
+import { JournalChart } from "./JournalChart";
 import { navigateToTILAnchor } from "./tilNavigation";
 import styles from "./til-reader.module.css";
 
@@ -173,6 +174,9 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
           {sections.map((section, index) => (
             <section className={styles.section} key={section.key} aria-labelledby={section.label ? `til-${section.key}` : undefined} aria-label={section.label ? undefined : "본문"}>
               {section.label ? <h2 id={`til-${section.key}`} tabIndex={-1}>{isJournal ? null : <span>{String(index + 1).padStart(2, "0")}</span>}{section.label}</h2> : null}
+              {entry.visualizations?.type === "journal-figures" && entry.visualizations.figures
+                .filter(figure => figure.heading === section.label)
+                .map(figure => <JournalChart key={figure.heading} figure={figure} />)}
               {section.blocks.map((block: TILBlock, blockIndex: number) => block.type === "paragraph"
                 ? <p key={blockIndex}>{parseTILInlineLinks(block.text).map((part, partIndex) => part.href
                   ? <a key={partIndex} href={part.href}>{part.text}</a>
