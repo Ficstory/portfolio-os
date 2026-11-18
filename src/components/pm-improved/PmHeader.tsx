@@ -4,13 +4,14 @@ import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useRef } from "react";
 import { links } from "@/data/links";
+import { pmArchivePath } from "./paths";
 import { pmResume } from "./resume";
 import styles from "./pm.module.css";
 
 const navigation = [
-  { label: "프로젝트", href: "/PM/#work" },
+  { label: "프로젝트", href: `${pmArchivePath}#work` },
   { label: "인쇄 미리보기", href: "/PM/print/" },
-  { label: "경험", href: "/PM/#about" },
+  { label: "경험", href: `${pmArchivePath}#about` },
   { label: "이력서", href: pmResume.pdfPath, opensInNewTab: true },
   { label: "이메일", href: links.email },
 ];
@@ -21,7 +22,7 @@ export function PmHeader() {
   return (
     <header className={styles.header}>
       <div className={styles.headerInner}>
-        <Link className={styles.wordmark} href="/PM/" onClick={close} aria-label="Lee Jaeho, PM 포트폴리오 홈">Lee Jaeho<span aria-hidden="true">.</span></Link>
+        <Link className={styles.wordmark} href={pmArchivePath} onClick={close} aria-label="Lee Jaeho, PM 포트폴리오 홈">Lee Jaeho<span aria-hidden="true">.</span></Link>
         <nav className={styles.desktopNav} aria-label="PM 포트폴리오">
           {navigation.map((item) => item.opensInNewTab ? (
             <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer">

@@ -12,12 +12,16 @@ const manifest = await readFile(path.join(root, "docs/pm-improved/baseline-files
 assert.equal(hash(manifest), baseline.hashing.perFileRecordsSha256, "baseline manifest is intact");
 const records = manifest.trim().split(/\r?\n/).map((line) => line.split("\t"));
 for (const [file, expected] of records) {
-  assert.equal(hash(await readFile(path.join(root, file))), expected, `protected original changed: ${file}`);
+  const currentFile = file === "src/app/page.tsx" ? "src/components/portfolio/PortfolioHome.tsx" : file;
+  assert.equal(hash(await readFile(path.join(root, currentFile))), expected, `protected original changed: ${file}`);
 }
 
+const pmArchive = "/PM/archive/";
 const slugs = ["smile-game", "aekkim", "busan-eumgil", "play-pick"];
-const routes = ["/PM/", ...slugs.map((slug) => `/PM/${slug}/`)];
+const routes = [pmArchive, ...slugs.map((slug) => `/PM/${slug}/`)];
 const originals = ["/pm/", ...slugs.map((slug) => `/pm/${slug}/`)];
+const maintenanceRoutes = ["/", "/PM/"];
+const pages = [...routes, ...originals, ...maintenanceRoutes, "/archive/", "/resume/", "/PM1/"];
 const cache = new Map();
 const targets = new Set();
 const external = new Set();
@@ -31,7 +35,7 @@ async function read(route) {
   })());
   return cache.get(route);
 }
-for (const route of [...routes, ...originals, "/", "/resume/", "/PM1/"]) {
+for (const route of pages) {
   const html = await read(route);
   if (routes.includes(route) || originals.includes(route)) {
     assert.equal((html.match(/<h1[\s>]/g) || []).length, 1, `${route}: one h1`);
@@ -45,7 +49,7 @@ for (const route of [...routes, ...originals, "/", "/resume/", "/PM1/"]) {
     assert.ok(!/TODO|2026\.XX|v2 테스트|개선 실험/.test(main), `${route}: no editing placeholders`);
     const ids = [...main.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
     assert.equal(new Set(ids).size, ids.length, `${route}: unique main IDs`);
-    if (route !== "/PM/") {
+    if (route !== pmArchive) {
       for (const section of ["problem", "evidence", "decision", "action", "collaboration", "result", "learning"]) {
         assert.ok(ids.includes(section), `${route}: ${section} section`);
       }
@@ -73,7 +77,16 @@ for (const route of [...routes, ...originals, "/", "/resume/", "/PM1/"]) {
     }
   }
 }
-const home = await read("/PM/");
+for (const route of maintenanceRoutes) {
+  const html = await read(route);
+  assert.ok(html.includes("<h1>현재 포트폴리오 수정중에 있습니다.</h1>"), `${route}: maintenance heading`);
+  assert.ok(html.includes("좋은 모습으로 찾아뵙겠습니다.<br/>감사합니다.") && html.includes("이재호 드림"), `${route}: maintenance message`);
+  assert.ok(html.includes('src="/maintenance/under-construction.webp"'), `${route}: construction photo`);
+  assert.ok(!/<main\b[^>]*(?:data-portfolio-root|id="pm-content")/.test(html), `${route}: archive content is absent`);
+}
+assert.match(await read("/archive/"), /<main\b[^>]*data-portfolio-root/, "/archive/: original portfolio renders");
+
+const home = await read(pmArchive);
 assert.ok(home.includes("팀이 같은 기준으로 일하도록,"), "improved headline");
 assert.ok((await read("/pm/")).includes("화면을 구현했습니다."), "original headline");
 assert.ok(!(await read("/pm/")).includes("팀이 같은 기준으로 일하도록,"), "improved content does not leak to original");
@@ -82,7 +95,7 @@ const positions = slugs.map((slug) => mainHome.indexOf(`id="${slug}"`));
 assert.ok(positions.every((position, i) => position >= 0 && (i === 0 || position > positions[i - 1])), "project order");
 
 const redirectChecks = [];
-for (const route of ["/PM", ...slugs.map((slug) => `/PM/${slug}`)]) {
+for (const route of ["/PM", pmArchive.slice(0, -1), ...slugs.map((slug) => `/PM/${slug}`)]) {
   const response = await fetch(new URL(`${route}?from=case-check`, origin), { redirect: "manual" });
   assert.ok([307, 308].includes(response.status), `${route}: slash redirect`);
   const location = new URL(response.headers.get("location"), origin);
@@ -90,19 +103,19 @@ for (const route of ["/PM", ...slugs.map((slug) => `/PM/${slug}`)]) {
   assert.equal(location.searchParams.get("from"), "case-check", `${route}: query preserved`);
   redirectChecks.push({ route, status: response.status, location: location.pathname + location.search });
 }
-for (const route of ["/PM/unknown-project/", "/PM/SMILE-GAME/"]) {
+for (const route of ["/PM/unknown-project/", "/PM/SMILE-GAME/", "/PM/Archive/"]) {
   assert.equal((await fetch(new URL(route, origin))).status, 404, `${route}: unknown slug is 404`);
 }
 // Client-side App Router navigation needs the same rewrite as a direct HTML request.
-for (const slug of slugs) {
-  const response = await fetch(new URL(`/PM/${slug}/?_rsc=case-check`, origin), { headers: { RSC: "1" } });
-  assert.equal(response.status, 200, `${slug}: RSC response`);
-  assert.ok(response.headers.get("content-type")?.includes("text/x-component"), `${slug}: RSC content type`);
-  assert.ok((await response.text()).includes("MY ROLE"), `${slug}: RSC renders improved case`);
+for (const route of routes) {
+  const response = await fetch(new URL(`${route}?_rsc=case-check`, origin), { headers: { RSC: "1" } });
+  assert.equal(response.status, 200, `${route}: RSC response`);
+  assert.ok(response.headers.get("content-type")?.includes("text/x-component"), `${route}: RSC content type`);
+  assert.ok((await response.text()).includes("MY ROLE"), `${route}: RSC renders PM content`);
 }
 const result = { result: "pass", checkedAt: new Date().toISOString(), origin: origin.origin,
-  protectedFiles: records.length, pages: [...routes, ...originals, "/", "/resume/", "/PM1/"],
-  localTargets: targets.size, redirectChecks, rscRequests: slugs.length,
+  protectedFiles: records.length, pages,
+  localTargets: targets.size, redirectChecks, rscRequests: routes.length,
   externalLinksNotFetched: [...external].sort() };
 if (process.argv[3]) await writeFile(process.argv[3], JSON.stringify(result, null, 2) + "\n");
 console.log(JSON.stringify(result, null, 2));

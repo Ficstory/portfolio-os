@@ -1,102 +1,34 @@
-"use client";
+import type { Metadata } from "next";
+import Image from "next/image";
 
-import { LockScreen } from "@/components/lock-screen/LockScreen";
-import { cn } from "@/lib/cn";
-import {
-  getTimeOfDay,
-  getWallpaperForTimeOfDay,
-  resolveAppearanceMode,
-} from "@/lib/timeTheme";
-import { useMinuteClock } from "@/lib/useMinuteClock";
-import { useDesktopStore } from "@/stores/desktopStore";
-import { useThemeStore } from "@/stores/themeStore";
-import dynamic from "next/dynamic";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import styles from "./maintenance.module.css";
 
-const UNLOCK_ANIMATION_MS = 550;
-const PortfolioDesktopShell = dynamic(
-  () =>
-    import("@/components/portfolio/PortfolioDesktopShell").then(
-      (module) => module.PortfolioDesktopShell,
-    ),
-  {
-    loading: () => null,
-    ssr: false,
-  },
-);
+const notice = "현재 포트폴리오 수정중에 있습니다.";
+const returnMessage = "좋은 모습으로 찾아뵙겠습니다.";
 
-export default function Home() {
-  const hasUnlocked = useDesktopStore((state) => state.hasUnlocked);
-  const unlock = useDesktopStore((state) => state.unlock);
-  const appearanceMode = useThemeStore((state) => state.appearanceMode);
-  const [isUnlocking, setIsUnlocking] = useState(false);
-  const unlockTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const now = useMinuteClock();
-  const timeOfDay = useMemo(() => getTimeOfDay(now.getHours()), [now]);
-  const wallpaperUrl = useMemo(
-    () => getWallpaperForTimeOfDay(timeOfDay),
-    [timeOfDay],
-  );
-  const resolvedTheme = useMemo(
-    () => resolveAppearanceMode(appearanceMode, timeOfDay),
-    [appearanceMode, timeOfDay],
-  );
+export const metadata: Metadata = {
+  title: "포트폴리오 수정 중",
+  description: `${notice} ${returnMessage}`,
+};
 
-  useEffect(() => {
-    return () => {
-      if (unlockTimerRef.current) {
-        clearTimeout(unlockTimerRef.current);
-      }
-    };
-  }, []);
-
-  const startUnlock = useCallback(() => {
-    if (hasUnlocked || isUnlocking || unlockTimerRef.current) {
-      return;
-    }
-
-    setIsUnlocking(true);
-
-    unlockTimerRef.current = setTimeout(() => {
-      unlock();
-      setIsUnlocking(false);
-      unlockTimerRef.current = null;
-    }, UNLOCK_ANIMATION_MS);
-  }, [hasUnlocked, isUnlocking, unlock]);
-
-  const isDesktopVisible = hasUnlocked || isUnlocking;
-  const dimState = isDesktopVisible ? "unlocked" : "locked";
-
+export default function MaintenancePage() {
   return (
-    <main
-      aria-label="Portfolio"
-      className="relative min-h-screen overflow-hidden bg-slate-950 text-white"
-      data-portfolio-root=""
-      data-theme={resolvedTheme}
-      data-time-theme={timeOfDay}
-    >
-      <div
-        aria-hidden="true"
-        className={cn(
-          "absolute inset-0 bg-cover bg-center transition-[filter] duration-[550ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
-          isDesktopVisible ? "blur-0" : "scale-[1.01] blur-[4px]",
-        )}
-        data-wallpaper-layer=""
-        style={{ backgroundImage: `url(${wallpaperUrl})` }}
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-black transition-opacity duration-[550ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
-        style={{ opacity: `var(--wallpaper-dim-${dimState})` }}
-      />
-
-      {isDesktopVisible ? (
-        <PortfolioDesktopShell isVisible={isDesktopVisible} now={now} resolvedTheme={resolvedTheme} />
-      ) : null}
-
-      {!hasUnlocked ? (
-        <LockScreen isUnlocking={isUnlocking} now={now} onUnlock={startUnlock} />
-      ) : null}
+    <main className={styles.page}>
+      <div className={styles.layout}>
+        <div className={styles.message}>
+          <h1>{notice}</h1>
+          <p>{returnMessage}<br />감사합니다.</p>
+          <p className={styles.signature}>이재호 드림</p>
+        </div>
+        <Image
+          alt="공사 중인 공간에 놓인 노란 안전펜스와 주황색 안전 콘"
+          className={styles.photo}
+          src="/maintenance/under-construction.webp"
+          width={1536}
+          height={1024}
+          preload
+        />
+      </div>
     </main>
   );
 }

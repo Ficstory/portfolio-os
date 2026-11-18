@@ -1,0 +1,72 @@
+.page {
+  --paper: #f7f3ec;
+  --ink: #2e261e;
+  --muted-ink: #5b4b3e;
+  --accent: #925432;
+
+  display: grid;
+  align-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(1.25rem, 5.5vw, 5rem);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.32fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  width: min(100%, 72rem);
+  margin-inline: auto;
+}
+
+.message {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.message::before {
+  display: block;
+  width: 2.75rem;
+  height: 0.125rem;
+  margin-bottom: 1.5rem;
+  background: var(--accent);
+  content: "";
+}
+
+.message h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3.3vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.23;
+  text-wrap: balance;
+}
+
+.message p {
+  margin: 1.35rem 0 0;
+  color: var(--muted-ink);
+  font-size: clamp(1rem, 1.5vw, 1.1875rem);
+  line-height: 1.7;
+}
+
+.message .signature {
+  margin-top: 1.5rem;
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.125rem;
+}
+
+@media (max-width: 47.999rem) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 34rem;
+  }
+}

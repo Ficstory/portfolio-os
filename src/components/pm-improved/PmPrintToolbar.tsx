@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
+import { pmArchivePath } from "./paths";
 import styles from "./printPreview.module.css";
 
 type PrintStatus = "idle" | "preparing" | "failed";
@@ -35,7 +36,7 @@ export function PmPrintToolbar() {
   };
 
   return <section className={styles.toolbar} data-pm-print-toolbar aria-label="인쇄 도구">
-    <Link href="/PM/">포트폴리오로 돌아가기</Link>
+    <Link href={pmArchivePath}>포트폴리오로 돌아가기</Link>
     <div className={styles.actions}>
       <button type="button" onClick={handlePrint} disabled={status === "preparing"}>
         {status === "preparing" ? "인쇄 준비 중…" : "PDF 저장·인쇄"}

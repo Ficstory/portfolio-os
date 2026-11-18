@@ -13,6 +13,7 @@ try { playwright = localRequire("playwright"); } catch {
   playwright = bundledRequire("playwright");
 }
 const origin = process.argv[2] || "http://127.0.0.1:3216";
+const pmArchive = "/PM/archive/";
 const output = process.env.PM_PRINT_OUTPUT || "output/pdf";
 const channel = process.env.PM_PRINT_BROWSER || "msedge";
 await mkdir(path.join(output, "qa"), { recursive: true });
@@ -32,7 +33,7 @@ async function ready(page) {
 }
 try {
   let reference;
-  for (const [route, filename] of [["/PM/", "lee-jaeho-pm-portfolio.pdf"], ["/PM/print/", "lee-jaeho-pm-portfolio-preview.pdf"]]) {
+  for (const [route, filename] of [[pmArchive, "lee-jaeho-pm-portfolio.pdf"], ["/PM/print/", "lee-jaeho-pm-portfolio-preview.pdf"]]) {
     const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, reducedMotion: "reduce" });
     page.on("pageerror", error => report.errors.push(error.message));
     const response = await page.goto(new URL(route, origin).href, { waitUntil: "networkidle" });
@@ -41,7 +42,7 @@ try {
     check((source.match(/data-pm-slide(?:=|\s|>)/g) || []).length === 14, `${route}: all 14 slides server-rendered`);
     await ready(page);
     check(await page.evaluate(() => window.scrollY === 0), `${route}: print prepared without scrolling`);
-    if (route === "/PM/") {
+    if (route === pmArchive) {
       check(!(await page.locator("[data-pm-print]").isVisible()), "normal screen hides the print deck");
       const main = page.locator("#pm-content");
       const before = await main.evaluate(element => ({ text: element.innerText, width: element.getBoundingClientRect().width, height: element.getBoundingClientRect().height }));
@@ -101,7 +102,7 @@ try {
     reference = text;
     await page.pdf({ path: path.join(output, filename), preferCSSPageSize: true, printBackground: true, displayHeaderFooter: false, scale: 1 });
     await page.emulateMedia({ media: "screen" });
-    if (route === "/PM/") {
+    if (route === pmArchive) {
       check(await page.locator("#pm-content").isVisible(), "home restores after leaving print media");
       check(!(await page.locator("[data-pm-print]").isVisible()), "deck hides again after leaving print media");
       await page.bringToFront();
@@ -120,7 +121,7 @@ try {
     await page.close();
   }
   const mobile = await browser.newPage({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce" });
-  await mobile.goto(new URL("/PM/", origin).href, {waitUntil:"networkidle"});
+  await mobile.goto(new URL(pmArchive, origin).href, {waitUntil:"networkidle"});
   await ready(mobile);
   check(await mobile.evaluate(() => document.documentElement.scrollWidth <= innerWidth), "ordinary mobile page has no horizontal overflow");
   try {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { selectedProjects, type PmProject } from "./content";
+import { pmArchivePath } from "./paths";
 import base from "./pm.module.css";
 import styles from "./caseStudy.module.css";
 
@@ -28,7 +29,7 @@ export function CaseHero({ project }: { project: PmProject }) {
 
   return (
     <section className={styles.hero} aria-labelledby="case-title">
-      <Link className={base.backLink} href="/PM/#work">
+      <Link className={base.backLink} href={`${pmArchivePath}#work`}>
         <ArrowLeft size={16} aria-hidden="true" />선택한 작업으로
       </Link>
       <p className={styles.eyebrow}>{project.serviceType}</p>
