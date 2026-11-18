@@ -30,9 +30,10 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
   headingRef: RefObject<HTMLHeadingElement | null>;
 }) {
   const isJournal = entry.format === "journal";
-  const isEvidenceJournal = isJournal && entry.slug === "yellowtail-futomaki-prototype";
+  const isPickingEvidence = isJournal && entry.slug === "ssg-pp-voice-picking";
+  const isEvidenceJournal = isPickingEvidence || (isJournal && entry.slug === "yellowtail-futomaki-prototype");
   const sections: { key: string; label?: string; blocks: TILBlock[] }[] = isJournal
-    ? (entry.journal ?? []).map((section, index) => ({ key: `journal-${index}`, label: section.heading, blocks: section.blocks }))
+    ? (entry.journal ?? []).map((section, index) => ({ key: section.anchor ?? `journal-${index}`, label: section.heading, blocks: section.blocks }))
     : reflectionSections.map((section) => ({ ...section,
     blocks: (entry.blocks?.[section.key] ?? entry[section.key].map((text) => ({ type: "paragraph", text } as const)))
       .filter((block) => block.type !== "paragraph" || block.text.trim()),
@@ -121,7 +122,7 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
         <span>LEARNING IN PUBLIC</span>
         <Link href="/">Portfolio <ArrowRight size={14} aria-hidden="true" /></Link>
       </header>
-      <article className={contents.length ? `${styles.article} ${styles.articleWithContents}` : styles.article}>
+      <article className={contents.length ? `${styles.article} ${styles.articleWithContents}` : styles.article} data-deck-evidence={isPickingEvidence || undefined}>
         <header className={styles.articleHeader}>
           <div className={styles.metadata}>
             <time dateTime={entry.date}>{formatTILDate(entry.date)}</time>
@@ -143,7 +144,7 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
                 setContentsOpen(false);
                 contentsToggleRef.current?.focus();
               }}>
-              <p className={styles.contentsTitle}>이 글의 목차</p>
+              <p className={styles.contentsTitle}>{isPickingEvidence ? "장표별 근거자료" : "이 글의 목차"}</p>
               <button type="button" className={styles.contentsToggle} ref={contentsToggleRef}
                 aria-expanded={contentsOpen} aria-controls="til-reader-contents" onClick={() => setContentsOpen((open) => !open)}>
                 <List size={17} aria-hidden="true" /> 목차 <ChevronDown size={14} aria-hidden="true" />

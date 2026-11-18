@@ -96,11 +96,22 @@ function Reactions({ table }: { table: EvidenceTable }) {
 
 function Journey({ table }: { table: EvidenceTable }) {
   return <ol className={styles.journey} aria-label={table.headers.join(" · ")}>
-    {table.rows.map(([step, evidence], index) => <li key={index}>
+    {table.rows.map(([step, evidence], index) => <li key={index} data-picker={table.headers[0] === "배송 단계" && step === "매장 집품" || undefined}>
       <span className={styles.journeyNumber} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
       <div><strong>{inline(step)}</strong><p>{inline(evidence)}</p></div>
     </li>)}
   </ol>;
+}
+
+function DispatchRoutes({ table }: { table: EvidenceTable }) {
+  return <div className={styles.routes} role="group" aria-label="배송 방식별 주문부터 출고까지">
+    {table.rows.map(([service, ...steps]) => <div key={service} className={styles.route}>
+      <h4>{service}</h4>
+      <ol aria-label={service}>{steps.map((step, index) =>
+        <li key={index}><small>{table.headers[index + 1]}</small><span>{inline(step)}</span></li>
+      )}</ol>
+    </div>)}
+  </div>;
 }
 
 function Receipt({ table }: { table: EvidenceTable }) {
@@ -123,7 +134,8 @@ function IngredientKey({ table }: { table: EvidenceTable }) {
 
 function Table({ table }: { table: EvidenceTable }) {
   if (table.headers[0] === "반응" && table.headers.length === 3 && table.rows.every(row => /^\d+$/.test(row[1]) && Number(row[1]) <= 200)) return <Reactions table={table} />;
-  if (table.headers[0] === "고객여정" && table.headers.length === 2) return <Journey table={table} />;
+  if (["고객여정", "배송 단계"].includes(table.headers[0]) && table.headers.length === 2) return <Journey table={table} />;
+  if (table.headers[0] === "배송 방식" && table.headers.length === 4) return <DispatchRoutes table={table} />;
   if (table.headers[0] === "손익 항목" && table.headers.length === 3) return <Receipt table={table} />;
   return <Comparison table={table} />;
 }

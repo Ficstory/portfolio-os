@@ -195,7 +195,7 @@ function parseBullets(lines: string[], heading: string, sourcePath: string) {
 }
 
 function parseJournalSections(body: string, sourcePath: string) {
-  const narrative: { heading?: string; lines: string[] }[] = [{ lines: [] }];
+  const narrative: { heading?: string; anchor?: string; lines: string[] }[] = [{ lines: [] }];
   const details = new Map<string, string[]>();
   const detailHeadings = new Set(REQUIRED_SECTIONS.slice(4));
   let activeLines = narrative[0].lines;
@@ -224,7 +224,11 @@ function parseJournalSections(body: string, sourcePath: string) {
         inDetails = true;
       } else {
         if (inDetails) throw failure(sourcePath, "journal body must precede optional actions, skills and resources");
-        narrative.push({ heading, lines: activeLines });
+        // Keep published PDF links stable when a journal is edited or reordered.
+        const pinned = /^(.+?)\s+\{#til-(journal-\d+)\}$/.exec(heading);
+        narrative.push(pinned
+          ? { heading: pinned[1], anchor: pinned[2], lines: activeLines }
+          : { heading, lines: activeLines });
       }
     } else if (line.trim() && !line.trim().startsWith("<!--")) {
       activeLines.push(line.trim());
@@ -280,7 +284,7 @@ function parseReflectionBlock(line: string, heading: string, slug: string, sourc
     if (!type) throw failure(sourcePath, "media link requires video: or youtube: title");
     const parts = suffix.split("|").map((part) => part.trim());
     const size = parts[1]?.match(/^([1-9]\d{0,4})x([1-9]\d{0,4})$/);
-    if (parts[0] || !size || parts.length > (type === "video" || type === "image" ? 4 : 3)) throw failure(sourcePath, "media dimensions required: | WIDTHxHEIGHT | optional caption");
+    if (parts[0] || !size || parts.length > 4) throw failure(sourcePath, "media dimensions required: | WIDTHxHEIGHT | optional caption");
     const common = { src, width: Number(size[1]), height: Number(size[2]), ...(parts[2] ? { caption: parts[2] } : {}) };
     if (type === "image") {
       mediaFilename(src, slug, "image", sourcePath);
@@ -293,9 +297,8 @@ function parseReflectionBlock(line: string, heading: string, slug: string, sourc
     const title = requireString(label.slice(type.length + 2), "media title", sourcePath);
     if (type === "youtube") {
       if (!/^https:\/\/www\.youtube\.com\/watch\?v=[a-zA-Z0-9_-]{11}$/.test(src)) throw failure(sourcePath, "YouTube URL must be https://www.youtube.com/watch?v=VIDEO_ID (11 characters)");
-      return { type, title, ...common };
     }
-    mediaFilename(src, slug, "video", sourcePath);
+    if (type === "video") mediaFilename(src, slug, "video", sourcePath);
     if (parts[3]) mediaFilename(parts[3], slug, "image", sourcePath);
     return { type, title, ...common, ...(parts[3] ? { poster: parts[3] } : {}) };
 }
@@ -407,11 +410,15 @@ export function parseTILMarkdown(
     throw failure(sourcePath, "status must be draft or published");
   }
 
-  const journal = journalSource?.narrative.map(({ heading, lines }) => ({
+  const journal = journalSource?.narrative.map(({ heading, anchor, lines }) => ({
     ...(heading ? { heading } : {}),
+    ...(anchor ? { anchor } : {}),
     blocks: parseReflection(lines, heading ?? "본문", slug, sourcePath),
   })).filter((section) => section.blocks.length > 0);
   if (journal && journal.length === 0) throw failure(sourcePath, "journal must contain body content");
+  if (journal && new Set(journal.map((section, index) => section.anchor ?? `journal-${index}`)).size !== journal.length) {
+    throw failure(sourcePath, "duplicate journal section anchor");
+  }
   const reflections = Object.fromEntries(Object.entries(SECTION_KEYS).slice(0, 4).map(([heading, key]) => [key, parseReflection(sections.get(heading) ?? [], heading, slug, sourcePath)])) as Record<TILReflectionKey, TILBlock[]>;
   const blocks = Object.fromEntries(Object.entries(reflections).filter(([, values]) => values.some((block) => block.type !== "paragraph")));
   const paragraphs = (key: TILReflectionKey) => reflections[key].flatMap((block) => block.type === "paragraph" ? [block.text] : []);
@@ -618,6 +625,7 @@ function localMedia(entry: TILEntry) {
   const blockMedia = allBlocks.flatMap((block) => {
     if (block.type === "image") return [block.src];
     if (block.type === "video") return [block.src, ...(block.poster ? [block.poster] : [])];
+    if (block.type === "youtube" && block.poster) return [block.poster];
     return [];
   });
   const documents = entry.resources.filter((resource) => resource.type === "document" && resource.href.startsWith("/til/media/"));

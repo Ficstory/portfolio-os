@@ -134,6 +134,32 @@ test("journals accept unheaded prose and arbitrary ordered subheadings without r
   assert.throws(() => parseTILMarkdown(journalMarkdown("본문").replace("format: journal", "format: unknown")), /unknown format/);
 });
 
+test("published slide anchors survive heading edits and cannot collide with numbered sections", () => {
+  const body = "## 관찰 기록 {#til-journal-4}\n매대를 살폈다.\n## 업무 흐름 {#til-journal-5}\n상품을 담았다.";
+  const entry = parseTILMarkdown(journalMarkdown(body));
+  assert.deepEqual(entry.journal.map(({ heading, anchor }) => [heading, anchor]), [
+    ["관찰 기록", "journal-4"], ["업무 흐름", "journal-5"],
+  ]);
+  assert.throws(() => parseTILMarkdown(journalMarkdown(body.replace("journal-5", "journal-4"))), /duplicate journal section anchor/);
+  assert.throws(() => parseTILMarkdown(journalMarkdown("## 관찰 {#til-journal-1}\n하나\n## 다음\n둘")), /duplicate journal section anchor/);
+});
+
+test("a YouTube cover is validated and staged with the entry's media", () => {
+  const { projectRoot, contentRoot } = createFixture();
+  try {
+    const poster = "/til/media/test-learning/demo.jpg";
+    const video = "- [youtube: 시연](https://www.youtube.com/watch?v=VjliUmwy8EU) | 1600x900 | 여섯 번째 컷 | " + poster;
+    writeFileSync(path.join(contentRoot, "published", "test-learning.md"), journalMarkdown(video, { status: "published" }));
+    assert.throws(() => stageTILMedia(projectRoot), /missing media/);
+    const sourceDir = path.join(contentRoot, "media", "test-learning");
+    mkdirSync(sourceDir, { recursive: true });
+    writeFileSync(path.join(sourceDir, "demo.jpg"), "poster fixture");
+    assert.equal(stageTILMedia(projectRoot), 1);
+    assert.equal(readFileSync(path.join(projectRoot, "public", poster), "utf8"), "poster fixture");
+    assert.throws(() => parseTILMarkdown(journalMarkdown(video.replace(poster, "https://example.com/cover.jpg"))), /invalid image/);
+  } finally { cleanup(projectRoot); }
+});
+
 test("journals retain media and raw prompts in narrative order and reject unsafe markup", () => {
   const prompt = "  첫 줄\n\n## 관련 자료\n<script>quoted only</script>\n마지막 줄  ";
   const body = `처음 시도했다.\n\n${MEDIA_LINE}\n\n\`\`\`prompt\n${prompt}\n\`\`\`\n\n## 결과를 보고\n생각을 바꿨다.`;

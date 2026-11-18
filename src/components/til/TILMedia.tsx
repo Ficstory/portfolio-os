@@ -103,8 +103,12 @@ export function TILMedia({ block }: { block: MediaBlock }) {
           allow="encrypted-media; picture-in-picture; fullscreen" allowFullScreen
           referrerPolicy="strict-origin-when-cross-origin" />
       ) : (
-        <button type="button" className={styles.youtubePlaceholder} disabled={!youtubeId}
+        <button type="button" className={styles.youtubePlaceholder} data-has-poster={Boolean(block.poster) || undefined} disabled={!youtubeId}
           style={{ aspectRatio: `${block.width} / ${block.height}` }} onClick={() => setPlaying(true)}>
+          {block.poster && <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={block.poster} alt="" width={block.width} height={block.height} loading="lazy" />
+          </>}
           <Play size={32} aria-hidden="true" />
           <strong>{block.title}</strong>
           <span>{youtubeId ? "YouTube 플레이어 열기" : "아래 원본 링크에서 영상을 확인하세요."}</span>

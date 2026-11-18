@@ -27,10 +27,11 @@ export type TILBlock =
   | { type: "paragraph"; text: string }
   | ({ type: "image"; src: string; alt: string; presentation?: "triptych" } & TILMediaSize)
   | ({ type: "video"; src: string; title: string; poster?: string } & TILMediaSize)
-  | ({ type: "youtube"; src: string; title: string } & TILMediaSize);
+  | ({ type: "youtube"; src: string; title: string; poster?: string } & TILMediaSize);
 
 export type TILJournalSection = {
   heading?: string;
+  anchor?: string;
   blocks: TILBlock[];
 };
 
