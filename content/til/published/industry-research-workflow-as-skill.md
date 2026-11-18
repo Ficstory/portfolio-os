@@ -3,9 +3,9 @@ id: til-2026-10-21-industry-research-workflow-as-skill
 slug: industry-research-workflow-as-skill
 date: 2026-10-21
 createdAt: 2026-11-02T00:07:31+09:00
-updatedAt: 2026-11-02T00:18:51+09:00
+updatedAt: 2026-11-18T16:07:39+09:00
 session: Future & Dream Academy 산업특화 프로젝트 1·2차시
-category: education
+category: problem-solving
 title: 산업 분석 수업의 1·2차시를 AI 스킬로 만들어 써봤다
 summary: 산업의 변화와 자원에서 기회를 찾고, 고객과 시장의 근거로 다시 검토하는 순서를 배웠다. 이 흐름을 AI 스킬로 만들어 네 회사의 협업 아이디어 조사에 적용하고, 팀원도 사용할 수 있도록 공유했다.
 status: published

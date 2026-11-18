@@ -3,9 +3,9 @@ id: til-2026-09-29-nobrand-research-from-planning
 slug: nobrand-research-from-planning
 date: 2026-09-29
 createdAt: 2026-10-28T23:03:15+09:00
-updatedAt: 2026-10-29T11:27:00+09:00
+updatedAt: 2026-11-18T16:07:39+09:00
 session: Future & Dream Academy
-category: field
+category: education
 title: 노브랜드 시장조사, 어디를 왜 볼 것인가부터
 summary: 노브랜드를 처음 조사하며 비교할 매장과 질문부터 정했다. 남산점의 상권·가격표·진열·결제 과정을 살펴보니, 저렴한 상품이 있다는 것과 고객이 쉽게 사고 나갈 수 있다는 것은 다른 문제였다.
 status: published

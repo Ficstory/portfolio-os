@@ -1,10 +1,9 @@
 {
   "categories": [
     { "id": "education", "label": "교육", "tone": "lavender" },
-    { "id": "field", "label": "현장 경험", "tone": "green" },
     { "id": "team", "label": "팀 프로젝트", "tone": "blue" },
-    { "id": "personal", "label": "개인 프로젝트", "tone": "blue" },
-    { "id": "problem-solving", "label": "문제 해결", "tone": "amber" },
+    { "id": "personal", "label": "개인과제", "tone": "blue" },
+    { "id": "problem-solving", "label": "AI 활용", "tone": "amber" },
     { "id": "reflection", "label": "회고", "tone": "rose" }
   ],
   "journey": {
