@@ -21,7 +21,7 @@ export default function MaintenancePage() {
       />
       <div className={styles.message}>
         <h1>현재 포트폴리오 <span className={styles.highlight}>수정중</span>에 있습니다.</h1>
-        <p>좋은 모습으로 <span className={styles.highlight}>다시</span> 찾아뵙겠습니다.<br />감사합니다.</p>
+        <p>좋은 모습으로 다시 찾아뵙겠습니다.<br />감사합니다.</p>
         <p className={styles.signature}>이재호 드림</p>
       </div>
     </main>

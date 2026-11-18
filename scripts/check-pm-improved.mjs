@@ -80,7 +80,7 @@ for (const route of pages) {
 for (const route of maintenanceRoutes) {
   const html = await read(route);
   assert.match(html, /<h1>현재 포트폴리오 <span[^>]*>수정중<\/span>에 있습니다\.<\/h1>/, `${route}: maintenance heading`);
-  assert.match(html, /좋은 모습으로 <span[^>]*>다시<\/span> 찾아뵙겠습니다\.<br\/>감사합니다\./, `${route}: maintenance message`);
+  assert.ok(html.includes("좋은 모습으로 다시 찾아뵙겠습니다.<br/>감사합니다."), `${route}: maintenance message`);
   assert.ok(html.includes("이재호 드림"), `${route}: signature`);
   assert.ok(html.includes('src="/maintenance/under-construction.webp"'), `${route}: construction photo`);
   assert.ok(!/<main\b[^>]*(?:data-portfolio-root|id="pm-content")/.test(html), `${route}: archive content is absent`);
