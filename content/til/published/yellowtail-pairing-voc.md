@@ -3,10 +3,10 @@ id: til-2026-11-18-yellowtail-pairing-voc
 slug: yellowtail-pairing-voc
 date: 2026-11-18
 createdAt: 2026-11-18T02:29:00+09:00
-updatedAt: 2026-11-18T10:16:34+09:00
+updatedAt: 2026-11-18T15:52:57+09:00
 session: Future & Dream Academy 개인과제
-category: problem-solving
-title: 방어 곁들임 세트를 접은 이유, 묵은지 포장의 준법과 환불 부담
+category: personal
+title: [이마트] 방어 곁들임 세트를 접은 이유, 묵은지 포장의 준법과 환불 부담
 summary: 방어회에 김과 묵은지를 한 팩으로 담고 싶었다. 묵은지 한 통이 새면 회까지 환불해야 할 수 있다는 점, 소분과 재포장에 따르는 조건을 따져 보고 초기 세트 기획을 접었다.
 status: published
 isDemo: false

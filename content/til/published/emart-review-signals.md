@@ -3,10 +3,10 @@ id: til-2026-11-17-emart-review-signals
 slug: emart-review-signals
 date: 2026-11-17
 createdAt: 2026-11-17T16:29:38+09:00
-updatedAt: 2026-11-18T14:50:39+09:00
+updatedAt: 2026-11-18T15:52:57+09:00
 session: Future & Dream Academy 개인과제
-category: reflection
-title: 신선매대에서 시작한 질문, 고객 후기에서 바뀐 가설
+category: personal
+title: [이마트] 신선매대에서 시작한 질문, 고객 후기에서 바뀐 가설
 summary: 로컬팜 매대에서 든 의문을 고객 후기로 다시 살폈다. 자연주의 상표와 생산자 이름을 보고 고른 후기를 읽고, 농가에서 매대까지 이어지는 콘텐츠를 구상했다.
 status: published
 isDemo: false

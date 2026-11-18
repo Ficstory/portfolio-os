@@ -3,10 +3,10 @@ id: til-2026-11-18-yellowtail-futomaki-prototype
 slug: yellowtail-futomaki-prototype
 date: 2026-11-18
 createdAt: 2026-11-18T10:16:34+09:00
-updatedAt: 2026-11-18T14:30:00+09:00
+updatedAt: 2026-11-18T15:52:57+09:00
 session: Future & Dream Academy 개인과제
-category: problem-solving
-title: 고객 후기에서 방어 후토마키 6점의 가격과 한입까지
+category: personal
+title: [이마트] 고객 후기에서 방어 후토마키 6점의 가격과 한입까지
 summary: 비린맛 실패와 방어를 좋아하는 마음이 한 고객 안에 있었다. 고객 분석과 외식 후기를 바탕으로 본매장 6점·트레이더스 12점을 설계하고, 비교가격과 한 팩 폐기 손익을 다시 계산했다.
 status: published
 isDemo: false

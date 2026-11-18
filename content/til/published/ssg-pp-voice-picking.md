@@ -3,10 +3,10 @@ id: til-2026-11-18-ssg-pp-voice-picking
 slug: ssg-pp-voice-picking
 date: 2026-11-18
 createdAt: 2026-11-18T10:12:24+09:00
-updatedAt: 2026-11-18T15:38:56+09:00
+updatedAt: 2026-11-18T15:52:57+09:00
 session: Future & Dream Academy 신세계아이앤씨 개인과제
-category: reflection
-title: 연제점 피커를 따라가며, 매대 앞 음성 안내로 좁힌 과정
+category: personal
+title: [아이앤씨] 연제점 피커를 따라가며, 매대 앞 음성 안내로 좁힌 과정
 summary: 연제점에서 매대를 한참 살피는 피커를 따라가며, 고객이 먼저 질문하고 피커가 휴대폰으로 무언가 찾아주는 모습도 봤다. 질문 내용과 화면·조회 대상·실제 복귀는 확인하지 못했다. 이 관찰과 종이호일 문의·두유 복귀 시연을 구분하고, 필요한 순간에만 묻는 음성안의 시간과 오류를 어떻게 잴지 정리했다.
 status: published
 isDemo: false

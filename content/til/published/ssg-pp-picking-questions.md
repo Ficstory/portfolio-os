@@ -3,10 +3,10 @@ id: til-2026-11-17-ssg-pp-picking-questions
 slug: ssg-pp-picking-questions
 date: 2026-11-17
 createdAt: 2026-11-17T22:20:16+09:00
-updatedAt: 2026-11-18T00:31:03+09:00
+updatedAt: 2026-11-18T15:52:57+09:00
 session: Future & Dream Academy 신세계아이앤씨 개인과제
-category: reflection
-title: 매대에서 헤매는 피킹 직원을 보고 시작한 질문
+category: personal
+title: [아이앤씨] 매대에서 헤매는 피킹 직원을 보고 시작한 질문
 summary: 매대 앞에서 비슷한 상품을 살펴보던 피킹 직원을 보고 개선 방법을 찾아봤다. 기존 시스템과 여러 대안을 검토한 뒤 ESL 점멸 안내로 돌아왔지만, 이마트 연제점에서 확인한 라벨에는 LED가 없어 제안으로 이어가지 못했다.
 status: published
 isDemo: false
