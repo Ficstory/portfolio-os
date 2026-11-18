@@ -11,7 +11,7 @@ export function proxy(request: NextRequest) {
     // Validate before filesystem lookup: Windows can otherwise serve an SSG
     // file for a differently cased slug even with dynamicParams disabled.
     const isKnownProject = selectedProjects.some((project) => project.slug === slug);
-    if (pathname.includes("//") || (slug && slug !== "print" && !isKnownProject)) {
+    if (pathname.includes("//") || (slug && slug !== "print" && slug !== "print-fnda" && !isKnownProject)) {
       return new NextResponse("Not Found", { status: 404 });
     }
     const destination = request.nextUrl.clone();

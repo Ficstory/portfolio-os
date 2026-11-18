@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  ArrowUpRight,
   BookOpen,
   RotateCcw,
   Search,
@@ -104,7 +105,7 @@ function Sidebar() {
           <span>04</span>
           Projects
         </Link>
-        <a href={links.email}>
+        <a href="#contact" onClick={(event) => navigateToTILAnchor(event, "contact")}>
           <span>05</span>
           Contact
         </a>
@@ -132,12 +133,41 @@ function TopNavigation() {
       </a>
       <Link href="/pm/">Projects</Link>
       <a href="#academy" onClick={(event) => navigateToTILAnchor(event, "academy")}>Academy</a>
-      <a href={links.email}>Contact</a>
+      <a href="#contact" onClick={(event) => navigateToTILAnchor(event, "contact")}>Contact</a>
       <p>
         A SMALL STEP
         <br />A BIGGER TOMORROW
       </p>
     </header>
+  );
+}
+
+function ContactSection() {
+  return (
+    <section aria-labelledby="til-contact-title" className={styles.contact} id="contact" tabIndex={-1}>
+      <h2 id="til-contact-title">Contact</h2>
+      <p>프로젝트나 채용 관련 문의는 이메일로 연락해 주세요.</p>
+      <ul className={styles.contactLinks}>
+        <li>
+          <a href={links.email}>
+            <span>
+              <strong>이메일</strong>
+              <small>{links.email.replace(/^mailto:/, "")}</small>
+            </span>
+            <ArrowUpRight aria-hidden="true" size={17} />
+          </a>
+        </li>
+        <li>
+          <a href={links.github} rel="noreferrer" target="_blank">
+            <span>
+              <strong>GitHub</strong>
+              <small>{links.github.replace(/^https?:\/\//, "")}</small>
+            </span>
+            <ArrowUpRight aria-hidden="true" size={17} />
+          </a>
+        </li>
+      </ul>
+    </section>
   );
 }
 
@@ -335,7 +365,9 @@ export function FutureDreamTilPage({ categories, entries, journey }: {
     let restoring = changed && (isReading || wasReading);
     const frame = requestAnimationFrame(() => {
       const sectionId = window.location.hash.slice(1);
-      const section = isReading && sectionId.startsWith("til-") ? document.getElementById(sectionId) : null;
+      const readerAnchor = isReading && sectionId.startsWith("til-");
+      const contactAnchor = !isReading && sectionId === "contact" && (!changed || wasReading);
+      const section = readerAnchor || contactAnchor ? document.getElementById(sectionId) : null;
       if (section) {
         section.scrollIntoView({ block: "start", behavior: "instant" });
       } else if (changed && (isReading || wasReading)) {
@@ -456,6 +488,7 @@ export function FutureDreamTilPage({ categories, entries, journey }: {
                 </div>
               </div>
             </section>
+            <ContactSection />
           </main>
         </>
       )}
