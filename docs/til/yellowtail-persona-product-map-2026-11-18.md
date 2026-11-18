@@ -1,5 +1,7 @@
 # 방어 고객 페르소나 → 핵심 불편 → 니즈 → 두 상품 근거 매핑
 
+> 2026-11-18 후속 결정: 포장·누액·준법 검토 이후 사용자가 **방어 후토마키를 주력 개발안으로 전환**했다. 아래 세트 우선 판단은 전환 전 비교 기록이다. 페르소나와 고객 근거는 유지하지만 해당 고객의 후토마키 구매의향을 확인한 것은 아니다. 최신 판단과 공개 출처는 [동일 TIL](https://ficstory.dev/til/future-dream/?entry=yellowtail-pairing-voc)을 따른다.
+
 작성·원문 확인일: 2026-11-18(KST). [TIL 본문](https://ficstory.dev/til/future-dream/?entry=yellowtail-pairing-voc)의 근거 보충 문서다.
 
 ## 채택한 페르소나와 적용 범위
