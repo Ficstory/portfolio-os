@@ -1,8 +1,8 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, Check, ChevronDown } from "lucide-react";
+import { ArrowDownToLine, ArrowLeft, ArrowRight, ArrowUpToLine, Check, ChevronDown, List } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState, type RefObject } from "react";
+import { useEffect, useRef, useState, type RefObject } from "react";
 import { formatTILDate } from "@/lib/tilArchive";
 import { parseTILInlineLinks } from "@/lib/tilInlineLinks";
 import type { TILBlock, TILCategoryMeta, TILEntry } from "@/types/til";
@@ -40,25 +40,27 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
     ...(entry.nextActions.length ? [{ id: "next-actions", label: isJournal ? "다음에 해볼 것" : "다음 액션" }] : []),
     ...(hasResources ? [{ id: "resources", label: "관련 자료" }] : []),
   ];
-  const readingLength = sections.reduce((length, section) => length + section.blocks.reduce((size, block) =>
-    size + (block.type === "paragraph" ? block.text.length : 450), 0), 0);
-  const showContents = contents.length >= 3 && readingLength >= 900;
   const contentsKey = contents.map((item) => item.id).join("|");
   const [activeSection, setActiveSection] = useState(contents[0]?.id ?? "");
+  const [contentsOpen, setContentsOpen] = useState(false);
+  const contentsToggleRef = useRef<HTMLButtonElement>(null);
+  const contentsListRef = useRef<HTMLOListElement>(null);
+  const footerRef = useRef<HTMLElement>(null);
+
   useEffect(() => {
-    if (!showContents) return;
+    if (!contentsKey) return;
     const headings = contentsKey.split("|").map((id) => ({ id, element: document.getElementById(`til-${id}`) }));
     let frame = 0;
     const update = () => {
       frame = 0;
       // Track the last heading above the reading line, including long sections
       // whose heading has already left the viewport.
-      const readingLine = Math.min(160, window.innerHeight * 0.25);
+      const readingLine = Math.max(96, Math.min(160, window.innerHeight * 0.25));
       let current = headings[0]?.id ?? "";
       for (const heading of headings) {
         if (heading.element && heading.element.getBoundingClientRect().top <= readingLine) current = heading.id;
       }
-      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+      if (window.scrollY > 0 && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
         current = headings.at(-1)?.id ?? current;
       }
       setActiveSection(current);
@@ -76,14 +78,38 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
       window.removeEventListener("resize", schedule);
       observer.disconnect();
     };
-  }, [contentsKey, showContents]);
+  }, [contentsKey]);
+
+  useEffect(() => {
+    const list = contentsListRef.current;
+    const current = list?.querySelector('[aria-current="location"]');
+    if (!list || !current) return;
+
+    const keepCurrentLinkInView = () => {
+      if (!list.clientHeight) return;
+      const { top, bottom } = current.getBoundingClientRect();
+      const visibleTop = list.getBoundingClientRect().top + list.clientTop;
+      const visibleBottom = visibleTop + list.clientHeight;
+      if (top < visibleTop) list.scrollTop += top - visibleTop;
+      else if (bottom > visibleBottom) list.scrollTop += bottom - visibleBottom;
+    };
+
+    keepCurrentLinkInView();
+    const observer = new ResizeObserver(keepCurrentLinkInView);
+    observer.observe(list);
+    return () => observer.disconnect();
+  }, [activeSection, contentsKey]);
+
+  const scrollToEdge = (edge: "top" | "bottom") => {
+    setContentsOpen(false);
+    const target = edge === "top" ? headingRef.current : footerRef.current;
+    target?.focus({ preventScroll: true });
+    window.scrollTo({
+      top: edge === "top" ? 0 : document.documentElement.scrollHeight,
+      behavior: "instant",
+    });
+  };
   const category = categories.find((item) => item.id === entry.category);
-  const contentsLinks = <ol>{contents.map((item, index) => <li key={item.id}>
-    <a href={`#til-${item.id}`} onClick={(event) => navigateToTILAnchor(event, `til-${item.id}`)}
-      aria-current={activeSection === item.id ? "location" : undefined}>
-      <span>{String(index + 1).padStart(2, "0")}</span>{item.label}
-    </a>
-  </li>)}</ol>;
 
   return (
     <>
@@ -92,7 +118,7 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
         <span>LEARNING IN PUBLIC</span>
         <Link href="/">Portfolio <ArrowRight size={14} aria-hidden="true" /></Link>
       </header>
-      <article className={styles.article}>
+      <article className={contents.length ? `${styles.article} ${styles.articleWithContents}` : styles.article}>
         <header className={styles.articleHeader}>
           <div className={styles.metadata}>
             <time dateTime={entry.date}>{formatTILDate(entry.date)}</time>
@@ -103,13 +129,46 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
           <h1 ref={headingRef} tabIndex={-1} id="til-reader-title">{entry.title}</h1>
           <p className={styles.summary}>{entry.summary}</p>
         </header>
-        {showContents ? <div className={styles.contents}>
-          <nav className={styles.desktopContents} aria-label="이 글의 목차"><p>이 글의 순서</p>{contentsLinks}</nav>
-          <details className={styles.mobileContents}>
-            <summary>이 글의 목차 <span>{contents.find((item) => item.id === activeSection)?.label ?? `${contents.length}개 섹션`} <ChevronDown size={16} aria-hidden="true" /></span></summary>
-            <nav aria-label="이 글의 목차">{contentsLinks}</nav>
-          </details>
-        </div> : null}
+        <div className={styles.readerTools}>
+          {contents.length ? (
+            <nav className={styles.contents} aria-label="이 글의 목차"
+              onBlur={(event) => {
+                if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) setContentsOpen(false);
+              }}
+              onKeyDown={(event) => {
+                if (event.key !== "Escape" || !contentsOpen) return;
+                setContentsOpen(false);
+                contentsToggleRef.current?.focus();
+              }}>
+              <p className={styles.contentsTitle}>이 글의 목차</p>
+              <button type="button" className={styles.contentsToggle} ref={contentsToggleRef}
+                aria-expanded={contentsOpen} aria-controls="til-reader-contents" onClick={() => setContentsOpen((open) => !open)}>
+                <List size={17} aria-hidden="true" /> 목차 <ChevronDown size={14} aria-hidden="true" />
+              </button>
+              <ol id="til-reader-contents" className={styles.contentsList} ref={contentsListRef} data-open={contentsOpen}>
+                {contents.map((item) => (
+                  <li key={item.id}>
+                    <a href={`#til-${item.id}`} aria-current={activeSection === item.id ? "location" : undefined}
+                      onClick={(event) => {
+                        navigateToTILAnchor(event, `til-${item.id}`);
+                        if (event.defaultPrevented) setContentsOpen(false);
+                      }}>
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          ) : null}
+          <div className={styles.scrollControls} role="group" aria-label="글 스크롤">
+            <button type="button" onClick={() => scrollToEdge("top")}>
+              <ArrowUpToLine size={16} aria-hidden="true" /> 맨 위
+            </button>
+            <button type="button" onClick={() => scrollToEdge("bottom")}>
+              <ArrowDownToLine size={16} aria-hidden="true" /> 맨 아래
+            </button>
+          </div>
+        </div>
         <div className={styles.body}>
           {sections.map((section, index) => (
             <section className={styles.section} key={section.key} aria-labelledby={section.label ? `til-${section.key}` : undefined} aria-label={section.label ? undefined : "본문"}>
@@ -146,7 +205,7 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
             </li>)}</ul> : null}
           </section> : null}
         </div>
-        <footer className={styles.articleFooter}>
+        <footer className={styles.articleFooter} ref={footerRef} tabIndex={-1}>
           <p>오늘의 배움을 다음의 시도로.</p>
           <nav aria-label="TIL 글 이동" className={styles.entryNavigation}>
             {previous ? <button type="button" onClick={() => onSelect(previous)}><span><ArrowLeft size={15} aria-hidden="true" /> 이전 글</span><strong>{previous.title}</strong></button> : <div />}
