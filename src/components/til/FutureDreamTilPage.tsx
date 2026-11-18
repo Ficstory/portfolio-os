@@ -334,7 +334,11 @@ export function FutureDreamTilPage({ categories, entries, journey }: {
     const savedPosition = positions.current.get(locationKey) ?? 0;
     let restoring = changed && (isReading || wasReading);
     const frame = requestAnimationFrame(() => {
-      if (changed && (isReading || wasReading)) {
+      const sectionId = window.location.hash.slice(1);
+      const section = isReading && sectionId.startsWith("til-") ? document.getElementById(sectionId) : null;
+      if (section) {
+        section.scrollIntoView({ block: "start", behavior: "instant" });
+      } else if (changed && (isReading || wasReading)) {
         if (isReading) headingRef.current?.focus({ preventScroll: true });
         else {
           const slug = listFocus.current.get(listKey);
