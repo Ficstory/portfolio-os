@@ -15,7 +15,7 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: rgb(0 0 0 / 60%);
+  background: rgb(0 0 0 / 68%);
   content: "";
 }
 
@@ -44,6 +44,11 @@
   margin: clamp(1.25rem, 3.25vw, 2rem) 0 0;
   font-size: clamp(1.0625rem, 2.1vw, 1.5rem);
   line-height: 1.65;
+}
+
+.highlight {
+  color: #ffd65c;
+  font-weight: 700;
 }
 
 .message .signature {
