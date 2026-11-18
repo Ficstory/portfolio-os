@@ -3,11 +3,11 @@ id: til-2026-11-18-ssg-pp-voice-picking
 slug: ssg-pp-voice-picking
 date: 2026-11-18
 createdAt: 2026-11-18T10:12:24+09:00
-updatedAt: 2026-11-18T22:43:38+09:00
+updatedAt: 2026-11-18T23:01:06+09:00
 session: Future & Dream Academy 신세계아이앤씨 개인과제
 category: personal
 title: PP센터 피커를 위한 음성 AI 도우미 ‘쓱’ | 제안 근거자료
-summary: 이마트 연제점 피커는 매대에서 비슷한 포장을 살폈고, 고객이 말을 걸자 휴대폰을 확인했다. 이 두 장면에서 출발해 어떤 위치를 이어폰으로 안내할지, 효과를 어떻게 잴지 정했다.
+summary: 이마트 연제점 피커가 매대에서 비슷한 포장을 살피는 모습을 보고, 상품명을 말하면 위치 단서를 듣는 집품 지원을 제안했다. 고객 질문 뒤 원래 집품으로 돌아오는 흐름도 함께 설계했다.
 status: published
 isDemo: false
 format: journal
@@ -30,7 +30,7 @@ format: journal
 
 ## 2쪽 · 쓱 주간배송과 피커의 업무 {#til-journal-5}
 
-쓱 주간배송의 피커는 온라인 주문을 받지만, 상품을 집는 곳은 고객도 장을 보는 이마트 영업 매대다. SSG닷컴은 이천점 사례에서 상품을 집는 피커와 이를 넘겨받아 포장하는 패커의 역할을 설명했다. [SSG닷컴 배송 명칭과 서비스 개편](https://www.shinsegaegroupnewsroom.com/ssg-delivery-rebranding-announcement/) · [이천점 PP센터의 집품과 포장](https://www.shinsegaegroupnewsroom.com/ssgdotcom-pp-center-logistics-network/)
+연제점에서 따라간 피커는 고객도 장을 보는 영업 매대에서 온라인 주문 상품을 집었다. 이 업무가 배송 과정의 어디에 놓이는지 쓱 주간배송을 예로 정리했다. 관찰한 주문의 배송 유형은 확인하지 못했다. SSG닷컴은 이천점 사례에서 상품을 집는 피커와 이를 넘겨받아 포장하는 패커의 역할을 설명했다. [SSG닷컴 배송 명칭과 서비스 개편](https://www.shinsegaegroupnewsroom.com/ssg-delivery-rebranding-announcement/) · [이천점 PP센터의 집품과 포장](https://www.shinsegaegroupnewsroom.com/ssgdotcom-pp-center-logistics-network/)
 
 | 배송 단계 | 담당자와 업무 |
 | --- | --- |
@@ -39,9 +39,15 @@ format: journal
 | PP센터 분류·포장 | 집은 상품을 고객 주문별로 나누고 포장해 출고를 준비한다. |
 | 배송 | 배송기사가 포장된 주문을 인계받아 고객에게 전달한다. |
 
-‘쓱’을 쓰는 사람은 매대에서 상품을 집는 피커다. 손님에게는 바로 앞의 직원에게 건넨 질문 한마디지만, 피커에게는 집던 품목을 기억한 채 다른 상품을 찾아주는 상황이 된다.
+‘쓱’을 쓰는 사람은 매대에서 상품을 집는 피커다. 고객이 피커에게 질문하고 피커가 휴대폰을 확인하는 모습을 보며, 고객 눈에는 이마트 직원·협력업체 직원·SSG.COM 피커도 도움을 청할 수 있는 사람으로 보일 수 있다고 생각했다. 고객이 실제로 피커의 소속과 업무를 어떻게 인식했는지는 확인하지 못했다.
 
-## 3쪽 · 집품 효율에 주목한 이유 {#til-journal-6}
+## 3쪽 · ‘쓱’의 핵심은 피커의 집품 지원 {#til-journal-6}
+
+‘쓱’의 핵심은 피커가 매대에서 주문 상품을 찾는 일을 돕는 것이다. 나는 피커가 찾는 상품명을 말하면 등록된 위치 단서를 이어폰으로 듣고, 손목 화면을 다시 열지 않고 상품을 탐색하는 흐름을 제안했다. 안내 범위는 점포가 제공하는 위치 정보에 따라 달라진다.
+
+집품 중 고객 질문이 끼면 피커가 첫마디를 직접 듣고, 필요한 상품 위치를 ‘쓱’에 물어 답한 뒤 원래 집품으로 돌아오도록 설계했다. 실제로 집품 복귀를 돕는지는 현장에서 확인할 가설로 남겼다.
+
+### 집품 효율을 따로 재려는 이유
 
 2026년 8월 더벨은 이마트가 투자자 설명회에서 기존 PP센터 90곳의 주문 처리능력을 높이는 데 무게를 뒀다고 보도했다. 같은 달 SSG닷컴이 발표한 2시간 배송 운영 방식에는 점포가 주문을 받은 뒤 언제까지 상품을 준비해야 하는지가 나온다. [더벨 · 기존 PP센터 90곳 운영 방침](https://www.thebell.co.kr/front/newsview.asp?key=202608241501091360102586) · [SSG닷컴 · 예약배송과 2시간 배송 운영 방식](https://www.shinsegaegroupnewsroom.com/why-ssg-com-launched-2hour-delivery/)
 
