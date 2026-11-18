@@ -1,0 +1,41 @@
+{
+  "type": "journal-figures",
+  "figures": [
+    {
+      "heading": "쓱 주간배송에서 피커가 맡는 일",
+      "title": "이천점 PP센터의 하루 최대 주문 처리량",
+      "kind": "bars",
+      "unit": "건",
+      "rows": [
+        {
+          "label": "리뉴얼 전",
+          "value": 450
+        },
+        {
+          "label": "리뉴얼 후",
+          "value": 3000,
+          "highlight": true
+        }
+      ],
+      "note": "이마트 이천점 · 2021년 · 공간 확장과 자동화 설비 도입 전후의 처리 가능 건수"
+    },
+    {
+      "heading": "집품 화면에 이미 있는 정보",
+      "title": "POG 내비게이션 4.0 도입 전후의 상품당 처리 시간",
+      "kind": "bars",
+      "unit": "%",
+      "rows": [
+        {
+          "label": "도입 전 기준",
+          "value": 100
+        },
+        {
+          "label": "도입 후",
+          "value": 80,
+          "highlight": true
+        }
+      ],
+      "note": "도입 전 시간을 100%로 놓고, SSG닷컴이 밝힌 20% 단축을 환산했다. 출처는 2024년 5월 한국경제 현장 취재."
+    }
+  ]
+}
