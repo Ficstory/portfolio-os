@@ -6,3 +6,5 @@ export const links = {
 } satisfies ExternalLinks;
 
 export const externalLinks = links;
+
+export const linkedinProfileUrl = "https://www.linkedin.com/in/재호-이-34965144b";

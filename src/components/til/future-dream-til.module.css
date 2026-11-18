@@ -708,8 +708,8 @@
 
 .contactLinks {
   display: grid;
-  max-width: 42rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  max-width: 51rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   margin: 0;
   padding: 0;
@@ -718,6 +718,7 @@
 
 .contactLinks a {
   display: flex;
+  height: 100%;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
@@ -985,6 +986,10 @@
 
   .contact {
     padding-inline: 18px;
+  }
+
+  .contactLinks {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .archiveHeader {

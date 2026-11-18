@@ -18,7 +18,7 @@ import {
   type CompositionEvent,
 } from "react";
 
-import { links } from "@/data/links";
+import { linkedinProfileUrl, links } from "@/data/links";
 import {
   filterTILEntries,
   formatTILDate,
@@ -34,6 +34,12 @@ import type {
 import styles from "./future-dream-til.module.css";
 import { TILReader } from "./TILReader";
 import { navigateToTILAnchor } from "./tilNavigation";
+
+const contactLinks = [
+  { label: "이메일", href: links.email },
+  { label: "GitHub", href: links.github },
+  { label: "LinkedIn", href: linkedinProfileUrl },
+];
 
 function createArchiveSearch(
   category: TILCategoryFilter,
@@ -148,24 +154,20 @@ function ContactSection() {
       <h2 id="til-contact-title">Contact</h2>
       <p>프로젝트나 채용 관련 문의는 이메일로 연락해 주세요.</p>
       <ul className={styles.contactLinks}>
-        <li>
-          <a href={links.email}>
-            <span>
-              <strong>이메일</strong>
-              <small>{links.email.replace(/^mailto:/, "")}</small>
-            </span>
-            <ArrowUpRight aria-hidden="true" size={17} />
-          </a>
-        </li>
-        <li>
-          <a href={links.github} rel="noreferrer" target="_blank">
-            <span>
-              <strong>GitHub</strong>
-              <small>{links.github.replace(/^https?:\/\//, "")}</small>
-            </span>
-            <ArrowUpRight aria-hidden="true" size={17} />
-          </a>
-        </li>
+        {contactLinks.map(({ href, label }) => {
+          const isExternal = href.startsWith("https://");
+          return (
+            <li key={label}>
+              <a href={href} rel={isExternal ? "noreferrer" : undefined} target={isExternal ? "_blank" : undefined}>
+                <span>
+                  <strong>{label}</strong>
+                  <small>{href.replace(/^(?:mailto:|https?:\/\/(?:www\.)?)/, "")}</small>
+                </span>
+                <ArrowUpRight aria-hidden="true" size={17} />
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
