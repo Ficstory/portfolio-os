@@ -33,9 +33,8 @@ import type {
 
 import styles from "./future-dream-til.module.css";
 import { TILReader } from "./TILReader";
-import { navigateToTILAnchor } from "./tilNavigation";
+import { navigateToTILAnchor, pmPortfolioUrl } from "./tilNavigation";
 
-const projectsHref = "https://ficstory.dev/PM/print-fnda/";
 
 const contactLinks = [
   { label: "이메일", href: links.email },
@@ -87,9 +86,9 @@ function Sidebar() {
   return (
     <aside className={styles.sidebar}>
       <div>
-        <Link className={styles.portfolioLabel} href="/">
+        <a className={styles.portfolioLabel} href={pmPortfolioUrl}>
           MY PORTFOLIO
-        </Link>
+        </a>
         <p className={styles.sidebarNote}>
           Learning today,
           <br />a better me tomorrow.
@@ -109,7 +108,7 @@ function Sidebar() {
           <span>03</span>
           TIL Archive
         </a>
-        <a href={projectsHref}>
+        <a href={pmPortfolioUrl}>
           <span>04</span>
           Projects
         </a>
@@ -139,7 +138,7 @@ function TopNavigation() {
       <a aria-current="page" className={styles.topActive} href="#archive" onClick={(event) => navigateToTILAnchor(event, "archive")}>
         TIL
       </a>
-      <a href={projectsHref}>Projects</a>
+      <a href={pmPortfolioUrl}>Projects</a>
       <a href="#academy" onClick={(event) => navigateToTILAnchor(event, "academy")}>Academy</a>
       <a href="#contact" onClick={(event) => navigateToTILAnchor(event, "contact")}>Contact</a>
       <p>

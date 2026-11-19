@@ -1,7 +1,6 @@
 "use client";
 
 import { ArrowDownToLine, ArrowLeft, ArrowRight, ArrowUpToLine, Check, ChevronDown, List } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useRef, useState, type RefObject } from "react";
 import { formatTILDate } from "@/lib/tilArchive";
 import { parseTILInlineLinks } from "@/lib/tilInlineLinks";
@@ -10,7 +9,7 @@ import { TILMedia } from "./TILMedia";
 import { StoreAnalysis } from "./StoreAnalysis";
 import { JournalChart } from "./JournalChart";
 import { EvidenceSection } from "./EvidenceSection";
-import { navigateToTILAnchor } from "./tilNavigation";
+import { navigateToTILAnchor, pmPortfolioUrl } from "./tilNavigation";
 import styles from "./til-reader.module.css";
 
 const reflectionSections = [
@@ -120,7 +119,7 @@ export function TILReader({ entry, categories, listHref, previous, next, onSelec
       <header className={styles.readerNav}>
         <a href={listHref}><ArrowLeft size={17} aria-hidden="true" /> TIL 목록</a>
         <span>LEARNING IN PUBLIC</span>
-        <Link href="/">Portfolio <ArrowRight size={14} aria-hidden="true" /></Link>
+        <a href={pmPortfolioUrl}>Portfolio <ArrowRight size={14} aria-hidden="true" /></a>
       </header>
       <article className={contents.length ? `${styles.article} ${styles.articleWithContents}` : styles.article} data-deck-evidence={isPickingEvidence || undefined}>
         <header className={styles.articleHeader}>

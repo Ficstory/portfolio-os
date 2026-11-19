@@ -1,5 +1,7 @@
 import type { MouseEvent } from "react";
 
+export const pmPortfolioUrl = "https://ficstory.dev/PM/print-fnda/";
+
 /** Move within this document without creating a separate native hash history entry. */
 export function navigateToTILAnchor(event: MouseEvent<HTMLAnchorElement>, id: string) {
   if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
